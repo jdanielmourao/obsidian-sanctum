@@ -50,6 +50,7 @@ You can manually install the following theme by:
 
 ## Features
 - Variable headings - they'll change size depending on screen size;
+- Custom icons;
 - Sidenotes (credit @SlRvb);
 - Multi-Color Highlights (credit @Atlas);
 - Custom Checkbox / Task types;
