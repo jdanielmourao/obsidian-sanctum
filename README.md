@@ -79,5 +79,4 @@ You can manually install the following theme by:
 If you encounter an issue, or would like to contribute to this theme, don't hesitate to submit an issue or raise a PR. You can also message me on [Discord](https://discord.com/invite/veuWUTm) @jdaniel or on the [Obsidian Forums](https://forum.obsidian.md/u/jdanielmourao/summary).
 
 ## Disclaimer
-The following theme significantly alters Obsidian's original css, and so is prone to breaking upon new Obsidian updates, as well as being incompatible with custom css snippets. It is also in a very early stage of development (especially mobile support), and so quick and sometimes drastic changes may be expected in the near future. Any and every piece of feedback is appreciated. Do keep in mind that, ultimately, the author's vision for this theme takes precedence. More intuitive customization options will be available in the future.
-
+The following theme significantly alters Obsidian's original css, and so is prone to breaking upon new Obsidian updates, as well as being incompatible with custom css snippets. It is also in a very early stage of development, and so quick and sometimes drastic changes may be expected in the near future. Having said that, any and every piece of feedback is appreciated! More customization options will be available in the future.
