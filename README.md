@@ -7,6 +7,12 @@ Sanctum’s a minimalist theme with the aim of creating a serene space of retrea
 - [Smart Typography](https://github.com/mgmeyers/obsidian-smart-typography): for a better and coherent writing experience;
 - [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography): For a better typographic experience.
 
+## Installation
+You can manually install the following theme by:
+1. downloading the CSS file and moving it into the folder `.obsidian/themes/` located in your vault folder;
+2. rename the css file to `Sanctum.css`;
+3. in Obsidian, go to `Settings ➞ Appearance ➞ Themes ➞ Reload themes`, and select `Sanctum`.
+
 ## Design Principles
 
 **Intentional**
@@ -68,12 +74,6 @@ Sanctum’s a minimalist theme with the aim of creating a serene space of retrea
 - Templater
 
 (for plugin support requests & issues, refer to Feedback & Contributions)
-
-## Installation
-You can manually install the following theme by:
-1. downloading the CSS file and moving it into the folder `.obsidian/themes/` located in your vault folder;
-2. rename the css file to `Sanctum.css`;
-3. in Obsidian, go to `Settings ➞ Appearance ➞ Themes ➞ Reload themes`, and select `Sanctum`.
 
 ## Feedback & Contributions
 If you encounter an issue, or would like to contribute to this theme, don't hesitate to submit an issue or raise a PR. You can also message me on [Discord](https://discord.com/invite/veuWUTm) @jdaniel or on the [Obsidian Forums](https://forum.obsidian.md/u/jdanielmourao/summary).
