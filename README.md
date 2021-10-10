@@ -56,7 +56,8 @@ You can manually install the following theme by:
 - Custom Codeblock language - `pure-text`, that enables you to write text for easy copying;
 - Custom Link icons;
 - Image desaturation: better for consistency, they gain normal colour when hovered (credit @kepano);
-- WYSIWYG hr elements in Edit Mode, as a compliment to Smart Typography. If the plugin is enabled, add and extra dash for it to work.
+- WYSIWYG hr elements in Edit Mode, as a compliment to Smart Typography. If the plugin is enabled, add and extra dash for it to work;
+- Editing Line Highlighting.
 
 ## Plugin Support
 - Advanced Tables
