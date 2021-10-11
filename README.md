@@ -58,7 +58,8 @@ You can manually install the following theme by:
 - Custom Link icons;
 - Image desaturation: better for consistency, they gain normal colour when hovered (credit @kepano);
 - WYSIWYG hr elements in Edit Mode, as a compliment to Smart Typography. If the plugin is enabled, add and extra dash for it to work;
-- Active line highlighting.
+- Active line highlighting;
+- Folded heading/list indicator (in edit and preview mode).
 
 ## Plugin Support
 - Advanced Tables
