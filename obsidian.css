@@ -5667,6 +5667,10 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:after {
     background: none !important;
 }
+/* vertically align file title in sliding panes */
+body.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-mixed .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
+    padding: 5px;
+}
 
 /*──────────────────────────────────────────────────────────────*/
 /* Templater
