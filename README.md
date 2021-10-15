@@ -74,6 +74,7 @@ You can manually install the following theme by:
 - Kanban
 - Quick Explorer
 - Sliding Panes (Andy’s Mode)
+- Style Settings
 - Templater
 
 (for plugin support requests & issues, refer to Feedback & Contributions)
