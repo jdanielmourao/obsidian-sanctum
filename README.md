@@ -87,3 +87,8 @@ If you encounter an issue, or would like to contribute to this theme, don't hesi
 
 ## Disclaimer
 The following theme significantly alters Obsidian's original css, and so is prone to breaking upon new Obsidian updates, as well as being incompatible with custom css snippets. It is also in a very early stage of development, and so quick and sometimes drastic changes may be expected in the near future. Having said that, any and every piece of feedback is appreciated! More customization options will be available in the future.
+
+## Support
+If you enjoy my work and would like to support it, you can click the icon below.
+
+<a href="https://paypal.me/jdanielmourao"><img src="assets/PayPal.svg"></a>
