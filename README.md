@@ -2,12 +2,6 @@
 
 Sanctum’s a minimalist theme with the aim of creating a serene space of retreat, for thought and uninterrupted work.
 
-## Recommended Plugins
-
-- [Smart Typography](https://github.com/mgmeyers/obsidian-smart-typography): for a better and coherent writing experience;
-- [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography): For a better typographic experience.
-- [Style Settings](https://github.com/mgmeyers/obsidian-style-settings): for customization options
-
 ## Installation
 **Sanctum is now available in Community Themes!** In obsidian, go to `Settings ➞ Appearance ➞ Manage`, and look for `Sanctum`.
 
@@ -15,6 +9,18 @@ You can manually install the following theme by:
 1. downloading the CSS file and moving it into the folder `.obsidian/themes/` located in your vault folder;
 2. rename the css file to `Sanctum.css`;
 3. in Obsidian, go to `Settings ➞ Appearance ➞ Themes ➞ Reload themes`, and select `Sanctum`.
+
+## Font recommendations
+
+This theme recommends the use and installation of the fonts **"IBM Plex Sans"** and **"IBM Plex Mono"** in your system. 
+Since those fonts are rather heavy on the theme's file, though, I decided to include iA Writer's variable fonts "Quattro" and "Mono", which are based on IBM Plex, and much lighter on the file. This way, even if you don't have any of the fonts installed on your computer, they'll still be rendered by obsidian when you install this theme.
+If you do want to have IBM Plex as the main font, or any other font for that matter, you can simply install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) Plugin, and add them under `Typography`➞`Fonts`, in the Style Settings Plugin Options.
+
+## Recommended Plugins
+
+- [Smart Typography](https://github.com/mgmeyers/obsidian-smart-typography): for a better and coherent writing experience;
+- [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography): For a better typographic experience.
+- [Style Settings](https://github.com/mgmeyers/obsidian-style-settings): for customization options
 
 ## Design Principles
 
@@ -66,12 +72,14 @@ You can manually install the following theme by:
 
 ## Plugin Support
 - Advanced Tables
+- Block Reference Counter
 - Breadcrumbs
 - Calendar
 - Changelogs
 - Charts
 - Checklist
 - Copy Code Button (it now supports Obsidian v0.12.17's new code copy button!)
+- Dataview
 - Excalidraw
 - Gallery
 - Kanban
