@@ -6,15 +6,15 @@ Sanctum’s a minimalist theme with the aim of creating a serene space of retrea
 **Sanctum is now available in Community Themes!** In obsidian, go to `Settings ➞ Appearance ➞ Manage`, and look for `Sanctum`.
 
 You can manually install the following theme by:
-1. downloading the CSS file and moving it into the folder `.obsidian/themes/` located in your vault folder;
-2. rename the css file to `Sanctum.css`;
-3. in Obsidian, go to `Settings ➞ Appearance ➞ Themes ➞ Reload themes`, and select `Sanctum`.
+1. Downloading the CSS file and moving it into the folder `.obsidian/themes/` located in your vault folder;
+2. Rename the css file to `Sanctum.css`;
+3. In Obsidian, go to `Settings ➞ Appearance ➞ Themes ➞ Reload themes`, and select `Sanctum`.
 
 ## Font recommendations
 
-This theme recommends the use and installation of the fonts **"IBM Plex Sans"** and **"IBM Plex Mono"** in your system. 
+<small>This theme recommends the use and installation of the fonts **"IBM Plex Sans"** and **"IBM Plex Mono"** in your system. 
 Since those fonts are rather heavy on the theme's file, though, I decided to include iA Writer's variable fonts "Quattro" and "Mono", which are based on IBM Plex, and much lighter on the file. This way, even if you don't have any of the fonts installed on your computer, they'll still be rendered by obsidian when you install this theme.
-If you do want to have IBM Plex as the main font, or any other font for that matter, you can simply install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) Plugin, and add them under `Typography`➞`Fonts`, in the Style Settings Plugin Options.
+If you do want to have IBM Plex as the main font, or any other font for that matter, you can simply install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) Plugin, and add them under `Typography`➞`Fonts`, in the Style Settings Plugin Options.</small>
 
 ## Recommended Plugins
 
