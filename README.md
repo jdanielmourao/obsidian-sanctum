@@ -12,9 +12,9 @@ You can manually install the following theme by:
 
 ## Font recommendations
 
-<small>This theme recommends the use and installation of the fonts **"IBM Plex Sans"** and **"IBM Plex Mono"** in your system. 
+This theme recommends the use and installation of the fonts **"IBM Plex Sans"** and **"IBM Plex Mono"** in your system. 
 Since those fonts are rather heavy on the theme's file, though, I decided to include iA Writer's variable fonts "Quattro" and "Mono", which are based on IBM Plex, and much lighter on the file. This way, even if you don't have any of the fonts installed on your computer, they'll still be rendered by obsidian when you install this theme.
-If you do want to have IBM Plex as the main font, or any other font for that matter, you can simply install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) Plugin, and add them under `Typography`➞`Fonts`, in the Style Settings Plugin Options.</small>
+If you do want to have IBM Plex as the main font, or any other font for that matter, you can simply install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) Plugin, and add them under `Typography`➞`Fonts`, in the Style Settings Plugin Options.
 
 ## Recommended Plugins
 
