@@ -5,7 +5,7 @@ Sanctum’s a minimalist theme with the aim of creating a serene space of retrea
 ## Installation
 **Sanctum is now available in Community Themes!** In obsidian, go to `Settings ➞ Appearance ➞ Manage`, and look for `Sanctum`.
 
-You can manually install the following theme by:
+You can also manually install Sanctum by:
 1. Downloading the CSS file and moving it into the folder `.obsidian/themes/` located in your vault folder;
 2. Rename the css file to `Sanctum.css`;
 3. In Obsidian, go to `Settings ➞ Appearance ➞ Themes ➞ Reload themes`, and select `Sanctum`.
