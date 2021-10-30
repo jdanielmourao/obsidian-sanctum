@@ -6,7 +6,7 @@ Author: @jdanielmourao (Github)
 Description: Sanctum’s a minimalist theme with the aim of creating a serene space 
              of retreat, for thought and uninterrupted work.
 License: GNU General Public License v3.0
-Version: 0.2.4
+Version: 0.2.5
 ───────────────────────────────────────────────────────────────────────────────────────
 
 Table of Contents
@@ -177,7 +177,7 @@ Table of Contents
 --font-editor: 'iA Writer Quattro V', 'Helvetica Neue', Arial, sans-serif;
 --font-ui: 'iA Writer Quattro V', 'Helvetica Neue', Arial, sans-serif;
 --font-heading: 'iA Writer Quattro V', 'Helvetica Neue', Arial, sans-serif;
-
+--footnote-id: 'Footnotes';
 /*──────────────────────────────────────────────────────────────*/
 /*  Font Weights
 /*──────────────────────────────────────────────────────────────*/
@@ -300,6 +300,7 @@ Table of Contents
 --color-grey-90:  hsl(30, 1.5%, 26.3%);
 --color-grey-100: hsl(300, 1%, 19.8%);
 --color-black:    hsl(0, 0%, 7.8%);
+--color-dark:hsl(0, 0%, 5%);
 
 --color-l-accent-h: 177.4;
 --color-l-accent-s: 40.5%;
@@ -949,15 +950,6 @@ Table of Contents
     display: inline-block;
 }
 
-.topside-status-bar .status-bar {
-    position: absolute;
-    margin-top: -23px;  
-    opacity: .8;
-    right: 260px;
-    background-color: transparent !important;
-}
-
-
 /*──────────────────────────────────────────────────────────────*/
 /* Panels
 /*──────────────────────────────────────────────────────────────*/
@@ -1105,6 +1097,19 @@ color: var(--color-primary-k);
     font-size: var(--font-scale-0);
     text-transform: uppercase;
     margin-left: none;
+    padding-left: 0;
+}
+
+.show-vault-name div.nav-folder.mod-root > div.nav-folder-title {
+    display: unset;
+}
+
+.show-vault-name div.nav-folder.mod-root > div.nav-folder-title:hover {
+    background-color: transparent !important;
+}
+
+.show-vault-name div.nav-folder.mod-root > div.nav-folder-title .nav-folder-title-content:before {
+    display: none;
 }
 
 .nav-folder.mod-root > .nav-folder-title:hover {
@@ -1136,6 +1141,12 @@ color: var(--color-primary-k);
              var(--size-0)
              var(--size-0)
              var(--size-5);
+}
+
+.outgoing-link-pane .search-result-file-match-destination-file {
+    border-color: transparent;
+    padding: 0;
+    margin: 0;
 }
 
 .backlink-pane {
@@ -1508,6 +1519,10 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
     order: 1; /* Places them after folder/file titles. Makes it look like an accordion */
 }
 
+.left-nav-arrows .nav-folder .collapse-icon {
+    order: 0;
+}
+
 .nav-folder.is-collapsed .collapse-icon svg {
   transform: rotate(0deg);
   transition: transform 0s; /* disables a weird rotation animation */
@@ -1549,6 +1564,7 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 .nav-file-title-content::before {
     display: inline-block;
     content: "";
+    font-size: var(--font-scale-0);
     vertical-align: -3px;
     height: var(--scale-2);
     width: var(--scale-2);
@@ -1606,7 +1622,7 @@ body.no-file-icons .nav-file-title-content:before {
 }
 
 .is-mobile .nav-file-title-content:before {
-    transform: translateY(8px);
+    transform: translateY(0px);
 }
 
 .nav-file-title-content:only-child:before,
@@ -1617,7 +1633,7 @@ body.no-file-icons .nav-file-title-content:before {
 /*- File icon for notes (fixes recent files pane) -*/
 .nav-folder-children .nav-file-title-content:first-child::before {
     background-color: currentColor;
-    -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100%' height='100%' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Edocument%3C/title%3E%3Cpath d='M25.7,9.3l-7-7C18.5,2.1,18.3,2,18,2H8C6.9,2,6,2.9,6,4v24c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V10C26,9.7,25.9,9.5,25.7,9.3 z M18,4.4l5.6,5.6H18V4.4z M24,28H8V4h8v6c0,1.1,0.9,2,2,2h6V28z'/%3E%3Crect x='10' y='22' width='12' height='2'/%3E%3Crect x='10' y='16' width='12' height='2'/%3E%3Crect class='st0' width='32' height='32'/%3E%3C/svg%3E")  no-repeat;
+    -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100%' height='100%' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Edocument%3C/title%3E%3Cpath d='M25.7,9.3l-7-7C18.5,2.1,18.3,2,18,2H8C6.9,2,6,2.9,6,4v24c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V10C26,9.7,25.9,9.5,25.7,9.3 z M18,4.4l5.6,5.6H18V4.4z M24,28H8V4h8v6c0,1.1,0.9,2,2,2h6V28z'/%3E%3Crect x='10' y='22' width='12' height='2'/%3E%3Crect x='10' y='16' width='12' height='2'/%3E%3Crect class='st0' width='32' height='32'/%3E%3C/svg%3E");
     display: inline-block;
     margin-right: var(--size-3);
     margin-left: 1px;
@@ -1805,6 +1821,14 @@ body.show-full-titles:not(.no-sanctum-icons) .nav-folder-children .nav-file-titl
 }
 
 
+.topside-status-bar div.status-bar {
+    position: absolute;
+    margin-top: -23px;  
+    opacity: .8;
+    right: 260px;
+    background-color: transparent;
+}
+
 /*──────────────────────────────────────────────────────────────*/
 /* Content aka Note
 /*──────────────────────────────────────────────────────────────*/
@@ -1931,7 +1955,6 @@ body, input, button {
     font-size: var(--font-scale-00) !important; /* important is here because of buttons*/
     line-height: var(--leading-2);
     letter-spacing: var(--tracking-1);
-    text-rendering: geometricPrecision;
 }
 
 body {
@@ -1952,7 +1975,6 @@ button {
     line-height: var(--leading-3);
     letter-spacing: var(--tracking-0);
     hyphens: auto;
-    text-rendering: geometricPrecision;
 }
 
 .cm-s-obsidian {
@@ -1961,7 +1983,6 @@ button {
     font-size: var(--font-scale-0);
     line-height: var(--leading-3);
     letter-spacing: var(--tracking-0);
-    text-rendering: geometricPrecision;
 }
 
 /*──────────────────────────────────────────────────────────────*/
@@ -2793,6 +2814,7 @@ ul.contains-task-list p {
 }
 
 input[type=checkbox] {
+    display: inline-block;
     cursor: var(--cursor);
     -webkit-appearance: none;
     appearance: none;
@@ -2838,6 +2860,7 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 }
 
 .markdown-preview-view .task-list-item-checkbox {
+    display: inline-block;
     -webkit-appearance: none;
     box-sizing: border-box;
     background-color: var(--background-primary);
@@ -2856,9 +2879,8 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
     transition: filter var(--duration-moderate-2) var(--motion-entrance-expressive);
 }
 
-.markdown-preview-view li>.task-list-item-checkbox {
-    margin-right: var(--size-3) !important;
-    vertical-align: -2px;
+.markdown-preview-view li > .task-list-item-checkbox {
+    margin-right: var(--size-3);
 }
 
 /* Strikethrough from completed to-do lists/checkbox */
@@ -2895,8 +2917,8 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
     transform: scale(1.35) translateY(0px) translateX(-0px);
 }
 
-.markdown-preview-view ul>li[data-task='?'].task-list-item.is-checked {
-    text-decoration: underline solid var(--color-yellow) 2px !important;
+body .markdown-preview-view ul > li[data-task='?'].task-list-item.is-checked {
+    text-decoration: underline solid var(--color-yellow) 2px;
 }
 
 /* Paper Plane icon for deferred/rescheduled ('- [>]') */
@@ -3016,14 +3038,15 @@ background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(30, 3.4%, 7
 /* Tags in Edit Mode */
 
 div > .CodeMirror-line span.cm-hashtag-end {
-    font-weight: var(--font-bold);
+    font-weight: var(--font-regular);
     color: var(--color-accent);
 }
 
 /* Removes underline from generic tags in edit mode*/
 .cm-s-obsidian span.cm-hashtag {
     text-decoration: none;
-    color: var(--text-normal);
+    color: var(--color-accent);
+    font-weight: var(--font-semi-bold);
 }
 
 /* Tags in Preview */
@@ -3424,19 +3447,20 @@ cite {
     border-radius: var(--size-0);
 }
 
+.cm-s-obsidian .cm-math,
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
 .cm-s-obsidian div.HyperMD-codeblock-bg,
 .cm-s-obsidian div.HyperMD-codeblock-end-bg,
 .cm-s-obsidian pre.HyperMD-codeblock,
 .cm-s-obsidian span.cm-inline-code,
 .markdown-preview-view code,
-.markdown-preview-view pre,
+.markdown-preview-view div.el-pre pre,
 .markdown-preview-view span.cm-inline-code,
 .theme-dark code[class*=language-],
 .theme-dark pre[class*=language-],
 .theme-light code[class*=language-],
 .theme-light pre[class*=language-] {
-    font-family: var(--font-mono) !important;
+    font-family: var(--font-mono);
     font-weight: var(--font-medium);
     font-size: var(--font-scale-0);
     line-height: var(--leading-2);
@@ -3445,55 +3469,78 @@ cite {
 }
 
 .markdown-preview-view code,
-.markdown-preview-view pre,
+.markdown-preview-view div.el-pre pre,
 .markdown-preview-view span.cm-inline-code,
 .theme-dark code[class*=language-],
 .theme-dark pre[class*=language-],
 .theme-light code[class*=language-],
 .theme-light pre[class*=language-] {
-background-color: var(--color-primary-w) !important;
+background-color: var(--color-primary-w);
 }
 
 .theme-dark .markdown-preview-view code,
-.theme-dark .markdown-preview-view pre,
+.theme-dark .markdown-preview-view div.el-pre pre,
 .theme-dark .markdown-preview-view span.cm-inline-code,
 .theme-dark code[class*=language-],
 .theme-dark pre[class*=language-] {
-    background-color: var(--color-primary-10) !important;
+    background-color: var(--color-primary-10);
 }
 
-.cm-s-obsidian span.cm-inline-code,.markdown-preview-view span.cm-inline-code {
+.cm-s-obsidian .cm-math,
+.cm-s-obsidian span.cm-inline-code,
+.markdown-preview-view span.cm-inline-code {
     font-size: var(--font-scale-0);
     line-height: var(--leading-0);
 }
 
-.markdown-preview-view pre {
+.markdown-preview-view div.el-pre pre {
     padding: var(--size-5)
              var(--size-8)
              var(--size-5)
-             var(--size-5) !important;
+             var(--size-5);
     white-space: wrap;
     width: 100%;
 }
 
+/* preview */
 .markdown-preview-view code {
     color: var(--color-pink-500);
     padding: 0; /* so inline code doesn't have padding */
     font-family: var(--font-mono);
 }
 
-.cm-s-obsidian .HyperMD-codeblock,.cm-s-obsidian span.cm-inline-code {
+/* edit */
+.cm-s-obsidian .cm-math,
+.cm-s-obsidian .HyperMD-codeblock,
+.cm-s-obsidian span.cm-inline-code {
     color: var(--color-pink-500);
 }
 
+.cm-s-obsidian span.cm-inline-code {
+    border-radius: 0;
+}
+/* changes editor mode code background */
+.cb-dark-bg .cm-s-obsidian span.cm-inline-code,
+.cb-dark-bg .HyperMD-codeblock,
+.cb-dark-bg .cm-s-obsidian .HyperMD-codeblock-bg,
+.cb-dark-bg .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+    --background-primary-alt: var(--color-dark);
+}
+.cb-dark-bg:not(.theme-light) .markdown-preview-view code,
+.cb-dark-bg:not(.theme-light) .markdown-preview-view div.el-pre pre,
+.cb-dark-bg:not(.theme-light) .markdown-preview-view span.cm-inline-code,
+.cb-dark-bg:not(.theme-light) code[class*=language-],
+.cb-dark-bg:not(.theme-light) pre[class*=language-] {
+    background-color: var(--color-dark);
+}
 /*──────────────────────────────────────────────────────────────*/
 /* Code Comments
 /*──────────────────────────────────────────────────────────────*/
 
 .cm-s-obsidian .HyperMD-codeblock span.cm-comment,
 .markdown-preview-view code .token.comment {
-    font-weight: var(--font-medium);
-    font-style: italic;
+    font-weight: var(--font-light);
+    font-style: normal;
 }
 
 .cm-s-obsidian .HyperMD-codeblock span.cm-comment,
@@ -3637,7 +3684,6 @@ span.cm-link.cm-hmd-footnote {
 .cm-s-obsidian span.cm-footref, .cm-s-obsidian span.cm-blockid {
     display: inline-block;
     font-size: var(--font-scale-000);
-    font-feature-settings: 'ordn' on;
     vertical-align: text-top;
     color: var(--text-muted);
     margin-top: -0.1rem;
@@ -3679,7 +3725,7 @@ span.cm-link.cm-hmd-footnote {
 
 .fn-title-hr .markdown-preview-view .footnotes::before,
 .fn-title .markdown-preview-view .footnotes::before {
-    content: "Footnotes";
+    content: var(--footnote-id);
 }
 
 @media (max-width:320px){
@@ -3719,8 +3765,8 @@ span.cm-link.cm-hmd-footnote {
 
 .cm-s-obsidian span.cm-comment,
 .markdown-preview-view .token.comment {
-    font-weight: var(--font-light);
-    font-style: italic;
+    font-weight: var(--font-extra-light);
+    font-style: normal;
 }
 
 .cm-s-obsidian span.cm-comment,
@@ -4250,9 +4296,9 @@ span[title="Unfold line"]:hover,
     font-weight: var(--font-regular);
     color: var(--text-normal);
     line-height: var(--leading-1);
-    padding: var(--size-3)
+    padding: var(--size-2)
              var(--size-6)
-             var(--size-3)
+             var(--size-2)
              var(--size-5);
     max-width: 100%;
     box-sizing: border-box;
@@ -4334,6 +4380,49 @@ span[title="Unfold line"]:hover,
     background-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23000000;%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eclose%3C/title%3E%3Cpolygon class='cls-1' points='24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4'/%3E%3Crect class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
 }
 
+.modal.mod-sync-history {
+    width: 40vw;
+    min-width: 1000px;
+    max-width: 40vw;
+    max-height: 80vh;
+}
+
+textarea.sync-history-content {
+    margin-top: 7px;
+    border-radius: 0px;
+    border-color: var(--color-border-1);
+}
+
+.sync-history-list .setting-item-control div.search-input-container {
+    margin: var(--size-5)
+            var(--size-5)
+            var(--size-5)
+            var(--size-5);
+}
+
+.sync-history-list .search-input-container .search-input-clear-button {
+    margin-right: -6px;
+    background-color: transparent;
+}
+
+.sync-history-list-item {
+    border-left: 1.5px solid transparent;
+    padding: var(--size-3)
+             var(--size-5)
+             var(--size-3)
+             var(--size-5);
+}
+
+.sync-history-list-item.is-active,
+.sync-history-list-item:hover {
+    background-color: var(--background-secondary);
+    border-left: 1.5px solid var(--color-accent);
+}
+
+.sync-history-list-item:hover {
+    background-color: var(--color-hover);
+}
+
 /*──────────────────────────────────────────────────────────────*/
 /* Command Palette & Quick Switcher
 /*──────────────────────────────────────────────────────────────*/
@@ -4350,11 +4439,20 @@ span[title="Unfold line"]:hover,
              var(--size-0);
 }
 
+.prompt-results span.suggestion-flair {
+    left: 0px;
+    transform: scale(1) translateY(4px);
+}
+
 .suggestion-item {
     position: relative;
-    padding-left: var(--size-5);
+    padding: var(--size-3)
+             var(--size-0) 
+             var(--size-3) 
+             var(--size-7);
     cursor: pointer;
     white-space: pre-wrap;
+    line-height: var(--leading-3);
 }
 
 .suggestion-item:hover {
@@ -4368,6 +4466,7 @@ span[title="Unfold line"]:hover,
 .prompt-results .suggestion-flair {
     left: 0px;
     transform: scale(0.8);
+    padding-left: var(--size-3);
 }
 
 .prompt-results .suggestion-prefix {
@@ -4717,6 +4816,10 @@ button[foo="Uninstall"] {
     padding-top: var(--size-1);
 }
 
+.hotkey-list-container {
+    padding-right: 0;
+}
+
 .hotkey-list-container .setting-item {
     padding: var(--size-4)
              var(--size-0)
@@ -4914,7 +5017,7 @@ progress[value='100']::-webkit-progress-value {
     z-index: var(--layer-status-bar);
     height: 100% !important;
     width: 1px;
-    top: calc(-1 * var(--size-6));
+    top: calc(-1 * var(--size-0));
     bottom: 0;
     background-color: var(--color-border-1);
     transition: width var(--duration-moderate-1) var(--motion-entrance-productive);
@@ -5620,6 +5723,15 @@ input[type="range"]::-webkit-slider-thumb:active {
     padding-left: 0;
 }
 
+.workspace-drawer-ribbon .side-dock-ribbon-action {
+    padding: 8px 0;
+    margin: 8px 0;
+}
+
+.workspace-drawer-ribbon .side-dock-settings:last-child {
+    margin-bottom: 16px;
+}
+
 /*──────────────────────────────────────────────────────────────*/
 /* Plugin Support
 /*──────────────────────────────────────────────────────────────*/
@@ -5788,8 +5900,19 @@ button.table-close::before {
 /* For the icon(s), check SVG Replacement */
 
 /*──────────────────────────────────────────────────────────────*/
-/* Calendar Plugin
+/* Calendar Plugin & Fantasy Calendar
 /*──────────────────────────────────────────────────────────────*/
+/* corrects arrow in Fantasy Calendar */
+#calendar-container.fantasy-calendar .arrow.right svg {
+    transform: rotate(180deg);    
+}
+/* highlighted day */
+#calendar-container.fantasy-calendar .day.fantasy-day.viewing {
+    background-color: var(--color-hover);
+    border: none;
+    padding: 10px 8px 2px 8px;
+}
+
 /* For the icon(s), check SVG Replacement */
 
 #calendar-container {
@@ -6280,7 +6403,7 @@ body:not(.no-sanctum-icons) svg.audio-file,
 body:not(.no-sanctum-icons) svg.blocks,
 body:not(.no-sanctum-icons) svg.bold-glyph,
 body:not(.no-sanctum-icons) svg.box-glyph,
-body:not(.no-sanctum-icons) svg.bracket-glyph
+body:not(.no-sanctum-icons) svg.bracket-glyph,
 body:not(.no-sanctum-icons) svg.broken-link,
 body:not(.no-sanctum-icons) svg.bullet-list-glyph,
 body:not(.no-sanctum-icons) svg.bullet-list,
@@ -6432,7 +6555,8 @@ body:not(.no-sanctum-icons) svg.fa-Images,
 body:not(.no-sanctum-icons) svg.chart,
 body:not(.no-sanctum-icons) svg.fa-search,
 body:not(.no-sanctum-icons) svg.changelog,
-body:not(.no-sanctum-icons) svg.fa-copy {
+body:not(.no-sanctum-icons) svg.fa-copy,
+body:not(.no-sanctum-icons) svg.fantasy-calendar-reveal {
   background-color: currentColor;
 }
 
@@ -6594,7 +6718,8 @@ body:not(.no-sanctum-icons) svg.fa-Images > path,
 body:not(.no-sanctum-icons) svg.chart > path,
 body:not(.no-sanctum-icons) svg.fa-search > path,
 body:not(.no-sanctum-icons) svg.changelog > path,
-body:not(.no-sanctum-icons) svg.fa-copy > path {
+body:not(.no-sanctum-icons) svg.fa-copy > path,
+body:not(.no-sanctum-icons) svg.fantasy-calendar-reveal > path {
   display: none;
 }
 
@@ -7205,6 +7330,11 @@ body:not(.no-sanctum-icons) svg.changelog {
 }
 
 /*──────────────────────────────────────────────────────────────*/
+/* Fantasy Calendar */
+body:not(.no-sanctum-icons) svg.fantasy-calendar-reveal {
+-webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,4H22V2H20V4H12V2H10V4H6A2.0025,2.0025,0,0,0,4,6V26a2.0025,2.0025,0,0,0,2,2H26a2.0025,2.0025,0,0,0,2-2V6A2.0025,2.0025,0,0,0,26,4ZM6,6h4V8h2V6h8V8h2V6h4l0,4H6Zm0,6h5v6H6ZM19,26H13V20h6Zm0-8H13V12h6Zm2,8V20h5l.0012,6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+}
+/*──────────────────────────────────────────────────────────────*/
 /* Targeted SVG Replacement
 /*──────────────────────────────────────────────────────────────*/
 
@@ -7257,6 +7387,12 @@ settings:
         type: heading
         level: 2
         collapsed: true
+    -
+        id: cb-dark-bg
+        title: Dark Mode High Contrast Code Background
+        description: Gives a darker background to code in dark mode, for more contrast.
+        type: class-toggle
+        default: false
     -
         id: accent-colors
         title: Accent Colors
@@ -7519,7 +7655,12 @@ settings:
             -
                 label: Lvl 2 Heading with hr
                 value: fn-title-hr
-    -
+    - 
+        id: footnote-id
+        title: Footnotes heading
+        type: variable-text
+        default: "'Footnotes'"
+    - 
         id: wrap-note-title
         title: Wrap Note Titles
         description: Displays the entire note title, even when the width is small.
@@ -7608,7 +7749,7 @@ settings:
     -
         id: topside-status-bar
         title: Status Bar on top
-        description: This setting moves the status bar to the top, but its buttons will stop working.
+        description: This setting moves the status bar to the top. To click on icons aim for the border.
         type: class-toggle
         default: false
     -
@@ -7627,6 +7768,17 @@ settings:
         type: heading
         level: 3
         collapsed: true
+    -
+        id: show-vault-name
+        title: Show Vault Name
+        type: class-toggle
+        default: false
+    -
+        id: left-nav-arrows
+        title: Left Nav Arrows
+        description: Moves nav arrows to the left, like default obsidian.
+        type: class-toggle
+        default: false
     -
         id: fx-rl
         title: File Explorer Relationship Lines
@@ -7707,4 +7859,37 @@ settings:
         default: false
 
 
+*/
+
+/* @plugins
+core:
+- backlink
+- command-palette
+- file-explorer
+- global-search
+- graph
+- outgoing-link
+- outline
+- page-preview
+- starred
+- switcher
+- sync
+- tag-pane
+
+community:
+- block-reference-count
+- breadcrumbs
+- calendar
+- fantasy-calendar
+- plugin-changelogs
+- obsidian-charts
+- obsidian-checklist-plugin
+- dataview
+- obsidian-excalidraw-plugin
+- obsidian-gallery
+- obsidian-kanban
+- quick-explorer
+- sliding-panes-obsidian
+- obsidian-style-settings
+- templater-obsidian
 */
