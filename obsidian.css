@@ -6,7 +6,7 @@ Author: @jdanielmourao (Github)
 Description: Sanctum’s a minimalist theme with the aim of creating a serene space 
              of retreat, for thought and uninterrupted work.
 License: GNU General Public License v3.0
-Version: 0.2.6
+Version: 0.2.5
 ───────────────────────────────────────────────────────────────────────────────────────
 
 Table of Contents
@@ -1874,12 +1874,12 @@ body.show-full-titles:not(.no-sanctum-icons) .nav-folder-children .nav-file-titl
 .view-header-icon {
     padding: var(--size-3)
              var(--size-3)
-             var(--size-5)
+             var(--size-0)
              var(--size-3);
     color: var(--text-muted);
     cursor: grab;
     position: relative;
-    top: var(--size-1);
+    top: var(--size-0);
 }
 
 .view-header-icon:hover {
@@ -3643,6 +3643,7 @@ code.language-pure-text.is-loaded,
     border: var(--size-0);
     border-bottom: 1.5px solid var(--color-border-1);
 }
+
 /*──────────────────────────────────────────────────────────────*/
 /* Dataview Tables
 /*──────────────────────────────────────────────────────────────*/
@@ -7715,7 +7716,7 @@ settings:
         default: 100
         min: 100
         max: 250
-        step: 10
+        step: 5
         format: '%'
     -
         id: center-tables
