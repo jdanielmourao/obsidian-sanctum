@@ -61,7 +61,7 @@ These colors are all customizable through the Style Settings plugin, as well as 
 ### Html Blocks
 HTML Blocks are defined by a start condition (for example, `<code>`) and an end condition (`</code>`). Any text you want to be inside that block, you’ll have to include it between the conditions. Always “close” a html block, for they “continue until they are closed by their appropriate end condition, or the last line of the document or other container block” ([source](https://spec.commonmark.org/0.30/#html-blocks)). Some html elements require a few more information in order for them to work, but do not worry, as they’ll be explained below!
 
-##### Html elements 
+#### Html elements 
 [source]([mdn.dev](https://developer.mozilla.org/en-US/docs/Web/HTML/Element))
 <br>
 **`<progress>`** - the <u>progress indicator element</u> displays the progress of a task, displayed as a progress bar. This progress needs to be input manually in obsidian (unless it's implemented in a plugin).
