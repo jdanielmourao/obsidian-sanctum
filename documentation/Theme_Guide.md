@@ -25,7 +25,20 @@ These colors are all customizable through the Style Settings plugin, as well as 
 
 1. **Custom Checkboxes:** Besides the regular checkbox, there are 7 custom checkboxes you may use on your tasks/lists. Do note that these do not work on tables, since tables only accept the regular ones (which you can input via markdown syntax, or even html syntax. Eg: `<input type="checkbox">`)
 
-[image]
+```
+- [i] Information
+- [-] Cancelled
+- [<] Scheduled
+- [>] Rescheduled/Forwarded
+- [?] Question
+- [!] Important
+- [l] Location
+- [x] Task
+- [ ] Task
+```
+
+<img src="https://user-images.githubusercontent.com/91087143/139735135-9bb582f5-d657-4017-b162-d11e6ee674b8.png" alt="Custom Checkboxes" width="35%">
+
 
 1. **Custom Codeblock Language - `pure-text`:** for when you have a passage you'd like to constantly copy, for some reason. This makes the codeblock appear like normal text, except it has a copy button to the right.
 
