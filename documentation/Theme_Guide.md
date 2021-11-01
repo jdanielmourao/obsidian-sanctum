@@ -110,7 +110,7 @@ If you wish to have a more intuitively colored progress bar, you can use a value
 <blockquote>Sed aliquam feugiat ante a tincidunt. Cras sed condimentum lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis faucibus velit, eu ornare metus. Cras feugiat molestie dui, non molestie purus. Aenean nec erat hendrerit, blandit metus quis, sollicitudin nibh. Aliquam malesuada convallis convallis. Nulla non ultricies ligula. Praesent varius diam sed felis aliquet suscipit. Nunc sit amet ullamcorper urna, eget sollicitudin lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</blockquote>
 ```
 
-<p align=center><img src="https://user-images.githubusercontent.com/91087143/139750178-d0bf43ba-cd11-4283-8699-770563dbc2a2.png" alt="blockquote" width=75% </p>
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139750178-d0bf43ba-cd11-4283-8699-770563dbc2a2.png" alt="blockquote" width=65% </p>
 
     
 `<blockquote class="paraphrase">` - the <u>paraphrase</u> custom class is part of the blockquote element, and is used to enclose text that, while not a quotation,
@@ -120,14 +120,14 @@ is also not an original idea, and so should be differentiated in the text to avo
 <blockquote class="paraphrase"> Sed aliquam feugiat ante a tincidunt. Cras sed condimentum lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis faucibus velit, eu ornare metus. Cras feugiat molestie dui, non molestie purus. Aenean nec erat hendrerit, blandit metus quis, sollicitudin nibh. Aliquam malesuada convallis convallis. Nulla non ultricies ligula. Praesent varius diam sed felis aliquet suscipit. Nunc sit amet ullamcorper urna, eget sollicitudin lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </blockquote>
 ```
 
-<p align=center><img src="https://user-images.githubusercontent.com/91087143/139750466-d36d2e75-6a40-43b8-99e5-10a402d85e67.png" alt="Paraphrase" width=75% </p>
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139750466-d36d2e75-6a40-43b8-99e5-10a402d85e67.png" alt="Paraphrase" width=65% </p>
 
 **`<cite>`** - the <u>citation element</u> is used for referencing a cited work. This will align the text to the right, and can (and should) be written inside a blockquote. This means you can also envelop it inside a paraphrase element in order to remind yourself of the source material.
 ```
 >Sed aliquam feugiat ante a tincidunt. Cras sed condimentum lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis faucibus velit, eu ornare metus. Cras feugiat molestie dui, non molestie purus. Aenean nec erat hendrerit, blandit metus quis, sollicitudin nibh. Aliquam malesuada convallis convallis. Nulla non ultricies ligula. Praesent varius diam sed felis aliquet suscipit. Nunc sit amet ullamcorper urna, eget sollicitudin lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 <cite> Insert Author here https://startpage.com/ </cite>
 ```
-<p align=center><img src="https://user-images.githubusercontent.com/91087143/139750706-3c85693a-7365-4188-a389-b1559b8a68dd.png" alt="Cite" width=75%></p>
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139750706-3c85693a-7365-4188-a389-b1559b8a68dd.png" alt="Cite" width=65%></p>
 
 **`<aside>`** - the <u>aside element</u> is used for simple call-outs or for presenting information that isn't directly related to the note's content. This is formatted the same way as a `<s class="aside-in">` element (more on that later), but doesn't allow for Markdown formatting. Still, it wouldn't make sense to have more advanced sidenote options, without also having the default html element.
 **`<s class="aside-*">`** - the <u>sidenote element</u> is used to display references or complementary information that doesn't find its place in the main text. The end block for every sidenote type is the same: `</s>` There are 4 types of sidenote classes:
