@@ -46,9 +46,7 @@
 
 ```
 ```pure-text
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Vestibulum id dignissim massa, at tempor lacus.
-Maecenas vel hendrerit orci, sit amet sagittis purus.```
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id dignissim massa, at tempor lacus. Maecenas vel hendrerit orci, sit amet sagittis purus.```
 ```
 <p align=center><img src="https://user-images.githubusercontent.com/91087143/139746450-5b038735-8dff-4eef-8ddd-d8626bc46ef9.gif" alt="Custom Codeblock" width=75%</p>
 
