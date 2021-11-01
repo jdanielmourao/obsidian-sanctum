@@ -18,7 +18,7 @@
 *==highlight==* - for a blue highlight
 **==highlight==** - for a pink highlight
 ```
-<img src="https://user-images.githubusercontent.com/91087143/139734042-ea7ed245-9cee-4b18-8466-4a1830bf3f69.gif" alt="Multi-Color Highlights" width=30%>
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139734042-ea7ed245-9cee-4b18-8466-4a1830bf3f69.gif" alt="Multi-Color Highlights" width=30%></p>
 
 
 These colors are all customizable through the Style Settings plugin, as well as the highlighted text color, in order to make sure contrast is mantained (or for more funky combinations, it's up to you)
@@ -37,38 +37,46 @@ These colors are all customizable through the Style Settings plugin, as well as 
 - [ ] Task
 ```
 
-<img src="https://user-images.githubusercontent.com/91087143/139735135-9bb582f5-d657-4017-b162-d11e6ee674b8.png" alt="Custom Checkboxes" width="35%">
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139735135-9bb582f5-d657-4017-b162-d11e6ee674b8.png" alt="Custom Checkboxes" width=35%></p>
 
 
 1. **Custom Codeblock Language - `pure-text`:** for when you have a passage you'd like to constantly copy, for some reason. This makes the codeblock appear like normal text, except it has a copy button to the right.
 
-[image]
+```
+```pure-text
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Vestibulum id dignissim massa, at tempor lacus.
+Maecenas vel hendrerit orci, sit amet sagittis purus.```
+```
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139746450-5b038735-8dff-4eef-8ddd-d8626bc46ef9.gif" alt="Custom Codeblock" width=75%</p>
+
 
 6. **Custom Link Icons:** In Preview Mode after writing a link, there’s a change an icon will show on the left of it. If you’d like to add links to the theme, make sure to submit a Request on the Issue section.
 
-[image]
+<p align=center><img src="" alt="" width= </p>
+
 
 7. **Image Desaturation:** Images are a bit desaturated to go better with the theme and create a sense of cohesion, even if they have massive differences with other images. They will show its full colors once hovered.
 
 8. **WYSIWYG `<hr>` element :** when writing "---" in Edit Mode (or "----" if you have Smart Typography), an hr element will appear. There is a Style Settings option to disable it, as well as center the default "---" dashes. When following headings, hr element will have smaller top margins, making them closer to the headings, and not creating massive blank spaces in the note.
 
-[image]
+<p align=center><img src="" alt="" width= </p>
 
-[image]
+<p align=center><img src="" alt="" width= </p>
 
-[image]
 
-9. **Active Line Highlight:** to always know in which line you're writing.
 
-[image]
+9. **Active Line Highlight:** to always know in which line you're writing (as seen above).
+
+<p align=center></p>
 
 10. **Folded  Heading/List Indicator:** works as a reminder for when headings and/or lists are collapsed. Adding or subtracting `left-margin` from [this snippet]("fold_indicator.css") will help you adjust this feature to your font choice.
 
-[image]
+<p align=center></p>
 
 11. **Clean Embeds:** by Moonbase, makes embeds looks seemless in Preview Mode.
 
-[image]
+<p align=center></p>
 
 
 ### Html Blocks
