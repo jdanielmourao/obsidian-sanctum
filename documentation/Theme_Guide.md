@@ -129,41 +129,31 @@ is also not an original idea, and so should be differentiated in the text to avo
 >Sed aliquam feugiat ante a tincidunt. Cras sed condimentum lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis faucibus velit, eu ornare metus. Cras feugiat molestie dui, non molestie purus. Aenean nec erat hendrerit, blandit metus quis, sollicitudin nibh. Aliquam malesuada convallis convallis. Nulla non ultricies ligula. Praesent varius diam sed felis aliquet suscipit. Nunc sit amet ullamcorper urna, eget sollicitudin lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 <cite> Insert Author here https://startpage.com/ </cite>
 ```
-<p align=center><img src="https://user-images.githubusercontent.com/91087143/139750706-3c85693a-7365-4188-a389-b1559b8a68dd.png" alt="Cite" width=75% </p>
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139750706-3c85693a-7365-4188-a389-b1559b8a68dd.png" alt="Cite" width=75%></p>
 
 **`<aside>`** - the <u>aside element</u> is used for simple call-outs or for presenting information that isn't directly related to the note's content. This is formatted the same way as a `<s class="aside-in">` element (more on that later), but doesn't allow for Markdown formatting. Still, it wouldn't make sense to have more advanced sidenote options, without also having the default html element.
-
-<p align=center><img src="" alt="" width= </p>
-
 **`<s class="aside-*">`** - the <u>sidenote element</u> is used to display references or complementary information that doesn't find its place in the main text. The end block for every sidenote type is the same: `</s>` There are 4 types of sidenote classes:
  - `<s class="aside-right">`: this places text in the side of the right margin of the note;
-
-<p align=center><img src="" alt="" width= </p>
-
  - `<s class="aside-left">`: this places text in the side of the right margin of the note;
-[image]
-
-<p align=center><img src="" alt="" width= </p>
-
  - `<s class="aside-in">`: this places text inside the main text, but in the same way as the default `<aside>` element, is formatted as a callout;
-
-<p align=center><img src="" alt="" width= </p>
-
  - `<s class="aside-hide">`: this places an icon in the side of the right margin, that will reveal its content once hovered. The revealed content will display the same way as an `<s class="aside-right">`element.
-
-<p align=center><img src="" alt="" width= </p>
+    
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139750949-2489e514-9179-48fd-b942-a5717f275e0d.gif" alt="Sidenotes" width=90%></p>
 
 **`<samp>`** - the <u>sample output element</u> is used to enclose text that simulates an output from a computer program. It's rendered using the monospaced font set for the theme.
+    
+```
+<samp> Hello World! <samp>
+```
+    
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139751269-d30174b8-8fb5-4b76-8b80-6ca77432e220.png" alt="samp" width=15% ></p>
 
-<p align=center><img src="" alt="" width= </p>
+`<kbd>` - the <u>keyboard input element</u> is used to represent user input from a keyboard. It's basically a good way to highlight hotkeys!
 
-**`<kbd>` - the <u>keyboard input element</u> is used to represent user input from a keyboard. It's basically a good way to highlight hotkeys!
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139751544-0ef6d49e-1594-4bec-983c-c9edc36d4b01.png" alt="kbd" width=20% </p>
 
-<p align=center><img src="" alt="" width= </p>
-
-**`<small>` - the <u>side comment element</u> is used, like the name implies, to write side comments and small print. It renders a smaller font-size than the default text.
-
-<p align=center><img src="" alt="" width= </p>
+**`<small>`** - the <u>side comment element</u> is used, like the name implies, to write side comments and small print. It renders a smaller font-size than the default text.
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139751410-15a17837-a6d4-46c3-a043-d9c45082ceb6.png" alt="small" width=15% </p>
 
 ## Style Settings Options:
 
