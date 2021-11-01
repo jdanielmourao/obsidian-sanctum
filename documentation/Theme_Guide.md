@@ -18,8 +18,8 @@
 *==highlight==* - for a blue highlight
 **==highlight==** - for a pink highlight
 ```
+<img src="https://user-images.githubusercontent.com/91087143/139734042-ea7ed245-9cee-4b18-8466-4a1830bf3f69.gif" alt="Multi-Color Highlights" width=30%>
 
-[image]
 
 These colors are all customizable through the Style Settings plugin, as well as the highlighted text color, in order to make sure contrast is mantained (or for more funky combinations, it's up to you)
 
