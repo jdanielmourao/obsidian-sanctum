@@ -88,7 +88,7 @@ Maecenas vel hendrerit orci, sit amet sagittis purus.```
 HTML Blocks are defined by a start condition (for example, `<code>`) and an end condition (`</code>`). Any text you want to be inside that block, you’ll have to include it between the conditions. Always “close” a html block, for they “continue until they are closed by their appropriate end condition, or the last line of the document or other container block” ([source](https://spec.commonmark.org/0.30/#html-blocks)). Some html elements require a few more information in order for them to work, but do not worry, as they’ll be explained below!
 
 #### Html elements 
-[source]([mdn.dev](https://developer.mozilla.org/en-US/docs/Web/HTML/Element))
+ For technical information, you can click this [link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 <br>
 **`<progress>`** - the <u>progress indicator element</u> displays the progress of a task, displayed as a progress bar. This progress needs to be input manually in obsidian (unless it's implemented in a plugin).
 To input a `<progress>` element, you need to input a "value", as well as a "max" value. E.g: `<progress value="6" max="10"></progress>`. That will display a progress bar with 60% progress, with the accent color.
