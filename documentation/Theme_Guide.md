@@ -1,7 +1,9 @@
 # Table of Contents
-1. [#Features]
-2. [#Html Blocks]
-3. [#Style Settings Options]
+- [Table of Contents](#table-of-contents)
+    - [Features:](#features)
+        - [Html Blocks](#html-blocks)
+                - [Html elements (source))](#html-elements-source)
+    - [Style Settings Options:](#style-settings-options)
 
 ## Features:
 
