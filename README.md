@@ -12,9 +12,9 @@ You can also manually install Sanctum by:
 
 ## Font recommendations
 
-This theme recommends the use and installation of the fonts **"IBM Plex Sans"** and **"IBM Plex Mono"** in your system. 
-Since those fonts are rather heavy on the theme's file, though, I decided to include iA Writer's variable fonts "Quattro" and "Mono", which are based on IBM Plex, and much lighter on the file. This way, even if you don't have any of the fonts installed on your computer, they'll still be rendered by obsidian when you install this theme.
-If you do want to have IBM Plex as the main font, or any other font for that matter, you can simply install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) Plugin, and add them under `Typography`➞`Fonts`, in the Style Settings Plugin Options.
+This theme recommends the use and installation of the IBM Plex font family in your system, although it still works well with default fonts. It also supports iA Writer fonts, for those who enjoy using them in their writing. You can add both using this [snippet](snippets/Sanctum_supported_fonts.css), and enabling it in `Appearance ➞ CSS Snippets`.
+
+If you do want to have IBM Plex as the main font, or any other font for that matter, you can install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) Plugin, and add them under `Typography`➞`Fonts`, in the Style Settings Plugin Options.
 
 ## Recommended Plugins
 
@@ -69,6 +69,8 @@ If you do want to have IBM Plex as the main font, or any other font for that mat
 - WYSIWYG hr elements in Edit Mode, as a compliment to Smart Typography. If the plugin is enabled, add and extra dash for it to work;
 - Active line highlighting;
 - Folded heading/list indicator (in edit and preview mode).
+
+(for a more <u>comprehensive</u> walkthrough of Sanctum's features, check out the [Theme Guide](Theme_Guide.md))
 
 ## Plugin Support
 - Advanced Tables
