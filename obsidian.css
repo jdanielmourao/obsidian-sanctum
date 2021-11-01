@@ -3063,17 +3063,25 @@ div > .CodeMirror-line span.cm-hashtag-end {
 aside {
     float: right;
     position: relative;
-    width: 250px;
-    left: 281.5px;
-    top: -2.5rem;
-    padding: var(--size-3);
-    border: 1px solid;
-    border-color: transparent;
+    clear: right;
+    width: 300px;
+    z-index: 3;
+    padding: var(--size-0)
+             var(--size-3) /* this is to somewhat match the main text */
+             var(--size-0)
+             var(--size-5);
     border-radius: 0px;
-  /*  border-left: 1.5px solid var(--color-primary-100); */
-    background-color: var(--background-primary);
-    color: var(--text-normal);
+    margin-bottom: var(--size-2);
+    margin-right: -.55em;
+    margin-left: 1em;
+    margin-top: var(--size-3);
+    text-decoration: none;
+    text-align: start;
+    font-weight: unset;
     font-size: var(--font-scale-00);
+    line-height: var(--leading-2);
+    background-color: var(--background-primary);
+    border-left: 1.5px solid var(--color-accent);
 }
 
 /* credit: SlRvb, creator of the ITS Theme */
