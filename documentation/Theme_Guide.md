@@ -94,28 +94,42 @@ HTML Blocks are defined by a start condition (for example, `<code>`) and an end 
 **`<progress>`** - the <u>progress indicator element</u> displays the progress of a task, displayed as a progress bar. This progress needs to be input manually in obsidian (unless it's implemented in a plugin).
 To input a `<progress>` element, you need to input a "value", as well as a "max" value. E.g: `<progress value="6" max="10"></progress>`. That will display a progress bar with 60% progress, with the accent color.
 
-<p align=center><img src="" alt="" width= </p>
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139749691-ebc9718c-63cd-4e2e-8a4b-500b46c52fae.png" alt="progress" width=30% </p>
 
 If you wish to have a more intuitively colored progress bar, you can use a value that's a multiple of 5, and a max of 100. That will result in the following formatting:
+    
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139749787-686ce734-283b-4336-9a45-ae43528d3ddf.png" alt="colors porogress" width=30% </p>
 
-<p align=center><img src="" alt="" width= </p>
-
-(Note that the progress bars are already formatted so it's easy to add a label in the line below, like the example above)
-
+(Note that the progress bars are already formatted so it's easy to add a label in the line below, like the examples above)
 
 
 `<blockquote>` - the <u> block quotation element </u> is used to indicate that the enclosed text is part of a quotation. A text representation of the source and/or author may be given using the `<cite>` element. Blockquotes can also be written using Markdown syntax, simply including a `>` at the beginning of the line.
 
-<p align=center><img src="" alt="" width= </p>
+```
+>Sed aliquam feugiat ante a tincidunt. Cras sed condimentum lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis faucibus velit, eu ornare metus. Cras feugiat molestie dui, non molestie purus. Aenean nec erat hendrerit, blandit metus quis, sollicitudin nibh. Aliquam malesuada convallis convallis. Nulla non ultricies ligula. Praesent varius diam sed felis aliquet suscipit. Nunc sit amet ullamcorper urna, eget sollicitudin lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+```
+```
+<blockquote>Sed aliquam feugiat ante a tincidunt. Cras sed condimentum lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis faucibus velit, eu ornare metus. Cras feugiat molestie dui, non molestie purus. Aenean nec erat hendrerit, blandit metus quis, sollicitudin nibh. Aliquam malesuada convallis convallis. Nulla non ultricies ligula. Praesent varius diam sed felis aliquet suscipit. Nunc sit amet ullamcorper urna, eget sollicitudin lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</blockquote>
+```
 
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139750178-d0bf43ba-cd11-4283-8699-770563dbc2a2.png" alt="blockquote" width=75% </p>
+
+    
 `<blockquote class="paraphrase">` - the <u>paraphrase</u> custom class is part of the blockquote element, and is used to enclose text that, while not a quotation,
-is also not an original idea, and so should be differentiated in the text to avoid confusion and misattribution of credit/authorship. To put it simply, if you'd like to tell when you're paraphasing, you can use this class.
+is also not an original idea, and so should be differentiated in the text to avoid confusion and misattribution of credit/authorship. To put it simply, if you'd like to tell when you're paraphasing, you can use this class. Since it's a class of the `<blockquote>`element, it's best not to have it right before or after a blockquote, because both will merge. Fear not, for adding a comment (`%%comment%%`) between both solves the issue.
 
-<p align=center><img src="" alt="" width= </p>
+```
+<blockquote class="paraphrase"> Sed aliquam feugiat ante a tincidunt. Cras sed condimentum lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis faucibus velit, eu ornare metus. Cras feugiat molestie dui, non molestie purus. Aenean nec erat hendrerit, blandit metus quis, sollicitudin nibh. Aliquam malesuada convallis convallis. Nulla non ultricies ligula. Praesent varius diam sed felis aliquet suscipit. Nunc sit amet ullamcorper urna, eget sollicitudin lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </blockquote>
+```
+
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139750466-d36d2e75-6a40-43b8-99e5-10a402d85e67.png" alt="Paraphrase" width=75% </p>
 
 **`<cite>`** - the <u>citation element</u> is used for referencing a cited work. This will align the text to the right, and can (and should) be written inside a blockquote. This means you can also envelop it inside a paraphrase element in order to remind yourself of the source material.
-
-<p align=center><img src="" alt="" width= </p>
+```
+>Sed aliquam feugiat ante a tincidunt. Cras sed condimentum lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis faucibus velit, eu ornare metus. Cras feugiat molestie dui, non molestie purus. Aenean nec erat hendrerit, blandit metus quis, sollicitudin nibh. Aliquam malesuada convallis convallis. Nulla non ultricies ligula. Praesent varius diam sed felis aliquet suscipit. Nunc sit amet ullamcorper urna, eget sollicitudin lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+<cite> Insert Author here https://startpage.com/ </cite>
+```
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139750706-3c85693a-7365-4188-a389-b1559b8a68dd.png" alt="Cite" width=75% </p>
 
 **`<aside>`** - the <u>aside element</u> is used for simple call-outs or for presenting information that isn't directly related to the note's content. This is formatted the same way as a `<s class="aside-in">` element (more on that later), but doesn't allow for Markdown formatting. Still, it wouldn't make sense to have more advanced sidenote options, without also having the default html element.
 
