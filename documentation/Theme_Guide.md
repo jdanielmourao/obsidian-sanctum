@@ -12,7 +12,7 @@
 
 2. **Custom Icons:** Sanctum uses icons from [IBM's Design Language icon library](https://www.ibm.com/design/language/iconography/ui-icons/library/)
 
-3. **Multi-Color Highlights:** for when you need more than a single highlight color! To use them, simply use the following syntax: 
+3. **Multi-Color Highlights:** for when you need more than a single highlight color! These colors are all customizable through the Style Settings plugin, as well as the highlighted text color, in order to make sure contrast is mantained (or for more funky combinations, it's up to you). To use them, simply use the following syntax: 
 
 ```
 ==highlight== - for a yellow highlight
@@ -22,7 +22,7 @@
 <p align=center><img src="https://user-images.githubusercontent.com/91087143/139734042-ea7ed245-9cee-4b18-8466-4a1830bf3f69.gif" alt="Multi-Color Highlights" width=30%></p>
 
 
-These colors are all customizable through the Style Settings plugin, as well as the highlighted text color, in order to make sure contrast is mantained (or for more funky combinations, it's up to you)
+
 
 
 4. **Custom Checkboxes:** Besides the regular checkbox, there are 7 custom checkboxes you may use on your tasks/lists. Do note that these do not work on tables, since tables only accept the default html checkboxes (which you can input via markdown syntax, or even html syntax). These default html checkboxes are also styled to match the theme. Eg: `<input type="checkbox">`
@@ -75,13 +75,13 @@ Maecenas vel hendrerit orci, sit amet sagittis purus.```
 
 10. **Folded  Heading/List Indicator:** works as a reminder for when headings and/or lists are collapsed. Adding or subtracting `left-margin` from [this snippet]("fold_indicator.css") will help you adjust this feature to your font choice.
 
-<p align=center><img src="https://user-images.githubusercontent.com/91087143/139747448-bd0b3b78-d653-44de-b78a-0eb2cb7a8a0f.gif" alt="" width= </p>
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139747448-bd0b3b78-d653-44de-b78a-0eb2cb7a8a0f.gif" alt="Fold Indicator" width=75% </p>
 
     
 
 11. **Clean Embeds:** by Moonbase, makes embeds looks seemless in Preview Mode.
 
-<p align=center><img src="" alt="" width= </p>
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139747998-09f2e53c-c56a-485b-b3f7-2763a706823d.gif" alt="Clean Embeds" width=75% </p>
 
 
 ### Html Blocks
@@ -93,11 +93,11 @@ HTML Blocks are defined by a start condition (for example, `<code>`) and an end 
 **`<progress>`** - the <u>progress indicator element</u> displays the progress of a task, displayed as a progress bar. This progress needs to be input manually in obsidian (unless it's implemented in a plugin).
 To input a `<progress>` element, you need to input a "value", as well as a "max" value. E.g: `<progress value="6" max="10"></progress>`. That will display a progress bar with 60% progress, with the accent color.
 
-[image]
+<p align=center><img src="" alt="" width= </p>
 
 If you wish to have a more intuitively colored progress bar, you can use a value that's a multiple of 5, and a max of 100. That will result in the following formatting:
 
-[image]
+<p align=center><img src="" alt="" width= </p>
 
 (Note that the progress bars are already formatted so it's easy to add a label in the line below, like the example above)
 
@@ -105,50 +105,50 @@ If you wish to have a more intuitively colored progress bar, you can use a value
 
 `<blockquote>` - the <u> block quotation element </u> is used to indicate that the enclosed text is part of a quotation. A text representation of the source and/or author may be given using the `<cite>` element. Blockquotes can also be written using Markdown syntax, simply including a `>` at the beginning of the line.
 
-[image]
+<p align=center><img src="" alt="" width= </p>
 
 `<blockquote class="paraphrase">` - the <u>paraphrase</u> custom class is part of the blockquote element, and is used to enclose text that, while not a quotation,
 is also not an original idea, and so should be differentiated in the text to avoid confusion and misattribution of credit/authorship. To put it simply, if you'd like to tell when you're paraphasing, you can use this class.
 
-[image]
+<p align=center><img src="" alt="" width= </p>
 
 **`<cite>`** - the <u>citation element</u> is used for referencing a cited work. This will align the text to the right, and can (and should) be written inside a blockquote. This means you can also envelop it inside a paraphrase element in order to remind yourself of the source material.
 
-[image]
+<p align=center><img src="" alt="" width= </p>
 
 **`<aside>`** - the <u>aside element</u> is used for simple call-outs or for presenting information that isn't directly related to the note's content. This is formatted the same way as a `<s class="aside-in">` element (more on that later), but doesn't allow for Markdown formatting. Still, it wouldn't make sense to have more advanced sidenote options, without also having the default html element.
 
-[image]
+<p align=center><img src="" alt="" width= </p>
 
 **`<s class="aside-*">`** - the <u>sidenote element</u> is used to display references or complementary information that doesn't find its place in the main text. The end block for every sidenote type is the same: `</s>` There are 4 types of sidenote classes:
  - `<s class="aside-right">`: this places text in the side of the right margin of the note;
 
-[image]
+<p align=center><img src="" alt="" width= </p>
 
  - `<s class="aside-left">`: this places text in the side of the right margin of the note;
 [image]
 
-[image]
+<p align=center><img src="" alt="" width= </p>
 
  - `<s class="aside-in">`: this places text inside the main text, but in the same way as the default `<aside>` element, is formatted as a callout;
 
-[image]
+<p align=center><img src="" alt="" width= </p>
 
  - `<s class="aside-hide">`: this places an icon in the side of the right margin, that will reveal its content once hovered. The revealed content will display the same way as an `<s class="aside-right">`element.
 
-[image]
+<p align=center><img src="" alt="" width= </p>
 
 **`<samp>`** - the <u>sample output element</u> is used to enclose text that simulates an output from a computer program. It's rendered using the monospaced font set for the theme.
 
-[image]
+<p align=center><img src="" alt="" width= </p>
 
 **`<kbd>` - the <u>keyboard input element</u> is used to represent user input from a keyboard. It's basically a good way to highlight hotkeys!
 
-[image]
+<p align=center><img src="" alt="" width= </p>
 
 **`<small>` - the <u>side comment element</u> is used, like the name implies, to write side comments and small print. It renders a smaller font-size than the default text.
 
-[image]
+<p align=center><img src="" alt="" width= </p>
 
 ## Style Settings Options:
 
