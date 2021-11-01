@@ -8,9 +8,10 @@
 ## Features:
 
 1. **Variable Headings:** Heading sizes will depend on screen size, meaning they adapt to mobile phones, tablets, as well as different computer screen sizes! You can change the sizing in the Style Settings Options!
-[image]
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139746916-80d2997f-1823-463e-9bbb-21417fafa575.gif" alt="Variable Headings" width=95% </p>
 
 2. **Custom Icons:** Sanctum uses icons from [IBM's Design Language icon library](https://www.ibm.com/design/language/iconography/ui-icons/library/)
+
 3. **Multi-Color Highlights:** for when you need more than a single highlight color! To use them, simply use the following syntax: 
 
 ```
@@ -23,7 +24,8 @@
 
 These colors are all customizable through the Style Settings plugin, as well as the highlighted text color, in order to make sure contrast is mantained (or for more funky combinations, it's up to you)
 
-1. **Custom Checkboxes:** Besides the regular checkbox, there are 7 custom checkboxes you may use on your tasks/lists. Do note that these do not work on tables, since tables only accept the regular ones (which you can input via markdown syntax, or even html syntax. Eg: `<input type="checkbox">`)
+
+4. **Custom Checkboxes:** Besides the regular checkbox, there are 7 custom checkboxes you may use on your tasks/lists. Do note that these do not work on tables, since tables only accept the default html checkboxes (which you can input via markdown syntax, or even html syntax). These default html checkboxes are also styled to match the theme. Eg: `<input type="checkbox">`
 
 ```
 - [i] Information
@@ -40,7 +42,7 @@ These colors are all customizable through the Style Settings plugin, as well as 
 <p align=center><img src="https://user-images.githubusercontent.com/91087143/139735135-9bb582f5-d657-4017-b162-d11e6ee674b8.png" alt="Custom Checkboxes" width=35%></p>
 
 
-1. **Custom Codeblock Language - `pure-text`:** for when you have a passage you'd like to constantly copy, for some reason. This makes the codeblock appear like normal text, except it has a copy button to the right.
+5. **Custom Codeblock Language - `pure-text`:** for when you have a passage you'd like to constantly copy, for some reason. This makes the codeblock appear like normal text, except it has a copy button to the right.
 
 ```
 ```pure-text
@@ -53,30 +55,33 @@ Maecenas vel hendrerit orci, sit amet sagittis purus.```
 
 6. **Custom Link Icons:** In Preview Mode after writing a link, there’s a change an icon will show on the left of it. If you’d like to add links to the theme, make sure to submit a Request on the Issue section.
 
-<p align=center><img src="" alt="" width= </p>
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139746676-2362b0c2-d056-4abc-bc86-9ee2867fd0ff.png" alt="Custom Link Icons" width=30% </p>
 
 
 7. **Image Desaturation:** Images are a bit desaturated to go better with the theme and create a sense of cohesion, even if they have massive differences with other images. They will show its full colors once hovered.
+    
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139747202-262a0f4c-fdb6-4c43-a100-0b4f6de1d7b9.gif" alt="Image Desaturation" width=25% </p>
+
 
 8. **WYSIWYG `<hr>` element :** when writing "---" in Edit Mode (or "----" if you have Smart Typography), an hr element will appear. There is a Style Settings option to disable it, as well as center the default "---" dashes. When following headings, hr element will have smaller top margins, making them closer to the headings, and not creating massive blank spaces in the note.
 
-<p align=center><img src="" alt="" width= </p>
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139747344-f4be7082-7a42-4024-882b-36132d267bd1.gif" alt="hr 1" width=75% </p>
 
-<p align=center><img src="" alt="" width= </p>
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139747358-24eaa547-99f0-406d-9382-72d16ac91664.gif" alt="hr 2" width=75% </p>
 
 
 
 9. **Active Line Highlight:** to always know in which line you're writing (as seen above).
 
-<p align=center></p>
-
 10. **Folded  Heading/List Indicator:** works as a reminder for when headings and/or lists are collapsed. Adding or subtracting `left-margin` from [this snippet]("fold_indicator.css") will help you adjust this feature to your font choice.
 
-<p align=center></p>
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139747448-bd0b3b78-d653-44de-b78a-0eb2cb7a8a0f.gif" alt="" width= </p>
+
+    
 
 11. **Clean Embeds:** by Moonbase, makes embeds looks seemless in Preview Mode.
 
-<p align=center></p>
+<p align=center><img src="" alt="" width= </p>
 
 
 ### Html Blocks
