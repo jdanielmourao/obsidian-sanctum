@@ -70,7 +70,7 @@ If you do want to have IBM Plex as the main font, or any other font for that mat
 - Active line highlighting;
 - Folded heading/list indicator (in edit and preview mode).
 
-(for a more <u>comprehensive</u> walkthrough of Sanctum's features, check out the [Theme Guide](Theme_Guide.md))
+(for a more <u>comprehensive</u> walkthrough of Sanctum's features, check out the [Theme Guide](documentation/Theme_Guide.md))
 
 ## Plugin Support
 - Advanced Tables
