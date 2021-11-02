@@ -12,7 +12,7 @@ You can also manually install Sanctum by:
 
 ## Font recommendations
 
-This theme recommends the use and installation of the IBM Plex font family in your system, although it still works well with default fonts. It also supports iA Writer fonts, for those who enjoy using them in their writing. You can add both using this [snippet](snippets/Sanctum_supported_fonts.css), and enabling it in `Appearance ➞ CSS Snippets`.
+This theme recommends the use and installation of the IBM Plex font family in your system, although it still works well with default fonts. It also supports iA Writer fonts, for those who enjoy using them in their writing, and has them by default. This is because iA Writer is much more space efficient, and won't interfere a lot with the theme's loading time. You can download the supported fonts using this [snippet](snippets/Sanctum_supported_fonts.css), and enabling it in `Appearance ➞ CSS Snippets`.
 
 If you do want to have IBM Plex as the main font, or any other font for that matter, you can install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) Plugin, and add them under `Typography`➞`Fonts`, in the Style Settings Plugin Options.
 
