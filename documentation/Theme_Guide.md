@@ -90,15 +90,9 @@ HTML Blocks are defined by a start condition (for example, `<code>`) and an end 
     
 
 **`<progress>`** - the **progress indicator element** displays the progress of a task, displayed as a progress bar. This progress needs to be input manually in obsidian (unless it's implemented in a plugin).
-To input a `<progress>` element, you need to input a "value", as well as a "max" value. E.g: `<progress value="6" max="10"></progress>`. That will display a progress bar with 60% progress, with the accent color.
+To input a `<progress>` element, you need to input a "value", as well as a "max" value. E.g: `<progress value="6" max="10"></progress>`. That will display a progress bar with 60% progress. Note that the progress bars are already formatted so it's easy to add a label in the line below, like the following examples:
 
-<p align=center><img src="https://user-images.githubusercontent.com/91087143/139749691-ebc9718c-63cd-4e2e-8a4b-500b46c52fae.png" alt="progress" width=30% </p>
-
-If you wish to have a more intuitively colored progress bar, you can use a value that's a multiple of 5, and a max of 100. That will result in the following formatting:
-    
-<p align=center><img src="https://user-images.githubusercontent.com/91087143/139749787-686ce734-283b-4336-9a45-ae43528d3ddf.png" alt="colors porogress" width=30% </p>
-
-(Note that the progress bars are already formatted so it's easy to add a label in the line below, like the examples above)
+<p align=center><img src="https://user-images.githubusercontent.com/91087143/139889098-fef4e2c9-91f5-459c-b246-ede3f946134f.png" alt="progress" width=30% </p>
 
 
 `<blockquote>` - the **block quotation element** is used to indicate that the enclosed text is part of a quotation. A text representation of the source and/or author may be given using the `<cite>` element. Blockquotes can also be written using Markdown syntax, simply including a `>` at the beginning of the line.
