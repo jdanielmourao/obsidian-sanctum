@@ -4683,7 +4683,7 @@ button[foo="Uninstall"] {
 
 .modal.mod-settings .vertical-tab-header {
     padding: var(--size-5)
-             var(--size-0) !important;
+             var(--size-0);
     flex: 0 0 200px;
     height: 80vh;
     overflow: auto;
