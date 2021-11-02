@@ -4986,36 +4986,26 @@ progress[value]::-webkit-progress-value{
     background-color: var(--color-accent);
 }
 
-progress[value='5']::-webkit-progress-value,
-progress[value='10']::-webkit-progress-value,
-progress[value='15']::-webkit-progress-value,
-progress[value='20']::-webkit-progress-value,
-progress[value='25']::-webkit-progress-value,
-progress[value='30']::-webkit-progress-value,
-progress[value='35']::-webkit-progress-value,
-progress[value='40']::-webkit-progress-value,
-progress[value='45']::-webkit-progress-value {
-  background-color: var(--color-red);
+progress[value^='1']::-webkit-progress-value,
+progress[value^='2']::-webkit-progress-value,
+progress[value^='3']::-webkit-progress-value {
+    background-color: var(--color-red);
 }
 
-progress[value='50']::-webkit-progress-value {
-    background-color: var(--color-orange);
-}
-
-progress[value='55']::-webkit-progress-value,
-progress[value='60']::-webkit-progress-value,
-progress[value='65']::-webkit-progress-value,
-progress[value='70']::-webkit-progress-value,
-progress[value='75']::-webkit-progress-value,
-progress[value='80']::-webkit-progress-value,
-progress[value='85']::-webkit-progress-value,
-progress[value='90']::-webkit-progress-value,
-progress[value='95']::-webkit-progress-value {
+progress[value^='4']::-webkit-progress-value,
+progress[value^='5']::-webkit-progress-value,
+progress[value^='6']::-webkit-progress-value {
     background-color: var(--color-yellow);
 }
 
-progress[value='100']::-webkit-progress-value {
-    background-color: var(--color-green);
+progress[value^='7']::-webkit-progress-value,
+progress[value^='8']::-webkit-progress-value,
+progress[value^='9']::-webkit-progress-value {
+  background-color: var(--color-green);
+}
+
+progress[value^='10']::-webkit-progress-value {
+    background-color: var(--color-accent);
 }
 
 /*──────────────────────────────────────────────────────────────*/
