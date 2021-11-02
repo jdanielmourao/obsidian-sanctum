@@ -89,7 +89,7 @@ HTML Blocks are defined by a start condition (for example, `<code>`) and an end 
  <small>For technical information, you can click this [link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).</small>
     
 
-**`<progress>`** - the <u>progress indicator element</u> displays the progress of a task, displayed as a progress bar. This progress needs to be input manually in obsidian (unless it's implemented in a plugin).
+**`<progress>`** - the **progress indicator element** displays the progress of a task, displayed as a progress bar. This progress needs to be input manually in obsidian (unless it's implemented in a plugin).
 To input a `<progress>` element, you need to input a "value", as well as a "max" value. E.g: `<progress value="6" max="10"></progress>`. That will display a progress bar with 60% progress, with the accent color.
 
 <p align=center><img src="https://user-images.githubusercontent.com/91087143/139749691-ebc9718c-63cd-4e2e-8a4b-500b46c52fae.png" alt="progress" width=30% </p>
@@ -101,7 +101,7 @@ If you wish to have a more intuitively colored progress bar, you can use a value
 (Note that the progress bars are already formatted so it's easy to add a label in the line below, like the examples above)
 
 
-`<blockquote>` - the <u> block quotation element </u> is used to indicate that the enclosed text is part of a quotation. A text representation of the source and/or author may be given using the `<cite>` element. Blockquotes can also be written using Markdown syntax, simply including a `>` at the beginning of the line.
+`<blockquote>` - the **block quotation element** is used to indicate that the enclosed text is part of a quotation. A text representation of the source and/or author may be given using the `<cite>` element. Blockquotes can also be written using Markdown syntax, simply including a `>` at the beginning of the line.
 
 ```
 >Sed aliquam feugiat ante a tincidunt. Cras sed condimentum lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis faucibus velit, eu ornare metus. Cras feugiat molestie dui, non molestie purus. Aenean nec erat hendrerit, blandit metus quis, sollicitudin nibh. Aliquam malesuada convallis convallis. Nulla non ultricies ligula. Praesent varius diam sed felis aliquet suscipit. Nunc sit amet ullamcorper urna, eget sollicitudin lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -113,7 +113,7 @@ If you wish to have a more intuitively colored progress bar, you can use a value
 <p align=center><img src="https://user-images.githubusercontent.com/91087143/139750178-d0bf43ba-cd11-4283-8699-770563dbc2a2.png" alt="blockquote" width=65% </p>
 
     
-`<blockquote class="paraphrase">` - the <u>paraphrase</u> custom class is part of the blockquote element, and is used to enclose text that, while not a quotation,
+`<blockquote class="paraphrase">` - the **paraphrase** custom class is part of the blockquote element, and is used to enclose text that, while not a quotation,
 is also not an original idea, and so should be differentiated in the text to avoid confusion and misattribution of credit/authorship. To put it simply, if you'd like to tell when you're paraphasing, you can use this class. Since it's a class of the `<blockquote>`element, it's best not to have it right before or after a blockquote, because both will merge. Fear not, for adding a comment (`%%comment%%`) between both solves the issue.
 
 ```
@@ -122,14 +122,14 @@ is also not an original idea, and so should be differentiated in the text to avo
 
 <p align=center><img src="https://user-images.githubusercontent.com/91087143/139750466-d36d2e75-6a40-43b8-99e5-10a402d85e67.png" alt="Paraphrase" width=65% </p>
 
-**`<cite>`** - the <u>citation element</u> is used for referencing a cited work. This will align the text to the right, and can (and should) be written inside a blockquote. This means you can also envelop it inside a paraphrase element in order to remind yourself of the source material.
+**`<cite>`** - the **citation element** is used for referencing a cited work. This will align the text to the right, and can (and should) be written inside a blockquote. This means you can also envelop it inside a paraphrase element in order to remind yourself of the source material.
 ```
 >Sed aliquam feugiat ante a tincidunt. Cras sed condimentum lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis faucibus velit, eu ornare metus. Cras feugiat molestie dui, non molestie purus. Aenean nec erat hendrerit, blandit metus quis, sollicitudin nibh. Aliquam malesuada convallis convallis. Nulla non ultricies ligula. Praesent varius diam sed felis aliquet suscipit. Nunc sit amet ullamcorper urna, eget sollicitudin lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 <cite> Insert Author here https://startpage.com/ </cite>
 ```
 <p align=center><img src="https://user-images.githubusercontent.com/91087143/139750706-3c85693a-7365-4188-a389-b1559b8a68dd.png" alt="Cite" width=65%></p>
 
-**`<aside>`** - the <u>aside element</u> is used for simple call-outs or for presenting information that isn't directly related to the note's content. This is formatted the same way as a `<s class="aside-in">` element (more on that later), but doesn't allow for Markdown formatting. Still, it wouldn't make sense to have more advanced sidenote options, without also having the default html element.
+**`<aside>`** - the **aside element** is used for simple call-outs or for presenting information that isn't directly related to the note's content. This is formatted the same way as a `<s class="aside-in">` element (more on that later), but doesn't allow for Markdown formatting. Still, it wouldn't make sense to have more advanced sidenote options, without also having the default html element.
 **`<s class="aside-*">`** - the <u>sidenote element</u> is used to display references or complementary information that doesn't find its place in the main text. The end block for every sidenote type is the same: `</s>` There are 4 types of sidenote classes:
  - `<s class="aside-right">`: this places text in the side of the right margin of the note;
  - `<s class="aside-left">`: this places text in the side of the right margin of the note;
@@ -138,7 +138,7 @@ is also not an original idea, and so should be differentiated in the text to avo
     
 <p align=center><img src="https://user-images.githubusercontent.com/91087143/139750949-2489e514-9179-48fd-b942-a5717f275e0d.gif" alt="Sidenotes" width=90%></p>
 
-**`<samp>`** - the <u>sample output element</u> is used to enclose text that simulates an output from a computer program. It's rendered using the monospaced font set for the theme.
+**`<samp>`** - the **sample output element** is used to enclose text that simulates an output from a computer program. It's rendered using the monospaced font set for the theme.
     
 ```
 <samp> Hello World! <samp>
@@ -146,11 +146,11 @@ is also not an original idea, and so should be differentiated in the text to avo
     
 <p align=center><img src="https://user-images.githubusercontent.com/91087143/139751269-d30174b8-8fb5-4b76-8b80-6ca77432e220.png" alt="samp" width=15% ></p>
 
-`<kbd>` - the <u>keyboard input element</u> is used to represent user input from a keyboard. It's basically a good way to highlight hotkeys!
+`<kbd>` - the **keyboard input element** is used to represent user input from a keyboard. It's basically a good way to highlight hotkeys!
 
 <p align=center><img src="https://user-images.githubusercontent.com/91087143/139751544-0ef6d49e-1594-4bec-983c-c9edc36d4b01.png" alt="kbd" width=20% </p>
 
-**`<small>`** - the <u>side comment element</u> is used, like the name implies, to write side comments and small print. It renders a smaller font-size than the default text.
+**`<small>`** - the **side comment element** is used, like the name implies, to write side comments and small print. It renders a smaller font-size than the default text.
 <p align=center><img src="https://user-images.githubusercontent.com/91087143/139751410-15a17837-a6d4-46c3-a043-d9c45082ceb6.png" alt="small" width=15% </p>
 
 ## Style Settings Options:
