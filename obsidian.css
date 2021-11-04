@@ -4426,6 +4426,7 @@ button[foo="Uninstall"] {
     height: 80vh;
 }
 
+/* plugin update loading bar */
 .modal.mod-settings .vertical-tab-content.is-loading:before {
     content: ' ';
     position: absolute;
