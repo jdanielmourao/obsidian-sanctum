@@ -6132,11 +6132,11 @@ body div#wordsprint div#sprintActionPanel button:not(.statsTab):not(.goalsTab) {
     font-weight: var(--font-regular);
     margin: var(--size-2) var(--size-5);
 }
-div#wordsprint div#sprintActionPanel button.sprintStart {
+body .view-content div#wordsprint div#sprintActionPanel button.sprintStart {
     background-color: var(--color-green);
     color: var(--color-white);
 }
-body div#wordsprint div#sprintActionPanel button.sprintStop {
+body .view-content div#wordsprint div#sprintActionPanel button.sprintStop {
     background-color: var(--color-red);
     color: var(--color-white);
 }
