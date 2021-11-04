@@ -6,7 +6,7 @@
 /* Description: Sanctum’s a minimalist theme with the aim of creating a serene space 
 /*              of retreat, for thought and uninterrupted work.
 /* License: GNU General Public License v3.0
-/* Version: 0.2.6
+/* Version: 0.3.0
 /* ───────────────────────────────────────────────────────────────────────── */
 /*
 Table of Contents
@@ -502,10 +502,10 @@ Table of Contents
 }
 
 /* ──────────────────────────── Special Features ──────────────────────────── */
-.no-animation * {
+body.no-animation * {
     transition: none !important;
     animation: none !important;
-  }
+}
 
 /* ─────────────────────── Custom External Link Icons ─────────────────────── */
 
@@ -1018,7 +1018,7 @@ color: var(--color-primary-k);
 }
 
 .show-vault-name div.nav-folder.mod-root > div.nav-folder-title:hover {
-    background-color: transparent !important;
+    background-color: transparent;
 }
 
 .show-vault-name div.nav-folder.mod-root > div.nav-folder-title .nav-folder-title-content:before {
@@ -3484,7 +3484,7 @@ table.table-view-table > thead > tr > th {
 
 .fn-title-hr .markdown-preview-view .footnotes hr:first-child {
     display: visible;
-    margin-top: 0px !important;
+    margin-top: 0px;
 }
 
 .fn-title-hr .markdown-preview-view .footnotes::before,
@@ -4369,7 +4369,7 @@ button[foo="Uninstall"] {
 .is_mobile .modal.mod-community-plugin,
 .is-mobile .modal-content.community-plugin {
     width: 100vw;
-    min-width: 100vw !important;
+    min-width: 100vw;
     max-width: 100vw;
 }
 
@@ -5338,7 +5338,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     width: 60vw;
 }
 
-.is-mobile div.menu {
+html .is-mobile div.menu {
     max-height: calc(100% - 100px);
     width: calc(100% - 20px);
     max-width: calc(100% - 20px);
@@ -5348,7 +5348,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     border-radius: 6px 6px 0 0;
     padding: var(--size-2)
              var(--size-3);
-    left: 8px !important;
+    padding-left: 8px;
     top: unset;
     overflow-y: auto;
     background-color: var(--color-primary-w);
@@ -5377,7 +5377,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     text-overflow: ellipsis;
 }
 
-.is-mobile .workspace-drawer-active-tab-content .nav-buttons-container {
+html body.is-mobile .workspace-drawer-active-tab-content .nav-buttons-container {
     display: flex;
     flex-direction: row;
     justify-content: flex-end !important;
@@ -5404,8 +5404,8 @@ input[type="range"]::-webkit-slider-thumb:active {
     border-radius: 4px;
 }
 
-.is-mobile .nav-action-button svg {
-    height: var(--scale-2) !important;
+body.is-mobile .nav-action-button svg {
+    height: var(--scale-2);
     width:  var(--scale-2);
 }
 
@@ -5500,25 +5500,25 @@ input[type="range"]::-webkit-slider-thumb:active {
 
 /* ─────────────────────────────── Admonition ─────────────────────────────── */
 details.admonition > summary > .collapser > .handle {
-    transform: rotate(-90deg) !important;
-    transition: 0s !important;
-}
-
-details.admonition[open] > summary > .collapser > .handle {
-    transform: rotate(90deg) !important;
+    transform: rotate(-90deg);
     transition: 0s;
 }
 
-.admonition {
-    margin: var(--size-6) var(--size-0) !important;
+details.admonition[open] > summary > .collapser > .handle {
+    transform: rotate(90deg);
+    transition: 0s;
+}
+
+.admonition.admonition-plugin {
+    margin: var(--size-6) var(--size-0);
     padding: 0;
     overflow: hidden;
     color: var(--text-normal);
     page-break-inside: avoid;
-    background-color: var(--color-primary-10) !important;
-    border-left: 1.5px solid rgb(var(--admonition-color)) !important;
+    background-color: var(--color-primary-10);
+    border-left: 1.5px solid rgb(var(--admonition-color));
     border-radius: 0.1rem;
-    box-shadow: var(--elevation-1) !important;
+    box-shadow: var(--elevation-1);
 }
 
 .admonition-content-copy {
@@ -5549,23 +5549,23 @@ transform: scale(.8);
     min-width: 1em;
 }
 
-:root{
-    --admonition-details-icon: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='22,16 12,26 10.6,24.6 19.2,16 10.6,7.4 12,6 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A") !important;
+details.admonition {
+    --admonition-details-icon: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='22,16 12,26 10.6,24.6 19.2,16 10.6,7.4 12,6 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-details.admonition > summary > .collapser > .handle {
-    transform: rotate(90deg) !important;
+details.admonition.admonition-plugin > summary > .collapser > .handle {
+    transform: rotate(90deg);
 }
 
-details.admonition[open] > summary > .collapser > .handle {
-    transform: rotate(270deg) !important;
+details.admonition.admonition-plugin[open] > summary > .collapser > .handle {
+    transform: rotate(270deg);
 }
 
 /* ───────────────────────── Advanced Tables Toolbar ──────────────────────── */
 /* ───────────────── For the icon(s), check SVG Replacement ──────────────── */
 
-.workspace-leaf-content[data-type="advanced-tables-toolbar"] .nav-buttons-container {
-    padding: var(--size-0);
+body.is-mobile .workspace-leaf-content[data-type="advanced-tables-toolbar"] .nav-buttons-container {
+    padding: var(--size-2);
 }
 
 .workspace-leaf-content[data-type="advanced-tables-toolbar"]
@@ -5801,21 +5801,21 @@ button.table-close::before {
     margin: initial;
 }
 
-.checklist-plugin-main li {
+.checklist-plugin-main ul li.classic {
   display: flex;
   align-items: center;
-  background-color: var(--background-primary) !important;
-  border-radius: 4px !important;
+  background-color: var(--background-primary);
+  border-radius: 0px;
   cursor: pointer;
   transition: background-color var(--duration-fast-2) var(--motion-standard-expressive);
-  padding: var(--size-0) !important;
+  padding: var(--size-0);
   font-size: var(--font-scale-00);
   line-height: var(--leading-0);
-  margin-bottom: var(--size-1) !important;
+  margin-bottom: var(--size-1);
 }
 
-.checklist-plugin-main li .checkbox {
-  width: 5px !important;
+.checklist-plugin-main li.classic .checkbox {
+  width: 16px;
   height: var(--scale-2);
   min-width: var(--scale-2);
   min-height: var(--scale-2);
@@ -5825,31 +5825,42 @@ button.table-close::before {
   margin-left: var(--size-0);
   position: relative;
   border: 1.5px solid var(--color-primary-40);
+  border-radius: 4px;
 }
 
-.checklist-plugin-main li .toggle {
-  padding: var(--size-0) !important;
-  padding-left: var(--size-3) !important;
+.checklist-plugin-main li.classic .checkbox:hover {
+    filter: brightness(150%);
+}
+
+.checklist-plugin-main li.classic .toggle {
+  padding: var(--size-0);
+  padding-left: var(--size-3);
 }
 
 .checklist-plugin-main button:hover {
   background-color: var(--background-primary);
 }
 
-.checklist-plugin-main .count {  /* Counter */
-  padding: var(--todoList-countPadding);
-  background: var(--background-primary) !important;
-  border-radius: var(--size-7) !important;
-  font-size: var(--todoList-countFontSize);
+.theme-light .checklist-plugin-main header .count {
+    background: var(--color-primary-20);
+    font-weight: var(--font-regular);
 }
 
-.checklist-plugin-main .page {
+.checklist-plugin-main header .count {  /* Counter */
+  padding: var(--todoList-countPadding);
+  background: var(--color-primary-10);
+  border-radius: var(--size-7);
+  font-size: var(--font-scale-000);
+  font-weight: var(--font-light);
+}
+
+.checklist-plugin-main header.group-header.page {
   margin: var(--todoList-pageMargin);
-  color: var(--todoList-textColor);
+  color: var(--text-normal);
   transition: opacity var(--duration-moderate-1) var(--motion-standard-productive);
   cursor: pointer;
-  font-size: var(--font-scale-0) !important;
-  font-weight: var(--font-medium);
+  font-size: var(--font-scale-0);
+  font-weight: var(--font-regular);
 }
 
 .checklist-plugin-main .header {
@@ -5859,13 +5870,7 @@ button.table-close::before {
   align-items: center;
 }
 
-.checklist-plugin-main .checkbox {
-    border-radius: 2px !important;
-}
 
-.checklist-plugin-main .checkbox:hover {
-    filter: brightness(150%) !important;
-}
 
 .checklist-plugin-main .collapse .down {
     transform: rotate(180deg);
@@ -6043,8 +6048,8 @@ body .kanban-plugin__markdown-preview-view>div>* {
     background-color: var(--color-hover);
 }
 
-.theme-dark .menu-item.selected:not(.is-disabled):not(.is-label):hover {
-background-color: var(--background-primary) !important;
+.theme-dark .menu-item.is-qe-file.selected:not(.is-disabled):not(.is-label):hover {
+background-color: var(--background-primary);
 }
 
 /* prevent appearing on top of the traffic lights of macOS */
@@ -6053,12 +6058,12 @@ background-color: var(--background-primary) !important;
 }
 
 /* ─────────────────────── Sliding Panes (Andy's Mode) ────────────────────── */
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header {
-    border: none !important;
+html body.plugin-sliding-panes-rotate-header .workspace > .mod-root > div.workspace-leaf.mod-active > div.workspace-leaf-content > div.view-header.view-header.view-header {
+    border: none;
 }
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before,
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:after {
-    background: none !important;
+html body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before,
+html body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:after {
+    background: none;
 }
 
 /* vertically align file title in sliding panes */
@@ -6066,57 +6071,53 @@ body.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-mixed 
     padding: 5px;
 }
 
-body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
-    box-shadow: var(--elevation-2) !important;
-}
-
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
-    border:none !important;
+html body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
+    box-shadow: var(--elevation-2);
 }
 
 /* ──────────────────────────────── Templater ─────────────────────────────── */
-.cm-s-obsidian .cm-templater-command.cm-templater-execution-tag {
-	color: var(--color-blue) !important;
+.cm-s-obsidian span.cm-templater-command.cm-templater-execution-tag {
+	color: var(--color-blue);
 }
 
-.theme-dark .cm-s-obsidian .cm-templater-command.cm-comment,
-.theme-light .cm-s-obsidian .cm-templater-command.cm-comment {
-	color: var(--color-purple-300) !important;
+.theme-dark .cm-s-obsidian span.cm-templater-command.cm-comment,
+.theme-light .cm-s-obsidian span.cm-templater-command.cm-comment {
+	color: var(--color-purple-300);
 }
 
-.theme-dark .cm-s-obsidian .cm-templater-command.cm-keyword,
-.theme-light .cm-s-obsidian .cm-templater-command.cm-keyword {
-	color: var(--color-green) !important;
+.theme-dark .cm-s-obsidian span.cm-templater-command.cm-keyword,
+.theme-light .cm-s-obsidian span.cm-templater-command.cm-keyword {
+	color: var(--color-green);
 }
 
-.theme-dark .cm-s-obsidian .cm-templater-command.cm-def,
-.theme-light .cm-s-obsidian .cm-templater-command.cm-def {
-	color: var(--color-purple) !important;
+.theme-dark .cm-s-obsidian span.cm-templater-command.cm-def,
+.theme-light .cm-s-obsidian span.cm-templater-command.cm-def {
+	color: var(--color-purple);
 }
 
-.theme-dark .cm-s-obsidian .cm-templater-command.cm-string,
-.theme-light .cm-s-obsidian .cm-templater-command.cm-string {
-	color: var(--color-pink) !important;
+.theme-dark .cm-s-obsidian span.cm-templater-command.cm-string,
+.theme-light .cm-s-obsidian span.cm-templater-command.cm-string {
+	color: var(--color-pink);
 }
 
-.theme-dark .cm-s-obsidian .cm-templater-command.cm-undefined,
-.theme-dark .cm-s-obsidian .cm-templater-command.cm-variable,
-.theme-dark .cm-s-obsidian .cm-templater-command.cm-property,
-.theme-light .cm-s-obsidian .cm-templater-command.cm-undefined,
-.theme-light .cm-s-obsidian .cm-templater-command.cm-variable,
-.theme-light .cm-s-obsidian .cm-templater-command.cm-property {
-	color: var(--color-orange) !important;
+.theme-dark .cm-s-obsidian span.cm-templater-command.cm-undefined,
+.theme-dark .cm-s-obsidian span.cm-templater-command.cm-variable,
+.theme-dark .cm-s-obsidian span.cm-templater-command.cm-property,
+.theme-light .cm-s-obsidian span.cm-templater-command.cm-undefined,
+.theme-light .cm-s-obsidian span.cm-templater-command.cm-variable,
+.theme-light .cm-s-obsidian span.cm-templater-command.cm-property {
+	color: var(--color-orange);
 }
 
-.theme-dark .cm-s-obsidian .cm-templater-command.cm-templater-interpolation-tag,
-.theme-light .cm-s-obsidian .cm-templater-command.cm-templater-interpolation-tag {
+.theme-dark .cm-s-obsidian span.cm-templater-command.cm-templater-interpolation-tag,
+.theme-light .cm-s-obsidian span.cm-templater-command.cm-templater-interpolation-tag {
     color: var(--color-green-300);
 }
 
 /* ─────────────────────────────── Word Sprint ────────────────────────────── */
-div#wordsprint .pending {
+div#wordsprint div.status.pending {
     background-color: var(--color-primary-30);
-    color: var(--color-white) !important;
+    color: var(--color-white);
 }
 
 body div#wordsprint div#statsPanel button:not(.statsTab):not(.goalsTab),
@@ -7389,6 +7390,22 @@ settings:
         description: Makes filled tasks green and empty ones red, in Edit Mode.
         type: class-toggle
     -
+        id: wrap-note-title
+        title: Wrap Note Titles
+        description: Displays the entire note title, even when the width is small.
+        type: class-toggle
+    - 
+        id: kanban-wrap
+        title: Wrap Kanban Lanes
+        description: Makes Kanban Lanes wrap in multiple rows if needed.
+        type: class-toggle
+    - 
+        id: fn-heading
+        title: Footnotes
+        type: heading
+        level: 3
+        collapsed: true
+    -
         id: fn-title-options
         title: Footnote Title
         description: Places a lvl.2 heading before the Footnotes.
@@ -7411,16 +7428,6 @@ settings:
         type: variable-text
         default: "'Footnotes'"
     - 
-        id: wrap-note-title
-        title: Wrap Note Titles
-        description: Displays the entire note title, even when the width is small.
-        type: class-toggle
-    - 
-        id: kanban-wrap
-        title: Wrap Kanban Lanes
-        description: Makes Kanban Lanes wrap in multiple rows if needed.
-        type: class-toggle
-    -
         id: tables
         title: Tables
         type: heading
