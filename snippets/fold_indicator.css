@@ -1,4 +1,4 @@
 .CodeMirror-foldmarker {
     color: transparent;
-    margin-left: -1.5rem; /* change this value */
+    margin-left: -1.5rem; /* change this value to -0.5 if using IBM Plex */
 }

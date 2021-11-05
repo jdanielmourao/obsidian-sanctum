@@ -162,15 +162,15 @@ Table of Contents
 :root {
 /* ────────────────────────────── Font Families ───────────────────────────── */
 
---font-sans: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', Arial, sans-serif;
+--font-sans: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', sans-serif;
 --font-serif: 'IBM Plex Serif', 'Georgia', Times, serif;
 --font-mono: 'IBM Plex Mono', 'iA Writer Mono V', 'iA IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
 --mermaid-font: var(--font-sans);
 
---font-preview: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', Arial, sans-serif;
---font-editor: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', Arial, sans-serif;
---font-ui: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', Arial, sans-serif;
---font-heading: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', Arial, sans-serif;
+--font-preview: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', sans-serif;
+--font-editor: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', sans-serif;
+--font-ui: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', sans-serif;
+--font-heading: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', sans-serif;
 --footnote-id: 'Footnotes';
 
 /* ────────────────────────────── Font Weights ────────────────────────────── */
@@ -5664,6 +5664,17 @@ button.table-close::before {
     padding: 10px 8px 2px 8px;
 }
 
+#calendar-container.fantasy-calendar .day.fantasy-day.active {
+    background-color: var(--color-primary-10);
+    border: none;
+    padding: 10px 8px 2px 8px;
+    border-radius: 4px;
+}
+
+#calendar-container.fantasy-calendar .day.fantasy-day.active:hover {
+    background-color: var(--color-hover);
+}
+
 #calendar-container {
     padding: var(--size-0)
              var(--size-0);
@@ -7280,17 +7291,17 @@ settings:
         id: font-preview
         title: Preview Mode Font
         type: variable-text
-        default: "'iA Writer Quattro V', 'Helvetica Neue', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        default: "'iA Writer Quattro V', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     - 
         id: font-editor
         title: Edit Mode Font
         type: variable-text
-        default: "'iA Writer Quattro V', 'Helvetica Neue', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        default: "'iA Writer Quattro V', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     - 
         id: font-ui
         title: UI font
         type: variable-text
-        default: "'iA Writer Quattro V', 'Helvetica Neue', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        default: "'iA Writer Quattro V', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     - 
         id: font-mono
         title: Monospace Font
@@ -7306,7 +7317,7 @@ settings:
         id: font-heading
         title: Heading Font
         type: variable-text
-        default: "'iA Writer Quattro V', 'Helvetica Neue', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        default: "'iA Writer Quattro V', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     -
         id: heading-1
         title: Heading 1 Size
