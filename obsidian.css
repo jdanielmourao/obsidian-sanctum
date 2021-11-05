@@ -5665,14 +5665,21 @@ button.table-close::before {
 }
 
 #calendar-container.fantasy-calendar .day.fantasy-day.active {
-    background-color: var(--color-primary-10);
+    background-color: var(--color-primary-20);
     border: none;
     padding: 10px 8px 2px 8px;
     border-radius: 4px;
 }
+.theme-dark #calendar-container.fantasy-calendar .day.fantasy-day.active {
+    background-color: var(--color-primary-10);
+}
 
 #calendar-container.fantasy-calendar .day.fantasy-day.active:hover {
-    background-color: var(--color-hover);
+    background-color: var(--color-primary-30);
+}
+
+.theme-dark #calendar-container.fantasy-calendar .day.fantasy-day.active:hover {
+    background-color: var(--color-primary-20);
 }
 
 #calendar-container {
