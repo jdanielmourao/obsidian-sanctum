@@ -5657,6 +5657,11 @@ button.table-close::before {
 #calendar-container.fantasy-calendar .arrow.right svg {
     transform: rotate(180deg);    
 }
+
+#calendar-container.fantasy-calendar .fantasy-nav {
+    padding-left: 12px;
+}
+
 /* highlighted day */
 #calendar-container.fantasy-calendar .day.fantasy-day.viewing {
     background-color: var(--color-hover);
@@ -5665,17 +5670,15 @@ button.table-close::before {
 }
 
 #calendar-container.fantasy-calendar .day.fantasy-day.active {
-    background-color: var(--color-primary-20);
-    border: none;
+    background-color: var(--background-primary);
+    border-bottom: 2px solid var(--color-accent);
     padding: 10px 8px 2px 8px;
-    border-radius: 4px;
-}
-.theme-dark #calendar-container.fantasy-calendar .day.fantasy-day.active {
-    background-color: var(--color-primary-10);
+    border-radius: 50px;
 }
 
 #calendar-container.fantasy-calendar .day.fantasy-day.active:hover {
-    background-color: var(--color-primary-30);
+    background-color: var(--color-hover);
+    transition: background-color var(--duration-slow-2) var(--motion-entrance-expressive);
 }
 
 .theme-dark #calendar-container.fantasy-calendar .day.fantasy-day.active:hover {
