@@ -1252,6 +1252,10 @@ border-left: 0px solid transparent;
     border-right:0;
 }
 
+.side-dock-settings {
+    margin-bottom: var(--size-3);
+}
+
 .workspace-drawer .side-dock-settings {
     margin-top: auto;
     margin-bottom: var(--size-9);
