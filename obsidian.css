@@ -1252,8 +1252,9 @@ border-left: 0px solid transparent;
     border-right:0;
 }
 
-.side-dock-settings {
-    margin-bottom: var(--size-3);
+.workspace-drawer .side-dock-settings {
+    margin-top: auto;
+    margin-bottom: var(--size-9);
 }
 
 /* ────────────────────────────── File Explorer ───────────────────────────── */
@@ -5497,10 +5498,10 @@ body.is-mobile .nav-action-button svg {
     padding: 8px 0;
     margin: 8px 0;
 }
-
+/*
 .workspace-drawer-ribbon .side-dock-settings:last-child {
     margin-bottom: 16px;
-}
+}*/
 
 /* ───────────────────────────── Plugin Support ───────────────────────────── */
 
