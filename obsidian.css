@@ -7356,7 +7356,7 @@ settings:
         id: font-mono
         title: Monospace Font
         type: variable-text
-        default: "'iA Writer Mono V', 'iA IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
+        default: "'iA IBM Plex Mono', 'iA Writer Mono V', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
     - 
         id: headings-title
         title: Headings
