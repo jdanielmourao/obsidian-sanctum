@@ -6,7 +6,7 @@
 /* Description: Sanctum’s a minimalist theme with the aim of creating a serene space 
 /*              of retreat, for thought and uninterrupted work.
 /* License: GNU General Public License v3.0
-/* Version: 0.3.0
+/* Version: 0.3.1
 /* ───────────────────────────────────────────────────────────────────────── */
 /*
 Table of Contents
@@ -55,6 +55,7 @@ Table of Contents
                 └── Relationship Lines
     		├── Tasks / Checkbox
                 └── Custom Checkboxes!
+                └── Admonitions
     		├── Tags
     		├── Sidenotes
     		├── Images
@@ -101,6 +102,7 @@ Table of Contents
     	├── Tooltips
     	└── Vault Launch Progress Bar
     ├── Mobile
+    ├── Publish
     ├── Plugin Support
         ├── Admonition
         ├── Advanced Tables Toolbar
@@ -162,15 +164,16 @@ Table of Contents
 :root {
 /* ────────────────────────────── Font Families ───────────────────────────── */
 
---font-sans: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', sans-serif;
+--font-sans: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 --font-serif: 'IBM Plex Serif', 'Georgia', Times, serif;
 --font-mono: 'IBM Plex Mono', 'iA Writer Mono V', 'iA IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
 --mermaid-font: var(--font-sans);
 
---font-preview: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', sans-serif;
---font-editor: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', sans-serif;
---font-ui: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', sans-serif;
---font-heading: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', sans-serif;
+--font-preview: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+--font-editor: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+--font-ui: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+--font-heading-editor: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+--font-heading-preview: 'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 --footnote-id: 'Footnotes';
 
 /* ────────────────────────────── Font Weights ────────────────────────────── */
@@ -182,6 +185,15 @@ Table of Contents
 --font-semi-bold: 600;
 --font-bold: 700;
 
+--weight-heading: 1;
+
+--heading-thin: calc(100 * var(--weight-heading));
+--heading-extra-light: calc(200 * var(--weight-heading));
+--heading-light: calc(300 * var(--weight-heading));
+--heading-regular: calc(400 * var(--weight-heading));
+--heading-medium: calc(500 * var(--weight-heading));
+--heading-semi-bold: calc(600 * var(--weight-heading));
+--heading-bold: calc(700 * var(--weight-heading));
 /* ──────────────────────── Typographic Modular Scale ─────────────────────── */
 --line-width: 42em;
 
@@ -266,6 +278,7 @@ Table of Contents
 /* ───────────────────────────────── Colours ──────────────────────────────── */
 /* ──────── These colours are left here in case you need more for ─────── */
 /* ───────────── customization, like custom tag colours, etc ───────────── */
+
 --color-white:    hsl(30, 25%, 98.4%);
 --color-grey-10:  hsl(34.3, 21.2%, 93.5%);
 --color-grey-20:  hsl(30, 9.4%, 87.5%);
@@ -376,15 +389,25 @@ Table of Contents
 --duration-slow-2:     700ms;
 
 } /* ────────────────────────────── END OF ROOT ───────────────────────────── */
-
 /* ─────────────────────────── Light Theme Colours ────────────────────────── */
-.theme-light {
-    --color-hover: var(--color-grey-20);
-    --hsl-color-primary-w: 30, 25%, 98.4%;
-    --color-accent: hsl(var(--color-l-accent-h),var(--color-l-accent-s),var(--color-l-accent-l));
+.theme-light.sanctum-light-template {
+    --hsl-color-primary-w: ;
+    --color-primary-w:   ;
+    --color-primary-10:  ;
+    --color-primary-20:  ;
+    --color-primary-30:  ;
+    --color-primary-40:  ;
+    --color-primary-50:  ;
+    --color-primary-60:  ;
+    --color-primary-70:  ;
+    --color-primary-80:  ;
+    --color-primary-90:  ;
+    --color-primary-100: ;
+    --color-primary-k:   ;
+}
 
-    --color-border-1:    var(--color-grey-20);
-    --color-border-2:    var(--color-grey-30);
+.theme-light.sanctum-light-default {
+    --hsl-color-primary-w: 30, 25%, 98.4%;
     --color-primary-w:   var(--color-white);
     --color-primary-10:  var(--color-grey-10);
     --color-primary-20:  var(--color-grey-20);
@@ -397,28 +420,35 @@ Table of Contents
     --color-primary-90:  var(--color-grey-90);
     --color-primary-100: var(--color-grey-100);
     --color-primary-k:   var(--color-black);
+}
+.theme-light {
+    --color-hover: var(--color-primary-20);
+    --color-border-1:    var(--color-primary-20);
+    --color-border-2:    var(--color-primary-30);
 
-    --background-primary:        var(--color-grey);
-    --background-primary-alt:    var(--color-white);
-    --background-secondary:      var(--color-grey);
-    --background-secondary-alt:  var(--color-grey);
+    --color-accent: hsl(var(--color-l-accent-h),var(--color-l-accent-s),var(--color-l-accent-l));
 
-    --background-modifier-border:var(--color-grey-60);
+    --background-primary:        var(--color-primary-10);
+    --background-primary-alt:    var(--color-primary-w);
+    --background-secondary:      var(--color-primary-10);
+    --background-secondary-alt:  var(--color-primary-10);
+
+    --background-modifier-border:var(--color-primary-60);
 
     --background-modifier-form-field:           rgba(0, 0, 0, .05);
-    --background-modifier-form-field-highlighted: var(--color-grey-20);
+    --background-modifier-form-field-highlighted: var(--color-primary-20);
     --background-modifier-box-shadow:           rgba(0, 0, 0, 0.2);
     --background-modifier-success:                var(--color-green-300);
     --background-modifier-error:                  var(--color-red-500);
     --background-modifier-error-rgb:              196, 46, 39;
     --background-modifier-error-hover:            var(--color-red-500);
-    --background-modifier-cover:                  var(--color-grey-20);
+    --background-modifier-cover:                  var(--color-primary-20);
 
-    --text-normal:       var(--color-black);
-    --text-muted:        var(--color-grey-90);
-    --text-faint:        var(--color-grey-70);
+    --text-normal:       var(--color-primary-k);
+    --text-muted:        var(--color-primary-90);
+    --text-faint:        var(--color-primary-70);
     --text-accent:       var(--color-accent);
-    --text-on-accent:    var(--color-black);
+    --text-on-accent:    var(--color-primary-k);
     --text-accent-hover: rgb(237, 128, 11);
     --text-error:        var(--color-red);
     --text-error-hover:  var(--color-red);
@@ -427,11 +457,11 @@ Table of Contents
     --text-highlight-bg-active: var(--color-teal-300);
     --text-selection:           var(--color-viridian-300);
     
-    --interactive-normal:       var(--color-grey-20);
-    --interactive-hover:        var(--color-grey-20);
-    --interactive-accent:       var(--color-grey-20);
-    --interactive-accent-rgb:   var(--color-grey-20);
-    --interactive-accent-hover: var(--color-grey-30);
+    --interactive-normal:       var(--color-primary-20);
+    --interactive-hover:        var(--color-primary-20);
+    --interactive-accent:       var(--color-primary-20);
+    --interactive-accent-rgb:   var(--color-primary-20);
+    --interactive-accent-hover: var(--color-primary-30);
     --interactive-success:      var(--color-green-500);
 
     --scrollbar-bg: rgba(0, 0, 0, 0.05);
@@ -440,13 +470,25 @@ Table of Contents
 }
 
 /* ─────────────────────────── Dark Theme Colours ─────────────────────────── */
-.theme-dark {
-    --color-hover: var(--color-grey-90);
-    --hsl-color-primary-w: 300, 1%, 19.8%;
-    --color-accent: hsl(var(--color-d-accent-h),var(--color-d-accent-s),var(--color-d-accent-l));
+.theme-dark.sanctum-dark-template {
+    --hsl-color-primary-w: ;
+    --color-primary-w:   ;
+    --color-primary-10:  ;
+    --color-primary-20:  ;
+    --color-primary-30:  ;
+    --color-primary-40:  ;
+    --color-primary-50:  ;
+    --color-primary-60:  ;
+    --color-primary-70:  ;
+    --color-primary-80:  ;
+    --color-primary-90:  ;
+    --color-primary-100: ;
+    --color-primary-k:   ;
+}
 
-    --color-border-1: var(--color-grey-90);
-    --color-border-2: var(--color-grey-80);
+.theme-dark.sanctum-dark-default {
+    --hsl-color-primary-w: 300, 1%, 19.8%;
+
     --color-primary-w: var(--color-black);
     --color-primary-10: var(--color-grey-100);
     --color-primary-20: var(--color-grey-90);
@@ -459,28 +501,35 @@ Table of Contents
     --color-primary-90: var(--color-grey-20);
     --color-primary-100: var(--color-grey-10);
     --color-primary-k: var(--color-white);
+}
+.theme-dark {
+    --color-hover: var(--color-primary-20);
+    --color-border-1: var(--color-primary-20);
+    --color-border-2: var(--color-primary-30);
 
-    --background-primary:        var(--color-black);
-    --background-primary-alt:    var(--color-grey-100);
-    --background-secondary:      var(--color-black);
-    --background-secondary-alt:  var(--color-black);
+    --color-accent: hsl(var(--color-d-accent-h),var(--color-d-accent-s),var(--color-d-accent-l));
 
-    --background-modifier-border:var(--color-grey-60);
+    --background-primary:        var(--color-primary-w);
+    --background-primary-alt:    var(--color-primary-10);
+    --background-secondary:      var(--color-primary-w);
+    --background-secondary-alt:  var(--color-primary-w);
+
+    --background-modifier-border:var(--color-primary-60);
 
     --background-modifier-form-field:           rgba(0, 0, 0, .05);
-    --background-modifier-form-field-highlighted: var(--color-grey-100);
+    --background-modifier-form-field-highlighted: var(--color-primary-10);
     --background-modifier-box-shadow:           rgba(0, 0, 0, 0.2);
     --background-modifier-success:                var(--color-green-300);
     --background-modifier-error:                  var(--color-red-500);
     --background-modifier-error-rgb:              196, 46, 39;
     --background-modifier-error-hover:            var(--color-red-500);
-    --background-modifier-cover:                  var(--color-grey-20);
+    --background-modifier-cover:                  var(--color-primary-20);
 
-    --text-normal:       var(--color-grey);
-    --text-muted:        var(--color-grey-30);
-    --text-faint:        var(--color-grey-50);
+    --text-normal:       var(--color-primary-100);
+    --text-muted:        var(--color-primary-80);
+    --text-faint:        var(--color-primary-60);
     --text-accent:       var(--color-accent);
-    --text-on-accent:    var(--color-grey);
+    --text-on-accent:    var(--color-primary-100);
     --text-accent-hover: rgb(237, 128, 11);
     --text-error:        var(--color-red);
     --text-error-hover:  var(--color-red);
@@ -489,11 +538,11 @@ Table of Contents
     --text-highlight-bg-active: var(--color-teal-500);
     --text-selection:           var(--color-viridian-700);
     
-    --interactive-normal:       var(--color-grey-100);
-    --interactive-hover:        var(--color-grey-100);
-    --interactive-accent:       var(--color-grey-100);
-    --interactive-accent-rgb:   var(--color-grey-100);
-    --interactive-accent-hover: var(--color-grey-90);
+    --interactive-normal:       var(--color-primary-10);
+    --interactive-hover:        var(--color-primary-10);
+    --interactive-accent:       var(--color-primary-10);
+    --interactive-accent-rgb:   var(--color-primary-10);
+    --interactive-accent-hover: var(--color-primary-20);
     --interactive-success:      var(--color-green-500);
 
     --scrollbar-bg: rgba(0, 0, 0, 0.05);
@@ -1175,6 +1224,11 @@ body:not(.no-sanctum-icons)
     flex-direction: column;
 }
 
+/* Ribbon icons */
+.side-dock-ribbon-action {
+    padding: 12px 7px;
+}
+
 .workspace-ribbon { /* side ribbons */
     overflow: hidden;
     width: var(--scale-4);
@@ -1219,7 +1273,7 @@ body:not(.no-sanctum-icons)
     padding: var(--size-0)
              var(--size-0)
              var(--size-6)
-             var(--size-2);
+             7px;
     cursor: pointer;
     color: var(--text-faint);
 }
@@ -1824,6 +1878,8 @@ body:not(.no-sanctum-icons) div.view-header-icon > svg {
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
     width: var(--line-width);
     max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* gives some space at the end of the note, so there's no issues with popovers */
@@ -1864,7 +1920,6 @@ body button {
 .cm-s-obsidian {
     font-optical-sizing: auto;
     font-family: var(--font-editor);
-    font-size: var(--font-scale-0);
     line-height: var(--leading-3);
     letter-spacing: var(--tracking-0);
 }
@@ -1874,35 +1929,119 @@ line-height: var(--leading-2);
 }
 
 /* ──────────────────────────────── Headings ──────────────────────────────── */
+
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+    font-family: var(--font-heading-preview);
+}
+
+.cm-s-obsidian .cm-header-1,
+.cm-s-obsidian .cm-header-2,
+.cm-s-obsidian .cm-header-3,
+.cm-s-obsidian .cm-header-4,
+.cm-s-obsidian .cm-header-5,
+.cm-s-obsidian .cm-header-6 {
+    font-family: var(--font-heading-editor);
+}
+
+.heading-clr .markdown-preview-view h1,
+.heading-clr .cm-s-obsidian .cm-header-1 {
+    color: var(--color-heading-1);
+}
+
+.heading-clr-bg .markdown-preview-view h1,
+.heading-clr-bg .cm-s-obsidian .cm-header-1 {
+    background-color: var(--color-heading-1-bg);
+    padding: 4px;
+}
+
+.heading-clr .markdown-preview-view h2,
+.heading-clr .cm-s-obsidian .cm-header-2 {
+    color: var(--color-heading-2);
+}
+
+.heading-clr-bg .markdown-preview-view h2,
+.heading-clr-bg .cm-s-obsidian .cm-header-2 {
+    background-color: var(--color-heading-2-bg);
+    padding: 4px;
+}
+
+.heading-clr .markdown-preview-view h3,
+.heading-clr .cm-s-obsidian .cm-header-3 {
+    color: var(--color-heading-3);
+}
+
+.heading-clr-bg .markdown-preview-view h3,
+.heading-clr-bg .cm-s-obsidian .cm-header-3 {
+    background-color: var(--color-heading-3-bg);
+    padding: 4px;
+}
+
+.heading-clr .markdown-preview-view h4,
+.heading-clr .cm-s-obsidian .cm-header-4 {
+    color: var(--color-heading-4);
+}
+
+.heading-clr-bg .markdown-preview-view h4,
+.heading-clr-bg .cm-s-obsidian .cm-header-4 {
+    background-color: var(--color-heading-4-bg);
+    padding: 4px;
+}
+
+.heading-clr .markdown-preview-view h5,
+.heading-clr .cm-s-obsidian .cm-header-5 {
+    color: var(--color-heading-5);
+}
+
+.heading-clr-bg .markdown-preview-view h5,
+.heading-clr-bg .cm-s-obsidian .cm-header-5 {
+    background-color: var(--color-heading-5-bg);
+    padding: 4px;
+}
+
+.heading-clr .markdown-preview-view h6,
+.heading-clr .cm-s-obsidian .cm-header-6 {
+    color: var(--color-heading-6);
+}
+
+.heading-clr-bg .markdown-preview-view h6,
+.heading-clr-bg .cm-s-obsidian .cm-header-6 {
+    background-color: var(--color-heading-6-bg);
+    padding: 4px;
+}
+
+
+
 @media (max-width:320px){
     .markdown-preview-view h1,
-    .cm-header-1 {
-    font-family: var(--font-heading);
+    .cm-s-obsidian .cm-header-1 {
     font-size: calc(var(--font-scale-5) * (var(--heading-1) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--heading-semi-bold);
     letter-spacing: var(--tracking-0);
     margin-top: .625em;
     margin-bottom: .625em;
     }
 
     .markdown-preview-view h2,
-    .cm-header-2 {
-    font-family: var(--font-heading);
+    .cm-s-obsidian .cm-header-2 {
     font-size: calc(var(--font-scale-5) * (var(--heading-2) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-regular);
+    font-weight: var(--heading-regular);
     letter-spacing: var(--tracking-0);
     margin-top: .625em;
     margin-bottom: .625em;
     }
 
     .markdown-preview-view h3,
-    .cm-header-3 {
-    font-family: var(--font-heading);
+    .cm-s-obsidian .cm-header-3 {
     font-size: calc(var(--font-scale-4) * (var(--heading-3) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-regular);
+    font-weight: var(--heading-regular);
     letter-spacing: var(--tracking-0);
     margin-top: .5625em;
     margin-bottom: .5625em;
@@ -1910,10 +2049,9 @@ line-height: var(--leading-2);
 
     .markdown-preview-view h4,
     .cm-s-obsidian .cm-header-4 {
-    font-family: var(--font-heading);
     font-size: calc(var(--font-scale-1) * (var(--heading-4) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-regular);
+    font-weight: var(--heading-regular);
     letter-spacing: var(--tracking-0);
     margin-top: .5625em;
     margin-bottom: .5625em;
@@ -1922,10 +2060,9 @@ line-height: var(--leading-2);
     .markdown-preview-view h5,
     .cm-s-obsidian .cm-header-5 {
     color:var(--text-normal);
-    font-family: var(--font-heading);
     font-size: calc(var(--font-scale-0) * (var(--heading-5) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--heading-semi-bold);
     letter-spacing: var(--tracking-0);
     margin-top: .5em;
     margin-bottom: .5em;
@@ -1934,10 +2071,9 @@ line-height: var(--leading-2);
     .markdown-preview-view h6,
     .cm-s-obsidian .cm-header-6 {
     color:var(--text-normal);
-    font-family: var(--font-heading);
     font-size: calc(var(--font-scale-00) * (var(--heading-6) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--heading-semi-bold);
     letter-spacing: var(--tracking-1);
     margin-top: .5em;
     margin-bottom: .5em;
@@ -1946,33 +2082,30 @@ line-height: var(--leading-2);
 
 @media (min-width:321px) and (max-width:672px){
     .markdown-preview-view h1,
-    .cm-header-1 {
-    font-family: var(--font-heading);
+    .cm-s-obsidian .cm-header-1 {
     font-size: calc(var(--font-scale-7) * (var(--heading-1) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--heading-semi-bold);
     letter-spacing: var(--tracking-0);
     margin-top: .625em;
     margin-bottom: .625em;
     }
 
     .markdown-preview-view h2,
-    .cm-header-2 {
-    font-family: var(--font-heading);
+    .cm-s-obsidian .cm-header-2 {
     font-size: calc(var(--font-scale-6) * (var(--heading-2) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-light);
+    font-weight: var(--heading-light);
     letter-spacing: var(--tracking-0);
     margin-top: .625em;
     margin-bottom: .625em;
     }
 
     .markdown-preview-view h3,
-    .cm-header-3 {
-    font-family: var(--font-heading);
+    .cm-s-obsidian .cm-header-3 {
     font-size: calc(var(--font-scale-4) * (var(--heading-3) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-regular);
+    font-weight: var(--heading-regular);
     letter-spacing: var(--tracking-0);
     margin-top: .5625em;
     margin-bottom: .5625em;
@@ -1980,10 +2113,9 @@ line-height: var(--leading-2);
 
     .markdown-preview-view h4,
     .cm-s-obsidian .cm-header-4 {
-    font-family: var(--font-heading);
     font-size: calc(var(--font-scale-2) * (var(--heading-4) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-regular);
+    font-weight: var(--heading-regular);
     letter-spacing: var(--tracking-0);
     margin-top: .5625em;
     margin-bottom: .5625em;
@@ -1992,10 +2124,9 @@ line-height: var(--leading-2);
     .markdown-preview-view h5,
     .cm-s-obsidian .cm-header-5 {
     color:var(--text-normal);
-    font-family: var(--font-heading);
     font-size: calc(var(--font-scale-0) * (var(--heading-5) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--heading-semi-bold);
     letter-spacing: var(--tracking-0);
     margin-top: .5em;
     margin-bottom: .5em;
@@ -2004,10 +2135,9 @@ line-height: var(--leading-2);
     .markdown-preview-view h6,
     .cm-s-obsidian .cm-header-6 {
     color:var(--text-normal);
-    font-family: var(--font-heading);
     font-size: calc(var(--font-scale-00) * (var(--heading-6) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--heading-semi-bold);
     letter-spacing: var(--tracking-1);
     margin-top: .5em;
     margin-bottom: .5em;
@@ -2016,33 +2146,30 @@ line-height: var(--leading-2);
 
 @media (min-width:673px) and (max-width:1056px) {
     .markdown-preview-view h1,
-    .cm-header-1 {
-    font-family: var(--font-heading);
+    .cm-s-obsidian .cm-header-1 {
     font-size: calc(var(--font-scale-7) * (var(--heading-1) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--heading-semi-bold);
     letter-spacing: var(--tracking-0);
     margin-top: .6875em;
     margin-bottom: .6875em;
     }
 
     .markdown-preview-view h2,
-    .cm-header-2 {
-    font-family: var(--font-heading);
+    .cm-s-obsidian .cm-header-2 {
     font-size: calc(var(--font-scale-7) * (var(--heading-2) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-light);
+    font-weight: var(--heading-light);
     letter-spacing: var(--tracking-0);
     margin-top: .6875em;
     margin-bottom: .6875em;
     }
 
     .markdown-preview-view h3,
-    .cm-header-3 {
-    font-family: var(--font-heading);
+    .cm-s-obsidian .cm-header-3 {
     font-size: calc(var(--font-scale-4) * (var(--heading-3) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-regular);
+    font-weight: var(--heading-regular);
     letter-spacing: var(--tracking-0);
     margin-top: .625em;
     margin-bottom: .625em;
@@ -2050,10 +2177,9 @@ line-height: var(--leading-2);
 
     .markdown-preview-view h4,
     .cm-s-obsidian .cm-header-4 {
-    font-family: var(--font-heading);
     font-size: calc(var(--font-scale-2) * (var(--heading-4) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-regular);
+    font-weight: var(--heading-regular);
     letter-spacing: var(--tracking-0);
     margin-top: .625em;
     margin-bottom: .625em;
@@ -2062,10 +2188,9 @@ line-height: var(--leading-2);
     .markdown-preview-view h5,
     .cm-s-obsidian .cm-header-5 {
     color:var(--text-normal);
-    font-family: var(--font-heading);
     font-size: calc(var(--font-scale-0) * (var(--heading-5) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--heading-semi-bold);
     letter-spacing: var(--tracking-0);
     margin-top: .5625em;
     margin-bottom: .5625em;
@@ -2074,10 +2199,9 @@ line-height: var(--leading-2);
     .markdown-preview-view h6,
     .cm-s-obsidian .cm-header-6 {
     color:var(--text-normal);
-    font-family: var(--font-heading);
     font-size: calc(var(--font-scale-00) * (var(--heading-6) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--heading-semi-bold);
     letter-spacing: var(--tracking-1);
     margin-top: .5625em;
     margin-bottom: .5625em;
@@ -2086,33 +2210,30 @@ line-height: var(--leading-2);
 
 @media (min-width:1057px) and (max-width:1312px) {
     .markdown-preview-view h1,
-    .cm-header-1 {
-    font-family: var(--font-heading);
+    .cm-s-obsidian .cm-header-1 {
     font-size: calc(var(--font-scale-8) * (var(--heading-1) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--heading-semi-bold);
     letter-spacing: var(--tracking-0);
     margin-top: .6875em;
     margin-bottom: .6875em;
     }
 
     .markdown-preview-view h2,
-    .cm-header-2 {
-    font-family: var(--font-heading);
+    .cm-s-obsidian .cm-header-2 {
     font-size: calc(var(--font-scale-8) * (var(--heading-2) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-light);
+    font-weight: var(--heading-light);
     letter-spacing: var(--tracking-0);
     margin-top: .6875em;
     margin-bottom: .6875em;
     }
 
     .markdown-preview-view h3,
-    .cm-header-3 {
-    font-family: var(--font-heading);
+    .cm-s-obsidian .cm-header-3 {
     font-size: calc(var(--font-scale-5) * (var(--heading-3) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-regular);
+    font-weight: var(--heading-regular);
     letter-spacing: var(--tracking-0);
     margin-top: .625em;
     margin-bottom: .625em;
@@ -2120,10 +2241,9 @@ line-height: var(--leading-2);
 
     .markdown-preview-view h4,
     .cm-s-obsidian .cm-header-4 {
-    font-family: var(--font-heading);
     font-size: calc(var(--font-scale-2) * (var(--heading-4) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-regular);
+    font-weight: var(--heading-regular);
     letter-spacing: var(--tracking-0);
     margin-top: .625em;
     margin-bottom: .625em;
@@ -2132,10 +2252,9 @@ line-height: var(--leading-2);
     .markdown-preview-view h5,
     .cm-s-obsidian .cm-header-5 {
     color:var(--text-normal);
-    font-family: var(--font-heading);
     font-size: calc(var(--font-scale-0) * (var(--heading-5) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--heading-semi-bold);
     letter-spacing: var(--tracking-0);
     margin-top: .5625em;
     margin-bottom: .5625em;
@@ -2144,10 +2263,9 @@ line-height: var(--leading-2);
     .markdown-preview-view h6,
     .cm-s-obsidian .cm-header-6 {
     color:var(--text-normal);
-    font-family: var(--font-heading);
     font-size: calc(var(--font-scale-00) * (var(--heading-6) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--heading-semi-bold);
     letter-spacing: var(--tracking-1);
     margin-top: .5625em;
     margin-bottom: .5625em;
@@ -2156,33 +2274,30 @@ line-height: var(--leading-2);
 
 @media (min-width:1313px) {
     .markdown-preview-view h1,
-    .cm-header-1 {
-    font-family: var(--font-heading);
+    .cm-s-obsidian .cm-header-1 {
     font-size: calc(var(--font-scale-8) * (var(--heading-1) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--heading-semi-bold);
     letter-spacing: var(--tracking-0);
     margin-top: .65em;
     margin-bottom: .65em;
     }
 
     .markdown-preview-view h2,
-    .cm-header-2 {
-    font-family: var(--font-heading);
+    .cm-s-obsidian .cm-header-2 {
     font-size: calc(var(--font-scale-8) * (var(--heading-2) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-light);
+    font-weight: var(--heading-light);
     letter-spacing: var(--tracking-0);
     margin-top: .65em;
     margin-bottom: .65em;
     }
 
     .markdown-preview-view h3,
-    .cm-header-3 {
-    font-family: var(--font-heading);
+    .cm-s-obsidian .cm-header-3 {
     font-size: calc(var(--font-scale-5) * (var(--heading-3) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-regular);
+    font-weight: var(--heading-regular);
     letter-spacing: var(--tracking-0);
     margin-top: .6875em;
     margin-bottom: .6875em;
@@ -2190,10 +2305,9 @@ line-height: var(--leading-2);
 
     .markdown-preview-view h4,
     .cm-s-obsidian .cm-header-4 {
-    font-family: var(--font-heading);
     font-size: calc(var(--font-scale-3) * (var(--heading-4) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-regular);
+    font-weight: var(--heading-regular);
     letter-spacing: var(--tracking-0);
     margin-top: .6875em;
     margin-bottom: .6875em;
@@ -2202,10 +2316,9 @@ line-height: var(--leading-2);
     .markdown-preview-view h5,
     .cm-s-obsidian .cm-header-5 {
     color:var(--text-normal);
-    font-family: var(--font-heading);
     font-size: calc(var(--font-scale-0) * (var(--heading-5) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--heading-semi-bold);
     letter-spacing: var(--tracking-0);
     margin-top: 1.125em;
     margin-bottom: 1.125em;
@@ -2214,10 +2327,9 @@ line-height: var(--leading-2);
     .markdown-preview-view h6,
     .cm-s-obsidian .cm-header-6 {
     color:var(--text-normal);
-    font-family: var(--font-heading);
     font-size: calc(var(--font-scale-00) * (var(--heading-6) / 100));
     line-height: var(--leading-0);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--heading-semi-bold);
     letter-spacing: var(--tracking-1);
     margin-top: 1.125em;
     margin-bottom: 1.125em;
@@ -2378,7 +2490,15 @@ em {  /* Italic */
     background-color: var(--color-primary-20);
 }
 
-/*text selection*/ 
+/* ─────────────────── Accent color active line highlight ─────────────────── */
+.accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
+    background-color: hsla(var(--color-l-accent-h),var(--color-l-accent-s),var(--color-l-accent-l),.35);
+}
+.accent-active-line .CodeMirror-activeline-gutter {
+    background-color: hsla(var(--color-l-accent-h),var(--color-l-accent-s),var(--color-l-accent-l),.35);
+}
+
+/* ───────────────────────────── text selection ───────────────────────────── */
 .CodeMirror-focused .CodeMirror-selected {
     background-color: hsla(var(--color-d-accent-h),var(--color-d-accent-s),var(--color-d-accent-l), .7);
 }
@@ -2396,6 +2516,13 @@ blockquote p::selection {
 /* ──────────────────────── Multi-Color Highlighting ──────────────────────── */
 
 /* ───────────────── Yellow Highlight (Regular highlight 1) ───────────────── */
+.markdown-preview-view mark {
+    overflow: hidden;
+    background-color: transparent;
+    padding: 0 2px;
+    vertical-align: middle;
+}
+
 .markdown-preview-view mark,
 .cm-s-obsidian span.cm-highlight {
     font-weight: normal;
@@ -2505,11 +2632,12 @@ ol > li::marker {
     font-weight: var(--font-regular);
     font-size: var(--font-scale-0);
     color: var(--text-normal);
-    font-family: var(--font-mono);
+    font-family: var(--font-preview);
+    font-variant-numeric: tabular-nums;
 }
 
 .markdown-preview-view .list-collapse-indicator {
-    margin-left: -3.5rem;
+    margin-left: -3rem;
     color: var(--text-faint);
 }
 
@@ -2593,6 +2721,10 @@ ol {
     list-style-position: outside;
 }
 
+li {
+    margin-bottom: 4px; /* adds a bit more spacing to lists */
+}
+
 /* ─────────────────────────── Relationship Lines ─────────────────────────── */
 .relationship-lines li:not(.task-list-item):not(.footnotes li) {
     padding-left: .2rem;
@@ -2670,7 +2802,8 @@ input[type=checkbox]:checked:before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23F9F6F4' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 75%;
+    background-size: 70%;
+    transform: translateX(.5px) translateY(0px);
     margin-top: var(--size-0);
     width: 100%;
     height: 100%;
@@ -2708,134 +2841,278 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 
 /* Strikethrough from completed to-do lists/checkbox */
 .markdown-preview-view ul>li[data-task='x'].task-list-item.is-checked::selection,
-.markdown-preview-view ul>li[data-task='X'].task-list-item.is-checked::selection,
-.markdown-preview-view ul>li[data-task='x'].task-list-item.is-checked,
-.markdown-preview-view ul>li[data-task='X'].task-list-item.is-checked {
+.markdown-preview-view ul>li[data-task='x'].task-list-item.is-checked {
     text-decoration: line-through solid var(--color-green) 2px;
     color: inherit;
 }
 
 /* ──────────────────────────── Custom Checkboxes ─────────────────────────── */
-.markdown-preview-view li[data-task='!']>.task-list-item-checkbox:checked,
-.markdown-preview-view li[data-task='-']>.task-list-item-checkbox:checked,
-.markdown-preview-view li[data-task='>']>.task-list-item-checkbox:checked,
-.markdown-preview-view li[data-task='?']>.task-list-item-checkbox:checked,
-.markdown-preview-view li[data-task='<']>.task-list-item-checkbox:checked,
-.markdown-preview-view li[data-task='l']>.task-list-item-checkbox:checked,
-.markdown-preview-view li[data-task='i']>.task-list-item-checkbox:checked {
-    background-color: transparent;
+.markdown-preview-view li[data-task="1"] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task=B] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task=X] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task=n] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task=⭐] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task=a] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task=p] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task=c] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task=W] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task=❤] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task=s] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task=S] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task=b] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task=I] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="!"] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="-"] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task=">"] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="?"] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task="<"] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task=l] > .task-list-item-checkbox:checked,
+.markdown-preview-view li[data-task=i] > .task-list-item-checkbox:checked {
+  background-color: transparent;
+  pointer-events: none;
 }
 
-/* ─────────────── Icon for question/more info task ('- [?]') ─────────────── */
-.markdown-preview-view li[data-task='?']>.task-list-item-checkbox:checked::before {
-    content: '';
-    background-repeat: no-repeat;
-    background-color: none;
-    background-size: 100% 100%;
-    background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(41.4, 79%, 44.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Ehelp--filled%3C/title%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,23a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,16,25Zm1.1421-7.754v2.5014h-2.25V15h2.125a2.3763,2.3763,0,0,0,0-4.7526h-1.5a2.3777,2.3777,0,0,0-2.375,2.375V13.26h-2.25v-.6377A4.6279,4.6279,0,0,1,15.5171,8h1.5a4.6238,4.6238,0,0,1,.125,9.246Z' transform='translate(0)'/%3E%3Cpath id='inner-path' class='cls-1' d='M16,25a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,16,25Zm1.1421-7.754v2.5014h-2.25V15h2.125a2.3763,2.3763,0,0,0,0-4.7526h-1.5a2.3777,2.3777,0,0,0-2.375,2.375V13.26h-2.25v-.6377A4.6279,4.6279,0,0,1,15.5171,8h1.5a4.6238,4.6238,0,0,1,.125,9.246Z' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
-    transform: scale(1.35) translateY(0px) translateX(-0px);
+/* ────────────────────────────────── Note ────────────────────────────────── */
+.markdown-preview-view li[data-task=n] > .task-list-item-checkbox:checked::before {
+  content: "📜";
+  background: transparent;
+  font-size: var(--font-scale-0);
+  transform: scale(0.85) translateY(-5px) translateX(-5px);
+  color: var(--background-primary);
 }
 
-body .markdown-preview-view ul > li[data-task='?'].task-list-item.is-checked {
-    text-decoration: underline solid var(--color-yellow) 2px;
+/* ────────────────────────────────── Star ────────────────────────────────── */
+.markdown-preview-view li[data-task=⭐] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(41.4, 79%, 44.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Estar--filled%3C/title%3E%3Cpath d='M16,2l-4.55,9.22L1.28,12.69l7.36,7.18L6.9,30,16,25.22,25.1,30,23.36,19.87l7.36-7.17L20.55,11.22Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+  background-size: var(--scale-2) var(--scale-2);
+  transform: scale(1.1) translateX(-1.5px) translateY(-2px);
+  padding: var(--size-1);
 }
 
-/* ─────────── Paper Plane icon for deferred/rescheduled ('- [>]') ────────── */
-.markdown-preview-view li[data-task='>']>.task-list-item-checkbox:checked::before {
-    content: '';
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(300, 1%, 19.8%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Esend--filled%3C/title%3E%3Cpath d='M27.45,15.11l-22-11a1,1,0,0,0-1.08.12,1,1,0,0,0-.33,1L6.69,15H18v2H6.69L4,26.74A1,1,0,0,0,5,28a1,1,0,0,0,.45-.11l22-11a1,1,0,0,0,0-1.78Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
-    background-size: var(--scale-2) var(--scale-2);
-    transform: scale(1.2) translateY(-1px);
-    padding-left: var(--size-0);
-    color: var(--background-primary);
-}
-.theme-dark .markdown-preview-view li[data-task='>']>.task-list-item-checkbox:checked::before {
-background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(30, 3.4%, 76.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Esend--filled%3C/title%3E%3Cpath d='M27.45,15.11l-22-11a1,1,0,0,0-1.08.12,1,1,0,0,0-.33,1L6.69,15H18v2H6.69L4,26.74A1,1,0,0,0,5,28a1,1,0,0,0,.45-.11l22-11a1,1,0,0,0,0-1.78Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+/* ────────────────────────────────── Alarm ───────────────────────────────── */
+.markdown-preview-view li[data-task=a] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(41.4, 79%, 44.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M28.707,19.293,26,16.5859V13a10.0136,10.0136,0,0,0-9-9.9492V1H15V3.0508A10.0136,10.0136,0,0,0,6,13v3.5859L3.293,19.293A.9993.9993,0,0,0,3,20v3a1,1,0,0,0,1,1h7v1a5,5,0,0,0,10,0V24h7a1,1,0,0,0,1-1V20A.9993.9993,0,0,0,28.707,19.293ZM19,25a3,3,0,0,1-6,0V24h6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+  background-size: var(--scale-2) var(--scale-2);
+  transform: scale(1.1) translateX(-1.5px) translateY(-1.5px);
+  padding: var(--size-1);
 }
 
-/* ──────────────────── '!' for important task ('- [!]') ──────────────────── */
-.markdown-preview-view li[data-task='!']>.task-list-item-checkbox:checked::before {
-    content: '';
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    transform: scale(1.4) translateY(-1px);
-    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpath id='inner-path' class='st0' d='M16,26c-0.8,0-1.5-0.7-1.5-1.5S15.2,23,16,23c0.8,0,1.5,0.7,1.5,1.5S16.8,26,16,26z M14.9,21 h2.2v-9h-2.2V21z'/%3E%3Cpath d='M16,6.2L16,6.2L4.6,28l0,0h22.7l0,0L16,6.2z M14.9,12h2.2v9h-2.2V12z M16,26c-0.8,0-1.5-0.7-1.5-1.5S15.2,23,16,23 c0.8,0,1.5,0.7,1.5,1.5S16.8,26,16,26z'/%3E%3Cpath d='M29,30H3c-0.6,0-1-0.4-1-1c0-0.2,0-0.3,0.1-0.5l13-25C15.4,3,16,2.9,16.5,3.1c0.2,0.1,0.3,0.2,0.4,0.4l13,25 c0.3,0.5,0.1,1.1-0.4,1.3C29.3,30,29.2,30,29,30z M4.7,28h22.7l0,0L16,6.2h0L4.7,28L4.7,28z'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Crect x='-2.9' y='15.3' transform='matrix(0.4543 -0.8908 0.8908 0.4543 -9.2548 18.3131)' width='26.4' height='2.9'/%3E%3Crect x='8.3' y='15.6' transform='matrix(-0.4543 -0.8908 0.8908 -0.4543 16.0037 43.9746)' width='26.4' height='2.9'/%3E%3Crect x='3.9' y='26.2' transform='matrix(-0.9999 -1.155204e-02 1.155204e-02 -0.9999 31.8813 55.4091)' width='24.4' height='2.9'/%3E%3C/svg%3E%0A");
-    padding-left: var(--size-0);
+/* ────────────────────────────────── Pros ────────────────────────────────── */
+.markdown-preview-view li[data-task=p] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(61.3, 41.1%, 45.3%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Crect x='2' y='16' width='5' height='14'/%3E%3Cpath d='M23,30H9V15.1973l3.0422-4.5635.8453-5.9165A2.0094,2.0094,0,0,1,14.8672,3H15a3.0033,3.0033,0,0,1,3,3v6h8a4.0045,4.0045,0,0,1,4,4v7A7.0078,7.0078,0,0,1,23,30Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+  background-size: var(--scale-2) var(--scale-2);
+  transform: scale(1.1) translateX(-1px) translateY(-3px);
+  padding: var(--size-1);
 }
 
-/* text style for important task ('- [!]') */
-.markdown-preview-view ul>li[data-task='!'].task-list-item.is-checked {
-    color: var(--text-normal);
-    text-decoration: none;
-    font-weight: var(--font-bold);
+/* ────────────────────────────────── Cons ────────────────────────────────── */
+.markdown-preview-view li[data-task=c] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Crect x='2' y='2' width='5' height='14'/%3E%3Cpath d='M23,2H9V16.8027l3.0422,4.5635.8453,5.9165A2.0094,2.0094,0,0,0,14.8672,29H15a3.0033,3.0033,0,0,0,3-3V20h8a4.0045,4.0045,0,0,0,4-4V9A7.0078,7.0078,0,0,0,23,2Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+  background-size: var(--scale-2) var(--scale-2);
+  transform: scale(1.1) translateX(-1px) translateY(-1.5px);
+  padding: var(--size-1);
 }
 
-/* ────────────────── Icon for cancelled/non-task ('- [-]') ───────────────── */
-.markdown-preview-view li[data-task='-']>.task-list-item-checkbox:checked::before {
-    content: '';
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    transform: scale(1.4) translateY(0px);
-    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D .st1%7Bopacity:0;fill-opacity:0;%7D%0A%3C/style%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Cpath d='M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14S23.7,2,16,2z M21.4,23L16,17.6L10.6,23L9,21.4l5.4-5.4L9,10.6L10.6,9 l5.4,5.4L21.4,9l1.6,1.6L17.6,16l5.4,5.4L21.4,23z'/%3E%3Cpath id='inner-path' class='st1' d='M21.4,23L16,17.6L10.6,23L9,21.4l5.4-5.4L9,10.6L10.6,9l5.4,5.4L21.4,9l1.6,1.6L17.6,16 l5.4,5.4L21.4,23z'/%3E%3C/svg%3E%0A");
-    padding-left: var(--size-0);
+/* ───────────────────────── Win / Success / Reward ───────────────────────── */
+.markdown-preview-view li[data-task=W] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(41.4, 79%, 44.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Etrophy--filled%3C/title%3E%3Cpath d='M26,7H24V6a2.0023,2.0023,0,0,0-2-2H10A2.0023,2.0023,0,0,0,8,6V7H6A2.0023,2.0023,0,0,0,4,9v3a4.0045,4.0045,0,0,0,4,4h.322A8.1689,8.1689,0,0,0,15,21.9341V26H10v2H22V26H17V21.9311A7.9661,7.9661,0,0,0,23.74,16H24a4.0045,4.0045,0,0,0,4-4V9A2.0023,2.0023,0,0,0,26,7ZM8,14a2.0023,2.0023,0,0,1-2-2V9H8Zm18-2a2.0023,2.0023,0,0,1-2,2V9h2Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+  background-size: var(--scale-2) var(--scale-2);
+  transform: scale(1.2) translateX(0px) translateY(0px);
+  padding: var(--size-0);
 }
 
-.markdown-preview-view ul>li[data-task='-'].task-list-item.is-checked {
-    color: var(--text-muted);
+/* ────────────────────────────────── Heart ───────────────────────────────── */
+.markdown-preview-view li[data-task=❤] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Efavorite--filled%3C/title%3E%3Cpath d='M22.5,4c-2,0-3.9,0.8-5.3,2.2L16,7.4l-1.1-1.1C12,3.3,7.2,3.3,4.3,6.2c0,0-0.1,0.1-0.1,0.1c-3,3-3,7.8,0,10.8L16,29 l11.8-11.9c3-3,3-7.8,0-10.8C26.4,4.8,24.5,4,22.5,4z'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
+  background-size: var(--scale-2) var(--scale-2);
+  transform: scale(1.1) translateX(-1px) translateY(-1px);
+  padding-left: var(--size-1);
 }
 
-/* Remove strikethrough from completed to-do lists/checkbox, except the cancelled task */
-.markdown-preview-view ul>li:not([data-task='-']).task-list-item.is-checked::selection,
-.markdown-preview-view ul>li:not([data-task='-']).task-list-item.is-checked {
-    text-decoration: none;
-    color: inherit;
+/* ───────────────────────────────── Savings ──────────────────────────────── */
+.markdown-preview-view li[data-task=s] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' fill='hsl(41.4, 79%25, 44.9%25)' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Cpath d='M29,13h-2c-0.1-1.6-0.8-3.1-2-4.1V5c0-0.6-0.4-1-1-1c-0.2,0-0.4,0.1-0.6,0.2L19.7,7H15c-5.5,0-9.5,3.2-9.9,8H5 c-0.6,0-1-0.4-1-1v-2H2v2c0,1.7,1.3,3,3,3h0.1c0.3,2.7,1.7,5,3.9,6.6V27c0,0.6,0.4,1,1,1h4c0.6,0,1-0.4,1-1v-2h3v2c0,0.6,0.4,1,1,1 h4c0.6,0,1-0.4,1-1v-3.4c1.5-0.7,2.5-2,2.8-3.6H29c0.6,0,1-0.4,1-1v-5C30,13.4,29.6,13,29,13z M20,14h-3.5c-0.3,0-0.5,0.2-0.5,0.5 s0.2,0.5,0.5,0.5h1c1.2,0,2.2,0.8,2.4,2c0.3,1.4-0.6,2.7-1.9,3V21h-2v-1h-2v-2h3.5c0.3,0,0.5-0.2,0.5-0.5S17.8,17,17.5,17h-1 c-1.2,0-2.2-0.8-2.4-2c-0.3-1.4,0.6-2.7,1.9-3V11h2v1h2V14z'/%3E%3C/svg%3E%0A");
+  background-size: var(--scale-2) var(--scale-2);
+  transform: scale(1.2) translateX(-1px) translateY(-1px);
+  padding-left: var(--size-1);
 }
 
-.markdown-preview-view ul>li[data-task='-'].task-list-item.is-checked::selection,
-.markdown-preview-view ul>li[data-task='-'].task-list-item.is-checked {
-    text-decoration: line-through solid var(--color-red-500) 2px;
-    color: inherit;
+/* ─────────────────────────── Savings alternative ────────────────────────── */
+.markdown-preview-view li[data-task=S] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' fill='hsl(41.4, 79%25, 44.9%25)' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Cpath d='M29,13h-2c-0.1-1.6-0.8-3.1-2-4.1V5c0-0.6-0.4-1-1-1c-0.2,0-0.4,0.1-0.6,0.2L19.7,7H15c-5.5,0-9.5,3.2-9.9,8H5 c-0.6,0-1-0.4-1-1v-2H2v2c0,1.7,1.3,3,3,3h0.1c0.3,2.7,1.7,5,3.9,6.6V27c0,0.6,0.4,1,1,1h4c0.6,0,1-0.4,1-1v-2h3v2c0,0.6,0.4,1,1,1 h4c0.6,0,1-0.4,1-1v-3.4c1.5-0.7,2.5-2,2.8-3.6H29c0.6,0,1-0.4,1-1v-5C30,13.4,29.6,13,29,13z M20,13h-7v-2h7V13z'/%3E%3C/svg%3E%0A");
+  background-size: var(--scale-2) var(--scale-2);
+  transform: scale(1.2) translateX(-1px) translateY(-1px);
+  padding-left: var(--size-1);
+}
+
+/* ────────────────────────── Bookmark / Reference ────────────────────────── */
+.markdown-preview-view li[data-task=b] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M24,2H8A2,2,0,0,0,6,4V30l10-5.0538L26,30V4A2,2,0,0,0,24,2Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+  background-size: var(--scale-2) var(--scale-2);
+  transform: scale(1.1) translateX(0px) translateY(-1.5px);
+  padding-bottom: var(--size-1);
+}
+
+/* ──────────────────────────── Idea / Lightbulb ──────────────────────────── */
+.markdown-preview-view li[data-task=I] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(41.4, 79%, 44.9%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cpath d='M16,2C10.5,2,6,6.5,6,12c-0.1,2.9,1.1,5.8,3.5,7.6c1,0.9,1.5,1.5,1.5,2.4v2h0c0,1.1,0.9,2,2,2v1h0l0,3h6l0-4h0 c1.1,0,2-0.9,2-2c0,0,0,0,0,0h0v-2c0-0.9,0.5-1.4,1.5-2.4c2.3-1.8,3.6-4.7,3.5-7.6C26,6.5,21.5,2,16,2z'/%3E%3C/svg%3E%0A");
+  background-size: var(--scale-2) var(--scale-2);
+  transform: scale(1.1) translateX(0.5px) translateY(-2px);
+  padding-bottom: var(--size-1);
+}
+
+/* ───────────────────────────────── Failure ──────────────────────────────── */
+.markdown-preview-view li[data-task=X] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D .st1%7Bopacity:0;fill-opacity:0;%7D%0A%3C/style%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Cpath d='M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14S23.7,2,16,2z M21.4,23L16,17.6L10.6,23L9,21.4l5.4-5.4L9,10.6L10.6,9 l5.4,5.4L21.4,9l1.6,1.6L17.6,16l5.4,5.4L21.4,23z'/%3E%3Cpath id='inner-path' class='st1' d='M21.4,23L16,17.6L10.6,23L9,21.4l5.4-5.4L9,10.6L10.6,9l5.4,5.4L21.4,9l1.6,1.6L17.6,16 l5.4,5.4L21.4,23z'/%3E%3C/svg%3E%0A");
+  background-size: var(--scale-2) var(--scale-2);
+  transform: scale(1.1) translateX(-2px) translateY(-2px);
+  padding: var(--size-1);
+}
+
+/* ─────────────────────────────────── Bug ────────────────────────────────── */
+.markdown-preview-view li[data-task=B] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(349.7, 79%, 60.8%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Crect class='st0' width='32' height='32'/%3E%3Cg%3E%3Cpath d='M16,11l8-2.1c-0.9-1.7-2.3-3-4-3.9V2h-2v2.2c-1.3-0.3-2.7-0.3-4,0V2h-2v3c-1.7,0.9-3.1,2.2-4,3.9L16,11z'/%3E%3Cpath d='M29.8,20l0.3-2L25,17.2V13c0-0.1,0-0.2,0-0.2l5.1-1.4l-0.5-1.9l-4.8,1.3c0,0,0,0,0,0L17,12.8V17h-2v-4.2l-7.7-2.1 c0,0,0,0,0,0L2.5,9.5L2,11.4l5,1.4c0,0.1,0,0.1,0,0.2v4.2L1.8,18l0.3,2L7,19.2c0,1.2,0.3,2.4,0.8,3.6l-4.5,4.5l1.4,1.4l4.2-4.2 c3.1,3.9,8.7,4.6,12.6,1.6c0.6-0.5,1.1-1,1.6-1.6l4.2,4.2l1.4-1.4l-4.5-4.5c0.5-1.1,0.8-2.3,0.8-3.6L29.8,20z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: var(--scale-2) var(--scale-2);
+  transform: scale(1.1) translateX(-2px) translateY(-2px);
+  padding: var(--size-1);
+}
+
+/* ───────────────────────────────── Success ──────────────────────────────── */
+.markdown-preview-view li[data-task="1"] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(61.3, 41.1%, 45.3%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2ZM14,21.5908l-5-5L10.5906,15,14,18.4092,21.41,11l1.5957,1.5859Z'/%3E%3Cpolygon id='inner-path' class='cls-1' points='14 21.591 9 16.591 10.591 15 14 18.409 21.41 11 23.005 12.585 14 21.591'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+  background-size: var(--scale-2) var(--scale-2);
+  transform: scale(1.1) translateX(-2px) translateY(-2px);
+  padding: var(--size-1);
 }
 
 /* ─────────────────────────── Scheduled ('- [<]') ────────────────────────── */
-.markdown-preview-view li[data-task='<']>.task-list-item-checkbox:checked::before {
-    content: '';
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(300, 1%, 19.8%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,4H22V2H20V4H12V2H10V4H6A2.0025,2.0025,0,0,0,4,6V26a2.0025,2.0025,0,0,0,2,2H26a2.0025,2.0025,0,0,0,2-2V6A2.0025,2.0025,0,0,0,26,4ZM6,6h4V8h2V6h8V8h2V6h4l0,4H6Zm0,6h5v6H6ZM19,26H13V20h6Zm0-8H13V12h6Zm2,8V20h5l.0012,6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
-    background-size: 100% 100%;
-    transform: scale(1.4) translateY(-.5px);
-    color: var(--background-primary);
-    padding-left: var(--size-0);
+.markdown-preview-view li[data-task="<"] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(300, 1%, 19.8%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,4H22V2H20V4H12V2H10V4H6A2.0025,2.0025,0,0,0,4,6V26a2.0025,2.0025,0,0,0,2,2H26a2.0025,2.0025,0,0,0,2-2V6A2.0025,2.0025,0,0,0,26,4ZM6,6h4V8h2V6h8V8h2V6h4l0,4H6Zm0,6h5v6H6ZM19,26H13V20h6Zm0-8H13V12h6Zm2,8V20h5l.0012,6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+  background-size: var(--scale-2) var(--scale-2);
+  transform: scale(1.1) translateX(0px) translateY(-0.5px);
+  padding-left: var(--size-0);
 }
-.theme-dark .markdown-preview-view li[data-task='<']>.task-list-item-checkbox:checked::before {
-    background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(30, 3.4%, 76.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,4H22V2H20V4H12V2H10V4H6A2.0025,2.0025,0,0,0,4,6V26a2.0025,2.0025,0,0,0,2,2H26a2.0025,2.0025,0,0,0,2-2V6A2.0025,2.0025,0,0,0,26,4ZM6,6h4V8h2V6h8V8h2V6h4l0,4H6Zm0,6h5v6H6ZM19,26H13V20h6Zm0-8H13V12h6Zm2,8V20h5l.0012,6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+
+.theme-dark .markdown-preview-view li[data-task="<"] > .task-list-item-checkbox:checked::before {
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(30, 3.4%, 76.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,4H22V2H20V4H12V2H10V4H6A2.0025,2.0025,0,0,0,4,6V26a2.0025,2.0025,0,0,0,2,2H26a2.0025,2.0025,0,0,0,2-2V6A2.0025,2.0025,0,0,0,26,4ZM6,6h4V8h2V6h8V8h2V6h4l0,4H6Zm0,6h5v6H6ZM19,26H13V20h6Zm0-8H13V12h6Zm2,8V20h5l.0012,6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
 /* ─────────────────────────── Location ('- [V]') ─────────────────────────── */
-.markdown-preview-view li[data-task='l']>.task-list-item-checkbox:checked::before {
-    content: '';
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M16,2A11.0134,11.0134,0,0,0,5,13a10.8885,10.8885,0,0,0,2.2163,6.6s.3.3945.3482.4517L16,30l8.439-9.9526c.0444-.0533.3447-.4478.3447-.4478l.0015-.0024A10.8846,10.8846,0,0,0,27,13,11.0134,11.0134,0,0,0,16,2Zm0,15a4,4,0,1,1,4-4A4.0045,4.0045,0,0,1,16,17Z'/%3E%3Ccircle id='_Inner-Path_' data-name='&lt;Inner-Path&gt;' class='cls-1' cx='16' cy='13' r='4'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
-    background-size: 100% 100%;
-    transform: scale(1.4) translateY(-1px);
-    color: var(--background-primary);
-    padding-left: -1px;
+.markdown-preview-view li[data-task=l] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M16,2A11.0134,11.0134,0,0,0,5,13a10.8885,10.8885,0,0,0,2.2163,6.6s.3.3945.3482.4517L16,30l8.439-9.9526c.0444-.0533.3447-.4478.3447-.4478l.0015-.0024A10.8846,10.8846,0,0,0,27,13,11.0134,11.0134,0,0,0,16,2Zm0,15a4,4,0,1,1,4-4A4.0045,4.0045,0,0,1,16,17Z'/%3E%3Ccircle id='_Inner-Path_' data-name='&lt;Inner-Path&gt;' class='cls-1' cx='16' cy='13' r='4'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+  background-size: var(--scale-2) var(--scale-2);
+  transform: scale(1.1) translateX(-1px) translateY(-2px);
+  color: var(--background-primary);
+  padding: var(--size-1);
 }
 
 /* ────────────────────────── Information ('- [i]') ───────────────────────── */
-.markdown-preview-view li[data-task='i']>.task-list-item-checkbox:checked::before {
-    content: '';
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(200, 37.3%, 30%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath id='inner-path' class='cls-1' d='M16,8a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,16,8Zm4,13.875H17.125v-8H13v2.25h1.875v5.75H12v2.25h8Z' transform='translate(0 0)'/%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,6a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,16,8Zm4,16.125H12v-2.25h2.875v-5.75H13v-2.25h4.125v8H20Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
-    background-size: 100% 100%;
-    transform: scale(1.4) translateY(0px);
-    padding-left: -1px;
-    color: var(--background-primary);
+.markdown-preview-view li[data-task=i] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(200, 37.3%, 30%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath id='inner-path' class='cls-1' d='M16,8a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,16,8Zm4,13.875H17.125v-8H13v2.25h1.875v5.75H12v2.25h8Z' transform='translate(0 0)'/%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,6a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,16,8Zm4,16.125H12v-2.25h2.875v-5.75H13v-2.25h4.125v8H20Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+  background-size: var(--scale-2) var(--scale-2);
+  transform: scale(1.1) translateX(-2px) translateY(-2px);
+  padding: var(--size-1);
+  color: var(--background-primary);
 }
 
-.theme-dark .markdown-preview-view li[data-task='i']>.task-list-item-checkbox:checked::before {
-    background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(201.1, 36.8%, 37.8%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath id='inner-path' class='cls-1' d='M16,8a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,16,8Zm4,13.875H17.125v-8H13v2.25h1.875v5.75H12v2.25h8Z' transform='translate(0 0)'/%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,6a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,16,8Zm4,16.125H12v-2.25h2.875v-5.75H13v-2.25h4.125v8H20Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+.theme-dark .markdown-preview-view li[data-task=i] > .task-list-item-checkbox:checked::before {
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(201.1, 36.8%, 37.8%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath id='inner-path' class='cls-1' d='M16,8a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,16,8Zm4,13.875H17.125v-8H13v2.25h1.875v5.75H12v2.25h8Z' transform='translate(0 0)'/%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,6a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,16,8Zm4,16.125H12v-2.25h2.875v-5.75H13v-2.25h4.125v8H20Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+}
+
+/* ─────────────── Icon for question/more info task ('- [?]') ─────────────── */
+.markdown-preview-view li[data-task="?"] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-color: none;
+  background-size: var(--scale-2) var(--scale-2);
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(41.4, 79%, 44.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Ehelp--filled%3C/title%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,23a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,16,25Zm1.1421-7.754v2.5014h-2.25V15h2.125a2.3763,2.3763,0,0,0,0-4.7526h-1.5a2.3777,2.3777,0,0,0-2.375,2.375V13.26h-2.25v-.6377A4.6279,4.6279,0,0,1,15.5171,8h1.5a4.6238,4.6238,0,0,1,.125,9.246Z' transform='translate(0)'/%3E%3Cpath id='inner-path' class='cls-1' d='M16,25a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,16,25Zm1.1421-7.754v2.5014h-2.25V15h2.125a2.3763,2.3763,0,0,0,0-4.7526h-1.5a2.3777,2.3777,0,0,0-2.375,2.375V13.26h-2.25v-.6377A4.6279,4.6279,0,0,1,15.5171,8h1.5a4.6238,4.6238,0,0,1,.125,9.246Z' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+  transform: scale(1.1) translateY(-2px) translateX(-2px);
+  padding: 2px;
+}
+
+body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
+  text-decoration: underline solid var(--color-yellow) 2px;
+}
+
+/* ─────────── Paper Plane icon for deferred/rescheduled ('- [>]') ────────── */
+.markdown-preview-view li[data-task=">"] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(300, 1%, 19.8%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Esend--filled%3C/title%3E%3Cpath d='M27.45,15.11l-22-11a1,1,0,0,0-1.08.12,1,1,0,0,0-.33,1L6.69,15H18v2H6.69L4,26.74A1,1,0,0,0,5,28a1,1,0,0,0,.45-.11l22-11a1,1,0,0,0,0-1.78Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+  background-size: var(--scale-2) var(--scale-2);
+  transform: scale(1.2) translateX(0.5px) translateY(-1px);
+  padding-left: var(--size-0);
+  color: var(--background-primary);
+}
+.theme-dark .markdown-preview-view li[data-task=">"] > .task-list-item-checkbox:checked::before {
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(30, 3.4%, 76.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Esend--filled%3C/title%3E%3Cpath d='M27.45,15.11l-22-11a1,1,0,0,0-1.08.12,1,1,0,0,0-.33,1L6.69,15H18v2H6.69L4,26.74A1,1,0,0,0,5,28a1,1,0,0,0,.45-.11l22-11a1,1,0,0,0,0-1.78Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+}
+
+/* ──────────────────── '!' for important task ('- [!]') ──────────────────── */
+.markdown-preview-view li[data-task="!"] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: var(--scale-2) var(--scale-2);
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpath id='inner-path' class='st0' d='M16,26c-0.8,0-1.5-0.7-1.5-1.5S15.2,23,16,23c0.8,0,1.5,0.7,1.5,1.5S16.8,26,16,26z M14.9,21 h2.2v-9h-2.2V21z'/%3E%3Cpath d='M16,6.2L16,6.2L4.6,28l0,0h22.7l0,0L16,6.2z M14.9,12h2.2v9h-2.2V12z M16,26c-0.8,0-1.5-0.7-1.5-1.5S15.2,23,16,23 c0.8,0,1.5,0.7,1.5,1.5S16.8,26,16,26z'/%3E%3Cpath d='M29,30H3c-0.6,0-1-0.4-1-1c0-0.2,0-0.3,0.1-0.5l13-25C15.4,3,16,2.9,16.5,3.1c0.2,0.1,0.3,0.2,0.4,0.4l13,25 c0.3,0.5,0.1,1.1-0.4,1.3C29.3,30,29.2,30,29,30z M4.7,28h22.7l0,0L16,6.2h0L4.7,28L4.7,28z'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Crect x='-2.9' y='15.3' transform='matrix(0.4543 -0.8908 0.8908 0.4543 -9.2548 18.3131)' width='26.4' height='2.9'/%3E%3Crect x='8.3' y='15.6' transform='matrix(-0.4543 -0.8908 0.8908 -0.4543 16.0037 43.9746)' width='26.4' height='2.9'/%3E%3Crect x='3.9' y='26.2' transform='matrix(-0.9999 -1.155204e-02 1.155204e-02 -0.9999 31.8813 55.4091)' width='24.4' height='2.9'/%3E%3C/svg%3E%0A");
+  transform: scale(1.1) translateY(-2px) translateX(-2px);
+  padding: 2px;
+}
+
+/* ────────────────── Icon for cancelled/non-task ('- [-]') ───────────────── */
+.markdown-preview-view li[data-task="-"] > .task-list-item-checkbox:checked::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: var(--scale-2) var(--scale-2);
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' fill='hsla(34.3, 21.2%, 93.5%, 0.6)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cg id='icon'%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Crect id='_Transparent_Rectangle__1_' x='0.2' y='-0.4' class='st0' width='32' height='32'/%3E%3C/g%3E%3Cg id='Layer_2'%3E%3Cpath d='M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14S23.7,2,16,2z M24,17.6h-2.8h-10H8v-4h3.2h10H24V17.6z'/%3E%3C/g%3E%3C/svg%3E%0A");
+  transform: scale(1.1) translateY(-2px) translateX(-2px);
+  padding: 2px;
+}
+.theme-light .markdown-preview-view li[data-task="-"] > .task-list-item-checkbox:checked::before {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' fill='hsla(0, 0%, 7.8%, 0.9)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cg id='icon'%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Crect id='_Transparent_Rectangle__1_' x='0.2' y='-0.4' class='st0' width='32' height='32'/%3E%3C/g%3E%3Cg id='Layer_2'%3E%3Cpath d='M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14S23.7,2,16,2z M24,17.6h-2.8h-10H8v-4h3.2h10H24V17.6z'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.markdown-preview-view ul > li[data-task="-"].task-list-item.is-checked {
+  color: var(--text-faint);
+  text-decoration: line-through solid var(--text-faint) 2px;
+}
+
+/* Remove strikethrough from completed to-do lists/checkbox, except the cancelled task */
+.markdown-preview-view ul > li:not([data-task="-"]).task-list-item.is-checked::selection,
+.markdown-preview-view ul > li:not([data-task="-"]).task-list-item.is-checked {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* ───────────────────────────── Edit Mode Tasks ──────────────────────────── */
@@ -2847,6 +3124,385 @@ background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(30, 3.4%, 7
 .edit-mode-tasks .cm-s-obsidian span.cm-formatting-task.cm-property {
     font-weight: bold;
     color: var(--color-green);
+}
+
+/* ─────────────────────────────── Admonitions ────────────────────────────── */
+:root {
+    --hsl-color-red: 0.4, 66.8%, 46.1%;
+    --hsl-color-yellow: 41.3, 79.6%, 59.6%;
+    --hsl-color-blue: 201.1, 36.8%, 37.8%;
+    --hsl-color-green: 61.3, 41.1%, 45.3%;
+    --hsl-color-green-700: 60, 40.9%, 31.2%;
+    --hsl-color-pink: 349.7, 79%, 60.8%;
+  }
+
+/* ──────────────────────── Important (!) admonition ──────────────────────── */
+/* ───────────────────────────── Cons Admonition ──────────────────────────── */
+/* ───────────────────────────────── Failure ──────────────────────────────── */
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X],
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c],
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] {
+  background-color: hsla(var(--hsl-color-red), 0.8);
+  border-radius: 0px 4px 4px 4px;
+  border-left: 1.5px solid var(--color-red);
+  padding: 0px 4px 4px 4px;
+  color: var(--color-primary-w);
+  font-weight: var(--font-regular);
+  margin-left: 4px;
+}
+.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X],
+.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c],
+.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] {
+  color: var(--color-primary-k);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] ul li::marker,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] ul li::marker,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] ul li::marker {
+  color: var(--color-primary-w);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] a,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] a,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] a {
+  color: inherit;
+  text-decoration: underline solid currentColor;
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] a:hover,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] a:hover,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] a:hover {
+  text-decoration: underline dashed currentColor;
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] a.external-link,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] a.external-link,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] a.external-link {
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] mark,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] mark,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] mark {
+  background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
+  color: white;
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] mark:hover,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] mark:hover,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] mark:hover {
+  color: var(--color-black);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] em > mark,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] em > mark,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] em > mark {
+  background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] strong > mark,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] strong > mark,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] strong > mark {
+  background-image: linear-gradient(120deg, var(--color-white), var(--color-white));
+}
+.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] ul li::marker,
+.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] ul li::marker,
+.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] ul li::marker {
+  color: var(--color-primary-k);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X].is-collapsed::after,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c].is-collapsed::after,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"].is-collapsed::after {
+  color: var(--color-white);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] .list-collapse-indicator,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] .list-collapse-indicator,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] .list-collapse-indicator {
+  margin-left: -3.57rem;
+}
+
+.admonitions.markdown-preview-view li[data-task=X] > .task-list-item-checkbox,
+.admonitions.markdown-preview-view li[data-task=c] > .task-list-item-checkbox,
+.admonitions.markdown-preview-view li[data-task="!"] > .task-list-item-checkbox {
+  margin-left: -5px;
+  margin-right: var(--size-5);
+}
+.admonitions.markdown-preview-view li[data-task=X] > .task-list-item-checkbox:checked::before,
+.admonitions.markdown-preview-view li[data-task=c] > .task-list-item-checkbox:checked::before,
+.admonitions.markdown-preview-view li[data-task="!"] > .task-list-item-checkbox:checked::before {
+  margin-top: -1px;
+}
+
+/* ───────────────────────── Question (?) admonition ──────────────────────── */
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I],
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] {
+  background-color: hsla(var(--hsl-color-yellow), 0.8);
+  border-radius: 0px 4px 4px 4px;
+  border-left: 1.5px solid var(--color-yellow);
+  padding: 0px 4px 4px 4px;
+  text-decoration: none;
+  color: var(--color-primary-k);
+  font-weight: var(--font-regular);
+  margin-left: 4px;
+}
+.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I],
+.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] {
+  background-color: hsla(var(--hsl-color-yellow), 0.7);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] li::marker,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] li::marker {
+  color: var(--color-primary-k);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] a,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] a {
+  color: inherit;
+  text-decoration: underline solid currentColor;
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] a:hover,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] a:hover {
+  text-decoration: underline dashed currentColor;
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] mark,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] mark {
+  background-image: linear-gradient(120deg, var(--color-white), var(--color-white));
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] mark:hover,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] mark:hover {
+  color: var(--color-black);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] em > mark,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] em > mark {
+  background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] strong > mark,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] strong > mark {
+  background-image: linear-gradient(120deg, var(--color-highlight-3), var(--color-highlight-3));
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] .list-collapse-indicator,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] .list-collapse-indicator {
+  margin-left: -3.57rem;
+}
+
+.admonitions.markdown-preview-view li[data-task=I] > .task-list-item-checkbox,
+.admonitions.markdown-preview-view li[data-task="?"] > .task-list-item-checkbox {
+  margin-left: -5px;
+  margin-right: var(--size-5);
+}
+.admonitions.markdown-preview-view li[data-task=I] > .task-list-item-checkbox:checked::before,
+.admonitions.markdown-preview-view li[data-task="?"] > .task-list-item-checkbox:checked::before {
+  margin-top: -1px;
+}
+
+/* ─────────────────────── Information (i) admonition ─────────────────────── */
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] {
+  background-color: hsla(var(--hsl-color-blue), 0.8);
+  border-radius: 0px 4px 4px 4px;
+  border-left: 1.5px solid var(--color-teal);
+  padding: 0px 4px 4px 4px;
+  text-decoration: none;
+  color: var(--color-primary-w);
+  font-weight: var(--font-regular);
+  margin-left: 4px;
+}
+.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] {
+  background-color: hsla(var(--hsl-color-blue), 0.7);
+  color: var(--color-primary-k);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] li::marker {
+  color: var(--color-white);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] a {
+  color: inherit;
+  text-decoration: underline solid currentColor;
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] a:hover {
+  text-decoration: underline dashed currentColor;
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] mark {
+  background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
+  color: var(--color-white);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] em > mark {
+  background-image: linear-gradient(120deg, var(--color-white), var(--color-white));
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] mark:hover {
+  color: var(--color-black);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] strong > mark {
+  background-image: linear-gradient(120deg, var(--color-highlight-3), var(--color-highlight-3));
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] a.external-link {
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+}
+.theme-light .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i].is-collapsed::after {
+  color: var(--color-white);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] .list-collapse-indicator {
+  margin-left: -3.57rem;
+}
+
+.admonitions.markdown-preview-view li[data-task=i] > .task-list-item-checkbox {
+  margin-left: -5px;
+  margin-right: var(--size-5);
+}
+.admonitions.markdown-preview-view li[data-task=i] > .task-list-item-checkbox:checked::before {
+  margin-top: -1px;
+}
+
+/* ───────────────────────────── Pros Admonition ──────────────────────────── */
+/* ─────────────────────────── Reward/Win Admonition ─────────────────────────── */
+/* ───────────────────────────────── Success ──────────────────────────────── */
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"],
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W],
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] {
+  background-color: hsla(var(--hsl-color-green), 0.7);
+  border-radius: 0px 4px 4px 4px;
+  border-left: 1.5px solid var(--color-green);
+  padding: 0px 4px 4px 4px;
+  text-decoration: none;
+  color: var(--color-white);
+  font-weight: var(--font-regular);
+  margin-left: 4px;
+}
+.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"],
+.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W],
+.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] {
+  background-color: hsla(var(--hsl-color-green), 0.85);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"], .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] mark, .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] li::marker,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W],
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] mark,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] li::marker,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p],
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] mark,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] li::marker {
+  color: var(--text-normal);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] mark:hover,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] mark:hover,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] mark:hover {
+  color: var(--color-black);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] a,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] a,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] a {
+  color: inherit;
+  text-decoration: underline solid currentColor;
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] a:hover,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] a:hover,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] a:hover {
+  text-decoration: underline dashed currentColor;
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] a.external-link,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] a.external-link,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] a.external-link {
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"].is-collapsed::after,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W].is-collapsed::after,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p].is-collapsed::after {
+  color: var(--color-white);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] .list-collapse-indicator,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] .list-collapse-indicator,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] .list-collapse-indicator {
+  margin-left: -3.57rem;
+}
+
+.admonitions.markdown-preview-view li[data-task="1"] > .task-list-item-checkbox,
+.admonitions.markdown-preview-view li[data-task=W] > .task-list-item-checkbox,
+.admonitions.markdown-preview-view li[data-task=p] > .task-list-item-checkbox {
+  margin-left: -5px;
+  margin-right: var(--size-5);
+}
+.admonitions.markdown-preview-view li[data-task="1"] > .task-list-item-checkbox:checked::before,
+.admonitions.markdown-preview-view li[data-task=W] > .task-list-item-checkbox:checked::before,
+.admonitions.markdown-preview-view li[data-task=p] > .task-list-item-checkbox:checked::before {
+  margin-top: -1px;
+}
+.admonitions.markdown-preview-view li[data-task="1"] > .task-list-item-checkbox .list-collapse-indicator,
+.admonitions.markdown-preview-view li[data-task=W] > .task-list-item-checkbox .list-collapse-indicator,
+.admonitions.markdown-preview-view li[data-task=p] > .task-list-item-checkbox .list-collapse-indicator {
+  margin-left: -3.57rem;
+}
+
+/* ─────────────────────────── Note (n) Admonition ────────────────────────── */
+/* ─────────────────────────── Bookmark Admonition ────────────────────────── */
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=n],
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=b] {
+  background-color: var(--color-primary-20);
+  border-radius: 0px 4px 4px 4px;
+  border-left: 1.5px solid var(--color-border-2);
+  padding: 0px 4px 4px 4px;
+  text-decoration: none;
+  color: var(--text-normal);
+  font-weight: var(--font-regular);
+  margin-left: 4px;
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=n] li::marker,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=b] li::marker {
+  color: var(--color-white);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=n] .list-collapse-indicator,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=b] .list-collapse-indicator {
+  margin-left: -3.57rem;
+}
+
+.admonitions.markdown-preview-view li[data-task=n] > .task-list-item-checkbox,
+.admonitions.markdown-preview-view li[data-task=b] > .task-list-item-checkbox {
+  margin-left: -5px;
+  margin-right: var(--size-5);
+}
+.admonitions.markdown-preview-view li[data-task=n] > .task-list-item-checkbox:checked::before,
+.admonitions.markdown-preview-view li[data-task=b] > .task-list-item-checkbox:checked::before {
+  margin-top: -1px;
+}
+
+/* ────────────────────────────────── Debug ───────────────────────────────── */
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] {
+  background-color: hsla(var(--hsl-color-pink), 0.8);
+  border-radius: 0px 4px 4px 4px;
+  border-left: 1.5px solid var(--color-pink);
+  padding: 0px 4px 4px 4px;
+  color: var(--color-white);
+  font-weight: var(--font-regular);
+  margin-left: 4px;
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] ul li::marker {
+  color: var(--color-primary-w);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] a {
+  color: inherit;
+  text-decoration: underline solid currentColor;
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] a:hover {
+  text-decoration: underline dashed currentColor;
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] a.external-link {
+  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] mark {
+  background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
+  color: white;
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] mark:hover {
+  color: var(--color-black);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] em > mark {
+  background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] strong > mark {
+  background-image: linear-gradient(120deg, var(--color-white), var(--color-white));
+}
+.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] ul li::marker {
+  color: var(--color-primary-k);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B].is-collapsed::after {
+  color: var(--color-white);
+}
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] .list-collapse-indicator {
+  margin-left: -3.57rem;
+}
+
+.admonitions.markdown-preview-view li[data-task=B] > .task-list-item-checkbox {
+  margin-left: -5px;
+  margin-right: var(--size-5);
+}
+.admonitions.markdown-preview-view li[data-task=B] > .task-list-item-checkbox:checked::before {
+  margin-top: -1px;
 }
 
 /* ────────────────────────────────── Tags ────────────────────────────────── */
@@ -3192,7 +3848,7 @@ blockquote p {
     background-color: transparent;
     color:var(--text-muted);
     padding: var(--size-0);
-    margin-inline-start: var(--size-7);
+    margin-inline-start: 27px;
     margin-block-start: var(--size-0);
     margin-block-end: var(--size-0);
     text-align: left;
@@ -3208,7 +3864,8 @@ blockquote p {
 .markdown-preview-view blockquote {
     border-left: 1.5px solid var(--color-accent);
     background-color: transparent;
-    padding: var(--size-4);
+    padding: var(--size-2) var(--size-4) var(--size-2) var(--size-4);
+    margin-bottom: 16px;
 }
 
 .markdown-preview-view blockquote {
@@ -3219,8 +3876,8 @@ blockquote p {
     content: '\201C';
     font-family: sans-serif;
     position: absolute;
-    top: 0.40em;
-    left: -32px;
+    top: 0.36em;
+    left: -28px;
     font-size: 3.75rem;
 	color: var(--color-accent);
 }
@@ -3263,6 +3920,14 @@ cite {
     line-height: var(--leading-2);
     letter-spacing: var(--tracking-2);
     border-radius: 3px;
+}
+
+.theme-dark code[class*=language-],
+.theme-dark pre[class*=language-],
+.theme-light code[class*=language-],
+.theme-light pre[class*=language-] {
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .markdown-preview-view code,
@@ -3571,7 +4236,7 @@ table.table-view-table > thead > tr > th {
 /* remove title and the table from the "Metatable" plugin */
 .markdown-preview-view .markdown-embed-title,
 .markdown-preview-view .obsidian-metatable {
-  display: none;
+    display: none;
 }
 
 /*
@@ -3595,70 +4260,77 @@ table.table-view-table > thead > tr > th {
 /* Link icon */
 .markdown-preview-view .markdown-embed-link,
 .markdown-preview-view .file-embed-link {
-  top: 0;
-  right: 0;
-  left: unset;
-  text-align: right;
-  border: none;
-  margin: var(--size-5) var(--size-5);
-  width: var(--scale-3);
-  height: var(--scale-3);
-  color: var(--text-faint);
-  cursor: pointer;
+    top: 0;
+    right: 0;
+    left: unset;
+    text-align: right;
+    border: none;
+    margin: var(--size-5) var(--size-5);
+    width: var(--scale-3);
+    height: var(--scale-3);
+    color: var(--text-faint);
+    cursor: pointer;
 }
 
 /* for Ars Magna theme and others that change ::before */
 .markdown-preview-view .markdown-embed-link::before,
 .markdown-preview-view .file-embed-link::before {
-  display: none;
+    display: none;
 }
 
 /* Link icon size & hide */
 .markdown-preview-view .file-embed-link svg,
 .markdown-preview-view .markdown-embed-link svg {
-  height: var(--scale-3);
-  width: var(--scale-3);
-  opacity: 0;
-  display: unset;
+    height: var(--scale-3);
+    width: var(--scale-3);
+    opacity: 0;
+    display: unset;
 }
 
 /* show on hover */
 .markdown-preview-view .markdown-embed:hover .file-embed-link svg,
 .markdown-preview-view .markdown-embed:hover .markdown-embed-link svg {
-  opacity: 1;
+    opacity: 1;
 }
 
 /* change background on hover, to exactly see what’s embedded */
 .markdown-preview-view .markdown-embed:hover,
 .markdown-preview-view .file-embed:hover {
-  background-color: var(--color-hover);
+    background-color: var(--color-hover);
 }
 
 /* remove border and scroll */
 .markdown-preview-view .markdown-embed,
 .markdown-preview-view .file-embed {
-  border: none;
-  padding: var(--size-0);
-  margin: var(--size-0);
+    border: none;
+    padding: var(--size-0);
+    margin: var(--size-0);
 }
 
 .markdown-preview-view .markdown-embed-content,
 .markdown-preview-view .markdown-embed-content > .markdown-preview-view { 
-  max-height: unset;
-  padding: var(--size-0);
-  margin: var(--size-0);
-  border: var(--size-0);
+    max-height: unset;
+    padding: var(--size-0);
+    margin: var(--size-0);
+    border: var(--size-0);
+}
+
+/* Sanctum addition: make tables respect readable line width when having embeds.
+Decent for Eisenhower matrixes */
+.markdown-preview-view table .markdown-embed-content,
+.markdown-preview-view table .markdown-embed-content > .markdown-preview-view { 
+    max-width: 310px;
 }
 
 /* remove <br> between internal embeds */
 .markdown-preview-section div > br {
-  display: none;
+    display: none;
 }
 
 /* remove vertical space added by markdown-preview-sizer */
  div.markdown-preview-sizer.markdown-preview-section {
-  min-height: unset;
-  padding-bottom: var(--size-0);
+    min-height: unset;
+    padding-bottom: var(--size-0);
 }
 
 /* special considerations for printing (PDF export) */
@@ -3680,11 +4352,14 @@ iframe {
 }
 
 /* ──────────────────────── YAML & Metadata Container ─────────────────────── */
+
 code.language-yaml.is-loaded {
     font-weight: var(--font-regular);
     background-color: transparent;
     text-shadow: none;
     font-size: var(--font-scale-00);
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 code.language-yaml.is-loaded .token.boolean,
@@ -4080,12 +4755,13 @@ select.dropdown {
     box-sizing: border-box;
     margin: var(--size-0);
     border-radius: 0;
+    border: none;
     border-bottom: 1px solid var(--color-primary-50);
-    background-color: var(--color-primary-w);
     background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
     background-size: var(--scale-2)
         	         var(--scale-2);
     background-position: right 0.6em top 50%, 0 0;
+    background-color: var(--color-primary-w);
     transition: var(--duration-fast-2) var(--motion-entrance-productive);
     cursor: pointer;
 }
@@ -4095,18 +4771,13 @@ select.dropdown {
     background-color: var(--color-primary-10);
 }
 
-.dropdown {
-    border: 1px solid var(--color-border-1);
-    background-color: var(--color-primary-20);
-}
-
 select.dropdown:hover {
     background-color: var(--color-hover);
 }
 
 .dropdown option {
     font-weight: normal;
-    background-color: var(--background-primary);
+    background-color: var(--color-primary-w);
 }
 
 /* ─────────────────────────────── Empty Page ─────────────────────────────── */
@@ -4226,10 +4897,16 @@ textarea.sync-history-content {
     padding: var(--size-2)
              var(--size-5) 
              var(--size-2) 
-             var(--size-5);
+             var(--size-7);
     cursor: pointer;
     white-space: pre-wrap;
     line-height: var(--leading-3);
+}
+
+.suggestion-container .suggestion .suggestion-flair {
+    margin-left: -4px;
+    transform: scale(.8);
+    margin-top: -2px
 }
 
 /* prompt suggestion */
@@ -4250,12 +4927,6 @@ textarea.sync-history-content {
 
 .suggestion-item.is-selected {
     background-color: var(--color-hover);
-}
-
-.suggestion-container .suggestion .suggestion-flair {
-    margin-left: -4px;
-    transform: scale(.8);
-    margin-top: -2px
 }
 
 .prompt-results .suggestion-flair {
@@ -4840,7 +5511,7 @@ samp {
     width: 12px; /* width of vertical scrollbars  */
     height: 12px; /* height of horizontal scrollbars  */
     border-radius: 0; /* roundedness of scrollbar area */
-    background-color: var(--background-primary); /* color of scrollbar area  */
+    background-color: transparent; /* color of scrollbar area  */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -5511,6 +6182,128 @@ body.is-mobile .nav-action-button svg {
     margin-bottom: 16px;
 }*/
 
+/* ───────────────────────────────── Publish ──────────────────────────────── */
+
+.published-container.is-readable-line-width .site-body {
+    justify-content: space-between;
+}
+div.markdown-preview-sizer.markdown-preview-section {
+    width: unset;
+}
+@media (min-width:1200px) {
+    .published-container .markdown-preview-view {
+        padding: 20px 15vw 40vh 15vw;
+    }
+
+    .published-container.is-readable-line-width .site-body-center-column {
+        flex: 0 1 60vw;
+    }
+}
+
+.published-container.has-navigation.is-left-column-open .nav-backdrop {
+    background-color: var(--background-primary);
+    backdrop-filter: blur(5px);
+}
+
+.site-body-left-column {
+    background-color: var(--background-primary);
+    border-color: var(--color-border-1);
+    width: 10vw;
+}
+
+.nav-view-outer .tree-item-self.mod-active {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-weight: 400;
+}
+
+.site-body-left-column .nav-view-outer .tree-item-inner {
+    padding-left: 8px;
+}
+
+.site-body-right-column .graph-view-container {
+    position: relative;
+    height: 300px;
+    border: 1px solid var(--color-border-1);
+    border-radius: 4px;
+    background-color: var(--background-primary);
+    padding: 4px;
+}
+
+.published-section-header-icon {
+    font-family: var(--font-sans);
+}
+
+body .published-section-header-icon svg.bullet-list,
+.published-section-header-icon svg.dot-network {
+    background-color: currentColor !important;
+}
+body .published-section-header-icon svg.bullet-list > path,
+.published-section-header-icon svg.dot-network > path {
+    display: none !important;
+}
+body .published-section-header-icon svg.dot-network {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Edata-vis--1%3C/title%3E%3Cpath d='M26,22a3.9553,3.9553,0,0,0-2.0193.5667L20.167,18.7529a4.9654,4.9654,0,0,0,0-5.5058L22.714,10.7A3.0284,3.0284,0,1,0,21.3,9.286l-2.547,2.547a4.9654,4.9654,0,0,0-5.5058,0L9.4332,8.0191A3.9553,3.9553,0,0,0,10,6a4,4,0,1,0-4,4,3.9553,3.9553,0,0,0,2.0191-.5668l3.8139,3.8139a4.9654,4.9654,0,0,0,0,5.5058L8.0192,22.5668A3.9556,3.9556,0,0,0,6,22a4,4,0,1,0,4,4,3.9553,3.9553,0,0,0-.5667-2.0192l3.8138-3.8138A4.9686,4.9686,0,0,0,15,20.8989v3.2848a3,3,0,1,0,2,0V20.8989a4.9686,4.9686,0,0,0,1.7529-.7319l3.8138,3.8137A3.9553,3.9553,0,0,0,22,26a4,4,0,1,0,4-4ZM16,13a3,3,0,1,1-3,3A3.0033,3.0033,0,0,1,16,13ZM4,6A2,2,0,1,1,6,8,2.002,2.002,0,0,1,4,6ZM6,28a2,2,0,1,1,2-2A2.0023,2.0023,0,0,1,6,28Zm20,0a2,2,0,1,1,2-2A2.0027,2.0027,0,0,1,26,28Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+}
+
+.published-section-header-icon svg.bullet-list {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elist%3C/title%3E%3Crect x='10' y='6' width='18' height='2'/%3E%3Crect x='10' y='24' width='18' height='2'/%3E%3Crect x='10' y='15' width='18' height='2'/%3E%3Crect x='4' y='15' width='2' height='2'/%3E%3Crect x='4' y='6' width='2' height='2'/%3E%3Crect x='4' y='24' width='2' height='2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E") !important;
+    transform: scale(.8) !important;
+}
+
+.site-body-right-column .outline-view .tree-item-inner {
+    padding-left: 4px;
+}
+
+.graph-view-outer .published-section-header {
+    padding-left: 0;
+    margin-left: -4px;
+}
+
+.outline-view-outer .published-section-header {
+    padding-left: 0;
+    margin-left: -4px;
+}
+
+.graph-expand {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+html .site-body .markdown-preview-view .tag:not(.token) {
+    background-color: var(--color-accent);
+    border-color: transparent;
+    color: var(--color-black);
+    padding: 0 8px;
+    font-size: var(--font-scale-00);
+}
+html .site-body * {
+    scrollbar-width: 8px;
+    scrollbar-color: var(--color-border-1) var(--background-primary);
+}
+
+.published-container .backlinks {
+    margin-top: 32px;
+    background-color: var(--background-primary);
+    border-radius: 4px;
+    border: 1.5px solid var(--color-border-1);
+    padding: 8px 16px;
+}
+
+.search-results .suggestion-item {
+    position: relative;
+    padding: var(--size-2)
+             var(--size-5) 
+             var(--size-2) 
+             var(--size-7);
+    cursor: pointer;
+    white-space: pre-wrap;
+    line-height: var(--leading-3);
+}
+
 /* ───────────────────────────── Plugin Support ───────────────────────────── */
 
 /* ─────────────────────────────── Admonition ─────────────────────────────── */
@@ -5586,7 +6379,7 @@ body.is-mobile .workspace-leaf-content[data-type="advanced-tables-toolbar"] .nav
 .workspace-leaf-content[data-type="advanced-tables-toolbar"]
  .nav-header
  .nav-buttons-container {
-     padding: var(--size-0);
+     padding: var(--size-2);
 }
 
 /* ───────────────────────── Block Reference Counter ──────────────────────── */
@@ -6032,6 +6825,7 @@ body .kanban-plugin__grow-wrap:after {
 button.kanban-plugin__new-item-button:hover {
     color: var(--text-on-accent);
     background-color: var(--color-hover);
+    border-radius: 0px;
 }
 
 textarea.kanban-plugin__item-input:focus {
@@ -6400,7 +7194,9 @@ body:not(.no-sanctum-icons) svg.chart,
 body:not(.no-sanctum-icons) svg.fa-search,
 body:not(.no-sanctum-icons) svg.changelog,
 body:not(.no-sanctum-icons) svg.fa-copy,
-body:not(.no-sanctum-icons) svg.fantasy-calendar-reveal {
+body:not(.no-sanctum-icons) svg.fantasy-calendar-reveal,
+body:not(.no-sanctum-icons) svg.BratIcon,
+body:not(.no-sanctum-icons) svg.running-man {
   background-color: currentColor;
 }
 
@@ -6563,7 +7359,9 @@ body:not(.no-sanctum-icons) svg.chart > path,
 body:not(.no-sanctum-icons) svg.fa-search > path,
 body:not(.no-sanctum-icons) svg.changelog > path,
 body:not(.no-sanctum-icons) svg.fa-copy > path,
-body:not(.no-sanctum-icons) svg.fantasy-calendar-reveal > path {
+body:not(.no-sanctum-icons) svg.fantasy-calendar-reveal > path,
+body:not(.no-sanctum-icons) svg.BratIcon > path,
+body:not(.no-sanctum-icons) svg.running-man > path {
   display: none;
 }
 
@@ -6967,6 +7765,7 @@ svg.right-triangle {
     height: .875rem;
     width: .875rem;
     -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
 }
 body:not(.no-sanctum-icons) svg.run-command {
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eterminal%3C/title%3E%3Cpath d='M26,4H6A2,2,0,0,0,4,6V26a2,2,0,0,0,2,2H26a2,2,0,0,0,2-2V6A2,2,0,0,0,26,4Zm0,2v4H6V6ZM6,26V12H26V26Z' transform='translate(0 0.01)'/%3E%3Cpolygon points='10.76 16.18 13.58 19.01 10.76 21.84 12.17 23.25 16.41 19.01 12.17 14.77 10.76 16.18'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
@@ -7164,6 +7963,15 @@ body:not(.no-sanctum-icons) svg.fantasy-calendar-reveal {
 -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,4H22V2H20V4H12V2H10V4H6A2.0025,2.0025,0,0,0,4,6V26a2.0025,2.0025,0,0,0,2,2H26a2.0025,2.0025,0,0,0,2-2V6A2.0025,2.0025,0,0,0,26,4ZM6,6h4V8h2V6h8V8h2V6h4l0,4H6Zm0,6h5v6H6ZM19,26H13V20h6Zm0-8H13V12h6Zm2,8V20h5l.0012,6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
+/* Brat */
+body:not(.no-sanctum-icons) svg.BratIcon {
+    -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D .st1%7Bfill:none;stroke:%23000000;stroke-width:1.5;stroke-miterlimit:10;%7D%0A%3C/style%3E%3Cpath d='M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14S23.7,2,16,2z M16,28C9.4,28,4,22.6,4,16S9.4,4,16,4s12,5.4,12,12 S22.6,28,16,28z'/%3E%3Cpath d='M20.5,11c-1.4,0-2.5,1.1-2.5,2.5s1.1,2.5,2.5,2.5s2.5-1.1,2.5-2.5S21.9,11,20.5,11z'/%3E%3Crect x='8' y='13' width='6' height='2'/%3E%3Cpath d='M16,24c2.8,0,5.4-1.5,6.9-3.9l-1.7-1c-1.7,2.8-5.4,3.8-8.2,2c-0.8-0.5-1.5-1.2-2-2l-1.7,1C10.6,22.5,13.2,24,16,24z'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Cpath class='st1' d='M13.3,3.8c-0.4,1.3-0.1,2.8,1.1,3.6c1.4,1.1,3.5,0.8,4.6-0.6'/%3E%3C/svg%3E%0A");
+}
+
+body:not(.no-sanctum-icons) svg.running-man {
+    -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D .st1%7Bfill:none;stroke:%23000000;stroke-width:2;stroke-miterlimit:10;%7D .st2%7Bdisplay:none;%7D .st3%7Bdisplay:inline;%7D%0A%3C/style%3E%3Cg id='icon'%3E%3Cpath d='M19.1,9.3c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5C22.6,7.7,21,9.3,19.1,9.3z M19.1,4.3 c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5C20.6,5,19.9,4.3,19.1,4.3z'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Cpolyline class='st1' points='16.8,18 18.8,24.3 17.8,29.6 '/%3E%3Cpath class='st1' d='M15.8,11'/%3E%3Cpath d='M6.9,28.1l-1.1-1.7l4.8-3.1l-0.1-5.5l3.4-8.1c0.2-0.5,0.8-0.8,1.3-0.5l5.1,2.2c0.4,0.2,0.7,0.5,0.8,0.9l1.1,3.1l3.9-1 l0.5,1.9L21,17.7l-1.5-4c-0.1-0.4-0.4-0.7-0.8-0.9l-3.4-1.5l-2.8,6.8l0.1,6.2L6.9,28.1z'/%3E%3Cpolygon points='9.1,18 7.1,18 7.1,12.3 14.4,9.2 15.2,11 9.1,13.7 '/%3E%3C/g%3E%3Cg id='Layer_2' class='st2'%3E%3Cpath class='st3' d='M22.3,15.6l-1.1-3c-0.2-0.8-1.6-1.4-2.8-1.9l-3.6-1.4c-0.5,0-1.1,0.1-1.5,0.4l-6.1,2.7V18h2v-4.4l4.1-1.5 L10.5,18v5.7l-4.6,2.8l0.9,1.6l5.6-3.8V18l2.8-6.7l3.2,1.3c0.4,0.2,0.7,0.3,0.9,0.7l1.7,4.4l5.7-1.5l-0.5-1.7L22.3,15.6z'/%3E%3C/g%3E%3C/svg%3E%0A");
+    transform: scale(1.1);
+}
 /* ──────────────────────── Targeted SVG Replacement ──────────────────────── */
 /* replaces the regular folder icon with compass, and makes it a bit bigger */
 body:not(.no-sanctum-icons)
@@ -7212,9 +8020,37 @@ settings:
         level: 2
         collapsed: true
     -
+        id: light-mode-palette
+        title: Light mode palette
+        description: Background color palette for light mode
+        type: class-select
+        allowEmpty: false
+        default: sanctum-light-default
+        options:
+            - 
+                label: Default
+                value: sanctum-light-default
+    -
+        id: dark-mode-palette
+        title: Dark mode palette
+        description: Background color palette for dark mode
+        type: class-select
+        allowEmpty: false
+        default: sanctum-dark-default
+        options:
+            - 
+                label: Default
+                value: sanctum-dark-default
+    -
         id: cb-dark-bg
         title: Dark Mode High Contrast Code Background
         description: Gives a darker background to code in dark mode, for more contrast.
+        type: class-toggle
+        default: false
+    -
+        id: accent-active-line
+        title: Use Accent color as Active Line Highlight
+        description: Replaces the grey with the accent color for active line highlighting.
         type: class-toggle
         default: false
     -
@@ -7356,18 +8192,29 @@ settings:
         id: font-mono
         title: Monospace Font
         type: variable-text
-        default: "'IBM Plex Mono', 'iA Writer Mono V', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
+        default: "'IBM Plex Mono', 'iA Writer Mono V', 'iA IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
     - 
         id: headings-title
         title: Headings
         type: heading
         level: 3
         collapsed: true
-    - 
-        id: font-heading
-        title: Heading Font
+    -
+        id: font-heading-preview
+        title: Heading Font Preview Mode
         type: variable-text
-        default: "'iA Writer Quattro V', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        default: "'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    -
+        id: font-heading-editor
+        title: Heading Font Editor Mode
+        type: variable-text
+        default: "'IBM Plex Sans', 'iA Writer Quattro V', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    -
+        id: heading sizes
+        title: Heading Sizes
+        type: heading
+        level: 4
+        collapsed: true
     -
         id: heading-1
         title: Heading 1 Size
@@ -7422,6 +8269,118 @@ settings:
         min: 100
         max: 292
         step: 1
+    -
+        id: heading colours
+        title: Heading Colors
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: heading-clr
+        title: Toggle Heading Font Colours
+        type: class-toggle
+        default: false
+    -
+        id: heading-clr-bg
+        title: Toggle Heading Background Colours
+        type: class-toggle
+        default: false
+    -
+        id: heading colours
+        title: Heading Font Colors
+        type: heading
+        level: 5
+        collapsed: true
+    -
+        id: color-heading-1
+        title: Heading 1 Color
+        type: variable-themed-color
+        format: rgb
+        default-dark: rgb(252, 251, 250)
+        default-light: rgb(20, 20, 20)
+    -
+        id: color-heading-2
+        title: Heading 2 Color
+        type: variable-themed-color
+        format: rgb
+        default-dark: rgb(252, 251, 250)
+        default-light: rgb(20, 20, 20)
+    -
+        id: color-heading-3
+        title: Heading 3 Color
+        type: variable-themed-color
+        format: rgb
+        default-dark: rgb(252, 251, 250)
+        default-light: rgb(20, 20, 20)
+    -
+        id: color-heading-4
+        title: Heading 4 Color
+        type: variable-themed-color
+        format: rgb
+        default-dark: rgb(252, 251, 250)
+        default-light: rgb(20, 20, 20)
+    -
+        id: color-heading-5
+        title: Heading 5 Color
+        type: variable-themed-color
+        format: rgb
+        default-dark: rgb(252, 251, 250)
+        default-light: rgb(20, 20, 20)
+    -
+        id: color-heading-6
+        title: Heading 6 Color
+        type: variable-themed-color
+        format: rgb
+        default-dark: rgb(252, 251, 250)
+        default-light: rgb(20, 20, 20)
+    -
+        id: heading background colours
+        title: Heading Background Colors
+        type: heading
+        level: 5
+        collapsed: true
+    -
+        id: color-heading-1-bg
+        title: Heading 1 Color
+        type: variable-themed-color
+        format: rgb
+        default-dark: rgb(20, 20, 20)
+        default-light: rgb(252, 251, 250)
+    -
+        id: color-heading-2-bg
+        title: Heading 2 Color
+        type: variable-themed-color
+        format: rgb
+        default-dark: rgb(20, 20, 20)
+        default-light: rgb(252, 251, 250)
+    -
+        id: color-heading-3-bg
+        title: Heading 3 Color
+        type: variable-themed-color
+        format: rgb
+        default-dark: rgb(20, 20, 20)
+        default-light: rgb(252, 251, 250)
+    -
+        id: color-heading-4-bg
+        title: Heading 4 Color
+        type: variable-themed-color
+        format: rgb
+        default-dark: rgb(20, 20, 20)
+        default-light: rgb(252, 251, 250)
+    -
+        id: color-heading-5-bg
+        title: Heading 5 Color
+        type: variable-themed-color
+        format: rgb
+        default-dark: rgb(20, 20, 20)
+        default-light: rgb(252, 251, 250)
+    -
+        id: color-heading-6-bg
+        title: Heading 6 Color
+        type: variable-themed-color
+        format: rgb
+        default-dark: rgb(20, 20, 20)
+        default-light: rgb(252, 251, 250)
     -
         id: features
         title: Features
