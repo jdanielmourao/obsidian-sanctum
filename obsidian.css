@@ -2101,7 +2101,7 @@ body button {
 }
 
 .CodeMirror-sizer {
-line-height: var(--leading-2);
+    line-height: var(--leading-2);
 }
 
 /* ──────────────────────────────── Headings ──────────────────────────────── */
@@ -2919,7 +2919,7 @@ li {
 
 /* Some Outliner Edit Mode Corrections */
 .outliner-plugin-bls .cm-s-obsidian span span.cm-formatting-list-ul:before {
-    margin-top: -2px;
+    margin-top: 0px;
 }
 .outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list{
   letter-spacing: 0px;
@@ -2930,11 +2930,20 @@ li {
     display: block;
     position: absolute;
     background-image: linear-gradient(to right, var(--text-faint) .5px, transparent 0px);
-    background-size: 3.05ch 1px;
+    background-size: 1.6ch 1.5px;
     background-position-x: 3px;
     width: 100%;
     top: -1.6em;
     padding-bottom: 999em;
+}
+
+body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul:before {
+    content: "▪";
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 0px;
+    font-size: 20px;
+    color: var(--text-muted);
 }
 
 /* ──────────────────────────── Tasks / Checkbox ──────────────────────────── */
@@ -4763,7 +4772,7 @@ button.mod-cta:active {
     background-color: var(--color-primary-50);
     color: var(--text-normal);
 }
-
+body .modal.mod-publish .publish-changes-info button.publish-changes-add-linked-btn,
 .modal.mod-community-theme .theme-list .community-theme button.mod-cta {
     color: var(--text-normal);
     border-radius: 0px;
@@ -4802,6 +4811,24 @@ button.mod-cta:active {
     font-weight: var(--font-regular);
     background-color: var(--color-primary-20);
 }
+
+.modal.mod-publish button:not(.mod-cta):not(.mod-warning) {
+    background-color: var(--color-hover);
+}
+
+/* Publish Page buttons */
+.modal.mod-publish button:not(.mod-cta):not(.mod-warning) {
+    color: var(--color-white);
+    border-radius: 0px;
+    padding: var(--size-3)
+             var(--size-8)
+             var(--size-3)
+             var(--size-5);
+    font-size: var(--font-scale-00);
+    font-weight: var(--font-regular);
+    background-color: var(--color-hover);
+}
+
 
 /* ─────────────────────────── Collapse Indicators ────────────────────────── */
 
@@ -6359,7 +6386,42 @@ body.is-mobile .nav-action-button svg {
 }*/
 
 /* ───────────────────────────────── Publish ──────────────────────────────── */
+/* ────────────────────────── Publish Changes Page ────────────────────────── */
+.publish-change-list div.tree-item-inner.file-tree-item {
+    margin-left: 16px;
+}
 
+.publish-change-list div.tree-item-inner.file-tree-item:hover {
+    background-color: var(--color-hover);
+    border-radius: 0;
+}
+
+.publish-change-list .tree-item div.tree-item-icon.collapse-icon {
+    margin-left: -2px;
+    margin-right: -20px;
+}
+
+.publish-section-header {
+    border-bottom: 1.5px solid var(--color-border-1);
+}
+
+.publish-change-list .mod-deleted .tree-item-flair-outer {
+    font-weight: var(--font-regular);
+    background-color: var(--color-red);
+    border-radius: 4px;
+}
+
+.publish-change-list .mod-new .tree-item-flair-outer {
+    font-weight: var(--font-regular);
+    background-color: var(--color-green);
+    border-radius: 4px;
+}
+.file-tree.publish-section .mod-deleted .tree-item-flair,
+.file-tree.publish-section .mod-new .tree-item-flair {
+    color: var(--color-white);
+}
+
+/* ───────────────────────────── Publish Website ──────────────────────────── */
 .published-container.is-readable-line-width .site-body {
     justify-content: space-between;
 }
