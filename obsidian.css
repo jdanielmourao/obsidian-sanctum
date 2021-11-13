@@ -890,7 +890,6 @@ body.no-animation * {
 /* Pandoc Citations (applies to all []-links, except if they're highlights. Credit @pseudometa) */
 .cm-hmd-barelink:not(span.cm-strong.cm-highlight):not(span.cm-em.cm-highlight):not(.cm-s-obsidian span.cm-highlight) {
 	color: var(--color-accent);
-    font-size: var(--font-scale-0);
 }
 
 /* ──────────────────────────────── Workspace ─────────────────────────────── */
