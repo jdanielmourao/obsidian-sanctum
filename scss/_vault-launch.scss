@@ -1,0 +1,33 @@
+@use 'var';
+
+.progress-bar-line {
+    position: absolute;             /* background */
+    opacity: 0.4;
+    background-color: var(--color-primary-w);
+    width: 150%;
+    border-radius: 0px;
+    height: var.$size-3;
+}
+.progress-bar-subline {             /* bar */
+    position: absolute;
+    background-color: var(--interactive-accent);
+    border-radius: 0px;
+    height: var.$size-3;
+}
+
+.is-loading:before,
+.search-result-container.is-loading:before {
+    background-color: var(--background-primary);
+    animation: var.$duration-slow-2 var.$motion-standard-productive
+    var.$duration-slow-1 infinite progress-bar;
+}
+
+.progress-bar {
+    background-color: var(--background-primary);
+    border: 1px solid var(--color-border-1);
+}
+
+.progress-bar-message {
+    font-size: var.$font-scale-0;
+    color: var(--text-muted);
+}

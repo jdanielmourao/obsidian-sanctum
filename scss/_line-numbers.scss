@@ -1,0 +1,17 @@
+@use 'var';
+
+.CodeMirror-linenumber {
+    padding: var.$size-0
+             var.$size-0
+             var.$size-0
+             var.$size-0;
+    min-width: var.$size-5;
+    text-align: right;
+    font-size: var.$font-scale-000;
+    top: var.$size-0;
+    color: var(--text-faint);
+}
+
+.cm-s-obsidian .CodeMirror-linenumber {
+    color: var(--text-faint);
+}

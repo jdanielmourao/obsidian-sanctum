@@ -1,0 +1,44 @@
+@use 'var';
+
+div.menu .menu-item:hover .menu-item-title {
+	color: var(--text-normal);
+}
+.menu-item.selected .menu-item-title {
+	color: var(--text-normal);
+}
+
+.menu-item:not(.is-disabled):not(.is-label),
+.menu-item:hover:not(.is-disabled):not(.is-label) {
+    background-color: var(--color-primary-10);
+    padding: var.$size-0
+             var.$size-5
+             var.$size-0
+             var.$size-5;
+}
+
+.theme-dark .menu-item:not(.is-disabled):not(.is-label) {
+    background-color: var(--color-primary-10);
+}
+
+.menu {
+    background-color: var(--background-primary);
+    border-radius: 4px;
+    border: 1px solid transparent;
+    box-shadow: var.$elevation-1;
+    position: fixed;
+    z-index: var(--layer-menu);
+    user-select: none;
+    max-height: calc(100% - 25px);
+    overflow: hidden;
+}
+
+.theme-dark .menu {
+    background-color: var(--color-primary-10);
+}
+
+.menu-separator {
+    height: var.$size-0;
+    margin: var.$size-2
+            var.$size-0;
+    border-bottom: 1px solid var(--color-border-2);
+}

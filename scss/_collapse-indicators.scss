@@ -1,0 +1,106 @@
+@use 'var';
+
+/* Makes it so when a header or list is collapsed, an ellipsis appears to tell it has content */
+/*--- "..." Preview Mode ---*/
+.markdown-preview-view div.is-collapsed h1::after,
+.markdown-preview-view div.is-collapsed h2::after,
+.markdown-preview-view div.is-collapsed h3::after,
+.markdown-preview-view div.is-collapsed h4::after,
+.markdown-preview-view div.is-collapsed h5::after,
+.markdown-preview-view div.is-collapsed h6::after,
+.markdown-preview-view li.is-collapsed::after {
+    content: "…";
+    font-family: var(--font-preview);
+    font-weight: var.$font-regular;
+    color: var(--text-normal);
+    padding-left: var.$size-2;
+}
+
+/*--- "..." Edit Mode ---*/
+.CodeMirror-foldmarker {
+    color: transparent;
+    margin-left: -1.5rem;
+}
+
+.CodeMirror-foldmarker::after {
+    content: "…";
+    display: inline-block;
+    font-size: inherit;
+    color: var(--text-muted);
+    margin-left: 0; /* if increased too much, it can bug the line height */
+    visibility: visible;
+}
+
+/*- Collapse Icon in Frontmatter */
+.frontmatter-collapse-indicator svg.right-triangle {
+    height: var.$scale-1;
+    width: var.$scale-1;
+    vertical-align: 0px;
+}
+
+.frontmatter-container .frontmatter-collapse-indicator {
+    padding: 0;
+}
+
+.CodeMirror-foldgutter-folded,
+.CodeMirror-foldgutter-open {
+    cursor: pointer;
+    margin-top: var.$size-0;
+    height: var.$scale-1;
+    width: var.$scale-1;
+}
+
+span[title="Fold line"],
+span[title="Unfold line"],
+.CodeMirror-foldgutter-folded:after,
+.CodeMirror-foldgutter-open:after  {
+    color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.theme-light span[title="Fold line"],
+.theme-light .CodeMirror-foldgutter-folded:after {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(20, 1.3%, 43.7%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
+}
+
+.theme-dark span[title="Fold line"],
+.theme-dark .CodeMirror-foldgutter-folded:after {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(34.3, 21.2%, 93.5%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
+}
+
+.theme-light .CodeMirror-foldgutter-open:after,
+.theme-light span[title="Unfold line"] {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,10 26,20 24.6,21.4 16,12.8 7.4,21.4 6,20 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
+}
+
+.theme-dark .CodeMirror-foldgutter-open:after,
+.theme-dark span[title="Unfold line"] {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(34.3, 21.2%, 93.5%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,10 26,20 24.6,21.4 16,12.8 7.4,21.4 6,20 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
+}
+
+span[title="Unfold line"],
+.CodeMirror-foldgutter-folded:after {
+  opacity:0.5;
+}
+
+span[title="Fold line"],
+.CodeMirror-foldgutter-open:after {
+  opacity:0.5;
+}
+
+span[title="Unfold line"]:hover,
+.CodeMirror-code > div:hover .CodeMirror-foldgutter-open:hover:after,
+.CodeMirror-code > div:hover .CodeMirror-foldgutter-folded:hover:after {
+  opacity:1;
+}
+
+/* corrects collapse chevron direction */
+.is-collapsed .collapse-icon svg {
+    transform: rotate(0deg);
+}
+
+.collapse-icon svg {
+    transition: transform 0ms var.$motion-standard-expressive;
+    transform: rotate(180deg);
+}

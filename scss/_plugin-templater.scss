@@ -1,0 +1,39 @@
+@use 'var';
+
+.cm-s-obsidian span.cm-templater-command.cm-templater-execution-tag {
+	color: var(--color-blue);
+}
+
+.theme-dark .cm-s-obsidian span.cm-templater-command.cm-comment,
+.theme-light .cm-s-obsidian span.cm-templater-command.cm-comment {
+	color: var.$color-purple-300;
+}
+
+.theme-dark .cm-s-obsidian span.cm-templater-command.cm-keyword,
+.theme-light .cm-s-obsidian span.cm-templater-command.cm-keyword {
+	color: var(--color-green);
+}
+
+.theme-dark .cm-s-obsidian span.cm-templater-command.cm-def,
+.theme-light .cm-s-obsidian span.cm-templater-command.cm-def {
+	color: var(--color-purple);
+}
+
+.theme-dark .cm-s-obsidian span.cm-templater-command.cm-string,
+.theme-light .cm-s-obsidian span.cm-templater-command.cm-string {
+	color: var(--color-pink);
+}
+
+.theme-dark .cm-s-obsidian span.cm-templater-command.cm-undefined,
+.theme-dark .cm-s-obsidian span.cm-templater-command.cm-variable,
+.theme-dark .cm-s-obsidian span.cm-templater-command.cm-property,
+.theme-light .cm-s-obsidian span.cm-templater-command.cm-undefined,
+.theme-light .cm-s-obsidian span.cm-templater-command.cm-variable,
+.theme-light .cm-s-obsidian span.cm-templater-command.cm-property {
+	color: var(--color-orange);
+}
+
+.theme-dark .cm-s-obsidian span.cm-templater-command.cm-templater-interpolation-tag,
+.theme-light .cm-s-obsidian span.cm-templater-command.cm-templater-interpolation-tag {
+    color: var.$color-green-300;
+}

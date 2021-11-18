@@ -1,0 +1,6 @@
+@use 'var';
+
+.CodeMirror-cursor {
+    border:none;
+    border-right:2px solid var(--color-accent);
+}

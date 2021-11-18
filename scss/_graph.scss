@@ -1,0 +1,85 @@
+@use 'var';
+
+/* color of nodes */
+.graph-view.color-fill {
+    color: var(--color-primary-70);
+}
+.graph-view.color-fill-focused {
+    color: var(--color-fill-focused);
+}
+.theme-dark .graph-view.color-fill-tag,
+.theme-light .graph-view.color-fill-tag {
+    color: var(--color-fill-tag);
+}
+.theme-light .graph-view.color-fill-attachment,
+.theme-dark .graph-view.color-fill-attachment {
+    color: var(--color-fill-attachment);
+}
+.graph-view.color-arrow {
+    color: var(--color-primary-70);
+    opacity: 1;
+}
+
+/* focused node border color */
+.graph-view.color-circle {
+    color: var(--color-primary-70);
+}
+
+/* focused node color */
+.graph-view.color-fill-highlight {
+    color: var(--color-green);
+}
+/* focused node connections */
+.graph-view.color-line-highlight {
+    color: var(--color-primary-70);
+}
+
+.theme-light .graph-view.color-line,
+.theme-dark .graph-view.color-line {
+    color: var(--color-primary-40);
+    opacity: .5;
+}
+
+.graph-view.color-text {
+    color: var(--text-muted);
+}
+
+.graph-view.color-fill-unresolved {
+    color: var(--background-modifier-error);
+    opacity: 1;
+}
+
+.theme-light .graph-controls {
+    background-color: var(--background-primary);
+    transition: var.$duration-fast-1 var.$motion-standard-expressive;
+}
+
+.theme-light .graph-controls {
+    background: hsla(34.3, 21.2%, 93.5%,.7);
+}
+
+.theme-dark .graph-controls:not(.tree-item-self) {
+    background-color: hsla(0, 0%, 7.8%, .7);
+}
+
+.graph-controls.is-close {
+    min-width: inherit;
+    background-color: var(--background-primary);
+    border: 1px solid var(--color-border-1);
+    padding: var.$size-3
+             var.$size-3
+             var.$size-3
+             var.$size-3;
+}
+
+.graph-controls.is-close:hover {
+box-shadow: var.$elevation-1;
+}
+
+.graph-controls:not(.graph-controls.is-close) {
+    box-shadow: var.$elevation-1;
+}
+
+.graph-controls {
+    border-color: var(--color-border-2);
+}

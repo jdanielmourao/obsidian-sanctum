@@ -1,0 +1,12 @@
+@use 'var';
+
+.cm-s-obsidian span.cm-comment,
+.markdown-preview-view .token.comment {
+    font-weight: var.$font-extra-light;
+    font-style: normal;
+}
+
+.cm-s-obsidian span.cm-comment,
+.markdown-preview-view .token.comment {
+    color: var(--color-primary-100);
+}

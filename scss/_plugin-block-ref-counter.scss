@@ -1,0 +1,74 @@
+@use 'var';
+
+button.block-ref-count {
+    float: right;
+    color: var(--background-primary);
+    size: .5rem;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 20px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    transition: var.$duration-moderate-2 var.$motion-standard-expressive;
+}
+
+button.block-ref-count:hover {
+    color: var(--background-primary);
+    border: 0px solid var(--text-accent);
+    border-radius: 15%;
+}
+
+button.block-ref-count:active {
+    transform: scale(.75);
+}
+
+.highlight-animation {
+    transition: background-color var.$duration-slow-1 var.$motion-entrance-expressive;
+}
+
+[data-block-ref-id] .search-result-file-matched-text {
+    background-color: transparent;
+    color: var(--text-muted);
+}
+
+[data-block-ref-id] .search-input-container, [data-block-ref-id] [aria-label="Match case"], [data-block-ref-id] [aria-label="Explain search term"] {
+    display: none;
+}
+
+[data-block-ref-id] .nav-buttons-container .search-input-clear-button {
+    background: transparent;
+    position: relative;
+    padding: 4px 8px 0 8px;
+    margin: 0 4px 8px 4px;
+    top: unset;
+    right: unset;
+    bottom: 5px;
+}
+
+.is-mobile .block-ref-count {
+    width: unset
+}
+
+button.table-close {
+        color: transparent;
+        background-color: transparent;
+        padding: 0;
+}
+
+button.table-close::before {
+    content: "";
+    padding: var.$size-0 var.$size-4 var.$size-0 var.$size-4;
+    margin-left: var.$size-3;
+    background-size: 24px 24px;
+    background-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:hsl(34.3, 21.2%25, 93.5%25);%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eclose%3C/title%3E%3Cpolygon class='cls-1' points='24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4'/%3E%3Crect class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+}
+
+.theme-light button.table-close::before {
+    background-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:hsl(30, 1.5%, 26.3%);%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eclose%3C/title%3E%3Cpolygon class='cls-1' points='24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4'/%3E%3Crect class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
+}

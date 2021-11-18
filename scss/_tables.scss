@@ -1,0 +1,58 @@
+@use 'var';
+
+.markdown-preview-view table {
+    border-collapse: collapse;
+    margin-top: var.$size-6;
+    margin-bottom: var.$size-6;
+    table-layout: auto;
+    width: max-content;
+    max-width: var(--limit-tables);
+}
+
+/* centered tables */
+.center-tables .markdown-preview-view table {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.markdown-preview-view th {
+    padding-left: var.$size-5;
+    text-align: left;
+    border: var.$size-0;
+    font-weight: var.$font-semi-bold;
+    background-color: var(--color-border-1);
+    color: var(--color-primary-k);
+}
+
+.markdown-preview-view td {
+    font-size: var(--font-scale-00  );
+    font-weight: var.$font-regular;
+    padding: var.$size-3
+             var.$size-5
+             var.$size-3
+             var.$size-5;
+    justify-content: left;
+    background-color: hsla(var(--hsl-color-primary-w),.8);
+    border: var.$size-0;
+    border-bottom: 1.5px solid var(--color-border-1);
+}
+
+/* ───────────────────────────── Dataview Tables ──────────────────────────── */
+table.table-view-table > thead > tr > th {
+    font-size: var.$font-scale-0;
+    background-color: var(--color-primary-20);
+    border-width: 0px;
+    border-bottom: 1px solid var(--color-border-2);
+}
+
+.alternate-dataview .dataview.table-view-table .table-view-tbody tr:nth-child(odd) {
+    background-color: var(--color-primary-w);
+}
+
+.alternate-dataview .dataview.table-view-table .table-view-tbody tr:nth-child(even) {
+    background-color: var(--color-primary-10);
+}
+
+.alternate-dataview .dataview.table-view-table .table-view-tbody td {
+    background-color: transparent;
+}

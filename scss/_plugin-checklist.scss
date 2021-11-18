@@ -1,0 +1,99 @@
+@use 'var';
+
+/* ──────────────── For the icon(s), check SVG Replacement ──────────────── */
+.is-mobile .checklist-plugin-main button {
+    width: 15%;
+}
+
+.is-mobile .checklist-plugin-main ul {
+    padding-inline-start: var.$size-0;
+}
+
+.checklist-plugin-main button {
+    margin: initial;
+}
+
+.checklist-plugin-main p {
+    margin: initial;
+}
+
+.checklist-plugin-main ul li.classic {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-primary);
+  border-radius: 0px;
+  cursor: pointer;
+  transition: background-color var.$duration-fast-2 var.$motion-standard-expressive;
+  padding: var.$size-0;
+  font-size: var.$font-scale-00;
+  line-height: var.$leading-0;
+  margin-bottom: var.$size-1;
+}
+
+.checklist-plugin-main li.classic .checkbox {
+  width: 16px;
+  height: var.$scale-2;
+  min-width: var.$scale-2;
+  min-height: var.$scale-2;
+  border-radius: 100%;
+  padding: var.$size-1;
+  margin-right: var.$size-3;
+  margin-left: var.$size-0;
+  position: relative;
+  border: 1.5px solid var(--color-primary-40);
+  border-radius: 4px;
+}
+
+.checklist-plugin-main li.classic .checkbox:hover {
+    filter: brightness(150%);
+}
+
+.checklist-plugin-main li.classic .toggle {
+  padding: var.$size-0;
+  padding-left: var.$size-3;
+}
+
+.checklist-plugin-main button:hover {
+  background-color: var(--background-primary);
+}
+
+.theme-light .checklist-plugin-main header .count {
+    background: var(--color-primary-20);
+    font-weight: var.$font-regular;
+}
+
+.checklist-plugin-main header .count {  /* Counter */
+  padding: var(--todoList-countPadding);
+  background: var(--color-primary-10);
+  border-radius: var.$size-7;
+  font-size: var.$font-scale-000;
+  font-weight: var.$font-light;
+}
+
+.checklist-plugin-main header.group-header.page {
+  margin: var(--todoList-pageMargin);
+  color: var(--text-normal);
+  transition: opacity var.$duration-moderate-1 var.$motion-standard-productive;
+  cursor: pointer;
+  font-size: var.$font-scale-0;
+  font-weight: var.$font-regular;
+}
+
+.checklist-plugin-main .header {
+  margin: var(--todoList-headerMargin);
+  display: flex;
+  gap: var(--todoList-headerGap);
+  align-items: center;
+}
+
+
+
+.checklist-plugin-main .collapse .down {
+    transform: rotate(180deg);
+    transition: 0s;
+}
+
+.checklist-plugin-main .collapse .left {
+    transform: rotate(0deg);
+    transition: 0s;
+}

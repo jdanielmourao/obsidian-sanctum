@@ -1,0 +1,111 @@
+@use 'var';
+
+/* ─────────────────────────────── Note Title ─────────────────────────────── */
+
+.view-header,
+.workspace-leaf.mod-active .view-header,
+.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
+    border: none;
+    background-color: var(--background-primary);
+    min-height: var.$size-7;
+    height: fit-content;
+}
+
+.workspace-leaf.mod-active .view-header-title-container,
+.view-header-title-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding-left: var.$size-3;
+    position: relative;
+    height: fit-content;
+    background-color: var(--background-primary);
+}
+
+.view-header-title-container:after,
+.workspace-leaf.mod-active .view-header-title-container:after,
+.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after {
+    display:none;
+}
+
+.view-header-icon {
+    padding: var.$size-3
+             var.$size-3
+             var.$size-0
+             var.$size-3;
+    color: var(--text-muted);
+    cursor: grab;
+    position: relative;
+    top: var.$size-0;
+}
+
+.view-header-icon:hover {
+    background-color: var(--color-hover);
+}
+
+.view-header-icon:active {
+    background-color: var(--color-primary-w);
+}
+
+/* set size of Header Title Icon */
+.view-header-icon svg{
+    height: var.$scale-2;
+    width: var.$scale-2;
+}
+
+/* Replace Header Title Icon svg */
+body:not(.no-sanctum-icons) div.view-header-icon > svg {
+    color: var(--text-normal);
+    background-color: currentColor;
+    -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Edraggable%3C/title%3E%3Crect x='10' y='6' width='4' height='4'/%3E%3Crect x='18' y='6' width='4' height='4'/%3E%3Crect x='10' y='14' width='4' height='4'/%3E%3Crect x='18' y='14' width='4' height='4'/%3E%3Crect x='10' y='22' width='4' height='4'/%3E%3Crect x='18' y='22' width='4' height='4'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Edraggable%3C/title%3E%3Crect x='10' y='6' width='4' height='4'/%3E%3Crect x='18' y='6' width='4' height='4'/%3E%3Crect x='10' y='14' width='4' height='4'/%3E%3Crect x='18' y='14' width='4' height='4'/%3E%3Crect x='10' y='22' width='4' height='4'/%3E%3Crect x='18' y='22' width='4' height='4'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+}
+
+.view-header-title,
+.workspace-leaf.mod-active .view-header-title {
+    white-space: pre;
+    overflow: auto;
+    font-size: var.$font-scale-00;
+    font-weight: var.$font-semi-bold;
+    line-height: var.$leading-3;
+    letter-spacing: var.$tracking-0;
+    padding: var.$size-3
+             var.$size-5
+             var.$size-0
+             var.$size-0;
+    color: var(--text-normal);
+    word-wrap: normal;
+}
+
+.view-header-title-container div.view-header-title::-webkit-scrollbar {
+    display: none;
+}
+
+.wrap-note-title .view-header-title,
+.wrap-note-title .workspace-leaf.mod-active .view-header-title {
+    white-space: pre-wrap;
+    text-overflow: unset;
+    hyphens: auto;
+}
+
+/* ────────────────────────────── Editor Width ────────────────────────────── */
+/* Editor size */
+.markdown-source-view.is-readable-line-width .CodeMirror {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.markdown-preview-view.is-readable-line-width div.markdown-preview-sizer {
+    width: var(--line-width);
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0;
+}
+
+/* gives some space at the end of the note, so there's no issues with popovers */
+.markdown-preview-view {
+    padding-bottom: 0vh;
+}

@@ -1,0 +1,50 @@
+@use 'var';
+
+/* Tags in Edit Mode */
+
+div > .CodeMirror-line span.cm-hashtag-end {
+    font-weight: var.$font-regular;
+    color: var(--color-accent);
+}
+
+/* Removes underline from generic tags in edit mode*/
+.cm-s-obsidian span.cm-hashtag {
+    text-decoration: none;
+    color: var(--color-accent);
+    font-weight: var.$font-semi-bold;
+}
+
+/* Tags in Preview */
+.tag:not(.token) {
+    background-color: var.$color-viridian-300;
+    color: #{var.$color-black};
+    font-size: var.$font-scale-000;
+    font-weight: var.$font-medium;
+    line-height: var.$leading-4;
+    display: inline-block;
+    padding: var.$size-0
+             var.$size-3
+             var.$size-0
+             var.$size-3;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: text-top;
+    margin-left: var.$size-1;
+    margin: var.$size-0 var.$size-0;
+    cursor: text;
+    border-radius: var.$size-8; 
+    transition: var.$duration-moderate-1 var.$motion-exit-productive;
+}
+
+.tag:not(.token):hover {
+    cursor: pointer;
+    filter: brightness(1) saturate(1.5);
+}
+
+/* Frontmatter tag*/
+.frontmatter-container .tag:hover {
+    color: var(--background-primary);
+    font-weight: var.$font-semi-bold;
+    background-color: var.$color-viridian-300;
+    border: 1px solid var.$color-viridian-300;
+}

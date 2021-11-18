@@ -1,0 +1,45 @@
+@use 'var';
+
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+    bottom: var.$size-0;
+    left: var.$size-0;
+    height: 1px;
+    width: 100%;
+    cursor: row-resize;
+    margin: var.$size-0;
+    background-color: var(--color-border-1);
+    transition: height var.$duration-moderate-1 var.$motion-entrance-productive;
+}
+
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:hover {
+    height: 3px;
+}
+
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:active {
+    background-color: var(--color-border-2);
+}
+
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle {
+    z-index: var(--layer-status-bar);
+    height: 100%;
+    width: 1px;
+    top: calc(-1 * var.$size-0);
+    bottom: 0;
+    background-color: var(--color-border-1);
+    transition: width var.$duration-moderate-1 var.$motion-entrance-productive;
+}
+
+
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:hover,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover {
+    width: 3px;
+}
+
+.theme-light .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:active,
+.theme-light .workspace-split.mod-right-split > .workspace-leaf-resize-handle:active,
+.theme-light .workspace-split.mod-left-split > .workspace-leaf-resize-handle:active {
+    background-color: var(--color-border-2);
+}
