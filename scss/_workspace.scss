@@ -233,7 +233,7 @@ body div.workspace-split.mod-left-split .nav-buttons-container {
              var.$size-5;
 }
 
-/* Adds hashtag before tag names in tag pane */
+// Adds hashtag before tag names in tag pane
 .tag-pane-tag-text:before {
     margin-left: 3px;
     content: "#";
@@ -291,8 +291,7 @@ body div.workspace-split.mod-left-split .nav-buttons-container {
 
 
 
-/* fixes weird curved top corners in divs */
-
+// fixes weird curved top corners in divs
 .workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
 .workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
     border-radius: var.$size-0;
@@ -372,15 +371,15 @@ body:not(.no-sanctum-icons)
 
         &.is-collapsed {
             border-left: 1.5px solid transparent;
-            // rotates icons when ribbons are collapsed */
-            & .workspace-ribbon-collapse-btn > svg {
+            // rotates icons when ribbons are collapsed
+            & .workspace-ribbon-collapse-btn > svg { // right collapse button
                 transform: rotate(.5turn);
             }
         }
     }
     &.mod-left.is-collapsed {
             border-right: 1.5px solid transparent;
-        & .workspace-ribbon-collapse-btn > svg {
+        & .workspace-ribbon-collapse-btn > svg { // left collapse button
             transform: rotate(.5turn);
         }
     }
@@ -425,44 +424,13 @@ body:not(.no-sanctum-icons)
 }
 
 /* ────────────────────────────── File Explorer ───────────────────────────── */
-/*-- File Explorer padding --*/
+// File Explorer padding
 .nav-files-container {
     padding: var.$size-5
              var.$size-0
              var.$size-0
              var.$size-5;
     background-color: var(--background-primary);
-}
-
-.nav-file-title,
-.nav-folder-title,
-.nav-vault-title,
-.nav-folder-title.has-folder-note {
-    height: var.$size-6;
-    padding: var.$size-0
-             var.$size-5
-             var.$size-0
-             var.$size-0;
-    border-radius: 0px;
-    
-}
-
-.is-mobile .nav-file-title,
-.is-mobile .nav-folder-title {
-    height: var.$size-7;
-    margin-top: var.$size-0;
-    margin-bottom: var.$size-0;
-}
-
-.is-mobile .nav-file-title-content,
-.is-mobile .nav-folder-title-content {
-    padding: var.$size-0
-             var.$size-2
-             var.$size-1
-             var.$size-2;
-    line-height: var.$size-7;
-    transform: translateY(-2px); /* centers vertically each title's content */
-    color: var(--text-normal);
 }
 
 .nav-folder-title-content,
@@ -472,6 +440,11 @@ body:not(.no-sanctum-icons)
     overflow: hidden;
     text-overflow: ellipsis;
     color: var(--text-normal);
+    padding: var.$size-1
+             var.$size-2
+             var.$size-1
+             var.$size-2;
+    width: 100%;
 }
 
 .nav-folder,
@@ -484,25 +457,24 @@ body:not(.no-sanctum-icons)
     margin-right: var.$size-0;
 }
 
-/* ──────────────────────────── Nav text styling ──────────────────────────── */
 .nav-file-title,
 .nav-folder-title,
 .nav-vault-title,
 .nav-folder-title.has-folder-note {
+    height: var.$size-6;
+    padding: var.$size-0
+             var.$size-5
+             var.$size-0
+             var.$size-0;
+    border-radius: 0px;
     width: unset;
     font-size: var(--font-scale-00);
     font-weight: var(--font-regular);
     color: var(--text-muted);
 }
 
-/* ─────────────────────────── Navigation File Tag ────────────────────────── */
-.nav-folder-title-content,
-.nav-file-title-content {
-    width: 100%;
-}
-
 .nav-file-title > .nav-file-tag {
-    order: 1;   /* makes it go after the file name */
+    order: 1; // makes it go after the file name
 }
 
 .nav-file-tag {
@@ -522,7 +494,6 @@ body:not(.no-sanctum-icons)
     background-color: var(--color-primary-20);
 }
 
-/*Text wrap*/
 .nav-file-title,
 .nav-folder-title {
     border-radius: 0px;
@@ -536,11 +507,13 @@ body:not(.no-sanctum-icons)
 
 .nav-file-title.is-active .nav-file-title-content {
 	color: var(--background-primary);
+
+    &:focus {
+        background-color: transparent;
+    }
 }
 
-.nav-file-title.is-active .nav-file-title-content:focus {
-    background-color: transparent;
-}
+
 
 .nav-file-title.is-active:hover .nav-file-title-content,
 .nav-file-title.is-active:hover .nav-file-title-content::before {
@@ -551,23 +524,22 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
     color: var(--color-primary-100);
 }
 
-/*Folder Push Left*/
+// Folder Push Left
 .nav-folder-title {
     padding-left: var.$size-0;
 }
 
-/*File selected*/
-
+// File selected
 .nav-file-title.is-active {
     background-color: var(--color-primary-100);
     color: var(--background-primary);
+    
+    & .nav-file-title-content::before {
+        color: var(--color-primary-w);
+    }
 }
 
-.nav-file-title.is-active .nav-file-title-content::before {
-    color: var(--color-primary-w);
-}
-
-/* Dragged File */
+//
 .nav-folder-title.is-being-dragged-over,
 .drag-ghost,
 .workspace-drop-overlay:before {
@@ -575,6 +547,10 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
     border-radius: var.$size-4;
 	background-color: var(--color-hover);
     color: var(--text-normal);
+}
+
+.nav-folder-children {
+    padding-left: 16px;
 }
 
 /* ───────────────────────── Nav Collapse Indicators ──────────────────────── */
@@ -598,22 +574,20 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 }
 
 /* ─────────────────────────────── Animations ─────────────────────────────── */
-.nav-file-title.is-active,
-.workspace-leaf-content[data-type="file-explorer"]:not(:hover)
-  .nav-file-title.is-active {
-  transition: var.$duration-moderate-1 var.$motion-entrance-productive;
-}
 
-.nav-file-title.is-active:hover,
-.view-content:hover .nav-file-title.is-active,
-.workspace-split.mod-left-split .view-content:hover .nav-file-title.is-active,
-.workspace-split.mod-right-split .view-content:hover .nav-file-title.is-active,
-.workspace-leaf-content[data-type="file-explorer"]:hover .nav-file-title.is-active {
-  transition: background-color var.$duration-moderate-1 var.$motion-entrance-productive;
-}
+.nav-file-title.is-active {
+    &,
+    .workspace-leaf-content[data-type="file-explorer"]:not(:hover) & {
+      transition: var.$duration-moderate-1 var.$motion-entrance-productive;
+    }
 
-.nav-folder-children {
-    padding-left: 16px;
+    &:hover,
+    .view-content:hover &,
+    .workspace-split.mod-left-split .view-content:hover &,
+    .workspace-split.mod-right-split .view-content:hover &,
+    .workspace-leaf-content[data-type="file-explorer"]:hover & {
+      transition: background-color var.$duration-moderate-1 var.$motion-entrance-productive;
+    }
 }
 
 /* ────────────────────────────── Folder Icons ────────────────────────────── */
@@ -635,22 +609,19 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
     background-color: currentColor; // folders colour
     margin-right: var.$size-3; // spacing between folder icons and titles
     background-repeat: no-repeat;
+    vertical-align: -2px;
+    height: var.$scale-2;
+    width: var.$scale-2;
 }
 
 // Closed Folder Icon
 .nav-folder.is-collapsed .nav-folder-title .nav-folder-title-content::before {
     -webkit-mask: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Efolder%3C/title%3E%3Cpath d='M11.17,6l3.42,3.41.58.59H28V26H4V6h7.17m0-2H4A2,2,0,0,0,2,6V26a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2H16L12.59,4.59A2,2,0,0,0,11.17,4Z' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E") no-repeat;
-    vertical-align: -2px;
-    height: var.$scale-2;
-    width: var.$scale-2;
 }
 
 // Opened Folder Icon
 .nav-folder .nav-folder-title .nav-folder-title-content::before {
     -webkit-mask: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M28,8H20.8284L17.4143,4.5859A2,2,0,0,0,16,4H4A2,2,0,0,0,2,6V26a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10A2,2,0,0,0,28,8ZM8,26V14h8v6.17l-2.59-2.58L12,19l5,5,5-5-1.41-1.41L18,20.17V14a2.0025,2.0025,0,0,0-2-2H8a2.0025,2.0025,0,0,0-2,2V26H4V6H16l4,4h8v2H22v2h6V26Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E") no-repeat;
-    vertical-align: -2px;
-    height: var.$scale-2;
-    width: var.$scale-2;
 }
 
 // No Folder Icons Option
@@ -779,7 +750,7 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 }
 
 // Show full titles
-body.show-full-titles {
+.show-full-titles {
     & .nav-file-title, .nav-folder-title {
         height: unset;
     }
@@ -815,6 +786,7 @@ body.show-full-titles {
 
 
 /* ───────────────────────────────── KANBAN ───────────────────────────────── */
+// To be reviewed
 
 .kanban .task-list-item-checkbox {
     margin-left: 24px;
@@ -1004,17 +976,19 @@ ol.kanban .task-list-item .list-collapse-indicator {
              var.$size-0;
     user-select: none;
     z-index: var(--layer-status-bar);
+
+    &-item {
+        padding: var.$size-0 
+                 var.$size-3
+                 var.$size-0
+                 var.$size-3;
+        color: var(--text-muted);
+        font-size: var.$font-scale-000;
+    }
 }
 
-.status-bar-item {
-    padding: var.$size-0 
-             var.$size-3
-             var.$size-0
-             var.$size-3;
-    color: var(--text-muted);
-    font-size: var.$font-scale-000;
-}
 
+// sync status icons
 .sync-status-icon.mod-working svg {
     color: var(--text-muted);
     height: var.$scale-2;
