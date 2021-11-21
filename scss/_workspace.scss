@@ -168,9 +168,9 @@ body div.workspace-split.mod-left-split .nav-buttons-container {
 }
 
 
-/* ─────────────────────────────── Vault Title ────────────────────────────── */
+// Vault Title
 .nav-folder.mod-root > .nav-folder-title {
-    display: none; /*-- Makes it disappear --*/
+    display: none; // Makes it disappear
     color: var(--text-muted);
     font-size: var.$font-scale-0;
     text-transform: uppercase;
@@ -289,8 +289,6 @@ body div.workspace-split.mod-left-split .nav-buttons-container {
     display: none;
 }
 
-
-
 // fixes weird curved top corners in divs
 .workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
 .workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
@@ -313,7 +311,7 @@ body div.workspace-split.mod-left-split .nav-buttons-container {
     position: relative;
 }
 
-/* size of every tab header icon */
+// size of every tab header icon
 body:not(.no-sanctum-icons)
   .workspace-tab-header
   .workspace-tab-header-inner-icon svg {
@@ -771,7 +769,6 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 }
 
 // Relationship Lines in File Explorer
-
 .fx-rl .nav-folder-children .nav-folder-children {
     margin-left: 14px;
     padding-left: 0;
@@ -782,7 +779,6 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
         border-left-color: var(--color-primary-70);
     }
 }
-// check upwards for nav height difference
 
 
 /* ───────────────────────────────── KANBAN ───────────────────────────────── */
