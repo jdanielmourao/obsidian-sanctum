@@ -1,25 +1,21 @@
 @use 'var';
 
-/* ─────────────────────────────────── UI ─────────────────────────────────── */
-body, body input, body button {
-    font-optical-sizing: auto;
-    font-family: var(--font-ui);
-    font-feature-settings: "zero", "ss05" on;
-    font-weight:  var.$font-regular;
-    font-size: var.$font-scale-00;
-    line-height: var.$leading-2;
-    letter-spacing: var.$tracking-1;
-}
-
+/* ───────────────────────────────── UI Font ──────────────────────────────── */
 body {
     font-feature-settings: 'zero', 'ss05', 'ss02' on;
+
+    &, body input, body button {
+        font-optical-sizing: auto;
+        font-family: var(--font-ui);
+        font-feature-settings: "zero", "ss05" on;
+        font-weight:  var.$font-regular;
+        font-size: var.$font-scale-00;
+        line-height: var.$leading-2;
+        letter-spacing: var.$tracking-1;
+    }
 }
 
-body button {
-    font-family: var(--font-ui);
-}
-
-/* ────────────────────────────────── Note ────────────────────────────────── */
+/* ───────────────────────────── Note Typography ──────────────────────────── */
 .markdown-preview-view {
     font-optical-sizing: auto;
     font-family: var(--font-preview);
@@ -41,7 +37,7 @@ body button {
 
 .CodeMirror-wrap .CodeMirror-line,
 .CodeMirror-wrap .CodeMirror-line-like {
-    word-wrap: break-word; /* same as overflow-wrap:break-word */
+    word-wrap: break-word; // same as overflow-wrap:break-word 
     white-space: pre-wrap;
     word-break: break-word;
     hyphens: auto;
@@ -67,7 +63,13 @@ body button {
     font-family: var(--font-heading-editor);
 }
 
-.heading-clr .markdown-preview-view h1,
+.heading-clr .markdown-preview-view {
+    h1 {
+        color: var(--color-heading-1);
+    }
+}
+
+
 .heading-clr .cm-s-obsidian .cm-header-1 {
     color: var(--color-heading-1);
 }
@@ -78,7 +80,7 @@ body button {
     padding: 4px;
 }
 
-.heading-clr .markdown-preview-view h2,
+,
 .heading-clr .cm-s-obsidian .cm-header-2 {
     color: var(--color-heading-2);
 }

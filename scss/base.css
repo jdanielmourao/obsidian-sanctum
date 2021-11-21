@@ -898,10 +898,8 @@ body div.workspace-split.mod-left-split .nav-buttons-container {
   background-color: var(--color-hover);
 }
 
-/* ─────────────────────────────── Vault Title ────────────────────────────── */
 .nav-folder.mod-root > .nav-folder-title {
   display: none;
-  /*-- Makes it disappear --*/
   color: var(--text-muted);
   font-size: 1rem;
   text-transform: uppercase;
@@ -1017,7 +1015,6 @@ body div.workspace-split.mod-left-split .nav-buttons-container {
   position: relative;
 }
 
-/* size of every tab header icon */
 body:not(.no-sanctum-icons) .workspace-tab-header .workspace-tab-header-inner-icon svg {
   height: 16px;
   width: 16px;
@@ -1603,7 +1600,6 @@ ol.kanban .task-list-item .list-collapse-indicator {
   background-color: transparent;
 }
 
-/* ─────────────────────────────── Note Title ─────────────────────────────── */
 .view-header,
 .workspace-leaf.mod-active .view-header,
 .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
@@ -1631,34 +1627,8 @@ ol.kanban .task-list-item .list-collapse-indicator {
   display: none;
 }
 
-.view-header-icon {
-  padding: 8px 8px 0px 8px;
-  color: var(--text-muted);
-  cursor: grab;
-  position: relative;
-  top: 0px;
-}
-
-.view-header-icon:hover {
-  background-color: var(--color-hover);
-}
-
-.view-header-icon:active {
-  background-color: var(--color-primary-w);
-}
-
-/* set size of Header Title Icon */
-.view-header-icon svg {
-  height: 16px;
-  width: 16px;
-}
-
-/* Replace Header Title Icon svg */
-body:not(.no-sanctum-icons) div.view-header-icon > svg {
-  color: var(--text-normal);
-  background-color: currentColor;
-  -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Edraggable%3C/title%3E%3Crect x='10' y='6' width='4' height='4'/%3E%3Crect x='18' y='6' width='4' height='4'/%3E%3Crect x='10' y='14' width='4' height='4'/%3E%3Crect x='18' y='14' width='4' height='4'/%3E%3Crect x='10' y='22' width='4' height='4'/%3E%3Crect x='18' y='22' width='4' height='4'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Edraggable%3C/title%3E%3Crect x='10' y='6' width='4' height='4'/%3E%3Crect x='18' y='6' width='4' height='4'/%3E%3Crect x='10' y='14' width='4' height='4'/%3E%3Crect x='18' y='14' width='4' height='4'/%3E%3Crect x='10' y='22' width='4' height='4'/%3E%3Crect x='18' y='22' width='4' height='4'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+.view-header-title-container div.view-header-title::-webkit-scrollbar {
+  display: none;
 }
 
 .view-header-title,
@@ -1674,8 +1644,33 @@ body:not(.no-sanctum-icons) div.view-header-icon > svg {
   word-wrap: normal;
 }
 
-.view-header-title-container div.view-header-title::-webkit-scrollbar {
-  display: none;
+div.view-header-icon {
+  padding: 8px 8px 0px 8px;
+  color: var(--text-muted);
+  cursor: grab;
+  position: relative;
+  top: 0px;
+}
+div.view-header-icon:hover {
+  background-color: var(--color-hover);
+}
+div.view-header-icon:active {
+  background-color: var(--color-primary-w);
+}
+div.view-header-icon svg {
+  height: 16px;
+  width: 16px;
+}
+body:not(.no-sanctum-icons) div.view-header-icon > svg {
+  color: var(--text-normal);
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Edraggable%3C/title%3E%3Crect x='10' y='6' width='4' height='4'/%3E%3Crect x='18' y='6' width='4' height='4'/%3E%3Crect x='10' y='14' width='4' height='4'/%3E%3Crect x='18' y='14' width='4' height='4'/%3E%3Crect x='10' y='22' width='4' height='4'/%3E%3Crect x='18' y='22' width='4' height='4'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Edraggable%3C/title%3E%3Crect x='10' y='6' width='4' height='4'/%3E%3Crect x='18' y='6' width='4' height='4'/%3E%3Crect x='10' y='14' width='4' height='4'/%3E%3Crect x='18' y='14' width='4' height='4'/%3E%3Crect x='10' y='22' width='4' height='4'/%3E%3Crect x='18' y='22' width='4' height='4'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+}
+
+.workspace-leaf:not(.mod-active) .workspace-leaf-content[data-type=markdown] {
+  opacity: 0.7;
+  transition: cubic-bezier(0.4, 0.14, 0.3, 1) 150ms;
 }
 
 .wrap-note-title .view-header-title,
@@ -1686,7 +1681,6 @@ body:not(.no-sanctum-icons) div.view-header-icon > svg {
 }
 
 /* ────────────────────────────── Editor Width ────────────────────────────── */
-/* Editor size */
 .markdown-source-view.is-readable-line-width .CodeMirror {
   max-width: 700px;
   margin-left: auto;
@@ -1701,13 +1695,10 @@ body:not(.no-sanctum-icons) div.view-header-icon > svg {
   margin-bottom: 0;
 }
 
-/* gives some space at the end of the note, so there's no issues with popovers */
-.markdown-preview-view {
-  padding-bottom: 0vh;
+body {
+  font-feature-settings: "zero", "ss05", "ss02" on;
 }
-
-/* ─────────────────────────────────── UI ─────────────────────────────────── */
-body, body input, body button {
+body, body body input, body body button {
   font-optical-sizing: auto;
   font-family: var(--font-ui);
   font-feature-settings: "zero", "ss05" on;
@@ -1715,14 +1706,6 @@ body, body input, body button {
   font-size: 0.875rem;
   line-height: 1.25em;
   letter-spacing: 0.16px;
-}
-
-body {
-  font-feature-settings: "zero", "ss05", "ss02" on;
-}
-
-body button {
-  font-family: var(--font-ui);
 }
 
 /* ────────────────────────────────── Note ────────────────────────────────── */
