@@ -34,11 +34,11 @@ div > .CodeMirror-line span.cm-hashtag-end {
     cursor: text;
     border-radius: var.$size-8; 
     transition: var.$duration-moderate-1 var.$motion-exit-productive;
-}
 
-.tag:not(.token):hover {
-    cursor: pointer;
-    filter: brightness(1) saturate(1.5);
+    &:hover {
+        cursor: pointer;
+        filter: brightness(1) saturate(1.5);
+    }
 }
 
 /* Frontmatter tag*/

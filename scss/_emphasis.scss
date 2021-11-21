@@ -16,16 +16,15 @@ em {  /* Italic */
 }
 
 /* ──────────────────────── Highlighting & Selection ──────────────────────── */
-/* highlight active line */
+// highlight active line
 .CodeMirror-activeline .CodeMirror-linebackground {
 	background-color: var(--color-primary-20);
 }
-/* highlight active line number + gutter */
+// highlight active line number + gutter
 .CodeMirror-activeline-gutter {
     background-color: var(--color-primary-20);
 }
-
-/* ─────────────────── Accent color active line highlight ─────────────────── */
+// accent color active line highlight
 .accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
     background-color: hsla(var(--color-l-accent-h),var(--color-l-accent-s),var(--color-l-accent-l),.35);
 }
@@ -33,33 +32,24 @@ em {  /* Italic */
     background-color: hsla(var(--color-l-accent-h),var(--color-l-accent-s),var(--color-l-accent-l),.35);
 }
 
-/* ───────────────────────────── text selection ───────────────────────────── */
-.CodeMirror-focused .CodeMirror-selected {
-    background-color: hsla(var(--color-d-accent-h),var(--color-d-accent-s),var(--color-d-accent-l), .7);
-}
-
-::selection {
-    background-color: hsla(var(--color-d-accent-h),var(--color-d-accent-s),var(--color-d-accent-l), .7);
-}
-
-/* Blockquote color of selection 
-blockquote p::selection {
-}*/
-
-/* change the variable "--text-selection" for regular text selection colour */
+// ───────────────────────────── text selection ───────────────────────────── */
+// for text selection, check the --text-selection custom property in _var
 
 /* ──────────────────────── Multi-Color Highlighting ──────────────────────── */
 
 /* ───────────────── Yellow Highlight (Regular highlight 1) ───────────────── */
+.cm-s-obsidian span.cm-formatting-highlight,
+ .cm-s-obsidian span.cm-highlight {
+    background-color: unset;
+}
 .markdown-preview-view mark {
     overflow: hidden;
     background-color: transparent;
     padding: 0 2px;
     vertical-align: middle;
 }
-
 .markdown-preview-view mark,
-.cm-s-obsidian span.cm-highlight {
+ span.cm-highlight {
     font-weight: normal;
     color: var(--text-normal);
     background-color: transparent;
@@ -69,16 +59,16 @@ blockquote p::selection {
     background-size: 100% 3px;
     transition: background var.$duration-slow-1 var.$motion-entrance-productive;
 }
-
 .markdown-preview-view mark:hover,
-.cm-s-obsidian span.cm-highlight:hover {
+ span.cm-highlight:hover {
     background-size: 100% 100%;
     color: var(--color-highlight-1-h);
 }
 
 /* ──────────────────────────── Cyan Highlight 2 ──────────────────────────── */
+
 .markdown-preview-view em > mark,
-span.cm-em.cm-highlight {
+ span.cm-em.cm-highlight {
     font-style: normal;
     font-weight: normal;
     background-image: linear-gradient(120deg,var(--color-highlight-2),var(--color-highlight-2));
@@ -87,16 +77,15 @@ span.cm-em.cm-highlight {
     background-size: 100% 3px;
     transition: background var.$duration-slow-1 var.$motion-entrance-productive;
 }
-
 .markdown-preview-view em > mark:hover,
-span.cm-em.cm-highlight:hover {
+ span.cm-em.cm-highlight:hover {
     background-size: 100% 100%;
     color: var(--color-highlight-2-h);
 }
 
 /* ─────────────────────────── Magenta Highlight 3 ────────────────────────── */
 .markdown-preview-view strong > mark,
-span.cm-strong.cm-highlight {
+ span.cm-strong.cm-highlight {
     font-weight: normal;
     background-image: linear-gradient(120deg,var(--color-highlight-3),var(--color-highlight-3));
     background-position: 0 100%;
@@ -104,37 +93,10 @@ span.cm-strong.cm-highlight {
     background-size: 100% 3px;
     transition: background var.$duration-slow-1 var.$motion-entrance-productive;
 }
-
 .markdown-preview-view strong > mark:hover,
-span.cm-strong.cm-highlight:hover {
+ span.cm-strong.cm-highlight:hover {
     background-size: 100% 100%;
     color: var(--color-highlight-3-h);
-}
-
-/* ─────────────────────────── Selected highlights ────────────────────────── */
-
-.markdown-preview-view mark::selection,
-.cm-s-obsidian span.cm-highlight::selection,
-span.cm-strong.cm-highlight::selection,
-.markdown-preview-view strong > mark::selection,
-span.cm-em.cm-highlight::selection,
-.markdown-preview-view em > mark::selection {
-    color: #{var.$color-grey-10};
-}
-
-.markdown-preview-view mark::selection,
-.cm-s-obsidian span.cm-highlight::selection {
-    background-color: var(--color-highlight-1);
-}
-
-span.cm-em.cm-highlight::selection,
-.markdown-preview-view em > mark::selection {
-    background-color: var(--color-highlight-2);
-}
-
-span.cm-strong.cm-highlight::selection,
-.markdown-preview-view strong > mark::selection {
-    background-color: var(--color-highlight-3);
 }
 
 /* ────────────────────────────── Strikethrough ───────────────────────────── */

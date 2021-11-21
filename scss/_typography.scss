@@ -63,79 +63,104 @@ body {
     font-family: var(--font-heading-editor);
 }
 
-.heading-clr .markdown-preview-view {
-    h1 {
-        color: var(--color-heading-1);
+
+.markdown-preview-view {
+    .heading-clr & {
+        & h1 {
+            color: var(--color-heading-1);
+        }
+        & h2 {
+            color: var(--color-heading-2);
+        }
+        & h3 {
+            color: var(--color-heading-3);
+        }
+        & h4 {
+            color: var(--color-heading-4);
+        }
+        & h5 {
+            color: var(--color-heading-5);
+        }
+        & h6 {
+            color: var(--color-heading-6);
+        }
+    }
+    .heading-clr-bg & {
+        & h1 {
+            background-color: var(--color-heading-1-bg);
+            padding: 4px;
+        }
+        & h2 {
+            background-color: var(--color-heading-2-bg);
+            padding: 4px;
+        }
+        & h3 {
+            background-color: var(--color-heading-3-bg);
+            padding: 4px;
+        }
+        & h4 {
+            background-color: var(--color-heading-4-bg);
+            padding: 4px;
+        }
+        & h5 {
+            background-color: var(--color-heading-5-bg);
+            padding: 4px;
+        }
+        & h6 {
+            background-color: var(--color-heading-6-bg);
+            padding: 4px;
+        }
     }
 }
 
-
-.heading-clr .cm-s-obsidian .cm-header-1 {
-    color: var(--color-heading-1);
+.cm-s-obsidian {
+    .heading-clr & {
+        & .cm-header-1 {
+            color: var(--color-heading-1);
+        }
+        & .cm-header-2 {
+        color: var(--color-heading-2);
+        }
+        & .cm-header-3 {
+            color: var(--color-heading-3);
+        }
+        & .cm-header-4 {
+            color: var(--color-heading-4);
+        }
+        & .cm-header-5 {
+            color: var(--color-heading-5);
+        }
+        & .cm-header-6 {
+            color: var(--color-heading-6);
+        }
+    }
+    .heading-clr-bg & {
+        .cm-header-1 {
+            background-color: var(--color-heading-1-bg);
+            padding: 4px;
+        }
+        .cm-header-2 {
+            background-color: var(--color-heading-2-bg);
+            padding: 4px;
+        }
+        .cm-header-3 {
+            background-color: var(--color-heading-3-bg);
+            padding: 4px;
+        }
+        .cm-header-4 {
+            background-color: var(--color-heading-4-bg);
+            padding: 4px;
+        }
+        .cm-header-5 {
+            background-color: var(--color-heading-5-bg);
+            padding: 4px;
+        }
+        .cm-header-6 {
+            background-color: var(--color-heading-6-bg);
+            padding: 4px;
+        }
+    }
 }
-
-.heading-clr-bg .markdown-preview-view h1,
-.heading-clr-bg .cm-s-obsidian .cm-header-1 {
-    background-color: var(--color-heading-1-bg);
-    padding: 4px;
-}
-
-,
-.heading-clr .cm-s-obsidian .cm-header-2 {
-    color: var(--color-heading-2);
-}
-
-.heading-clr-bg .markdown-preview-view h2,
-.heading-clr-bg .cm-s-obsidian .cm-header-2 {
-    background-color: var(--color-heading-2-bg);
-    padding: 4px;
-}
-
-.heading-clr .markdown-preview-view h3,
-.heading-clr .cm-s-obsidian .cm-header-3 {
-    color: var(--color-heading-3);
-}
-
-.heading-clr-bg .markdown-preview-view h3,
-.heading-clr-bg .cm-s-obsidian .cm-header-3 {
-    background-color: var(--color-heading-3-bg);
-    padding: 4px;
-}
-
-.heading-clr .markdown-preview-view h4,
-.heading-clr .cm-s-obsidian .cm-header-4 {
-    color: var(--color-heading-4);
-}
-
-.heading-clr-bg .markdown-preview-view h4,
-.heading-clr-bg .cm-s-obsidian .cm-header-4 {
-    background-color: var(--color-heading-4-bg);
-    padding: 4px;
-}
-
-.heading-clr .markdown-preview-view h5,
-.heading-clr .cm-s-obsidian .cm-header-5 {
-    color: var(--color-heading-5);
-}
-
-.heading-clr-bg .markdown-preview-view h5,
-.heading-clr-bg .cm-s-obsidian .cm-header-5 {
-    background-color: var(--color-heading-5-bg);
-    padding: 4px;
-}
-
-.heading-clr .markdown-preview-view h6,
-.heading-clr .cm-s-obsidian .cm-header-6 {
-    color: var(--color-heading-6);
-}
-
-.heading-clr-bg .markdown-preview-view h6,
-.heading-clr-bg .cm-s-obsidian .cm-header-6 {
-    background-color: var(--color-heading-6-bg);
-    padding: 4px;
-}
-
-
 
 @media (max-width:320px){
     .markdown-preview-view h1,
@@ -457,66 +482,62 @@ body {
     }
 }
 
-.community-plugin-info .community-plugin-readme table,
-.community-plugin-info .community-plugin-readme li,
-.community-plugin-info .community-plugin-readme p {
-    font-size: var.$font-scale-0;
-    color: var(--text-normal);
-}
-
-.community-plugin-info .community-plugin-readme h1 {
-    font-size: var.$font-scale-6;
-}
-
-.community-plugin-info .community-plugin-readme h2 {
-    font-size: var.$font-scale-5;
-}
-
-.community-plugin-info .community-plugin-readme h3 {
-    font-size: var.$font-scale-4;
-}
-
-.community-plugin-info .community-plugin-readme h4 {
-    font-size: var.$font-scale-3;
-}
-
-.community-plugin-info .community-plugin-readme h5 {
-    font-size: var.$font-scale-2;
-}
-
-.community-plugin-info .community-plugin-readme h6 {
-    font-size: var.$font-scale-1;
+.community-plugin-info .community-plugin-readme { // Plugin README headings, tables, lists and paragraphs
+    & table,
+    & li,
+    & p {
+        font-size: var.$font-scale-0;
+        color: var(--text-normal);
+    }
+    & h1 {
+        font-size: var.$font-scale-6;
+    }
+    & h2 {
+        font-size: var.$font-scale-5;
+    }
+    & h3 {
+        font-size: var.$font-scale-4;
+    }
+    & h4 {
+        font-size: var.$font-scale-3;
+    }
+    & h5 {
+        font-size: var.$font-scale-2;
+    }
+    & h6 {
+        font-size: var.$font-scale-1;
+    }
 }
 
 /* ────────────────────────── Contextual Typography ───────────────────────── */
-.markdown-preview-view div[data-tag-name="h1"] + div > h1,
-.markdown-preview-view div[data-tag-name="h1"] + div > h2,
-.markdown-preview-view div[data-tag-name="h2"] + div > h2,
-.markdown-preview-view div[data-tag-name="h2"] + div > h3,
-.markdown-preview-view div[data-tag-name="h3"] + div > h3,
-.markdown-preview-view div[data-tag-name="h3"] + div > h4,
-.markdown-preview-view div[data-tag-name="h4"] + div > h4,
-.markdown-preview-view div[data-tag-name="h4"] + div > h5,
-.markdown-preview-view div[data-tag-name="h5"] + div > h5,
-.markdown-preview-view div[data-tag-name="h5"] + div > h6,
-.markdown-preview-view div[data-tag-name="h6"] + div > h6 {
-    margin-top: -.5em;
-}
-
-.markdown-preview-view div[data-tag-name="h1"] + div > hr,
-.markdown-preview-view div[data-tag-name="h2"] + div > hr,
-.markdown-preview-view div[data-tag-name="h3"] + div > hr,
-.markdown-preview-view div[data-tag-name="h4"] + div > hr,
-.markdown-preview-view div[data-tag-name="h5"] + div > hr,
-.markdown-preview-view div[data-tag-name="h6"] + div > hr {
-    margin-top: -.875em;
-}
-
-.is-mobile .markdown-preview-view div[data-tag-name="h1"] + div > hr,
-.is-mobile .markdown-preview-view div[data-tag-name="h2"] + div > hr,
-.is-mobile .markdown-preview-view div[data-tag-name="h3"] + div > hr,
-.is-mobile .markdown-preview-view div[data-tag-name="h4"] + div > hr,
-.is-mobile .markdown-preview-view div[data-tag-name="h5"] + div > hr,
-.is-mobile .markdown-preview-view div[data-tag-name="h6"] + div > hr {
-    margin-top: -.5em;
+.markdown-preview-view {
+    & div[data-tag-name="h1"] + div > h1,
+    & div[data-tag-name="h1"] + div > h2,
+    & div[data-tag-name="h2"] + div > h2,
+    & div[data-tag-name="h2"] + div > h3,
+    & div[data-tag-name="h3"] + div > h3,
+    & div[data-tag-name="h3"] + div > h4,
+    & div[data-tag-name="h4"] + div > h4,
+    & div[data-tag-name="h4"] + div > h5,
+    & div[data-tag-name="h5"] + div > h5,
+    & div[data-tag-name="h5"] + div > h6,
+    & div[data-tag-name="h6"] + div > h6 {
+        margin-top: -.5em;
+    }
+    & div[data-tag-name="h1"] + div > hr,
+    & div[data-tag-name="h2"] + div > hr,
+    & div[data-tag-name="h3"] + div > hr,
+    & div[data-tag-name="h4"] + div > hr,
+    & div[data-tag-name="h5"] + div > hr,
+    & div[data-tag-name="h6"] + div > hr {
+        margin-top: -.875em;
+    }
+    .is-mobile & div[data-tag-name="h1"] + div > hr,
+    .is-mobile & div[data-tag-name="h2"] + div > hr,
+    .is-mobile & div[data-tag-name="h3"] + div > hr,
+    .is-mobile & div[data-tag-name="h4"] + div > hr,
+    .is-mobile & div[data-tag-name="h5"] + div > hr,
+    .is-mobile & div[data-tag-name="h6"] + div > hr {
+        margin-top: -.5em;
+    }
 }

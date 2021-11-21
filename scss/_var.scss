@@ -295,9 +295,9 @@ $duration-slow-2:     700ms;
     --text-error:        var(--color-red);
     --text-error-hover:  var(--color-red);
 
-    --text-highlight-bg:        #{$color-teal-300};
+    --text-highlight-bg:        var(--color-highlight-1);
     --text-highlight-bg-active: #{$color-teal-300};
-    --text-selection:           #{$color-viridian-300};
+    --text-selection:           hsla(var(--color-l-accent-h), var(--color-l-accent-s), var(--color-l-accent-l), 0.5);
     
     --interactive-normal:       var(--color-primary-20);
     --interactive-hover:        var(--color-primary-20);
@@ -376,9 +376,9 @@ $duration-slow-2:     700ms;
     --text-error:        var(--color-red);
     --text-error-hover:  var(--color-red);
 
-    --text-highlight-bg:        #{$color-teal-500};
+    --text-highlight-bg:        var(--color-highlight-1);
     --text-highlight-bg-active: #{$color-teal-500};
-    --text-selection:           #{$color-viridian-700};
+    --text-selection:           hsla(var(--color-d-accent-h), var(--color-d-accent-s), var(--color-d-accent-l), 0.5);
     
     --interactive-normal:       var(--color-primary-10);
     --interactive-hover:        var(--color-primary-10);
