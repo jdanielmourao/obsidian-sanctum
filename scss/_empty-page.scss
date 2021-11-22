@@ -1,24 +1,23 @@
 @use 'var';
 
-.empty-state-title {
-    margin-top: var.$size-6;
-    font-weight: var.$font-bold;
-    font-size: var.$font-scale-5;
-    position: relative;
-}
-
-.empty-state-action-list {
-    font-size: var.$font-scale-1;
-    line-height: var.$leading-4;
-    color: var(--text-muted);
-    margin-top: var.$size-5;
-}
-
-.empty-state-action {
-    cursor: pointer;
-    line-height: var.$leading-7;
-}
-
-.empty-state-action:hover {
-    color: var(--color-accent);
+.empty-state {
+	&-title {
+		margin-top: var.$size-6;
+		font-weight: var.$font-bold;
+		font-size: var.$font-scale-5;
+		position: relative;
+	}
+	&-action-list {
+		font-size: var.$font-scale-1;
+		line-height: var.$leading-4;
+		color: var(--text-muted);
+		margin-top: var.$size-5;
+	}
+	&-action {
+		cursor: pointer;
+		line-height: var.$leading-7;
+	}
+	&-action:hover {
+		color: var(--color-accent);
+	}
 }

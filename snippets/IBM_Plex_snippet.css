@@ -3,6 +3,9 @@
     margin-left: -0.5rem; /* Adapts fold indicator spacing to IBM Plex */
 }
 
+.markdown-preview-view .list-collapse-indicator {
+		margin-left: -3rem;
+}
 
 /* ────────────────────────────── IBM Plex Mono ───────────────────────────── */
 

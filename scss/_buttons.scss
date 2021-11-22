@@ -1,91 +1,89 @@
 @use 'var';
 
+@mixin button-l {
+	border-radius: 0px;
+	padding: var.$size-3
+			 var.$size-8
+			 var.$size-3
+			 var.$size-5;
+	font-size: var.$font-scale-00;
+	font-weight: var.$font-regular;
+}
+
+@mixin button-m {
+	border-radius: 0px;
+	padding: var.$size-2
+			 var.$size-5
+			 var.$size-2
+			 var.$size-5;
+	font-size: var.$font-scale-00;
+	font-weight: var.$font-regular;
+}
+
+@mixin button-s { // for sort icons, etc
+	border-radius: 3px;
+	padding: var.$size-2
+			 var.$size-2
+			 var.$size-1
+			 var.$size-2;
+	font-size: var.$font-scale-00;
+	font-weight: var.$font-regular;
+}
+
 button.mod-warning {
-    background-color: var(--background-modifier-error);
-    color: var(--background-primary);
-    border-radius: 0px;
-    padding: var.$size-3
-             var.$size-8
-             var.$size-3
-             var.$size-5;
-    font-size: var.$font-scale-00;
-    font-weight: var.$font-regular;
+	background-color: var(--background-modifier-error);
+	color: var(--background-primary);
+	border-radius: 0px;
+	@include button-l;
 }
 
 button.mod-cta {
-    color: var(--background-primary);
-    border-radius: 0px;
-    padding: var.$size-3
-             var.$size-8
-             var.$size-3
-             var.$size-5;
-    font-size: var.$font-scale-00;
-    font-weight: var.$font-regular;
-    background-color: var(--color-accent);
+	color: var(--background-primary);
+	border-radius: 0px;
+	@include button-l;
+	background-color: var(--color-accent);
+
+	&:hover {
+		background-color: var(--color-hover);
+		color: var(--text-normal);
+	}
+	&:active {
+		background-color: var(--color-primary-50);
+		color: var(--text-normal);
+	}
 }
 
-button.mod-cta:hover {
-    background-color: var(--color-hover);
-    color: var(--text-normal);
-}
 
-button.mod-cta:active {
-    background-color: var(--color-primary-50);
-    color: var(--text-normal);
-}
-body .modal.mod-publish .publish-changes-info button.publish-changes-add-linked-btn,
-.modal.mod-community-theme .theme-list .community-theme button.mod-cta {
-    color: var(--text-normal);
-    border-radius: 0px;
-    padding: var.$size-2
-             var.$size-5
-             var.$size-2
-             var.$size-5;
-    font-size: var.$font-scale-00;
-    font-weight: var.$font-regular;
-    background-color: var(--color-primary-20);
-    outline: 1px solid transparent;
-}
-
-.modal.mod-community-theme .theme-list .community-theme:hover button.mod-cta {
-    background-color: var(--color-primary-30);
-}
-
-.modal.mod-community-theme .theme-list .community-theme:hover button.mod-cta:hover {
-    background-color: var(--color-primary-40);
-}
-
-.modal.mod-community-theme .theme-list .community-theme:hover button.mod-cta:active {
-    background-color: var(--color-primary-50);
+.modal.mod-community-theme .theme-list .community-theme {
+	body .modal.mod-publish .publish-changes-info button.publish-changes-add-linked-btn,
+	& button.mod-cta {
+		color: var(--text-normal);
+		@include button-m;
+		background-color: var(--color-primary-20);
+		outline: 1px solid transparent;
+	}
+	&:hover button.mod-cta {
+		background-color: var(--color-primary-30);
+	}
+	&:hover button.mod-cta:hover {
+		background-color: var(--color-primary-40);
+	}
+	&:hover button.mod-cta:active {
+		background-color: var(--color-primary-50);
+	}
 }
 
 /* Sort, Selected icons*/
 .modal.mod-community-plugin .setting-item-control button.clickable-icon,
 .modal.mod-community-theme .setting-item-control button.clickable-icon {
-    color: var(--text-normal);
-    border-radius: 3px;
-    padding: var.$size-2
-             var.$size-2
-             var.$size-1
-             var.$size-2;
-    font-size: var.$font-scale-00;
-    font-weight: var.$font-regular;
-    background-color: var(--color-primary-20);
-}
-
-.modal.mod-publish button:not(.mod-cta):not(.mod-warning) {
-    background-color: var(--color-hover);
+	color: var(--text-normal);
+	@include button-s;
+	background-color: var(--color-primary-20);
 }
 
 /* Publish Page buttons */
 .modal.mod-publish button:not(.mod-cta):not(.mod-warning) {
-    color: #{var.$color-white};
-    border-radius: 0px;
-    padding: var.$size-3
-             var.$size-8
-             var.$size-3
-             var.$size-5;
-    font-size: var.$font-scale-00;
-    font-weight: var.$font-regular;
-    background-color: var(--color-hover);
+	color: #{var.$color-white};
+	@include button-l;
+	background-color: var(--color-hover);
 }

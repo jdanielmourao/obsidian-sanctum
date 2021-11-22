@@ -2384,7 +2384,7 @@ ol > li::marker {
 }
 
 .markdown-preview-view .list-collapse-indicator {
-  margin-left: -3rem;
+  margin-left: -3.5rem;
   color: var(--text-faint);
 }
 .markdown-preview-view ol li:nth-child(n+10) ol ol li:nth-child(n+10) .list-collapse-indicator, .markdown-preview-view ol li:nth-child(n+10) .list-collapse-indicator {
@@ -2509,6 +2509,55 @@ body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul:before {
   margin-top: 0px;
   font-size: 20px;
   color: var(--text-muted);
+}
+
+.list-bullet {
+  color: transparent;
+}
+
+.list-bullet::before {
+  color: var(--text-normal);
+  margin-right: -12px;
+}
+
+.HyperMD-list-line-1 .list-bullet::before {
+  content: "–  ";
+}
+
+.HyperMD-list-line-2 .list-bullet::before {
+  content: "▪  ";
+}
+
+.HyperMD-list-line-3 .list-bullet::before {
+  content: "–  ";
+}
+
+.HyperMD-list-line-4 .list-bullet::before {
+  content: "▪  ";
+}
+
+.HyperMD-list-line-5 .list-bullet::before {
+  content: "–  ";
+}
+
+.HyperMD-list-line-6 .list-bullet::before {
+  content: "▪  ";
+}
+
+.HyperMD-list-line-7 .list-bullet::before {
+  content: "–  ";
+}
+
+.HyperMD-list-line-8 .list-bullet::before {
+  content: "▪  ";
+}
+
+.HyperMD-list-line-8 .list-bullet::before {
+  content: "–  ";
+}
+
+.HyperMD-list-line-8 .list-bullet::before {
+  content: "▪  ";
 }
 
 /* Disable loose lists for tasks */
@@ -3803,7 +3852,6 @@ code[class*=language-pure-text],
   border: 0px;
   border: 1px solid var(--color-primary-20);
   border-bottom-width: 1.5;
-  width: 100%;
 }
 
 .markdown-preview-view th:first-child,
@@ -4052,54 +4100,7 @@ div.markdown-preview-sizer.markdown-preview-section {
     border-image: initial;
   }
 }
-code.language-yaml.is-loaded {
-  font-weight: 400;
-  background-color: transparent;
-  text-shadow: none;
-  font-size: 0.875rem;
-  padding-top: 2px;
-  padding-bottom: 2px;
-}
-code.language-yaml.is-loaded .token.boolean, code.language-yaml.is-loaded .token.number {
-  color: var(--text-muted);
-}
-code.language-yaml.is-loaded .token {
-  font-weight: 400;
-}
-code.language-yaml.is-loaded .token.selector, code.language-yaml.is-loaded .token.attr-name, code.language-yaml.is-loaded .token.string, code.language-yaml.is-loaded .token.char, code.language-yaml.is-loaded .token.builtin, code.language-yaml.is-loaded .token.inserted {
-  color: var(--color-orange);
-}
-
-/* YAML-Header in Edit Mode */
-.cm-s-obsidian span.cm-hmd-frontmatter {
-  color: var(--text-faint);
-  opacity: 1;
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  line-height: 1em;
-}
-
-/* YAML-Header in Preview Mode */
-.markdown-preview-view pre.frontmatter.language-yaml {
-  background: var(--background-primary);
-  font-weight: 400;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  text-shadow: none;
-  display: visible;
-  /* Makes it invisible in Preview Mode */
-}
-
-/* colour of yaml-header*/
-.markdown-preview-view span.token.key.atrule {
-  color: var(--text-accent);
-}
-
 /* ───────────────────────────── METADATA BLOCK ───────────────────────────── */
-.hide-frontmatter .frontmatter-container {
-  display: none;
-}
-
 .markdown-preview-view .frontmatter-container {
   font-size: 0.75rem;
   font-weight: 500;
@@ -4111,18 +4112,12 @@ code.language-yaml.is-loaded .token.selector, code.language-yaml.is-loaded .toke
   border-radius: 0px;
   padding: 8px 16px 4px 0px;
 }
-
 .markdown-preview-view .frontmatter-container .frontmatter-container-header {
   font-size: 0.75rem;
   border-bottom: 0px;
   color: var(--text-faint);
 }
-
-.markdown-preview-view .frontmatter-container-header:hover {
-  color: var(--text-normal);
-}
-
-.frontmatter-container .frontmatter-container-header {
+.markdown-preview-view .frontmatter-container-header {
   user-select: none;
   -webkit-user-select: none;
   cursor: pointer;
@@ -4135,8 +4130,10 @@ code.language-yaml.is-loaded .token.selector, code.language-yaml.is-loaded .toke
   border-bottom: 1px solid var(--text-faint);
   margin: 0px;
 }
-
-.frontmatter-container .frontmatter-alias {
+.markdown-preview-view .frontmatter-container-header:hover {
+  color: var(--text-normal);
+}
+.markdown-preview-view .frontmatter-container .frontmatter-alias {
   text-decoration: none;
   border-radius: 30px;
   background-color: var(--background-primary-alt);
@@ -4151,11 +4148,37 @@ code.language-yaml.is-loaded .token.selector, code.language-yaml.is-loaded .toke
   white-space: nowrap;
 }
 
-code.language-yaml.is-loaded {
-  height: 0px;
-  padding: 2px 0 0 0;
+body .markdown-preview-view pre.frontmatter.language-yaml {
+  background: var(--background-primary);
+  font-weight: 400;
+  text-shadow: none;
+  border-radius: 0;
+  border-bottom: 1.5px solid var(--color-border-2);
+  padding: 4px 0 0 0;
+  margin-bottom: 0;
+  margin-bottom: 16px;
 }
 
+code.language-yaml.is-loaded {
+  /*	display: grid;
+  	grid-auto-rows: minmax(min-content, max-content);
+  	grid-template-columns: 1fr 1fr;
+  	place-items: center start;
+  	gap: 0px 8px;*/
+  font-family: var(--font-preview);
+  font-weight: 400;
+  background-color: transparent;
+  text-shadow: none;
+  font-size: 0.875rem;
+  line-height: 1.8em;
+  padding: 4px 0 4px 0px;
+  height: 4px;
+  width: 0;
+}
+code.language-yaml.is-loaded:hover {
+  height: 100%;
+  width: 100%;
+}
 code.language-yaml.is-loaded:not(:hover)::before {
   content: "";
   background-repeat: no-repeat;
@@ -4169,176 +4192,111 @@ code.language-yaml.is-loaded:not(:hover)::before {
   top: -20px;
   padding: 16px;
 }
-
 .theme-dark code.language-yaml.is-loaded:not(:hover)::before {
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(20, 1.4%, 59.4%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
-
-code.language-yaml.is-loaded:hover::before {
-  display: none;
-  /* might be unnecessary because the main element goes on top of it */
-}
-
-.frontmatter-container:not(:hover)::after {
-  content: "";
-  visibility: visible;
-  position: absolute;
-  background-color: red;
-  height: 1.5px;
-  width: 42rem;
-  top: 16px;
-}
-
-body .markdown-preview-view pre.frontmatter.language-yaml {
-  background: var(--background-primary);
+code.language-yaml.is-loaded .token {
   font-weight: 400;
-  text-shadow: none;
-  border-radius: 0;
-  border-bottom: 1.5px solid var(--color-border-2);
-  padding: 4px 0 0 0;
-  margin-bottom: 0;
-  margin-bottom: 16px;
 }
-
-code.language-yaml.is-loaded {
-  /*    display: grid;
-      grid-auto-rows: minmax(min-content, max-content);
-      grid-template-columns: 1fr 1fr;
-      place-items: center start;
-      gap: 0px 8px;*/
-  font-family: var(--font-preview);
-  line-height: 1.8em;
-  font-size: 0.875rem;
-  padding: 4px 0 4px 0px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: 240ms cubic-bezier(0.2, 0, 0.38, 0.9);
+code.language-yaml.is-loaded .token.selector, code.language-yaml.is-loaded .token.attr-name, code.language-yaml.is-loaded .token.string, code.language-yaml.is-loaded .token.char, code.language-yaml.is-loaded .token.builtin, code.language-yaml.is-loaded .token.inserted {
+  color: var(--color-orange);
 }
-
-code.language-yaml.is-loaded:hover {
-  height: 100%;
+code.language-yaml.is-loaded .token.boolean, code.language-yaml.is-loaded .token.number {
+  color: #45a39f;
 }
-
-@media (max-width: 768px) {
-  code.language-yaml.is-loaded {
-    grid-template-columns: auto auto;
-  }
+code.language-yaml.is-loaded .token.punctuation {
+  display: visible;
 }
 code.language-yaml.is-loaded .token:not(.token.key.atrule) {
   color: var(--text-normal);
   padding-left: 4px;
 }
-
-code.language-yaml.is-loaded .token.boolean, code.language-yaml.is-loaded .token.number {
-  color: #45a39f;
-}
-
-.markdown-preview-view span.token.key.atrule {
-  color: var(--text-normal);
+code.language-yaml.is-loaded .token.key.atrule {
+  color: var(--color-accent);
   font-weight: 600;
 }
 
-code.language-yaml.is-loaded .token.punctuation {
-  display: none;
+.cm-s-obsidian span.cm-hmd-frontmatter {
+  color: var(--text-faint);
+  opacity: 1;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  line-height: 1em;
 }
 
 .frontmatter-container {
   display: none;
 }
 
-body .markdown-preview-view div.el-pre pre.frontmatter {
-  background-color: var(--background-primary);
-}
-
-/* color of nodes */
 .graph-view.color-fill {
   color: var(--color-primary-70);
 }
-
 .graph-view.color-fill-focused {
   color: var(--color-fill-focused);
 }
-
-.theme-dark .graph-view.color-fill-tag,
-.theme-light .graph-view.color-fill-tag {
+.theme-dark .graph-view.color-fill-tag, .theme-light .graph-view.color-fill-tag {
   color: var(--color-fill-tag);
 }
-
-.theme-light .graph-view.color-fill-attachment,
-.theme-dark .graph-view.color-fill-attachment {
+.theme-light .graph-view.color-fill-attachment, .theme-dark .graph-view.color-fill-attachment {
   color: var(--color-fill-attachment);
 }
-
-.graph-view.color-arrow {
-  color: var(--color-primary-70);
-  opacity: 1;
-}
-
-/* focused node border color */
-.graph-view.color-circle {
-  color: var(--color-primary-70);
-}
-
-/* focused node color */
 .graph-view.color-fill-highlight {
   color: var(--color-green);
 }
-
-/* focused node connections */
-.graph-view.color-line-highlight {
-  color: var(--color-primary-70);
-}
-
-.theme-light .graph-view.color-line,
-.theme-dark .graph-view.color-line {
-  color: var(--color-primary-40);
-  opacity: 0.5;
-}
-
-.graph-view.color-text {
-  color: var(--text-muted);
-}
-
 .graph-view.color-fill-unresolved {
   color: var(--background-modifier-error);
   opacity: 1;
 }
+.graph-view.color-circle {
+  color: var(--color-primary-70);
+}
+.theme-light .graph-view.color-line, .theme-dark .graph-view.color-line {
+  color: var(--color-primary-40);
+  opacity: 0.5;
+}
+.graph-view.color-line-highlight {
+  color: var(--color-primary-70);
+}
+.graph-view.color-arrow {
+  color: var(--color-primary-70);
+  opacity: 1;
+}
+.graph-view.color-text {
+  color: var(--text-muted);
+}
 
+.graph-controls {
+  border-color: var(--color-border-1);
+}
 .theme-light .graph-controls {
   background-color: var(--background-primary);
   transition: 70ms cubic-bezier(0.4, 0.14, 0.3, 1);
 }
-
 .theme-light .graph-controls {
-  background: rgba(242, 239, 235, 0.7);
+  background: rgba(242, 239, 235, 0.9);
 }
-
 .theme-dark .graph-controls:not(.tree-item-self) {
-  background-color: rgba(20, 20, 20, 0.7);
+  background-color: rgba(20, 20, 20, 0.9);
 }
-
 .graph-controls.is-close {
   min-width: inherit;
   background-color: var(--background-primary);
-  border: 1px solid var(--color-border-1);
   padding: 8px 8px 8px 8px;
 }
-
-.graph-controls.is-close:hover {
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
-}
-
 .graph-controls:not(.graph-controls.is-close) {
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
 }
-
-.graph-controls {
-  border-color: var(--color-border-2);
+.graph-controls::-webkit-scrollbar-thumb {
+  border-width: 3px;
+}
+.graph-controls::-webkit-scrollbar-thumb:hover {
+  border-width: 2px;
 }
 
 button.mod-warning {
   background-color: var(--background-modifier-error);
   color: var(--background-primary);
+  border-radius: 0px;
   border-radius: 0px;
   padding: 8px 40px 8px 16px;
   font-size: 0.875rem;
@@ -4348,24 +4306,22 @@ button.mod-warning {
 button.mod-cta {
   color: var(--background-primary);
   border-radius: 0px;
+  border-radius: 0px;
   padding: 8px 40px 8px 16px;
   font-size: 0.875rem;
   font-weight: 400;
   background-color: var(--color-accent);
 }
-
 button.mod-cta:hover {
   background-color: var(--color-hover);
   color: var(--text-normal);
 }
-
 button.mod-cta:active {
   background-color: var(--color-primary-50);
   color: var(--text-normal);
 }
 
-body .modal.mod-publish .publish-changes-info button.publish-changes-add-linked-btn,
-.modal.mod-community-theme .theme-list .community-theme button.mod-cta {
+.modal.mod-community-theme .theme-list .community-theme body .modal.mod-publish .publish-changes-info button.publish-changes-add-linked-btn, .modal.mod-community-theme .theme-list .community-theme button.mod-cta {
   color: var(--text-normal);
   border-radius: 0px;
   padding: 4px 16px 4px 16px;
@@ -4374,15 +4330,12 @@ body .modal.mod-publish .publish-changes-info button.publish-changes-add-linked-
   background-color: var(--color-primary-20);
   outline: 1px solid transparent;
 }
-
 .modal.mod-community-theme .theme-list .community-theme:hover button.mod-cta {
   background-color: var(--color-primary-30);
 }
-
 .modal.mod-community-theme .theme-list .community-theme:hover button.mod-cta:hover {
   background-color: var(--color-primary-40);
 }
-
 .modal.mod-community-theme .theme-list .community-theme:hover button.mod-cta:active {
   background-color: var(--color-primary-50);
 }
@@ -4398,10 +4351,6 @@ body .modal.mod-publish .publish-changes-info button.publish-changes-add-linked-
   background-color: var(--color-primary-20);
 }
 
-.modal.mod-publish button:not(.mod-cta):not(.mod-warning) {
-  background-color: var(--color-hover);
-}
-
 /* Publish Page buttons */
 .modal.mod-publish button:not(.mod-cta):not(.mod-warning) {
   color: #fcfbfa;
@@ -4412,8 +4361,6 @@ body .modal.mod-publish .publish-changes-info button.publish-changes-add-linked-
   background-color: var(--color-hover);
 }
 
-/* Makes it so when a header or list is collapsed, an ellipsis appears to tell it has content */
-/*--- "..." Preview Mode ---*/
 .markdown-preview-view div.is-collapsed h1::after,
 .markdown-preview-view div.is-collapsed h2::after,
 .markdown-preview-view div.is-collapsed h3::after,
@@ -4428,7 +4375,6 @@ body .modal.mod-publish .publish-changes-info button.publish-changes-add-linked-
   padding-left: 4px;
 }
 
-/*--- "..." Edit Mode ---*/
 .CodeMirror-foldmarker {
   color: transparent;
   margin-left: -1.5rem;
@@ -4440,11 +4386,9 @@ body .modal.mod-publish .publish-changes-info button.publish-changes-add-linked-
   font-size: inherit;
   color: var(--text-muted);
   margin-left: 0;
-  /* if increased too much, it can bug the line height */
   visibility: visible;
 }
 
-/*- Collapse Icon in Frontmatter */
 .frontmatter-collapse-indicator svg.right-triangle {
   height: 8px;
   width: 8px;
@@ -4476,7 +4420,6 @@ span[title="Unfold line"],
 .theme-light .CodeMirror-foldgutter-folded:after {
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(20, 1.3%, 43.7%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
-
 .theme-dark span[title="Fold line"],
 .theme-dark .CodeMirror-foldgutter-folded:after {
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(34.3, 21.2%, 93.5%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
@@ -4486,7 +4429,6 @@ span[title="Unfold line"],
 .theme-light span[title="Unfold line"] {
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,10 26,20 24.6,21.4 16,12.8 7.4,21.4 6,20 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
-
 .theme-dark .CodeMirror-foldgutter-open:after,
 .theme-dark span[title="Unfold line"] {
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(34.3, 21.2%, 93.5%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,10 26,20 24.6,21.4 16,12.8 7.4,21.4 6,20 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
@@ -4508,14 +4450,12 @@ span[title="Unfold line"]:hover,
   opacity: 1;
 }
 
-/* corrects collapse chevron direction */
-.is-collapsed .collapse-icon svg {
-  transform: rotate(0deg);
-}
-
 .collapse-icon svg {
   transition: transform 0ms cubic-bezier(0.4, 0.14, 0.3, 1);
   transform: rotate(180deg);
+}
+.is-collapsed .collapse-icon svg {
+  transform: rotate(0deg);
 }
 
 .CodeMirror-cursor {
@@ -4543,12 +4483,10 @@ select.dropdown {
   transition: 110ms cubic-bezier(0, 0, 0.38, 0.9);
   cursor: pointer;
 }
-
 .theme-dark select.dropdown {
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(34.3, 21.2%, 93.5%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
   background-color: var(--color-primary-10);
 }
-
 select.dropdown:hover {
   background-color: var(--color-hover);
 }
@@ -4564,19 +4502,16 @@ select.dropdown:hover {
   font-size: 2rem;
   position: relative;
 }
-
 .empty-state-action-list {
   font-size: 1.125rem;
   line-height: 1.5em;
   color: var(--text-muted);
   margin-top: 16px;
 }
-
 .empty-state-action {
   cursor: pointer;
   line-height: 1.875em;
 }
-
 .empty-state-action:hover {
   color: var(--color-accent);
 }
@@ -4585,7 +4520,6 @@ select.dropdown:hover {
   right: 12px;
   top: 12px;
 }
-
 .modal-close-button:before {
   color: transparent;
   background-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:hsl(34.3, 21.2%25, 93.5%25);%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eclose%3C/title%3E%3Cpolygon class='cls-1' points='24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4'/%3E%3Crect class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
@@ -4593,7 +4527,6 @@ select.dropdown:hover {
   background-size: 24px 24px;
   background-position: center center;
 }
-
 .theme-light .modal-close-button:before {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23000000;%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eclose%3C/title%3E%3Cpolygon class='cls-1' points='24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4'/%3E%3Crect class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
 }
@@ -4614,23 +4547,18 @@ textarea.sync-history-content {
 .sync-history-list .setting-item-control div.search-input-container {
   margin: 16px 16px 16px 16px;
 }
-
 .sync-history-list .search-input-container .search-input-clear-button {
   margin-right: -6px;
   background-color: transparent;
 }
-
 .sync-history-list-item {
   border-left: 1.5px solid transparent;
   padding: 8px 16px 8px 16px;
 }
-
-.sync-history-list-item.is-active,
-.sync-history-list-item:hover {
+.sync-history-list-item.is-active, .sync-history-list-item:hover {
   background-color: var(--background-secondary);
   border-left: 1.5px solid var(--color-accent);
 }
-
 .sync-history-list-item:hover {
   background-color: var(--color-hover);
 }

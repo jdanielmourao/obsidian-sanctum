@@ -1,16 +1,108 @@
 @use 'var';
 
+/* ───────────────────────────── METADATA BLOCK ───────────────────────────── */
+.markdown-preview-view .frontmatter-container {
+	font-size: .75rem;
+	font-weight: var.$font-medium;
+	color: var(--text-muted);
+	background-color: transparent;
+	border: var.$size-0;
+	border-bottom: 1px solid var(--color-border-2);
+	border-style: solid;
+	border-radius: 0px;
+	padding: var.$size-3
+			 var.$size-5
+			 var.$size-2
+			 var.$size-0;
+
+	& .frontmatter-container-header{
+		font-size: .75rem;
+		border-bottom: var.$size-0;
+		color: var(--text-faint);
+	}
+	&-header {
+		user-select: none;
+		-webkit-user-select: none;
+		cursor: pointer;
+		font-size: var.$font-scale-000;
+		text-transform: uppercase;
+		font-weight: 500;
+		display: block;
+		content: 'Metadata';
+		padding-bottom: var.$size-2;
+		border-bottom: 1px solid var(--text-faint);
+		margin: var.$size-0;
+		&:hover{
+			color: var(--text-normal);
+		}
+	}
+	& .frontmatter-alias {
+		text-decoration: none;
+		border-radius: 30px;
+		background-color: var(--background-primary-alt);
+		font-size: var.$font-scale-000;
+		font-weight: var.$font-medium;
+		line-height: var.$leading-4;
+		color: var(--text-muted);
+		margin-left: var.$size-0;
+		margin-right: var.$size-1;
+		padding: var.$size-0
+				 var.$size-3
+				 var.$size-0
+				 var.$size-3;
+		border: 1px solid transparent;
+		white-space: nowrap;
+	}
+}
+
+// YAML
+body .markdown-preview-view pre.frontmatter.language-yaml { // big metadata and yaml container
+	background: var(--background-primary);
+	font-weight: var.$font-regular;
+	text-shadow: none;
+	border-radius: 0;
+	border-bottom: 1.5px solid var(--color-border-2);
+	padding: 4px 0 0 0;
+	margin-bottom: 0;
+	margin-bottom: 16px;
+}
+
 code.language-yaml.is-loaded {
+/*	display: grid;
+	grid-auto-rows: minmax(min-content, max-content);
+	grid-template-columns: 1fr 1fr;
+	place-items: center start;
+	gap: 0px 8px;*/
+	font-family: var(--font-preview);
 	font-weight: var.$font-regular;
 	background-color: transparent;
 	text-shadow: none;
 	font-size: var.$font-scale-00;
-	padding-top: 2px;
-	padding-bottom: 2px;
+	line-height: 1.8em;
+	padding: 4px 0 4px 0px; 
+	// didn't add a transition because it makes the hover extremely buggy
+	height: 4px; // settings to make it "disappear"
+	width: 0;
 
-	& .token.boolean,
-	& .token.number {
-		color: var(--text-muted);
+	&:hover {
+		height: 100%; // settings to make it appear
+		width: 100%;
+	}
+	&:not(:hover)::before { // arrow, when it isn't hovered
+		content: "";
+		background-repeat: no-repeat;
+		background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(20, 1.2%, 52.4%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
+		background-size: var.$scale-2 var.$scale-2;
+		background-position: 50% 50%;
+		height: 16px;
+		width: 16px;
+		position: absolute;
+		left: calc(50% - 20px);
+		top: -20px;
+		padding: 16px;
+	}
+	.theme-dark &:not(:hover)::before {
+		background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(20, 1.4%, 59.4%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
 	}
 	& .token {
 		font-weight: var.$font-regular;
@@ -23,188 +115,32 @@ code.language-yaml.is-loaded {
 	& .token.inserted {
 		color: var(--color-orange);
 	}
+	& .token.boolean,
+	& .token.number {
+		color: var.$color-blue;
+	}
+	& .token.punctuation {
+		display: visible; // can use this to remove colons
+	}
+	& .token:not(.token.key.atrule) {
+		color: var(--text-normal);
+		padding-left: 4px;
+	}
+	.token.key.atrule {
+		color: var(--color-accent); // this adds a bit more contrast compared to text-normal
+		font-weight: var.$font-semi-bold;
+	}
 }
 
-/* YAML-Header in Edit Mode */
+// Metadata Container in Edit Mode
 .cm-s-obsidian span.cm-hmd-frontmatter {
 	color: var(--text-faint);
 	opacity: 1;
-    font-family: var(--font-mono);
-    font-size: var.$font-scale-0;
-    line-height: var.$leading-0;
+	font-family: var(--font-mono);
+	font-size: var.$font-scale-0;
+	line-height: var.$leading-0;
 }
 
-/* YAML-Header in Preview Mode */
-.markdown-preview-view pre.frontmatter.language-yaml {
-	background: var(--background-primary);
-    font-weight: var.$font-regular;
-	padding-top: 0.75rem;
-	padding-bottom: 0.75rem;
-	text-shadow: none;
-    display: visible; /* Makes it invisible in Preview Mode */
-}
-
-/* colour of yaml-header*/
-.markdown-preview-view span.token.key.atrule {
-	color: var(--text-accent);
-} 
-
-/* ───────────────────────────── METADATA BLOCK ───────────────────────────── */
-.hide-frontmatter .frontmatter-container {
-    display:none;
-}
-
-.markdown-preview-view .frontmatter-container {
-	font-size: .75rem;
-    font-weight: var.$font-medium;
-	color: var(--text-muted);
-    background-color: transparent;
-    border: var.$size-0;
-    border-bottom: 1px solid var(--color-border-2);
-    border-style: solid;
-    border-radius: 0px;
-    padding: var.$size-3
-             var.$size-5
-             var.$size-2
-             var.$size-0;
-}
-
-.markdown-preview-view .frontmatter-container .frontmatter-container-header{
-	font-size: .75rem;
-    border-bottom: var.$size-0;
-    color: var(--text-faint);
-}
-.markdown-preview-view .frontmatter-container-header:hover{
-	color: var(--text-normal);
-}
-
-.frontmatter-container .frontmatter-container-header {
-    user-select: none;
-    -webkit-user-select: none;
-    cursor: pointer;
-    font-size: var.$font-scale-000;
-    text-transform: uppercase;
-    font-weight: 500;
-    display: block;
-    content: 'Metadata';
-    padding-bottom: var.$size-2;
-    border-bottom: 1px solid var(--text-faint);
-    margin: var.$size-0;
-}
-
-.frontmatter-container .frontmatter-alias {
-    text-decoration: none;
-    border-radius: 30px;
-	background-color: var(--background-primary-alt);
-    font-size: var.$font-scale-000;
-    font-weight: var.$font-medium;
-    line-height: var.$leading-4;
-	color: var(--text-muted);
-	margin-left: var.$size-0;
-	margin-right: var.$size-1;
-    padding: var.$size-0
-             var.$size-3
-             var.$size-0
-             var.$size-3;
-    border: 1px solid transparent;
-    white-space: nowrap;
-}
-
-code.language-yaml.is-loaded {
-    height: 0px;
-    padding: 2px 0 0 0;
-}
-
-code.language-yaml.is-loaded:not(:hover)::before {
-    content: "";
-    background-repeat: no-repeat;
-    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(20, 1.2%, 52.4%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
-    background-size: var.$scale-2 var.$scale-2;
-    background-position: 50% 50%;
-    height: 16px;
-    width: 16px;
-    position: absolute;
-    left: calc(50% - 20px);
-    top: -20px;
-    padding: 16px;
-}
-.theme-dark code.language-yaml.is-loaded:not(:hover)::before {
-    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(20, 1.4%, 59.4%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
-}
-
-code.language-yaml.is-loaded:hover::before {
-    display: none;  /* might be unnecessary because the main element goes on top of it */
-}
-
-
-.frontmatter-container:not(:hover)::after {
-    content: "";
-    visibility: visible;
-    position: absolute;
-    background-color: red;
-    height: 1.5px;
-    width: 42rem;
-    top: 16px;
-}
-
-body .markdown-preview-view pre.frontmatter.language-yaml {
-    background: var(--background-primary);
-    font-weight: var.$font-regular;
-    text-shadow: none;
-    border-radius: 0;
-    border-bottom: 1.5px solid var(--color-border-2);
-    padding: 4px 0 0 0;
-    margin-bottom: 0;
-    margin-bottom: 16px;
-}
-
-code.language-yaml.is-loaded {
-/*    display: grid;
-    grid-auto-rows: minmax(min-content, max-content);
-    grid-template-columns: 1fr 1fr;
-    place-items: center start;
-    gap: 0px 8px;*/
-    font-family: var(--font-preview);
-    line-height: 1.8em;
-    font-size: var.$font-scale-00;
-    padding: 4px 0 4px 0px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: var.$duration-moderate-2 var.$motion-standard-productive;
-}
-
-code.language-yaml.is-loaded:hover {
-    height: 100%;
-}
-
-@media (max-width:768px){
-    code.language-yaml.is-loaded {
-        grid-template-columns: auto auto;
-    }
-}
-
-code.language-yaml.is-loaded .token:not(.token.key.atrule) {
-    color: var(--text-normal);
-    padding-left: 4px;
-}
-
-code.language-yaml.is-loaded .token.boolean, code.language-yaml.is-loaded .token.number {
-    color: var.$color-blue;
-}
-
-.markdown-preview-view span.token.key.atrule {
-    color: var(--text-normal);
-    font-weight: var.$font-semi-bold;
-}
-
-code.language-yaml.is-loaded .token.punctuation {
-    display: none;
-}
-
-.frontmatter-container {
-    display:none
-}
-
-body .markdown-preview-view div.el-pre pre.frontmatter {
-    background-color: var(--background-primary);
+.frontmatter-container { // disable Metadata container
+	display:none
 }
