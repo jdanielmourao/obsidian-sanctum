@@ -1,47 +1,60 @@
 @use 'var';
 
-::-webkit-scrollbar {
-    visibility: visible;
-    width: 12px; /* width of vertical scrollbars  */
-    height: 12px; /* height of horizontal scrollbars  */
-    border-radius: 0; /* roundedness of scrollbar area */
-    background-color: transparent; /* color of scrollbar area  */
+* { 
+    &::-webkit-scrollbar-thumb {
+        visibility: visible;
+        border: 4px solid var(--background-primary);
+        border-radius: 32px; // roundedness of scrollbar
+        background-color: var(--color-primary-20); // color of scrollbar (part that moves)
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        border-width: 3px;
+        transition: var.$duration-moderate-1 var.$motion-entrance-expressive;
+    }
+    &::-webkit-scrollbar {
+        visibility: visible;
+        width: 12px; // width of vertical scrollbars
+        height: 12px; // height of horizontal scrollbars
+        border-radius: 0; // roundedness of scrollbar area
+        background-color: transparent; // color of scrollbar area
+    }
+    &::-webkit-scrollbar-thumb:active {
+        background-color: var(--color-primary-30);
+    }
 }
 
-::-webkit-scrollbar-thumb {
-    visibility: visible;
-    border: 3px solid var(--background-primary);
-    border-radius: 32px; /* roundedness of scrollbar */
-    background-color: var(--color-primary-20); /* color of scrollbar (part that moves) */
+code::-webkit-scrollbar-thumb {
+    border-color: var(--color-primary-w);
+
+    .theme-dark & {
+        border-color: var.$color-dark;
+    }
 }
 
-::-webkit-scrollbar-thumb:active {
-    background-color: var(--color-primary-30);
-}
 
-/* hide all scrollbars except the editor's */
+// hide all scrollbars except the editor's
 ::-webkit-scrollbar {
 	display: none;
 }
 
-/* global search results scroll & modal settings */
+// global search results scroll & modal settings
 .modal.mod-settings .vertical-tabs-container .vertical-tab-content-container ::-webkit-scrollbar,
 .workspace-leaf-content .search-result-container.mod-global-search::-webkit-scrollbar {
     display: inherit;
 }
 
-/* Note scroll */
+// Note scroll
 .workspace-split.mod-vertical ::-webkit-scrollbar {
 	display: inherit;
 }
-/* File Explorer */
+// File Explorer
 .workspace-tabs .nav-files-container::-webkit-scrollbar {
     display: inherit;
 }
 
-/* Disable Scrollbars Style Settings Option */
+// Disable Scrollbars Style Settings Option
 
-/* global search results scroll & modal settings */
+// global search results scroll & modal settings 
 .no-scrl-modal .modal.mod-settings .vertical-tabs-container .vertical-tab-content-container ::-webkit-scrollbar {
     display:none;
 }
@@ -50,11 +63,11 @@
     display: none;
 }
 
-/* Note scroll */
+// Note scroll
 .no-scrl-note .workspace-split.mod-vertical ::-webkit-scrollbar {
 	display: none;
 }
-/* File Explorer */
+// File Explorer
 .no-scrl-fx .workspace-tabs .nav-files-container::-webkit-scrollbar {
     display: none;
 }

@@ -48,7 +48,7 @@ background-color: var(--color-primary-w);
 .theme-dark .markdown-preview-view span.cm-inline-code,
 .theme-dark code[class*=language-],
 .theme-dark pre[class*=language-] {
-    background-color: var(--color-primary-10);
+    background-color: var.$color-dark;
 }
 
 .cm-s-obsidian .cm-math,
@@ -58,23 +58,35 @@ background-color: var(--color-primary-w);
     line-height: var.$leading-0;
 }
 
-.markdown-preview-view div.el-pre pre {
-    padding: var.$size-5
+.markdown-preview-view div.el-pre pre:not(pre.frontmatter.language-yaml) {
+    padding: var.$size-3
              var.$size-8
-             var.$size-5
+             var.$size-3
              var.$size-5;
     white-space: wrap;
     width: 100%;
+    outline: 1px solid var(--color-primary-10);
+
+    .theme-light & {
+        outline: 1px solid var(--color-primary-20);
+    }
 }
 
-/* preview */
+// preview
 .markdown-preview-view code {
     color: var.$color-pink-500;
-    padding: 0; /* so inline code doesn't have padding */
+    padding: 0 4px;
     font-family: var(--font-mono);
+
+    &:not(code[class*=language-]) { // makes it only applies to inline code
+    outline: 1px solid var(--color-primary-10);
+        .theme-light & {
+            outline-color: var(--color-primary-20);
+        }
+    }
 }
 
-/* edit */
+// edit
 .cm-s-obsidian .cm-math,
 .cm-s-obsidian .HyperMD-codeblock,
 .cm-s-obsidian span.cm-inline-code {
@@ -82,23 +94,17 @@ background-color: var(--color-primary-w);
 }
 
 .cm-s-obsidian span.cm-inline-code {
-    border-radius: 0;
-}
-/* changes editor mode code background */
-.cb-dark-bg .cm-s-obsidian span.cm-inline-code,
-.cb-dark-bg .HyperMD-codeblock,
-.cb-dark-bg .cm-s-obsidian .HyperMD-codeblock-bg,
-.cb-dark-bg .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
-    --background-primary-alt: #{var.$color-dark};
-}
-.cb-dark-bg:not(.theme-light) .markdown-preview-view code,
-.cb-dark-bg:not(.theme-light) .markdown-preview-view div.el-pre pre,
-.cb-dark-bg:not(.theme-light) .markdown-preview-view span.cm-inline-code,
-.cb-dark-bg:not(.theme-light) code[class*=language-],
-.cb-dark-bg:not(.theme-light) pre[class*=language-] {
-    background-color: #{var.$color-dark};
+    border-radius: 4px;
 }
 
+.cm-s-obsidian .cm-line:not(.cm-active.cm-line) span.cm-inline-code {
+    outline: 1px solid var(--color-primary-10);
+    padding: 0 4px;
+
+    .theme-light & {
+        outline-color: var(--color-primary-20);
+    }
+}
 
 /* ────────────────────────────── Code Comments ───────────────────────────── */
 .cm-s-obsidian .HyperMD-codeblock span.cm-comment,
@@ -119,13 +125,13 @@ button.copy-code-button {
     background-color: var(--text-normal);
     font-size: var.$size-0;
     position: absolute;
-    top: var.$size-5;
-    right: var.$size-5;
+    top: 10px;
+    right: var.$size-3;
     transition: transform var.$duration-fast-1 var.$motion-standard-expressive;
 }
 
 .copy-code-button:active {
-    transform: scale(1.4);
+    transform: scale(1.4); // makes it shrink a bit when clicked
     transition: transform var.$duration-fast-1 var.$motion-standard-expressive;
 }
 

@@ -7,25 +7,26 @@
     table-layout: auto;
     width: max-content;
     max-width: var(--limit-tables);
+
+    .center-tables & { // centered tables
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
-/* centered tables */
-.center-tables .markdown-preview-view table {
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.markdown-preview-view th {
+.markdown-preview-view th { // aka table header
     padding-left: var.$size-5;
     text-align: left;
-    border: var.$size-0;
-    font-weight: var.$font-semi-bold;
+    font-weight: var.$font-regular;
     background-color: var(--color-border-1);
     color: var(--color-primary-k);
+    border: 1px solid var(--color-primary-30);
+    border-bottom: none;
+    border-top: none;
 }
 
-.markdown-preview-view td {
-    font-size: var(--font-scale-00  );
+.markdown-preview-view td { // aka table data cell
+    font-size: var.$font-scale-00;
     font-weight: var.$font-regular;
     padding: var.$size-3
              var.$size-5
@@ -34,7 +35,23 @@
     justify-content: left;
     background-color: hsla(var(--hsl-color-primary-w),.8);
     border: var.$size-0;
-    border-bottom: 1.5px solid var(--color-border-1);
+    border: 1px solid var(--color-primary-20);
+    border-bottom-width: 1.5;
+}
+
+.markdown-preview-view th:first-child,
+.markdown-preview-view td:first-child {
+    border-left: none;
+}
+.markdown-preview-view th:last-child,
+.markdown-preview-view td:last-child {
+    border-right: none;
+}
+.markdown-preview-view tr:first-child td {
+    border-top-color: var(--color-primary-30);
+}
+.markdown-preview-view tr:last-child td {
+    border-bottom: none;
 }
 
 /* ───────────────────────────── Dataview Tables ──────────────────────────── */
@@ -45,14 +62,14 @@ table.table-view-table > thead > tr > th {
     border-bottom: 1px solid var(--color-border-2);
 }
 
-.alternate-dataview .dataview.table-view-table .table-view-tbody tr:nth-child(odd) {
-    background-color: var(--color-primary-w);
-}
-
-.alternate-dataview .dataview.table-view-table .table-view-tbody tr:nth-child(even) {
-    background-color: var(--color-primary-10);
-}
-
-.alternate-dataview .dataview.table-view-table .table-view-tbody td {
-    background-color: transparent;
+.alternate-dataview .dataview.table-view-table {
+    & .table-view-tbody tr:nth-child(odd) {
+        background-color: var(--color-primary-w);
+    }
+    & .table-view-tbody tr:nth-child(even) {
+        background-color: var(--color-primary-10);
+    }
+    & .table-view-tbody td {
+        background-color: transparent;
+    }
 }

@@ -1,24 +1,25 @@
 @use 'var';
 
-/* Blockquote paragraph styling */
+// Blockquote paragraph styling
 blockquote p {
     display: block;
  }
 
-.markdown-preview-view blockquote {
+.markdown-preview-view blockquote { // blockquote preview
     border-radius: var.$size-0;
-    border: transparent;
     border-width: var.$size-0
                   var.$size-0
                   var.$size-0
                   var.$size-0;
     border-color: transparent;
+    border-left: 1.5px solid var(--color-accent);
     background-color: transparent;
     color:var(--text-muted);
-    padding: var.$size-0;
     margin-inline-start: 27px;
     margin-block-start: var.$size-0;
     margin-block-end: var.$size-0;
+    margin-bottom: 16px;
+    padding: var.$size-2 var.$size-4 var.$size-2 var.$size-4;
     text-align: left;
     font-family: var(--font-preview);
     font-style: normal;
@@ -26,39 +27,23 @@ blockquote p {
     font-size: var.$font-scale-0;
     line-height: var.$leading-3;
     letter-spacing: var.$tracking-0;
-}
-
-/* preview */
-.markdown-preview-view blockquote {
-    border-left: 1.5px solid var(--color-accent);
-    background-color: transparent;
-    padding: var.$size-2 var.$size-4 var.$size-2 var.$size-4;
-    margin-bottom: 16px;
-}
-
-.markdown-preview-view blockquote {
     position: relative;
+
+    &:after {
+        content: '\201C';
+        font-family: sans-serif;
+        position: absolute;
+        top: 0.36em;
+        left: -28px;
+        font-size: 3.75rem;
+    	color: var(--color-accent);
+    }
+    &.paraphrase:after { // when paraphrasing, wrap your quote in <blockquote class="paraphrase">
+    	display: none;
+    }
 }
 
-.markdown-preview-view blockquote:after {
-    content: '\201C';
-    font-family: sans-serif;
-    position: absolute;
-    top: 0.36em;
-    left: -28px;
-    font-size: 3.75rem;
-	color: var(--color-accent);
-}
-
-/* when paraphrasing, wrap your quote in <blockquote class="paraphrase"> */
-
-.markdown-preview-view blockquote.paraphrase:after { 
-	display: none;
-}
-
-/* for citations */ 
-
-cite {
+cite { // for citations
 	color: var(--text-muted);
 	text-align: end;
 	display: block;

@@ -345,14 +345,14 @@ $duration-slow-2:     700ms;
     --color-primary-k: #{$color-white};
 }
 .theme-dark {
-    --color-hover: var(--color-primary-20);
+    --color-hover: var(--color-primary-10);
     --color-border-1: var(--color-primary-20);
     --color-border-2: var(--color-primary-30);
 
     --color-accent: hsl(var(--color-d-accent-h),var(--color-d-accent-s),var(--color-d-accent-l));
 
     --background-primary:        var(--color-primary-w);
-    --background-primary-alt:    var(--color-primary-10);
+    --background-primary-alt:    var.$color-dark;
     --background-secondary:      var(--color-primary-w);
     --background-secondary-alt:  var(--color-primary-w);
 

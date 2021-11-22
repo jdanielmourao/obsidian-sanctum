@@ -1,100 +1,101 @@
 @use 'var';
 
-/* set space above and below horizontal line that separate footnotes */
-.markdown-preview-view .footnotes hr {
-	margin-top: var.$size-9;
-	margin-bottom: var.$size-5;
-}
-
-/* footnotes preview */
+// footnotes preview
 .markdown-preview-section .footnotes {
 	font-size: var.$font-scale-000;
 	text-align: justify;
 	hyphens: auto;
 }
 
-/* applies to number-references in footnote text */
+// set space above and below horizontal line that separate footnotes
+.markdown-preview-view .footnotes hr {
+	margin-top: var.$size-9;
+	margin-bottom: var.$size-5;
+}
+
+// applies to number-references in footnote text
 .CodeMirror span.cm-link.cm-hmd-footnote {
 	color: var(--color-accent);
 	vertical-align: top;
 }
 
-/* applies to number reference in body text. Pandoc citation section overrides this */
+// applies to number reference in body text. Pandoc citation section overrides this
 .cm-s-obsidian span.cm-footref,
 .cm-s-obsidian span.cm-blockid {
-    display: inline-block;
-    font-size: var.$font-scale-000;
-    vertical-align: text-top;
-    color: var(--text-muted);
-    margin-top: -0.1rem;
+	display: inline-block;
+	font-size: var.$font-scale-000;
+	vertical-align: text-top;
+	color: var(--text-muted);
+	margin-top: -0.1rem;
 }
 
-/* footnotes (at the bottom) size */
+// footnotes (at the bottom) size
 .HyperMD-footnote.CodeMirror-line {
-    font-size: var.$font-scale-000;
-    text-align: left;
-    hyphens: auto;
-    padding-left: var.$size-3;
+	font-size: var.$font-scale-000;
+	text-align: left;
+	hyphens: auto;
+	padding-left: var.$size-3;
 }
 
 .footnotes ol > li::marker {
-    color: var(--text-muted);
-    font-size: var.$font-scale-000;
+	color: var(--text-muted);
+	font-size: var.$font-scale-000;
 }
 
-/* remove underline which only decreases readability */
+// remove underline which only decreases readability
 .markdown-preview-view a.footnote-link{
 	text-decoration: none;
-    padding-left: 3px;
+	padding-left: 3px;
 }
 
-/* Footnotes title */
+// Footnotes title
 .fn-title-hr .markdown-preview-view .footnotes,
 .fn-title .markdown-preview-view .footnotes {
-    margin-top: 24px;
+	margin-top: 24px;
 }
 
-.fn-title .markdown-preview-view .footnotes hr:first-child {
-    display: none;
-}
-
-.fn-title-hr .markdown-preview-view .footnotes hr:first-child {
-    display: visible;
-    margin-top: 0px;
+.markdown-preview-view .footnotes hr:first-child {
+	.fn-title & {
+		display: none;
+	}
+	.fn-title-hr & {
+		display: visible;
+		margin-top: 0px;
+	}
 }
 
 .fn-title-hr .markdown-preview-view .footnotes::before,
 .fn-title .markdown-preview-view .footnotes::before {
-    content: var(--footnote-id);
+	content: var(--footnote-id);
 }
 
 @media (max-width:320px){
-    .fn-title-hr .markdown-preview-view .footnotes::before,
-    .fn-title .markdown-preview-view .footnotes::before {
-        font-size: calc(var.$font-scale-5 * (var(--heading-2) / 100));
-    }
+	.fn-title-hr .markdown-preview-view .footnotes::before,
+	.fn-title .markdown-preview-view .footnotes::before {
+		font-size: calc(var.$font-scale-5 * (var(--heading-2) / 100));
+	}
 }
 @media (min-width:321px) and (max-width:672px){
-    .fn-title-hr .markdown-preview-view .footnotes::before,
-    .fn-title .markdown-preview-view .footnotes::before {
-        font-size: calc(var.$font-scale-6 * (var(--heading-2) / 100));
-    }
+	.fn-title-hr .markdown-preview-view .footnotes::before,
+	.fn-title .markdown-preview-view .footnotes::before {
+		font-size: calc(var.$font-scale-6 * (var(--heading-2) / 100));
+	}
 }
 @media (min-width:673px) and (max-width:1056px) {
-    .fn-title-hr .markdown-preview-view .footnotes::before,
-    .fn-title .markdown-preview-view .footnotes::before {
-        font-size: calc(var.$font-scale-7 * (var(--heading-2) / 100));
-    }
+	.fn-title-hr .markdown-preview-view .footnotes::before,
+	.fn-title .markdown-preview-view .footnotes::before {
+		font-size: calc(var.$font-scale-7 * (var(--heading-2) / 100));
+	}
 }
 @media (min-width:1057px) and (max-width:1312px) {
-    .fn-title-hr .markdown-preview-view .footnotes::before,
-    .fn-title .markdown-preview-view .footnotes::before {
-        font-size: calc(var.$font-scale-8 * (var(--heading-2) / 100));
-    }
+	.fn-title-hr .markdown-preview-view .footnotes::before,
+	.fn-title .markdown-preview-view .footnotes::before {
+		font-size: calc(var.$font-scale-8 * (var(--heading-2) / 100));
+	}
 }
 @media (min-width:1313px) {
-    .fn-title-hr .markdown-preview-view .footnotes::before,
-    .fn-title .markdown-preview-view .footnotes::before {
-        font-size: calc(var.$font-scale-8 * (var(--heading-2) / 100));
-    }
+	.fn-title-hr .markdown-preview-view .footnotes::before,
+	.fn-title .markdown-preview-view .footnotes::before {
+		font-size: calc(var.$font-scale-8 * (var(--heading-2) / 100));
+	}
 }

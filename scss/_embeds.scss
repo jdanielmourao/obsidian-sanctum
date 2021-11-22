@@ -1,126 +1,120 @@
 @use 'var';
 
 /*
-    Removes title, link, padding, margins from embeds,
-    so they really look like the same note.
-    credit: Matthias C. Hormann (Moonbase59)
+	Removes title, link, padding, margins from embeds,
+	so they really look like the same note.
+	credit: Matthias C. Hormann (Moonbase59)
 */
 
 /* remove title and the table from the "Metatable" plugin */
 .markdown-preview-view .markdown-embed-title,
 .markdown-preview-view .obsidian-metatable {
-    display: none;
+	display: none;
 }
 
-/*
-  For links to embeds NOT to be shown, uncomment the following
-  and comment out the other section below.
-*/
-
+//For links to embeds NOT to be shown, uncomment the following
+//and comment out the other section below.
 /*
 .markdown-preview-view .markdown-embed-link,
 .markdown-preview-view .file-embed-link {
-  display: none;
+	display: none;
 }
 */
 
-/*
-  For links to embeds to BE shown, uncomment the following
-  until the "End link show/hide stuff" comment
-  and comment out the section above.
-*/
+
+//For links to embeds to BE shown, uncomment the following
+//until the "End link show/hide stuff" comment
+//and comment out the section above.
 
 /* Link icon */
 .markdown-preview-view .markdown-embed-link,
 .markdown-preview-view .file-embed-link {
-    top: 0;
-    right: 0;
-    left: unset;
-    text-align: right;
-    border: none;
-    margin: var.$size-5 var.$size-5;
-    width: var.$scale-3;
-    height: var.$scale-3;
-    color: var(--text-faint);
-    cursor: pointer;
+	top: 0;
+	right: 0;
+	left: unset;
+	text-align: right;
+	border: none;
+	margin: var.$size-5 var.$size-5;
+	width: var.$scale-3;
+	height: var.$scale-3;
+	color: var(--text-faint);
+	cursor: pointer;
 }
 
-/* for Ars Magna theme and others that change ::before */
-.markdown-preview-view .markdown-embed-link::before,
-.markdown-preview-view .file-embed-link::before {
-    display: none;
-}
-
-/* Link icon size & hide */
+// Link icon size & hide
 .markdown-preview-view .file-embed-link svg,
 .markdown-preview-view .markdown-embed-link svg {
-    height: var.$scale-3;
-    width: var.$scale-3;
-    opacity: 0;
-    display: unset;
+	height: var.$scale-3;
+	width: var.$scale-3;
+	opacity: 0;
+	display: unset;
 }
 
-/* show on hover */
+// show on hover
 .markdown-preview-view .markdown-embed:hover .file-embed-link svg,
 .markdown-preview-view .markdown-embed:hover .markdown-embed-link svg {
-    opacity: 1;
+	opacity: 1;
 }
 
-/* change background on hover, to exactly see what’s embedded */
+// change background on hover, to exactly see what’s embedded
+.markdown-source-view .markdown-embed:hover,
+.markdown-source-view .file-embed:hover
 .markdown-preview-view .markdown-embed:hover,
 .markdown-preview-view .file-embed:hover {
-    background-color: var(--color-hover);
+	background-color: var(--color-hover);
+	border-radius: 4px;
 }
 
-/* remove border and scroll */
+// remove border and scroll
 .markdown-preview-view .markdown-embed,
-.markdown-preview-view .file-embed {
-    border: none;
-    padding: var.$size-0;
-    margin: var.$size-0;
+.markdown-preview-view .file-embed,
+.markdown-source-view .markdown-embed,
+.markdown-source-view .file-embed {
+	border: none;
+	padding: var.$size-0;
+	margin: var.$size-0;
 }
 
 .markdown-preview-view .markdown-embed-content,
 .markdown-preview-view .markdown-embed-content > .markdown-preview-view { 
-    max-height: unset;
-    padding: var.$size-0;
-    margin: var.$size-0;
-    border: var.$size-0;
+	max-height: unset;
+	padding: var.$size-0;
+	margin: var.$size-0;
+	border: var.$size-0;
 }
 
-/* Sanctum addition: make tables respect readable line width when having embeds.
-Decent for Eisenhower matrixes */
+// Sanctum addition: make tables respect readable line width when having embeds.
+// Decent for Eisenhower matrixes
 .markdown-preview-view table .markdown-embed-content,
 .markdown-preview-view table .markdown-embed-content > .markdown-preview-view { 
-    max-width: 310px;
+	max-width: 310px;
 }
 
-/* remove <br> between internal embeds */
+// remove <br> between internal embeds
 .markdown-preview-section div > br {
-    display: none;
+	display: none;
 }
 
-/* remove vertical space added by markdown-preview-sizer */
+// remove vertical space added by markdown-preview-sizer
  div.markdown-preview-sizer.markdown-preview-section {
-    min-height: unset;
-    padding-bottom: var.$size-0;
+	min-height: unset;
+	padding-bottom: var.$size-0;
 }
 
-/* special considerations for printing (PDF export) */
+// special considerations for printing (PDF export)
 @media print {
 
-  /* remove frontmatter box if "Show frontmatter" was enabled */
-  /* Also remove metadata table from "Metatable" plugin */
-/*  pre.frontmatter,
-  .obsidian-metatable {
-    display;
-  }
-}*/
+// remove frontmatter box if "Show frontmatter" was enabled */
+// Also remove metadata table from "Metatable" plugin */
+//	pre.frontmatter,
+	.obsidian-metatable {
+		display: none;
+	}
 
-iframe {
-    border-width: 0px;
-    border-style: inset;
-    border-color: initial;
-    border-image: initial;
-}
+	iframe {
+	    border-width: 0px;
+	    border-style: inset;
+	    border-color: initial;
+	    border-image: initial;
+	}
 }

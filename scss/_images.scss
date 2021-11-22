@@ -1,12 +1,12 @@
 @use 'var';
 
-/* Restrict image size in Preview Mode */
+// Restrict image size in Preview Mode
 .workspace-leaf-content img:not([width]),
 .view-content .markdown-preview-view img {
-	max-width: 100%; /* value relative to note width */
+	max-width: 100%; // value relative to note width
 }
 
-/* Desaturate images  */
+// Desaturate images
 .markdown-preview-view img {
 	opacity:0.75;
 	transition: opacity var.$duration-slow-1 var.$motion-exit-expressive;

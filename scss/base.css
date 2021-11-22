@@ -328,12 +328,12 @@
 }
 
 .theme-dark {
-  --color-hover: var(--color-primary-20);
+  --color-hover: var(--color-primary-10);
   --color-border-1: var(--color-primary-20);
   --color-border-2: var(--color-primary-30);
   --color-accent: hsl(var(--color-d-accent-h),var(--color-d-accent-s),var(--color-d-accent-l));
   --background-primary: var(--color-primary-w);
-  --background-primary-alt: var(--color-primary-10);
+  --background-primary-alt: var.$color-dark;
   --background-secondary: var(--color-primary-w);
   --background-secondary-alt: var(--color-primary-w);
   --background-modifier-border:var(--color-primary-60);
@@ -3375,8 +3375,6 @@ aside {
   clear: left;
   padding: 0px 0px 0px 0px;
   border-radius: 0px;
-  /* set to 4 for round corners */
-  /*  border-left: 1.5px solid var(--color-primary-100); */
   margin-right: 0px;
   margin-top: 2px;
   margin-bottom: 0px;
@@ -3384,7 +3382,6 @@ aside {
   background-color: transparent;
   text-decoration: unset;
   text-align: start;
-  /* aligns left */
   font-size: 0.875rem;
   font-weight: unset;
   line-height: 1.25em;
@@ -3399,8 +3396,6 @@ aside {
   clear: right;
   padding: 0px 0px 0px 0px;
   border-radius: 0px;
-  /* set to 4 for round corners */
-  /*  border-left: 1.5px solid var(--color-primary-100); */
   margin-right: -20rem;
   margin-top: 2px;
   margin-bottom: 0px;
@@ -3424,7 +3419,6 @@ aside {
   color: var(--color-accent);
 }
 
-/*Hide Aside and hover to reveal it*/
 .aside-hide {
   color: transparent;
   float: right;
@@ -3441,7 +3435,6 @@ aside {
   background-color: transparent;
   line-height: 1em;
 }
-
 .aside-hide:before {
   display: block;
   content: "";
@@ -3451,11 +3444,9 @@ aside {
   height: 16px;
   width: 16px;
 }
-
 .theme-dark .aside-hide:before {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Echat%3C/title%3E%3Cpath d='M17.74,30,16,29l4-7h6a2,2,0,0,0,2-2V8a2,2,0,0,0-2-2H6A2,2,0,0,0,4,8V20a2,2,0,0,0,2,2h9v2H6a4,4,0,0,1-4-4V8A4,4,0,0,1,6,4H26a4,4,0,0,1,4,4V20a4,4,0,0,1-4,4H21.16Z' transform='translate(0 0)'/%3E%3Crect x='8' y='10' width='16' height='2'/%3E%3Crect x='8' y='16' width='10' height='2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
-
 .aside-hide:hover {
   white-space: normal;
   text-overflow: unset;
@@ -3465,7 +3456,6 @@ aside {
   z-index: 3;
   padding: 16px;
   padding-top: 8px;
-  /*   border-right: 1.5px solid #333233; */
   border-radius: 0px;
   font-size: 0.875rem;
   line-height: 1.25em;
@@ -3494,21 +3484,16 @@ aside {
   background-color: transparent;
   border-left: 1.5px solid var(--color-accent);
 }
-
 .aside-in-accent .aside-in {
   color: var(--color-accent);
 }
-
 .aside-in-no-b .aside-in {
   border-left-width: 0px;
 }
-
 .aside-in-grayscale .aside-in {
   border-left: 1px solid var(--text-faint);
 }
-
-.aside-in .internal-embed.is-loaded:not(.image-embed),
-.aside-in .markdown-embed {
+.aside-in .internal-embed.is-loaded:not(.image-embed), .aside-in .markdown-embed {
   width: 100%;
 }
 
@@ -3517,14 +3502,11 @@ aside {
   width: 4px;
 }
 
-/* Restrict image size in Preview Mode */
 .workspace-leaf-content img:not([width]),
 .view-content .markdown-preview-view img {
   max-width: 100%;
-  /* value relative to note width */
 }
 
-/* Desaturate images  */
 .markdown-preview-view img {
   opacity: 0.75;
   transition: opacity 400ms cubic-bezier(0.4, 0.14, 1, 1);
@@ -3536,12 +3518,10 @@ aside {
   transition: opacity 400ms cubic-bezier(0, 0, 0.3, 1);
 }
 
-/* Link alias */
 .cm-s-obsidian span.cm-link {
   color: var(--text-normal);
 }
 
-/* Link url */
 .cm-s-obsidian span.cm-string.cm-url {
   color: var(--text-faint);
   opacity: 1;
@@ -3560,11 +3540,9 @@ aside {
   background-position-y: 5px;
   text-decoration: none;
 }
-
 .theme-dark .external-link {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
-
 .external-link:hover {
   color: var(--text-accent);
   text-decoration: underline solid currentColor 1.5px;
@@ -3573,7 +3551,6 @@ aside {
 .cm-s-obsidian span.cm-link,
 .cm-s-obsidian span.cm-url,
 .cm-s-obsidian span.cm-formatting-link.cm-link {
-  /* [alias](external link) */
   color: var(--text-accent);
   text-decoration: none;
 }
@@ -3588,12 +3565,10 @@ aside {
 .markdown-preview-view .internal-link {
   text-decoration: underline solid transparent 1.5px;
 }
-
 .markdown-preview-view .internal-link:hover {
   color: var(--text-accent);
   text-decoration: underline solid currentColor 1.5px;
 }
-
 .markdown-preview-view .internal-link:active {
   color: var(--color-blue);
   text-decoration: underline solid currentColor 1.5px;
@@ -3606,27 +3581,26 @@ aside {
 }
 
 /* ──────────────────────────── Unresolved Links ──────────────────────────── */
-/* Internal link to uncreated note */
 .markdown-preview-view .internal-link.is-unresolved {
   opacity: 0.5;
 }
 
-/* Blockquote paragraph styling */
 blockquote p {
   display: block;
 }
 
 .markdown-preview-view blockquote {
   border-radius: 0px;
-  border: transparent;
   border-width: 0px 0px 0px 0px;
   border-color: transparent;
+  border-left: 1.5px solid var(--color-accent);
   background-color: transparent;
   color: var(--text-muted);
-  padding: 0px;
   margin-inline-start: 27px;
   margin-block-start: 0px;
   margin-block-end: 0px;
+  margin-bottom: 16px;
+  padding: 4px 12px 4px 12px;
   text-align: left;
   font-family: var(--font-preview);
   font-style: normal;
@@ -3634,20 +3608,8 @@ blockquote p {
   font-size: 1rem;
   line-height: 1.375em;
   letter-spacing: 0px;
-}
-
-/* preview */
-.markdown-preview-view blockquote {
-  border-left: 1.5px solid var(--color-accent);
-  background-color: transparent;
-  padding: 4px 12px 4px 12px;
-  margin-bottom: 16px;
-}
-
-.markdown-preview-view blockquote {
   position: relative;
 }
-
 .markdown-preview-view blockquote:after {
   content: "“";
   font-family: sans-serif;
@@ -3657,13 +3619,10 @@ blockquote p {
   font-size: 3.75rem;
   color: var(--color-accent);
 }
-
-/* when paraphrasing, wrap your quote in <blockquote class="paraphrase"> */
 .markdown-preview-view blockquote.paraphrase:after {
   display: none;
 }
 
-/* for citations */
 cite {
   color: var(--text-muted);
   text-align: end;
@@ -3718,7 +3677,7 @@ cite {
 .theme-dark .markdown-preview-view span.cm-inline-code,
 .theme-dark code[class*=language-],
 .theme-dark pre[class*=language-] {
-  background-color: var(--color-primary-10);
+  background-color: #0d0d0d;
 }
 
 .cm-s-obsidian .cm-math,
@@ -3728,21 +3687,28 @@ cite {
   line-height: 1em;
 }
 
-.markdown-preview-view div.el-pre pre {
-  padding: 16px 40px 16px 16px;
+.markdown-preview-view div.el-pre pre:not(pre.frontmatter.language-yaml) {
+  padding: 8px 40px 8px 16px;
   white-space: wrap;
   width: 100%;
+  outline: 1px solid var(--color-primary-10);
+}
+.theme-light .markdown-preview-view div.el-pre pre:not(pre.frontmatter.language-yaml) {
+  outline: 1px solid var(--color-primary-20);
 }
 
-/* preview */
 .markdown-preview-view code {
   color: #ea4c67;
-  padding: 0;
-  /* so inline code doesn't have padding */
+  padding: 0 4px;
   font-family: var(--font-mono);
 }
+.markdown-preview-view code:not(code[class*=language-]) {
+  outline: 1px solid var(--color-primary-10);
+}
+.theme-light .markdown-preview-view code:not(code[class*=language-]) {
+  outline-color: var(--color-primary-20);
+}
 
-/* edit */
 .cm-s-obsidian .cm-math,
 .cm-s-obsidian .HyperMD-codeblock,
 .cm-s-obsidian span.cm-inline-code {
@@ -3750,23 +3716,15 @@ cite {
 }
 
 .cm-s-obsidian span.cm-inline-code {
-  border-radius: 0;
+  border-radius: 4px;
 }
 
-/* changes editor mode code background */
-.cb-dark-bg .cm-s-obsidian span.cm-inline-code,
-.cb-dark-bg .HyperMD-codeblock,
-.cb-dark-bg .cm-s-obsidian .HyperMD-codeblock-bg,
-.cb-dark-bg .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
-  --background-primary-alt: #0d0d0d;
+.cm-s-obsidian .cm-line:not(.cm-active.cm-line) span.cm-inline-code {
+  outline: 1px solid var(--color-primary-10);
+  padding: 0 4px;
 }
-
-.cb-dark-bg:not(.theme-light) .markdown-preview-view code,
-.cb-dark-bg:not(.theme-light) .markdown-preview-view div.el-pre pre,
-.cb-dark-bg:not(.theme-light) .markdown-preview-view span.cm-inline-code,
-.cb-dark-bg:not(.theme-light) code[class*=language-],
-.cb-dark-bg:not(.theme-light) pre[class*=language-] {
-  background-color: #0d0d0d;
+.theme-light .cm-s-obsidian .cm-line:not(.cm-active.cm-line) span.cm-inline-code {
+  outline-color: var(--color-primary-20);
 }
 
 /* ────────────────────────────── Code Comments ───────────────────────────── */
@@ -3788,8 +3746,8 @@ button.copy-code-button {
   background-color: var(--text-normal);
   font-size: 0px;
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 10px;
+  right: 8px;
   transition: transform 70ms cubic-bezier(0.4, 0.14, 0.3, 1);
 }
 
@@ -3820,8 +3778,6 @@ code[class*=language-pure-text],
   width: max-content;
   max-width: var(--limit-tables);
 }
-
-/* centered tables */
 .center-tables .markdown-preview-view table {
   margin-right: auto;
   margin-left: auto;
@@ -3830,20 +3786,42 @@ code[class*=language-pure-text],
 .markdown-preview-view th {
   padding-left: 16px;
   text-align: left;
-  border: 0px;
-  font-weight: 600;
+  font-weight: 400;
   background-color: var(--color-border-1);
   color: var(--color-primary-k);
+  border: 1px solid var(--color-primary-30);
+  border-bottom: none;
+  border-top: none;
 }
 
 .markdown-preview-view td {
-  font-size: var(--font-scale-00);
+  font-size: 0.875rem;
   font-weight: 400;
   padding: 8px 16px 8px 16px;
   justify-content: left;
   background-color: hsla(var(--hsl-color-primary-w), 0.8);
   border: 0px;
-  border-bottom: 1.5px solid var(--color-border-1);
+  border: 1px solid var(--color-primary-20);
+  border-bottom-width: 1.5;
+  width: 100%;
+}
+
+.markdown-preview-view th:first-child,
+.markdown-preview-view td:first-child {
+  border-left: none;
+}
+
+.markdown-preview-view th:last-child,
+.markdown-preview-view td:last-child {
+  border-right: none;
+}
+
+.markdown-preview-view tr:first-child td {
+  border-top-color: var(--color-primary-30);
+}
+
+.markdown-preview-view tr:last-child td {
+  border-bottom: none;
 }
 
 /* ───────────────────────────── Dataview Tables ──────────────────────────── */
@@ -3857,35 +3835,29 @@ table.table-view-table > thead > tr > th {
 .alternate-dataview .dataview.table-view-table .table-view-tbody tr:nth-child(odd) {
   background-color: var(--color-primary-w);
 }
-
 .alternate-dataview .dataview.table-view-table .table-view-tbody tr:nth-child(even) {
   background-color: var(--color-primary-10);
 }
-
 .alternate-dataview .dataview.table-view-table .table-view-tbody td {
   background-color: transparent;
 }
 
-/* set space above and below horizontal line that separate footnotes */
-.markdown-preview-view .footnotes hr {
-  margin-top: 48px;
-  margin-bottom: 16px;
-}
-
-/* footnotes preview */
 .markdown-preview-section .footnotes {
   font-size: 0.75rem;
   text-align: justify;
   hyphens: auto;
 }
 
-/* applies to number-references in footnote text */
+.markdown-preview-view .footnotes hr {
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
 .CodeMirror span.cm-link.cm-hmd-footnote {
   color: var(--color-accent);
   vertical-align: top;
 }
 
-/* applies to number reference in body text. Pandoc citation section overrides this */
 .cm-s-obsidian span.cm-footref,
 .cm-s-obsidian span.cm-blockid {
   display: inline-block;
@@ -3895,7 +3867,6 @@ table.table-view-table > thead > tr > th {
   margin-top: -0.1rem;
 }
 
-/* footnotes (at the bottom) size */
 .HyperMD-footnote.CodeMirror-line {
   font-size: 0.75rem;
   text-align: left;
@@ -3908,13 +3879,11 @@ table.table-view-table > thead > tr > th {
   font-size: 0.75rem;
 }
 
-/* remove underline which only decreases readability */
 .markdown-preview-view a.footnote-link {
   text-decoration: none;
   padding-left: 3px;
 }
 
-/* Footnotes title */
 .fn-title-hr .markdown-preview-view .footnotes,
 .fn-title .markdown-preview-view .footnotes {
   margin-top: 24px;
@@ -3923,7 +3892,6 @@ table.table-view-table > thead > tr > th {
 .fn-title .markdown-preview-view .footnotes hr:first-child {
   display: none;
 }
-
 .fn-title-hr .markdown-preview-view .footnotes hr:first-child {
   display: visible;
   margin-top: 0px;
@@ -3982,18 +3950,17 @@ table.table-view-table > thead > tr > th {
 .mermaid .node .label {
   font-size: 0.875rem;
   text-align: center;
-  /* need to add specificity for this to work */
 }
 
 /*
 .mermaid .node .label-container {
-    min-width: fit-content;
+	min-width: fit-content;
 }
 */
 /*
-    Removes title, link, padding, margins from embeds,
-    so they really look like the same note.
-    credit: Matthias C. Hormann (Moonbase59)
+	Removes title, link, padding, margins from embeds,
+	so they really look like the same note.
+	credit: Matthias C. Hormann (Moonbase59)
 */
 /* remove title and the table from the "Metatable" plugin */
 .markdown-preview-view .markdown-embed-title,
@@ -4002,19 +3969,10 @@ table.table-view-table > thead > tr > th {
 }
 
 /*
-  For links to embeds NOT to be shown, uncomment the following
-  and comment out the other section below.
-*/
-/*
 .markdown-preview-view .markdown-embed-link,
 .markdown-preview-view .file-embed-link {
-  display: none;
+	display: none;
 }
-*/
-/*
-  For links to embeds to BE shown, uncomment the following
-  until the "End link show/hide stuff" comment
-  and comment out the section above.
 */
 /* Link icon */
 .markdown-preview-view .markdown-embed-link,
@@ -4031,13 +3989,6 @@ table.table-view-table > thead > tr > th {
   cursor: pointer;
 }
 
-/* for Ars Magna theme and others that change ::before */
-.markdown-preview-view .markdown-embed-link::before,
-.markdown-preview-view .file-embed-link::before {
-  display: none;
-}
-
-/* Link icon size & hide */
 .markdown-preview-view .file-embed-link svg,
 .markdown-preview-view .markdown-embed-link svg {
   height: 24px;
@@ -4046,21 +3997,22 @@ table.table-view-table > thead > tr > th {
   display: unset;
 }
 
-/* show on hover */
 .markdown-preview-view .markdown-embed:hover .file-embed-link svg,
 .markdown-preview-view .markdown-embed:hover .markdown-embed-link svg {
   opacity: 1;
 }
 
-/* change background on hover, to exactly see what’s embedded */
-.markdown-preview-view .markdown-embed:hover,
+.markdown-source-view .markdown-embed:hover,
+.markdown-source-view .file-embed:hover .markdown-preview-view .markdown-embed:hover,
 .markdown-preview-view .file-embed:hover {
   background-color: var(--color-hover);
+  border-radius: 4px;
 }
 
-/* remove border and scroll */
 .markdown-preview-view .markdown-embed,
-.markdown-preview-view .file-embed {
+.markdown-preview-view .file-embed,
+.markdown-source-view .markdown-embed,
+.markdown-source-view .file-embed {
   border: none;
   padding: 0px;
   margin: 0px;
@@ -4074,33 +4026,25 @@ table.table-view-table > thead > tr > th {
   border: 0px;
 }
 
-/* Sanctum addition: make tables respect readable line width when having embeds.
-Decent for Eisenhower matrixes */
 .markdown-preview-view table .markdown-embed-content,
 .markdown-preview-view table .markdown-embed-content > .markdown-preview-view {
   max-width: 310px;
 }
 
-/* remove <br> between internal embeds */
 .markdown-preview-section div > br {
   display: none;
 }
 
-/* remove vertical space added by markdown-preview-sizer */
 div.markdown-preview-sizer.markdown-preview-section {
   min-height: unset;
   padding-bottom: 0px;
 }
 
-/* special considerations for printing (PDF export) */
 @media print {
-  /* remove frontmatter box if "Show frontmatter" was enabled */
-  /* Also remove metadata table from "Metatable" plugin */
-  /*  pre.frontmatter,
-    .obsidian-metatable {
-      display;
-    }
-  }*/
+  .obsidian-metatable {
+    display: none;
+  }
+
   iframe {
     border-width: 0px;
     border-style: inset;
@@ -4116,22 +4060,13 @@ code.language-yaml.is-loaded {
   padding-top: 2px;
   padding-bottom: 2px;
 }
-
-code.language-yaml.is-loaded .token.boolean,
-code.language-yaml.is-loaded .token.number {
+code.language-yaml.is-loaded .token.boolean, code.language-yaml.is-loaded .token.number {
   color: var(--text-muted);
 }
-
 code.language-yaml.is-loaded .token {
   font-weight: 400;
 }
-
-code.language-yaml.is-loaded .token.selector,
-code.language-yaml.is-loaded .token.attr-name,
-code.language-yaml.is-loaded .token.string,
-code.language-yaml.is-loaded .token.char,
-code.language-yaml.is-loaded .token.builtin,
-code.language-yaml.is-loaded .token.inserted {
+code.language-yaml.is-loaded .token.selector, code.language-yaml.is-loaded .token.attr-name, code.language-yaml.is-loaded .token.string, code.language-yaml.is-loaded .token.char, code.language-yaml.is-loaded .token.builtin, code.language-yaml.is-loaded .token.inserted {
   color: var(--color-orange);
 }
 
@@ -4260,7 +4195,7 @@ body .markdown-preview-view pre.frontmatter.language-yaml {
   text-shadow: none;
   border-radius: 0;
   border-bottom: 1.5px solid var(--color-border-2);
-  padding: 4px 0;
+  padding: 4px 0 0 0;
   margin-bottom: 0;
   margin-bottom: 16px;
 }
@@ -5272,54 +5207,51 @@ samp {
   background-color: var(--color-border-2);
 }
 
-::-webkit-scrollbar {
+*::-webkit-scrollbar-thumb {
+  visibility: visible;
+  border: 4px solid var(--background-primary);
+  border-radius: 32px;
+  background-color: var(--color-primary-20);
+}
+*::-webkit-scrollbar-thumb:hover {
+  border-width: 3px;
+  transition: 150ms cubic-bezier(0, 0, 0.3, 1);
+}
+*::-webkit-scrollbar {
   visibility: visible;
   width: 12px;
-  /* width of vertical scrollbars  */
   height: 12px;
-  /* height of horizontal scrollbars  */
   border-radius: 0;
-  /* roundedness of scrollbar area */
   background-color: transparent;
-  /* color of scrollbar area  */
 }
-
-::-webkit-scrollbar-thumb {
-  visibility: visible;
-  border: 3px solid var(--background-primary);
-  border-radius: 32px;
-  /* roundedness of scrollbar */
-  background-color: var(--color-primary-20);
-  /* color of scrollbar (part that moves) */
-}
-
-::-webkit-scrollbar-thumb:active {
+*::-webkit-scrollbar-thumb:active {
   background-color: var(--color-primary-30);
 }
 
-/* hide all scrollbars except the editor's */
+code::-webkit-scrollbar-thumb {
+  border-color: var(--color-primary-w);
+}
+.theme-dark code::-webkit-scrollbar-thumb {
+  border-color: #0d0d0d;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
 
-/* global search results scroll & modal settings */
 .modal.mod-settings .vertical-tabs-container .vertical-tab-content-container ::-webkit-scrollbar,
 .workspace-leaf-content .search-result-container.mod-global-search::-webkit-scrollbar {
   display: inherit;
 }
 
-/* Note scroll */
 .workspace-split.mod-vertical ::-webkit-scrollbar {
   display: inherit;
 }
 
-/* File Explorer */
 .workspace-tabs .nav-files-container::-webkit-scrollbar {
   display: inherit;
 }
 
-/* Disable Scrollbars Style Settings Option */
-/* global search results scroll & modal settings */
 .no-scrl-modal .modal.mod-settings .vertical-tabs-container .vertical-tab-content-container ::-webkit-scrollbar {
   display: none;
 }
@@ -5328,12 +5260,10 @@ samp {
   display: none;
 }
 
-/* Note scroll */
 .no-scrl-note .workspace-split.mod-vertical ::-webkit-scrollbar {
   display: none;
 }
 
-/* File Explorer */
 .no-scrl-fx .workspace-tabs .nav-files-container::-webkit-scrollbar {
   display: none;
 }
