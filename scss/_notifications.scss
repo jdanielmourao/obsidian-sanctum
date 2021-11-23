@@ -1,10 +1,10 @@
 @use 'var';
 
 .notice {
-    font-family: var(--font-mono);
-    font-weight: var.$font-light;
-    color: var(--background-primary);
-    border-radius: 3px; /* (isn't applying) */
-    transition: var.$duration-moderate-2 var.$motion-entrance-expressive;
-    background-color: var(--color-primary-k);
+	font-family: var(--font-mono);
+	font-weight: var.$font-light;
+	color: var(--background-primary);
+	border-radius: 4px;
+	transition: var.$duration-moderate-2 var.$motion-entrance-expressive;
+	background-color: var(--color-primary-k);
 }

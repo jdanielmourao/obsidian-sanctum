@@ -1,201 +1,128 @@
 @use 'var';
 
+// dimensions of settings, community plugins & themes modals
 .modal-container .modal.mod-community-theme:not(.is-mobile .modal.mod-community-theme),
 .modal.mod-community-plugin:not(.is-mobile .modal.mod-community-plugin),
 .modal.mod-settings:not(.is-mobile .modal.mod-settings) {
-    width: 40vw;
-    min-width: 1000px;
-    height: 80vh;
-    min-height: 80vh;
-    max-height: 80vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    box-shadow: var.$elevation-1;
+	width: 40vw;
+	min-width: 1000px;
+	height: 80vh;
+	min-height: 80vh;
+	max-height: 80vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	box-shadow: var.$elevation-1;
 }
 
 .modal-container .modal.mod-community-theme:not(.is-mobile .modal.mod-community-theme) {
-    width: var(--community-theme);
+	width: var(--community-theme);
 }
-
 .modal.mod-community-plugin:not(.is-mobile .modal.mod-community-plugin){
-    width: var(--community-plugin);
+	width: var(--community-plugin);
 }
-
 .modal.mod-settings:not(.is-mobile .modal.mod-settings) {
-    width: var(--settings);
+	width: var(--settings);
 }
 
-.modal {
-    border:none;
-    background:var(--background-primary);
-    border-radius: 6px;
-    overflow:hidden;
-    padding: var.$size-5
-             var.$size-5
-             var.$size-3;
+.modal.mod-settings .vertical-tab-content-container { // main content, besides left panel
+	border-left: 0px solid var(--background-primary);
+	padding-bottom: var.$size-0;
+	padding-right: var.$size-1; // space between scroll bar and end of settings menu
+	height: 80vh;
 }
 
-.modal.mod-settings .vertical-tab-content-container {
-    border-left: 0px solid var(--background-primary);
-    padding-bottom: var.$size-0;
-    padding-right: var.$size-1; /* space between scroll bar and end of settings menu */
-    height: 80vh;
-}
-
-/* plugin update loading bar */
+// plugin update loading bar
 .modal.mod-settings .vertical-tab-content.is-loading:before {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    width: 0;
-    height: 3px;
-    background-color: var(--color-accent);
-    animation: 1000ms var.$motion-standard-expressive var.$duration-slow-1 infinite progress-bar;
+	content: ' ';
+	position: absolute;
+	top: 0;
+	width: 0;
+	height: 3px;
+	background-color: var(--color-accent);
+	animation: 1000ms var.$motion-standard-expressive var.$duration-slow-1 infinite progress-bar;
 }
 
-.modal.mod-settings .vertical-tab-header {
-    padding: var.$size-5
-             var.$size-0;
-    flex: 0 0 200px;
-    height: 80vh;
-    overflow: auto;
+.modal.mod-settings .vertical-tab-header { // left panel of settings modal
+	padding: var.$size-5
+			 var.$size-0;
+	flex: 0 0 200px;
+	height: 80vh;
+	overflow: auto;
 }
 
 .modal.mod-settings {
-    box-shadow: var.$elevation-2;
-    height: 80vh;
-    overflow: visible;
+	box-shadow: var.$elevation-2;
+	height: 80vh;
+	overflow: visible;
 }
 
 .modal-content {
-    padding: var.$size-0;
+	padding: var.$size-0;
 }
 
-.modal-bg {  /* background of settings*/
-    position: absolute;
-    top: var.$size-0;
-    left: var.$size-0;
-    width: 100%;
-    height: 100%;
-    background-color: hsla(var(--hsl-color-primary-w), .3);
-    backdrop-filter: blur(5px);
-}
+.modal-bg {  // background of settings
+	position: absolute;
+	top: var.$size-0;
+	left: var.$size-0;
+	width: 100%;
+	height: 100%;
+	background-color: hsla(var(--hsl-color-primary-w), .3);
+	backdrop-filter: blur(5px); // blurs the background
 
-.no-blur .modal-bg {  /* background of settings*/
-    background-color: hsla(var(--hsl-color-primary-w), .6);
-    backdrop-filter: blur(0px);
+	.no-blur & {  // option to remove blur from background of settings
+		background-color: hsla(var(--hsl-color-primary-w), .6);
+		backdrop-filter: blur(0px);
+	}
 }
 
 .horizontal-tab-nav-item,
- .vertical-tab-nav-item {
-    background-color: var(--background-primary);
-    padding: var.$size-2
-             var.$size-2
-             var.$size-2
-             var.$size-6;
-    margin: var.$size-1
-            var.$size-0;
-    cursor: default;
-    font-size: var.$font-scale-00;
-    border-left: 3px solid transparent;
-    color: var(--text-muted);
+ .vertical-tab-nav-item { // each section of the left side panel of settings
+	background-color: var(--background-primary);
+	padding: var.$size-2
+			 var.$size-2
+			 var.$size-2
+			 var.$size-6;
+	margin: var.$size-1
+			var.$size-0;
+	cursor: default;
+	font-size: var.$font-scale-00;
+	border-left: 3px solid transparent;
+	color: var(--text-muted);
 }
 
 .vertical-tab-nav-item:hover {
-    border-left-color: var(--color-hover);
+	border-left-color: var(--color-hover);
 }
 
 .vertical-tab-nav-item.is-active {
-    color: var(--text-normal);
-    border-left-color: var(--color-accent);
-    background-color: var(--color-primary-w);
+	color: var(--text-normal);
+	border-left-color: var(--color-accent);
+	background-color: var(--color-primary-w);
 }
 
-.setting-item {
-    display: flex;
-    align-items: center;
-    padding: var.$size-5
-             var.$size-0
-             var.$size-5
-             var.$size-0;
-    border-top: 1px solid var(--color-border-1);
+.setting-item { // sections of the main panel
+	display: flex;
+	align-items: center;
+	padding: var.$size-5
+			 var.$size-0
+			 var.$size-5
+			 var.$size-0;
+	border-top: 1px solid var(--color-border-1);
+
+	& .setting-item-name {
+		font-size: var.$font-scale-0;
+	}
+	& .setting-item-description {
+		font-size: var.$font-scale-00;
+	}
+	& .setting-item-control .search-input-container {
+		margin-bottom: 0;
+		margin-right: 0;
+	}
 }
 
-.setting-item .setting-item-name {
-    font-size: var.$font-scale-0;
-}
-
-.setting-item .setting-item-description {
-    font-size: var.$font-scale-00;
-}
-
-.setting-item .setting-item-control .search-input-container {
-    margin-bottom: 0;
-    margin-right: 0;
-}
-
-.community-theme-container .setting-item-control button {
-    margin-left: var.$size-3;
-    margin-right: var.$size-9;
-    padding: var.$size-2
-             var.$size-3
-             var.$size-1;
-}
-
-.community-theme-container .theme-list .community-theme {
-    padding: var.$size-3
-             var.$size-3
-             var.$size-3
-             var.$size-3;
-    margin: var.$size-3
-            var.$size-3
-            var.$size-3
-            var.$size-3;
-}
-
-/* Theme Image Enlarge */
-.modal.mod-image-lightbox {
-    width: 40vw;
-    min-width: 1100px;
-    height: auto;
-}
-
-.is-mobile .modal.mod-image-lightbox {
-    width: 100vw;
-}
-
-.community-theme-container .theme-list .community-theme:hover {
-    background-color: var(--color-hover);
-    border-radius: 0;
-}
-
-.community-theme-container .theme-list .community-theme.is-selected {
-    background-color: var(--color-hover);
-    border-radius: 0;
-/*    outline: 1.5px solid var(--color-accent);
-    outline-offset: -1.5px;*/
-}
-
-.community-theme-container .theme-list .community-theme.is-selected:hover {
-    background-color: var(--color-hover);
-}
-
-.community-theme-container .theme-list .community-theme.is-selected
- .modal-button-container button {
-    background-color: var(--color-accent);
-    color: #{var.$color-black};
-    border-radius: 0;
-    padding: var.$size-2 var.$size-5;
- }
-
-.community-theme-container .theme-list .community-theme.is-selected
- .modal-button-container button.mod-cta {
-    background-color: var(--color-primary-30);
-    color: var(--text-normal);
-}
-
-.vertical-tab-header-group-title {
+.vertical-tab-header-group-title { // settings left panel group title
     font-size: var.$font-scale-00;
     font-weight: var.$font-semi-bold;
     color: var(--text-muted);
@@ -207,38 +134,105 @@
     height: 100%;
 }
 
-.horizontal-tab-content, .vertical-tab-content {
+.horizontal-tab-content,
+ .vertical-tab-content {
     background-color: var(--background-secondary);
     padding: 5px 24px;
 }
 
-.setting-add-hotkey-button svg {
-    height: 20px;
-    width: 20px;
+// Community Themes
+.community-theme-container {
+	& .setting-item-control button {
+		margin-left: var.$size-3;
+		margin-right: var.$size-9;
+		padding: var.$size-2
+				 var.$size-3
+				 var.$size-1;
+	}
+	& .theme-list .community-theme {
+		padding:var.$size-3
+				var.$size-3
+				var.$size-3
+				var.$size-3;
+		margin: var.$size-3
+				var.$size-3
+				var.$size-3
+				var.$size-3;
+
+		&:hover {
+			background-color: var(--color-hover);
+			border-radius: 0;
+		}
+		&.is-selected {
+			background-color: var(--color-hover);
+			border-radius: 0;
+		//    outline: 1.5px solid var(--color-accent);
+		//    outline-offset: -1.5px;
+		}
+		&:hover {
+			background-color: var(--color-hover);
+		}
+		& .modal-button-container button {
+			background-color: var(--color-accent);
+			color: #{var.$color-black};
+			border-radius: 0;
+			padding: var.$size-2 var.$size-5;
+
+			&.mod-cta {
+				background-color: var(--color-primary-30);
+				color: var(--text-normal);
+			}
+		}
+	}
 }
 
-.setting-hotkey.mod-empty {
-    padding-right: var.$size-3;
-    padding-top: var.$size-1;
+.community-theme-remove-button.clickable-icon.u-muted { // theme delete button
+	background-color: transparent;
+}
+
+// Theme Image Enlarge
+.modal.mod-image-lightbox {
+	width: 40vw;
+	min-width: 1100px;
+	height: auto;
+
+	.is-mobile & {
+		width: 100vw;
+	}
+}
+
+// Hotkeys Menu
+.setting-add-hotkey-button svg { //hotkey icon
+	height: 20px;
+	width: 20px;
+}
+
+.setting-hotkey.mod-empty { // "Blank", aka unset hotkey
+	padding-right: var.$size-3;
+	padding-top: var.$size-1;
 }
 
 .hotkey-list-container {
-    padding-right: 0;
+	padding-right: 0;
+
+	.hotkey-list-container .setting-item {
+		padding: var.$size-4
+				 var.$size-0
+				 var.$size-4
+				 var.$size-0;
+	}
 }
 
-.hotkey-list-container .setting-item {
-    padding: var.$size-4
-             var.$size-0
-             var.$size-4
-             var.$size-0;
-}
-
+// Appearance Menu
+//folder icon next to "Manage" button
 .setting-editor-extra-setting-button.clickable-icon[aria-label="Open themes folder"] {
-    margin: var.$size-0
-            var.$size-5;
+	margin: var.$size-0
+			var.$size-5;
 }
 
+//Sync Core Menu
+// Manage excluded folder menu
 .sync-file-tree-container.file-tree .file-tree-item-icon svg.folder {
-    height: 16px;
-    width: 16px;
+	height: 16px;
+	width: 16px;
 }

@@ -1,75 +1,65 @@
 @use 'var';
 
 .prompt {
-    padding: var.$size-5;
-    box-shadow: var.$elevation-2;
-}
+	padding: var.$size-5;
+	box-shadow: var.$elevation-2;
 
-.prompt-results {
-    padding: var.$size-5
-             var.$size-0
-             var.$size-0
-             var.$size-0;
-}
-
-.prompt-results span.suggestion-flair {
-	left: 0px;
-	transform: scale(1) translateY(4px);
-}
-
-/* hashtag suggestion */
-.suggestion-container{
-    border: none;
-    box-shadow: var.$elevation-1;
+	&-results {
+		padding: var.$size-5
+				 var.$size-0
+				 var.$size-0
+				 var.$size-0;
+	}
+	&-results span.suggestion-flair {
+		left: 0px;
+		transform: scale(1) translateY(4px);
+	}
 }
 
 .suggestion {
-    border-radius: 4px;
-}
+	border-radius: 4px;
 
-.suggestion-container .suggestion .suggestion-item {
-    position: relative;
-    padding: var.$size-2
-             var.$size-5 
-             var.$size-2 
-             var.$size-7;
-    cursor: pointer;
-    white-space: pre-wrap;
-    line-height: var.$leading-3;
-}
-
-.suggestion-container .suggestion .suggestion-flair {
-    margin-left: -4px;
-    transform: scale(.8);
-    margin-top: -2px
-}
-
-/* prompt suggestion */
-.suggestion-item {
-    position: relative;
-    padding: var.$size-3
-             var.$size-0 
-             var.$size-3 
-             var.$size-7;
-    cursor: pointer;
-    white-space: pre-wrap;
-    line-height: var.$leading-3;
-}
-
-.suggestion-item:hover {
-    background-color: var(--color-hover);
-}
-
-.suggestion-item.is-selected {
-    background-color: var(--color-hover);
-}
-
-.prompt-results .suggestion-flair {
-    left: 0px;
-    transform: scale(0.8);
-    padding-left: var.$size-3;
-}
-
-.prompt-results .suggestion-prefix {
-    color: var(--color-accent);
+	&-container{ // hashtag suggestion
+		border: none;
+		box-shadow: var.$elevation-1;
+	}
+	.suggestion-container & .suggestion-item {
+		position: relative;
+		padding: var.$size-2
+				 var.$size-5 
+				 var.$size-2 
+				 var.$size-7;
+		cursor: pointer;
+		white-space: pre-wrap;
+		line-height: var.$leading-3;
+	}
+	.suggestion-container & .suggestion-flair {
+		margin-left: -4px;
+		transform: scale(.8);
+		margin-top: -2px
+	}
+	&-item { // prompt suggestion
+		position: relative;
+		padding: var.$size-3
+				 var.$size-0 
+				 var.$size-3 
+				 var.$size-7;
+		cursor: pointer;
+		white-space: pre-wrap;
+		line-height: var.$leading-3;
+	}
+	&-item:hover {
+		background-color: var(--color-hover);
+	}
+	&-item.is-selected {
+		background-color: var(--color-hover);
+	}
+	.prompt-results &-flair {
+		left: 0px;
+		transform: scale(0.8);
+		padding-left: var.$size-3;
+	}
+	.prompt-results &-prefix {
+		color: var(--color-accent);
+	}
 }

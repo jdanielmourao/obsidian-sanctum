@@ -10,10 +10,6 @@
 	padding-left: var.$size-5;
 }
 
-.menu-item.selected:not(.is-disabled):not(.is-label):hover {
-    background-color: var(--color-hover);
-}
-
 .theme-dark .menu-item.is-qe-file.selected:not(.is-disabled):not(.is-label):hover {
 background-color: var(--background-primary);
 }

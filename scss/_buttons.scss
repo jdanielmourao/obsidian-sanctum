@@ -81,9 +81,18 @@ button.mod-cta {
 	background-color: var(--color-primary-20);
 }
 
-/* Publish Page buttons */
+// Publish Page buttons
 .modal.mod-publish button:not(.mod-cta):not(.mod-warning) {
 	color: #{var.$color-white};
 	@include button-l;
 	background-color: var(--color-hover);
+}
+
+//Community Plugins Modal buttons
+
+.modal.mod-settings .setting-item-control button:not(.mod-cta):not(.mod-warning):not(.pcr-button),
+.modal.mod-community-plugin .community-plugin-info p button:not(.mod-cta):not(.mod-warning) {
+	color: var(--text-normal);
+	@include button-l;
+	background-color: var(--color-primary-20);
 }
