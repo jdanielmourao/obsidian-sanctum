@@ -1,18 +1,18 @@
 @use 'var';
 
 html body.plugin-sliding-panes-rotate-header .workspace > .mod-root > div.workspace-leaf.mod-active > div.workspace-leaf-content > div.view-header.view-header.view-header {
-    border: none;
+	border: none;
 }
 html body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:before,
 html body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > .view-header-title-container:after {
-    background: none;
+	background: none;
 }
 
-/* vertically align file title in sliding panes */
+// vertically align file title in sliding panes
 body.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-mixed .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
-    padding: 5px;
+	padding: 5px;
 }
 
 html body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
-    box-shadow: var.$elevation-2;
+	box-shadow: var.$elevation-2;
 }

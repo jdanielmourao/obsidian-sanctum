@@ -1,7 +1,7 @@
 @use 'var';
 
 .qe-popup-menu .menu-item {
-    display: flex;
+	display: flex;
 	padding-left: var.$size-5;
 }
 
@@ -11,10 +11,10 @@
 }
 
 .theme-dark .menu-item.is-qe-file.selected:not(.is-disabled):not(.is-label):hover {
-background-color: var(--background-primary);
+	background-color: var(--background-primary);
 }
 
-/* prevent appearing on top of the traffic lights of macOS */
+// prevent appearing on top of the traffic lights of macOS
 .menu.qe-popup-menu {
 	padding-top: var.$size-5;
 }

@@ -56,7 +56,7 @@
 		transition: var.$duration-fast-1 var.$motion-standard-expressive;
 	}
 	.theme-light & {
-		background: hsla(34.3, 21.2%, 93.5%, .9);
+		background-color: hsla(34.3, 21.2%, 93.5%, .9);
 	}
 	.theme-dark &:not(.tree-item-self) {
 		background-color: hsla(0, 0%, 7.8%, .9);

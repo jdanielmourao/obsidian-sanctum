@@ -1,61 +1,61 @@
 @use 'var';
 
 div#wordsprint div.status.pending {
-    background-color: var(--color-primary-30);
-    color: #{var.$color-white};
+	background-color: var(--color-primary-30);
+	color: #{var.$color-white};
 }
 
 body div#wordsprint div#statsPanel button:not(.statsTab):not(.goalsTab),
 body div#wordsprint div#sprintActionPanel button:not(.statsTab):not(.goalsTab) {
-    color: var(--background-primary);
-    border-radius: 0px;
-    padding: var.$size-3
-             var.$size-8
-             var.$size-3
-             var.$size-5;
-    font-size: var.$font-scale-00;
-    font-weight: var.$font-regular;
-    margin: var.$size-2 var.$size-5;
+	color: var(--background-primary);
+	border-radius: 0px;
+	padding: var.$size-3
+			 var.$size-8
+			 var.$size-3
+			 var.$size-5;
+	font-size: var.$font-scale-00;
+	font-weight: var.$font-regular;
+	margin: var.$size-2 var.$size-5;
 }
 body .view-content div#wordsprint div#sprintActionPanel button.sprintStart {
-    background-color: var(--color-green);
-    color: #{var.$color-white};
+	background-color: var(--color-green);
+	color: #{var.$color-white};
 }
 body .view-content div#wordsprint div#sprintActionPanel button.sprintStop {
-    background-color: var(--color-red);
-    color: #{var.$color-white};
+	background-color: var(--color-red);
+	color: #{var.$color-white};
 }
 
 div#wordsprint button.statsTab:hover,
 div#wordsprint button.goalsTab:hover,
 div#wordsprint button.statsTab,
 div#wordsprint button.goalsTab {
-    border-radius: 0px;
-    padding: var.$size-3
-             var.$size-8
-             var.$size-3
-             var.$size-5;
-    font-size: var.$font-scale-00;
-    font-weight: var.$font-regular;
+	border-radius: 0px;
+	padding: var.$size-3
+			 var.$size-8
+			 var.$size-3
+			 var.$size-5;
+	font-size: var.$font-scale-00;
+	font-weight: var.$font-regular;
 }
 
 #wordsprint #statsPanel #sprintViewStats button.viewStats{
-    margin: 0;
-    background-color: var(--color-primary-40);
-    color: var(--text-normal);
+	margin: 0;
+	background-color: var(--color-primary-40);
+	color: var(--text-normal);
 }
 
 div#wordsprint div#sprintViewStats {
-    padding: var.$size-5 var.$size-3;
+	padding: var.$size-5 var.$size-3;
 }
 
 body div#wordsprint .success {
-    color: #{var.$color-white};
-    background-color: var(--color-green);
+	color: #{var.$color-white};
+	background-color: var(--color-green);
 }
 body div#wordsprint .warning {
 	color: #{var.$color-black};
-    background-color: var(--color-yellow);
+	background-color: var(--color-yellow);
 }
 
 body div#wordsprint .danger {

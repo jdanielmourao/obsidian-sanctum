@@ -1,44 +1,41 @@
 @use 'var';
 
 progress {
-    -webkit-writing-mode: horizontal-tb;
-    writing-mode: horizontal-tb;
-    appearance: none;
-    box-sizing: border-box;
-    display: inline-block;
-    height: var.$size-2;
-    width: 240px;
-    border-radius: 0;
-    vertical-align: -0.2rem;
-}
+	-webkit-writing-mode: horizontal-tb;
+	writing-mode: horizontal-tb;
+	appearance: none;
+	box-sizing: border-box;
+	display: inline-block;
+	height: var.$size-2;
+	width: 240px;
+	border-radius: 0;
+	vertical-align: -0.2rem;
 
-progress[value]::-webkit-progress-bar {
-    background-color: var(--color-primary-20);
-    border-radius: 0px;
-}
+	&[value]::-webkit-progress-bar { //background
+		background-color: var(--color-primary-20);
+		border-radius: 0px;
+	}
 
-progress[value]::-webkit-progress-value{
-    background-color: var(--color-accent);
-}
-
-progress[value^='1']::-webkit-progress-value,
-progress[value^='2']::-webkit-progress-value,
-progress[value^='3']::-webkit-progress-value {
-    background-color: var(--color-red);
-}
-
-progress[value^='4']::-webkit-progress-value,
-progress[value^='5']::-webkit-progress-value,
-progress[value^='6']::-webkit-progress-value {
-    background-color: var(--color-yellow);
-}
-
-progress[value^='7']::-webkit-progress-value,
-progress[value^='8']::-webkit-progress-value,
-progress[value^='9']::-webkit-progress-value {
-  background-color: var(--color-green);
-}
-
-progress[value^='10']::-webkit-progress-value {
-    background-color: var(--color-accent);
+	&[value]::-webkit-progress-value{ //actual bar
+		background-color: var(--color-accent);
+	}
+	
+	&[value^='1']::-webkit-progress-value,
+	&[value^='2']::-webkit-progress-value,
+	&[value^='3']::-webkit-progress-value {
+		background-color: var(--color-red);
+	}
+	&[value^='4']::-webkit-progress-value,
+	&[value^='5']::-webkit-progress-value,
+	&[value^='6']::-webkit-progress-value {
+		background-color: var(--color-yellow);
+	}
+	&[value^='7']::-webkit-progress-value,
+	&[value^='8']::-webkit-progress-value,
+	&[value^='9']::-webkit-progress-value {
+		background-color: var(--color-green);
+	}
+	&[value^='10']::-webkit-progress-value {
+		background-color: var(--color-accent);
+	}
 }

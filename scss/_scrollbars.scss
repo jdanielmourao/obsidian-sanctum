@@ -1,36 +1,35 @@
 @use 'var';
 
 * { 
-    &::-webkit-scrollbar-thumb {
-        visibility: visible;
-        border: 4px solid var(--background-primary);
-        border-radius: 32px; // roundedness of scrollbar
-        background-color: var(--color-primary-20); // color of scrollbar (part that moves)
-    }
-    &::-webkit-scrollbar-thumb:hover {
-        border-width: 3px;
-        transition: var.$duration-moderate-1 var.$motion-entrance-expressive;
-    }
-    &::-webkit-scrollbar {
-        visibility: visible;
-        width: 12px; // width of vertical scrollbars
-        height: 12px; // height of horizontal scrollbars
-        border-radius: 0; // roundedness of scrollbar area
-        background-color: transparent; // color of scrollbar area
-    }
-    &::-webkit-scrollbar-thumb:active {
-        background-color: var(--color-primary-30);
-    }
+	&::-webkit-scrollbar-thumb {
+		visibility: visible;
+		border: 4px solid var(--background-primary);
+		border-radius: 32px; // roundedness of scrollbar
+		background-color: var(--color-primary-20); // color of scrollbar (part that moves)
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		border-width: 3px;
+		transition: var.$duration-moderate-1 var.$motion-entrance-expressive;
+	}
+	&::-webkit-scrollbar {
+		visibility: visible;
+		width: 12px; // width of vertical scrollbars
+		height: 12px; // height of horizontal scrollbars
+		border-radius: 0; // roundedness of scrollbar area
+		background-color: transparent; // color of scrollbar area
+	}
+	&::-webkit-scrollbar-thumb:active {
+		background-color: var(--color-primary-30);
+	}
 }
 
 code::-webkit-scrollbar-thumb {
-    border-color: var(--color-primary-w);
+	border-color: var(--color-primary-w);
 
-    .theme-dark & {
-        border-color: var.$color-dark;
-    }
+	.theme-dark & {
+		border-color: var.$color-dark;
+	}
 }
-
 
 // hide all scrollbars except the editor's
 ::-webkit-scrollbar {
@@ -49,18 +48,18 @@ code::-webkit-scrollbar-thumb {
 }
 // File Explorer
 .workspace-tabs .nav-files-container::-webkit-scrollbar {
-    display: inherit;
+	display: inherit;
 }
 
 // Disable Scrollbars Style Settings Option
 
 // global search results scroll & modal settings 
 .no-scrl-modal .modal.mod-settings .vertical-tabs-container .vertical-tab-content-container ::-webkit-scrollbar {
-    display:none;
+	display:none;
 }
 
 .no-scrl-search .workspace-leaf-content .search-result-container.mod-global-search::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
 // Note scroll
@@ -69,5 +68,5 @@ code::-webkit-scrollbar-thumb {
 }
 // File Explorer
 .no-scrl-fx .workspace-tabs .nav-files-container::-webkit-scrollbar {
-    display: none;
+	display: none;
 }

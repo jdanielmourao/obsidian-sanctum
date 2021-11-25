@@ -1,13 +1,10 @@
 @use 'var';
 
-/* ───────────────── For the icon(s), check SVG Replacement ──────────────── */
-
+// For the icon(s), check SVG Replacement
 body.is-mobile .workspace-leaf-content[data-type="advanced-tables-toolbar"] .nav-buttons-container {
-    padding: var.$size-2;
+	padding: var.$size-2;
 }
 
-.workspace-leaf-content[data-type="advanced-tables-toolbar"]
- .nav-header
- .nav-buttons-container {
-     padding: var.$size-2;
+.workspace-leaf-content[data-type="advanced-tables-toolbar"] .nav-header .nav-buttons-container {
+	padding: var.$size-2;
 }

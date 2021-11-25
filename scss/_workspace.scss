@@ -255,6 +255,21 @@ body div.workspace-split.mod-left-split .nav-buttons-container {
     border-radius: var.$size-0;
 }
 
+div.tree-item-inner {
+    margin-left: 16px;
+}
+
+.tree-item div.tree-item-icon.collapse-icon {
+    margin-left: -2px;
+    margin-right: -20px;
+}
+
+.tree-item-flair {
+	border-radius: 6px;
+	background-color: transparent;
+	color: var(--text-normal);
+}
+
 .tag-container {
     font-size: var.$font-scale-00;
     padding: var.$size-5

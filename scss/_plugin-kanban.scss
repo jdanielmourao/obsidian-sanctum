@@ -1,140 +1,140 @@
 @use 'var';
 
-/* ──────────────── For the icon(s), check SVG Replacement ──────────────── */
+// For the icon(s), check SVG Replacement
 div.kanban-plugin {
-    background-color: var(--background-primary);
+	background-color: var(--background-primary);
 }
 
 .view-content .kanban-plugin .tag {
-    border: var.$size-0;
-    background-color: var(--text-accent);
-    color: var(--background-primary);
-    border-radius: 30px;
+	border: var.$size-0;
+	background-color: var(--text-accent);
+	color: var(--background-primary);
+	border-radius: 30px;
 }
 
 .kanban-plugin__item-tags a.kanban-plugin__item-tag {
-    background-color: rgba(var(--interactive-accent-rgb),.1);
-    padding: var.$size-0
-             var.$size-2;
-    border-radius: 30px;
-    margin: var.$size-0;
+	background-color: rgba(var(--interactive-accent-rgb),.1);
+	padding: var.$size-0
+			 var.$size-2;
+	border-radius: 30px;
+	margin: var.$size-0;
 }
 
 div.kanban-plugin__lane {
-    background: var(--background-primary);
-    border-radius: 4px;
-    padding: var.$size-2;
-    box-shadow: var.$elevation-1;
-    border: 1px solid var(--color-primary-w);
+	background: var(--background-primary);
+	border-radius: 4px;
+	padding: var.$size-2;
+	box-shadow: var.$elevation-1;
+	border: 1px solid var(--color-primary-w);
 }
 
 .theme-dark div.kanban-plugin__lane {
-    border: 1px solid var(--color-primary-10);
+	border: 1px solid var(--color-primary-10);
 }
 
 button.kanban-plugin__new-lane-button {
-    background-color: var(--color-red);
-    color: var(--text-muted);
-    width: 100%;
-    text-align: left;
-    margin: var.$size-1;
-    border: 1px solid var(--color-border-1);
+	background-color: var(--color-red);
+	color: var(--text-muted);
+	width: 100%;
+	text-align: left;
+	margin: var.$size-1;
+	border: 1px solid var(--color-border-1);
 }
 
 div.kanban-plugin__item {
-    border: 1px solid var(--color-border-1);
+	border: 1px solid var(--color-border-1);
 }
 
 div.kanban-plugin__item-button-wrapper {
-    border-top: 1.5px solid var(--color-border-1);
-    padding: var.$size-2;
+	border-top: 1.5px solid var(--color-border-1);
+	padding: var.$size-2;
 }
 
 div.kanban-plugin__item-title-wrapper {
-    background: var(--background-primary);
-    display: flex;
-    padding: var.$size-2
-             var.$size-3;
+	background: var(--background-primary);
+	display: flex;
+	padding: var.$size-2
+			 var.$size-3;
 }
 
 .kanban-plugin__item-title-wrapper:hover {
-    filter: brightness(.95);
+	filter: brightness(.95);
 }
 
 body .kanban-plugin__lane-items.is-dragging-over {
-    border: 1px solid var(--interactive-accent);
-    background-color: var(--background-primary);
-    box-shadow: var.$elevation-1;
+	border: 1px solid var(--interactive-accent);
+	background-color: var(--background-primary);
+	box-shadow: var.$elevation-1;
 }
 
 body .kanban-plugin__grow-wrap > textarea,
 body .kanban-plugin__grow-wrap:after {
-    border: 1px solid var(--color-border-1);
-    padding: var.$size-2
-             var.$size-3;
-    font: inherit;
-    font-size: var.$font-scale-00;
-    overflow: hidden;
-    overflow-wrap: break-word;
-    white-space: pre-wrap;
+	border: 1px solid var(--color-border-1);
+	padding: var.$size-2
+			 var.$size-3;
+	font: inherit;
+	font-size: var.$font-scale-00;
+	overflow: hidden;
+	overflow-wrap: break-word;
+	white-space: pre-wrap;
 }
 
 button.kanban-plugin__new-item-button:hover {
-    color: var(--text-on-accent);
-    background-color: var(--color-hover);
-    border-radius: 0px;
+	color: var(--text-on-accent);
+	background-color: var(--color-hover);
+	border-radius: 0px;
 }
 
 textarea.kanban-plugin__item-input:focus {
-    outline: 1px solid var(--color-blue);
-    padding: var.$size-0;
+	outline: 1px solid var(--color-blue);
+	padding: var.$size-0;
 }
 
 .kanban-plugin__lane .kanban-plugin__lane-header-wrapper {
-    padding: var.$size-3;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    flex-grow: 0;
-    border-bottom: 1.5px solid var(--color-border-1);
+	padding: var.$size-3;
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	flex-grow: 0;
+	border-bottom: 1.5px solid var(--color-border-1);
 }
 
 body .kanban-plugin__drag-container > .kanban-plugin__lane-wrapper > .kanban-plugin__lane {
-    box-shadow: var.$elevation-2;
+	box-shadow: var.$elevation-2;
 }
 
 body .kanban-plugin__drag-container > .kanban-plugin__item-wrapper > .kanban-plugin__item {
-    box-shadow: var.$elevation-2;
+	box-shadow: var.$elevation-2;
 }
 
 .kanban-wrap .kanban-plugin__board.kanban-plugin__board > div {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, var(--lane-width));
-    width: 100%;
-    gap: var.$size-4;
-    overflow: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, var(--lane-width));
+	width: 100%;
+	gap: var.$size-4;
+	overflow: auto;
 }
 
 .kanban-plugin__markdown-preview-view code {
-    font-size: var.$font-scale-00;
+	font-size: var.$font-scale-00;
 }
 
 body .kanban-plugin__markdown-preview-view {
-    font-family: var(--font-preview);
-    font-size: var(--font-size-00);
-    line-height: 1.5em;
-    padding: unset;
-    width: unset;
-    height: unset;
-    position: unset;
-    overflow-y: hidden;
-    overflow-wrap: unset;
-    color: unset;
-    user-select: unset;
-    -webkit-user-select: unset;
+	font-family: var(--font-preview);
+	font-size: var(--font-size-00);
+	line-height: 1.5em;
+	padding: unset;
+	width: unset;
+	height: unset;
+	position: unset;
+	overflow-y: hidden;
+	overflow-wrap: unset;
+	color: unset;
+	user-select: unset;
+	-webkit-user-select: unset;
 }
 
-body .kanban-plugin__markdown-preview-view>div>* {
-    overflow-x: visible;
-    overflow-wrap: break-word;
+body .kanban-plugin__markdown-preview-view > div > * {
+	overflow-x: visible;
+	overflow-wrap: break-word;
 }

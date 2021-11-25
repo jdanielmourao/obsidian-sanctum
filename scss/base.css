@@ -967,6 +967,21 @@ body div.workspace-split.mod-left-split .nav-buttons-container {
   border-radius: 0px;
 }
 
+div.tree-item-inner {
+  margin-left: 16px;
+}
+
+.tree-item div.tree-item-icon.collapse-icon {
+  margin-left: -2px;
+  margin-right: -20px;
+}
+
+.tree-item-flair {
+  border-radius: 6px;
+  background-color: transparent;
+  color: var(--text-normal);
+}
+
 .tag-container {
   font-size: 0.875rem;
   padding: 16px 16px 16px 16px;
@@ -4273,7 +4288,7 @@ code.language-yaml.is-loaded .token.key.atrule {
   transition: 70ms cubic-bezier(0.4, 0.14, 0.3, 1);
 }
 .theme-light .graph-controls {
-  background: rgba(242, 239, 235, 0.9);
+  background-color: rgba(242, 239, 235, 0.9);
 }
 .theme-dark .graph-controls:not(.tree-item-self) {
   background-color: rgba(20, 20, 20, 0.9);
@@ -4967,19 +4982,15 @@ div.menu .menu-item:hover .menu-item-title {
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
   border: 1px solid var(--color-border-1);
 }
-
-/* no scrollbars in popover */
 .popover.hover-popover ::-webkit-scrollbar {
   display: none;
 }
-
 .popover.hover-popover .markdown-preview-view {
   padding-bottom: 16px;
   padding-top: 0px !important;
   padding: 24px;
   font-size: 0.9rem;
 }
-
 .popover.hover-popover .markdown-embed {
   height: auto;
   max-height: 30vh;
@@ -4997,34 +5008,22 @@ progress {
   border-radius: 0;
   vertical-align: -0.2rem;
 }
-
 progress[value]::-webkit-progress-bar {
   background-color: var(--color-primary-20);
   border-radius: 0px;
 }
-
 progress[value]::-webkit-progress-value {
   background-color: var(--color-accent);
 }
-
-progress[value^="1"]::-webkit-progress-value,
-progress[value^="2"]::-webkit-progress-value,
-progress[value^="3"]::-webkit-progress-value {
+progress[value^="1"]::-webkit-progress-value, progress[value^="2"]::-webkit-progress-value, progress[value^="3"]::-webkit-progress-value {
   background-color: var(--color-red);
 }
-
-progress[value^="4"]::-webkit-progress-value,
-progress[value^="5"]::-webkit-progress-value,
-progress[value^="6"]::-webkit-progress-value {
+progress[value^="4"]::-webkit-progress-value, progress[value^="5"]::-webkit-progress-value, progress[value^="6"]::-webkit-progress-value {
   background-color: var(--color-yellow);
 }
-
-progress[value^="7"]::-webkit-progress-value,
-progress[value^="8"]::-webkit-progress-value,
-progress[value^="9"]::-webkit-progress-value {
+progress[value^="7"]::-webkit-progress-value, progress[value^="8"]::-webkit-progress-value, progress[value^="9"]::-webkit-progress-value {
   background-color: var(--color-green);
 }
-
 progress[value^="10"]::-webkit-progress-value {
   background-color: var(--color-accent);
 }
@@ -5058,11 +5057,9 @@ samp {
   background-color: var(--color-border-1);
   transition: height 150ms cubic-bezier(0, 0, 0.38, 0.9);
 }
-
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:hover {
   height: 3px;
 }
-
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:active {
   background-color: var(--color-border-2);
 }
@@ -5078,17 +5075,10 @@ samp {
   background-color: var(--color-border-1);
   transition: width 150ms cubic-bezier(0, 0, 0.38, 0.9);
 }
-
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:hover,
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover {
   width: 3px;
-}
-
-.theme-light .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:active,
-.theme-light .workspace-split.mod-right-split > .workspace-leaf-resize-handle:active,
-.theme-light .workspace-split.mod-left-split > .workspace-leaf-resize-handle:active {
-  background-color: var(--color-border-2);
 }
 
 *::-webkit-scrollbar-thumb {
@@ -5169,7 +5159,6 @@ input[type=number] {
   border-color: transparent;
   border-bottom: 1px solid var(--color-border-2);
 }
-
 input[type=text]:focus,
 input[type=search]:focus,
 input[type=email]:focus,
@@ -5179,7 +5168,6 @@ input[type=number]:focus {
   outline: 1px solid var(--color-blue);
 }
 
-/* Document Search */
 .document-search-container {
   position: absolute;
   bottom: 0px;
@@ -5193,7 +5181,6 @@ input[type=number]:focus {
   z-index: var(--layer-popover);
   border-top: 1px solid var(--color-border-1);
 }
-
 .document-search-container .document-search-button {
   height: 24px;
   font-size: 0.875rem;
@@ -5202,7 +5189,6 @@ input[type=number]:focus {
   margin: 4px 2px;
   background-color: var(--color-border-1);
 }
-
 .document-search-container .document-search .document-search-input {
   margin: 4px 2px;
 }
@@ -5215,7 +5201,6 @@ input[type=number]:focus {
   background-position: center center;
   background-position: -6px 8px;
 }
-
 .theme-light .document-search-close-button:before {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23000000;%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eclose%3C/title%3E%3Cpolygon class='cls-1' points='24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4'/%3E%3Crect class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
 }
@@ -5231,29 +5216,38 @@ input[type=number]:focus {
   background-color: var(--background-primary);
 }
 
+.search-result-file-matches {
+  font-size: 0.875rem;
+  margin-bottom: 4px;
+  padding-left: 4px;
+  padding-bottom: 4px;
+  color: var(--text-faint);
+  margin-left: 8px;
+  border-bottom: 1px solid var(--color-border-1);
+}
+
 .search-result-file-match-destination-file {
   display: inline-flex;
   background-color: var(--background-primary);
   border-radius: 4px;
   padding: 2px 8px 2px 8px;
   margin: 4px 8px 0px 0px;
-  border: 1px solid var(--color-border-2);
+  border: 1px solid var(--color-border-1);
 }
 
 .search-result-file-matched-text {
   color: var(--text-normal);
   background-color: #d1d292;
 }
+.theme-dark .search-result-file-matched-text {
+  color: var(--text-normal);
+  background-color: #70702f;
+}
 
 .search-empty-state {
   color: var(--text-muted);
   font-size: 0.875rem;
   margin: 0px 16px 8px 16px;
-}
-
-.theme-dark .search-result-file-matched-text {
-  color: var(--text-normal);
-  background-color: #70702f;
 }
 
 .setting-item-control button {
@@ -5265,7 +5259,8 @@ input[type=number]:focus {
   margin: 4px;
 }
 
-.document-search, .document-replace {
+.document-search,
+.document-replace {
   width: 100%;
   display: flex;
   height: 48px;
@@ -5289,20 +5284,20 @@ input[type=number]:focus {
 }
 
 input[type=range] {
+  -webkit-appearance: none;
   background-color: transparent;
   height: 24px;
   padding: 0px;
-  -webkit-appearance: none;
   cursor: default;
-  border-radius: 90px;
+  border-radius: 50%;
+  width: 128px;
 }
-
 input[type=range]::-webkit-slider-runnable-track {
   background: var(--background-modifier-border);
-  border: 1px solid var(--color-border-1);
-  height: 3px;
+  border: 0px solid var(--color-border-1);
+  height: 2px;
+  width: 128px;
 }
-
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 16px;
@@ -5315,30 +5310,21 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 50%;
 }
 
-input[type=range]::-webkit-slider-thumb:hover,
-input[type=range]::-webkit-slider-thumb:active {
-  border-width: 1;
-  border: 1px solid transparent;
-  transition: 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
-  border: 2px solid var(--background-primary);
-}
-
 .graph-controls input[type=range]::-webkit-slider-runnable-track {
   margin-top: -5px;
 }
-
-.theme-dark .graph-controls input[type=range]::-webkit-slider-thumb {
-  border-color: var(--color-primary-10);
+.graph-controls input[type=range]::-webkit-slider-thumb {
+  border-color: var(--background-primary);
 }
 
 .checkbox-container {
   cursor: pointer;
   display: inline-block;
-  height: 24px;
   position: relative;
   user-select: none;
+  height: 24px;
   width: 48px;
-  border-radius: 24px;
+  border-radius: 30px;
   transition: 70ms cubic-bezier(0.4, 0.14, 0.3, 1);
   background-color: var(--color-primary-30);
 }
@@ -5348,10 +5334,10 @@ input[type=range]::-webkit-slider-thumb:active {
   content: "";
   display: inline-block;
   position: absolute;
-  background-color: var(--background-primary);
+  background-color: var(--color-primary-k);
   width: 18px;
   height: 18px;
-  margin: 3.25px;
+  top: 0.5px;
   left: -2px;
   border-radius: 50%;
   transition: transform 150ms cubic-bezier(0, 0, 0.3, 1), width 110ms cubic-bezier(0.4, 0.14, 1, 1), left 110ms cubic-bezier(0.4, 0.14, 0.3, 1), -webkit-transform 70ms cubic-bezier(0.4, 0.14, 0.3, 1);
@@ -5368,107 +5354,85 @@ input[type=range]::-webkit-slider-thumb:active {
 
 /* ──────────────────────────── Graph Checkboxes ──────────────────────────── */
 .graph-controls .checkbox-container {
-  cursor: pointer;
-  display: inline-block;
-  height: 24px;
-  position: relative;
-  user-select: none;
-  width: 48px;
-  border-radius: 32px;
-  transition: 70ms cubic-bezier(0.4, 0.14, 0.3, 1);
-  background-color: var(--color-primary-20);
-}
-
-.graph-controls .checkbox-container.is-enabled {
-  background-color: var(--color-accent);
+  height: 20px;
+  width: 40px;
+  border-radius: 30px;
 }
 
 .graph-controls .checkbox-container:after {
-  pointer-events: none;
-  content: "";
-  display: inline-block;
-  position: absolute;
-  background-color: var(--background-primary);
-  width: 16px;
-  height: 16px;
-  margin: 4px;
-  left: 0px;
-  border-radius: 50%;
-  transition: transform 150ms cubic-bezier(0, 0, 0.3, 1), width 110ms cubic-bezier(0.4, 0.14, 1, 1), left 110ms cubic-bezier(0.4, 0.14, 0.3, 1), -webkit-transform 70ms cubic-bezier(0.4, 0.14, 0.3, 1);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.03);
+  width: 14px;
+  height: 14px;
+  top: 0.25px;
+  left: -2px;
 }
 
 .graph-controls .checkbox-container.is-enabled:after {
-  transform: translate3d(20px, 0, 0);
+  transform: translate3d(22px, 0, 0);
 }
 
 .tooltip {
-  animation: pop-down 240ms forwards cubic-bezier(0.4, 0.14, 0.3, 1);
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
-  background-color: var(--color-primary-k);
-  border-radius: 3px;
-  color: var(--color-primary-10);
-  font-size: 0.875rem;
-  left: 50%;
-  line-height: 20px;
-  max-width: 300px;
-  padding: 4px 8px;
   position: fixed;
-  font-weight: 400;
   text-align: center;
+  white-space: pre-wrap;
   transform: translateX(-50%);
   z-index: var(--layer-tooltip);
   pointer-events: none;
-  white-space: pre-wrap;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--color-primary-k);
+  color: var(--color-primary-10);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 20px;
+  border-radius: 3px;
+  left: 50%;
+  max-width: 300px;
+  padding: 4px 8px;
+  animation: pop-down 240ms forwards cubic-bezier(0.4, 0.14, 0.3, 1);
 }
-
-.tooltip.mod-left,
-.tooltip.mod-right {
+.tooltip.mod-left, .tooltip.mod-right {
   animation: pop-right 240ms forwards cubic-bezier(0.4, 0.14, 0.3, 1);
 }
-
 .tooltip .tooltip-arrow {
   border-bottom: 5px solid var(--color-primary-k);
 }
-
 .tooltip.mod-right .tooltip-arrow {
   border-right: 5px solid var(--color-primary-k);
 }
-
 .tooltip.mod-left .tooltip-arrow {
   border-left: 5px solid var(--color-primary-k);
 }
-
 .tooltip.mod-top .tooltip-arrow {
   border-top: 5px solid var(--color-primary-k);
 }
-
 .tooltip.mod-error .tooltip-arrow {
   border-bottom-color: var(--background-modifier-error);
 }
-
 .tooltip.mod-error.mod-right .tooltip-arrow {
   border-right-color: var(--background-modifier-error);
   border-bottom: 5px solid transparent;
 }
-
 .tooltip.mod-error.mod-left .tooltip-arrow {
   border-left-color: var(--background-modifier-error);
   border-bottom: 5px solid transparent;
 }
 
+.progress-bar {
+  background-color: var(--background-primary);
+  border: 1px solid var(--color-border-1);
+}
+.progress-bar-message {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
 .progress-bar-line {
   position: absolute;
-  /* background */
   opacity: 0.4;
   background-color: var(--color-primary-w);
   width: 150%;
   border-radius: 0px;
   height: 8px;
 }
-
 .progress-bar-subline {
-  /* bar */
   position: absolute;
   background-color: var(--interactive-accent);
   border-radius: 0px;
@@ -5481,24 +5445,25 @@ input[type=range]::-webkit-slider-thumb:active {
   animation: 700ms cubic-bezier(0.2, 0, 0.38, 0.9) 400ms infinite progress-bar;
 }
 
-.progress-bar {
-  background-color: var(--background-primary);
-  border: 1px solid var(--color-border-1);
+.is-mobile .titlebar {
+  background: var(--color-primary);
+  border-bottom: 1.5px solid var(--color-border-1);
 }
-
-.progress-bar-message {
-  font-size: 1rem;
-  color: var(--text-muted);
+.is-mobile .titlebar-text {
+  margin-top: 3px;
+  color: var(--text-faint);
+}
+.is-mobile .titlebar-button {
+  display: none;
 }
 
 .is-mobile .modal-bg {
-  /* background of settings*/
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 100%;
-  background-color: hsla(var(--hsl-color-primary-w), 0.8);
+  background-color: var(--hsl-color-primary);
   backdrop-filter: blur(0px);
 }
 
@@ -5508,20 +5473,17 @@ input[type=range]::-webkit-slider-thumb:active {
   display: flex;
   overflow: hidden;
   height: 100vh;
-  width: 100vw;
-  max-width: 400pt;
+  width: 100%;
+  max-width: 300pt;
   z-index: var(--layer-sidedock);
 }
-
 .workspace-drawer.mod-left {
   border-right: 1px solid var(--color-border-1);
 }
-
 .workspace-drawer.mod-right {
   border-left: 1px solid var(--color-border-1);
 }
 
-/* ────────────────────────────── Pinned Drawer ───────────────────────────── */
 .workspace-drawer.is-pinned.mod-right,
 .workspace-drawer.is-pinned.mod-left {
   position: relative;
@@ -5536,7 +5498,6 @@ input[type=range]::-webkit-slider-thumb:active {
   border-right: 1px solid var(--color-border-1);
 }
 
-/* ─────────────────────────────── Mobile Nav ─────────────────────────────── */
 .is-mobile .nav-file-title-content:before {
   transform: translateY(0px);
 }
@@ -5560,23 +5521,68 @@ input[type=range]::-webkit-slider-thumb:active {
 }
 
 .workspace-drawer-active-tab-container {
-  padding-left: 22px;
+  padding-left: 16px;
   padding-right: 16px;
 }
+div.workspace-drawer.mod-left .workspace-drawer-active-tab-container {
+  padding-right: 0;
+  padding-left: 0;
+  border-left: 1px solid var(--color-border-1);
+}
 
-.workspace-drawer-header {
+.workspace-drawer.mod-left .workspace-drawer-tab-container {
+  margin-left: 64px;
+}
+
+.workspace-drawer.mod-left .workspace-drawer-header {
+  padding-left: 8px;
+  margin-left: 64px;
+  border-left: 1px solid var(--color-border-1);
+  display: none;
+}
+.workspace-drawer.mod-left .workspace-drawer-header .workspace-drawer-header-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.workspace-drawer.mod-left .workspace-drawer-header .workspace-drawer-header-left .workspace-drawer-header-info {
+  display: flex;
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 16px;
+}
+.workspace-drawer.mod-left .workspace-drawer-header .workspace-drawer-header-left .workspace-drawer-header-info div {
+  margin-top: auto;
+  margin-left: 16px;
+}
+
+.workspace-drawer-active-tab-header {
+  display: flex;
+  align-items: center;
+  margin: 16px 0px;
+  height: 24px;
+}
+div.workspace-drawer.mod-left .workspace-drawer-active-tab-header {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 18px;
+  padding-top: 32px;
+  border-bottom: 1px solid var(--color-border-1);
+}
+div.workspace-drawer.mod-left .workspace-drawer-active-tab-header .workspace-drawer-active-tab-title {
+  font-size: 1.25rem;
+}
+
+.workspace-drawer.mod-right .workspace-drawer-header {
   padding-left: 32px;
-  /*this is to align with the ribbon*/
 }
 
 div.workspace-drawer-active-tab-icon svg.fullscreen,
 .is-mobile .workspace-drawer-header-icon {
-  /* hide Pin icon */
   display: none;
 }
 
 .is-mobile .workspace-drawer-header-icon svg {
-  /* Pin Icon */
   color: var(--text-faint);
   cursor: pointer;
   margin-left: 8px;
@@ -5585,7 +5591,11 @@ div.workspace-drawer-active-tab-icon svg.fullscreen,
 }
 
 .workspace-drawer-active-tab-back-icon {
-  margin-right: 8px;
+  margin-right: 0px;
+}
+.workspace-drawer-active-tab-back-icon svg {
+  height: 18px;
+  width: 18px;
 }
 
 .is-mobile .workspace-drawer-tab-option-item-icon {
@@ -5604,11 +5614,9 @@ div.workspace-drawer-active-tab-icon svg.fullscreen,
   padding: 0px 4px 2px 4px;
   line-height: 32px;
   transform: translateY(-2px);
-  /* centers vertically each title's content */
   color: var(--text-normal);
 }
 
-/* ────────────────────────────── Input Search ────────────────────────────── */
 .is-mobile input[type=text] {
   display: block;
   width: 100%;
@@ -5621,17 +5629,46 @@ div.workspace-drawer-active-tab-icon svg.fullscreen,
   padding: 4px 16px 4px 32px;
 }
 
+.is-mobile .nav-header {
+  margin-bottom: 0px;
+  height: 32px;
+  border-bottom: 1px solid var(--color-border-1);
+}
+
+body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.is-mobile div.workspace-drawer.mod-left .nav-action-button svg {
+  vertical-align: 1px;
+}
+
+.is-mobile .nav-action-button svg.up-and-down-arrows {
+  height: 16px;
+  width: 16px;
+}
+
+.workspace-leaf-content .view-content {
+  padding: 16px 8px;
+  overflow: auto;
+}
+
 .is-mobile .modal,
 .is-mobile .prompt,
 .is-mobile .suggestion-container {
-  max-height: calc(100% - 100px);
+  max-height: calc(100vh - 48px);
   width: calc(100% - 20px);
   max-width: calc(100% - 20px);
   min-width: unset;
   position: absolute;
   bottom: 0;
   border-radius: 6px 6px 0 0;
-  padding: 10px 20px;
+  padding: 12px 24px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
   background-color: var(--background-primary);
   border: 1px solid var(--color-primary-w);
@@ -5676,12 +5713,10 @@ div.workspace-drawer-active-tab-icon svg.fullscreen,
   justify-content: center;
 }
 
-.is-mobile .modal.mod-community-theme .modal-content {
-  height: calc(90vh - 120px);
-  padding: 0 0px;
+.workspace-drawer.mod-left .workspace-drawer-inner {
+  padding-left: 0px;
 }
 
-/* ───────────────────────────────── Ribbon ───────────────────────────────── */
 .workspace-drawer-inner .side-dock-ribbon {
   border-right: 1px solid var(--color-border-1);
   background: var(--background-primary);
@@ -5690,28 +5725,6 @@ div.workspace-drawer-active-tab-icon svg.fullscreen,
   width: 64px;
   padding: 16px 0;
   margin-right: 0px;
-}
-
-.is-mobile .nav-header {
-  margin-bottom: 16px;
-}
-
-.is-mobile .nav-buttons-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.is-mobile div.workspace-drawer.mod-left .nav-action-button svg {
-  vertical-align: 1px;
-}
-
-/* correction of "change sort order" in file explorer */
-.is-mobile .nav-action-button svg.up-and-down-arrows {
-  height: 16px;
-  width: 16px;
 }
 
 .is-mobile .workspace-drawer-backdrop {
@@ -5760,10 +5773,15 @@ html .is-mobile div.menu {
 .is-mobile .modal-setting-back-button {
   box-shadow: none;
   border-bottom: 1px solid var(--color-border-2);
+  padding: 12px 24px;
+  height: 48px;
+  color: var(--text-normal);
+  background-color: var(--background-primary);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
 .is-mobile .modal-setting-back-button-icon {
-  transform: translateY(1px);
+  transform: translateY(0px);
 }
 
 @media (min-width: 400pt) {
@@ -5778,7 +5796,8 @@ html .is-mobile div.menu {
   width: 100vw;
   max-width: 800px;
   max-height: 100vh;
-  height: 90vh;
+  height: 100vh;
+  min-height: 100vh;
 }
 
 @media (min-width: 400pt) {
@@ -5791,9 +5810,41 @@ html .is-mobile div.menu {
     overflow: hidden;
   }
 }
+.is-mobile .modal.mod-community-theme {
+  min-height: calc(100vh - 48px);
+  padding: 0px;
+}
+
+.is-mobile .modal-close-button {
+  display: block;
+  z-index: 2;
+  top: 12px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--background-primary);
+}
+.is-mobile .modal-close-button:before {
+  content: "×";
+  font-weight: 300;
+  color: var(--text-muted);
+  background: none;
+}
+
 .is-mobile button {
   width: 100%;
   margin: 4px auto;
+  font-family: var(--font-ui);
+}
+
+.is-mobile .setting-item-control button {
+  padding: 8px 40px 8px 16px;
+}
+
+.modal.mod-settings .modal-content {
+  margin-top: 0;
+  overflow: hidden;
+  padding: 0;
 }
 
 .is-mobile .setting-item-control select,
@@ -5804,14 +5855,14 @@ html .is-mobile div.menu {
 }
 
 @media (min-width: 400pt) {
-  .is-mobile .setting-item-control select, .is-mobile .setting-item-control input, .is-mobile .setting-item-control button {
+  .is-mobile .setting-item-control select,
+.is-mobile .setting-item-control input,
+.is-mobile .setting-item-control button {
     width: auto;
   }
 }
 .is-mobile .setting-item:not(.mod-toggle):not(.setting-item-heading) {
-  flex-direction: row;
-  align-items: flex-start;
-  margin-right: 0;
+  flex-grow: 0;
 }
 
 .is-mobile .modal-button-container {
@@ -5853,7 +5904,8 @@ html .is-mobile div.menu {
   margin: 16px;
 }
 
-.workspace-drawer-tab-option-item-title, .workspace-drawer-active-tab-title {
+.workspace-drawer-tab-option-item-title,
+.workspace-drawer-active-tab-title {
   color: var(--text-muted);
   flex: 1 0 0;
   font-size: 1rem;
@@ -5862,13 +5914,12 @@ html .is-mobile div.menu {
   text-overflow: ellipsis;
 }
 
-html body.is-mobile .workspace-drawer-active-tab-content .nav-buttons-container {
+html body.is-mobile div.nav-header .nav-buttons-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end !important;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 8px 0px 8px 0px;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  padding: 0px 0px 0px 0px;
 }
 
 .is-mobile .cm-s-obsidian span.cm-hr::after {
@@ -5878,13 +5929,6 @@ html body.is-mobile .workspace-drawer-active-tab-content .nav-buttons-container 
 body.is-mobile .nav-action-button svg {
   height: 16px;
   width: 16px;
-}
-
-.workspace-drawer-active-tab-header {
-  display: flex;
-  align-items: center;
-  margin: 16px 0px;
-  height: 24px;
 }
 
 .workspace-drawer-tab-option-item-title,
@@ -6001,13 +6045,12 @@ body.is-mobile .nav-action-button svg {
 
 /*
 .workspace-drawer-ribbon .side-dock-settings:last-child {
-    margin-bottom: 16px;
+	margin-bottom: 16px;
 }*/
 .is-mobile .nav-folder .collapse-icon {
   display: none;
 }
 
-/* ────────────────────────── Publish Changes Page ────────────────────────── */
 .publish-change-list div.tree-item-inner.file-tree-item {
   margin-left: 16px;
 }
@@ -6043,12 +6086,10 @@ body.is-mobile .nav-action-button svg {
   color: #fcfbfa;
 }
 
-/* ──────────────────── Hide publish.css file from vault ──────────────────── */
 .nav-file-title[data-path="publish.css"].is-unsupported {
   display: none;
 }
 
-/* ───────────────────────────── Publish Website ──────────────────────────── */
 .published-container.is-readable-line-width .site-body {
   justify-content: space-between;
 }
@@ -6198,15 +6239,12 @@ details.admonition[open] > summary > .collapser > .handle {
   height: 20px;
   width: 20px;
 }
-
 .admonition-content-copy svg {
   color: var(--text-faint);
 }
-
 .admonition-content-copy svg:hover {
   color: var(--text-normal);
 }
-
 .admonition-content-copy:active svg {
   transform: scale(0.8);
 }
@@ -6223,16 +6261,13 @@ details.admonition[open] > summary > .collapser > .handle {
 details.admonition {
   --admonition-details-icon: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='22,16 12,26 10.6,24.6 19.2,16 10.6,7.4 12,6 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
-
 details.admonition.admonition-plugin > summary > .collapser > .handle {
   transform: rotate(90deg);
 }
-
 details.admonition.admonition-plugin[open] > summary > .collapser > .handle {
   transform: rotate(270deg);
 }
 
-/* ───────────────── For the icon(s), check SVG Replacement ──────────────── */
 body.is-mobile .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-buttons-container {
   padding: 4px;
 }
@@ -6257,13 +6292,11 @@ button.block-ref-count {
   background-color: var(--color-accent);
   transition: 240ms cubic-bezier(0.4, 0.14, 0.3, 1);
 }
-
 button.block-ref-count:hover {
   color: var(--background-primary);
   border: 0px solid var(--text-accent);
   border-radius: 15%;
 }
-
 button.block-ref-count:active {
   transform: scale(0.75);
 }
@@ -6277,7 +6310,9 @@ button.block-ref-count:active {
   color: var(--text-muted);
 }
 
-[data-block-ref-id] .search-input-container, [data-block-ref-id] [aria-label="Match case"], [data-block-ref-id] [aria-label="Explain search term"] {
+[data-block-ref-id] .search-input-container,
+[data-block-ref-id] [aria-label="Match case"],
+[data-block-ref-id] [aria-label="Explain search term"] {
   display: none;
 }
 
@@ -6309,68 +6344,54 @@ button.table-close::before {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:hsl(34.3, 21.2%25, 93.5%25);%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eclose%3C/title%3E%3Cpolygon class='cls-1' points='24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4'/%3E%3Crect class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
 }
-
 .theme-light button.table-close::before {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:hsl(30, 1.5%, 26.3%);%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eclose%3C/title%3E%3Cpolygon class='cls-1' points='24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4'/%3E%3Crect class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* ──────────────── For the icon(s), check SVG Replacement ──────────────── */
-/* ──────────────── For the icon(s), check SVG Replacement ──────────────── */
-/* corrects arrow in Fantasy Calendar */
 #calendar-container.fantasy-calendar .arrow.right svg {
   transform: rotate(180deg);
 }
-
 #calendar-container.fantasy-calendar .fantasy-nav {
   padding-left: 12px;
 }
-
-#calendar-container div.reset-button {
-  color: var(--text-muted);
-}
-
 #calendar-container.fantasy-calendar .clickable-icon svg.gear {
   opacity: 0.8;
 }
-
-/* highlighted day */
 #calendar-container.fantasy-calendar .day.fantasy-day.viewing {
   background-color: var(--color-hover);
   border: none;
   padding: 10px 8px 2px 8px;
 }
-
 #calendar-container.fantasy-calendar .day.fantasy-day.active {
   background-color: var(--background-primary);
   border-bottom: 2px solid var(--color-accent);
   padding: 10px 8px 2px 8px;
   border-radius: 50px;
 }
-
 #calendar-container.fantasy-calendar .day.fantasy-day.active:hover {
   background-color: var(--color-hover);
   transition: background-color 700ms cubic-bezier(0, 0, 0.3, 1);
 }
-
 .theme-dark #calendar-container.fantasy-calendar .day.fantasy-day.active:hover {
   background-color: var(--color-primary-20);
 }
-
 #calendar-container.fantasy-calendar div.weeks {
   border-radius: 0px;
   border-right: 0px solid var(--color-border-1);
 }
-
 #calendar-container.fantasy-calendar .weeks > span.week-num {
   border-radius: 0px;
   border-bottom: 1px solid var(--color-border-2);
   padding-bottom: 6px;
   padding-top: 4px;
 }
-
 #calendar-container.fantasy-calendar .weekdays {
   border-radius: 0px;
   border-bottom: 1px solid var(--color-border-2);
+}
+
+#calendar-container div.reset-button {
+  color: var(--text-muted);
 }
 
 #calendar-container {
@@ -6389,31 +6410,24 @@ button.table-close::before {
   --color-arrow: var(--color-primary-30);
   --color-arrow-hover: var(--color-primary-70);
 }
-
-#calendar-container .day,
-#calendar-container .week-num {
+#calendar-container .day, #calendar-container .week-num {
   padding: 8px 8px 2px 8px;
   border-radius: 4px;
 }
-
 .is-mobile #calendar-container .day {
   font-size: 0.875rem;
 }
-
 #calendar-container .day:hover {
   background-color: var(--color-hover);
 }
-
 #calendar-container thead {
   border-top: 1.5px solid var(--color-border-1);
 }
-
 #calendar-container tr th {
   font-size: calc(0.75rem - 3px);
   font-weight: 600;
   padding-top: 12px;
 }
-
 #calendar-container tr td {
   cursor: pointer;
   transition: 110ms cubic-bezier(0.4, 0.14, 0.3, 1);
@@ -6423,63 +6437,49 @@ button.table-close::before {
   padding: 0px;
   transition: none;
 }
-
 #calendar-container .table {
   border-collapse: separate;
   table-layout: fixed;
   width: 100%;
 }
-
 #calendar-container .reset-button {
   font-size: calc(0.75rem - 2px);
 }
-
-#calendar-container h3,
-#calendar-container span.month {
+#calendar-container h3, #calendar-container span.month {
   font-weight: 400;
   font-size: 1rem;
 }
-
 #calendar-container .arrow:hover > svg {
   color: var(--color-arrow-hover);
 }
-
 #calendar-container .arrow svg > path {
   display: none;
 }
-
 #calendar-container .arrow svg {
   background-color: currentColor;
   -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='10,16 20,6 21.4,7.4 12.8,16 21.4,24.6 20,26 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
 }
-
 #calendar-container .arrow {
   height: 16px;
   width: 16px;
   margin: 0px 4px;
 }
-
 #calendar-container .button:hover {
   color: var(--color-background-day-empty);
 }
-
 #calendar-container .reset-button {
   color: var(--color-primary-60);
 }
-
 #calendar-container .reset-button:hover {
   color: var(--color-primary-k);
 }
-
 #calendar-container .dot-container {
   background: transparent;
 }
-
 #calendar-container .year {
   color: var(--text-normal);
 }
 
-/* ──────────────── For the icon(s), check SVG Replacement ──────────────── */
 .modal-content .buttons .btn-next,
 .modal-content .buttons .btn-previous {
   margin-top: 16px;
@@ -6489,19 +6489,15 @@ button.table-close::before {
 .is-mobile .checklist-plugin-main button {
   width: 15%;
 }
-
 .is-mobile .checklist-plugin-main ul {
   padding-inline-start: 0px;
 }
-
 .checklist-plugin-main button {
   margin: initial;
 }
-
 .checklist-plugin-main p {
   margin: initial;
 }
-
 .checklist-plugin-main ul li.classic {
   display: flex;
   align-items: center;
@@ -6514,7 +6510,6 @@ button.table-close::before {
   line-height: 1em;
   margin-bottom: 2px;
 }
-
 .checklist-plugin-main li.classic .checkbox {
   width: 16px;
   height: 16px;
@@ -6528,34 +6523,27 @@ button.table-close::before {
   border: 1.5px solid var(--color-primary-40);
   border-radius: 4px;
 }
-
 .checklist-plugin-main li.classic .checkbox:hover {
   filter: brightness(150%);
 }
-
 .checklist-plugin-main li.classic .toggle {
   padding: 0px;
   padding-left: 8px;
 }
-
 .checklist-plugin-main button:hover {
   background-color: var(--background-primary);
 }
-
 .theme-light .checklist-plugin-main header .count {
   background: var(--color-primary-20);
   font-weight: 400;
 }
-
 .checklist-plugin-main header .count {
-  /* Counter */
   padding: var(--todoList-countPadding);
   background: var(--color-primary-10);
   border-radius: 32px;
   font-size: 0.75rem;
   font-weight: 300;
 }
-
 .checklist-plugin-main header.group-header.page {
   margin: var(--todoList-pageMargin);
   color: var(--text-normal);
@@ -6564,28 +6552,21 @@ button.table-close::before {
   font-size: 1rem;
   font-weight: 400;
 }
-
 .checklist-plugin-main .header {
   margin: var(--todoList-headerMargin);
   display: flex;
   gap: var(--todoList-headerGap);
   align-items: center;
 }
-
 .checklist-plugin-main .collapse .down {
   transform: rotate(180deg);
   transition: 0s;
 }
-
 .checklist-plugin-main .collapse .left {
   transform: rotate(0deg);
   transition: 0s;
 }
 
-/* ──────────────── For the icon(s), check SVG Replacement ──────────────── */
-/* ──────────────── For the icon(s), check SVG Replacement ──────────────── */
-/* ──────────────── For the icon(s), check SVG Replacement ──────────────── */
-/* ──────────────── For the icon(s), check SVG Replacement ──────────────── */
 div.kanban-plugin {
   background-color: var(--background-primary);
 }
@@ -6721,7 +6702,6 @@ body .kanban-plugin__markdown-preview-view > div > * {
   overflow-wrap: break-word;
 }
 
-/* ──────────────── For the icon(s), check SVG Replacement ──────────────── */
 .qe-popup-menu .menu-item {
   display: flex;
   padding-left: 16px;
@@ -6736,7 +6716,6 @@ body .kanban-plugin__markdown-preview-view > div > * {
   background-color: var(--background-primary);
 }
 
-/* prevent appearing on top of the traffic lights of macOS */
 .menu.qe-popup-menu {
   padding-top: 16px;
 }
@@ -6750,7 +6729,6 @@ html body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace
   background: none;
 }
 
-/* vertically align file title in sliding panes */
 body.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-mixed .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
   padding: 5px;
 }
@@ -6857,7 +6835,6 @@ body div#wordsprint .danger {
   background-color: var(--color-red);
 }
 
-/* ───────────────────────── General SVG Replacement ──────────────────────── */
 body:not(.no-sanctum-icons) svg.add-note-glyph,
 body:not(.no-sanctum-icons) svg.any-key,
 body:not(.no-sanctum-icons) svg.audio-file,
@@ -7188,134 +7165,108 @@ body:not(.no-sanctum-icons) svg.running-man > path {
   display: none;
 }
 
-/* Add File */
 body:not(.no-sanctum-icons) svg.add-note-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='30 24 26 24 26 20 24 20 24 24 20 24 20 26 24 26 24 30 26 30 26 26 30 26 30 24'/%3E%3Cpath d='M16,28H8V4h8v6a2.0058,2.0058,0,0,0,2,2h6v4h2V10a.9092.9092,0,0,0-.3-.7l-7-7A.9087.9087,0,0,0,18,2H8A2.0058,2.0058,0,0,0,6,4V28a2.0058,2.0058,0,0,0,2,2h8ZM18,4.4,23.6,10H18Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Hotkey */
 body:not(.no-sanctum-icons) svg.any-key {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Emac-command%3C/title%3E%3Cpath d='M24,13a4,4,0,0,0,4-4V8a4,4,0,0,0-4-4H23a4,4,0,0,0-4,4v3H13V8A4,4,0,0,0,9,4H8A4,4,0,0,0,4,8V9a4,4,0,0,0,4,4h3v6H8a4,4,0,0,0-4,4v1a4,4,0,0,0,4,4H9a4,4,0,0,0,4-4V21h6v3a4,4,0,0,0,4,4h1a4,4,0,0,0,4-4V23a4,4,0,0,0-4-4H21V13ZM21,8a2,2,0,0,1,2-2h1a2,2,0,0,1,2,2V9a2,2,0,0,1-2,2H21ZM8,11A2,2,0,0,1,6,9V8A2,2,0,0,1,8,6H9a2,2,0,0,1,2,2v3H8Zm3,13a2,2,0,0,1-2,2H8a2,2,0,0,1-2-2V23a2,2,0,0,1,2-2h3Zm8-5H13V13h6Zm2,2h3a2,2,0,0,1,2,2v1a2,2,0,0,1-2,2H23a2,2,0,0,1-2-2Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Audio File */
 body:not(.no-sanctum-icons) svg.audio-file {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M29,31a.9987.9987,0,0,1-.6245-.2192L23.6494,27H20a1,1,0,0,1-1-1V21a1,1,0,0,1,1-1h3.6494l4.7261-3.7808A1,1,0,0,1,30,17V30a1,1,0,0,1-1,1Zm-8-6h3a1,1,0,0,1,.6245.2192L28,27.9194V19.0806l-3.3755,2.7A1,1,0,0,1,24,22H21Z'/%3E%3Cpath d='M16,28H8V4h8v6a2.0058,2.0058,0,0,0,2,2h6v3l2,0V10a.9092.9092,0,0,0-.3-.7l-7-7A.9087.9087,0,0,0,18,2H8A2.0058,2.0058,0,0,0,6,4V28a2.0058,2.0058,0,0,0,2,2h8ZM18,4.4,23.6,10H18Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Import File icon */
 body:not(.no-sanctum-icons) svg.blocks {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Edata-vis--2%3C/title%3E%3Cpath d='M28,2H17a2.002,2.002,0,0,0-2,2v6H4a2.002,2.002,0,0,0-2,2V28a2.0023,2.0023,0,0,0,2,2H15a2.0023,2.0023,0,0,0,2-2V22H28a2.0027,2.0027,0,0,0,2-2V4A2.0023,2.0023,0,0,0,28,2Zm0,2,0,4H17V4ZM15.0009,22H4V18H15ZM17,10H28.0007l.0005,4H17Zm-2,2v4H4V12ZM4,28V24H15.0011l0,4Zm13-8V16H28.0015l0,4Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Bold */
 body:not(.no-sanctum-icons) svg.bold-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Etext-bold%3C/title%3E%3Cpath d='M18.25,25H9V7h8.5a5.25,5.25,0,0,1,4,8.65A5.25,5.25,0,0,1,18.25,25ZM12,22h6.23a2.25,2.25,0,1,0,0-4.5H12Zm0-7.5h5.5a2.25,2.25,0,1,0,0-4.5H12Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Box */
 body:not(.no-sanctum-icons) svg.box-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Ebox%3C/title%3E%3Cpath d='M20,21H12a2,2,0,0,1-2-2V17a2,2,0,0,1,2-2h8a2,2,0,0,1,2,2v2A2,2,0,0,1,20,21Zm-8-4v2h8V17Z'/%3E%3Cpath d='M28,4H4A2,2,0,0,0,2,6v4a2,2,0,0,0,2,2V28a2,2,0,0,0,2,2H26a2,2,0,0,0,2-2V12a2,2,0,0,0,2-2V6A2,2,0,0,0,28,4ZM26,28H6V12H26Zm2-18H4V6H28v4Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* "Add internal link" */
 body:not(.no-sanctum-icons) svg.bracket-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eterm%3C/title%3E%3Cpath d='M28,26H25V24h3V8H25V6h3a2.0023,2.0023,0,0,1,2,2V24A2.0027,2.0027,0,0,1,28,26Z'/%3E%3Ccircle cx='23' cy='16' r='2'/%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='9' cy='16' r='2'/%3E%3Cpath d='M7,26H4a2.0023,2.0023,0,0,1-2-2V8A2.002,2.002,0,0,1,4,6H7V8H4V24H7Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Unlink / Broken Link */
 body:not(.no-sanctum-icons) svg.broken-link {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eunlink%3C/title%3E%3Crect x='5' y='3.59' width='2' height='4.83' transform='translate(-2.49 6) rotate(-45.01)'/%3E%3Crect x='25' y='23.58' width='2' height='4.83' transform='translate(-10.77 25.99) rotate(-44.99)'/%3E%3Crect x='11' y='2' width='2' height='4'/%3E%3Crect x='2' y='11' width='4' height='2'/%3E%3Crect x='26' y='19' width='4' height='2'/%3E%3Crect x='19' y='26' width='2' height='4'/%3E%3Cpath d='M16.58,21.07l-3.71,3.72a4,4,0,1,1-5.66-5.66l3.72-3.72L9.51,14,5.8,17.72a6,6,0,0,0-.06,8.54A6,6,0,0,0,10,28a6.07,6.07,0,0,0,4.32-1.8L18,22.49Z'/%3E%3Cpath d='M15.41,10.93l3.72-3.72a4,4,0,1,1,5.66,5.66l-3.72,3.72L22.49,18l3.71-3.72a6,6,0,0,0,.06-8.54A6,6,0,0,0,22,4a6.07,6.07,0,0,0-4.32,1.8L14,9.51Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* "Toggle Bullet" */
 body:not(.no-sanctum-icons) svg.bullet-list-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elist--bulleted%3C/title%3E%3Ccircle cx='7' cy='9' r='3'/%3E%3Ccircle cx='7' cy='23' r='3'/%3E%3Crect x='16' y='22' width='14' height='2'/%3E%3Crect x='16' y='8' width='14' height='2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Collapse Results/ Outline */
 body:not(.no-sanctum-icons) svg.bullet-list {
   transform: translateY(1px);
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elist%3C/title%3E%3Crect x='10' y='6' width='18' height='2'/%3E%3Crect x='10' y='24' width='18' height='2'/%3E%3Crect x='10' y='15' width='18' height='2'/%3E%3Crect x='4' y='15' width='2' height='2'/%3E%3Crect x='4' y='6' width='2' height='2'/%3E%3Crect x='4' y='24' width='2' height='2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* It's not being used? */
 body:not(.no-sanctum-icons) svg.calendar-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,4H22V2H20V4H12V2H10V4H6A2.0025,2.0025,0,0,0,4,6V26a2.0025,2.0025,0,0,0,2,2H26a2.0025,2.0025,0,0,0,2-2V6A2.0025,2.0025,0,0,0,26,4ZM6,6h4V8h2V6h8V8h2V6h4l0,4H6Zm0,6h5v6H6ZM19,26H13V20h6Zm0-8H13V12h6Zm2,8V20h5l.0012,6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Today's Daily Note / Calendar */
 body:not(.no-sanctum-icons) svg.calendar-with-checkmark {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,4H22V2H20V4H12V2H10V4H6A2.0025,2.0025,0,0,0,4,6V26a2.0025,2.0025,0,0,0,2,2H26a2.0025,2.0025,0,0,0,2-2V6A2.0025,2.0025,0,0,0,26,4ZM6,6h4V8h2V6h8V8h2V6h4l0,4H6Zm0,6h5v6H6ZM19,26H13V20h6Zm0-8H13V12h6Zm2,8V20h5l.0012,6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Circle Checkbox */
 body:not(.no-sanctum-icons) svg.check-in-circle {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2ZM14,21.5908l-5-5L10.5906,15,14,18.4092,21.41,11l1.5957,1.5859Z'/%3E%3Cpolygon id='inner-path' class='cls-1' points='14 21.591 9 16.591 10.591 15 14 18.409 21.41 11 23.005 12.585 14 21.591'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Circle Checkbox */
 body:not(.no-sanctum-icons) svg.check-small {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='14 21.414 9 16.413 10.413 15 14 18.586 21.585 11 23 12.415 14 21.414'/%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,26A12,12,0,1,1,28,16,12,12,0,0,1,16,28Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Square Checkbox */
 body:not(.no-sanctum-icons) svg.checkbox-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Echeckbox--checked%3C/title%3E%3Cpath d='M26,4H6A2,2,0,0,0,4,6V26a2,2,0,0,0,2,2H26a2,2,0,0,0,2-2V6A2,2,0,0,0,26,4ZM6,26V6H26V26Z'/%3E%3Cpolygon points='14 21.5 9 16.54 10.59 15 14 18.35 21.41 11 23 12.58 14 21.5'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Checkmark */
 body:not(.no-sanctum-icons) svg.checkmark {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='13 24 4 15 5.414 13.586 13 21.171 26.586 7.586 28 9 13 24'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Hourglass */
 body:not(.no-sanctum-icons) svg.clock-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Ehourglass%3C/title%3E%3Crect x='15' y='19' width='2' height='2'/%3E%3Crect x='15' y='23' width='2' height='2'/%3E%3Cpath d='M23,11.67V4h3V2H6V4H9v7.67a2,2,0,0,0,.4,1.2L11.75,16,9.4,19.13a2,2,0,0,0-.4,1.2V28H6v2H26V28H23V20.33a2,2,0,0,0-.4-1.2L20.25,16l2.35-3.13A2,2,0,0,0,23,11.67ZM21,4v7H11V4Zm0,16.33V28H11V20.33L14.25,16,12,13h8l-2.25,3Z' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Clock */
 body:not(.no-sanctum-icons) svg.clock {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Etime%3C/title%3E%3Cpath d='M16,30A14,14,0,1,1,30,16,14,14,0,0,1,16,30ZM16,4A12,12,0,1,0,28,16,12,12,0,0,0,16,4Z'/%3E%3Cpolygon points='20.59 22 15 16.41 15 7 17 7 17 15.58 22 20.59 20.59 22'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Cloud */
 body:not(.no-sanctum-icons) svg.cloud {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Ecloud%3C/title%3E%3Cpath d='M16,7h0a7.66,7.66,0,0,1,1.51.15,8,8,0,0,1,6.35,6.34l.26,1.35,1.35.24a5.5,5.5,0,0,1-1,10.92H7.5a5.5,5.5,0,0,1-1-10.92l1.34-.24.26-1.35A8,8,0,0,1,16,7m0-2a10,10,0,0,0-9.83,8.12A7.5,7.5,0,0,0,7.49,28h17a7.5,7.5,0,0,0,1.32-14.88,10,10,0,0,0-7.94-7.94A10.27,10.27,0,0,0,16,5Z' transform='translate(0)'/%3E%3Crect class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Toggle Code */
 body:not(.no-sanctum-icons) svg.code-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Ecode%3C/title%3E%3Cpolygon points='31 16 24 23 22.59 21.59 28.17 16 22.59 10.41 24 9 31 16'/%3E%3Cpolygon points='1 16 8 9 9.41 10.41 3.83 16 9.41 21.59 8 23 1 16'/%3E%3Crect x='5.91' y='15' width='20.17' height='2' transform='translate(-3.6 27.31) rotate(-75)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32' transform='translate(0 32) rotate(-90)'/%3E%3C/svg%3E");
 }
 
-/* Command */
 body:not(.no-sanctum-icons) svg.command-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eterminal%3C/title%3E%3Cpath d='M26,4H6A2,2,0,0,0,4,6V26a2,2,0,0,0,2,2H26a2,2,0,0,0,2-2V6A2,2,0,0,0,26,4Zm0,2v4H6V6ZM6,26V12H26V26Z' transform='translate(0 0.01)'/%3E%3Cpolygon points='10.76 16.18 13.58 19.01 10.76 21.84 12.17 23.25 16.41 19.01 12.17 14.77 10.76 16.18'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Minimize */
 body:not(.no-sanctum-icons) svg.compress-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='4 18 4 20 10.586 20 2 28.582 3.414 30 12 21.414 12 28 14 28 14 18 4 18'/%3E%3Cpolygon points='30 3.416 28.592 2 20 10.586 20 4 18 4 18 14 28 14 28 12 21.414 12 30 3.416'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32' transform='translate(32 32) rotate(-180)'/%3E%3C/svg%3E%0A");
 }
 
-/* New note (Plus inside Circle) */
 body:not(.no-sanctum-icons) svg.create-new {
   -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpath d='M16,4c6.6,0,12,5.4,12,12s-5.4,12-12,12S4,22.6,4,16S9.4,4,16,4 M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14 S23.7,2,16,2z'/%3E%3Cpolygon points='24,15 17,15 17,8 15,8 15,15 8,15 8,17 15,17 15,24 17,24 17,17 24,17 '/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Cross inside Circle */
 body:not(.no-sanctum-icons) svg.cross-in-box {
   -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Echeckmark%3C/title%3E%3Cpath d='M16,2C8.2,2,2,8.2,2,16s6.2,14,14,14s14-6.2,14-14S23.8,2,16,2z M16,28C9.4,28,4,22.6,4,16S9.4,4,16,4s12,5.4,12,12 S22.6,28,16,28z'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Cpolygon points='21.4,23 16,17.6 10.6,23 9,21.4 14.4,16 9,10.6 10.6,9 16,14.4 21.4,9 23,10.6 17.6,16 23,21.4 '/%3E%3C/svg%3E%0A");
 }
 
-/* Close */
 body:not(.no-sanctum-icons) svg.cross {
   transform: scale(1.4) translateY(1px);
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23000000;%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eclose%3C/title%3E%3Cpolygon class='cls-1' points='24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4'/%3E%3Crect class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Half Start */
 body:not(.no-sanctum-icons) svg.crossed-star {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Estar--half%3C/title%3E%3Cpolygon points='11.45 11.22 1.28 12.7 8.64 19.87 6.9 30 16 25.22 16 2 11.45 11.22'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
@@ -7324,23 +7275,19 @@ body:not(.no-sanctum-icons) svg.dice-glyph {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="red" d="M79.167 12.5H20.833c-4.596 0 -8.333 3.738 -8.333 8.333v58.333c0 4.596 3.738 8.333 8.333 8.333h58.333c4.596 0 8.333 -3.738 8.333 -8.333V20.833c0 -4.596 -3.738 -8.333 -8.333 -8.333zM20.833 79.167V20.833h58.333l0.008 58.333H20.833z M39.583 33.333A6.25 6.25 0 0 1 33.333 39.583A6.25 6.25 0 0 1 27.083 33.333A6.25 6.25 0 0 1 39.583 33.333z M56.25 50A6.25 6.25 0 0 1 50 56.25A6.25 6.25 0 0 1 43.75 50A6.25 6.25 0 0 1 56.25 50z M72.917 66.667A6.25 6.25 0 0 1 66.667 72.917A6.25 6.25 0 0 1 60.417 66.667A6.25 6.25 0 0 1 72.917 66.667z"></path></svg>');
 }
 
-/* Open Random Note */
 body:not(.no-sanctum-icons) svg.dice {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eshuffle%3C/title%3E%3Cpath d='M22.59,19.41,26.17,23H19.55l-4.37-7,4.37-7h6.62l-3.58,3.59L24,14l6-6L24,2,22.59,3.41,26.17,7H19.55a2,2,0,0,0-1.69.94L14,14.11,10.14,7.94A2,2,0,0,0,8.45,7H2V9H8.45l4.37,7L8.45,23H2v2H8.45a2,2,0,0,0,1.69-.94L14,17.89l3.86,6.17a2,2,0,0,0,1.69.94h6.62l-3.58,3.59L24,30l6-6-6-6Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
   transform: scale(0.9);
 }
 
-/* New note */
 body:not(.no-sanctum-icons) svg.document {
   -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100%' height='100%' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Edocument%3C/title%3E%3Cpath d='M25.7,9.3l-7-7C18.5,2.1,18.3,2,18,2H8C6.9,2,6,2.9,6,4v24c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V10C26,9.7,25.9,9.5,25.7,9.3 z M18,4.4l5.6,5.6H18V4.4z M24,28H8V4h8v6c0,1.1,0.9,2,2,2h6V28z'/%3E%3Crect x='10' y='22' width='12' height='2'/%3E%3Crect x='10' y='16' width='12' height='2'/%3E%3Crect class='st0' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Documents / Copy document icon (not applied) */
 body:not(.no-sanctum-icons) svg.documents {
   -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Ecopy--file%3C/title%3E%3Cpath d='M27.4,14.7l-6.1-6.1C21,8.2,20.5,8,20,8h-8c-1.1,0-2,0.9-2,2v18c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V16.1 C28,15.6,27.8,15.1,27.4,14.7z M20,10l5.9,6H20V10z M12,28V10h6v6c0,1.1,0.9,2,2,2h6l0,10H12z'/%3E%3Cpath d='M6,18H4V4c0-1.1,0.9-2,2-2h14v2H6V18z'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Graph View */
 body:not(.no-sanctum-icons) svg.dot-network {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Edata-vis--1%3C/title%3E%3Cpath d='M26,22a3.9553,3.9553,0,0,0-2.0193.5667L20.167,18.7529a4.9654,4.9654,0,0,0,0-5.5058L22.714,10.7A3.0284,3.0284,0,1,0,21.3,9.286l-2.547,2.547a4.9654,4.9654,0,0,0-5.5058,0L9.4332,8.0191A3.9553,3.9553,0,0,0,10,6a4,4,0,1,0-4,4,3.9553,3.9553,0,0,0,2.0191-.5668l3.8139,3.8139a4.9654,4.9654,0,0,0,0,5.5058L8.0192,22.5668A3.9556,3.9556,0,0,0,6,22a4,4,0,1,0,4,4,3.9553,3.9553,0,0,0-.5667-2.0192l3.8138-3.8138A4.9686,4.9686,0,0,0,15,20.8989v3.2848a3,3,0,1,0,2,0V20.8989a4.9686,4.9686,0,0,0,1.7529-.7319l3.8138,3.8137A3.9553,3.9553,0,0,0,22,26a4,4,0,1,0,4-4ZM16,13a3,3,0,1,1-3,3A3.0033,3.0033,0,0,1,16,13ZM4,6A2,2,0,1,1,6,8,2.002,2.002,0,0,1,4,6ZM6,28a2,2,0,1,1,2-2A2.0023,2.0023,0,0,1,6,28Zm20,0a2,2,0,1,1,2-2A2.0027,2.0027,0,0,1,26,28Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
@@ -7365,7 +7312,6 @@ body:not(.no-sanctum-icons) svg.down-curly-arrow-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Ejump-link%3C/title%3E%3Cpath d='M13.4141,17.5859,18,22.1719V8H8V6H18a2.0024,2.0024,0,0,1,2,2V22.1719l4.5859-4.586L26,19l-7,7-7-7Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Plus inside circle */
 body:not(.no-sanctum-icons) svg.duplicate-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpath d='M16,4c6.6,0,12,5.4,12,12s-5.4,12-12,12S4,22.6,4,16S9.4,4,16,4 M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14 S23.7,2,16,2z'/%3E%3Cpolygon points='24,15 17,15 17,8 15,8 15,15 8,15 8,17 15,17 15,24 17,24 17,17 24,17 '/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
@@ -7374,7 +7320,6 @@ body:not(.no-sanctum-icons) svg.enlarge-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.582 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Cpolygon points='14 19.416 12.592 18 4 26.586 4 20 2 20 2 30 12 30 12 28 5.414 28 14 19.416'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32' transform='translate(32 32) rotate(-180)'/%3E%3C/svg%3E%0A");
 }
 
-/* Log in? */
 body:not(.no-sanctum-icons) svg.enter {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elogin%3C/title%3E%3Cpath d='M26,30H14a2,2,0,0,1-2-2V25h2v3H26V4H14V7H12V4a2,2,0,0,1,2-2H26a2,2,0,0,1,2,2V28A2,2,0,0,1,26,30Z'/%3E%3Cpolygon points='14.59 20.59 18.17 17 4 17 4 15 18.17 15 14.59 11.41 16 10 22 16 16 22 14.59 20.59'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
@@ -7383,17 +7328,14 @@ body:not(.no-sanctum-icons) svg.exit-fullscreen {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='4 18 4 20 10.586 20 2 28.582 3.414 30 12 21.414 12 28 14 28 14 18 4 18'/%3E%3Cpolygon points='30 3.416 28.592 2 20 10.586 20 4 18 4 18 14 28 14 28 12 21.414 12 30 3.416'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32' transform='translate(32 32) rotate(-180)'/%3E%3C/svg%3E%0A");
 }
 
-/* Show more context */
 body:not(.no-sanctum-icons) svg.expand-vertically {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eexpand-categories%3C/title%3E%3Crect x='20' y='26' width='6' height='2'/%3E%3Crect x='20' y='18' width='8' height='2'/%3E%3Crect x='20' y='10' width='10' height='2'/%3E%3Crect x='15' y='4' width='2' height='24'/%3E%3Cpolygon points='10.586 3.959 7 7.249 3.412 3.958 2 5.373 7 10 12 5.373 10.586 3.959'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* File Explorer (not applied) */
 body:not(.no-sanctum-icons) svg.file-explorer-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M22.707,9.2931a.9992.9992,0,0,0-1.0234-.2417l-9,3a1.001,1.001,0,0,0-.6323.6323l-3,9a1,1,0,0,0,1.2651,1.2651l9-3a1.0013,1.0013,0,0,0,.6323-.6324l3-9A1,1,0,0,0,22.707,9.2931ZM11.5811,20.419l2.2094-6.6284L18.21,18.21Z'/%3E%3Cpath d='M16,30A14,14,0,1,1,30,16,14.0158,14.0158,0,0,1,16,30ZM16,4A12,12,0,1,0,28,16,12.0137,12.0137,0,0,0,16,4Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Pin */
 body:not(.no-sanctum-icons) svg.filled-pin {
   width: 16px;
   height: 16px;
@@ -7413,17 +7355,14 @@ body:not(.no-sanctum-icons) svg.fullscreen {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.582 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Cpolygon points='14 19.416 12.592 18 4 26.586 4 20 2 20 2 30 12 30 12 28 5.414 28 14 19.416'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32' transform='translate(32 32) rotate(-180)'/%3E%3C/svg%3E");
 }
 
-/* Settings */
 body:not(.no-sanctum-icons) svg.gear {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Esettings%3C/title%3E%3Cpath d='M27,16.76c0-.25,0-.5,0-.76s0-.51,0-.77l1.92-1.68A2,2,0,0,0,29.3,11L26.94,7a2,2,0,0,0-1.73-1,2,2,0,0,0-.64.1l-2.43.82a11.35,11.35,0,0,0-1.31-.75l-.51-2.52a2,2,0,0,0-2-1.61H13.64a2,2,0,0,0-2,1.61l-.51,2.52a11.48,11.48,0,0,0-1.32.75L7.43,6.06A2,2,0,0,0,6.79,6,2,2,0,0,0,5.06,7L2.7,11a2,2,0,0,0,.41,2.51L5,15.24c0,.25,0,.5,0,.76s0,.51,0,.77L3.11,18.45A2,2,0,0,0,2.7,21L5.06,25a2,2,0,0,0,1.73,1,2,2,0,0,0,.64-.1l2.43-.82a11.35,11.35,0,0,0,1.31.75l.51,2.52a2,2,0,0,0,2,1.61h4.72a2,2,0,0,0,2-1.61l.51-2.52a11.48,11.48,0,0,0,1.32-.75l2.42.82a2,2,0,0,0,.64.1,2,2,0,0,0,1.73-1L29.3,21a2,2,0,0,0-.41-2.51ZM25.21,24l-3.43-1.16a8.86,8.86,0,0,1-2.71,1.57L18.36,28H13.64l-.71-3.55a9.36,9.36,0,0,1-2.7-1.57L6.79,24,4.43,20l2.72-2.4a8.9,8.9,0,0,1,0-3.13L4.43,12,6.79,8l3.43,1.16a8.86,8.86,0,0,1,2.71-1.57L13.64,4h4.72l.71,3.55a9.36,9.36,0,0,1,2.7,1.57L25.21,8,27.57,12l-2.72,2.4a8.9,8.9,0,0,1,0,3.13L27.57,20Z' transform='translate(0 0)'/%3E%3Cpath d='M16,22a6,6,0,1,1,6-6A5.94,5.94,0,0,1,16,22Zm0-10a3.91,3.91,0,0,0-4,4,3.91,3.91,0,0,0,4,4,3.91,3.91,0,0,0,4-4A3.91,3.91,0,0,0,16,12Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Quick Switcher */
 body:not(.no-sanctum-icons) svg.go-to-file {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Edocument--export%3C/title%3E%3Cpolygon points='13 21 26.17 21 23.59 23.59 25 25 30 20 25 15 23.59 16.41 26.17 19 13 19 13 21'/%3E%3Cpath d='M22,14V10a1,1,0,0,0-.29-.71l-7-7A1,1,0,0,0,14,2H4A2,2,0,0,0,2,4V28a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V26H20v2H4V4h8v6a2,2,0,0,0,2,2h6v2Zm-8-4V4.41L19.59,10Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Graph (not applied) */
 body:not(.no-sanctum-icons) svg.graph-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Edata-vis--1%3C/title%3E%3Cpath d='M26,22a3.9553,3.9553,0,0,0-2.0193.5667L20.167,18.7529a4.9654,4.9654,0,0,0,0-5.5058L22.714,10.7A3.0284,3.0284,0,1,0,21.3,9.286l-2.547,2.547a4.9654,4.9654,0,0,0-5.5058,0L9.4332,8.0191A3.9553,3.9553,0,0,0,10,6a4,4,0,1,0-4,4,3.9553,3.9553,0,0,0,2.0191-.5668l3.8139,3.8139a4.9654,4.9654,0,0,0,0,5.5058L8.0192,22.5668A3.9556,3.9556,0,0,0,6,22a4,4,0,1,0,4,4,3.9553,3.9553,0,0,0-.5667-2.0192l3.8138-3.8138A4.9686,4.9686,0,0,0,15,20.8989v3.2848a3,3,0,1,0,2,0V20.8989a4.9686,4.9686,0,0,0,1.7529-.7319l3.8138,3.8137A3.9553,3.9553,0,0,0,22,26a4,4,0,1,0,4-4ZM16,13a3,3,0,1,1-3,3A3.0033,3.0033,0,0,1,16,13ZM4,6A2,2,0,1,1,6,8,2.002,2.002,0,0,1,4,6ZM6,28a2,2,0,1,1,2-2A2.0023,2.0023,0,0,1,6,28Zm20,0a2,2,0,1,1,2-2A2.0027,2.0027,0,0,1,26,28Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
@@ -7432,7 +7371,6 @@ body:not(.no-sanctum-icons) svg.hashtag {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Ehashtag%3C/title%3E%3Cpath d='M28,12V10H22V4H20v6H12V4H10v6H4v2h6v8H4v2h6v6h2V22h8v6h2V22h6V20H22V12Zm-8,8H12V12h8Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Heading */
 body:not(.no-sanctum-icons) svg.heading-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Edouble-integer%3C/title%3E%3Cpath d='M17,8V6H13V2H11V6H8V2H6V6H2V8H6v3H2v2H6v4H8V13h3v4h2V13h4V11H13V8Zm-6,3H8V8h3Z'/%3E%3Cpath d='M30,21V19H26V15H24v4H21V15H19v4H15v2h4v3H15v2h4v4h2V26h3v4h2V26h4V24H26V21Zm-6,3H21V21h3Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
@@ -7441,7 +7379,6 @@ body:not(.no-sanctum-icons) svg.help {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Ehelp%3C/title%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,26A12,12,0,1,1,28,16,12,12,0,0,1,16,28Z'/%3E%3Ccircle cx='16' cy='23.5' r='1.5'/%3E%3Cpath d='M17,8H15.5A4.49,4.49,0,0,0,11,12.5V13h2v-.5A2.5,2.5,0,0,1,15.5,10H17a2.5,2.5,0,0,1,0,5H15v4.5h2V17a4.5,4.5,0,0,0,0-9Z'/%3E%3Crect class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Toggle highlight */
 body:not(.no-sanctum-icons) svg.highlight-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Etext-highlight%3C/title%3E%3Cpath d='M12,15H5a3,3,0,0,1-3-3V10A3,3,0,0,1,5,7h5V5A1,1,0,0,0,9,4H3V2H9a3,3,0,0,1,3,3ZM5,9a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1h5V9Z'/%3E%3Cpath d='M20,23v2a1,1,0,0,0,1,1h5V22H21A1,1,0,0,0,20,23Z'/%3E%3Cpath d='M2,30H30V2Zm26-2H21a3,3,0,0,1-3-3V23a3,3,0,0,1,3-3h5V18a1,1,0,0,0-1-1H19V15h6a3,3,0,0,1,3,3Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
@@ -7470,12 +7407,10 @@ body:not(.no-sanctum-icons) svg.info {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='17 22 17 14 13 14 13 16 15 16 15 22 12 22 12 24 20 24 20 22 17 22'/%3E%3Cpath d='M16,8a1.5,1.5,0,1,0,1.5,1.5A1.5,1.5,0,0,0,16,8Z'/%3E%3Cpath d='M26,28H6a2.0023,2.0023,0,0,1-2-2V6A2.0023,2.0023,0,0,1,6,4H26a2.0023,2.0023,0,0,1,2,2V26A2.0023,2.0023,0,0,1,26,28ZM6,6V26H26V6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Plugin Number of Downloads */
 body:not(.no-sanctum-icons) svg.install {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,24v4H6V24H4v4H4a2,2,0,0,0,2,2H26a2,2,0,0,0,2-2h0V24Z'/%3E%3Cpolygon points='26 14 24.59 12.59 17 20.17 17 2 15 2 15 20.17 7.41 12.59 6 14 16 24 26 14'/%3E%3Cg id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;'%3E%3Crect class='cls-1' width='32' height='32'/%3E%3C/g%3E%3C/svg%3E");
 }
 
-/* Italic */
 body:not(.no-sanctum-icons) svg.italic-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Etext-italic%3C/title%3E%3Cpolygon points='25 9 25 7 12 7 12 9 17.14 9 12.77 23 7 23 7 25 20 25 20 23 14.86 23 19.23 9 25 9'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
@@ -7500,7 +7435,6 @@ body:not(.no-sanctum-icons) svg.left-chevron-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='10,16 20,6 21.4,7.4 12.8,16 21.4,24.6 20,26 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/*- Preview Icon -*/
 body:not(.no-sanctum-icons) svg.lines-of-text {
   transform: translateY(-1px);
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eview%3C/title%3E%3Cpath d='M30.94,15.66A16.69,16.69,0,0,0,16,5,16.69,16.69,0,0,0,1.06,15.66a1,1,0,0,0,0,.68A16.69,16.69,0,0,0,16,27,16.69,16.69,0,0,0,30.94,16.34,1,1,0,0,0,30.94,15.66ZM16,25c-5.3,0-10.9-3.93-12.93-9C5.1,10.93,10.7,7,16,7s10.9,3.93,12.93,9C26.9,21.07,21.3,25,16,25Z' transform='translate(0 0)'/%3E%3Cpath d='M16,10a6,6,0,1,0,6,6A6,6,0,0,0,16,10Zm0,10a4,4,0,1,1,4-4A4,4,0,0,1,16,20Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
@@ -7518,12 +7452,10 @@ body:not(.no-sanctum-icons) svg.link {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elink%3C/title%3E%3Cpath d='M29.25,6.76a6,6,0,0,0-8.5,0l1.42,1.42a4,4,0,1,1,5.67,5.67l-8,8a4,4,0,1,1-5.67-5.66l1.41-1.42-1.41-1.42-1.42,1.42a6,6,0,0,0,0,8.5A6,6,0,0,0,17,25a6,6,0,0,0,4.27-1.76l8-8A6,6,0,0,0,29.25,6.76Z'/%3E%3Cpath d='M4.19,24.82a4,4,0,0,1,0-5.67l8-8a4,4,0,0,1,5.67,0A3.94,3.94,0,0,1,19,14a4,4,0,0,1-1.17,2.85L15.71,19l1.42,1.42,2.12-2.12a6,6,0,0,0-8.51-8.51l-8,8a6,6,0,0,0,0,8.51A6,6,0,0,0,7,28a6.07,6.07,0,0,0,4.28-1.76L9.86,24.82A4,4,0,0,1,4.19,24.82Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Backlinks */
 body:not(.no-sanctum-icons) svg.links-coming-in {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elogin%3C/title%3E%3Cpath d='M26,30H14a2,2,0,0,1-2-2V25h2v3H26V4H14V7H12V4a2,2,0,0,1,2-2H26a2,2,0,0,1,2,2V28A2,2,0,0,1,26,30Z'/%3E%3Cpolygon points='14.59 20.59 18.17 17 4 17 4 15 18.17 15 14.59 11.41 16 10 22 16 16 22 14.59 20.59'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Outgoing Links */
 body:not(.no-sanctum-icons) svg.links-going-out {
   transform: translateX(2px);
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elogout%3C/title%3E%3Cpath d='M6,30H18a2.0023,2.0023,0,0,0,2-2V25H18v3H6V4H18V7h2V4a2.0023,2.0023,0,0,0-2-2H6A2.0023,2.0023,0,0,0,4,4V28A2.0023,2.0023,0,0,0,6,30Z'/%3E%3Cpolygon points='20.586 20.586 24.172 17 10 17 10 15 24.172 15 20.586 11.414 22 10 28 16 22 22 20.586 20.586'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
@@ -7537,7 +7469,6 @@ body:not(.no-sanctum-icons) svg.merge-files-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Ecompare%3C/title%3E%3Cpath d='M28,6H18V4a2,2,0,0,0-2-2H4A2,2,0,0,0,2,4V24a2,2,0,0,0,2,2H14v2a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V8A2,2,0,0,0,28,6ZM4,15h6.17L7.59,17.59,9,19l5-5L9,9,7.59,10.41,10.17,13H4V4H16V24H4ZM16,28V26a2,2,0,0,0,2-2V8H28v9H21.83l2.58-2.59L23,13l-5,5,5,5,1.41-1.41L21.83,19H28v9Z' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Merge Entire File with (More Options) */
 body:not(.no-sanctum-icons) svg.merge-files {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Ecompare%3C/title%3E%3Cpath d='M28,6H18V4a2,2,0,0,0-2-2H4A2,2,0,0,0,2,4V24a2,2,0,0,0,2,2H14v2a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V8A2,2,0,0,0,28,6ZM4,15h6.17L7.59,17.59,9,19l5-5L9,9,7.59,10.41,10.17,13H4V4H16V24H4ZM16,28V26a2,2,0,0,0,2-2V8H28v9H21.83l2.58-2.59L23,13l-5,5,5,5,1.41-1.41L21.83,19H28v9Z' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
@@ -7558,7 +7489,6 @@ body:not(.no-sanctum-icons) svg.navigate-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M22.707,9.2931a.9992.9992,0,0,0-1.0234-.2417l-9,3a1.001,1.001,0,0,0-.6323.6323l-3,9a1,1,0,0,0,1.2651,1.2651l9-3a1.0013,1.0013,0,0,0,.6323-.6324l3-9A1,1,0,0,0,22.707,9.2931ZM11.5811,20.419l2.2094-6.6284L18.21,18.21Z'/%3E%3Cpath d='M16,30A14,14,0,1,1,30,16,14.0158,14.0158,0,0,1,16,30ZM16,4A12,12,0,1,0,28,16,12.0137,12.0137,0,0,0,16,4Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Add embed */
 body:not(.no-sanctum-icons) svg.note-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Crect x='8' y='10' width='10' height='2'/%3E%3Crect x='8' y='15' width='6' height='2'/%3E%3Cpath d='M29,29H3V3H29ZM5,27H27V5H5Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
@@ -7575,28 +7505,23 @@ body:not(.no-sanctum-icons) svg.open-vault {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M27,24a2.9609,2.9609,0,0,0-1.2854.3008L21.4141,20H18v2h2.5859l3.7146,3.7148A2.9665,2.9665,0,0,0,24,27a3,3,0,1,0,3-3Zm0,4a1,1,0,1,1,1-1A1.0009,1.0009,0,0,1,27,28Z'/%3E%3Cpath d='M27,13a2.9948,2.9948,0,0,0-2.8157,2H18v2h6.1843A2.9947,2.9947,0,1,0,27,13Zm0,4a1,1,0,1,1,1-1A1.0009,1.0009,0,0,1,27,17Z'/%3E%3Cpath d='M27,2a3.0033,3.0033,0,0,0-3,3,2.9657,2.9657,0,0,0,.3481,1.373L20.5957,10H18v2h3.4043l4.3989-4.2524A2.9987,2.9987,0,1,0,27,2Zm0,4a1,1,0,1,1,1-1A1.0009,1.0009,0,0,1,27,6Z'/%3E%3Cpath d='M18,6h2V4H18a3.9756,3.9756,0,0,0-3,1.3823A3.9756,3.9756,0,0,0,12,4H11a9.01,9.01,0,0,0-9,9v6a9.01,9.01,0,0,0,9,9h1a3.9756,3.9756,0,0,0,3-1.3823A3.9756,3.9756,0,0,0,18,28h2V26H18a2.0023,2.0023,0,0,1-2-2V8A2.0023,2.0023,0,0,1,18,6ZM12,26H11a7.0047,7.0047,0,0,1-6.92-6H6V18H4V14H7a3.0033,3.0033,0,0,0,3-3V9H8v2a1.0009,1.0009,0,0,1-1,1H4.08A7.0047,7.0047,0,0,1,11,6h1a2.0023,2.0023,0,0,1,2,2v4H12v2h2v4H12a3.0033,3.0033,0,0,0-3,3v2h2V21a1.0009,1.0009,0,0,1,1-1h2v4A2.0023,2.0023,0,0,1,12,26Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Manage workspaces */
 body:not(.no-sanctum-icons) svg.pane-layout {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eworkspace%3C/title%3E%3Cpath d='M16,17v8H6V17H16m0-2H6a2,2,0,0,0-2,2v8a2,2,0,0,0,2,2H16a2,2,0,0,0,2-2V17a2,2,0,0,0-2-2Z'/%3E%3Cpath d='M27,6v5H17V6H27m0-2H17a2,2,0,0,0-2,2v5a2,2,0,0,0,2,2H27a2,2,0,0,0,2-2V6a2,2,0,0,0-2-2Z'/%3E%3Cpath d='M27,17v5H22V17h5m0-2H22a2,2,0,0,0-2,2v5a2,2,0,0,0,2,2h5a2,2,0,0,0,2-2V17a2,2,0,0,0-2-2Z'/%3E%3Cpath d='M11,6v5H6V6h5m0-2H6A2,2,0,0,0,4,6v5a2,2,0,0,0,2,2h5a2,2,0,0,0,2-2V6a2,2,0,0,0-2-2Z'/%3E%3Cg id='_Rectangle_' data-name='&lt;Rectangle&gt;'%3E%3Crect class='cls-1' width='32' height='32'/%3E%3C/g%3E%3C/svg%3E");
 }
 
-/* Not applied */
 body:not(.no-sanctum-icons) svg.paper-plane-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Esend--alt%3C/title%3E%3Cpath d='M27.71,4.29a1,1,0,0,0-1.05-.23l-22,8a1,1,0,0,0,0,1.87l9.6,3.84,3.84,9.6A1,1,0,0,0,19,28h0a1,1,0,0,0,.92-.66l8-22A1,1,0,0,0,27.71,4.29ZM19,24.2l-2.79-7L21,12.41,19.59,11l-4.83,4.83L7.8,13,25.33,6.67Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Move file to... (More Options) */
 body:not(.no-sanctum-icons) svg.paper-plane {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Esend--alt%3C/title%3E%3Cpath d='M27.71,4.29a1,1,0,0,0-1.05-.23l-22,8a1,1,0,0,0,0,1.87l9.6,3.84,3.84,9.6A1,1,0,0,0,19,28h0a1,1,0,0,0,.92-.66l8-22A1,1,0,0,0,27.71,4.29ZM19,24.2l-2.79-7L21,12.41,19.59,11l-4.83,4.83L7.8,13,25.33,6.67Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
   vertical-align: -1px;
 }
 
-/* Paste as plain text */
 body:not(.no-sanctum-icons) svg.paste-text {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Etask--view%3C/title%3E%3Ccircle cx='22' cy='24' r='2'/%3E%3Cpath id='_inner_path_' data-name='&lt;inner path&gt;' class='cls-1' d='M22,28a4,4,0,1,1,4-4A4.0039,4.0039,0,0,1,22,28Zm0-6a2,2,0,1,0,2,2A2.0027,2.0027,0,0,0,22,22Z'/%3E%3Cpath d='M29.7769,23.4785A8.64,8.64,0,0,0,22,18a8.64,8.64,0,0,0-7.7769,5.4785L14,24l.2231.5215A8.64,8.64,0,0,0,22,30a8.64,8.64,0,0,0,7.7769-5.4785L30,24ZM22,28a4,4,0,1,1,4-4A4.0045,4.0045,0,0,1,22,28Z'/%3E%3Cpath d='M12,28H7V7h3v3H22V7h3v9h2V7a2,2,0,0,0-2-2H22V4a2,2,0,0,0-2-2H12a2,2,0,0,0-2,2V5H7A2,2,0,0,0,5,7V28a2,2,0,0,0,2,2h5ZM12,4h8V8H12Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Paste */
 body:not(.no-sanctum-icons) svg.paste {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='31 24 27 24 27 20 25 20 25 24 21 24 21 26 25 26 25 30 27 30 27 26 31 26 31 24'/%3E%3Cpath d='M25,5H22V4a2.0058,2.0058,0,0,0-2-2H12a2.0058,2.0058,0,0,0-2,2V5H7A2.0058,2.0058,0,0,0,5,7V28a2.0058,2.0058,0,0,0,2,2H17V28H7V7h3v3H22V7h3v9h2V7A2.0058,2.0058,0,0,0,25,5ZM20,8H12V4h8Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
@@ -7609,7 +7534,6 @@ body:not(.no-sanctum-icons) svg.pdf-file {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Edocument--pdf%3C/title%3E%3Cpolygon points='30 18 30 16 24 16 24 26 26 26 26 22 29 22 29 20 26 20 26 18 30 18'/%3E%3Cpath d='M19,26H15V16h4a3.0033,3.0033,0,0,1,3,3v4A3.0033,3.0033,0,0,1,19,26Zm-2-2h2a1.0011,1.0011,0,0,0,1-1V19a1.0011,1.0011,0,0,0-1-1H17Z'/%3E%3Cpath d='M11,16H6V26H8V23h3a2.0027,2.0027,0,0,0,2-2V18A2.0023,2.0023,0,0,0,11,16ZM8,21V18h3l.001,3Z'/%3E%3Cpath d='M22,14V10a.9092.9092,0,0,0-.3-.7l-7-7A.9087.9087,0,0,0,14,2H4A2.0059,2.0059,0,0,0,2,4V28a2,2,0,0,0,2,2H20V28H4V4h8v6a2.0059,2.0059,0,0,0,2,2h6v2Zm-8-4V4.4L19.6,10Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Edit Mode */
 body:not(.no-sanctum-icons) svg.pencil {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Epaint-brush--alt%3C/title%3E%3Cpath d='M28.8281,3.1719a4.0941,4.0941,0,0,0-5.6562,0L4.05,22.292A6.9537,6.9537,0,0,0,2,27.2412V30H4.7559a6.9523,6.9523,0,0,0,4.95-2.05L28.8281,8.8286a3.999,3.999,0,0,0,0-5.6567ZM10.91,18.26l2.8286,2.8286L11.6172,23.21,8.7886,20.3818ZM8.2915,26.5356A4.9665,4.9665,0,0,1,4.7559,28H4v-.7588a4.9671,4.9671,0,0,1,1.4644-3.5351l1.91-1.91,2.8286,2.8281ZM27.4141,7.4141,15.1528,19.6748l-2.8286-2.8286,12.2617-12.26a2.0473,2.0473,0,0,1,2.8282,0,1.9995,1.9995,0,0,1,0,2.8282Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
   transform: scale(1);
@@ -7619,7 +7543,6 @@ body:not(.no-sanctum-icons) svg.pencil {
   margin-right: 1px;
 }
 
-/* toggle comment */
 body:not(.no-sanctum-icons) svg.percent-sign-glyph {
   transform: scale(0.9);
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Epercentage%3C/title%3E%3Cpath d='M9,14a5,5,0,1,1,5-5A5.0055,5.0055,0,0,1,9,14ZM9,6a3,3,0,1,0,3,3A3.0033,3.0033,0,0,0,9,6Z'/%3E%3Crect x='0.0293' y='15.0001' width='31.9413' height='1.9998' transform='translate(-6.6274 16) rotate(-45)'/%3E%3Cpath d='M23,28a5,5,0,1,1,5-5A5.0055,5.0055,0,0,1,23,28Zm0-8a3,3,0,1,0,3,3A3.0033,3.0033,0,0,0,23,20Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
@@ -7633,7 +7556,6 @@ body:not(.no-sanctum-icons) svg.play-audio-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M7,28a1,1,0,0,1-1-1V5a1,1,0,0,1,1.4819-.8763l20,11a1,1,0,0,1,0,1.7525l-20,11A1.0005,1.0005,0,0,1,7,28Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Calculation Icon */
 body:not(.no-sanctum-icons) svg.plus-minus-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='14 8 10 8 10 4 8 4 8 8 4 8 4 10 8 10 8 14 10 14 10 10 14 10 14 8'/%3E%3Crect x='4' y='19' width='10' height='2'/%3E%3Crect x='4' y='24' width='10' height='2'/%3E%3Crect x='18' y='8' width='10' height='2'/%3E%3Cpolygon points='24.41 22 28 18.41 26.59 17 23 20.59 19.41 17 18 18.41 21.59 22 18 25.59 19.41 27 23 23.41 26.59 27 28 25.59 24.41 22'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
@@ -7656,7 +7578,6 @@ body:not(.no-sanctum-icons) svg.presentation {
   transform: scale(1.1);
 }
 
-/* Add tag*/
 body:not(.no-sanctum-icons) svg.price-tag-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Ehashtag%3C/title%3E%3Cpath d='M28,12V10H22V4H20v6H12V4H10v6H4v2h6v8H4v2h6v6h2V22h8v6h2V22h6V20H22V12Zm-8,8H12V12h8Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
@@ -7665,7 +7586,6 @@ body:not(.no-sanctum-icons) svg.question-mark-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Ehelp%3C/title%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,26A12,12,0,1,1,28,16,12,12,0,0,1,16,28Z'/%3E%3Ccircle cx='16' cy='23.5' r='1.5'/%3E%3Cpath d='M17,8H15.5A4.49,4.49,0,0,0,11,12.5V13h2v-.5A2.5,2.5,0,0,1,15.5,10H17a2.5,2.5,0,0,1,0,5H15v4.5h2V17a4.5,4.5,0,0,0,0-9Z'/%3E%3Crect class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Toggle blockquote*/
 body:not(.no-sanctum-icons) svg.quote-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Equotes%3C/title%3E%3Cpath d='M12,15H6.11A9,9,0,0,1,10,8.86l1.79-1.2L10.69,6,8.9,7.2A11,11,0,0,0,4,16.35V23a2,2,0,0,0,2,2h6a2,2,0,0,0,2-2V17A2,2,0,0,0,12,15Z'/%3E%3Cpath d='M26,15H20.11A9,9,0,0,1,24,8.86l1.79-1.2L24.7,6,22.9,7.2A11,11,0,0,0,18,16.35V23a2,2,0,0,0,2,2h6a2,2,0,0,0,2-2V17A2,2,0,0,0,26,15Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
@@ -7705,13 +7625,11 @@ body:not(.no-sanctum-icons) svg.run-command {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eterminal%3C/title%3E%3Cpath d='M26,4H6A2,2,0,0,0,4,6V26a2,2,0,0,0,2,2H26a2,2,0,0,0,2-2V6A2,2,0,0,0,26,4Zm0,2v4H6V6ZM6,26V12H26V26Z' transform='translate(0 0.01)'/%3E%3Cpolygon points='10.76 16.18 13.58 19.01 10.76 21.84 12.17 23.25 16.41 19.01 12.17 14.77 10.76 16.18'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* (Not applied?) */
 body:not(.no-sanctum-icons) svg.scissors-glyph {
   transform: rotate(0.5turn);
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Ecut%3C/title%3E%3Cpath d='M26.5,19.63,20.24,16l6.26-3.63a5,5,0,0,0-1.21-9.2A5.19,5.19,0,0,0,24,3a5,5,0,0,0-4.33,7.53,5,5,0,0,0,2.39,2.1l-3.82,2.21L4,6.6,3,8.34,16.24,16,3,23.68l1,1.74,14.24-8.26,3.82,2.21a5,5,0,0,0-2.39,2.1A5,5,0,0,0,24,29a5.19,5.19,0,0,0,1.29-.17,5,5,0,0,0,1.21-9.2ZM21.4,9.53a3,3,0,0,1,1.1-4.12,3,3,0,0,1,4.1,1.11,3,3,0,0,1-1.1,4.11h0A3,3,0,0,1,21.4,9.53Zm5.2,16a3,3,0,0,1-4.1,1.11,3,3,0,0,1-1.1-4.12,3,3,0,0,1,4.1-1.1h0A3,3,0,0,1,26.6,25.48Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Cut */
 body:not(.no-sanctum-icons) svg.scissors {
   transform: rotate(0.5turn);
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Ecut%3C/title%3E%3Cpath d='M26.5,19.63,20.24,16l6.26-3.63a5,5,0,0,0-1.21-9.2A5.19,5.19,0,0,0,24,3a5,5,0,0,0-4.33,7.53,5,5,0,0,0,2.39,2.1l-3.82,2.21L4,6.6,3,8.34,16.24,16,3,23.68l1,1.74,14.24-8.26,3.82,2.21a5,5,0,0,0-2.39,2.1A5,5,0,0,0,24,29a5.19,5.19,0,0,0,1.29-.17,5,5,0,0,0,1.21-9.2ZM21.4,9.53a3,3,0,0,1,1.1-4.12,3,3,0,0,1,4.1,1.11,3,3,0,0,1-1.1,4.11h0A3,3,0,0,1,21.4,9.53Zm5.2,16a3,3,0,0,1-4.1,1.11,3,3,0,0,1-1.1-4.12,3,3,0,0,1,4.1-1.1h0A3,3,0,0,1,26.6,25.48Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
@@ -7725,22 +7643,18 @@ body:not(.no-sanctum-icons) svg.search {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Select all */
 body:not(.no-sanctum-icons) svg.select-all-text {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='12 6 8 6 8 2 6 2 6 6 2 6 2 8 6 8 6 12 8 12 8 8 12 8 12 6'/%3E%3Crect x='16' y='6' width='4' height='2'/%3E%3Cpath d='M24,6V8h4v4h2V8a2,2,0,0,0-2-2Z'/%3E%3Crect x='6' y='16' width='2' height='4'/%3E%3Cpath d='M8,28V24H6v4a2,2,0,0,0,2,2h4V28Z'/%3E%3Crect x='28' y='16' width='2' height='4'/%3E%3Crect x='16' y='28' width='4' height='2'/%3E%3Cpath d='M28,24v4H24v2h4a2,2,0,0,0,2-2V24Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Create New Zettelkasten note */
 body:not(.no-sanctum-icons) svg.sheets-in-box {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M28,28H4a2.0021,2.0021,0,0,1-2-2V21H4v5H28V21h2v5A2.0021,2.0021,0,0,1,28,28Z' transform='translate(0 0)'/%3E%3Crect x='7' y='21' width='18' height='2'/%3E%3Crect x='7' y='16' width='18' height='2'/%3E%3Crect x='7' y='11' width='18' height='2'/%3E%3Crect x='7' y='6' width='18' height='2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* "Extract current selection" */
 body:not(.no-sanctum-icons) svg.split {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Advanced Tables */
 body:not(.no-sanctum-icons) svg.spreadsheet {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M28,2H10A2.0023,2.0023,0,0,0,8,4V7H4A2.0023,2.0023,0,0,0,2,9V28a2.0023,2.0023,0,0,0,2,2H28a2.0023,2.0023,0,0,0,2-2V4A2.0023,2.0023,0,0,0,28,2ZM10,4H28V7H10ZM28,14H20V9h8ZM10,21V16h8v5Zm8,2v5H10V23ZM8,21H4V16H8ZM18,9v5H10V9Zm2,7h8v5H20ZM8,9v5H4V9ZM4,23H8v5H4Zm16,5V23h8v5Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
@@ -7765,12 +7679,10 @@ body:not(.no-sanctum-icons) svg.stop-audio-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Epause--filled%3C/title%3E%3Cpath d='M12,6H10A2,2,0,0,0,8,8V24a2,2,0,0,0,2,2h2a2,2,0,0,0,2-2V8a2,2,0,0,0-2-2Z'/%3E%3Cpath d='M22,6H20a2,2,0,0,0-2,2V24a2,2,0,0,0,2,2h2a2,2,0,0,0,2-2V8a2,2,0,0,0-2-2Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Toggle strikethrough */
 body:not(.no-sanctum-icons) svg.strikethrough-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Etext--strikethrough%3C/title%3E%3Cpath d='M28,15H17.9563c-.4522-.1237-.9037-.2324-1.3381-.3352-2.8077-.6641-4.396-1.1506-4.396-3.4231a2.8684,2.8684,0,0,1,.7866-2.145,4.7888,4.7888,0,0,1,3.0137-1.09c2.8291-.07,4.1347.8894,5.2011,2.35l1.6153-1.1792a7.4727,7.4727,0,0,0-6.83-3.1706,6.7726,6.7726,0,0,0-4.4,1.6611,4.8274,4.8274,0,0,0-1.3862,3.5735A4.3723,4.3723,0,0,0,11.9573,15H4v2H17.6519c1.9668.57,3.1432,1.3123,3.1733,3.3579a3.119,3.119,0,0,1-.8623,2.3931A5.8241,5.8241,0,0,1,16.2432,24a6.6344,6.6344,0,0,1-5.1451-2.6912L9.5649,22.593A8.5262,8.5262,0,0,0,16.2119,26c.0088-.0012.042,0,.1,0A7.67,7.67,0,0,0,21.36,24.1812a5.0779,5.0779,0,0,0,1.4648-3.8531A4.952,4.952,0,0,0,21.6753,17H28Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Reload Plugin/Themes/Snippets */
 body:not(.no-sanctum-icons) svg.switch {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Earrows--horizontal%3C/title%3E%3Cpolygon points='11.41 26.59 7.83 23 28 23 28 21 7.83 21 11.41 17.41 10 16 4 22 10 28 11.41 26.59'/%3E%3Cpolygon points='28 10 22 4 20.59 5.41 24.17 9 4 9 4 11 24.17 11 20.59 14.59 22 16 28 10'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32' transform='translate(32) rotate(90)'/%3E%3C/svg%3E");
 }
@@ -7791,7 +7703,6 @@ body:not(.no-sanctum-icons) svg.three-horizontal-bars {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Emenu%3C/title%3E%3Crect x='4' y='6' width='24' height='2'/%3E%3Crect x='4' y='24' width='24' height='2'/%3E%3Crect x='4' y='12' width='24' height='2'/%3E%3Crect x='4' y='18' width='24' height='2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Calendar Plus (find replacement) */
 body:not(.no-sanctum-icons) svg.tomorrow-glyph {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="red" d="M33.333 62.5L45.833 62.5 45.833 75 54.167 75 54.167 62.5 66.667 62.5 66.667 54.167 54.167 54.167 54.167 41.667 45.833 41.667 45.833 54.167 33.333 54.167z M79.167 16.667h-8.333V8.333h-8.333v8.333H37.5V8.333H29.167v8.333H20.833C16.238 16.667 12.5 20.404 12.5 25v8.333v50c0 4.596 3.738 8.333 8.333 8.333h58.333c4.596 0 8.333 -3.738 8.333 -8.333V33.333V25C87.5 20.404 83.763 16.667 79.167 16.667zM79.175 83.333H20.833V33.333h58.333L79.175 83.333z"></path></svg>');
 }
@@ -7800,7 +7711,6 @@ body:not(.no-sanctum-icons) svg.trash {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Etrash-can%3C/title%3E%3Crect x='12' y='12' width='2' height='12'/%3E%3Crect x='18' y='12' width='2' height='12'/%3E%3Cpath d='M4,6V8H6V28a2,2,0,0,0,2,2H24a2,2,0,0,0,2-2V8h2V6ZM8,28V8H24V28Z'/%3E%3Crect x='12' y='2' width='8' height='2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Copy */
 body:not(.no-sanctum-icons) svg.two-blank-pages {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Ecopy%3C/title%3E%3Cpath d='M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z' transform='translate(0)'/%3E%3Cpath d='M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
@@ -7813,7 +7723,6 @@ body:not(.no-sanctum-icons) svg.unindent-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eindent--less%3C/title%3E%3Crect x='2' y='6' width='10' height='2'/%3E%3Crect x='5' y='12' width='7' height='2'/%3E%3Crect x='2' y='18' width='10' height='2'/%3E%3Crect x='5' y='24' width='7' height='2'/%3E%3Crect x='16' y='4' width='2' height='24'/%3E%3Cpolygon points='28.15 23.5 29.56 22.12 23.27 16 29.56 9.88 28.15 8.5 20.44 16 28.15 23.5'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Change Sort Order icon */
 body:not(.no-sanctum-icons) svg.up-and-down-arrows {
   -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Earrows--vertical%3C/title%3E%3Cpolygon points='27.6,20.6 24,24.2 24,4 22,4 22,24.2 18.4,20.6 17,22 23,28 29,22 '/%3E%3Cpolygon points='9,4 3,10 4.4,11.4 8,7.8 8,28 10,28 10,7.8 13.6,11.4 15,10 '/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
@@ -7831,7 +7740,6 @@ body:not(.no-sanctum-icons) svg.up-curly-arrow-glyph {
   transform: scaleY(-1);
 }
 
-/* Match Case (Search) */
 body:not(.no-sanctum-icons) svg.uppercase-lowercase-a {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eletter--Aa%3C/title%3E%3Cpath d='M23,13H18v2h5v2H19a2,2,0,0,0-2,2v2a2,2,0,0,0,2,2h6V15A2,2,0,0,0,23,13Zm0,8H19V19h4Z'/%3E%3Cpath d='M13,9H9a2,2,0,0,0-2,2V23H9V18h4v5h2V11A2,2,0,0,0,13,9ZM9,16V11h4v5Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
   transform: scale(1.2);
@@ -7841,23 +7749,19 @@ body:not(.no-sanctum-icons) svg.vault {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Ecognitive%3C/title%3E%3Cpath d='M30,13A11,11,0,0,0,19,2H11a9,9,0,0,0-9,9v3a5,5,0,0,0,5,5H8.1A5,5,0,0,0,13,23h1.38l4,7,1.73-1-4-6.89A2,2,0,0,0,14.38,21H13a3,3,0,0,1,0-6h1V13H13a5,5,0,0,0-4.9,4H7a3,3,0,0,1-3-3V12H6A3,3,0,0,0,9,9V8H7V9a1,1,0,0,1-1,1H4.08A7,7,0,0,1,11,4h6V6a1,1,0,0,1-1,1H14V9h2a3,3,0,0,0,3-3V4a9,9,0,0,1,8.05,5H26a3,3,0,0,0-3,3v1h2V12a1,1,0,0,1,1-1h1.77A8.76,8.76,0,0,1,28,13v1a5,5,0,0,1-5,5H20v2h3a7,7,0,0,0,3-.68V21a3,3,0,0,1-3,3H22v2h1a5,5,0,0,0,5-5V18.89A7,7,0,0,0,30,14Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Split vertically (More Options)*/
 body:not(.no-sanctum-icons) svg.vertical-split {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Edrag--horizontal%3C/title%3E%3Cpolygon points='12 4 12 15 5.83 15 8.41 12.41 7 11 2 16 7 21 8.41 19.59 5.83 17 12 17 12 28 14 28 14 4 12 4'/%3E%3Cpolygon points='25 11 23.59 12.41 26.17 15 20 15 20 4 18 4 18 28 20 28 20 17 26.17 17 23.59 19.59 25 21 30 16 25 11'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* More Options */
 body:not(.no-sanctum-icons) svg.vertical-three-dots {
   transform: translateY(0px) rotate(90deg);
   -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Eoverflow-menu--horizontal%3C/title%3E%3Ccircle cx='8' cy='16' r='2'/%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='24' cy='16' r='2'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Start timelapse animation */
 body:not(.no-sanctum-icons) svg.wand {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Emagic-wand--filled%3C/title%3E%3Cpath d='M29.4141,24,12,6.5859a2.0476,2.0476,0,0,0-2.8281,0l-2.586,2.586a2.0021,2.0021,0,0,0,0,2.8281L23.999,29.4141a2.0024,2.0024,0,0,0,2.8281,0l2.587-2.5865a1.9993,1.9993,0,0,0,0-2.8281ZM8,10.5859,10.5859,8l5,5-2.5866,2.5869-5-5Z'/%3E%3Crect x='2.5858' y='14.5858' width='2.8284' height='2.8284' transform='translate(-10.1421 7.5147) rotate(-45)'/%3E%3Crect x='14.5858' y='2.5858' width='2.8284' height='2.8284' transform='translate(1.8579 12.4853) rotate(-45)'/%3E%3Crect x='2.5858' y='2.5858' width='2.8284' height='2.8284' transform='translate(-1.6569 4) rotate(-45)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Could replace with 'Devices' icon */
 body:not(.no-sanctum-icons) svg.workspace-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eworkspace%3C/title%3E%3Cpath d='M16,17v8H6V17H16m0-2H6a2,2,0,0,0-2,2v8a2,2,0,0,0,2,2H16a2,2,0,0,0,2-2V17a2,2,0,0,0-2-2Z'/%3E%3Cpath d='M27,6v5H17V6H27m0-2H17a2,2,0,0,0-2,2v5a2,2,0,0,0,2,2H27a2,2,0,0,0,2-2V6a2,2,0,0,0-2-2Z'/%3E%3Cpath d='M27,17v5H22V17h5m0-2H22a2,2,0,0,0-2,2v5a2,2,0,0,0,2,2h5a2,2,0,0,0,2-2V17a2,2,0,0,0-2-2Z'/%3E%3Cpath d='M11,6v5H6V6h5m0-2H6A2,2,0,0,0,4,6v5a2,2,0,0,0,2,2h5a2,2,0,0,0,2-2V6a2,2,0,0,0-2-2Z'/%3E%3Cg id='_Rectangle_' data-name='&lt;Rectangle&gt;'%3E%3Crect class='cls-1' width='32' height='32'/%3E%3C/g%3E%3C/svg%3E");
 }
@@ -7866,14 +7770,10 @@ body:not(.no-sanctum-icons) svg.wrench-screwdriver-glyph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M8.9141,24.5l4.257-4.2568-1.414-1.4141L7.5,23.0859l-.793-.7929a.9994.9994,0,0,0-1.414,0l-4,4a.9994.9994,0,0,0,0,1.414l3,3a.9995.9995,0,0,0,1.414,0l4-4a.9994.9994,0,0,0,0-1.414ZM5,28.5859,3.4141,27,6,24.4141,7.5859,26Z'/%3E%3Cpath d='M24,30a6.0067,6.0067,0,0,1-6-6,5.84,5.84,0,0,1,.2109-1.5469l-8.664-8.6638A5.8483,5.8483,0,0,1,8,14,5.9757,5.9757,0,0,1,2.4228,5.8164l.5577-1.4219L6.293,7.707a1.0233,1.0233,0,0,0,1.4135,0,.999.999,0,0,0,0-1.4141L4.3936,2.979l1.4233-.5571A5.9772,5.9772,0,0,1,14,8a5.84,5.84,0,0,1-.2109,1.5469l8.664,8.6635A5.8548,5.8548,0,0,1,24,18a5.9755,5.9755,0,0,1,5.5771,8.1836L29.02,27.6055,25.707,24.293a1.0233,1.0233,0,0,0-1.4135,0,.999.999,0,0,0-.0005,1.4141L27.6055,29.02l-1.4219.5579A5.96,5.96,0,0,1,24,30ZM10.0625,11.4763,20.5234,21.9375l-.2392.6094A3.9754,3.9754,0,0,0,23.75,27.9922l-.8711-.8711a2.9992,2.9992,0,0,1,0-4.2424,3.0721,3.0721,0,0,1,4.2427.0005l.8706.8708a3.9759,3.9759,0,0,0-5.4458-3.4658l-.6094.2385-10.46-10.46.2392-.6094A3.9755,3.9755,0,0,0,8.2505,4.0078l.8706.8711a2.9992,2.9992,0,0,1,0,4.2424,3.0721,3.0721,0,0,1-4.2427-.0005L4.0078,8.25a3.975,3.975,0,0,0,5.4453,3.4656Z'/%3E%3Cpath d='M29.1226,2.85a3.0716,3.0716,0,0,0-4.2422,0L17.4,10.33l1.4141,1.414,7.48-7.48a1.0244,1.0244,0,0,1,1.4141,0,1.002,1.002,0,0,1,0,1.4145l-7.48,7.48,1.414,1.4141,7.48-7.4795A3.0031,3.0031,0,0,0,29.1226,2.85Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* OR -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Etools%3C/title%3E%3Cpath d='M12.1,2A9.8,9.8,0,0,0,6.7,3.6L13.1,10a2.1,2.1,0,0,1,.2,3,2.1,2.1,0,0,1-3-.2L3.7,6.4A9.84,9.84,0,0,0,2,12.1,10.14,10.14,0,0,0,12.1,22.2a10.9,10.9,0,0,0,2.6-.3l6.7,6.7a5,5,0,0,0,7.1-7.1l-6.7-6.7a10.9,10.9,0,0,0,.3-2.6A10,10,0,0,0,12.1,2Zm8,10.1a7.61,7.61,0,0,1-.3,2.1l-.3,1.1.8.8L27,22.8a2.88,2.88,0,0,1,.9,2.1A2.72,2.72,0,0,1,27,27a2.9,2.9,0,0,1-4.2,0l-6.7-6.7-.8-.8-1.1.3a7.61,7.61,0,0,1-2.1.3,8.27,8.27,0,0,1-5.7-2.3A7.63,7.63,0,0,1,4,12.1a8.33,8.33,0,0,1,.3-2.2l4.4,4.4a4.14,4.14,0,0,0,5.9.2,4.14,4.14,0,0,0-.2-5.9L10,4.2a6.45,6.45,0,0,1,2-.3,8.27,8.27,0,0,1,5.7,2.3A8.49,8.49,0,0,1,20.1,12.1Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");*/
-/* Calendar Minus (find replacent) */
 body:not(.no-sanctum-icons) svg.yesterday-glyph {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="red" d="M33.333 54.167H66.667V62.5H33.333z M79.167 16.667h-8.333V8.333h-8.333v8.333H37.5V8.333H29.167v8.333H20.833C16.238 16.667 12.5 20.404 12.5 25v8.333v50c0 4.596 3.738 8.333 8.333 8.333h58.333c4.596 0 8.333 -3.738 8.333 -8.333V33.333V25C87.5 20.404 83.763 16.667 79.167 16.667zM79.175 83.333H20.833V33.333h58.333L79.175 83.333z"></path></svg>');
 }
 
-/* ─────────────────────────────── EXTRA ICONS ────────────────────────────── */
-/* Admonitions */
 body:not(.no-sanctum-icons) svg.fa-copy {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Ecopy%3C/title%3E%3Cpath d='M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z' transform='translate(0)'/%3E%3Cpath d='M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
   height: 20px;
@@ -7884,7 +7784,6 @@ body:not(.no-sanctum-icons) svg.bar-graph {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eordinal%3C/title%3E%3Cpath d='M26,26V4H18v6H12v6H6V26H2v2H30V26ZM8,26V18h4v8Zm6,0V12h4V26Zm6,0V6h4V26Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Breadcrumbs Plugin */
 body:not(.no-sanctum-icons) svg.breadcrumbs-trail-icon {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M30,12V4H22V7H18a2.0023,2.0023,0,0,0-2,2v6H10V12H2v8h8V17h6v6a2.0023,2.0023,0,0,0,2,2h4v3h8V20H22v3H18V9h4v3ZM8,18H4V14H8Zm16,4h4v4H24ZM24,6h4v4H24Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
@@ -7897,7 +7796,6 @@ body:not(.no-sanctum-icons) svg.sweep {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Eclean%3C/title%3E%3Crect x='20' y='18' width='6' height='2' transform='translate(46 38) rotate(-180)'/%3E%3Crect x='24' y='26' width='6' height='2' transform='translate(54 54) rotate(-180)'/%3E%3Crect x='22' y='22' width='6' height='2' transform='translate(50 46) rotate(-180)'/%3E%3Cpath d='M17.0029,20a4.8952,4.8952,0,0,0-2.4044-4.1729L22,3,20.2691,2,12.6933,15.126A5.6988,5.6988,0,0,0,7.45,16.6289C3.7064,20.24,3.9963,28.6821,4.01,29.04a1,1,0,0,0,1,.96H20.0012a1,1,0,0,0,.6-1.8C17.0615,25.5439,17.0029,20.0537,17.0029,20ZM11.93,16.9971A3.11,3.11,0,0,1,15.0041,20c0,.0381.0019.208.0168.4688L9.1215,17.8452A3.8,3.8,0,0,1,11.93,16.9971ZM15.4494,28A5.2,5.2,0,0,1,14,25H12a6.4993,6.4993,0,0,0,.9684,3H10.7451A16.6166,16.6166,0,0,1,10,24H8a17.3424,17.3424,0,0,0,.6652,4H6c.031-1.8364.29-5.8921,1.8027-8.5527l7.533,3.35A13.0253,13.0253,0,0,0,17.5968,28Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/*  Excalidraw */
 body:not(.no-sanctum-icons) svg.excalidraw-icon {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M29.707,5.293l-3-3a.9994.9994,0,0,0-1.414,0L19.5859,8H17.0947A11.0118,11.0118,0,0,0,6.7124,15.3662L2.0562,28.67a1,1,0,0,0,1.2744,1.2739l13.3037-4.6562A11.012,11.012,0,0,0,24,14.9053V12.4141L29.707,6.707A.9994.9994,0,0,0,29.707,5.293Zm-7.414,6A1,1,0,0,0,22,12v2.9053A9.01,9.01,0,0,1,15.9731,23.4l-9.1677,3.209L16,17.4141,14.5859,16,5.3914,25.1948,8.6,16.0269A9.01,9.01,0,0,1,17.0947,10H20a1,1,0,0,0,.707-.293L26,4.4141,27.5859,6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
@@ -7908,7 +7806,6 @@ body:not(.no-sanctum-icons) svg.disk {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Esave%3C/title%3E%3Cpath d='M27.71,9.29l-5-5A1,1,0,0,0,22,4H6A2,2,0,0,0,4,6V26a2,2,0,0,0,2,2H26a2,2,0,0,0,2-2V10A1,1,0,0,0,27.71,9.29ZM12,6h8v4H12Zm8,20H12V18h8Zm2,0V18a2,2,0,0,0-2-2H12a2,2,0,0,0-2,2v8H6V6h4v4a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V6.41l4,4V26Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
-/* Gallery Plugin */
 body:not(.no-sanctum-icons) svg.fa-Images {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M4,22H2V4A2.0023,2.0023,0,0,1,4,2H22V4H4Z'/%3E%3Cpath d='M21,17a3,3,0,1,0-3-3A3.0033,3.0033,0,0,0,21,17Zm0-4a1,1,0,1,1-1,1A1.0009,1.0009,0,0,1,21,13Z'/%3E%3Cpath d='M28,7H9A2.0025,2.0025,0,0,0,7,9V28a2.0025,2.0025,0,0,0,2,2H28a2.0025,2.0025,0,0,0,2-2V9A2.0025,2.0025,0,0,0,28,7Zm0,21H9v-6l4-3.9971,5.5859,5.586a2,2,0,0,0,2.8282,0L23,22.0034,28,27Zm0-3.8281-3.5859-3.586a2,2,0,0,0-2.8282,0L20,22.1719l-5.5859-5.586a2,2,0,0,0-2.8282,0L9,19.1719V9H28Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
@@ -7917,22 +7814,18 @@ body:not(.no-sanctum-icons) svg.fa-search {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M29,27.5859l-7.5521-7.5521a11.0177,11.0177,0,1,0-1.4141,1.4141L27.5859,29ZM4,13a9,9,0,1,1,9,9A9.01,9.01,0,0,1,4,13Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Obsidian Charts */
 body:not(.no-sanctum-icons) svg.chart {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M27,28V6H19V28H15V14H7V28H4V2H2V28a2,2,0,0,0,2,2H30V28ZM13,28H9V16h4Zm12,0H21V8h4Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Changelogs */
 body:not(.no-sanctum-icons) svg.changelog {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M16,21a1.5,1.5,0,1,0,1.5,1.5A1.5,1.5,0,0,0,16,21Z'/%3E%3Crect x='15' y='8' width='2' height='10'/%3E%3Cpath d='M23,29H9a1,1,0,0,1-.8638-.4961l-7-12a1,1,0,0,1,0-1.0078l7-12A1,1,0,0,1,9,3H23a1,1,0,0,1,.8638.4961l7,12a1,1,0,0,1,0,1.0078l-7,12A1,1,0,0,1,23,29ZM9.5742,27H22.4258l6.4165-11L22.4258,5H9.5742L3.1577,16Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Fantasy Calendar */
 body:not(.no-sanctum-icons) svg.fantasy-calendar-reveal {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,4H22V2H20V4H12V2H10V4H6A2.0025,2.0025,0,0,0,4,6V26a2.0025,2.0025,0,0,0,2,2H26a2.0025,2.0025,0,0,0,2-2V6A2.0025,2.0025,0,0,0,26,4ZM6,6h4V8h2V6h8V8h2V6h4l0,4H6Zm0,6h5v6H6ZM19,26H13V20h6Zm0-8H13V12h6Zm2,8V20h5l.0012,6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Brat */
 body:not(.no-sanctum-icons) svg.BratIcon {
   -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D .st1%7Bfill:none;stroke:%23000000;stroke-width:1.5;stroke-miterlimit:10;%7D%0A%3C/style%3E%3Cpath d='M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14S23.7,2,16,2z M16,28C9.4,28,4,22.6,4,16S9.4,4,16,4s12,5.4,12,12 S22.6,28,16,28z'/%3E%3Cpath d='M20.5,11c-1.4,0-2.5,1.1-2.5,2.5s1.1,2.5,2.5,2.5s2.5-1.1,2.5-2.5S21.9,11,20.5,11z'/%3E%3Crect x='8' y='13' width='6' height='2'/%3E%3Cpath d='M16,24c2.8,0,5.4-1.5,6.9-3.9l-1.7-1c-1.7,2.8-5.4,3.8-8.2,2c-0.8-0.5-1.5-1.2-2-2l-1.7,1C10.6,22.5,13.2,24,16,24z'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Cpath class='st1' d='M13.3,3.8c-0.4,1.3-0.1,2.8,1.1,3.6c1.4,1.1,3.5,0.8,4.6-0.6'/%3E%3C/svg%3E%0A");
 }
@@ -7942,30 +7835,23 @@ body:not(.no-sanctum-icons) svg.running-man {
   transform: scale(1.1);
 }
 
-/* ──────────────────────── Targeted SVG Replacement ──────────────────────── */
-/* replaces the regular folder icon with compass, and makes it a bit bigger */
 body:not(.no-sanctum-icons) .workspace-tab-header[aria-label="File explorer"] .workspace-tab-header-inner-icon svg.folder {
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M22.707,9.2931a.9992.9992,0,0,0-1.0234-.2417l-9,3a1.001,1.001,0,0,0-.6323.6323l-3,9a1,1,0,0,0,1.2651,1.2651l9-3a1.0013,1.0013,0,0,0,.6323-.6324l3-9A1,1,0,0,0,22.707,9.2931ZM11.5811,20.419l2.2094-6.6284L18.21,18.21Z'/%3E%3Cpath d='M16,30A14,14,0,1,1,30,16,14.0158,14.0158,0,0,1,16,30ZM16,4A12,12,0,1,0,28,16,12.0137,12.0137,0,0,0,16,4Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Replaces regular document icon with document add */
 body:not(.no-sanctum-icons) .nav-action-button[aria-label="New note"] svg.document {
-  /* set as 20px x 20px by default */
   height: 16px;
   width: 16px;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='30 24 26 24 26 20 24 20 24 24 20 24 20 26 24 26 24 30 26 30 26 26 30 26 30 24'/%3E%3Cpath d='M16,28H8V4h8v6a2.0058,2.0058,0,0,0,2,2h6v4h2V10a.9092.9092,0,0,0-.3-.7l-7-7A.9087.9087,0,0,0,18,2H8A2.0058,2.0058,0,0,0,6,4V28a2.0058,2.0058,0,0,0,2,2h8ZM18,4.4,23.6,10H18Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
-/* Replaces regular folder icon with folder add */
 body:not(.no-sanctum-icons) .nav-action-button[aria-label="New folder"] svg.folder {
-  /* set as 20px x 20px by default */
   height: 16px;
   width: 16px;
   -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Efolder--add%3C/title%3E%3Cpolygon points='26,20 24,20 24,24 20,24 20,26 24,26 24,30 26,30 26,26 30,26 30,24 26,24 '/%3E%3Cpath d='M28,8H16l-3.4-3.4C12.2,4.2,11.7,4,11.2,4H4C2.9,4,2,4.9,2,6v20c0,1.1,0.9,2,2,2h14v-2H4V6h7.2l3.4,3.4l0.6,0.6H28v8h2v-8 C30,8.9,29.1,8,28,8z'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
 body:not(.no-sanctum-icons) .workspace-split.mod-left-split .nav-action-button[aria-label="Change sort order"] svg.up-and-down-arrows {
-  /* set as 20px x 20px by default */
   height: 16px;
   width: 16px;
   -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Earrows--vertical%3C/title%3E%3Cpolygon points='27.6,20.6 24,24.2 24,4 22,4 22,24.2 18.4,20.6 17,22 23,28 29,22 '/%3E%3Cpolygon points='9,4 3,10 4.4,11.4 8,7.8 8,28 10,28 10,7.8 13.6,11.4 15,10 '/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
@@ -7976,688 +7862,688 @@ body:not(.no-sanctum-icons) .workspace-split.mod-left-split .nav-action-button[a
 name: Sanctum Theme
 id: sanctum
 settings:
-    -
-        id: colors
-        title: Colors
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: light-mode-palette
-        title: Light mode palette
-        description: Background color palette for light mode
-        type: class-select
-        allowEmpty: false
-        default: sanctum-light-default
-        options:
-            - 
-                label: Default
-                value: sanctum-light-default
-    -
-        id: dark-mode-palette
-        title: Dark mode palette
-        description: Background color palette for dark mode
-        type: class-select
-        allowEmpty: false
-        default: sanctum-dark-default
-        options:
-            - 
-                label: Default
-                value: sanctum-dark-default
-    -
-        id: cb-dark-bg
-        title: Dark Mode High Contrast Code Background
-        description: Gives a darker background to code in dark mode, for more contrast.
-        type: class-toggle
-        default: false
-    -
-        id: accent-active-line
-        title: Use Accent color as Active Line Highlight
-        description: Replaces the grey with the accent color for active line highlighting.
-        type: class-toggle
-        default: false
-    -
-        id: accent-colors
-        title: Accent Colors
-        type: heading
-        level: 3
-        collapsed: false
-    -
-        id: color-l-accent
-        title: Light Mode Accent Color
-        type: variable-color
-        format: hsl-split
-        default: rgb(69, 163, 159)
-    -
-        id: color-d-accent
-        title: Dark Mode Accent Color
-        type: variable-color
-        format: hsl-split
-        default: rgb(149, 209, 207)
-    -
-        id: text-accent-hover
-        title: Text accent hover color
-        description: Color that displays when hovering elements that have the accent color by default (e.g. footnote numbers).
-        type: variable-color
-        format: rgb
-        default: rgb(237, 128, 11)
-    -
-        id: highlight-colors
-        title: Highlight Colors
-        description: Set the colors for highlights and highlighted text!
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: color-highlight-1
-        title: Highlight 1
-        description: The color of the highlight.
-        type: variable-color
-        format: rgb
-        default: rgb(234, 183, 70)
-    -
-        id: color-highlight-1-h
-        title: Highlight 1 Text
-        description: The color of highlighted text when hovered.
-        type: variable-color
-        format: rgb
-        default: rgb(20, 20, 20)
-    -
-        id: color-highlight-2
-        title: Highlight 2
-        description: The color of the highlight.
-        type: variable-color
-        format: rgb
-        default: rgb(69, 163, 159)
-    -
-        id: color-highlight-2-h
-        title: Highlight 2 Text
-        description: The color of highlighted text when hovered.
-        type: variable-color
-        format: rgb
-        default: rgb(20, 20, 20)
-    -
-        id: color-highlight-3
-        title: Highlight 3
-        description: The color of the highlight.
-        type: variable-color
-        format: rgb
-        default: rgb(234, 76, 103)
-    - 
-        id: color-highlight-3-h
-        title: Highlight 3 Text
-        description: The color of highlighted text when hovered.
-        type: variable-color
-        format: rgb
-        default: rgb(20, 20, 20)
-    -
-        id: graph-colors
-        title: Graph Colors
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: color-fill-focused
-        title: Active Note Node Color
-        type: variable-color
-        format: rgb
-        default: rgb(161, 163, 68)
-    -
-        id: color-fill-tag
-        title: Tag Node Color
-        type: variable-color
-        format: rgb
-        default: rgb(69, 163, 159)
-    -
-        id: color-fill-attachment
-        title: Attachment Node Color
-        type: variable-color
-        format: rgb
-        default: rgb(234, 183, 70)
-    -
-        id: typography
-        title: Typography
-        type: heading
-        level: 2
-        collapsed: true
-    - 
-        id: line-width
-        title: Preview Mode line width
-        description: The maximum number of characters per line.
-        type: variable-number-slider
-        default: 42
-        min: 30
-        max: 100
-        step: 1
-        format: 'rem'
-    -
-        id: fonts
-        title: Fonts
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        id: font-preview
-        title: Preview Mode Font
-        type: variable-text
-        default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    - 
-        id: font-editor
-        title: Edit Mode Font
-        type: variable-text
-        default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    - 
-        id: font-ui
-        title: UI font
-        type: variable-text
-        default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    - 
-        id: font-mono
-        title: Monospace Font
-        type: variable-text
-        default: "'IBM Plex Mono', 'iA Writer Mono V', 'iA IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
-    - 
-        id: headings-title
-        title: Headings
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: font-heading-preview
-        title: Heading Font Preview Mode
-        type: variable-text
-        default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    -
-        id: font-heading-editor
-        title: Heading Font Editor Mode
-        type: variable-text
-        default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    -
-        id: heading sizes
-        title: Heading Sizes
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: heading-1
-        title: Heading 1 Size
-        description: Changes the size of Heading 1 based on percentage.
-        type: variable-number-slider
-        default: 100
-        min: 34
-        max: 100
-        step: 1
-    -
-        id: heading-2
-        title: Heading 2 Size
-        description: Changes the size of Heading 2 based on percentage.
-        type: variable-number-slider
-        default: 100
-        min: 34
-        max: 100
-        step: 1
-    -
-        id: heading-3
-        title: Heading 3 Size
-        description: Changes the size of Heading 3 based on percentage.
-        type: variable-number-slider
-        default: 100
-        min: 50
-        max: 150
-        step: 1
-    -
-        id: heading-4
-        title: Heading 4 Size
-        description: Changes the size of Heading 4 based on percentage.
-        type: variable-number-slider
-        default: 100
-        min: 67
-        max: 200
-        step: 1
-    -
-        id: heading-5
-        title: Heading 5 Size
-        description: Changes the size of Heading 5 based on percentage.
-        type: variable-number-slider
-        default: 100
-        min: 100
-        max: 300
-        step: 1
-    -
-        id: heading-6
-        title: Heading 6 Size
-        description: Changes the size of Heading 6 based on percentage.
-        type: variable-number-slider
-        default: 100
-        min: 100
-        max: 292
-        step: 1
-    -
-        id: heading colours
-        title: Heading Colors
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: heading-clr
-        title: Toggle Heading Font Colours
-        type: class-toggle
-        default: false
-    -
-        id: heading-clr-bg
-        title: Toggle Heading Background Colours
-        type: class-toggle
-        default: false
-    -
-        id: heading colours
-        title: Heading Font Colors
-        type: heading
-        level: 5
-        collapsed: true
-    -
-        id: color-heading-1
-        title: Heading 1 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(252, 251, 250)
-        default-light: rgb(20, 20, 20)
-    -
-        id: color-heading-2
-        title: Heading 2 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(252, 251, 250)
-        default-light: rgb(20, 20, 20)
-    -
-        id: color-heading-3
-        title: Heading 3 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(252, 251, 250)
-        default-light: rgb(20, 20, 20)
-    -
-        id: color-heading-4
-        title: Heading 4 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(252, 251, 250)
-        default-light: rgb(20, 20, 20)
-    -
-        id: color-heading-5
-        title: Heading 5 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(252, 251, 250)
-        default-light: rgb(20, 20, 20)
-    -
-        id: color-heading-6
-        title: Heading 6 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(252, 251, 250)
-        default-light: rgb(20, 20, 20)
-    -
-        id: heading background colours
-        title: Heading Background Colors
-        type: heading
-        level: 5
-        collapsed: true
-    -
-        id: color-heading-1-bg
-        title: Heading 1 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(20, 20, 20)
-        default-light: rgb(252, 251, 250)
-    -
-        id: color-heading-2-bg
-        title: Heading 2 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(20, 20, 20)
-        default-light: rgb(252, 251, 250)
-    -
-        id: color-heading-3-bg
-        title: Heading 3 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(20, 20, 20)
-        default-light: rgb(252, 251, 250)
-    -
-        id: color-heading-4-bg
-        title: Heading 4 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(20, 20, 20)
-        default-light: rgb(252, 251, 250)
-    -
-        id: color-heading-5-bg
-        title: Heading 5 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(20, 20, 20)
-        default-light: rgb(252, 251, 250)
-    -
-        id: color-heading-6-bg
-        title: Heading 6 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(20, 20, 20)
-        default-light: rgb(252, 251, 250)
-    -
-        id: features
-        title: Features
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: hr-options
-        title: <hr> ("---") Options
-        description: For Edit Mode
-        type: class-select
-        allowEmpty: false
-        default: default
-        options:
-            - 
-                label: WYSIWYG Horizontal Rule (hr)
-                value: default
-            -
-                label: Disable WYSIWYG hr
-                value: no-editmode-hr
-            -
-                label: Center hr (no WYSIWYG)
-                value: center-hr
-    -
-        id: edit-mode-tasks
-        title: Edit Mode Tasks
-        description: Makes filled tasks green and empty ones red, in Edit Mode.
-        type: class-toggle
-    -
-        id: wrap-note-title
-        title: Wrap Note Titles
-        description: Displays the entire note title, even when the width is small.
-        type: class-toggle
-    - 
-        id: kanban-wrap
-        title: Wrap Kanban Lanes
-        description: Makes Kanban Lanes wrap in multiple rows if needed.
-        type: class-toggle
-    - 
-        id: fn-heading
-        title: Footnotes
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: fn-title-options
-        title: Footnote Title
-        description: Places a lvl.2 heading before the Footnotes.
-        type: class-select
-        allowEmpty: false
-        default: default
-        options:
-            - 
-                label: Default
-                value: default
-            -
-                label: Simple lvl 2 Heading
-                value: fn-title
-            -
-                label: Lvl 2 Heading with hr
-                value: fn-title-hr
-    - 
-        id: footnote-id
-        title: Footnotes heading
-        type: variable-text
-        default: "'Footnotes'"
-    - 
-        id: tables
-        title: Tables
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: limit-tables
-        title: Table Width
-        description: Increase table width threshold.
-        type: variable-number-slider
-        default: 100
-        min: 100
-        max: 250
-        step: 5
-        format: '%'
-    -
-        id: center-tables
-        title: Center Tables
-        description: Centers all tables in the note.
-        type: class-toggle
-        default: false
-    -
-        id: alternate-dataview
-        title: Alternate Dataview Tables
-        description: Alternates row colors for easier reading.
-        type: class-toggle
-        default: false
-    -
-        id: sidenotes
-        title: Sidenotes
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        id: aside-side-options
-        title: Sidenote Options
-        description: Left and right sidenote colors
-        type: class-select
-        allowEmpty: false
-        default: default
-        options:
-            - 
-                label: Default
-                value: default
-            -
-                label: Accent
-                value: aside-side-accent
-            -
-                label: Right Accent
-                value: aside-right-accent
-            - 
-                label: Left Accent
-                value: aside-left-accent
-    -
-        id: aside-in-options
-        title: Inner Sidenote Options
-        description: Inner sidenote colors 
-        type: class-select
-        allowEmpty: false
-        default: default
-        options:
-            - 
-                label: Default
-                value: default
-            - 
-                label: Accent
-                value: aside-in-accent
-            -
-                label: No border
-                value: aside-in-no-b
-            - 
-                label: Greyscale
-                value: aside-in-grayscale
-    -
-        id: relationship-lines-title
-        title: Relationship Lines
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: relationship-lines
-        title: Relationship Lines
-        description: Toggle relationship lines on lists
-        type: class-toggle
-        default: false
-    - 
-        id: relationship-lines-alternating
-        title: Alternating Relationship Lines Colors
-        description: Toggle alternating relationship lines on lists.
-        type: class-toggle
-        default: false
-    -
-        id: elements-title
-        title: Elements
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: hide-frontmatter
-        title: Hide Frontmatter
-        description: This setting hides frontmatter in Preview Mode.
-        type: class-toggle
-        default: false
-    -
-        id: topside-status-bar
-        title: Status Bar on top
-        description: This setting moves the status bar to the top. To click on icons aim for the border.
-        type: class-toggle
-        default: false
-    -
-        id: size-tab-header
-        title: Tab Header Icon side padding
-        description: Changes tab header icons side padding.
-        type: variable-number-slider
-        default: 16
-        min: 4
-        max: 20
-        step: 4
-        format: 'px'
-    -
-        id: file-explorer
-        title: File Explorer
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: show-vault-name
-        title: Show Vault Name
-        type: class-toggle
-        default: false
-    -
-        id: left-nav-arrows
-        title: Left Nav Arrows
-        description: Moves nav arrows to the left, like default obsidian.
-        type: class-toggle
-        default: false
-    -
-        id: fx-rl
-        title: File Explorer Relationship Lines
-        description: Adds hierarchy lines in File explorer.
-        type: class-toggle
-        default: false
-    -
-        id: no-file-icons
-        title: No File Icons
-        description: Removes file icons from file explorer.
-        type: class-toggle
-        default: false
-    -
-        id: no-folder-icons
-        title: No Folder Icons
-        description: Removes file icons from file explorer.
-        type: class-toggle
-        default: false
-    -
-        id: show-full-titles
-        title: Show full titles
-        description: Turns off trimming of folder and file titles.
-        type: class-toggle
-        default: false
-    -
-        id: modals-title
-        title: Modals
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        id: settings
-        title: Settings modal width
-        type: variable-number-slider
-        default: 40
-        min: 30
-        max: 90
-        step: 10
-        format: 'vw'
-    - 
-        id: community-theme
-        title: Community Themes modal width
-        type: variable-number-slider
-        default: 40
-        min: 30
-        max: 90
-        step: 10
-        format: 'vw'
-    - 
-        id: community-plugin
-        title: Community Plugins modal width
-        type: variable-number-slider
-        default: 40
-        min: 30
-        max: 90
-        step: 10
-        format: 'vw'
-    -
-        id: scrollbars-title
-        title: Scrollbars
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: no-scrl-search
-        title: No Scrollbar in Global Search
-        description: Disables Scrollbars when displaying Global Search Results.
-        type: class-toggle
-        default: false
-    -
-        id: no-scrl-note
-        title: No Scrollbar in Notes
-        description: Disables Scrollbars in Notes.
-        type: class-toggle
-        default: false
-    -
-        id: no-scrl-fx
-        title: No Scrollbar in File Explorer
-        description: Disables Scrollbars in File Explorer.
-        type: class-toggle
-        default: false
-    -
-        id: no-scrl-modal
-        title: No Scrollbar in Modal
-        description: Disables Scrollbars in settings menus.
-        type: class-toggle
-        default: false
-    -
-        id: advanced-options
-        title: Advanced Options
-        type: heading
-        level: 2
-        collapsed: true
-    - 
-        id: no-blur
-        title: No background blur
-        description: This setting disables background blur on modals.
-        type: class-toggle
-        default: false
-    -
-        id: no-animation
-        title: Disable animations
-        description: This setting disables animations and transitions.
-        type: class-toggle
-        default: false
-    -
-        id: no-sanctum-icons
-        title: Default icons
-        description: Use default icons instead of the Sanctum set.
-        type: class-toggle
-        default: false
+	-
+		id: colors
+		title: Colors
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: light-mode-palette
+		title: Light mode palette
+		description: Background color palette for light mode
+		type: class-select
+		allowEmpty: false
+		default: sanctum-light-default
+		options:
+			-
+				label: Default
+				value: sanctum-light-default
+	-
+		id: dark-mode-palette
+		title: Dark mode palette
+		description: Background color palette for dark mode
+		type: class-select
+		allowEmpty: false
+		default: sanctum-dark-default
+		options:
+			-
+				label: Default
+				value: sanctum-dark-default
+	-
+		id: cb-dark-bg
+		title: Dark Mode High Contrast Code Background
+		description: Gives a darker background to code in dark mode, for more contrast.
+		type: class-toggle
+		default: false
+	-
+		id: accent-active-line
+		title: Use Accent color as Active Line Highlight
+		description: Replaces the grey with the accent color for active line highlighting.
+		type: class-toggle
+		default: false
+	-
+		id: accent-colors
+		title: Accent Colors
+		type: heading
+		level: 3
+		collapsed: false
+	-
+		id: color-l-accent
+		title: Light Mode Accent Color
+		type: variable-color
+		format: hsl-split
+		default: rgb(69, 163, 159)
+	-
+		id: color-d-accent
+		title: Dark Mode Accent Color
+		type: variable-color
+		format: hsl-split
+		default: rgb(149, 209, 207)
+	-
+		id: text-accent-hover
+		title: Text accent hover color
+		description: Color that displays when hovering elements that have the accent color by default (e.g. footnote numbers).
+		type: variable-color
+		format: rgb
+		default: rgb(237, 128, 11)
+	-
+		id: highlight-colors
+		title: Highlight Colors
+		description: Set the colors for highlights and highlighted text!
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: color-highlight-1
+		title: Highlight 1
+		description: The color of the highlight.
+		type: variable-color
+		format: rgb
+		default: rgb(234, 183, 70)
+	-
+		id: color-highlight-1-h
+		title: Highlight 1 Text
+		description: The color of highlighted text when hovered.
+		type: variable-color
+		format: rgb
+		default: rgb(20, 20, 20)
+	-
+		id: color-highlight-2
+		title: Highlight 2
+		description: The color of the highlight.
+		type: variable-color
+		format: rgb
+		default: rgb(69, 163, 159)
+	-
+		id: color-highlight-2-h
+		title: Highlight 2 Text
+		description: The color of highlighted text when hovered.
+		type: variable-color
+		format: rgb
+		default: rgb(20, 20, 20)
+	-
+		id: color-highlight-3
+		title: Highlight 3
+		description: The color of the highlight.
+		type: variable-color
+		format: rgb
+		default: rgb(234, 76, 103)
+	-
+		id: color-highlight-3-h
+		title: Highlight 3 Text
+		description: The color of highlighted text when hovered.
+		type: variable-color
+		format: rgb
+		default: rgb(20, 20, 20)
+	-
+		id: graph-colors
+		title: Graph Colors
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: color-fill-focused
+		title: Active Note Node Color
+		type: variable-color
+		format: rgb
+		default: rgb(161, 163, 68)
+	-
+		id: color-fill-tag
+		title: Tag Node Color
+		type: variable-color
+		format: rgb
+		default: rgb(69, 163, 159)
+	-
+		id: color-fill-attachment
+		title: Attachment Node Color
+		type: variable-color
+		format: rgb
+		default: rgb(234, 183, 70)
+	-
+		id: typography
+		title: Typography
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: line-width
+		title: Preview Mode line width
+		description: The maximum number of characters per line.
+		type: variable-number-slider
+		default: 42
+		min: 30
+		max: 100
+		step: 1
+		format: 'rem'
+	-
+		id: fonts
+		title: Fonts
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: font-preview
+		title: Preview Mode Font
+		type: variable-text
+		default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-
+		id: font-editor
+		title: Edit Mode Font
+		type: variable-text
+		default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-
+		id: font-ui
+		title: UI font
+		type: variable-text
+		default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-
+		id: font-mono
+		title: Monospace Font
+		type: variable-text
+		default: "'IBM Plex Mono', 'iA Writer Mono V', 'iA IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
+	-
+		id: headings-title
+		title: Headings
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: font-heading-preview
+		title: Heading Font Preview Mode
+		type: variable-text
+		default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-
+		id: font-heading-editor
+		title: Heading Font Editor Mode
+		type: variable-text
+		default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-
+		id: heading sizes
+		title: Heading Sizes
+		type: heading
+		level: 4
+		collapsed: true
+	-
+		id: heading-1
+		title: Heading 1 Size
+		description: Changes the size of Heading 1 based on percentage.
+		type: variable-number-slider
+		default: 100
+		min: 34
+		max: 100
+		step: 1
+	-
+		id: heading-2
+		title: Heading 2 Size
+		description: Changes the size of Heading 2 based on percentage.
+		type: variable-number-slider
+		default: 100
+		min: 34
+		max: 100
+		step: 1
+	-
+		id: heading-3
+		title: Heading 3 Size
+		description: Changes the size of Heading 3 based on percentage.
+		type: variable-number-slider
+		default: 100
+		min: 50
+		max: 150
+		step: 1
+	-
+		id: heading-4
+		title: Heading 4 Size
+		description: Changes the size of Heading 4 based on percentage.
+		type: variable-number-slider
+		default: 100
+		min: 67
+		max: 200
+		step: 1
+	-
+		id: heading-5
+		title: Heading 5 Size
+		description: Changes the size of Heading 5 based on percentage.
+		type: variable-number-slider
+		default: 100
+		min: 100
+		max: 300
+		step: 1
+	-
+		id: heading-6
+		title: Heading 6 Size
+		description: Changes the size of Heading 6 based on percentage.
+		type: variable-number-slider
+		default: 100
+		min: 100
+		max: 292
+		step: 1
+	-
+		id: heading colours
+		title: Heading Colors
+		type: heading
+		level: 4
+		collapsed: true
+	-
+		id: heading-clr
+		title: Toggle Heading Font Colours
+		type: class-toggle
+		default: false
+	-
+		id: heading-clr-bg
+		title: Toggle Heading Background Colours
+		type: class-toggle
+		default: false
+	-
+		id: heading colours
+		title: Heading Font Colors
+		type: heading
+		level: 5
+		collapsed: true
+	-
+		id: color-heading-1
+		title: Heading 1 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(252, 251, 250)
+		default-light: rgb(20, 20, 20)
+	-
+		id: color-heading-2
+		title: Heading 2 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(252, 251, 250)
+		default-light: rgb(20, 20, 20)
+	-
+		id: color-heading-3
+		title: Heading 3 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(252, 251, 250)
+		default-light: rgb(20, 20, 20)
+	-
+		id: color-heading-4
+		title: Heading 4 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(252, 251, 250)
+		default-light: rgb(20, 20, 20)
+	-
+		id: color-heading-5
+		title: Heading 5 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(252, 251, 250)
+		default-light: rgb(20, 20, 20)
+	-
+		id: color-heading-6
+		title: Heading 6 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(252, 251, 250)
+		default-light: rgb(20, 20, 20)
+	-
+		id: heading background colours
+		title: Heading Background Colors
+		type: heading
+		level: 5
+		collapsed: true
+	-
+		id: color-heading-1-bg
+		title: Heading 1 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(20, 20, 20)
+		default-light: rgb(252, 251, 250)
+	-
+		id: color-heading-2-bg
+		title: Heading 2 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(20, 20, 20)
+		default-light: rgb(252, 251, 250)
+	-
+		id: color-heading-3-bg
+		title: Heading 3 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(20, 20, 20)
+		default-light: rgb(252, 251, 250)
+	-
+		id: color-heading-4-bg
+		title: Heading 4 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(20, 20, 20)
+		default-light: rgb(252, 251, 250)
+	-
+		id: color-heading-5-bg
+		title: Heading 5 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(20, 20, 20)
+		default-light: rgb(252, 251, 250)
+	-
+		id: color-heading-6-bg
+		title: Heading 6 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(20, 20, 20)
+		default-light: rgb(252, 251, 250)
+	-
+		id: features
+		title: Features
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: hr-options
+		title: <hr> ("---") Options
+		description: For Edit Mode
+		type: class-select
+		allowEmpty: false
+		default: default
+		options:
+			-
+				label: WYSIWYG Horizontal Rule (hr)
+				value: default
+			-
+				label: Disable WYSIWYG hr
+				value: no-editmode-hr
+			-
+				label: Center hr (no WYSIWYG)
+				value: center-hr
+	-
+		id: edit-mode-tasks
+		title: Edit Mode Tasks
+		description: Makes filled tasks green and empty ones red, in Edit Mode.
+		type: class-toggle
+	-
+		id: wrap-note-title
+		title: Wrap Note Titles
+		description: Displays the entire note title, even when the width is small.
+		type: class-toggle
+	-
+		id: kanban-wrap
+		title: Wrap Kanban Lanes
+		description: Makes Kanban Lanes wrap in multiple rows if needed.
+		type: class-toggle
+	-
+		id: fn-heading
+		title: Footnotes
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: fn-title-options
+		title: Footnote Title
+		description: Places a lvl.2 heading before the Footnotes.
+		type: class-select
+		allowEmpty: false
+		default: default
+		options:
+			-
+				label: Default
+				value: default
+			-
+				label: Simple lvl 2 Heading
+				value: fn-title
+			-
+				label: Lvl 2 Heading with hr
+				value: fn-title-hr
+	-
+		id: footnote-id
+		title: Footnotes heading
+		type: variable-text
+		default: "'Footnotes'"
+	-
+		id: tables
+		title: Tables
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: limit-tables
+		title: Table Width
+		description: Increase table width threshold.
+		type: variable-number-slider
+		default: 100
+		min: 100
+		max: 250
+		step: 5
+		format: '%'
+	-
+		id: center-tables
+		title: Center Tables
+		description: Centers all tables in the note.
+		type: class-toggle
+		default: false
+	-
+		id: alternate-dataview
+		title: Alternate Dataview Tables
+		description: Alternates row colors for easier reading.
+		type: class-toggle
+		default: false
+	-
+		id: sidenotes
+		title: Sidenotes
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: aside-side-options
+		title: Sidenote Options
+		description: Left and right sidenote colors
+		type: class-select
+		allowEmpty: false
+		default: default
+		options:
+			-
+				label: Default
+				value: default
+			-
+				label: Accent
+				value: aside-side-accent
+			-
+				label: Right Accent
+				value: aside-right-accent
+			-
+				label: Left Accent
+				value: aside-left-accent
+	-
+		id: aside-in-options
+		title: Inner Sidenote Options
+		description: Inner sidenote colors 
+		type: class-select
+		allowEmpty: false
+		default: default
+		options:
+			-
+				label: Default
+				value: default
+			-
+				label: Accent
+				value: aside-in-accent
+			-
+				label: No border
+				value: aside-in-no-b
+			-
+				label: Greyscale
+				value: aside-in-grayscale
+	-
+		id: relationship-lines-title
+		title: Relationship Lines
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: relationship-lines
+		title: Relationship Lines
+		description: Toggle relationship lines on lists
+		type: class-toggle
+		default: false
+	-
+		id: relationship-lines-alternating
+		title: Alternating Relationship Lines Colors
+		description: Toggle alternating relationship lines on lists.
+		type: class-toggle
+		default: false
+	-
+		id: elements-title
+		title: Elements
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: hide-frontmatter
+		title: Hide Frontmatter
+		description: This setting hides frontmatter in Preview Mode.
+		type: class-toggle
+		default: false
+	-
+		id: topside-status-bar
+		title: Status Bar on top
+		description: This setting moves the status bar to the top. To click on icons aim for the border.
+		type: class-toggle
+		default: false
+	-
+		id: size-tab-header
+		title: Tab Header Icon side padding
+		description: Changes tab header icons side padding.
+		type: variable-number-slider
+		default: 16
+		min: 4
+		max: 20
+		step: 4
+		format: 'px'
+	-
+		id: file-explorer
+		title: File Explorer
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: show-vault-name
+		title: Show Vault Name
+		type: class-toggle
+		default: false
+	-
+		id: left-nav-arrows
+		title: Left Nav Arrows
+		description: Moves nav arrows to the left, like default obsidian.
+		type: class-toggle
+		default: false
+	-
+		id: fx-rl
+		title: File Explorer Relationship Lines
+		description: Adds hierarchy lines in File explorer.
+		type: class-toggle
+		default: false
+	-
+		id: no-file-icons
+		title: No File Icons
+		description: Removes file icons from file explorer.
+		type: class-toggle
+		default: false
+	-
+		id: no-folder-icons
+		title: No Folder Icons
+		description: Removes file icons from file explorer.
+		type: class-toggle
+		default: false
+	-
+		id: show-full-titles
+		title: Show full titles
+		description: Turns off trimming of folder and file titles.
+		type: class-toggle
+		default: false
+	-
+		id: modals-title
+		title: Modals
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: settings
+		title: Settings modal width
+		type: variable-number-slider
+		default: 40
+		min: 30
+		max: 90
+		step: 10
+		format: 'vw'
+	-
+		id: community-theme
+		title: Community Themes modal width
+		type: variable-number-slider
+		default: 40
+		min: 30
+		max: 90
+		step: 10
+		format: 'vw'
+	-
+		id: community-plugin
+		title: Community Plugins modal width
+		type: variable-number-slider
+		default: 40
+		min: 30
+		max: 90
+		step: 10
+		format: 'vw'
+	-
+		id: scrollbars-title
+		title: Scrollbars
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: no-scrl-search
+		title: No Scrollbar in Global Search
+		description: Disables Scrollbars when displaying Global Search Results.
+		type: class-toggle
+		default: false
+	-
+		id: no-scrl-note
+		title: No Scrollbar in Notes
+		description: Disables Scrollbars in Notes.
+		type: class-toggle
+		default: false
+	-
+		id: no-scrl-fx
+		title: No Scrollbar in File Explorer
+		description: Disables Scrollbars in File Explorer.
+		type: class-toggle
+		default: false
+	-
+		id: no-scrl-modal
+		title: No Scrollbar in Modal
+		description: Disables Scrollbars in settings menus.
+		type: class-toggle
+		default: false
+	-
+		id: advanced-options
+		title: Advanced Options
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: no-blur
+		title: No background blur
+		description: This setting disables background blur on modals.
+		type: class-toggle
+		default: false
+	-
+		id: no-animation
+		title: Disable animations
+		description: This setting disables animations and transitions.
+		type: class-toggle
+		default: false
+	-
+		id: no-sanctum-icons
+		title: Default icons
+		description: Use default icons instead of the Sanctum set.
+		type: class-toggle
+		default: false
 
 
 */

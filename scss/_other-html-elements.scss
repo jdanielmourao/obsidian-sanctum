@@ -1,20 +1,20 @@
 @use 'var';
 
 kbd:not(.suggestion-hotkey) {
-    font-family: var(--font-mono);
-    padding: var.$size-1 var.$size-3;
-    font-size: var.$font-scale-000;
-    background-color: var(--color-hover);
-    border: 1px solid var(--color-border-2);
-    border-radius: 4px;
-    vertical-align: 2px;
+	font-family: var(--font-mono);
+	padding: var.$size-1 var.$size-3;
+	font-size: var.$font-scale-000;
+	background-color: var(--color-hover);
+	border: 1px solid var(--color-border-2);
+	border-radius: 4px;
+	vertical-align: 2px;
 }
 
 small {
-    font-size: var.$font-scale-000;
+	font-size: var.$font-scale-000;
 }
 
 samp {
-    font-family: var(--font-mono);
-    font-size: var.$font-scale-0;
+	font-family: var(--font-mono);
+	font-size: var.$font-scale-0;
 }

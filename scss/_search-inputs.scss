@@ -5,149 +5,158 @@ input[type='search'],
 input[type='email'],
 input[type='password'],
 input[type='number'] {
-    background: var(--color-primary-w);
-    color: var(--text-normal);
-    font-family: var(--font-ui);
-    padding: var.$size-3 var.$size-5;
-    font-size: var.$font-scale-00;
-    border-radius: 0px;
-    outline: none;
-    height: var.$scale-3;
-    margin: 0;
-    border-color: transparent;
-    border-bottom: 1px solid var(--color-border-2);
+	background: var(--color-primary-w);
+	color: var(--text-normal);
+	font-family: var(--font-ui);
+	padding: var.$size-3 var.$size-5;
+	font-size: var.$font-scale-00;
+	border-radius: 0px;
+	outline: none;
+	height: var.$scale-3;
+	margin: 0;
+	border-color: transparent;
+	border-bottom: 1px solid var(--color-border-2);
+
+	&:focus {
+		border-bottom: 0px solid transparent;
+		outline: 1px solid var(--color-blue);
+	}
 }
 
-input[type='text']:focus,
-input[type='search']:focus,
-input[type='email']:focus,
-input[type='password']:focus,
-input[type='number']:focus {
-    border-bottom: 0px solid transparent;
-    outline: 1px solid var(--color-blue);
-}
 
-/* Document Search */
+
+// Document Search
 .document-search-container {
-    position: absolute;
-    bottom: var.$size-0;
-    left: var.$size-0;
-    width: 100%;
-    height: var.$size-10;
-    background-color: var(--background-primary);
-    display: flex;
-    flex-direction: column;
-    padding: var.$size-0;
-    z-index: var(--layer-popover);
-    border-top: 1px solid var(--color-border-1);
-}
+	position: absolute;
+	bottom: var.$size-0;
+	left: var.$size-0;
+	width: 100%;
+	height: var.$size-10;
+	background-color: var(--background-primary);
+	display: flex;
+	flex-direction: column;
+	padding: var.$size-0;
+	z-index: var(--layer-popover);
+	border-top: 1px solid var(--color-border-1);
 
-.document-search-container .document-search-button {
-    height: var.$scale-3;
-    font-size: var.$font-scale-00;
-    padding: var.$size-1
-             var.$size-3;
-    color: var(--text-muted);
-    margin: var.$size-2
-            var.$size-1;
-    background-color: var(--color-border-1);
-}
-
-.document-search-container .document-search .document-search-input {
-    margin: var.$size-2
-            var.$size-1;
+	& .document-search-button {
+		height: var.$scale-3;
+		font-size: var.$font-scale-00;
+		padding: var.$size-1
+				 var.$size-3;
+		color: var(--text-muted);
+		margin: var.$size-2
+				var.$size-1;
+		background-color: var(--color-border-1);
+	}
+	& .document-search .document-search-input {
+		margin: var.$size-2
+				var.$size-1;
+	}
 }
 
 .document-search-close-button:before {
-    color: transparent;
-    background-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:hsl(34.3, 21.2%25, 93.5%25);%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eclose%3C/title%3E%3Cpolygon class='cls-1' points='24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4'/%3E%3Crect class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-size: var.$scale-3 var.$scale-3;
-    background-position: center center;
-    background-position: -6px 8px;
+	color: transparent;
+	background-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:hsl(34.3, 21.2%25, 93.5%25);%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eclose%3C/title%3E%3Cpolygon class='cls-1' points='24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4'/%3E%3Crect class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-size: var.$scale-3 var.$scale-3;
+	background-position: center center;
+	background-position: -6px 8px;
+
+	.theme-light & {
+		background-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23000000;%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eclose%3C/title%3E%3Cpolygon class='cls-1' points='24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4'/%3E%3Crect class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
+	}
 }
 
-.theme-light .document-search-close-button:before {
-    background-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23000000;%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eclose%3C/title%3E%3Cpolygon class='cls-1' points='24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4'/%3E%3Crect class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
-}
-
+//general search input container
 .search-input-container {
-    margin: var.$size-5
-            var.$size-5
-            var.$size-1
-            var.$size-5;
-    position: relative;
-    background-color: var(--background-primary);
+	margin: var.$size-5
+			var.$size-5
+			var.$size-1
+			var.$size-5;
+	position: relative;
+	background-color: var(--background-primary);
 }
 
+//global search results
 .search-result-container.mod-global-search {
-    overflow-y: auto;
-    background-color: var(--background-primary);
+	overflow-y: auto;
+	background-color: var(--background-primary);
 }
-
+//global search individual result
+.search-result-file-matches {
+	font-size: var.$font-scale-00;
+	margin-bottom: 4px;
+	padding-left: 4px;
+	padding-bottom: 4px;
+	color: var(--text-faint);
+	margin-left: 8px;
+	border-bottom: 1px solid var(--color-border-1);
+}
 
 .search-result-file-match-destination-file {
-    display: inline-flex;
-    background-color: var(--background-primary);
-    border-radius: 4px;
-    padding: var.$size-1
-             var.$size-3
-             var.$size-1
-             var.$size-3;
-    margin: var.$size-2
-            var.$size-3
-            var.$size-0
-            var.$size-0;
-    border: 1px solid var(--color-border-2);
+	display: inline-flex;
+	background-color: var(--background-primary);
+	border-radius: 4px;
+	padding: var.$size-1
+			 var.$size-3
+			 var.$size-1
+			 var.$size-3;
+	margin: var.$size-2
+			var.$size-3
+			var.$size-0
+			var.$size-0;
+	border: 1px solid var(--color-border-1);
 }
 
-.search-result-file-matched-text {
-    color: var(--text-normal);
-    background-color: var.$color-green-300;
+.search-result-file-matched-text { // matched highlighted text
+	color: var(--text-normal);
+	background-color: var.$color-green-300;
+
+	.theme-dark & {
+		color: var(--text-normal);
+		background-color: var.$color-green-700;
+	}
 }
 
-.search-empty-state {
-    color: var(--text-muted);
-    font-size: var.$font-scale-00;
-    margin: var.$size-0
-            var.$size-5
-            var.$size-3
-            var.$size-5;
-}
-
-.theme-dark .search-result-file-matched-text {
-    color: var(--text-normal);
-    background-color: var.$color-green-700;
+.search-empty-state { // no results
+	color: var(--text-muted);
+	font-size: var.$font-scale-00;
+	margin: var.$size-0
+			var.$size-5
+			var.$size-3
+			var.$size-5;
 }
 
 .setting-item-control button {
-    margin: var.$size-0;
+	margin: var.$size-0;
 }
 
 .document-search button,
 .document-search input {
-    margin: var.$size-2;
+	margin: var.$size-2;
 }
 
-.document-search, .document-replace {
-    width: 100%;
-    display: flex;
-    height: var.$scale-6;
-    overflow: hidden;
+.document-search,
+.document-replace {
+	width: 100%;
+	display: flex;
+	height: var.$scale-6;
+	overflow: hidden;
 }
 
 .document-replace .document-replace-input {
-    margin: var.$size-2;
+	margin: var.$size-2;
 }
 
 .workspace-leaf-content .search-result-container.mod-global-search {
-    padding: var.$size-5;
+	padding: var.$size-5;
 }
 
 .modal.mod-settings .vertical-tabs-container .plugin-list-plugins .setting-item .search-input-container {
-    margin-right: 1px;
+	margin-right: 1px; // this makes the outline show completely
 }
 
 .modal.mod-settings .vertical-tabs-container .hotkey-settings-container .hotkey-search-container {
-    margin-left: 1px;
+	margin-left: 1px;
 }

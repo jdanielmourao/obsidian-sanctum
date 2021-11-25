@@ -1,80 +1,56 @@
 @use 'var';
 
-.checkbox-container {
-    cursor: pointer;
-    display: inline-block;
-    height: var.$size-6;
-    position: relative;
-    user-select: none;
-    width: var.$size-9;
-    border-radius: 24px;
-    transition: var.$duration-fast-1 var.$motion-standard-expressive;
-    background-color: var(--color-primary-30);
+.checkbox-container { //background
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	user-select: none;
+	height: var.$size-6;
+	width: var.$size-9;
+	border-radius: 30px;
+	transition: var.$duration-fast-1 var.$motion-standard-expressive;
+	background-color: var(--color-primary-30);
 }
 
-.checkbox-container:after {
-    pointer-events: none;
-    content: "";
-    display: inline-block;
-    position: absolute;
-    background-color: var(--background-primary);
-    width: 18px;
-    height: 18px;
-    margin: 3.25px;
-    left: -2px;
-    border-radius: 50%;
-    transition: transform var.$duration-moderate-1 var.$motion-entrance-expressive,
-                width var.$duration-fast-2 var.$motion-exit-expressive,
-                left var.$duration-fast-2 var.$motion-standard-expressive,
-                -webkit-transform var.$duration-fast-1 var.$motion-standard-expressive;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
-       0 0 0 1px rgba(0, 0, 0, 0.03);
+.checkbox-container:after { //circle
+	pointer-events: none;
+	content: "";
+	display: inline-block;
+	position: absolute;
+	background-color: var(--color-primary-k);
+	width: 18px;
+	height: 18px;
+	top: .5px;
+	left: -2px;
+	border-radius: 50%;
+	transition: transform var.$duration-moderate-1 var.$motion-entrance-expressive,
+				width var.$duration-fast-2 var.$motion-exit-expressive,
+				left var.$duration-fast-2 var.$motion-standard-expressive,
+				-webkit-transform var.$duration-fast-1 var.$motion-standard-expressive;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
+		0 0 0 1px rgba(0, 0, 0, 0.03);
 }
 
 .checkbox-container.is-enabled:after {
-    transform: translate3d(26px, 0, 0);
+	transform: translate3d(26px, 0, 0); // distance travelled
 }
 
 .checkbox-container.is-enabled {
-    background-color: var(--color-accent);
+	background-color: var(--color-accent);
 }
 
 /* ──────────────────────────── Graph Checkboxes ──────────────────────────── */
 .graph-controls .checkbox-container {
-    cursor: pointer;
-    display: inline-block;
-    height: var.$scale-3;
-    position: relative;
-    user-select: none;
-    width: var.$scale-6;
-    border-radius: var.$size-7;
-    transition: var.$duration-fast-1 var.$motion-standard-expressive;
-    background-color: var(--color-primary-20);
+	height: 20px;
+	width: 40px;
+	border-radius: 30px;
 }
-
-.graph-controls .checkbox-container.is-enabled {
-    background-color: var(--color-accent);
-}
-
 .graph-controls .checkbox-container:after {
-    pointer-events: none;
-    content: "";
-    display: inline-block;
-    position: absolute;
-    background-color: var(--background-primary);
-    width: var.$scale-2;
-    height: var.$scale-2;
-    margin: var.$size-2;
-    left: var.$size-0;
-    border-radius: 50%;
-    transition: transform var.$duration-moderate-1 var.$motion-entrance-expressive,
-                width var.$duration-fast-2 var.$motion-exit-expressive,
-                left var.$duration-fast-2 var.$motion-standard-expressive,
-                -webkit-transform var.$duration-fast-1 var.$motion-standard-expressive;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
-       0 0 0 1px rgba(0, 0, 0, 0.03);
+	width: 14px;
+	height: 14px;
+	top: 0.25px;
+	left: -2px;
 }
-
 .graph-controls .checkbox-container.is-enabled:after {
-    transform: translate3d(20px, 0, 0);
+	transform: translate3d(22px, 0, 0);
 }

@@ -3,688 +3,688 @@
 name: Sanctum Theme
 id: sanctum
 settings:
-    -
-        id: colors
-        title: Colors
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: light-mode-palette
-        title: Light mode palette
-        description: Background color palette for light mode
-        type: class-select
-        allowEmpty: false
-        default: sanctum-light-default
-        options:
-            - 
-                label: Default
-                value: sanctum-light-default
-    -
-        id: dark-mode-palette
-        title: Dark mode palette
-        description: Background color palette for dark mode
-        type: class-select
-        allowEmpty: false
-        default: sanctum-dark-default
-        options:
-            - 
-                label: Default
-                value: sanctum-dark-default
-    -
-        id: cb-dark-bg
-        title: Dark Mode High Contrast Code Background
-        description: Gives a darker background to code in dark mode, for more contrast.
-        type: class-toggle
-        default: false
-    -
-        id: accent-active-line
-        title: Use Accent color as Active Line Highlight
-        description: Replaces the grey with the accent color for active line highlighting.
-        type: class-toggle
-        default: false
-    -
-        id: accent-colors
-        title: Accent Colors
-        type: heading
-        level: 3
-        collapsed: false
-    -
-        id: color-l-accent
-        title: Light Mode Accent Color
-        type: variable-color
-        format: hsl-split
-        default: rgb(69, 163, 159)
-    -
-        id: color-d-accent
-        title: Dark Mode Accent Color
-        type: variable-color
-        format: hsl-split
-        default: rgb(149, 209, 207)
-    -
-        id: text-accent-hover
-        title: Text accent hover color
-        description: Color that displays when hovering elements that have the accent color by default (e.g. footnote numbers).
-        type: variable-color
-        format: rgb
-        default: rgb(237, 128, 11)
-    -
-        id: highlight-colors
-        title: Highlight Colors
-        description: Set the colors for highlights and highlighted text!
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: color-highlight-1
-        title: Highlight 1
-        description: The color of the highlight.
-        type: variable-color
-        format: rgb
-        default: rgb(234, 183, 70)
-    -
-        id: color-highlight-1-h
-        title: Highlight 1 Text
-        description: The color of highlighted text when hovered.
-        type: variable-color
-        format: rgb
-        default: rgb(20, 20, 20)
-    -
-        id: color-highlight-2
-        title: Highlight 2
-        description: The color of the highlight.
-        type: variable-color
-        format: rgb
-        default: rgb(69, 163, 159)
-    -
-        id: color-highlight-2-h
-        title: Highlight 2 Text
-        description: The color of highlighted text when hovered.
-        type: variable-color
-        format: rgb
-        default: rgb(20, 20, 20)
-    -
-        id: color-highlight-3
-        title: Highlight 3
-        description: The color of the highlight.
-        type: variable-color
-        format: rgb
-        default: rgb(234, 76, 103)
-    - 
-        id: color-highlight-3-h
-        title: Highlight 3 Text
-        description: The color of highlighted text when hovered.
-        type: variable-color
-        format: rgb
-        default: rgb(20, 20, 20)
-    -
-        id: graph-colors
-        title: Graph Colors
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: color-fill-focused
-        title: Active Note Node Color
-        type: variable-color
-        format: rgb
-        default: rgb(161, 163, 68)
-    -
-        id: color-fill-tag
-        title: Tag Node Color
-        type: variable-color
-        format: rgb
-        default: rgb(69, 163, 159)
-    -
-        id: color-fill-attachment
-        title: Attachment Node Color
-        type: variable-color
-        format: rgb
-        default: rgb(234, 183, 70)
-    -
-        id: typography
-        title: Typography
-        type: heading
-        level: 2
-        collapsed: true
-    - 
-        id: line-width
-        title: Preview Mode line width
-        description: The maximum number of characters per line.
-        type: variable-number-slider
-        default: 42
-        min: 30
-        max: 100
-        step: 1
-        format: 'rem'
-    -
-        id: fonts
-        title: Fonts
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        id: font-preview
-        title: Preview Mode Font
-        type: variable-text
-        default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    - 
-        id: font-editor
-        title: Edit Mode Font
-        type: variable-text
-        default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    - 
-        id: font-ui
-        title: UI font
-        type: variable-text
-        default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    - 
-        id: font-mono
-        title: Monospace Font
-        type: variable-text
-        default: "'IBM Plex Mono', 'iA Writer Mono V', 'iA IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
-    - 
-        id: headings-title
-        title: Headings
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: font-heading-preview
-        title: Heading Font Preview Mode
-        type: variable-text
-        default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    -
-        id: font-heading-editor
-        title: Heading Font Editor Mode
-        type: variable-text
-        default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    -
-        id: heading sizes
-        title: Heading Sizes
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: heading-1
-        title: Heading 1 Size
-        description: Changes the size of Heading 1 based on percentage.
-        type: variable-number-slider
-        default: 100
-        min: 34
-        max: 100
-        step: 1
-    -
-        id: heading-2
-        title: Heading 2 Size
-        description: Changes the size of Heading 2 based on percentage.
-        type: variable-number-slider
-        default: 100
-        min: 34
-        max: 100
-        step: 1
-    -
-        id: heading-3
-        title: Heading 3 Size
-        description: Changes the size of Heading 3 based on percentage.
-        type: variable-number-slider
-        default: 100
-        min: 50
-        max: 150
-        step: 1
-    -
-        id: heading-4
-        title: Heading 4 Size
-        description: Changes the size of Heading 4 based on percentage.
-        type: variable-number-slider
-        default: 100
-        min: 67
-        max: 200
-        step: 1
-    -
-        id: heading-5
-        title: Heading 5 Size
-        description: Changes the size of Heading 5 based on percentage.
-        type: variable-number-slider
-        default: 100
-        min: 100
-        max: 300
-        step: 1
-    -
-        id: heading-6
-        title: Heading 6 Size
-        description: Changes the size of Heading 6 based on percentage.
-        type: variable-number-slider
-        default: 100
-        min: 100
-        max: 292
-        step: 1
-    -
-        id: heading colours
-        title: Heading Colors
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: heading-clr
-        title: Toggle Heading Font Colours
-        type: class-toggle
-        default: false
-    -
-        id: heading-clr-bg
-        title: Toggle Heading Background Colours
-        type: class-toggle
-        default: false
-    -
-        id: heading colours
-        title: Heading Font Colors
-        type: heading
-        level: 5
-        collapsed: true
-    -
-        id: color-heading-1
-        title: Heading 1 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(252, 251, 250)
-        default-light: rgb(20, 20, 20)
-    -
-        id: color-heading-2
-        title: Heading 2 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(252, 251, 250)
-        default-light: rgb(20, 20, 20)
-    -
-        id: color-heading-3
-        title: Heading 3 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(252, 251, 250)
-        default-light: rgb(20, 20, 20)
-    -
-        id: color-heading-4
-        title: Heading 4 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(252, 251, 250)
-        default-light: rgb(20, 20, 20)
-    -
-        id: color-heading-5
-        title: Heading 5 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(252, 251, 250)
-        default-light: rgb(20, 20, 20)
-    -
-        id: color-heading-6
-        title: Heading 6 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(252, 251, 250)
-        default-light: rgb(20, 20, 20)
-    -
-        id: heading background colours
-        title: Heading Background Colors
-        type: heading
-        level: 5
-        collapsed: true
-    -
-        id: color-heading-1-bg
-        title: Heading 1 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(20, 20, 20)
-        default-light: rgb(252, 251, 250)
-    -
-        id: color-heading-2-bg
-        title: Heading 2 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(20, 20, 20)
-        default-light: rgb(252, 251, 250)
-    -
-        id: color-heading-3-bg
-        title: Heading 3 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(20, 20, 20)
-        default-light: rgb(252, 251, 250)
-    -
-        id: color-heading-4-bg
-        title: Heading 4 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(20, 20, 20)
-        default-light: rgb(252, 251, 250)
-    -
-        id: color-heading-5-bg
-        title: Heading 5 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(20, 20, 20)
-        default-light: rgb(252, 251, 250)
-    -
-        id: color-heading-6-bg
-        title: Heading 6 Color
-        type: variable-themed-color
-        format: rgb
-        default-dark: rgb(20, 20, 20)
-        default-light: rgb(252, 251, 250)
-    -
-        id: features
-        title: Features
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: hr-options
-        title: <hr> ("---") Options
-        description: For Edit Mode
-        type: class-select
-        allowEmpty: false
-        default: default
-        options:
-            - 
-                label: WYSIWYG Horizontal Rule (hr)
-                value: default
-            -
-                label: Disable WYSIWYG hr
-                value: no-editmode-hr
-            -
-                label: Center hr (no WYSIWYG)
-                value: center-hr
-    -
-        id: edit-mode-tasks
-        title: Edit Mode Tasks
-        description: Makes filled tasks green and empty ones red, in Edit Mode.
-        type: class-toggle
-    -
-        id: wrap-note-title
-        title: Wrap Note Titles
-        description: Displays the entire note title, even when the width is small.
-        type: class-toggle
-    - 
-        id: kanban-wrap
-        title: Wrap Kanban Lanes
-        description: Makes Kanban Lanes wrap in multiple rows if needed.
-        type: class-toggle
-    - 
-        id: fn-heading
-        title: Footnotes
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: fn-title-options
-        title: Footnote Title
-        description: Places a lvl.2 heading before the Footnotes.
-        type: class-select
-        allowEmpty: false
-        default: default
-        options:
-            - 
-                label: Default
-                value: default
-            -
-                label: Simple lvl 2 Heading
-                value: fn-title
-            -
-                label: Lvl 2 Heading with hr
-                value: fn-title-hr
-    - 
-        id: footnote-id
-        title: Footnotes heading
-        type: variable-text
-        default: "'Footnotes'"
-    - 
-        id: tables
-        title: Tables
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: limit-tables
-        title: Table Width
-        description: Increase table width threshold.
-        type: variable-number-slider
-        default: 100
-        min: 100
-        max: 250
-        step: 5
-        format: '%'
-    -
-        id: center-tables
-        title: Center Tables
-        description: Centers all tables in the note.
-        type: class-toggle
-        default: false
-    -
-        id: alternate-dataview
-        title: Alternate Dataview Tables
-        description: Alternates row colors for easier reading.
-        type: class-toggle
-        default: false
-    -
-        id: sidenotes
-        title: Sidenotes
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        id: aside-side-options
-        title: Sidenote Options
-        description: Left and right sidenote colors
-        type: class-select
-        allowEmpty: false
-        default: default
-        options:
-            - 
-                label: Default
-                value: default
-            -
-                label: Accent
-                value: aside-side-accent
-            -
-                label: Right Accent
-                value: aside-right-accent
-            - 
-                label: Left Accent
-                value: aside-left-accent
-    -
-        id: aside-in-options
-        title: Inner Sidenote Options
-        description: Inner sidenote colors 
-        type: class-select
-        allowEmpty: false
-        default: default
-        options:
-            - 
-                label: Default
-                value: default
-            - 
-                label: Accent
-                value: aside-in-accent
-            -
-                label: No border
-                value: aside-in-no-b
-            - 
-                label: Greyscale
-                value: aside-in-grayscale
-    -
-        id: relationship-lines-title
-        title: Relationship Lines
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: relationship-lines
-        title: Relationship Lines
-        description: Toggle relationship lines on lists
-        type: class-toggle
-        default: false
-    - 
-        id: relationship-lines-alternating
-        title: Alternating Relationship Lines Colors
-        description: Toggle alternating relationship lines on lists.
-        type: class-toggle
-        default: false
-    -
-        id: elements-title
-        title: Elements
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: hide-frontmatter
-        title: Hide Frontmatter
-        description: This setting hides frontmatter in Preview Mode.
-        type: class-toggle
-        default: false
-    -
-        id: topside-status-bar
-        title: Status Bar on top
-        description: This setting moves the status bar to the top. To click on icons aim for the border.
-        type: class-toggle
-        default: false
-    -
-        id: size-tab-header
-        title: Tab Header Icon side padding
-        description: Changes tab header icons side padding.
-        type: variable-number-slider
-        default: 16
-        min: 4
-        max: 20
-        step: 4
-        format: 'px'
-    -
-        id: file-explorer
-        title: File Explorer
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: show-vault-name
-        title: Show Vault Name
-        type: class-toggle
-        default: false
-    -
-        id: left-nav-arrows
-        title: Left Nav Arrows
-        description: Moves nav arrows to the left, like default obsidian.
-        type: class-toggle
-        default: false
-    -
-        id: fx-rl
-        title: File Explorer Relationship Lines
-        description: Adds hierarchy lines in File explorer.
-        type: class-toggle
-        default: false
-    -
-        id: no-file-icons
-        title: No File Icons
-        description: Removes file icons from file explorer.
-        type: class-toggle
-        default: false
-    -
-        id: no-folder-icons
-        title: No Folder Icons
-        description: Removes file icons from file explorer.
-        type: class-toggle
-        default: false
-    -
-        id: show-full-titles
-        title: Show full titles
-        description: Turns off trimming of folder and file titles.
-        type: class-toggle
-        default: false
-    -
-        id: modals-title
-        title: Modals
-        type: heading
-        level: 3
-        collapsed: true
-    - 
-        id: settings
-        title: Settings modal width
-        type: variable-number-slider
-        default: 40
-        min: 30
-        max: 90
-        step: 10
-        format: 'vw'
-    - 
-        id: community-theme
-        title: Community Themes modal width
-        type: variable-number-slider
-        default: 40
-        min: 30
-        max: 90
-        step: 10
-        format: 'vw'
-    - 
-        id: community-plugin
-        title: Community Plugins modal width
-        type: variable-number-slider
-        default: 40
-        min: 30
-        max: 90
-        step: 10
-        format: 'vw'
-    -
-        id: scrollbars-title
-        title: Scrollbars
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: no-scrl-search
-        title: No Scrollbar in Global Search
-        description: Disables Scrollbars when displaying Global Search Results.
-        type: class-toggle
-        default: false
-    -
-        id: no-scrl-note
-        title: No Scrollbar in Notes
-        description: Disables Scrollbars in Notes.
-        type: class-toggle
-        default: false
-    -
-        id: no-scrl-fx
-        title: No Scrollbar in File Explorer
-        description: Disables Scrollbars in File Explorer.
-        type: class-toggle
-        default: false
-    -
-        id: no-scrl-modal
-        title: No Scrollbar in Modal
-        description: Disables Scrollbars in settings menus.
-        type: class-toggle
-        default: false
-    -
-        id: advanced-options
-        title: Advanced Options
-        type: heading
-        level: 2
-        collapsed: true
-    - 
-        id: no-blur
-        title: No background blur
-        description: This setting disables background blur on modals.
-        type: class-toggle
-        default: false
-    -
-        id: no-animation
-        title: Disable animations
-        description: This setting disables animations and transitions.
-        type: class-toggle
-        default: false
-    -
-        id: no-sanctum-icons
-        title: Default icons
-        description: Use default icons instead of the Sanctum set.
-        type: class-toggle
-        default: false
+	-
+		id: colors
+		title: Colors
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: light-mode-palette
+		title: Light mode palette
+		description: Background color palette for light mode
+		type: class-select
+		allowEmpty: false
+		default: sanctum-light-default
+		options:
+			-
+				label: Default
+				value: sanctum-light-default
+	-
+		id: dark-mode-palette
+		title: Dark mode palette
+		description: Background color palette for dark mode
+		type: class-select
+		allowEmpty: false
+		default: sanctum-dark-default
+		options:
+			-
+				label: Default
+				value: sanctum-dark-default
+	-
+		id: cb-dark-bg
+		title: Dark Mode High Contrast Code Background
+		description: Gives a darker background to code in dark mode, for more contrast.
+		type: class-toggle
+		default: false
+	-
+		id: accent-active-line
+		title: Use Accent color as Active Line Highlight
+		description: Replaces the grey with the accent color for active line highlighting.
+		type: class-toggle
+		default: false
+	-
+		id: accent-colors
+		title: Accent Colors
+		type: heading
+		level: 3
+		collapsed: false
+	-
+		id: color-l-accent
+		title: Light Mode Accent Color
+		type: variable-color
+		format: hsl-split
+		default: rgb(69, 163, 159)
+	-
+		id: color-d-accent
+		title: Dark Mode Accent Color
+		type: variable-color
+		format: hsl-split
+		default: rgb(149, 209, 207)
+	-
+		id: text-accent-hover
+		title: Text accent hover color
+		description: Color that displays when hovering elements that have the accent color by default (e.g. footnote numbers).
+		type: variable-color
+		format: rgb
+		default: rgb(237, 128, 11)
+	-
+		id: highlight-colors
+		title: Highlight Colors
+		description: Set the colors for highlights and highlighted text!
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: color-highlight-1
+		title: Highlight 1
+		description: The color of the highlight.
+		type: variable-color
+		format: rgb
+		default: rgb(234, 183, 70)
+	-
+		id: color-highlight-1-h
+		title: Highlight 1 Text
+		description: The color of highlighted text when hovered.
+		type: variable-color
+		format: rgb
+		default: rgb(20, 20, 20)
+	-
+		id: color-highlight-2
+		title: Highlight 2
+		description: The color of the highlight.
+		type: variable-color
+		format: rgb
+		default: rgb(69, 163, 159)
+	-
+		id: color-highlight-2-h
+		title: Highlight 2 Text
+		description: The color of highlighted text when hovered.
+		type: variable-color
+		format: rgb
+		default: rgb(20, 20, 20)
+	-
+		id: color-highlight-3
+		title: Highlight 3
+		description: The color of the highlight.
+		type: variable-color
+		format: rgb
+		default: rgb(234, 76, 103)
+	-
+		id: color-highlight-3-h
+		title: Highlight 3 Text
+		description: The color of highlighted text when hovered.
+		type: variable-color
+		format: rgb
+		default: rgb(20, 20, 20)
+	-
+		id: graph-colors
+		title: Graph Colors
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: color-fill-focused
+		title: Active Note Node Color
+		type: variable-color
+		format: rgb
+		default: rgb(161, 163, 68)
+	-
+		id: color-fill-tag
+		title: Tag Node Color
+		type: variable-color
+		format: rgb
+		default: rgb(69, 163, 159)
+	-
+		id: color-fill-attachment
+		title: Attachment Node Color
+		type: variable-color
+		format: rgb
+		default: rgb(234, 183, 70)
+	-
+		id: typography
+		title: Typography
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: line-width
+		title: Preview Mode line width
+		description: The maximum number of characters per line.
+		type: variable-number-slider
+		default: 42
+		min: 30
+		max: 100
+		step: 1
+		format: 'rem'
+	-
+		id: fonts
+		title: Fonts
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: font-preview
+		title: Preview Mode Font
+		type: variable-text
+		default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-
+		id: font-editor
+		title: Edit Mode Font
+		type: variable-text
+		default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-
+		id: font-ui
+		title: UI font
+		type: variable-text
+		default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-
+		id: font-mono
+		title: Monospace Font
+		type: variable-text
+		default: "'IBM Plex Mono', 'iA Writer Mono V', 'iA IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
+	-
+		id: headings-title
+		title: Headings
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: font-heading-preview
+		title: Heading Font Preview Mode
+		type: variable-text
+		default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-
+		id: font-heading-editor
+		title: Heading Font Editor Mode
+		type: variable-text
+		default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-
+		id: heading sizes
+		title: Heading Sizes
+		type: heading
+		level: 4
+		collapsed: true
+	-
+		id: heading-1
+		title: Heading 1 Size
+		description: Changes the size of Heading 1 based on percentage.
+		type: variable-number-slider
+		default: 100
+		min: 34
+		max: 100
+		step: 1
+	-
+		id: heading-2
+		title: Heading 2 Size
+		description: Changes the size of Heading 2 based on percentage.
+		type: variable-number-slider
+		default: 100
+		min: 34
+		max: 100
+		step: 1
+	-
+		id: heading-3
+		title: Heading 3 Size
+		description: Changes the size of Heading 3 based on percentage.
+		type: variable-number-slider
+		default: 100
+		min: 50
+		max: 150
+		step: 1
+	-
+		id: heading-4
+		title: Heading 4 Size
+		description: Changes the size of Heading 4 based on percentage.
+		type: variable-number-slider
+		default: 100
+		min: 67
+		max: 200
+		step: 1
+	-
+		id: heading-5
+		title: Heading 5 Size
+		description: Changes the size of Heading 5 based on percentage.
+		type: variable-number-slider
+		default: 100
+		min: 100
+		max: 300
+		step: 1
+	-
+		id: heading-6
+		title: Heading 6 Size
+		description: Changes the size of Heading 6 based on percentage.
+		type: variable-number-slider
+		default: 100
+		min: 100
+		max: 292
+		step: 1
+	-
+		id: heading colours
+		title: Heading Colors
+		type: heading
+		level: 4
+		collapsed: true
+	-
+		id: heading-clr
+		title: Toggle Heading Font Colours
+		type: class-toggle
+		default: false
+	-
+		id: heading-clr-bg
+		title: Toggle Heading Background Colours
+		type: class-toggle
+		default: false
+	-
+		id: heading colours
+		title: Heading Font Colors
+		type: heading
+		level: 5
+		collapsed: true
+	-
+		id: color-heading-1
+		title: Heading 1 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(252, 251, 250)
+		default-light: rgb(20, 20, 20)
+	-
+		id: color-heading-2
+		title: Heading 2 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(252, 251, 250)
+		default-light: rgb(20, 20, 20)
+	-
+		id: color-heading-3
+		title: Heading 3 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(252, 251, 250)
+		default-light: rgb(20, 20, 20)
+	-
+		id: color-heading-4
+		title: Heading 4 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(252, 251, 250)
+		default-light: rgb(20, 20, 20)
+	-
+		id: color-heading-5
+		title: Heading 5 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(252, 251, 250)
+		default-light: rgb(20, 20, 20)
+	-
+		id: color-heading-6
+		title: Heading 6 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(252, 251, 250)
+		default-light: rgb(20, 20, 20)
+	-
+		id: heading background colours
+		title: Heading Background Colors
+		type: heading
+		level: 5
+		collapsed: true
+	-
+		id: color-heading-1-bg
+		title: Heading 1 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(20, 20, 20)
+		default-light: rgb(252, 251, 250)
+	-
+		id: color-heading-2-bg
+		title: Heading 2 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(20, 20, 20)
+		default-light: rgb(252, 251, 250)
+	-
+		id: color-heading-3-bg
+		title: Heading 3 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(20, 20, 20)
+		default-light: rgb(252, 251, 250)
+	-
+		id: color-heading-4-bg
+		title: Heading 4 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(20, 20, 20)
+		default-light: rgb(252, 251, 250)
+	-
+		id: color-heading-5-bg
+		title: Heading 5 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(20, 20, 20)
+		default-light: rgb(252, 251, 250)
+	-
+		id: color-heading-6-bg
+		title: Heading 6 Color
+		type: variable-themed-color
+		format: rgb
+		default-dark: rgb(20, 20, 20)
+		default-light: rgb(252, 251, 250)
+	-
+		id: features
+		title: Features
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: hr-options
+		title: <hr> ("---") Options
+		description: For Edit Mode
+		type: class-select
+		allowEmpty: false
+		default: default
+		options:
+			-
+				label: WYSIWYG Horizontal Rule (hr)
+				value: default
+			-
+				label: Disable WYSIWYG hr
+				value: no-editmode-hr
+			-
+				label: Center hr (no WYSIWYG)
+				value: center-hr
+	-
+		id: edit-mode-tasks
+		title: Edit Mode Tasks
+		description: Makes filled tasks green and empty ones red, in Edit Mode.
+		type: class-toggle
+	-
+		id: wrap-note-title
+		title: Wrap Note Titles
+		description: Displays the entire note title, even when the width is small.
+		type: class-toggle
+	-
+		id: kanban-wrap
+		title: Wrap Kanban Lanes
+		description: Makes Kanban Lanes wrap in multiple rows if needed.
+		type: class-toggle
+	-
+		id: fn-heading
+		title: Footnotes
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: fn-title-options
+		title: Footnote Title
+		description: Places a lvl.2 heading before the Footnotes.
+		type: class-select
+		allowEmpty: false
+		default: default
+		options:
+			-
+				label: Default
+				value: default
+			-
+				label: Simple lvl 2 Heading
+				value: fn-title
+			-
+				label: Lvl 2 Heading with hr
+				value: fn-title-hr
+	-
+		id: footnote-id
+		title: Footnotes heading
+		type: variable-text
+		default: "'Footnotes'"
+	-
+		id: tables
+		title: Tables
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: limit-tables
+		title: Table Width
+		description: Increase table width threshold.
+		type: variable-number-slider
+		default: 100
+		min: 100
+		max: 250
+		step: 5
+		format: '%'
+	-
+		id: center-tables
+		title: Center Tables
+		description: Centers all tables in the note.
+		type: class-toggle
+		default: false
+	-
+		id: alternate-dataview
+		title: Alternate Dataview Tables
+		description: Alternates row colors for easier reading.
+		type: class-toggle
+		default: false
+	-
+		id: sidenotes
+		title: Sidenotes
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: aside-side-options
+		title: Sidenote Options
+		description: Left and right sidenote colors
+		type: class-select
+		allowEmpty: false
+		default: default
+		options:
+			-
+				label: Default
+				value: default
+			-
+				label: Accent
+				value: aside-side-accent
+			-
+				label: Right Accent
+				value: aside-right-accent
+			-
+				label: Left Accent
+				value: aside-left-accent
+	-
+		id: aside-in-options
+		title: Inner Sidenote Options
+		description: Inner sidenote colors 
+		type: class-select
+		allowEmpty: false
+		default: default
+		options:
+			-
+				label: Default
+				value: default
+			-
+				label: Accent
+				value: aside-in-accent
+			-
+				label: No border
+				value: aside-in-no-b
+			-
+				label: Greyscale
+				value: aside-in-grayscale
+	-
+		id: relationship-lines-title
+		title: Relationship Lines
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: relationship-lines
+		title: Relationship Lines
+		description: Toggle relationship lines on lists
+		type: class-toggle
+		default: false
+	-
+		id: relationship-lines-alternating
+		title: Alternating Relationship Lines Colors
+		description: Toggle alternating relationship lines on lists.
+		type: class-toggle
+		default: false
+	-
+		id: elements-title
+		title: Elements
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: hide-frontmatter
+		title: Hide Frontmatter
+		description: This setting hides frontmatter in Preview Mode.
+		type: class-toggle
+		default: false
+	-
+		id: topside-status-bar
+		title: Status Bar on top
+		description: This setting moves the status bar to the top. To click on icons aim for the border.
+		type: class-toggle
+		default: false
+	-
+		id: size-tab-header
+		title: Tab Header Icon side padding
+		description: Changes tab header icons side padding.
+		type: variable-number-slider
+		default: 16
+		min: 4
+		max: 20
+		step: 4
+		format: 'px'
+	-
+		id: file-explorer
+		title: File Explorer
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: show-vault-name
+		title: Show Vault Name
+		type: class-toggle
+		default: false
+	-
+		id: left-nav-arrows
+		title: Left Nav Arrows
+		description: Moves nav arrows to the left, like default obsidian.
+		type: class-toggle
+		default: false
+	-
+		id: fx-rl
+		title: File Explorer Relationship Lines
+		description: Adds hierarchy lines in File explorer.
+		type: class-toggle
+		default: false
+	-
+		id: no-file-icons
+		title: No File Icons
+		description: Removes file icons from file explorer.
+		type: class-toggle
+		default: false
+	-
+		id: no-folder-icons
+		title: No Folder Icons
+		description: Removes file icons from file explorer.
+		type: class-toggle
+		default: false
+	-
+		id: show-full-titles
+		title: Show full titles
+		description: Turns off trimming of folder and file titles.
+		type: class-toggle
+		default: false
+	-
+		id: modals-title
+		title: Modals
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: settings
+		title: Settings modal width
+		type: variable-number-slider
+		default: 40
+		min: 30
+		max: 90
+		step: 10
+		format: 'vw'
+	-
+		id: community-theme
+		title: Community Themes modal width
+		type: variable-number-slider
+		default: 40
+		min: 30
+		max: 90
+		step: 10
+		format: 'vw'
+	-
+		id: community-plugin
+		title: Community Plugins modal width
+		type: variable-number-slider
+		default: 40
+		min: 30
+		max: 90
+		step: 10
+		format: 'vw'
+	-
+		id: scrollbars-title
+		title: Scrollbars
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: no-scrl-search
+		title: No Scrollbar in Global Search
+		description: Disables Scrollbars when displaying Global Search Results.
+		type: class-toggle
+		default: false
+	-
+		id: no-scrl-note
+		title: No Scrollbar in Notes
+		description: Disables Scrollbars in Notes.
+		type: class-toggle
+		default: false
+	-
+		id: no-scrl-fx
+		title: No Scrollbar in File Explorer
+		description: Disables Scrollbars in File Explorer.
+		type: class-toggle
+		default: false
+	-
+		id: no-scrl-modal
+		title: No Scrollbar in Modal
+		description: Disables Scrollbars in settings menus.
+		type: class-toggle
+		default: false
+	-
+		id: advanced-options
+		title: Advanced Options
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: no-blur
+		title: No background blur
+		description: This setting disables background blur on modals.
+		type: class-toggle
+		default: false
+	-
+		id: no-animation
+		title: Disable animations
+		description: This setting disables animations and transitions.
+		type: class-toggle
+		default: false
+	-
+		id: no-sanctum-icons
+		title: Default icons
+		description: Use default icons instead of the Sanctum set.
+		type: class-toggle
+		default: false
 
 
 */
