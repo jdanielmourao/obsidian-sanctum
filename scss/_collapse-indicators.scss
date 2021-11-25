@@ -30,7 +30,10 @@
 	margin-left: 0; // if increased too much, it can bug the line height
 	visibility: visible;
 }
-
+// Live Preview
+.markdown-source-view.mod-cm6 .cm-foldPlaceholder {
+	color: var(--text-normal);
+}
 // Collapse Icon in Frontmatter
 .frontmatter-collapse-indicator svg.right-triangle {
 	height: var.$scale-1;

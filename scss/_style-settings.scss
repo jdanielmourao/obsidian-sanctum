@@ -200,65 +200,150 @@ settings:
 		type: variable-text
 		default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 	-
+		id: productive-mode
+		title: Enable Productive Mode Headings
+		description: Smaller Headings for more compact notes. This will override Expressive Mode responsive headings!
+		type: class-toggle
+	-
+		id: heading weights
+		title: Heading Weights
+		description: Only available for Productive Mode
+		type: heading
+		level: 4
+		collapsed: true 
+	-
+		id: productive-heading-1-weight
+		title: Productive Mode Heading 1 Weight
+		description: Default value - semi-bold (600)
+		type: variable-text
+		default: "600"
+	-
+		id: productive-heading-2-weight
+		title: Productive Mode Heading 2 Weight
+		description: Default value - semi-bold (600)
+		type: variable-text
+		default: "600"
+	-
+		id: productive-heading-3-weight
+		title: Productive Mode Heading 3 Weight
+		description: Default value - semi-bold (600)
+		type: variable-text
+		default: "600"
+	-
+		id: productive-heading-4-weight
+		title: Productive Mode Heading 4 Weight
+		description: Default value - semi-bold (600)
+		type: variable-text
+		default: "600"
+	-
+		id: productive-heading-5-weight
+		title: Productive Mode Heading 5 Weight
+		description: Default value - semi-bold (600)
+		type: variable-text
+		default: "600"
+	-
+		id: productive-heading-6-weight
+		title: Productive Mode Heading 6 Weight
+		description: Default value - semi-bold (600)
+		type: variable-text
+		default: "600"
+	-
 		id: heading sizes
 		title: Heading Sizes
+		description: Only available for Productive Mode
 		type: heading
 		level: 4
 		collapsed: true
 	-
-		id: heading-1
-		title: Heading 1 Size
-		description: Changes the size of Heading 1 based on percentage.
-		type: variable-number-slider
-		default: 100
-		min: 34
-		max: 100
-		step: 1
+		id: productive-heading-1
+		title: Productive Mode Heading 1 Size
+		type: variable-select
+		default: 2rem
+		options:
+			- 3rem
+			- 2.625rem
+			- 2.25rem
+			- 2rem
+			- 1.75rem
+			- 1.5rem
+			- 1.25rem
+			- 1.125rem
+			- 1rem
 	-
-		id: heading-2
-		title: Heading 2 Size
-		description: Changes the size of Heading 2 based on percentage.
-		type: variable-number-slider
-		default: 100
-		min: 34
-		max: 100
-		step: 1
+		id: productive-heading-2
+		title: Productive Mode Heading 2 Size
+		type: variable-select
+		default: 1.75rem
+		options:
+			- 3rem
+			- 2.625rem
+			- 2.25rem
+			- 2rem
+			- 1.75rem
+			- 1.5rem
+			- 1.25rem
+			- 1.125rem
+			- 1rem
 	-
-		id: heading-3
-		title: Heading 3 Size
-		description: Changes the size of Heading 3 based on percentage.
-		type: variable-number-slider
-		default: 100
-		min: 50
-		max: 150
-		step: 1
+		id: productive-heading-3
+		title: Productive Mode Heading 3 Size
+		type: variable-select
+		default: 1.5rem
+		options:
+			- 3rem
+			- 2.625rem
+			- 2.25rem
+			- 2rem
+			- 1.75rem
+			- 1.5rem
+			- 1.25rem
+			- 1.125rem
+			- 1rem
 	-
-		id: heading-4
-		title: Heading 4 Size
-		description: Changes the size of Heading 4 based on percentage.
-		type: variable-number-slider
-		default: 100
-		min: 67
-		max: 200
-		step: 1
+		id: productive-heading-4
+		title: Productive Mode Heading 4 Size
+		type: variable-select
+		default: 1.25rem
+		options:
+			- 3rem
+			- 2.625rem
+			- 2.25rem
+			- 2rem
+			- 1.75rem
+			- 1.5rem
+			- 1.25rem
+			- 1.125rem
+			- 1rem
 	-
-		id: heading-5
-		title: Heading 5 Size
-		description: Changes the size of Heading 5 based on percentage.
-		type: variable-number-slider
-		default: 100
-		min: 100
-		max: 300
-		step: 1
+		id: productive-heading-5
+		title: Productive Mode Heading 5 Size
+		type: variable-select
+		default: 1.125rem
+		options:
+			- 3rem
+			- 2.625rem
+			- 2.25rem
+			- 2rem
+			- 1.75rem
+			- 1.5rem
+			- 1.25rem
+			- 1.125rem
+			- 1rem
 	-
-		id: heading-6
-		title: Heading 6 Size
-		description: Changes the size of Heading 6 based on percentage.
-		type: variable-number-slider
-		default: 100
-		min: 100
-		max: 292
-		step: 1
+		id: productive-heading-6
+		title: Productive Mode Heading 6 Size
+		type: variable-select
+		default: 1rem
+		options:
+			- 3rem
+			- 2.625rem
+			- 2.25rem
+			- 2rem
+			- 1.75rem
+			- 1.5rem
+			- 1.25rem
+			- 1.125rem
+			- 1rem
 	-
 		id: heading colours
 		title: Heading Colors
@@ -398,11 +483,6 @@ settings:
 		id: edit-mode-tasks
 		title: Edit Mode Tasks
 		description: Makes filled tasks green and empty ones red, in Edit Mode.
-		type: class-toggle
-	-
-		id: wrap-note-title
-		title: Wrap Note Titles
-		description: Displays the entire note title, even when the width is small.
 		type: class-toggle
 	-
 		id: kanban-wrap

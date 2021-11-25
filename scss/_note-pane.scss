@@ -83,14 +83,6 @@ div.view-header-icon { // dragable icon in note header
     transition: var.$motion-standard-expressive var.$duration-moderate-1;
 }
 
-//terminate?
-.wrap-note-title .view-header-title,
-.wrap-note-title .workspace-leaf.mod-active .view-header-title {
-    white-space: pre-wrap;
-    text-overflow: unset;
-    hyphens: auto;
-}
-
 /* ────────────────────────────── Editor Width ────────────────────────────── */
 // Editor size
 .markdown-source-view.is-readable-line-width .CodeMirror {
@@ -105,4 +97,29 @@ div.view-header-icon { // dragable icon in note header
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 0;
+}
+
+// Backlinks in document
+
+.embedded-backlinks {
+	& .tree-item-inner {
+		font-size: var.$font-scale-00;
+		margin-left: 0;
+	}
+	& .search-result-file-match:after {
+		position: absolute;
+		width: 100%;
+		bottom: -5px;
+		left: 0;
+		height: 1px;
+		background-color: var(--color-border-1);
+		content: '';
+	}
+	& .tree-item-icon.collapse-icon {
+		margin-right: 4px;
+		margin-left: 0px;
+	}
+	& .tree-item-self.search-result-file-title.is-clickable .tree-item-icon.collapse-icon {
+		margin-right: 4px;
+	}
 }

@@ -134,6 +134,7 @@
 
 		& .workspace-drawer-active-tab-title {
 			font-size: var.$font-scale-2;
+			line-height: var.$leading-2;
 		}
 	}
 }
@@ -639,11 +640,25 @@ body.is-mobile .nav-action-button svg {
 	padding: 8px 0;
 	margin: 8px 0;
 }
-/*
-.workspace-drawer-ribbon .side-dock-settings:last-child {
-	margin-bottom: 16px;
-}*/
+// .workspace-drawer-ribbon .side-dock-settings:last-child {
+// 	margin-bottom: 16px;
+//}
 
 .is-mobile .nav-folder .collapse-icon {
 	display: none;
+}
+
+.is-mobile .tag-container {
+	padding-left: 0;
+}
+
+.workspace-leaf-content[data-type="outline"] {
+
+	& .tree-item-icon.collapse-icon {
+		margin-right: 0px;
+	}
+	& .tree-item-inner {
+		margin-left: 2px;
+		margin-bottom: 2px;
+	}
 }

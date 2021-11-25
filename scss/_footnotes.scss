@@ -67,35 +67,5 @@
 .fn-title-hr .markdown-preview-view .footnotes::before,
 .fn-title .markdown-preview-view .footnotes::before {
 	content: var(--footnote-id);
-}
-
-@media (max-width:320px){
-	.fn-title-hr .markdown-preview-view .footnotes::before,
-	.fn-title .markdown-preview-view .footnotes::before {
-		font-size: calc(var.$font-scale-5 * (var(--heading-2) / 100));
-	}
-}
-@media (min-width:321px) and (max-width:672px){
-	.fn-title-hr .markdown-preview-view .footnotes::before,
-	.fn-title .markdown-preview-view .footnotes::before {
-		font-size: calc(var.$font-scale-6 * (var(--heading-2) / 100));
-	}
-}
-@media (min-width:673px) and (max-width:1056px) {
-	.fn-title-hr .markdown-preview-view .footnotes::before,
-	.fn-title .markdown-preview-view .footnotes::before {
-		font-size: calc(var.$font-scale-7 * (var(--heading-2) / 100));
-	}
-}
-@media (min-width:1057px) and (max-width:1312px) {
-	.fn-title-hr .markdown-preview-view .footnotes::before,
-	.fn-title .markdown-preview-view .footnotes::before {
-		font-size: calc(var.$font-scale-8 * (var(--heading-2) / 100));
-	}
-}
-@media (min-width:1313px) {
-	.fn-title-hr .markdown-preview-view .footnotes::before,
-	.fn-title .markdown-preview-view .footnotes::before {
-		font-size: calc(var.$font-scale-8 * (var(--heading-2) / 100));
-	}
+	font-size: var(--productive-heading-2);
 }
