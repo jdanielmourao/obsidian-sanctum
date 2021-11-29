@@ -1718,6 +1718,9 @@ body:not(.no-sanctum-icons) div.view-header-icon > svg {
 .embedded-backlinks .tree-item-self.search-result-file-title.is-clickable .tree-item-icon.collapse-icon {
   margin-right: 4px;
 }
+.embedded-backlinks .nav-buttons-container {
+  margin-top: 16px;
+}
 
 /* ───────────────────────────────── UI Font ──────────────────────────────── */
 body {

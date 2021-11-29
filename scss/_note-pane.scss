@@ -122,4 +122,7 @@ div.view-header-icon { // dragable icon in note header
 	& .tree-item-self.search-result-file-title.is-clickable .tree-item-icon.collapse-icon {
 		margin-right: 4px;
 	}
+	& .nav-buttons-container {
+		margin-top: 16px;
+	}
 }
