@@ -3,84 +3,84 @@
 /* Disable loose lists for tasks */
 ol.contains-task-list p,
 ul.contains-task-list p {
-    margin: 0;
+	margin: 0;
 }
 
 input[type=checkbox] {
-    display: inline-block;
-    cursor: var(--cursor);
-    -webkit-appearance: none;
-    appearance: none;
-    cursor: pointer;
-    width: var.$scale-2;
-    height: var.$scale-2;
-    vertical-align: -6px;
-    background-color: var(--background-primary);
-    border-radius: 2px;
-    border: 1.5px solid var(--color-primary-40);
-    transition: background-color var.$duration-moderate-2 var.$motion-entrance-expressive;
+	display: inline-block;
+	cursor: var(--cursor);
+	-webkit-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	width: var.$scale-2;
+	height: var.$scale-2;
+	vertical-align: -6px;
+	background-color: var(--background-primary);
+	border-radius: 2px;
+	border: 1.5px solid var(--color-primary-40);
+	transition: background-color var.$duration-moderate-2 var.$motion-entrance-expressive;
 }
 
 .markdown-preview-view .task-list-item-checkbox:hover,input[type=checkbox]:hover {
-    filter: brightness(1.1);
-    transition: filter var.$duration-moderate-2 var.$motion-entrance-expressive;
+	filter: brightness(1.1);
+	transition: filter var.$duration-moderate-2 var.$motion-entrance-expressive;
 }
 
 input[type=checkbox]:checked {
-    display: inline-block;
-    background: var.$color-green-500;
-    filter: saturate(1);
-    border-color: transparent;
-    width: 1rem;
-    height: 1rem;
+	display: inline-block;
+	background: var.$color-green-500;
+	filter: saturate(1);
+	border-color: transparent;
+	width: 1rem;
+	height: 1rem;
 }
 
 input[type=checkbox]:checked:before {
-    content: ' ';
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23F9F6F4' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 70%;
-    transform: translateX(.5px) translateY(0px);
-    margin-top: var.$size-0;
-    width: 100%;
-    height: 100%;
-    display: block;
+	content: ' ';
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23F9F6F4' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 70%;
+	transform: translateX(.5px) translateY(0px);
+	margin-top: var.$size-0;
+	width: 100%;
+	height: 100%;
+	display: block;
 }
 
 input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
-    filter: brightness(1.1);
-    transition: filter var.$duration-moderate-2 var.$motion-entrance-expressive;
+	filter: brightness(1.1);
+	transition: filter var.$duration-moderate-2 var.$motion-entrance-expressive;
 }
 
 .markdown-preview-view .task-list-item-checkbox {
-    display: inline-block;
-    -webkit-appearance: none;
-    box-sizing: border-box;
-    background-color: var(--background-primary);
-    position: relative;
-    width: var.$scale-2;
-    height: var.$scale-2;
-    cursor: pointer;
-    filter: none;
-    border-radius: 2pt;
-    vertical-align: -2px;
-    transition: background-color var.$duration-moderate-2 var.$motion-entrance-expressive;
+	display: inline-block;
+	-webkit-appearance: none;
+	box-sizing: border-box;
+	background-color: var(--background-primary);
+	position: relative;
+	width: var.$scale-2;
+	height: var.$scale-2;
+	cursor: pointer;
+	filter: none;
+	border-radius: 2pt;
+	vertical-align: -2px;
+	transition: background-color var.$duration-moderate-2 var.$motion-entrance-expressive;
 }
 
 .markdown-preview-view .task-list-item-checkbox:active {
-    filter: brightness(.9);
-    transition: filter var.$duration-moderate-2 var.$motion-entrance-expressive;
+	filter: brightness(.9);
+	transition: filter var.$duration-moderate-2 var.$motion-entrance-expressive;
 }
 
 .markdown-preview-view li > .task-list-item-checkbox {
-    margin-right: var.$size-3;
+	margin-right: var.$size-3;
 }
 
 // Strikethrough from completed to-do lists/checkbox
 .markdown-preview-view ul > li[data-task='x'].task-list-item.is-checked::selection,
-.markdown-preview-view ul > li[data-task='x'].task-list-item.is-checked {
-    text-decoration:line-through solid inherit 2px;
+.ma	kdown-preview-view ul > li[data-task='x'].task-list-item.is-checked {
+	text-decoration:line-through solid inherit 2px;
 }
 
 /* ──────────────────────────── Custom Checkboxes ─────────────────────────── */
@@ -126,622 +126,667 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 .markdown-preview-view li[data-task="<"] > .task-list-item-checkbox:checked,
 .markdown-preview-view li[data-task="l"] > .task-list-item-checkbox:checked,
 .markdown-preview-view li[data-task="i"] > .task-list-item-checkbox:checked {
-  background-color: transparent;
-  pointer-events: none;
+	background-color: transparent;
+	pointer-events: none;
 }
 
 /* ────────────────────────────────── Note ────────────────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="n"]:before,
 .markdown-preview-view li[data-task="n"] > .task-list-item-checkbox:checked::before {
-  content: "📜";
-  background: transparent;
-  font-size: var.$font-scale-0;
-  transform: scale(0.85) translateY(-5px) translateX(-5px);
-  color: var(--background-primary);
+	content: "📜";
+	background: transparent;
+	font-size: var.$font-scale-0;
+	transform: scale(0.85) translateY(-5px) translateX(-5px);
+	color: var(--background-primary);
 }
 
 /* ────────────────────────────────── Star ────────────────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="⭐"]:before,
 .markdown-preview-view li[data-task="⭐"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(41.4, 79%, 44.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Estar--filled%3C/title%3E%3Cpath d='M16,2l-4.55,9.22L1.28,12.69l7.36,7.18L6.9,30,16,25.22,25.1,30,23.36,19.87l7.36-7.17L20.55,11.22Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
-  background-size: var.$scale-2 var.$scale-2;
-  transform: scale(1.1) translateX(-1.5px) translateY(-2px);
-  padding: var.$size-1;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(41.4, 79%, 44.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Estar--filled%3C/title%3E%3Cpath d='M16,2l-4.55,9.22L1.28,12.69l7.36,7.18L6.9,30,16,25.22,25.1,30,23.36,19.87l7.36-7.17L20.55,11.22Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+	background-size: var.$scale-2 var.$scale-2;
+	transform: scale(1.1) translateX(-1.5px) translateY(-2px);
+	padding: var.$size-1;
 }
 
 /* ────────────────────────────────── Alarm ───────────────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="a"]:before,
 .markdown-preview-view li[data-task="a"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(41.4, 79%, 44.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M28.707,19.293,26,16.5859V13a10.0136,10.0136,0,0,0-9-9.9492V1H15V3.0508A10.0136,10.0136,0,0,0,6,13v3.5859L3.293,19.293A.9993.9993,0,0,0,3,20v3a1,1,0,0,0,1,1h7v1a5,5,0,0,0,10,0V24h7a1,1,0,0,0,1-1V20A.9993.9993,0,0,0,28.707,19.293ZM19,25a3,3,0,0,1-6,0V24h6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
-  background-size: var.$scale-2 var.$scale-2;
-  transform: scale(1.1) translateX(-1.5px) translateY(-1.5px);
-  padding: var.$size-1;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(41.4, 79%, 44.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M28.707,19.293,26,16.5859V13a10.0136,10.0136,0,0,0-9-9.9492V1H15V3.0508A10.0136,10.0136,0,0,0,6,13v3.5859L3.293,19.293A.9993.9993,0,0,0,3,20v3a1,1,0,0,0,1,1h7v1a5,5,0,0,0,10,0V24h7a1,1,0,0,0,1-1V20A.9993.9993,0,0,0,28.707,19.293ZM19,25a3,3,0,0,1-6,0V24h6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+	background-size: var.$scale-2 var.$scale-2;
+	transform: scale(1.1) translateX(-1.5px) translateY(-1.5px);
+	padding: var.$size-1;
 }
 
 /* ────────────────────────────────── Pros ────────────────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="p"]:before,
 .markdown-preview-view li[data-task="p"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(61.3, 41.1%, 45.3%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Crect x='2' y='16' width='5' height='14'/%3E%3Cpath d='M23,30H9V15.1973l3.0422-4.5635.8453-5.9165A2.0094,2.0094,0,0,1,14.8672,3H15a3.0033,3.0033,0,0,1,3,3v6h8a4.0045,4.0045,0,0,1,4,4v7A7.0078,7.0078,0,0,1,23,30Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
-  background-size: var.$scale-2 var.$scale-2;
-  transform: scale(1.1) translateX(-1px) translateY(-3px);
-  padding: var.$size-1;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(61.3, 41.1%, 45.3%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Crect x='2' y='16' width='5' height='14'/%3E%3Cpath d='M23,30H9V15.1973l3.0422-4.5635.8453-5.9165A2.0094,2.0094,0,0,1,14.8672,3H15a3.0033,3.0033,0,0,1,3,3v6h8a4.0045,4.0045,0,0,1,4,4v7A7.0078,7.0078,0,0,1,23,30Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+	background-size: var.$scale-2 var.$scale-2;
+	transform: scale(1.1) translateX(-1px) translateY(-3px);
+	padding: var.$size-1;
 }
 
 /* ────────────────────────────────── Cons ────────────────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="c"]:before,
 .markdown-preview-view li[data-task="c"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Crect x='2' y='2' width='5' height='14'/%3E%3Cpath d='M23,2H9V16.8027l3.0422,4.5635.8453,5.9165A2.0094,2.0094,0,0,0,14.8672,29H15a3.0033,3.0033,0,0,0,3-3V20h8a4.0045,4.0045,0,0,0,4-4V9A7.0078,7.0078,0,0,0,23,2Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
-  background-size: var.$scale-2 var.$scale-2;
-  transform: scale(1.1) translateX(-1px) translateY(-1.5px);
-  padding: var.$size-1;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Crect x='2' y='2' width='5' height='14'/%3E%3Cpath d='M23,2H9V16.8027l3.0422,4.5635.8453,5.9165A2.0094,2.0094,0,0,0,14.8672,29H15a3.0033,3.0033,0,0,0,3-3V20h8a4.0045,4.0045,0,0,0,4-4V9A7.0078,7.0078,0,0,0,23,2Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+	background-size: var.$scale-2 var.$scale-2;
+	transform: scale(1.1) translateX(-1px) translateY(-1.5px);
+	padding: var.$size-1;
 }
 
 /* ───────────────────────── Win / Success / Reward ───────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="W"]:before,
 .markdown-preview-view li[data-task="W"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(41.4, 79%, 44.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Etrophy--filled%3C/title%3E%3Cpath d='M26,7H24V6a2.0023,2.0023,0,0,0-2-2H10A2.0023,2.0023,0,0,0,8,6V7H6A2.0023,2.0023,0,0,0,4,9v3a4.0045,4.0045,0,0,0,4,4h.322A8.1689,8.1689,0,0,0,15,21.9341V26H10v2H22V26H17V21.9311A7.9661,7.9661,0,0,0,23.74,16H24a4.0045,4.0045,0,0,0,4-4V9A2.0023,2.0023,0,0,0,26,7ZM8,14a2.0023,2.0023,0,0,1-2-2V9H8Zm18-2a2.0023,2.0023,0,0,1-2,2V9h2Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
-  background-size: var.$scale-2 var.$scale-2;
-  transform: scale(1.2) translateX(0px) translateY(0px);
-  padding: var.$size-0;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(41.4, 79%, 44.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Etrophy--filled%3C/title%3E%3Cpath d='M26,7H24V6a2.0023,2.0023,0,0,0-2-2H10A2.0023,2.0023,0,0,0,8,6V7H6A2.0023,2.0023,0,0,0,4,9v3a4.0045,4.0045,0,0,0,4,4h.322A8.1689,8.1689,0,0,0,15,21.9341V26H10v2H22V26H17V21.9311A7.9661,7.9661,0,0,0,23.74,16H24a4.0045,4.0045,0,0,0,4-4V9A2.0023,2.0023,0,0,0,26,7ZM8,14a2.0023,2.0023,0,0,1-2-2V9H8Zm18-2a2.0023,2.0023,0,0,1-2,2V9h2Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+	background-size: var.$scale-2 var.$scale-2;
+	transform: scale(1.2) translateX(0px) translateY(0px);
+	padding: var.$size-0;
 }
 
 /* ────────────────────────────────── Heart ───────────────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="❤"]:before,
 .markdown-preview-view li[data-task="❤"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Efavorite--filled%3C/title%3E%3Cpath d='M22.5,4c-2,0-3.9,0.8-5.3,2.2L16,7.4l-1.1-1.1C12,3.3,7.2,3.3,4.3,6.2c0,0-0.1,0.1-0.1,0.1c-3,3-3,7.8,0,10.8L16,29 l11.8-11.9c3-3,3-7.8,0-10.8C26.4,4.8,24.5,4,22.5,4z'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
-  background-size: var.$scale-2 var.$scale-2;
-  transform: scale(1.1) translateX(-1px) translateY(-1px);
-  padding-left: var.$size-1;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Efavorite--filled%3C/title%3E%3Cpath d='M22.5,4c-2,0-3.9,0.8-5.3,2.2L16,7.4l-1.1-1.1C12,3.3,7.2,3.3,4.3,6.2c0,0-0.1,0.1-0.1,0.1c-3,3-3,7.8,0,10.8L16,29 l11.8-11.9c3-3,3-7.8,0-10.8C26.4,4.8,24.5,4,22.5,4z'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
+	background-size: var.$scale-2 var.$scale-2;
+	transform: scale(1.1) translateX(-1px) translateY(-1px);
+	padding-left: var.$size-1;
 }
 
 /* ───────────────────────────────── Savings ──────────────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="s"]:before,
 .markdown-preview-view li[data-task="s"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' fill='hsl(41.4, 79%25, 44.9%25)' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Cpath d='M29,13h-2c-0.1-1.6-0.8-3.1-2-4.1V5c0-0.6-0.4-1-1-1c-0.2,0-0.4,0.1-0.6,0.2L19.7,7H15c-5.5,0-9.5,3.2-9.9,8H5 c-0.6,0-1-0.4-1-1v-2H2v2c0,1.7,1.3,3,3,3h0.1c0.3,2.7,1.7,5,3.9,6.6V27c0,0.6,0.4,1,1,1h4c0.6,0,1-0.4,1-1v-2h3v2c0,0.6,0.4,1,1,1 h4c0.6,0,1-0.4,1-1v-3.4c1.5-0.7,2.5-2,2.8-3.6H29c0.6,0,1-0.4,1-1v-5C30,13.4,29.6,13,29,13z M20,14h-3.5c-0.3,0-0.5,0.2-0.5,0.5 s0.2,0.5,0.5,0.5h1c1.2,0,2.2,0.8,2.4,2c0.3,1.4-0.6,2.7-1.9,3V21h-2v-1h-2v-2h3.5c0.3,0,0.5-0.2,0.5-0.5S17.8,17,17.5,17h-1 c-1.2,0-2.2-0.8-2.4-2c-0.3-1.4,0.6-2.7,1.9-3V11h2v1h2V14z'/%3E%3C/svg%3E%0A");
-  background-size: var.$scale-2 var.$scale-2;
-  transform: scale(1.2) translateX(-1px) translateY(-1px);
-  padding-left: var.$size-1;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' fill='hsl(41.4, 79%25, 44.9%25)' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Cpath d='M29,13h-2c-0.1-1.6-0.8-3.1-2-4.1V5c0-0.6-0.4-1-1-1c-0.2,0-0.4,0.1-0.6,0.2L19.7,7H15c-5.5,0-9.5,3.2-9.9,8H5 c-0.6,0-1-0.4-1-1v-2H2v2c0,1.7,1.3,3,3,3h0.1c0.3,2.7,1.7,5,3.9,6.6V27c0,0.6,0.4,1,1,1h4c0.6,0,1-0.4,1-1v-2h3v2c0,0.6,0.4,1,1,1 h4c0.6,0,1-0.4,1-1v-3.4c1.5-0.7,2.5-2,2.8-3.6H29c0.6,0,1-0.4,1-1v-5C30,13.4,29.6,13,29,13z M20,14h-3.5c-0.3,0-0.5,0.2-0.5,0.5 s0.2,0.5,0.5,0.5h1c1.2,0,2.2,0.8,2.4,2c0.3,1.4-0.6,2.7-1.9,3V21h-2v-1h-2v-2h3.5c0.3,0,0.5-0.2,0.5-0.5S17.8,17,17.5,17h-1 c-1.2,0-2.2-0.8-2.4-2c-0.3-1.4,0.6-2.7,1.9-3V11h2v1h2V14z'/%3E%3C/svg%3E%0A");
+	background-size: var.$scale-2 var.$scale-2;
+	transform: scale(1.2) translateX(-1px) translateY(-1px);
+	padding-left: var.$size-1;
 }
 
 /* ─────────────────────────── Savings alternative ────────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="S"]:before,
 .markdown-preview-view li[data-task="S"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' fill='hsl(41.4, 79%25, 44.9%25)' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Cpath d='M29,13h-2c-0.1-1.6-0.8-3.1-2-4.1V5c0-0.6-0.4-1-1-1c-0.2,0-0.4,0.1-0.6,0.2L19.7,7H15c-5.5,0-9.5,3.2-9.9,8H5 c-0.6,0-1-0.4-1-1v-2H2v2c0,1.7,1.3,3,3,3h0.1c0.3,2.7,1.7,5,3.9,6.6V27c0,0.6,0.4,1,1,1h4c0.6,0,1-0.4,1-1v-2h3v2c0,0.6,0.4,1,1,1 h4c0.6,0,1-0.4,1-1v-3.4c1.5-0.7,2.5-2,2.8-3.6H29c0.6,0,1-0.4,1-1v-5C30,13.4,29.6,13,29,13z M20,13h-7v-2h7V13z'/%3E%3C/svg%3E%0A");
-  background-size: var.$scale-2 var.$scale-2;
-  transform: scale(1.2) translateX(-1px) translateY(-1px);
-  padding-left: var.$size-1;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' fill='hsl(41.4, 79%25, 44.9%25)' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Cpath d='M29,13h-2c-0.1-1.6-0.8-3.1-2-4.1V5c0-0.6-0.4-1-1-1c-0.2,0-0.4,0.1-0.6,0.2L19.7,7H15c-5.5,0-9.5,3.2-9.9,8H5 c-0.6,0-1-0.4-1-1v-2H2v2c0,1.7,1.3,3,3,3h0.1c0.3,2.7,1.7,5,3.9,6.6V27c0,0.6,0.4,1,1,1h4c0.6,0,1-0.4,1-1v-2h3v2c0,0.6,0.4,1,1,1 h4c0.6,0,1-0.4,1-1v-3.4c1.5-0.7,2.5-2,2.8-3.6H29c0.6,0,1-0.4,1-1v-5C30,13.4,29.6,13,29,13z M20,13h-7v-2h7V13z'/%3E%3C/svg%3E%0A");
+	background-size: var.$scale-2 var.$scale-2;
+	transform: scale(1.2) translateX(-1px) translateY(-1px);
+	padding-left: var.$size-1;
 }
 
 /* ────────────────────────── Bookmark / Reference ────────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="b"]:before,
 .markdown-preview-view li[data-task="b"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M24,2H8A2,2,0,0,0,6,4V30l10-5.0538L26,30V4A2,2,0,0,0,24,2Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
-  background-size: var.$scale-2 var.$scale-2;
-  transform: scale(1.1) translateX(0px) translateY(-1.5px);
-  padding-bottom: var.$size-1;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M24,2H8A2,2,0,0,0,6,4V30l10-5.0538L26,30V4A2,2,0,0,0,24,2Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+	background-size: var.$scale-2 var.$scale-2;
+	transform: scale(1.1) translateX(0px) translateY(-1.5px);
+	padding-bottom: var.$size-1;
 }
 
 /* ──────────────────────────── Idea / Lightbulb ──────────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="I"]:before,
 .markdown-preview-view li[data-task="I"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(41.4, 79%, 44.9%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cpath d='M16,2C10.5,2,6,6.5,6,12c-0.1,2.9,1.1,5.8,3.5,7.6c1,0.9,1.5,1.5,1.5,2.4v2h0c0,1.1,0.9,2,2,2v1h0l0,3h6l0-4h0 c1.1,0,2-0.9,2-2c0,0,0,0,0,0h0v-2c0-0.9,0.5-1.4,1.5-2.4c2.3-1.8,3.6-4.7,3.5-7.6C26,6.5,21.5,2,16,2z'/%3E%3C/svg%3E%0A");
-  background-size: var.$scale-2 var.$scale-2;
-  transform: scale(1.1) translateX(0.5px) translateY(-2px);
-  padding-bottom: var.$size-1;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(41.4, 79%, 44.9%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cpath d='M16,2C10.5,2,6,6.5,6,12c-0.1,2.9,1.1,5.8,3.5,7.6c1,0.9,1.5,1.5,1.5,2.4v2h0c0,1.1,0.9,2,2,2v1h0l0,3h6l0-4h0 c1.1,0,2-0.9,2-2c0,0,0,0,0,0h0v-2c0-0.9,0.5-1.4,1.5-2.4c2.3-1.8,3.6-4.7,3.5-7.6C26,6.5,21.5,2,16,2z'/%3E%3C/svg%3E%0A");
+	background-size: var.$scale-2 var.$scale-2;
+	transform: scale(1.1) translateX(0.5px) translateY(-2px);
+	padding-bottom: var.$size-1;
 }
 
 /* ───────────────────────────────── Failure ──────────────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="X"]:before,
 .markdown-preview-view li[data-task="X"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D .st1%7Bopacity:0;fill-opacity:0;%7D%0A%3C/style%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Cpath d='M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14S23.7,2,16,2z M21.4,23L16,17.6L10.6,23L9,21.4l5.4-5.4L9,10.6L10.6,9 l5.4,5.4L21.4,9l1.6,1.6L17.6,16l5.4,5.4L21.4,23z'/%3E%3Cpath id='inner-path' class='st1' d='M21.4,23L16,17.6L10.6,23L9,21.4l5.4-5.4L9,10.6L10.6,9l5.4,5.4L21.4,9l1.6,1.6L17.6,16 l5.4,5.4L21.4,23z'/%3E%3C/svg%3E%0A");
-  background-size: var.$scale-2 var.$scale-2;
-  transform: scale(1.1) translateX(-2px) translateY(-2px);
-  padding: var.$size-1;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32px' height='32px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D .st1%7Bopacity:0;fill-opacity:0;%7D%0A%3C/style%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Cpath d='M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14S23.7,2,16,2z M21.4,23L16,17.6L10.6,23L9,21.4l5.4-5.4L9,10.6L10.6,9 l5.4,5.4L21.4,9l1.6,1.6L17.6,16l5.4,5.4L21.4,23z'/%3E%3Cpath id='inner-path' class='st1' d='M21.4,23L16,17.6L10.6,23L9,21.4l5.4-5.4L9,10.6L10.6,9l5.4,5.4L21.4,9l1.6,1.6L17.6,16 l5.4,5.4L21.4,23z'/%3E%3C/svg%3E%0A");
+	background-size: var.$scale-2 var.$scale-2;
+	transform: scale(1.1) translateX(-2px) translateY(-2px);
+	padding: var.$size-1;
 }
 
 /* ─────────────────────────────────── Bug ────────────────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="B"]:before,
 .markdown-preview-view li[data-task="B"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(349.7, 79%, 60.8%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Crect class='st0' width='32' height='32'/%3E%3Cg%3E%3Cpath d='M16,11l8-2.1c-0.9-1.7-2.3-3-4-3.9V2h-2v2.2c-1.3-0.3-2.7-0.3-4,0V2h-2v3c-1.7,0.9-3.1,2.2-4,3.9L16,11z'/%3E%3Cpath d='M29.8,20l0.3-2L25,17.2V13c0-0.1,0-0.2,0-0.2l5.1-1.4l-0.5-1.9l-4.8,1.3c0,0,0,0,0,0L17,12.8V17h-2v-4.2l-7.7-2.1 c0,0,0,0,0,0L2.5,9.5L2,11.4l5,1.4c0,0.1,0,0.1,0,0.2v4.2L1.8,18l0.3,2L7,19.2c0,1.2,0.3,2.4,0.8,3.6l-4.5,4.5l1.4,1.4l4.2-4.2 c3.1,3.9,8.7,4.6,12.6,1.6c0.6-0.5,1.1-1,1.6-1.6l4.2,4.2l1.4-1.4l-4.5-4.5c0.5-1.1,0.8-2.3,0.8-3.6L29.8,20z'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: var.$scale-2 var.$scale-2;
-  transform: scale(1.1) translateX(-2px) translateY(-2px);
-  padding: var.$size-1;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(349.7, 79%, 60.8%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Crect class='st0' width='32' height='32'/%3E%3Cg%3E%3Cpath d='M16,11l8-2.1c-0.9-1.7-2.3-3-4-3.9V2h-2v2.2c-1.3-0.3-2.7-0.3-4,0V2h-2v3c-1.7,0.9-3.1,2.2-4,3.9L16,11z'/%3E%3Cpath d='M29.8,20l0.3-2L25,17.2V13c0-0.1,0-0.2,0-0.2l5.1-1.4l-0.5-1.9l-4.8,1.3c0,0,0,0,0,0L17,12.8V17h-2v-4.2l-7.7-2.1 c0,0,0,0,0,0L2.5,9.5L2,11.4l5,1.4c0,0.1,0,0.1,0,0.2v4.2L1.8,18l0.3,2L7,19.2c0,1.2,0.3,2.4,0.8,3.6l-4.5,4.5l1.4,1.4l4.2-4.2 c3.1,3.9,8.7,4.6,12.6,1.6c0.6-0.5,1.1-1,1.6-1.6l4.2,4.2l1.4-1.4l-4.5-4.5c0.5-1.1,0.8-2.3,0.8-3.6L29.8,20z'/%3E%3C/g%3E%3C/svg%3E");
+	background-size: var.$scale-2 var.$scale-2;
+	transform: scale(1.1) translateX(-2px) translateY(-2px);
+	padding: var.$size-1;
 }
 
 /* ───────────────────────────────── Success ──────────────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="1"]:before,
 .markdown-preview-view li[data-task="1"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(61.3, 41.1%, 45.3%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2ZM14,21.5908l-5-5L10.5906,15,14,18.4092,21.41,11l1.5957,1.5859Z'/%3E%3Cpolygon id='inner-path' class='cls-1' points='14 21.591 9 16.591 10.591 15 14 18.409 21.41 11 23.005 12.585 14 21.591'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
-  background-size: var.$scale-2 var.$scale-2;
-  transform: scale(1.1) translateX(-2px) translateY(-2px);
-  padding: var.$size-1;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(61.3, 41.1%, 45.3%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2ZM14,21.5908l-5-5L10.5906,15,14,18.4092,21.41,11l1.5957,1.5859Z'/%3E%3Cpolygon id='inner-path' class='cls-1' points='14 21.591 9 16.591 10.591 15 14 18.409 21.41 11 23.005 12.585 14 21.591'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+	background-size: var.$scale-2 var.$scale-2;
+	transform: scale(1.1) translateX(-2px) translateY(-2px);
+	padding: var.$size-1;
 }
 
 /* ─────────────────────────── Scheduled ('- [<]') ────────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="<"]:before,
 .markdown-preview-view li[data-task="<"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(300, 1%, 19.8%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,4H22V2H20V4H12V2H10V4H6A2.0025,2.0025,0,0,0,4,6V26a2.0025,2.0025,0,0,0,2,2H26a2.0025,2.0025,0,0,0,2-2V6A2.0025,2.0025,0,0,0,26,4ZM6,6h4V8h2V6h8V8h2V6h4l0,4H6Zm0,6h5v6H6ZM19,26H13V20h6Zm0-8H13V12h6Zm2,8V20h5l.0012,6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
-  background-size: var.$scale-2 var.$scale-2;
-  transform: scale(1.1) translateX(0px) translateY(-0.5px);
-  padding-left: var.$size-0;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(300, 1%, 19.8%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,4H22V2H20V4H12V2H10V4H6A2.0025,2.0025,0,0,0,4,6V26a2.0025,2.0025,0,0,0,2,2H26a2.0025,2.0025,0,0,0,2-2V6A2.0025,2.0025,0,0,0,26,4ZM6,6h4V8h2V6h8V8h2V6h4l0,4H6Zm0,6h5v6H6ZM19,26H13V20h6Zm0-8H13V12h6Zm2,8V20h5l.0012,6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+	background-size: var.$scale-2 var.$scale-2;
+	transform: scale(1.1) translateX(0px) translateY(-0.5px);
+	padding-left: var.$size-0;
 }
 
 .theme-dark .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="<"]:before,
 .theme-dark .markdown-preview-view li[data-task="<"] > .task-list-item-checkbox:checked::before {
-  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(30, 3.4%, 76.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,4H22V2H20V4H12V2H10V4H6A2.0025,2.0025,0,0,0,4,6V26a2.0025,2.0025,0,0,0,2,2H26a2.0025,2.0025,0,0,0,2-2V6A2.0025,2.0025,0,0,0,26,4ZM6,6h4V8h2V6h8V8h2V6h4l0,4H6Zm0,6h5v6H6ZM19,26H13V20h6Zm0-8H13V12h6Zm2,8V20h5l.0012,6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+	background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(30, 3.4%, 76.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,4H22V2H20V4H12V2H10V4H6A2.0025,2.0025,0,0,0,4,6V26a2.0025,2.0025,0,0,0,2,2H26a2.0025,2.0025,0,0,0,2-2V6A2.0025,2.0025,0,0,0,26,4ZM6,6h4V8h2V6h8V8h2V6h4l0,4H6Zm0,6h5v6H6ZM19,26H13V20h6Zm0-8H13V12h6Zm2,8V20h5l.0012,6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
 /* ─────────────────────────── Location ('- [l]') ─────────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="l"]:before,
 .markdown-preview-view li[data-task="l"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M16,2A11.0134,11.0134,0,0,0,5,13a10.8885,10.8885,0,0,0,2.2163,6.6s.3.3945.3482.4517L16,30l8.439-9.9526c.0444-.0533.3447-.4478.3447-.4478l.0015-.0024A10.8846,10.8846,0,0,0,27,13,11.0134,11.0134,0,0,0,16,2Zm0,15a4,4,0,1,1,4-4A4.0045,4.0045,0,0,1,16,17Z'/%3E%3Ccircle id='_Inner-Path_' data-name='&lt;Inner-Path&gt;' class='cls-1' cx='16' cy='13' r='4'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
-  background-size: var.$scale-2 var.$scale-2;
-  transform: scale(1.1) translateX(-1px) translateY(-2px);
-  color: var(--background-primary);
-  padding: var.$size-1;
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M16,2A11.0134,11.0134,0,0,0,5,13a10.8885,10.8885,0,0,0,2.2163,6.6s.3.3945.3482.4517L16,30l8.439-9.9526c.0444-.0533.3447-.4478.3447-.4478l.0015-.0024A10.8846,10.8846,0,0,0,27,13,11.0134,11.0134,0,0,0,16,2Zm0,15a4,4,0,1,1,4-4A4.0045,4.0045,0,0,1,16,17Z'/%3E%3Ccircle id='_Inner-Path_' data-name='&lt;Inner-Path&gt;' class='cls-1' cx='16' cy='13' r='4'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+	background-size: var.$scale-2 var.$scale-2;
+	transform: scale(1.1) translateX(-1px) translateY(-2px);
+	color: var(--background-primary);
+	padding: var.$size-1;
 }
 
 /* ────────────────────────── Information ('- [i]') ───────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="i"]:before,
 .markdown-preview-view li[data-task="i"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(200, 37.3%, 30%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath id='inner-path' class='cls-1' d='M16,8a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,16,8Zm4,13.875H17.125v-8H13v2.25h1.875v5.75H12v2.25h8Z' transform='translate(0 0)'/%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,6a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,16,8Zm4,16.125H12v-2.25h2.875v-5.75H13v-2.25h4.125v8H20Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
-  background-size: var.$scale-2 var.$scale-2;
-  transform: scale(1.1) translateX(-2px) translateY(-2px);
-  padding: var.$size-1;
-  color: var(--background-primary);
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(200, 37.3%, 30%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath id='inner-path' class='cls-1' d='M16,8a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,16,8Zm4,13.875H17.125v-8H13v2.25h1.875v5.75H12v2.25h8Z' transform='translate(0 0)'/%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,6a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,16,8Zm4,16.125H12v-2.25h2.875v-5.75H13v-2.25h4.125v8H20Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+	background-size: var.$scale-2 var.$scale-2;
+	transform: scale(1.1) translateX(-2px) translateY(-2px);
+	padding: var.$size-1;
+	color: var(--background-primary);
 }
 
 .theme-dark .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="i"]:before,
 .theme-dark .markdown-preview-view li[data-task="i"] > .task-list-item-checkbox:checked::before {
-  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(201.1, 36.8%, 37.8%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath id='inner-path' class='cls-1' d='M16,8a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,16,8Zm4,13.875H17.125v-8H13v2.25h1.875v5.75H12v2.25h8Z' transform='translate(0 0)'/%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,6a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,16,8Zm4,16.125H12v-2.25h2.875v-5.75H13v-2.25h4.125v8H20Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+	background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(201.1, 36.8%, 37.8%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath id='inner-path' class='cls-1' d='M16,8a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,16,8Zm4,13.875H17.125v-8H13v2.25h1.875v5.75H12v2.25h8Z' transform='translate(0 0)'/%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,6a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,16,8Zm4,16.125H12v-2.25h2.875v-5.75H13v-2.25h4.125v8H20Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 
 /* ─────────────── Icon for question/more info task ('- [?]') ─────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="?"]:before,
 .markdown-preview-view li[data-task="?"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-color: none;
-  background-size: var.$scale-2 var.$scale-2;
-  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(41.4, 79%, 44.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Ehelp--filled%3C/title%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,23a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,16,25Zm1.1421-7.754v2.5014h-2.25V15h2.125a2.3763,2.3763,0,0,0,0-4.7526h-1.5a2.3777,2.3777,0,0,0-2.375,2.375V13.26h-2.25v-.6377A4.6279,4.6279,0,0,1,15.5171,8h1.5a4.6238,4.6238,0,0,1,.125,9.246Z' transform='translate(0)'/%3E%3Cpath id='inner-path' class='cls-1' d='M16,25a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,16,25Zm1.1421-7.754v2.5014h-2.25V15h2.125a2.3763,2.3763,0,0,0,0-4.7526h-1.5a2.3777,2.3777,0,0,0-2.375,2.375V13.26h-2.25v-.6377A4.6279,4.6279,0,0,1,15.5171,8h1.5a4.6238,4.6238,0,0,1,.125,9.246Z' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
-  transform: scale(1.1) translateY(-2px) translateX(-2px);
-  padding: 2px;
+	content: "";
+	background-repeat: no-repeat;
+	background-color: none;
+	background-size: var.$scale-2 var.$scale-2;
+	background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(41.4, 79%, 44.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Ehelp--filled%3C/title%3E%3Cpath d='M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,23a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,16,25Zm1.1421-7.754v2.5014h-2.25V15h2.125a2.3763,2.3763,0,0,0,0-4.7526h-1.5a2.3777,2.3777,0,0,0-2.375,2.375V13.26h-2.25v-.6377A4.6279,4.6279,0,0,1,15.5171,8h1.5a4.6238,4.6238,0,0,1,.125,9.246Z' transform='translate(0)'/%3E%3Cpath id='inner-path' class='cls-1' d='M16,25a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,16,25Zm1.1421-7.754v2.5014h-2.25V15h2.125a2.3763,2.3763,0,0,0,0-4.7526h-1.5a2.3777,2.3777,0,0,0-2.375,2.375V13.26h-2.25v-.6377A4.6279,4.6279,0,0,1,15.5171,8h1.5a4.6238,4.6238,0,0,1,.125,9.246Z' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+	transform: scale(1.1) translateY(-2px) translateX(-2px);
+	padding: 2px;
 }
 
 body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
-  text-decoration: underline solid var.$color-yellow 2px;
+	text-decoration: underline solid var.$color-yellow 2px;
 }
 
 /* ─────────── Paper Plane icon for deferred/rescheduled ('- [>]') ────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=">"]:before,
 .markdown-preview-view li[data-task=">"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(300, 1%, 19.8%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Esend--filled%3C/title%3E%3Cpath d='M27.45,15.11l-22-11a1,1,0,0,0-1.08.12,1,1,0,0,0-.33,1L6.69,15H18v2H6.69L4,26.74A1,1,0,0,0,5,28a1,1,0,0,0,.45-.11l22-11a1,1,0,0,0,0-1.78Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
-  background-size: var.$scale-2 var.$scale-2;
-  transform: scale(1.2) translateX(0.5px) translateY(-1px);
-  padding-left: var.$size-0;
-  color: var(--background-primary);
+	content: "";
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(300, 1%, 19.8%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Esend--filled%3C/title%3E%3Cpath d='M27.45,15.11l-22-11a1,1,0,0,0-1.08.12,1,1,0,0,0-.33,1L6.69,15H18v2H6.69L4,26.74A1,1,0,0,0,5,28a1,1,0,0,0,.45-.11l22-11a1,1,0,0,0,0-1.78Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+	background-size: var.$scale-2 var.$scale-2;
+	transform: scale(1.2) translateX(0.5px) translateY(-1px);
+	padding-left: var.$size-0;
+	color: var(--background-primary);
 }
 .theme-dark .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=">"]:before,
 .theme-dark .markdown-preview-view li[data-task=">"] > .task-list-item-checkbox:checked::before {
-  background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(30, 3.4%, 76.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Esend--filled%3C/title%3E%3Cpath d='M27.45,15.11l-22-11a1,1,0,0,0-1.08.12,1,1,0,0,0-.33,1L6.69,15H18v2H6.69L4,26.74A1,1,0,0,0,5,28a1,1,0,0,0,.45-.11l22-11a1,1,0,0,0,0-1.78Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(30, 3.4%, 76.9%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Esend--filled%3C/title%3E%3Cpath d='M27.45,15.11l-22-11a1,1,0,0,0-1.08.12,1,1,0,0,0-.33,1L6.69,15H18v2H6.69L4,26.74A1,1,0,0,0,5,28a1,1,0,0,0,.45-.11l22-11a1,1,0,0,0,0-1.78Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
 /* ──────────────────── '!' for important task ('- [!]') ──────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="!"]:before,
 .markdown-preview-view li[data-task="!"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-size: var.$scale-2 var.$scale-2;
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpath id='inner-path' class='st0' d='M16,26c-0.8,0-1.5-0.7-1.5-1.5S15.2,23,16,23c0.8,0,1.5,0.7,1.5,1.5S16.8,26,16,26z M14.9,21 h2.2v-9h-2.2V21z'/%3E%3Cpath d='M16,6.2L16,6.2L4.6,28l0,0h22.7l0,0L16,6.2z M14.9,12h2.2v9h-2.2V12z M16,26c-0.8,0-1.5-0.7-1.5-1.5S15.2,23,16,23 c0.8,0,1.5,0.7,1.5,1.5S16.8,26,16,26z'/%3E%3Cpath d='M29,30H3c-0.6,0-1-0.4-1-1c0-0.2,0-0.3,0.1-0.5l13-25C15.4,3,16,2.9,16.5,3.1c0.2,0.1,0.3,0.2,0.4,0.4l13,25 c0.3,0.5,0.1,1.1-0.4,1.3C29.3,30,29.2,30,29,30z M4.7,28h22.7l0,0L16,6.2h0L4.7,28L4.7,28z'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Crect x='-2.9' y='15.3' transform='matrix(0.4543 -0.8908 0.8908 0.4543 -9.2548 18.3131)' width='26.4' height='2.9'/%3E%3Crect x='8.3' y='15.6' transform='matrix(-0.4543 -0.8908 0.8908 -0.4543 16.0037 43.9746)' width='26.4' height='2.9'/%3E%3Crect x='3.9' y='26.2' transform='matrix(-0.9999 -1.155204e-02 1.155204e-02 -0.9999 31.8813 55.4091)' width='24.4' height='2.9'/%3E%3C/svg%3E%0A");
-  transform: scale(1.1) translateY(-2px) translateX(-2px);
-  padding: 2px;
+	content: "";
+	background-repeat: no-repeat;
+	background-size: var.$scale-2 var.$scale-2;
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(0.4, 66.8%, 46.1%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpath id='inner-path' class='st0' d='M16,26c-0.8,0-1.5-0.7-1.5-1.5S15.2,23,16,23c0.8,0,1.5,0.7,1.5,1.5S16.8,26,16,26z M14.9,21 h2.2v-9h-2.2V21z'/%3E%3Cpath d='M16,6.2L16,6.2L4.6,28l0,0h22.7l0,0L16,6.2z M14.9,12h2.2v9h-2.2V12z M16,26c-0.8,0-1.5-0.7-1.5-1.5S15.2,23,16,23 c0.8,0,1.5,0.7,1.5,1.5S16.8,26,16,26z'/%3E%3Cpath d='M29,30H3c-0.6,0-1-0.4-1-1c0-0.2,0-0.3,0.1-0.5l13-25C15.4,3,16,2.9,16.5,3.1c0.2,0.1,0.3,0.2,0.4,0.4l13,25 c0.3,0.5,0.1,1.1-0.4,1.3C29.3,30,29.2,30,29,30z M4.7,28h22.7l0,0L16,6.2h0L4.7,28L4.7,28z'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Crect x='-2.9' y='15.3' transform='matrix(0.4543 -0.8908 0.8908 0.4543 -9.2548 18.3131)' width='26.4' height='2.9'/%3E%3Crect x='8.3' y='15.6' transform='matrix(-0.4543 -0.8908 0.8908 -0.4543 16.0037 43.9746)' width='26.4' height='2.9'/%3E%3Crect x='3.9' y='26.2' transform='matrix(-0.9999 -1.155204e-02 1.155204e-02 -0.9999 31.8813 55.4091)' width='24.4' height='2.9'/%3E%3C/svg%3E%0A");
+	transform: scale(1.1) translateY(-2px) translateX(-2px);
+	padding: 2px;
 }
 
 /* ────────────────── Icon for cancelled/non-task ('- [-]') ───────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="-"]:before,
 .markdown-preview-view li[data-task="-"] > .task-list-item-checkbox:checked::before {
-  content: "";
-  background-repeat: no-repeat;
-  background-size: var.$scale-2 var.$scale-2;
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' fill='hsla(34.3, 21.2%, 93.5%, 0.6)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cg id='icon'%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Crect id='_Transparent_Rectangle__1_' x='0.2' y='-0.4' class='st0' width='32' height='32'/%3E%3C/g%3E%3Cg id='Layer_2'%3E%3Cpath d='M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14S23.7,2,16,2z M24,17.6h-2.8h-10H8v-4h3.2h10H24V17.6z'/%3E%3C/g%3E%3C/svg%3E%0A");
-  transform: scale(1.1) translateY(-2px) translateX(-2px);
-  padding: 2px;
+	content: "";
+	background-repeat: no-repeat;
+	background-size: var.$scale-2 var.$scale-2;
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' fill='hsla(34.3, 21.2%, 93.5%, 0.6)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cg id='icon'%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Crect id='_Transparent_Rectangle__1_' x='0.2' y='-0.4' class='st0' width='32' height='32'/%3E%3C/g%3E%3Cg id='Layer_2'%3E%3Cpath d='M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14S23.7,2,16,2z M24,17.6h-2.8h-10H8v-4h3.2h10H24V17.6z'/%3E%3C/g%3E%3C/svg%3E%0A");
+	transform: scale(1.1) translateY(-2px) translateX(-2px);
+	padding: 2px;
 }
 .theme-light .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="-"]:before,
 .theme-light .markdown-preview-view li[data-task="-"] > .task-list-item-checkbox:checked::before {
-  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' fill='hsla(0, 0%, 7.8%, 0.9)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cg id='icon'%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Crect id='_Transparent_Rectangle__1_' x='0.2' y='-0.4' class='st0' width='32' height='32'/%3E%3C/g%3E%3Cg id='Layer_2'%3E%3Cpath d='M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14S23.7,2,16,2z M24,17.6h-2.8h-10H8v-4h3.2h10H24V17.6z'/%3E%3C/g%3E%3C/svg%3E%0A");
+	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' fill='hsla(0, 0%, 7.8%, 0.9)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cg id='icon'%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Crect id='_Transparent_Rectangle__1_' x='0.2' y='-0.4' class='st0' width='32' height='32'/%3E%3C/g%3E%3Cg id='Layer_2'%3E%3Cpath d='M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14S23.7,2,16,2z M24,17.6h-2.8h-10H8v-4h3.2h10H24V17.6z'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 
 .markdown-preview-view ul > li[data-task="-"].task-list-item.is-checked {
-  color: var(--text-faint);
-  text-decoration: line-through solid var(--text-faint) 2px;
+	color: var(--text-faint);
+	text-decoration: line-through solid var(--text-faint) 2px;
 }
 
 /* Remove strikethrough from completed to-do lists/checkbox, except the cancelled task */
 .markdown-preview-view ul > li:not([data-task="-"]):not([data-task="x"]).task-list-item.is-checked::selection,
 .markdown-preview-view ul > li:not([data-task="-"]):not([data-task="x"]).task-list-item.is-checked {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 /* ───────────────────────────── Edit Mode Tasks ──────────────────────────── */
 .edit-mode-tasks .cm-s-obsidian span.cm-formatting-task {
-    font-weight: bold;
-    color: var.$color-red;
+	font-weight: bold;
+	color: var.$color-red;
 }
 
 .edit-mode-tasks .cm-s-obsidian span.cm-formatting-task.cm-property {
-    font-weight: bold;
-    color: var.$color-green;
+	font-weight: bold;
+	color: var.$color-green;
 }
 
 /* ─────────────────────────────── Admonitions ────────────────────────────── */
 :root {
-    --hsl-color-red: 0.4, 66.8%, 46.1%;
-    --hsl-color-yellow: 41.3, 79.6%, 59.6%;
-    --hsl-color-blue: 201.1, 36.8%, 37.8%;
-    --hsl-color-green: 61.3, 41.1%, 45.3%;
-    --hsl-color-green-700: 60, 40.9%, 31.2%;
-    --hsl-color-pink: 349.7, 79%, 60.8%;
-  }
+	--hsl-color-red: 0.4, 66.8%, 46.1%;
+	--hsl-color-yellow: 41.3, 79.6%, 59.6%;
+	--hsl-color-blue: 201.1, 36.8%, 37.8%;
+	--hsl-color-green: 61.3, 41.1%, 45.3%;
+	--hsl-color-green-700: 60, 40.9%, 31.2%;
+	--hsl-color-pink: 349.7, 79%, 60.8%;
+}
 
 /* ──────────────────────── Important (!) admonition ──────────────────────── */
 /* ───────────────────────────── Cons Admonition ──────────────────────────── */
 /* ───────────────────────────────── Failure ──────────────────────────────── */
- 
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c],
+.markdown-source-view.mod-cm6 span[data-task="X"],
+.markdown-source-view.mod-cm6 span[data-task="c"],
+.markdown-source-view.mod-cm6 span[data-task="!"],
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="X"],
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="c"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] {
-    background-color: hsla(var(--hsl-color-red), 0.8);
-    border-radius: 0px 4px 4px 4px;
-    border-left: 1.5px solid var.$color-red;
-    padding: 0px 4px 4px 4px;
-    color: var(--color-primary-w);
-    font-weight: var.$font-regular;
-    margin-left: 4px;
+	background-color: hsla(var(--hsl-color-red), 0.8);
+	border-radius: 0px 4px 4px 4px;
+	border-left: 1.5px solid var.$color-red;
+	padding: 0px 4px 4px 4px;
+	color: var(--color-primary-w);
+	font-weight: var.$font-regular;
+	margin-left: 4px;
 
-    .theme-dark & {
-        color: var(--color-primary-k);
-    }
+	.theme-dark & {
+		color: var(--color-primary-k);
+	}
 
-    & ul li::marker {
-        color: var(--color-primary-w);
-    }
+	& ul li::marker {
+		color: var(--color-primary-w);
+	}
 
-    & a {
-        color: inherit;
-        text-decoration: underline solid currentColor;
-    }
-    & a:hover {
-        text-decoration: underline dashed currentColor;
-    }
-    & a.external-link {
-        background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
-    }
-    & mark {
-        background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
-        color: white;
-    }
+	& a {
+		color: inherit;
+		text-decoration: underline solid currentColor;
+	}
+	& a:hover {
+		text-decoration: underline dashed currentColor;
+	}
+	& a.external-link {
+		background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+	}
+	& mark {
+		background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
+		color: white;
+	}
 
-    & mark:hover {
-      color: #{var.$color-black};
-    }
-    & em > mark {
-        background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
-    }
-    & strong > mark {
-        background-image: linear-gradient(120deg, #{var.$color-white}, #{var.$color-white});
-    }
-    .theme-dark & ul li::marker {
-        color: var(--color-primary-k);
-    }
-    &.is-collapsed::after {
-        color: #{var.$color-white};
-    }
-    & .list-collapse-indicator {
-        margin-left: -3.57rem;
-    }
+	& mark:hover {
+		color: #{var.$color-black};
+	}
+	& em > mark {
+		background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
+	}
+	& strong > mark {
+		background-image: linear-gradient(120deg, #{var.$color-white}, #{var.$color-white});
+	}
+	.theme-dark & ul li::marker {
+		color: var(--color-primary-k);
+	}
+	&.is-collapsed::after {
+		color: #{var.$color-white};
+	}
+	& .list-collapse-indicator {
+		margin-left: -3.57rem;
+	}
 }
 
-.admonitions.markdown-preview-view li[data-task=X] > .task-list-item-checkbox,
-.admonitions.markdown-preview-view li[data-task=c] > .task-list-item-checkbox,
+.admonitions.markdown-preview-view li[data-task="X"] > .task-list-item-checkbox,
+.admonitions.markdown-preview-view li[data-task="c"] > .task-list-item-checkbox,
 .admonitions.markdown-preview-view li[data-task="!"] > .task-list-item-checkbox {
-    margin-left: -5px;
-    margin-right: var.$size-5;
+	margin-left: -5px;
+	margin-right: var.$size-5;
 
-    &:checked::before {
-        margin-top: -1px;
-    }
+	&:checked::before {
+		margin-top: -1px;
+	}
 }
 
+.markdown-source-view.mod-cm6 span[data-task="X"],
+.markdown-source-view.mod-cm6 span[data-task="c"],
+.markdown-source-view.mod-cm6 span[data-task="!"] {
+	margin-left: 0;
+	padding: 0;
+}
 
 /* ───────────────────────── Question (?) admonition ──────────────────────── */
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I],
+.markdown-source-view.mod-cm6 span[data-task="I"],
+.markdown-source-view.mod-cm6 span[data-task="?"],
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="I"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] {
-    background-color: hsla(var(--hsl-color-yellow), 0.8);
-    border-radius: 0px 4px 4px 4px;
-    border-left: 1.5px solid var.$color-yellow;
-    padding: 0px 4px 4px 4px;
-    text-decoration: none;
-    color: var(--color-primary-k);
-    font-weight: var.$font-regular;
-    margin-left: 4px;
+	background-color: hsla(var(--hsl-color-yellow), 0.8);
+	border-radius: 0px 4px 4px 4px;
+	border-left: 1.5px solid var.$color-yellow;
+	padding: 0px 4px 4px 4px;
+	text-decoration: none;
+	color: var(--color-primary-k);
+	font-weight: var.$font-regular;
+	margin-left: 4px;
 
-    .theme-dark & {
-      background-color: hsla(var(--hsl-color-yellow), 0.7);
-    }
-    & li::marker{
-        color: var(--color-primary-k);
-    }
-    & a {
-        color: inherit;
-        text-decoration: underline solid currentColor;
-    }
-    & a:hover {
-        text-decoration: underline dashed currentColor;
-    }
-    & mark {
-        background-image: linear-gradient(120deg, #{var.$color-white}, #{var.$color-white});
-    }
-    & mark:hover {
-        color: #{var.$color-black};
-    }
-    & em > mark {
-        background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
-    }
-    & strong > mark {
-        background-image: linear-gradient(120deg, var(--color-highlight-3), var(--color-highlight-3));
-    }
-    & .list-collapse-indicator {
-        margin-left: -3.57rem;
-    }
+	.theme-dark & {
+		background-color: hsla(var(--hsl-color-yellow), 0.7);
+	}
+	& li::marker{
+		color: var(--color-primary-k);
+	}
+	& a {
+		color: inherit;
+		text-decoration: underline solid currentColor;
+	}
+	& a:hover {
+		text-decoration: underline dashed currentColor;
+	}
+	& mark {
+		background-image: linear-gradient(120deg, #{var.$color-white}, #{var.$color-white});
+	}
+	& mark:hover {
+		color: #{var.$color-black};
+	}
+	& em > mark {
+		background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
+	}
+	& strong > mark {
+		background-image: linear-gradient(120deg, var(--color-highlight-3), var(--color-highlight-3));
+	}
+	& .list-collapse-indicator {
+		margin-left: -3.57rem;
+	}
 }
 
-.admonitions.markdown-preview-view li[data-task=I] > .task-list-item-checkbox,
+.admonitions.markdown-preview-view li[data-task="I"] > .task-list-item-checkbox,
 .admonitions.markdown-preview-view li[data-task="?"] > .task-list-item-checkbox {
-    margin-left: -5px;
-    margin-right: var.$size-5;
+	margin-left: -5px;
+	margin-right: var.$size-5;
 
-    &:checked::before {
-        margin-top: -1px;
-    }
+	&:checked::before {
+		margin-top: -1px;
+	}
+}
+
+.markdown-source-view.mod-cm6 span[data-task="I"],
+.markdown-source-view.mod-cm6 span[data-task="?"] {
+	margin-left: 0;
+	padding: 0;
 }
 
 /* ─────────────────────── Information (i) admonition ─────────────────────── */
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] {
-    background-color: hsla(var(--hsl-color-blue), 0.8);
-    border-radius: 0px 4px 4px 4px;
-    border-left: 1.5px solid var.$color-teal;
-    padding: 0px 4px 4px 4px;
-    text-decoration: none;
-    color: var(--color-primary-w);
-    font-weight: var.$font-regular;
-    margin-left: 4px;
+.markdown-source-view.mod-cm6 span[data-task="i"],
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="i"] {
+	background-color: hsla(var(--hsl-color-blue), 0.8);
+	border-radius: 0px 4px 4px 4px;
+	border-left: 1.5px solid var.$color-teal;
+	padding: 0px 4px 4px 4px;
+	text-decoration: none;
+	color: var(--color-primary-w);
+	font-weight: var.$font-regular;
+	margin-left: 4px;
 
-    .theme-dark & {
-        background-color: hsla(var(--hsl-color-blue), 0.7);
-        color: var(--color-primary-k);
-    }
-    & li::marker {
-        color: #{var.$color-white};
-    }
-    & a {
-        color: inherit;
-        text-decoration: underline solid currentColor;
-    }
-    & a:hover {
-        text-decoration: underline dashed currentColor;
-    }
-    & mark {
-        background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
-        color: #{var.$color-white};
-    }
-    & em > mark {
-        background-image: linear-gradient(120deg, #{var.$color-white}, #{var.$color-white});
-    }
-    & mark:hover {
-        color: #{var.$color-black};
-    }
-    & strong > mark {
-        background-image: linear-gradient(120deg, var(--color-highlight-3), var(--color-highlight-3));
-    }
-    & a.external-link {
-        background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
-    }
-    .theme-light &.is-collapsed::after {
-        color: #{var.$color-white};
-    }
-    & .list-collapse-indicator {
-        margin-left: -3.57rem;
-    }
+	.theme-dark & {
+		background-color: hsla(var(--hsl-color-blue), 0.7);
+		color: var(--color-primary-k);
+	}
+	& li::marker {
+		color: #{var.$color-white};
+	}
+	& a {
+		color: inherit;
+		text-decoration: underline solid currentColor;
+	}
+	& a:hover {
+		text-decoration: underline dashed currentColor;
+	}
+	& mark {
+		background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
+		color: #{var.$color-white};
+	}
+	& em > mark {
+		background-image: linear-gradient(120deg, #{var.$color-white}, #{var.$color-white});
+	}
+	& mark:hover {
+		color: #{var.$color-black};
+	}
+	& strong > mark {
+		background-image: linear-gradient(120deg, var(--color-highlight-3), var(--color-highlight-3));
+	}
+	& a.external-link {
+		background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+	}
+	.theme-light &.is-collapsed::after {
+		color: #{var.$color-white};
+	}
+	& .list-collapse-indicator {
+		margin-left: -3.57rem;
+	}
 }
 
-.admonitions.markdown-preview-view li[data-task=i] > .task-list-item-checkbox {
-    margin-left: -5px;
-    margin-right: var.$size-5;
+.admonitions.markdown-preview-view li[data-task="i"] > .task-list-item-checkbox {
+	margin-left: -5px;
+	margin-right: var.$size-5;
 
-    &:checked::before {
-        margin-top: -1px;
-    }
+	&:checked::before {
+		margin-top: -1px;
+	}
+}
+
+.markdown-source-view.mod-cm6 span[data-task="i"] {
+	margin-left: 0;
+	padding: 0;
 }
 
 /* ───────────────────────────── Pros Admonition ──────────────────────────── */
 /* ─────────────────────────── Reward/Win Admonition ─────────────────────────── */
 /* ───────────────────────────────── Success ──────────────────────────────── */
+.markdown-source-view.mod-cm6 span[data-task="1"],
+.markdown-source-view.mod-cm6 span[data-task='W'],
+.markdown-source-view.mod-cm6 span[data-task="p"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] {
-    background-color: hsla(var(--hsl-color-green), 0.7);
-    border-radius: 0px 4px 4px 4px;
-    border-left: 1.5px solid var.$color-green;
-    padding: 0px 4px 4px 4px;
-    text-decoration: none;
-    color: #{var.$color-white};
-    font-weight: var.$font-regular;
-    margin-left: 4px;
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="W"],
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="p"] {
+	background-color: hsla(var(--hsl-color-green), 0.7);
+	border-radius: 0px 4px 4px 4px;
+	border-left: 1.5px solid var.$color-green;
+	padding: 0px 4px 4px 4px;
+	text-decoration: none;
+	color: #{var.$color-white};
+	font-weight: var.$font-regular;
+	margin-left: 4px;
 
-    .theme-dark & {
-        background-color: hsla(var(--hsl-color-green), 0.85);
-    }
-    &,
-    & mark,
-    & li mark,
-    & li::marker {
-        color: var(--text-normal);
-    }
+	.theme-dark & {
+		background-color: hsla(var(--hsl-color-green), 0.85);
+	}
+	&,
+	& mark,
+	& li mark,
+	& li::marker {
+		color: var(--text-normal);
+	}
 
-    & mark:hover {
-        color: #{var.$color-black};
-    }
-    & a {
-        color: inherit;
-        text-decoration: underline solid currentColor;
-    }
-    & a:hover {
-        text-decoration: underline dashed currentColor;
-    }
-    & a.external-link {
-        background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
-    }
-    &.is-collapsed::after {
-        color: #{var.$color-white};
-    }
-    & .list-collapse-indicator {
-        margin-left: -3.57rem;
-    }
+	& mark:hover {
+		color: #{var.$color-black};
+	}
+	& a {
+		color: inherit;
+		text-decoration: underline solid currentColor;
+	}
+	& a:hover {
+		text-decoration: underline dashed currentColor;
+	}
+	& a.external-link {
+		background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+	}
+	&.is-collapsed::after {
+		color: #{var.$color-white};
+	}
+	& .list-collapse-indicator {
+		margin-left: -3.57rem;
+	}
 }
 
 .admonitions.markdown-preview-view li[data-task="1"] > .task-list-item-checkbox,
-.admonitions.markdown-preview-view li[data-task=W] > .task-list-item-checkbox,
-.admonitions.markdown-preview-view li[data-task=p] > .task-list-item-checkbox {
-    margin-left: -5px;
-    margin-right: var.$size-5;
+.admonitions.markdown-preview-view li[data-task="W"] > .task-list-item-checkbox,
+.admonitions.markdown-preview-view li[data-task="p"] > .task-list-item-checkbox {
+	margin-left: -5px;
+	margin-right: var.$size-5;
 
-    &:checked::before {
-        margin-top: -1px;
-    }
-    & .list-collapse-indicator {
-        margin-left: -3.57rem;
-    }
+	&:checked::before {
+		margin-top: -1px;
+	}
+	& .list-collapse-indicator {
+		margin-left: -3.57rem;
+	}
+}
+
+.markdown-source-view.mod-cm6 span[data-task="p"],
+.markdown-source-view.mod-cm6 span[data-task="1"],
+.markdown-source-view.mod-cm6 span[data-task="W"] {
+	margin-left: 0;
+	padding: 0;
 }
 
 /* ─────────────────────────── Note (n) Admonition ────────────────────────── */
 /* ─────────────────────────── Bookmark Admonition ────────────────────────── */
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=n],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=b] {
-    background-color: var(--color-primary-20);
-    border-radius: 0px 4px 4px 4px;
-    border-left: 1.5px solid var(--color-border-2);
-    padding: 0px 4px 4px 4px;
-    text-decoration: none;
-    color: var(--text-normal);
-    font-weight: var.$font-regular;
-    margin-left: 4px;
+.markdown-source-view.mod-cm6 span[data-task="n"],
+.markdown-source-view.mod-cm6 span[data-task="b"],
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="n"],
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="b"] {
+	background-color: var(--color-primary-20);
+	border-radius: 0px 4px 4px 4px;
+	border-left: 1.5px solid var(--color-border-2);
+	padding: 0px 4px 4px 4px;
+	text-decoration: none;
+	color: var(--text-normal);
+	font-weight: var.$font-regular;
+	margin-left: 4px;
 
-    & li::marker {
-        color: #{var.$color-white};
-    }
-    & .list-collapse-indicator {
-        margin-left: -3.57rem;
-    }
+	& li::marker {
+		color: #{var.$color-white};
+	}
+	& .list-collapse-indicator {
+		margin-left: -3.57rem;
+	}
 }
 
-.admonitions.markdown-preview-view li[data-task=n] > .task-list-item-checkbox,
-.admonitions.markdown-preview-view li[data-task=b] > .task-list-item-checkbox {
-    margin-left: -5px;
-    margin-right: var.$size-5;
+.admonitions.markdown-preview-view li[data-task="n"] > .task-list-item-checkbox,
+.admonitions.markdown-preview-view li[data-task="b"] > .task-list-item-checkbox {
+	margin-left: -5px;
+	margin-right: var.$size-5;
 
-    &:checked::before {
-        margin-top: -1px;
-    }
+	&:checked::before {
+		margin-top: -1px;
+	}
 }
 
+.markdown-source-view.mod-cm6 span[data-task="n"],
+.markdown-source-view.mod-cm6 span[data-task="b"] {
+	margin-left: 0;
+	padding: 0;
+}
 /* ────────────────────────────────── Debug ───────────────────────────────── */
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] {
-    background-color: hsla(var(--hsl-color-pink), 0.8);
-    border-radius: 0px 4px 4px 4px;
-    border-left: 1.5px solid var.$color-pink;
-    padding: 0px 4px 4px 4px;
-    color: #{var.$color-white};
-    font-weight: var.$font-regular;
-    margin-left: 4px;
+.markdown-source-view.mod-cm6 span[data-task="B"],
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="B"] {
+	background-color: hsla(var(--hsl-color-pink), 0.8);
+	border-left: 1.5px solid var.$color-pink;
+	border-radius: 0px 4px 4px 4px;
+	color: #{var.$color-white};
+	padding: 0px 4px 4px 4px;
+	margin-left: 4px;
+	font-weight: var.$font-regular;
 
-    & ul li::marker {
-        color: var(--color-primary-w);
-    }
-    & a {
-        color: inherit;
-        text-decoration: underline solid currentColor;
-    }
-    & a:hover {
-        text-decoration: underline dashed currentColor;
-    }
-    & a.external-link {
-        background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
-    }
-    & mark {
-        background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
-        color: white;
-    }
-    & mark:hover {
-        color: #{var.$color-black};
-    }
-    & em > mark {
-        background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
-    }
-    & strong > mark {
-        background-image: linear-gradient(120deg, #{var.$color-white}, #{var.$color-white});
-    }
-    .theme-dark & ul li::marker {
-        color: var(--color-primary-k);
-    }
-    &.is-collapsed::after {
-        color: #{var.$color-white};
-    }
-    & .list-collapse-indicator {
-        margin-left: -3.57rem;
-    }
+	& ul li::marker {
+		color: var(--color-primary-w);
+	}
+	& a {
+		color: inherit;
+		text-decoration: underline solid currentColor;
+	}
+	& a:hover {
+		text-decoration: underline dashed currentColor;
+	}
+	& a.external-link {
+		background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+	}
+	& mark {
+		background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
+		color: white;
+	}
+	& mark:hover {
+		color: #{var.$color-black};
+	}
+	& em > mark {
+		background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
+	}
+	& strong > mark {
+		background-image: linear-gradient(120deg, #{var.$color-white}, #{var.$color-white});
+	}
+	.theme-dark & ul li::marker {
+		color: var(--color-primary-k);
+	}
+	&.is-collapsed::after {
+		color: #{var.$color-white};
+	}
+	& .list-collapse-indicator {
+		margin-left: -3.57rem;
+	}
 }
 
-.admonitions.markdown-preview-view li[data-task=B] > .task-list-item-checkbox {
-    margin-left: -5px;
-    margin-right: var.$size-5;
+.admonitions.markdown-preview-view li[data-task="B"] > .task-list-item-checkbox {
+	margin-left: -5px;
+	margin-right: var.$size-5;
 
-    &:checked::before {
-        margin-top: -1px;
-    }
+	&:checked::before {
+		margin-top: -1px;
+	}
+}
+
+.markdown-source-view.mod-cm6 span[data-task="B"] {
+	margin-left: 0;
+	padding: 0;
 }

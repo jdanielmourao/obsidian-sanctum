@@ -24,6 +24,9 @@ Status Bar
     &-text {
         margin-top: 3px;
     }
+	.no-titlebar-title &-text {
+		display: none;
+	}
     &-button {
         -webkit-app-region: no-drag;
         padding: var.$size-2

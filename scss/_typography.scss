@@ -16,7 +16,7 @@ body {
 }
 
 /* ───────────────────────────── Note Typography ──────────────────────────── */
-.markdown-preview-view {
+.markdown-preview-view { //preview
 	font-optical-sizing: auto;
 	font-family: var(--font-preview);
 	line-height: var.$leading-3;
@@ -24,7 +24,19 @@ body {
 	hyphens: auto;
 }
 
-.cm-s-obsidian {
+.cm-line, // live preview
+.markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-source-view,
+.cm-s-obsidian,
+.HyperMD-table-2.HyperMD-table-row.cm-line { //tables
+	font-optical-sizing: auto;
+	font-family: var(--font-editor);
+	line-height: var.$leading-3;
+	letter-spacing: var.$tracking-2;
+}
+
+
+.cm-s-obsidian { //edit/source mode
 	font-optical-sizing: auto;
 	font-family: var(--font-editor);
 	line-height: var.$leading-3;

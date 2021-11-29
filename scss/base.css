@@ -7,7 +7,7 @@
 /* Description: Sanctum’s a minimalist theme with the aim of creating a serene space 
 /*              of retreat, for thought and uninterrupted work.
 /* License: GNU General Public License v3.0
-/* Version: 0.3.1
+/* Version: 0.4
 /* ───────────────────────────────────────────────────────────────────────── */
 /*
     ├── Variables
@@ -772,6 +772,9 @@ Status Bar
 }
 .titlebar-text {
   margin-top: 3px;
+}
+.no-titlebar-title .titlebar-text {
+  display: none;
 }
 .titlebar-button {
   -webkit-app-region: no-drag;
@@ -1739,6 +1742,17 @@ body, body body input, body body button {
   hyphens: auto;
 }
 
+.cm-line,
+.markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-source-view,
+.cm-s-obsidian,
+.HyperMD-table-2.HyperMD-table-row.cm-line {
+  font-optical-sizing: auto;
+  font-family: var(--font-editor);
+  line-height: 1.375em;
+  letter-spacing: 0.32px;
+}
+
 .cm-s-obsidian {
   font-optical-sizing: auto;
   font-family: var(--font-editor);
@@ -2481,7 +2495,7 @@ ol > li::marker {
   font-weight: 400;
   font-size: 1rem;
   color: var(--text-normal);
-  font-family: var(--font-preview);
+  font-family: var(--font-sans);
   font-variant-numeric: tabular-nums;
 }
 
@@ -2611,6 +2625,7 @@ body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul:before {
   margin-top: 0px;
   font-size: 20px;
   color: var(--text-muted);
+  font-family: var(--font-sans);
 }
 
 .list-bullet {
@@ -2660,6 +2675,21 @@ body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul:before {
 
 .HyperMD-list-line-8 .list-bullet::before {
   content: "▪  ";
+}
+
+.list-bullet,
+.list-bullet::before,
+.HyperMD-list-line-1 .list-bullet::before,
+.HyperMD-list-line-2 .list-bullet::before,
+.HyperMD-list-line-3 .list-bullet::before,
+.HyperMD-list-line-4 .list-bullet::before,
+.HyperMD-list-line-5 .list-bullet::before,
+.HyperMD-list-line-6 .list-bullet::before,
+.HyperMD-list-line-7 .list-bullet::before,
+.HyperMD-list-line-8 .list-bullet::before,
+.HyperMD-list-line-8 .list-bullet::before,
+.HyperMD-list-line-8 .list-bullet::before {
+  font-family: var(--font-sans);
 }
 
 /* Disable loose lists for tasks */
@@ -2740,7 +2770,7 @@ input[type=checkbox]:checked:active, input[type=checkbox]:checked:hover {
 }
 
 .markdown-preview-view ul > li[data-task=x].task-list-item.is-checked::selection,
-.markdown-preview-view ul > li[data-task=x].task-list-item.is-checked {
+.ma kdown-preview-view ul > li[data-task=x].task-list-item.is-checked {
   text-decoration: line-through solid inherit 2px;
 }
 
@@ -3085,6 +3115,9 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 /* ──────────────────────── Important (!) admonition ──────────────────────── */
 /* ───────────────────────────── Cons Admonition ──────────────────────────── */
 /* ───────────────────────────────── Failure ──────────────────────────────── */
+.markdown-source-view.mod-cm6 span[data-task=X],
+.markdown-source-view.mod-cm6 span[data-task=c],
+.markdown-source-view.mod-cm6 span[data-task="!"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] {
@@ -3096,63 +3129,99 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   font-weight: 400;
   margin-left: 4px;
 }
+.theme-dark .markdown-source-view.mod-cm6 span[data-task=X],
+.theme-dark .markdown-source-view.mod-cm6 span[data-task=c],
+.theme-dark .markdown-source-view.mod-cm6 span[data-task="!"],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] {
   color: var(--color-primary-k);
 }
+.markdown-source-view.mod-cm6 span[data-task=X] ul li::marker,
+.markdown-source-view.mod-cm6 span[data-task=c] ul li::marker,
+.markdown-source-view.mod-cm6 span[data-task="!"] ul li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] ul li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] ul li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] ul li::marker {
   color: var(--color-primary-w);
 }
+.markdown-source-view.mod-cm6 span[data-task=X] a,
+.markdown-source-view.mod-cm6 span[data-task=c] a,
+.markdown-source-view.mod-cm6 span[data-task="!"] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] a {
   color: inherit;
   text-decoration: underline solid currentColor;
 }
+.markdown-source-view.mod-cm6 span[data-task=X] a:hover,
+.markdown-source-view.mod-cm6 span[data-task=c] a:hover,
+.markdown-source-view.mod-cm6 span[data-task="!"] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] a:hover {
   text-decoration: underline dashed currentColor;
 }
+.markdown-source-view.mod-cm6 span[data-task=X] a.external-link,
+.markdown-source-view.mod-cm6 span[data-task=c] a.external-link,
+.markdown-source-view.mod-cm6 span[data-task="!"] a.external-link,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] a.external-link,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] a.external-link,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] a.external-link {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
+.markdown-source-view.mod-cm6 span[data-task=X] mark,
+.markdown-source-view.mod-cm6 span[data-task=c] mark,
+.markdown-source-view.mod-cm6 span[data-task="!"] mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] mark {
   background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
   color: white;
 }
+.markdown-source-view.mod-cm6 span[data-task=X] mark:hover,
+.markdown-source-view.mod-cm6 span[data-task=c] mark:hover,
+.markdown-source-view.mod-cm6 span[data-task="!"] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] mark:hover {
   color: #141414;
 }
+.markdown-source-view.mod-cm6 span[data-task=X] em > mark,
+.markdown-source-view.mod-cm6 span[data-task=c] em > mark,
+.markdown-source-view.mod-cm6 span[data-task="!"] em > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] em > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] em > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] em > mark {
   background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
 }
+.markdown-source-view.mod-cm6 span[data-task=X] strong > mark,
+.markdown-source-view.mod-cm6 span[data-task=c] strong > mark,
+.markdown-source-view.mod-cm6 span[data-task="!"] strong > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] strong > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] strong > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] strong > mark {
   background-image: linear-gradient(120deg, #fcfbfa, #fcfbfa);
 }
+.theme-dark .markdown-source-view.mod-cm6 span[data-task=X] ul li::marker,
+.theme-dark .markdown-source-view.mod-cm6 span[data-task=c] ul li::marker,
+.theme-dark .markdown-source-view.mod-cm6 span[data-task="!"] ul li::marker,
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] ul li::marker,
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] ul li::marker,
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] ul li::marker {
   color: var(--color-primary-k);
 }
+.markdown-source-view.mod-cm6 span[data-task=X].is-collapsed::after,
+.markdown-source-view.mod-cm6 span[data-task=c].is-collapsed::after,
+.markdown-source-view.mod-cm6 span[data-task="!"].is-collapsed::after,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X].is-collapsed::after,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c].is-collapsed::after,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"].is-collapsed::after {
   color: #fcfbfa;
 }
+.markdown-source-view.mod-cm6 span[data-task=X] .list-collapse-indicator,
+.markdown-source-view.mod-cm6 span[data-task=c] .list-collapse-indicator,
+.markdown-source-view.mod-cm6 span[data-task="!"] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] .list-collapse-indicator {
@@ -3171,7 +3240,16 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   margin-top: -1px;
 }
 
+.markdown-source-view.mod-cm6 span[data-task=X],
+.markdown-source-view.mod-cm6 span[data-task=c],
+.markdown-source-view.mod-cm6 span[data-task="!"] {
+  margin-left: 0;
+  padding: 0;
+}
+
 /* ───────────────────────── Question (?) admonition ──────────────────────── */
+.markdown-source-view.mod-cm6 span[data-task=I],
+.markdown-source-view.mod-cm6 span[data-task="?"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] {
   background-color: hsla(var(--hsl-color-yellow), 0.8);
@@ -3183,39 +3261,57 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   font-weight: 400;
   margin-left: 4px;
 }
+.theme-dark .markdown-source-view.mod-cm6 span[data-task=I],
+.theme-dark .markdown-source-view.mod-cm6 span[data-task="?"],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] {
   background-color: hsla(var(--hsl-color-yellow), 0.7);
 }
+.markdown-source-view.mod-cm6 span[data-task=I] li::marker,
+.markdown-source-view.mod-cm6 span[data-task="?"] li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] li::marker {
   color: var(--color-primary-k);
 }
+.markdown-source-view.mod-cm6 span[data-task=I] a,
+.markdown-source-view.mod-cm6 span[data-task="?"] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] a {
   color: inherit;
   text-decoration: underline solid currentColor;
 }
+.markdown-source-view.mod-cm6 span[data-task=I] a:hover,
+.markdown-source-view.mod-cm6 span[data-task="?"] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] a:hover {
   text-decoration: underline dashed currentColor;
 }
+.markdown-source-view.mod-cm6 span[data-task=I] mark,
+.markdown-source-view.mod-cm6 span[data-task="?"] mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] mark {
   background-image: linear-gradient(120deg, #fcfbfa, #fcfbfa);
 }
+.markdown-source-view.mod-cm6 span[data-task=I] mark:hover,
+.markdown-source-view.mod-cm6 span[data-task="?"] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] mark:hover {
   color: #141414;
 }
+.markdown-source-view.mod-cm6 span[data-task=I] em > mark,
+.markdown-source-view.mod-cm6 span[data-task="?"] em > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] em > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] em > mark {
   background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
 }
+.markdown-source-view.mod-cm6 span[data-task=I] strong > mark,
+.markdown-source-view.mod-cm6 span[data-task="?"] strong > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] strong > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] strong > mark {
   background-image: linear-gradient(120deg, var(--color-highlight-3), var(--color-highlight-3));
 }
+.markdown-source-view.mod-cm6 span[data-task=I] .list-collapse-indicator,
+.markdown-source-view.mod-cm6 span[data-task="?"] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] .list-collapse-indicator {
   margin-left: -3.57rem;
@@ -3231,7 +3327,14 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   margin-top: -1px;
 }
 
+.markdown-source-view.mod-cm6 span[data-task=I],
+.markdown-source-view.mod-cm6 span[data-task="?"] {
+  margin-left: 0;
+  padding: 0;
+}
+
 /* ─────────────────────── Information (i) admonition ─────────────────────── */
+.markdown-source-view.mod-cm6 span[data-task=i],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] {
   background-color: hsla(var(--hsl-color-blue), 0.8);
   border-radius: 0px 4px 4px 4px;
@@ -3242,39 +3345,50 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   font-weight: 400;
   margin-left: 4px;
 }
+.theme-dark .markdown-source-view.mod-cm6 span[data-task=i],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] {
   background-color: hsla(var(--hsl-color-blue), 0.7);
   color: var(--color-primary-k);
 }
+.markdown-source-view.mod-cm6 span[data-task=i] li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] li::marker {
   color: #fcfbfa;
 }
+.markdown-source-view.mod-cm6 span[data-task=i] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] a {
   color: inherit;
   text-decoration: underline solid currentColor;
 }
+.markdown-source-view.mod-cm6 span[data-task=i] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] a:hover {
   text-decoration: underline dashed currentColor;
 }
+.markdown-source-view.mod-cm6 span[data-task=i] mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] mark {
   background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
   color: #fcfbfa;
 }
+.markdown-source-view.mod-cm6 span[data-task=i] em > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] em > mark {
   background-image: linear-gradient(120deg, #fcfbfa, #fcfbfa);
 }
+.markdown-source-view.mod-cm6 span[data-task=i] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] mark:hover {
   color: #141414;
 }
+.markdown-source-view.mod-cm6 span[data-task=i] strong > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] strong > mark {
   background-image: linear-gradient(120deg, var(--color-highlight-3), var(--color-highlight-3));
 }
+.markdown-source-view.mod-cm6 span[data-task=i] a.external-link,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] a.external-link {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
+.theme-light .markdown-source-view.mod-cm6 span[data-task=i].is-collapsed::after,
 .theme-light .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i].is-collapsed::after {
   color: #fcfbfa;
 }
+.markdown-source-view.mod-cm6 span[data-task=i] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] .list-collapse-indicator {
   margin-left: -3.57rem;
 }
@@ -3287,9 +3401,17 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   margin-top: -1px;
 }
 
+.markdown-source-view.mod-cm6 span[data-task=i] {
+  margin-left: 0;
+  padding: 0;
+}
+
 /* ───────────────────────────── Pros Admonition ──────────────────────────── */
 /* ─────────────────────────── Reward/Win Admonition ─────────────────────────── */
 /* ───────────────────────────────── Success ──────────────────────────────── */
+.markdown-source-view.mod-cm6 span[data-task="1"],
+.markdown-source-view.mod-cm6 span[data-task=W],
+.markdown-source-view.mod-cm6 span[data-task=p],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] {
@@ -3302,12 +3424,27 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   font-weight: 400;
   margin-left: 4px;
 }
+.theme-dark .markdown-source-view.mod-cm6 span[data-task="1"],
+.theme-dark .markdown-source-view.mod-cm6 span[data-task=W],
+.theme-dark .markdown-source-view.mod-cm6 span[data-task=p],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] {
   background-color: hsla(var(--hsl-color-green), 0.85);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"], .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] mark, .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] li mark, .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] li::marker,
+.markdown-source-view.mod-cm6 span[data-task="1"], .markdown-source-view.mod-cm6 span[data-task="1"] mark, .markdown-source-view.mod-cm6 span[data-task="1"] li mark, .markdown-source-view.mod-cm6 span[data-task="1"] li::marker,
+.markdown-source-view.mod-cm6 span[data-task=W],
+.markdown-source-view.mod-cm6 span[data-task=W] mark,
+.markdown-source-view.mod-cm6 span[data-task=W] li mark,
+.markdown-source-view.mod-cm6 span[data-task=W] li::marker,
+.markdown-source-view.mod-cm6 span[data-task=p],
+.markdown-source-view.mod-cm6 span[data-task=p] mark,
+.markdown-source-view.mod-cm6 span[data-task=p] li mark,
+.markdown-source-view.mod-cm6 span[data-task=p] li::marker,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"],
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] mark,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] li mark,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] li mark,
@@ -3318,32 +3455,50 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] li::marker {
   color: var(--text-normal);
 }
+.markdown-source-view.mod-cm6 span[data-task="1"] mark:hover,
+.markdown-source-view.mod-cm6 span[data-task=W] mark:hover,
+.markdown-source-view.mod-cm6 span[data-task=p] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] mark:hover {
   color: #141414;
 }
+.markdown-source-view.mod-cm6 span[data-task="1"] a,
+.markdown-source-view.mod-cm6 span[data-task=W] a,
+.markdown-source-view.mod-cm6 span[data-task=p] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] a {
   color: inherit;
   text-decoration: underline solid currentColor;
 }
+.markdown-source-view.mod-cm6 span[data-task="1"] a:hover,
+.markdown-source-view.mod-cm6 span[data-task=W] a:hover,
+.markdown-source-view.mod-cm6 span[data-task=p] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] a:hover {
   text-decoration: underline dashed currentColor;
 }
+.markdown-source-view.mod-cm6 span[data-task="1"] a.external-link,
+.markdown-source-view.mod-cm6 span[data-task=W] a.external-link,
+.markdown-source-view.mod-cm6 span[data-task=p] a.external-link,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] a.external-link,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] a.external-link,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] a.external-link {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
+.markdown-source-view.mod-cm6 span[data-task="1"].is-collapsed::after,
+.markdown-source-view.mod-cm6 span[data-task=W].is-collapsed::after,
+.markdown-source-view.mod-cm6 span[data-task=p].is-collapsed::after,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"].is-collapsed::after,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W].is-collapsed::after,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p].is-collapsed::after {
   color: #fcfbfa;
 }
+.markdown-source-view.mod-cm6 span[data-task="1"] .list-collapse-indicator,
+.markdown-source-view.mod-cm6 span[data-task=W] .list-collapse-indicator,
+.markdown-source-view.mod-cm6 span[data-task=p] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] .list-collapse-indicator {
@@ -3367,8 +3522,17 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   margin-left: -3.57rem;
 }
 
+.markdown-source-view.mod-cm6 span[data-task=p],
+.markdown-source-view.mod-cm6 span[data-task="1"],
+.markdown-source-view.mod-cm6 span[data-task=W] {
+  margin-left: 0;
+  padding: 0;
+}
+
 /* ─────────────────────────── Note (n) Admonition ────────────────────────── */
 /* ─────────────────────────── Bookmark Admonition ────────────────────────── */
+.markdown-source-view.mod-cm6 span[data-task=n],
+.markdown-source-view.mod-cm6 span[data-task=b],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=n],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=b] {
   background-color: var(--color-primary-20);
@@ -3380,10 +3544,14 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   font-weight: 400;
   margin-left: 4px;
 }
+.markdown-source-view.mod-cm6 span[data-task=n] li::marker,
+.markdown-source-view.mod-cm6 span[data-task=b] li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=n] li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=b] li::marker {
   color: #fcfbfa;
 }
+.markdown-source-view.mod-cm6 span[data-task=n] .list-collapse-indicator,
+.markdown-source-view.mod-cm6 span[data-task=b] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=n] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=b] .list-collapse-indicator {
   margin-left: -3.57rem;
@@ -3399,48 +3567,66 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   margin-top: -1px;
 }
 
+.markdown-source-view.mod-cm6 span[data-task=n],
+.markdown-source-view.mod-cm6 span[data-task=b] {
+  margin-left: 0;
+  padding: 0;
+}
+
 /* ────────────────────────────────── Debug ───────────────────────────────── */
+.markdown-source-view.mod-cm6 span[data-task=B],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] {
   background-color: hsla(var(--hsl-color-pink), 0.8);
-  border-radius: 0px 4px 4px 4px;
   border-left: 1.5px solid #ea4c67;
-  padding: 0px 4px 4px 4px;
+  border-radius: 0px 4px 4px 4px;
   color: #fcfbfa;
-  font-weight: 400;
+  padding: 0px 4px 4px 4px;
   margin-left: 4px;
+  font-weight: 400;
 }
+.markdown-source-view.mod-cm6 span[data-task=B] ul li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] ul li::marker {
   color: var(--color-primary-w);
 }
+.markdown-source-view.mod-cm6 span[data-task=B] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] a {
   color: inherit;
   text-decoration: underline solid currentColor;
 }
+.markdown-source-view.mod-cm6 span[data-task=B] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] a:hover {
   text-decoration: underline dashed currentColor;
 }
+.markdown-source-view.mod-cm6 span[data-task=B] a.external-link,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] a.external-link {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
+.markdown-source-view.mod-cm6 span[data-task=B] mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] mark {
   background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
   color: white;
 }
+.markdown-source-view.mod-cm6 span[data-task=B] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] mark:hover {
   color: #141414;
 }
+.markdown-source-view.mod-cm6 span[data-task=B] em > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] em > mark {
   background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
 }
+.markdown-source-view.mod-cm6 span[data-task=B] strong > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] strong > mark {
   background-image: linear-gradient(120deg, #fcfbfa, #fcfbfa);
 }
+.theme-dark .markdown-source-view.mod-cm6 span[data-task=B] ul li::marker,
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] ul li::marker {
   color: var(--color-primary-k);
 }
+.markdown-source-view.mod-cm6 span[data-task=B].is-collapsed::after,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B].is-collapsed::after {
   color: #fcfbfa;
 }
+.markdown-source-view.mod-cm6 span[data-task=B] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] .list-collapse-indicator {
   margin-left: -3.57rem;
 }
@@ -3451,6 +3637,11 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 }
 .admonitions.markdown-preview-view li[data-task=B] > .task-list-item-checkbox:checked::before {
   margin-top: -1px;
+}
+
+.markdown-source-view.mod-cm6 span[data-task=B] {
+  margin-left: 0;
+  padding: 0;
 }
 
 /* Tags in Edit Mode */
@@ -3820,7 +4011,7 @@ cite {
 .theme-dark pre[class*=language-],
 .theme-light code[class*=language-],
 .theme-light pre[class*=language-] {
-  background-color: var(--color-primary-w);
+  --background-primary-alt: var(--color-primary-w);
 }
 
 .theme-dark .markdown-preview-view code,
@@ -3828,7 +4019,7 @@ cite {
 .theme-dark .markdown-preview-view span.cm-inline-code,
 .theme-dark code[class*=language-],
 .theme-dark pre[class*=language-] {
-  background-color: #0d0d0d;
+  --background-primary-alt: var.$color-dark;
 }
 
 .cm-s-obsidian .cm-math,
@@ -3842,10 +4033,10 @@ cite {
   padding: 8px 40px 8px 16px;
   white-space: wrap;
   width: 100%;
-  outline: 1px solid var(--color-primary-10);
+  border: 1px solid var(--color-primary-10);
 }
 .theme-light .markdown-preview-view div.el-pre pre:not(pre.frontmatter.language-yaml) {
-  outline: 1px solid var(--color-primary-20);
+  border: 1px solid var(--color-primary-20);
 }
 
 .markdown-preview-view code {
@@ -3853,11 +4044,12 @@ cite {
   padding: 0 4px;
   font-family: var(--font-mono);
 }
-.markdown-preview-view code:not(code[class*=language-]) {
-  outline: 1px solid var(--color-primary-10);
+
+.markdown-preview-view p code {
+  border: 1px solid var(--color-primary-10);
 }
-.theme-light .markdown-preview-view code:not(code[class*=language-]) {
-  outline-color: var(--color-primary-20);
+.theme-light .markdown-preview-view p code {
+  border-color: var(--color-primary-20);
 }
 
 .cm-s-obsidian .cm-math,
@@ -3870,12 +4062,23 @@ cite {
   border-radius: 4px;
 }
 
+/*
 .cm-s-obsidian .cm-line:not(.cm-active.cm-line) span.cm-inline-code {
-  outline: 1px solid var(--color-primary-10);
-  padding: 0 4px;
+	outline: 1px solid var(--color-primary-10);
+	padding: 0 4px;	
+	.theme-light & {
+		outline-color: var(--color-primary-20);
+	}
+}*/
+.markdown-source-view .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line,
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg,
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+  background-color: var(--color-primary-w);
 }
-.theme-light .cm-s-obsidian .cm-line:not(.cm-active.cm-line) span.cm-inline-code {
-  outline-color: var(--color-primary-20);
+.theme-dark .markdown-source-view .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line,
+.theme-dark .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
+.theme-dark .cm-s-obsidian div.HyperMD-codeblock-end-bg {
+  background-color: #0d0d0d;
 }
 
 /* ────────────────────────────── Code Comments ───────────────────────────── */
@@ -4083,12 +4286,6 @@ table.table-view-table > thead > tr > th {
 	so they really look like the same note.
 	credit: Matthias C. Hormann (Moonbase59)
 */
-/* remove title and the table from the "Metatable" plugin */
-.markdown-preview-view .markdown-embed-title,
-.markdown-preview-view .obsidian-metatable {
-  display: none;
-}
-
 /*
 .markdown-preview-view .markdown-embed-link,
 .markdown-preview-view .file-embed-link {
@@ -5450,6 +5647,7 @@ input[type=range]::-webkit-slider-thumb {
   max-width: 300px;
   padding: 4px 8px;
   animation: pop-down 240ms forwards cubic-bezier(0.4, 0.14, 0.3, 1);
+  overflow-wrap: break-word;
 }
 .tooltip.mod-left, .tooltip.mod-right {
   animation: pop-right 240ms forwards cubic-bezier(0.4, 0.14, 0.3, 1);
@@ -6435,9 +6633,9 @@ button.table-close::before {
 }
 #calendar-container.fantasy-calendar .day.fantasy-day.active {
   background-color: var(--background-primary);
-  border-bottom: 2px solid var(--color-accent);
   padding: 10px 8px 2px 8px;
-  border-radius: 50px;
+  border-radius: 0px;
+  box-shadow: inset 0px -3px var(--color-accent);
 }
 #calendar-container.fantasy-calendar .day.fantasy-day.active:hover {
   background-color: var(--color-hover);
@@ -6568,8 +6766,9 @@ button.table-close::before {
 }
 .checklist-plugin-main p {
   margin: initial;
+  font-family: var(--font-ui);
 }
-.checklist-plugin-main ul li.classic {
+.checklist-plugin-main ul li.classic, .checklist-plugin-main ul li.compact {
   display: flex;
   align-items: center;
   background-color: var(--background-primary);
@@ -6578,10 +6777,10 @@ button.table-close::before {
   transition: background-color 110ms cubic-bezier(0.4, 0.14, 0.3, 1);
   padding: 0px;
   font-size: 0.875rem;
-  line-height: 1em;
+  line-height: 1.375em;
   margin-bottom: 2px;
 }
-.checklist-plugin-main li.classic .checkbox {
+.checklist-plugin-main li.classic .checkbox, .checklist-plugin-main li.compact .checkbox {
   width: 16px;
   height: 16px;
   min-width: 16px;
@@ -6594,10 +6793,10 @@ button.table-close::before {
   border: 1.5px solid var(--color-primary-40);
   border-radius: 4px;
 }
-.checklist-plugin-main li.classic .checkbox:hover {
+.checklist-plugin-main li.classic .checkbox:hover, .checklist-plugin-main li.compact .checkbox:hover {
   filter: brightness(150%);
 }
-.checklist-plugin-main li.classic .toggle {
+.checklist-plugin-main li.classic .toggle, .checklist-plugin-main li.compact .toggle {
   padding: 0px;
   padding-left: 8px;
 }
@@ -6636,6 +6835,17 @@ button.table-close::before {
 .checklist-plugin-main .collapse .left {
   transform: rotate(0deg);
   transition: 0s;
+}
+.checklist-plugin-main .group-header.tag {
+  display: flex;
+  background-color: transparent;
+  color: var(--text-normal);
+  padding: 0px 8px 0px 8px;
+  font-size: 0.875rem;
+}
+.checklist-plugin-main .group-header.tag title {
+  background-color: var(--color-accent);
+  border-radius: 40px;
 }
 
 div.kanban-plugin {
@@ -8545,6 +8755,12 @@ settings:
 		type: heading
 		level: 2
 		collapsed: true
+	-
+		id: no-titlebar-title
+		title: Hide Titlebar center text
+		description: This setting hides the center text of the titlebar.
+		type: class-toggle
+		default: false
 	-
 		id: hide-frontmatter
 		title: Hide Frontmatter

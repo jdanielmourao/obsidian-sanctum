@@ -18,6 +18,7 @@
 	max-width: 300px;
 	padding: var.$size-2 var.$size-3;
 	animation: pop-down var.$duration-moderate-2 forwards var.$motion-standard-expressive;
+	overflow-wrap: break-word;
 
 	&.mod-left,
 	&.mod-right {

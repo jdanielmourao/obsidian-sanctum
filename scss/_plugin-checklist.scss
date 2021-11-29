@@ -14,8 +14,10 @@
 	}
 	& p {
 		margin: initial;
+		font-family: var(--font-ui);
 	}
-	& ul li.classic {
+	& ul li.classic,
+	& ul li.compact {
 		display: flex;
 		align-items: center;
 		background-color: var(--background-primary);
@@ -24,10 +26,11 @@
 		transition: background-color var.$duration-fast-2 var.$motion-standard-expressive;
 		padding: var.$size-0;
 		font-size: var.$font-scale-00;
-		line-height: var.$leading-0;
+		line-height: var.$leading-3;
 		margin-bottom: var.$size-1;
 	}
-	& li.classic .checkbox {
+	& li.classic .checkbox,
+	& li.compact .checkbox {
 		width: 16px;
 		height: var.$scale-2;
 		min-width: var.$scale-2;
@@ -40,10 +43,12 @@
 		border: 1.5px solid var(--color-primary-40);
 		border-radius: 4px;
 	}
-	& li.classic .checkbox:hover {
+	& li.classic .checkbox:hover,
+	& li.compact .checkbox:hover {
 		filter: brightness(150%);
 	}
-	& li.classic .toggle {
+	& li.classic .toggle,
+	& li.compact .toggle {
 		padding: var.$size-0;
 		padding-left: var.$size-3;
 	}
@@ -83,4 +88,17 @@
 		transform: rotate(0deg);
 		transition: 0s;
 	}
+	& .group-header.tag {
+		display: flex;
+		background-color: transparent;
+		color: var(--text-normal);
+		padding: 0px 8px 0px 8px;
+		font-size: var.$font-scale-00;
+
+		& title {
+			background-color: var(--color-accent);
+			border-radius: 40px;
+		}
+	}
+
 }

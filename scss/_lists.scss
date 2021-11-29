@@ -4,7 +4,7 @@ ol > li::marker {
 	font-weight: var.$font-regular;
 	font-size: var.$font-scale-0;
 	color: var(--text-normal);
-	font-family: var(--font-preview);
+	font-family: var(--font-sans); // not font-preview, because otherwise it will change
 	font-variant-numeric: tabular-nums;
 }
 
@@ -142,6 +142,7 @@ body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul:before {
 	margin-top: 0px;
 	font-size: 20px;
 	color: var(--text-muted);
+	font-family: var(--font-sans);
 }
 
 // Live Preview bullet points
@@ -157,3 +158,18 @@ body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul:before {
 .HyperMD-list-line-8 .list-bullet::before { content: "▪  "; }
 .HyperMD-list-line-8 .list-bullet::before { content: "–  "; }
 .HyperMD-list-line-8 .list-bullet::before { content: "▪  "; }
+
+.list-bullet,
+.list-bullet::before,
+.HyperMD-list-line-1 .list-bullet::before,
+.HyperMD-list-line-2 .list-bullet::before,
+.HyperMD-list-line-3 .list-bullet::before,
+.HyperMD-list-line-4 .list-bullet::before,
+.HyperMD-list-line-5 .list-bullet::before,
+.HyperMD-list-line-6 .list-bullet::before,
+.HyperMD-list-line-7 .list-bullet::before,
+.HyperMD-list-line-8 .list-bullet::before,
+.HyperMD-list-line-8 .list-bullet::before,
+.HyperMD-list-line-8 .list-bullet::before {
+	font-family: var(--font-sans);
+}

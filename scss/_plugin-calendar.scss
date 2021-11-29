@@ -20,9 +20,10 @@
 	}
 	& .day.fantasy-day.active {
 		background-color: var(--background-primary);
-		border-bottom: 2px solid var(--color-accent);
+		//border-bottom: 2px solid var(--color-accent);
 		padding: 10px 8px 2px 8px;
-		border-radius: 50px;
+		border-radius: 0px;
+		box-shadow: inset 0px -3px var(--color-accent);
 	}
 	& .day.fantasy-day.active:hover {
 		background-color: var(--color-hover);

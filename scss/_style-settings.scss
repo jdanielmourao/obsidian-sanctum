@@ -616,6 +616,12 @@ settings:
 		level: 2
 		collapsed: true
 	-
+		id: no-titlebar-title
+		title: Hide Titlebar center text
+		description: This setting hides the center text of the titlebar.
+		type: class-toggle
+		default: false
+	-
 		id: hide-frontmatter
 		title: Hide Frontmatter
 		description: This setting hides frontmatter in Preview Mode.
