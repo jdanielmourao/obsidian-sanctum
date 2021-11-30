@@ -4014,7 +4014,7 @@ cite {
 .theme-dark pre[class*=language-],
 .theme-light code[class*=language-],
 .theme-light pre[class*=language-] {
-  --background-primary-alt: var(--color-primary-w);
+  --background-primary-alt: var.$color-white;
 }
 
 .theme-dark .markdown-preview-view code,
@@ -7075,12 +7075,12 @@ body div#wordsprint div#sprintActionPanel button:not(.statsTab):not(.goalsTab) {
 }
 
 body .view-content div#wordsprint div#sprintActionPanel button.sprintStart {
-  background-color: var(--color-green);
+  background-color: #a1a344;
   color: #fcfbfa;
 }
 
 body .view-content div#wordsprint div#sprintActionPanel button.sprintStop {
-  background-color: var(--color-red);
+  background-color: #c42827;
   color: #fcfbfa;
 }
 
@@ -7106,17 +7106,17 @@ div#wordsprint div#sprintViewStats {
 
 body div#wordsprint .success {
   color: #fcfbfa;
-  background-color: var(--color-green);
+  background-color: #a1a344;
 }
 
 body div#wordsprint .warning {
   color: #141414;
-  background-color: var(--color-yellow);
+  background-color: #eab746;
 }
 
 body div#wordsprint .danger {
   color: #fcfbfa;
-  background-color: var(--color-red);
+  background-color: #c42827;
 }
 
 body:not(.no-sanctum-icons) svg.add-note-glyph,

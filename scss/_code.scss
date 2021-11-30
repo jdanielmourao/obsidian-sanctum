@@ -40,7 +40,7 @@
 .theme-dark pre[class*=language-],
 .theme-light code[class*=language-],
 .theme-light pre[class*=language-] {
-	--background-primary-alt: var(--color-primary-w);
+	--background-primary-alt: var.$color-white;
 }
 
 .theme-dark .markdown-preview-view code,
