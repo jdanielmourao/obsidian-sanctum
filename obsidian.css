@@ -5596,7 +5596,7 @@ input[type=range]::-webkit-slider-thumb {
   content: "";
   display: inline-block;
   position: absolute;
-  background-color: var(--color-primary-k);
+  background-color: #fcfbfa;
   width: 18px;
   height: 18px;
   top: 0.5px;
