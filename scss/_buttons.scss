@@ -1,3 +1,4 @@
+
 @use 'var';
 
 @mixin button-l {
@@ -8,6 +9,7 @@
 			 var.$size-5;
 	font-size: var.$font-scale-00;
 	font-weight: var.$font-regular;
+	font-family: var(--font-ui);
 }
 
 @mixin button-m {
@@ -18,6 +20,7 @@
 			 var.$size-5;
 	font-size: var.$font-scale-00;
 	font-weight: var.$font-regular;
+	font-family: var(--font-ui);
 }
 
 @mixin button-s { // for sort icons, etc
@@ -28,6 +31,7 @@
 			 var.$size-2;
 	font-size: var.$font-scale-00;
 	font-weight: var.$font-regular;
+	font-family: var(--font-ui);
 }
 
 button.mod-warning {

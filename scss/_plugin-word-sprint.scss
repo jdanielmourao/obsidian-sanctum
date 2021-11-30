@@ -62,3 +62,7 @@ body div#wordsprint .danger {
 	color: #{var.$color-white};
 	background-color: var.$color-red;
 }
+
+div#wordsprint button {
+	font-family: var(--font-ui);
+}

@@ -4574,6 +4574,7 @@ button.mod-warning {
   padding: 8px 40px 8px 16px;
   font-size: 0.875rem;
   font-weight: 400;
+  font-family: var(--font-ui);
 }
 
 button.mod-cta {
@@ -4583,6 +4584,7 @@ button.mod-cta {
   padding: 8px 40px 8px 16px;
   font-size: 0.875rem;
   font-weight: 400;
+  font-family: var(--font-ui);
   background-color: var(--color-accent);
 }
 button.mod-cta:hover {
@@ -4600,6 +4602,7 @@ button.mod-cta:active {
   padding: 4px 16px 4px 16px;
   font-size: 0.875rem;
   font-weight: 400;
+  font-family: var(--font-ui);
   background-color: var(--color-primary-20);
   outline: 1px solid transparent;
 }
@@ -4621,6 +4624,7 @@ button.mod-cta:active {
   padding: 4px 4px 2px 4px;
   font-size: 0.875rem;
   font-weight: 400;
+  font-family: var(--font-ui);
   background-color: var(--color-primary-20);
 }
 
@@ -4630,6 +4634,7 @@ button.mod-cta:active {
   padding: 8px 40px 8px 16px;
   font-size: 0.875rem;
   font-weight: 400;
+  font-family: var(--font-ui);
   background-color: var(--color-hover);
 }
 
@@ -4640,6 +4645,7 @@ button.mod-cta:active {
   padding: 8px 40px 8px 16px;
   font-size: 0.875rem;
   font-weight: 400;
+  font-family: var(--font-ui);
   background-color: var(--color-primary-20);
 }
 
@@ -4751,6 +4757,7 @@ span[title="Unfold line"]:hover,
 
 select.dropdown {
   appearance: none;
+  font-family: var(--font-ui);
   font-size: 0.875rem;
   font-weight: 400;
   color: var(--text-normal);
@@ -7117,6 +7124,10 @@ body div#wordsprint .warning {
 body div#wordsprint .danger {
   color: #fcfbfa;
   background-color: #c42827;
+}
+
+div#wordsprint button {
+  font-family: var(--font-ui);
 }
 
 body:not(.no-sanctum-icons) svg.add-note-glyph,
