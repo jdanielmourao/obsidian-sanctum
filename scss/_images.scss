@@ -7,7 +7,7 @@
 }
 
 // Desaturate images
-.markdown-preview-view img {
+.markdown-preview-view img:not(.link-favicon) {
 	opacity:0.75;
 	transition: opacity var.$duration-slow-1 var.$motion-exit-expressive;
 }

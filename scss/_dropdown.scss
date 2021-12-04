@@ -32,6 +32,14 @@ select.dropdown {
 	&:hover {
 		background-color: var(--color-hover);
 	}
+	&:focus {
+		border-color: var(--interactive-accent);
+		outline: none;
+		background-color: var(--background-primary);
+		.theme-light & {
+			background-color: var(--color-primary-w);
+		}
+	}
 }
 
 .dropdown option {

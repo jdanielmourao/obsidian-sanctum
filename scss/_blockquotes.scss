@@ -5,6 +5,9 @@ blockquote p {
     display: block;
  }
 
+.markdown-source-view.mod-cm6.is-live-preview blockquote, // <blockquote>
+.markdown-source-view.mod-cm6.is-live-preview blockquote.paraphrase, // <blockquote class="paraphrase">
+.markdown-source-view.mod-cm6.is-live-preview :not(.cm-active) .cm-quote, // >
 .markdown-preview-view blockquote { // blockquote preview
     border-radius: var.$size-0;
     border-width: var.$size-0
@@ -41,6 +44,18 @@ blockquote p {
     &.paraphrase:after { // when paraphrasing, wrap your quote in <blockquote class="paraphrase">
     	display: none;
     }
+}
+
+.markdown-source-view.mod-cm6.is-live-preview div.cm-active.cm-line span.cm-formatting.cm-formatting-quote {
+	margin: 0;
+	border:none;
+	padding: 0;
+
+	&::after {
+		display: none;
+		margin: 0;
+		border: none;
+	}
 }
 
 cite { // for citations

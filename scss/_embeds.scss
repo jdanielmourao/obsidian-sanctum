@@ -1,5 +1,10 @@
 @use 'var';
 
+.markdown-source-view.mod-cm6 .cm-embed-block:hover {
+	border-color: var(--color-border-2);
+	border-width: 1px;
+}
+
 /*
 	Removes title, link, padding, margins from embeds,
 	so they really look like the same note.
