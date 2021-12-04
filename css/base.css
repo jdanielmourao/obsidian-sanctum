@@ -4022,7 +4022,7 @@ cite {
 .theme-dark .markdown-preview-view span.cm-inline-code,
 .theme-dark code[class*=language-],
 .theme-dark pre[class*=language-] {
-  --background-primary-alt: var.$color-dark;
+  --background-primary-alt: black !important;
 }
 
 .cm-s-obsidian .cm-math,

@@ -40,7 +40,7 @@
 .theme-dark pre[class*=language-],
 .theme-light code[class*=language-],
 .theme-light pre[class*=language-] {
-	--background-primary-alt: var.$color-white;
+	--background-primary-alt: hsl(30, 25%, 98.4%);
 }
 
 .theme-dark .markdown-preview-view code,
@@ -48,7 +48,7 @@
 .theme-dark .markdown-preview-view span.cm-inline-code,
 .theme-dark code[class*=language-],
 .theme-dark pre[class*=language-] {
-	--background-primary-alt: var.$color-dark;
+	--background-primary-alt: hsl(0, 0%, 5%);
 }
 
 .cm-s-obsidian .cm-math,

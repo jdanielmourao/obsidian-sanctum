@@ -144,7 +144,7 @@
 }
 
 div.workspace-drawer-active-tab-icon svg.fullscreen, // hide "maximise"
-.is-mobile .workspace-drawer-header-icon { // hide Pin icon
+.is-mobile .workspace-drawer-header-icon svg.pin { // hide Pin icon
 	display: none;
 }
 
@@ -268,6 +268,26 @@ body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
 	height: 100%;
 }
 
+.is-mobile .modal.mod-settings .vertical-tab-header:before { //adds the "Settings" portion at the top of the mobile menu
+	content: "Settings";
+	font-weight: 600;
+	font-size: var(--font-settings);
+	position: sticky;
+	display: flex;
+	height: 48px;
+	margin-top: 0px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-bottom: 1px solid var(--color-border-2);
+	background: var(--background-primary);
+	left: 0;
+	top: -1px;
+	right: 0;
+	z-index: 1;
+	padding-left: 16px;
+}
+
 .is-mobile .modal .vertical-tab-nav-item:after {
 	content: " ";
 	display: block;
@@ -303,6 +323,28 @@ body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
 	margin-right: 0px;
 }
 
+.is-mobile .side-dock-actions, .is-mobile .side-dock-settings {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	padding: 0;
+}
+
+.is-mobile .side-dock-ribbon .side-dock-ribbon-action {
+    padding: 8px 4px 2px 4px;
+    margin: 0 12px 4px;
+    height: 40px;
+}
+
+body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
+    padding: 24px 4px;
+}
+
+.is-ios .is-pinned .side-dock-ribbon {
+	padding: 32px 0 24px 0;
+}
+
 .is-mobile .workspace-drawer-backdrop {
 	display: block;
 	position: fixed;
@@ -323,6 +365,7 @@ body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
 
 .is-mobile .workspace-leaf.mod-active .view-header-title {
 	width: 60vw;
+	font-size: var.$font-scale-0;
 }
 
 html .is-mobile div.menu {
@@ -377,9 +420,8 @@ html .is-mobile div.menu {
 .is-mobile .modal-content.community-plugin {
 	width: 100vw;
 	max-width: 800px;
-	max-height: 100vh;
+	max-height: calc(100vh - 24px);
 	height: 100vh;
-	min-height: 100vh;
 }
 
 @media (min-width: 400pt) {
@@ -394,14 +436,14 @@ html .is-mobile div.menu {
 }
 
 .is-mobile .modal.mod-community-theme {
-	min-height: calc(100vh - 48px); //the entire width minus the ribbon width
+	min-height: calc(100vh - 73px); //height minus modal distance + Settings title size
 	padding: 0px;
 }
 
 .is-mobile .modal-close-button { //modals close button
 	display: block;
 	z-index: 2;
-	top: 12px;
+	top: 8px;
 	right: 8px;
 	width: 24px;
 	height: 24px;
@@ -635,14 +677,6 @@ body.is-mobile .nav-action-button svg {
 .is-mobile .menu-item.selected:not(.is-disabled):not(.is-label):hover {
 	padding-left: 0;
 }
-
-.workspace-drawer-ribbon .side-dock-ribbon-action {
-	padding: 8px 0;
-	margin: 8px 0;
-}
-// .workspace-drawer-ribbon .side-dock-settings:last-child {
-// 	margin-bottom: 16px;
-//}
 
 .is-mobile .nav-folder .collapse-icon {
 	display: none;

@@ -1147,7 +1147,7 @@ body:not(.no-sanctum-icons) .nav-action-button svg {
 .nav-folder-title,
 .nav-vault-title,
 .nav-folder-title.has-folder-note {
-  height: 24px;
+  height: 25px;
   padding: 0px 16px 0px 0px;
   border-radius: 0px;
   width: unset;
@@ -1279,7 +1279,7 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 }
 
 .nav-folder.is-collapsed .nav-folder-title .nav-folder-title-content::before {
-  -webkit-mask: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Efolder%3C/title%3E%3Cpath d='M11.17,6l3.42,3.41.58.59H28V26H4V6h7.17m0-2H4A2,2,0,0,0,2,6V26a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2H16L12.59,4.59A2,2,0,0,0,11.17,4Z' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E") no-repeat;
+  -webkit-mask: url("data:image/svg+xml;utf8,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Efolder%3C/title%3E%3Cpath d='M11.17,6l3.42,3.41.58.59H28V26H4V6h7.17m0-2H4A2,2,0,0,0,2,6V26a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2H16L12.59,4.59A2,2,0,0,0,11.17,4Z' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E") no-repeat;
 }
 
 .nav-folder .nav-folder-title .nav-folder-title-content::before {
@@ -3118,9 +3118,6 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 /* ──────────────────────── Important (!) admonition ──────────────────────── */
 /* ───────────────────────────── Cons Admonition ──────────────────────────── */
 /* ───────────────────────────────── Failure ──────────────────────────────── */
-.markdown-source-view.mod-cm6 span[data-task=X],
-.markdown-source-view.mod-cm6 span[data-task=c],
-.markdown-source-view.mod-cm6 span[data-task="!"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] {
@@ -3132,99 +3129,63 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   font-weight: 400;
   margin-left: 4px;
 }
-.theme-dark .markdown-source-view.mod-cm6 span[data-task=X],
-.theme-dark .markdown-source-view.mod-cm6 span[data-task=c],
-.theme-dark .markdown-source-view.mod-cm6 span[data-task="!"],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] {
   color: var(--color-primary-k);
 }
-.markdown-source-view.mod-cm6 span[data-task=X] ul li::marker,
-.markdown-source-view.mod-cm6 span[data-task=c] ul li::marker,
-.markdown-source-view.mod-cm6 span[data-task="!"] ul li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] ul li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] ul li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] ul li::marker {
   color: var(--color-primary-w);
 }
-.markdown-source-view.mod-cm6 span[data-task=X] a,
-.markdown-source-view.mod-cm6 span[data-task=c] a,
-.markdown-source-view.mod-cm6 span[data-task="!"] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] a {
   color: inherit;
   text-decoration: underline solid currentColor;
 }
-.markdown-source-view.mod-cm6 span[data-task=X] a:hover,
-.markdown-source-view.mod-cm6 span[data-task=c] a:hover,
-.markdown-source-view.mod-cm6 span[data-task="!"] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] a:hover {
   text-decoration: underline dashed currentColor;
 }
-.markdown-source-view.mod-cm6 span[data-task=X] a.external-link,
-.markdown-source-view.mod-cm6 span[data-task=c] a.external-link,
-.markdown-source-view.mod-cm6 span[data-task="!"] a.external-link,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] a.external-link,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] a.external-link,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] a.external-link {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
-.markdown-source-view.mod-cm6 span[data-task=X] mark,
-.markdown-source-view.mod-cm6 span[data-task=c] mark,
-.markdown-source-view.mod-cm6 span[data-task="!"] mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] mark {
   background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
   color: white;
 }
-.markdown-source-view.mod-cm6 span[data-task=X] mark:hover,
-.markdown-source-view.mod-cm6 span[data-task=c] mark:hover,
-.markdown-source-view.mod-cm6 span[data-task="!"] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] mark:hover {
   color: #141414;
 }
-.markdown-source-view.mod-cm6 span[data-task=X] em > mark,
-.markdown-source-view.mod-cm6 span[data-task=c] em > mark,
-.markdown-source-view.mod-cm6 span[data-task="!"] em > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] em > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] em > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] em > mark {
   background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
 }
-.markdown-source-view.mod-cm6 span[data-task=X] strong > mark,
-.markdown-source-view.mod-cm6 span[data-task=c] strong > mark,
-.markdown-source-view.mod-cm6 span[data-task="!"] strong > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] strong > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] strong > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] strong > mark {
   background-image: linear-gradient(120deg, #fcfbfa, #fcfbfa);
 }
-.theme-dark .markdown-source-view.mod-cm6 span[data-task=X] ul li::marker,
-.theme-dark .markdown-source-view.mod-cm6 span[data-task=c] ul li::marker,
-.theme-dark .markdown-source-view.mod-cm6 span[data-task="!"] ul li::marker,
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] ul li::marker,
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] ul li::marker,
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] ul li::marker {
   color: var(--color-primary-k);
 }
-.markdown-source-view.mod-cm6 span[data-task=X].is-collapsed::after,
-.markdown-source-view.mod-cm6 span[data-task=c].is-collapsed::after,
-.markdown-source-view.mod-cm6 span[data-task="!"].is-collapsed::after,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X].is-collapsed::after,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c].is-collapsed::after,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"].is-collapsed::after {
   color: #fcfbfa;
 }
-.markdown-source-view.mod-cm6 span[data-task=X] .list-collapse-indicator,
-.markdown-source-view.mod-cm6 span[data-task=c] .list-collapse-indicator,
-.markdown-source-view.mod-cm6 span[data-task="!"] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] .list-collapse-indicator {
@@ -3243,16 +3204,7 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   margin-top: -1px;
 }
 
-.markdown-source-view.mod-cm6 span[data-task=X],
-.markdown-source-view.mod-cm6 span[data-task=c],
-.markdown-source-view.mod-cm6 span[data-task="!"] {
-  margin-left: 0;
-  padding: 0;
-}
-
 /* ───────────────────────── Question (?) admonition ──────────────────────── */
-.markdown-source-view.mod-cm6 span[data-task=I],
-.markdown-source-view.mod-cm6 span[data-task="?"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] {
   background-color: hsla(var(--hsl-color-yellow), 0.8);
@@ -3264,57 +3216,39 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   font-weight: 400;
   margin-left: 4px;
 }
-.theme-dark .markdown-source-view.mod-cm6 span[data-task=I],
-.theme-dark .markdown-source-view.mod-cm6 span[data-task="?"],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] {
   background-color: hsla(var(--hsl-color-yellow), 0.7);
 }
-.markdown-source-view.mod-cm6 span[data-task=I] li::marker,
-.markdown-source-view.mod-cm6 span[data-task="?"] li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] li::marker {
   color: var(--color-primary-k);
 }
-.markdown-source-view.mod-cm6 span[data-task=I] a,
-.markdown-source-view.mod-cm6 span[data-task="?"] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] a {
   color: inherit;
   text-decoration: underline solid currentColor;
 }
-.markdown-source-view.mod-cm6 span[data-task=I] a:hover,
-.markdown-source-view.mod-cm6 span[data-task="?"] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] a:hover {
   text-decoration: underline dashed currentColor;
 }
-.markdown-source-view.mod-cm6 span[data-task=I] mark,
-.markdown-source-view.mod-cm6 span[data-task="?"] mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] mark {
   background-image: linear-gradient(120deg, #fcfbfa, #fcfbfa);
 }
-.markdown-source-view.mod-cm6 span[data-task=I] mark:hover,
-.markdown-source-view.mod-cm6 span[data-task="?"] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] mark:hover {
   color: #141414;
 }
-.markdown-source-view.mod-cm6 span[data-task=I] em > mark,
-.markdown-source-view.mod-cm6 span[data-task="?"] em > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] em > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] em > mark {
   background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
 }
-.markdown-source-view.mod-cm6 span[data-task=I] strong > mark,
-.markdown-source-view.mod-cm6 span[data-task="?"] strong > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] strong > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] strong > mark {
   background-image: linear-gradient(120deg, var(--color-highlight-3), var(--color-highlight-3));
 }
-.markdown-source-view.mod-cm6 span[data-task=I] .list-collapse-indicator,
-.markdown-source-view.mod-cm6 span[data-task="?"] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] .list-collapse-indicator {
   margin-left: -3.57rem;
@@ -3330,14 +3264,7 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   margin-top: -1px;
 }
 
-.markdown-source-view.mod-cm6 span[data-task=I],
-.markdown-source-view.mod-cm6 span[data-task="?"] {
-  margin-left: 0;
-  padding: 0;
-}
-
 /* ─────────────────────── Information (i) admonition ─────────────────────── */
-.markdown-source-view.mod-cm6 span[data-task=i],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] {
   background-color: hsla(var(--hsl-color-blue), 0.8);
   border-radius: 0px 4px 4px 4px;
@@ -3348,50 +3275,39 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   font-weight: 400;
   margin-left: 4px;
 }
-.theme-dark .markdown-source-view.mod-cm6 span[data-task=i],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] {
   background-color: hsla(var(--hsl-color-blue), 0.7);
   color: var(--color-primary-k);
 }
-.markdown-source-view.mod-cm6 span[data-task=i] li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] li::marker {
   color: #fcfbfa;
 }
-.markdown-source-view.mod-cm6 span[data-task=i] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] a {
   color: inherit;
   text-decoration: underline solid currentColor;
 }
-.markdown-source-view.mod-cm6 span[data-task=i] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] a:hover {
   text-decoration: underline dashed currentColor;
 }
-.markdown-source-view.mod-cm6 span[data-task=i] mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] mark {
   background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
   color: #fcfbfa;
 }
-.markdown-source-view.mod-cm6 span[data-task=i] em > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] em > mark {
   background-image: linear-gradient(120deg, #fcfbfa, #fcfbfa);
 }
-.markdown-source-view.mod-cm6 span[data-task=i] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] mark:hover {
   color: #141414;
 }
-.markdown-source-view.mod-cm6 span[data-task=i] strong > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] strong > mark {
   background-image: linear-gradient(120deg, var(--color-highlight-3), var(--color-highlight-3));
 }
-.markdown-source-view.mod-cm6 span[data-task=i] a.external-link,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] a.external-link {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
-.theme-light .markdown-source-view.mod-cm6 span[data-task=i].is-collapsed::after,
 .theme-light .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i].is-collapsed::after {
   color: #fcfbfa;
 }
-.markdown-source-view.mod-cm6 span[data-task=i] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] .list-collapse-indicator {
   margin-left: -3.57rem;
 }
@@ -3404,17 +3320,9 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   margin-top: -1px;
 }
 
-.markdown-source-view.mod-cm6 span[data-task=i] {
-  margin-left: 0;
-  padding: 0;
-}
-
 /* ───────────────────────────── Pros Admonition ──────────────────────────── */
 /* ─────────────────────────── Reward/Win Admonition ─────────────────────────── */
 /* ───────────────────────────────── Success ──────────────────────────────── */
-.markdown-source-view.mod-cm6 span[data-task="1"],
-.markdown-source-view.mod-cm6 span[data-task=W],
-.markdown-source-view.mod-cm6 span[data-task=p],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] {
@@ -3427,27 +3335,12 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   font-weight: 400;
   margin-left: 4px;
 }
-.theme-dark .markdown-source-view.mod-cm6 span[data-task="1"],
-.theme-dark .markdown-source-view.mod-cm6 span[data-task=W],
-.theme-dark .markdown-source-view.mod-cm6 span[data-task=p],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W],
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] {
   background-color: hsla(var(--hsl-color-green), 0.85);
 }
-.markdown-source-view.mod-cm6 span[data-task="1"], .markdown-source-view.mod-cm6 span[data-task="1"] mark, .markdown-source-view.mod-cm6 span[data-task="1"] li mark, .markdown-source-view.mod-cm6 span[data-task="1"] li::marker,
-.markdown-source-view.mod-cm6 span[data-task=W],
-.markdown-source-view.mod-cm6 span[data-task=W] mark,
-.markdown-source-view.mod-cm6 span[data-task=W] li mark,
-.markdown-source-view.mod-cm6 span[data-task=W] li::marker,
-.markdown-source-view.mod-cm6 span[data-task=p],
-.markdown-source-view.mod-cm6 span[data-task=p] mark,
-.markdown-source-view.mod-cm6 span[data-task=p] li mark,
-.markdown-source-view.mod-cm6 span[data-task=p] li::marker,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] mark,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] li mark,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] li::marker,
+.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"], .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] mark, .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] li mark, .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] li mark,
@@ -3458,50 +3351,32 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] li::marker {
   color: var(--text-normal);
 }
-.markdown-source-view.mod-cm6 span[data-task="1"] mark:hover,
-.markdown-source-view.mod-cm6 span[data-task=W] mark:hover,
-.markdown-source-view.mod-cm6 span[data-task=p] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] mark:hover {
   color: #141414;
 }
-.markdown-source-view.mod-cm6 span[data-task="1"] a,
-.markdown-source-view.mod-cm6 span[data-task=W] a,
-.markdown-source-view.mod-cm6 span[data-task=p] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] a {
   color: inherit;
   text-decoration: underline solid currentColor;
 }
-.markdown-source-view.mod-cm6 span[data-task="1"] a:hover,
-.markdown-source-view.mod-cm6 span[data-task=W] a:hover,
-.markdown-source-view.mod-cm6 span[data-task=p] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] a:hover {
   text-decoration: underline dashed currentColor;
 }
-.markdown-source-view.mod-cm6 span[data-task="1"] a.external-link,
-.markdown-source-view.mod-cm6 span[data-task=W] a.external-link,
-.markdown-source-view.mod-cm6 span[data-task=p] a.external-link,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] a.external-link,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] a.external-link,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] a.external-link {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
-.markdown-source-view.mod-cm6 span[data-task="1"].is-collapsed::after,
-.markdown-source-view.mod-cm6 span[data-task=W].is-collapsed::after,
-.markdown-source-view.mod-cm6 span[data-task=p].is-collapsed::after,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"].is-collapsed::after,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W].is-collapsed::after,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p].is-collapsed::after {
   color: #fcfbfa;
 }
-.markdown-source-view.mod-cm6 span[data-task="1"] .list-collapse-indicator,
-.markdown-source-view.mod-cm6 span[data-task=W] .list-collapse-indicator,
-.markdown-source-view.mod-cm6 span[data-task=p] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] .list-collapse-indicator {
@@ -3525,17 +3400,8 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   margin-left: -3.57rem;
 }
 
-.markdown-source-view.mod-cm6 span[data-task=p],
-.markdown-source-view.mod-cm6 span[data-task="1"],
-.markdown-source-view.mod-cm6 span[data-task=W] {
-  margin-left: 0;
-  padding: 0;
-}
-
 /* ─────────────────────────── Note (n) Admonition ────────────────────────── */
 /* ─────────────────────────── Bookmark Admonition ────────────────────────── */
-.markdown-source-view.mod-cm6 span[data-task=n],
-.markdown-source-view.mod-cm6 span[data-task=b],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=n],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=b] {
   background-color: var(--color-primary-20);
@@ -3547,14 +3413,10 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   font-weight: 400;
   margin-left: 4px;
 }
-.markdown-source-view.mod-cm6 span[data-task=n] li::marker,
-.markdown-source-view.mod-cm6 span[data-task=b] li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=n] li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=b] li::marker {
   color: #fcfbfa;
 }
-.markdown-source-view.mod-cm6 span[data-task=n] .list-collapse-indicator,
-.markdown-source-view.mod-cm6 span[data-task=b] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=n] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=b] .list-collapse-indicator {
   margin-left: -3.57rem;
@@ -3570,14 +3432,7 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   margin-top: -1px;
 }
 
-.markdown-source-view.mod-cm6 span[data-task=n],
-.markdown-source-view.mod-cm6 span[data-task=b] {
-  margin-left: 0;
-  padding: 0;
-}
-
 /* ────────────────────────────────── Debug ───────────────────────────────── */
-.markdown-source-view.mod-cm6 span[data-task=B],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] {
   background-color: hsla(var(--hsl-color-pink), 0.8);
   border-left: 1.5px solid #ea4c67;
@@ -3587,49 +3442,38 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
   margin-left: 4px;
   font-weight: 400;
 }
-.markdown-source-view.mod-cm6 span[data-task=B] ul li::marker,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] ul li::marker {
   color: var(--color-primary-w);
 }
-.markdown-source-view.mod-cm6 span[data-task=B] a,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] a {
   color: inherit;
   text-decoration: underline solid currentColor;
 }
-.markdown-source-view.mod-cm6 span[data-task=B] a:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] a:hover {
   text-decoration: underline dashed currentColor;
 }
-.markdown-source-view.mod-cm6 span[data-task=B] a.external-link,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] a.external-link {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
-.markdown-source-view.mod-cm6 span[data-task=B] mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] mark {
   background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
   color: white;
 }
-.markdown-source-view.mod-cm6 span[data-task=B] mark:hover,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] mark:hover {
   color: #141414;
 }
-.markdown-source-view.mod-cm6 span[data-task=B] em > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] em > mark {
   background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
 }
-.markdown-source-view.mod-cm6 span[data-task=B] strong > mark,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] strong > mark {
   background-image: linear-gradient(120deg, #fcfbfa, #fcfbfa);
 }
-.theme-dark .markdown-source-view.mod-cm6 span[data-task=B] ul li::marker,
 .theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] ul li::marker {
   color: var(--color-primary-k);
 }
-.markdown-source-view.mod-cm6 span[data-task=B].is-collapsed::after,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B].is-collapsed::after {
   color: #fcfbfa;
 }
-.markdown-source-view.mod-cm6 span[data-task=B] .list-collapse-indicator,
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] .list-collapse-indicator {
   margin-left: -3.57rem;
 }
@@ -3640,11 +3484,6 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 }
 .admonitions.markdown-preview-view li[data-task=B] > .task-list-item-checkbox:checked::before {
   margin-top: -1px;
-}
-
-.markdown-source-view.mod-cm6 span[data-task=B] {
-  margin-left: 0;
-  padding: 0;
 }
 
 /* Tags in Edit Mode */
@@ -4014,7 +3853,7 @@ cite {
 .theme-dark pre[class*=language-],
 .theme-light code[class*=language-],
 .theme-light pre[class*=language-] {
-  --background-primary-alt: var.$color-white;
+  --background-primary-alt: hsl(30, 25%, 98.4%);
 }
 
 .theme-dark .markdown-preview-view code,
@@ -4022,7 +3861,7 @@ cite {
 .theme-dark .markdown-preview-view span.cm-inline-code,
 .theme-dark code[class*=language-],
 .theme-dark pre[class*=language-] {
-  --background-primary-alt: var.$color-dark;
+  --background-primary-alt: hsl(0, 0%, 5%);
 }
 
 .cm-s-obsidian .cm-math,
@@ -4996,7 +4835,7 @@ div.community-plugin-item .community-plugin-version {
 .modal.mod-community-plugin:not(.is-mobile .modal.mod-community-plugin),
 .modal.mod-settings:not(.is-mobile .modal.mod-settings) {
   width: 40vw;
-  min-width: 1000px;
+  min-width: 800px;
   height: 80vh;
   min-height: 80vh;
   max-height: 80vh;
@@ -5849,7 +5688,7 @@ div.workspace-drawer.mod-left .workspace-drawer-active-tab-header .workspace-dra
 }
 
 div.workspace-drawer-active-tab-icon svg.fullscreen,
-.is-mobile .workspace-drawer-header-icon {
+.is-mobile .workspace-drawer-header-icon svg.pin {
   display: none;
 }
 
@@ -5965,6 +5804,26 @@ body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
   height: 100%;
 }
 
+.is-mobile .modal.mod-settings .vertical-tab-header:before {
+  content: "Settings";
+  font-weight: 600;
+  font-size: var(--font-settings);
+  position: sticky;
+  display: flex;
+  height: 48px;
+  margin-top: 0px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border-2);
+  background: var(--background-primary);
+  left: 0;
+  top: -1px;
+  right: 0;
+  z-index: 1;
+  padding-left: 16px;
+}
+
 .is-mobile .modal .vertical-tab-nav-item:after {
   content: " ";
   display: block;
@@ -5998,6 +5857,28 @@ body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
   margin-right: 0px;
 }
 
+.is-mobile .side-dock-actions, .is-mobile .side-dock-settings {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.is-mobile .side-dock-ribbon .side-dock-ribbon-action {
+  padding: 8px 4px 2px 4px;
+  margin: 0 12px 4px;
+  height: 40px;
+}
+
+body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
+  padding: 24px 4px;
+}
+
+.is-ios .is-pinned .side-dock-ribbon {
+  padding: 32px 0 24px 0;
+}
+
 .is-mobile .workspace-drawer-backdrop {
   display: block;
   position: fixed;
@@ -6018,6 +5899,7 @@ body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
 
 .is-mobile .workspace-leaf.mod-active .view-header-title {
   width: 60vw;
+  font-size: 1rem;
 }
 
 html .is-mobile div.menu {
@@ -6066,9 +5948,8 @@ html .is-mobile div.menu {
 .is-mobile .modal-content.community-plugin {
   width: 100vw;
   max-width: 800px;
-  max-height: 100vh;
+  max-height: calc(100vh - 24px);
   height: 100vh;
-  min-height: 100vh;
 }
 
 @media (min-width: 400pt) {
@@ -6082,14 +5963,14 @@ html .is-mobile div.menu {
   }
 }
 .is-mobile .modal.mod-community-theme {
-  min-height: calc(100vh - 48px);
+  min-height: calc(100vh - 73px);
   padding: 0px;
 }
 
 .is-mobile .modal-close-button {
   display: block;
   z-index: 2;
-  top: 12px;
+  top: 8px;
   right: 8px;
   width: 24px;
   height: 24px;
@@ -6307,11 +6188,6 @@ body.is-mobile .nav-action-button svg {
 
 .is-mobile .menu-item.selected:not(.is-disabled):not(.is-label):hover {
   padding-left: 0;
-}
-
-.workspace-drawer-ribbon .side-dock-ribbon-action {
-  padding: 8px 0;
-  margin: 8px 0;
 }
 
 .is-mobile .nav-folder .collapse-icon {
@@ -8150,6 +8026,11 @@ body:not(.no-sanctum-icons) .workspace-split.mod-left-split .nav-action-button[a
   height: 16px;
   width: 16px;
   -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Earrows--vertical%3C/title%3E%3Cpolygon points='27.6,20.6 24,24.2 24,4 22,4 22,24.2 18.4,20.6 17,22 23,28 29,22 '/%3E%3Cpolygon points='9,4 3,10 4.4,11.4 8,7.8 8,28 10,28 10,7.8 13.6,11.4 15,10 '/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
+}
+
+body:not(.no-sanctum-icons) .workspace-split.mod-left-split .nav-action-button[aria-label="Reveal active file"] svg {
+  height: 16px;
+  width: 16px;
 }
 
 /* @settings

@@ -422,9 +422,6 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 /* ──────────────────────── Important (!) admonition ──────────────────────── */
 /* ───────────────────────────── Cons Admonition ──────────────────────────── */
 /* ───────────────────────────────── Failure ──────────────────────────────── */
-.markdown-source-view.mod-cm6 span[data-task="X"],
-.markdown-source-view.mod-cm6 span[data-task="c"],
-.markdown-source-view.mod-cm6 span[data-task="!"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="X"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="c"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] {
@@ -490,16 +487,7 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 	}
 }
 
-.markdown-source-view.mod-cm6 span[data-task="X"],
-.markdown-source-view.mod-cm6 span[data-task="c"],
-.markdown-source-view.mod-cm6 span[data-task="!"] {
-	margin-left: 0;
-	padding: 0;
-}
-
 /* ───────────────────────── Question (?) admonition ──────────────────────── */
-.markdown-source-view.mod-cm6 span[data-task="I"],
-.markdown-source-view.mod-cm6 span[data-task="?"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="I"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] {
 	background-color: hsla(var(--hsl-color-yellow), 0.8);
@@ -551,14 +539,7 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 	}
 }
 
-.markdown-source-view.mod-cm6 span[data-task="I"],
-.markdown-source-view.mod-cm6 span[data-task="?"] {
-	margin-left: 0;
-	padding: 0;
-}
-
 /* ─────────────────────── Information (i) admonition ─────────────────────── */
-.markdown-source-view.mod-cm6 span[data-task="i"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="i"] {
 	background-color: hsla(var(--hsl-color-blue), 0.8);
 	border-radius: 0px 4px 4px 4px;
@@ -616,17 +597,9 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 	}
 }
 
-.markdown-source-view.mod-cm6 span[data-task="i"] {
-	margin-left: 0;
-	padding: 0;
-}
-
 /* ───────────────────────────── Pros Admonition ──────────────────────────── */
 /* ─────────────────────────── Reward/Win Admonition ─────────────────────────── */
 /* ───────────────────────────────── Success ──────────────────────────────── */
-.markdown-source-view.mod-cm6 span[data-task="1"],
-.markdown-source-view.mod-cm6 span[data-task='W'],
-.markdown-source-view.mod-cm6 span[data-task="p"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="W"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="p"] {
@@ -684,17 +657,8 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 	}
 }
 
-.markdown-source-view.mod-cm6 span[data-task="p"],
-.markdown-source-view.mod-cm6 span[data-task="1"],
-.markdown-source-view.mod-cm6 span[data-task="W"] {
-	margin-left: 0;
-	padding: 0;
-}
-
 /* ─────────────────────────── Note (n) Admonition ────────────────────────── */
 /* ─────────────────────────── Bookmark Admonition ────────────────────────── */
-.markdown-source-view.mod-cm6 span[data-task="n"],
-.markdown-source-view.mod-cm6 span[data-task="b"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="n"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="b"] {
 	background-color: var(--color-primary-20);
@@ -724,13 +688,7 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 	}
 }
 
-.markdown-source-view.mod-cm6 span[data-task="n"],
-.markdown-source-view.mod-cm6 span[data-task="b"] {
-	margin-left: 0;
-	padding: 0;
-}
 /* ────────────────────────────────── Debug ───────────────────────────────── */
-.markdown-source-view.mod-cm6 span[data-task="B"],
 .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="B"] {
 	background-color: hsla(var(--hsl-color-pink), 0.8);
 	border-left: 1.5px solid var.$color-pink;
@@ -784,9 +742,4 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 	&:checked::before {
 		margin-top: -1px;
 	}
-}
-
-.markdown-source-view.mod-cm6 span[data-task="B"] {
-	margin-left: 0;
-	padding: 0;
 }
