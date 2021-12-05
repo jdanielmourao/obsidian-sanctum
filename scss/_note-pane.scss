@@ -78,9 +78,9 @@ div.view-header-icon { // dragable icon in note header
 }
 
 // Dim inactive panes [totally didn't borrow this from @pseudometa *cough*]
-.workspace-leaf:not(.mod-active) .workspace-leaf-content[data-type='markdown'] {
-    opacity: .7;
-    transition: var.$motion-standard-expressive var.$duration-moderate-1;
+body:not(body.plugin-sliding-panes-rotate-header) .workspace-leaf:not(.mod-active) .workspace-leaf-content[data-type='markdown'] {
+	opacity: .7;
+	transition: var.$motion-standard-expressive var.$duration-moderate-1;
 }
 
 /* ────────────────────────────── Editor Width ────────────────────────────── */

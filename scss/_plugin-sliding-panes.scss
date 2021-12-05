@@ -16,3 +16,12 @@ body.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-mixed 
 html body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
 	box-shadow: var.$elevation-2;
 }
+
+.plugin-sliding-panes-rotate-header .workspace-leaf:not(.mod-active) .workspace-leaf-content[data-type='markdown'] .markdown-preview-view {
+	--text-normal: var(--color-primary-80);
+	--text-muted: var(--color-primary-70);
+	--text-faint: var(--color-primary-50);
+	--color-accent: hsla(var(--color-l-accent-h),var(--color-l-accent-s),var(--color-l-accent-l), .6);
+	--text-accent: var(--color-accent);
+	transition: var.$motion-standard-expressive var.$duration-moderate-1;
+}
