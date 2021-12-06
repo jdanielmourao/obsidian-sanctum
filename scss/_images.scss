@@ -17,3 +17,7 @@
 	opacity:1;
 	transition: opacity var.$duration-slow-1 var.$motion-entrance-expressive;
 }
+
+.markdown-preview-view img.link-favicon {
+	padding-right: 4px;
+}
