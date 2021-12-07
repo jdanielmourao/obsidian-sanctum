@@ -5,8 +5,8 @@
 	display: inline-block;
 	position: relative;
 	user-select: none;
-	height: var.$size-6;
-	width: var.$size-9;
+	height: 24px;
+	width: 48px;
 	border-radius: 30px;
 	transition: var.$duration-fast-1 var.$motion-standard-expressive;
 	background-color: var(--color-primary-30);
@@ -20,8 +20,8 @@
 	background-color: var.$color-white;
 	width: 18px;
 	height: 18px;
-	top: .5px;
-	left: -2px;
+	margin: 3px 0 0 0;
+	top: 0px;
 	border-radius: 50%;
 	transition: transform var.$duration-moderate-1 var.$motion-entrance-expressive,
 				width var.$duration-fast-2 var.$motion-exit-expressive,
@@ -32,7 +32,7 @@
 }
 
 .checkbox-container.is-enabled:after {
-	transform: translate3d(26px, 0, 0); // distance travelled
+	transform: translate3d(27px, 0, 0); // distance travelled
 }
 
 .checkbox-container.is-enabled {

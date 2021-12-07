@@ -5192,15 +5192,15 @@ input[type=range]::-webkit-slider-thumb {
   background-color: #fcfbfa;
   width: 18px;
   height: 18px;
-  top: 0.5px;
-  left: -2px;
+  margin: 3px 0 0 0;
+  top: 0px;
   border-radius: 50%;
   transition: transform 150ms cubic-bezier(0, 0, 0.3, 1), width 110ms cubic-bezier(0.4, 0.14, 1, 1), left 110ms cubic-bezier(0.4, 0.14, 0.3, 1), -webkit-transform 70ms cubic-bezier(0.4, 0.14, 0.3, 1);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.03);
 }
 
 .checkbox-container.is-enabled:after {
-  transform: translate3d(26px, 0, 0);
+  transform: translate3d(27px, 0, 0);
 }
 
 .checkbox-container.is-enabled {
