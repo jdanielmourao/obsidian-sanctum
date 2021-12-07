@@ -549,6 +549,7 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 .nav-file-title.is-active {
     background-color: var(--color-primary-100);
     color: var(--background-primary);
+	border-radius: 0px;
     
     & .nav-file-title-content::before {
         color: var(--color-primary-w);
