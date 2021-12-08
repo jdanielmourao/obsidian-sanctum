@@ -27,17 +27,16 @@ input[type='number'] {
 
 // Document Search
 .document-search-container {
-	position: absolute;
+	position: fixed;
 	bottom: var.$size-0;
-	left: var.$size-0;
+	top: var.$size-7;
 	width: 100%;
-	height: var.$size-10;
+	height: var.$size-7;
 	background-color: var(--background-primary);
 	display: flex;
 	flex-direction: column;
 	padding: var.$size-0;
 	z-index: var(--layer-popover);
-	border-top: 1px solid var(--color-border-1);
 
 	& .document-search-button {
 		height: var.$scale-3;
@@ -53,6 +52,12 @@ input[type='number'] {
 		margin: var.$size-2
 				var.$size-1;
 	}
+}
+
+body:not(.is-mobile) .document-search, body:not(.is-mobile) .document-replace {
+    width: var(--line-width);
+    margin: 0 auto;
+    padding: 0 4px;
 }
 
 .document-search-close-button:before {
