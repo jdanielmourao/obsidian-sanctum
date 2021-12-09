@@ -7,7 +7,7 @@
 /* Description: Sanctum’s a minimalist theme with the aim of creating a serene space 
 /*              of retreat, for thought and uninterrupted work.
 /* License: GNU General Public License v3.0
-/* Version: 0.4.somethingTooManyHotfixesToCountAtThisPoint
+/* Version: 0.4
 /* ───────────────────────────────────────────────────────────────────────── */
 /*
     ├── Variables
@@ -843,6 +843,10 @@ body:not(.no-sanctum-icons) .nav-action-button svg {
 }
 
 /* ────────────────────────────── File Explorer ───────────────────────────── */
+.nav-folder-children > div:not(.nav-folder):not(.nav-file) {
+  display: none;
+}
+
 .nav-files-container {
   padding: 16px 0px 0px 16px;
   background-color: var(--background-primary);

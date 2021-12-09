@@ -464,6 +464,11 @@ body:not(.no-sanctum-icons)
 }
 
 /* ────────────────────────────── File Explorer ───────────────────────────── */
+
+.nav-folder-children > div:not(.nav-folder):not(.nav-file) { //fixes strange jiggle in file explorer
+	display: none;
+}
+
 // File Explorer padding
 .nav-files-container {
     padding: var.$size-5
