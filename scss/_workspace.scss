@@ -439,6 +439,30 @@ body:not(.no-sanctum-icons)
     }
 }
 
+/* ────────────────────────────── Outline Pane ────────────────────────────── */
+
+.workspace-leaf-content[data-type=outline] .tree-item-children {
+	margin-left: 36px;
+}
+
+.workspace-leaf-content[data-type=outline] .tree-item-inner:hover {
+	background-color: var(--color-hover);
+}
+
+.workspace-leaf-content[data-type=outline] .tree-item-icon.collapse-icon {
+	order:2;
+}
+
+.workspace-leaf-content[data-type=outline] .tree-item-inner {
+	padding: 2px 0;
+}
+
+.compact-outline .workspace-leaf-content[data-type=outline] .tree-item-inner {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 /* ────────────────────────────── File Explorer ───────────────────────────── */
 // File Explorer padding
 .nav-files-container {
@@ -1025,3 +1049,4 @@ ol.kanban .task-list-item .list-collapse-indicator {
     right: 260px;
     background-color: transparent;
 }
+

@@ -5,6 +5,10 @@
 	border-width: 1px;
 }
 
+.markdown-embed-title { //removed embed file title
+	display: none;
+}
+
 /*
 	Removes title, link, padding, margins from embeds,
 	so they really look like the same note.

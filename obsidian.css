@@ -7,7 +7,7 @@
 /* Description: Sanctum’s a minimalist theme with the aim of creating a serene space 
 /*              of retreat, for thought and uninterrupted work.
 /* License: GNU General Public License v3.0
-/* Version: 0.4
+/* Version: 0.4.somethingTooManyHotfixesToCountAtThisPoint
 /* ───────────────────────────────────────────────────────────────────────── */
 /*
     ├── Variables
@@ -819,6 +819,29 @@ body:not(.no-sanctum-icons) .nav-action-button svg {
   margin-bottom: 24px;
 }
 
+/* ────────────────────────────── Outline Pane ────────────────────────────── */
+.workspace-leaf-content[data-type=outline] .tree-item-children {
+  margin-left: 36px;
+}
+
+.workspace-leaf-content[data-type=outline] .tree-item-inner:hover {
+  background-color: var(--color-hover);
+}
+
+.workspace-leaf-content[data-type=outline] .tree-item-icon.collapse-icon {
+  order: 2;
+}
+
+.workspace-leaf-content[data-type=outline] .tree-item-inner {
+  padding: 2px 0;
+}
+
+.compact-outline .workspace-leaf-content[data-type=outline] .tree-item-inner {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* ────────────────────────────── File Explorer ───────────────────────────── */
 .nav-files-container {
   padding: 16px 0px 0px 16px;
@@ -1468,14 +1491,14 @@ body, body body input, body body button {
   line-height: 1.25em;
 }
 
+/*
 .CodeMirror-wrap .CodeMirror-line,
 .CodeMirror-wrap .CodeMirror-line-like {
-  word-wrap: break-word;
-  white-space: pre-wrap;
-  word-break: break-word;
-  hyphens: auto;
-}
-
+	word-wrap: break-word; // same as overflow-wrap:break-word 
+	white-space: pre-wrap;
+	word-break: break-word;
+	hyphens: auto;
+}*/
 /* ──────────────────────────────── Headings ──────────────────────────────── */
 .markdown-preview-view h1,
 .markdown-preview-view h2,
@@ -3847,6 +3870,10 @@ table.table-view-table > thead > tr > th {
 .markdown-source-view.mod-cm6 .cm-embed-block:hover {
   border-color: var(--color-border-2);
   border-width: 1px;
+}
+
+.markdown-embed-title {
+  display: none;
 }
 
 /*
@@ -8441,6 +8468,12 @@ settings:
 		step: 4
 		format: 'px'
 	-
+		id: compact-outline
+		title: Compact Outline
+		description: Hides excess text in the outline pane so every title is 1 row tall.
+		type: class-toggle
+		default: false
+	-
 		id: file-explorer
 		title: File Explorer
 		type: heading
@@ -8604,5 +8637,3 @@ community:
 - templater-obsidian 
 
 */
-
-/*# sourceMappingURL=base.css.map */

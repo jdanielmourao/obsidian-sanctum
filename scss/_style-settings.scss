@@ -644,6 +644,12 @@ settings:
 		step: 4
 		format: 'px'
 	-
+		id: compact-outline
+		title: Compact Outline
+		description: Hides excess text in the outline pane so every title is 1 row tall.
+		type: class-toggle
+		default: false
+	-
 		id: file-explorer
 		title: File Explorer
 		type: heading

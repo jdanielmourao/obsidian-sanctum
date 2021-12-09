@@ -46,14 +46,14 @@ body {
 .CodeMirror-sizer {
 	line-height: var.$leading-2;
 }
-
+/*
 .CodeMirror-wrap .CodeMirror-line,
 .CodeMirror-wrap .CodeMirror-line-like {
 	word-wrap: break-word; // same as overflow-wrap:break-word 
 	white-space: pre-wrap;
 	word-break: break-word;
 	hyphens: auto;
-}
+}*/
 
 /* ──────────────────────────────── Headings ──────────────────────────────── */
 
