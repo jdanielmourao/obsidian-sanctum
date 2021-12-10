@@ -507,16 +507,15 @@ body:not(.no-sanctum-icons)
 .nav-folder-title,
 .nav-vault-title,
 .nav-folder-title.has-folder-note {
-    height: 25px; // can't be 24px because when using IBM Plex gs, etc get cropped
-    padding: var.$size-0
-             var.$size-5
-             var.$size-0
-             var.$size-0;
-    border-radius: 0px;
-    width: unset;
-    font-size: var(--font-scale-00);
-    font-weight: var(--font-regular);
-    color: var(--text-muted);
+	height: 25px; // can't be 24px because when using IBM Plex gs, etc get cropped
+	padding: var.$size-0
+			 var.$size-5
+			 var.$size-0
+			 var.$size-0;
+	border-radius: 0px;
+	width: unset;
+	font-size: var(--font-scale-00);
+	color: var(--text-muted);
 }
 
 .nav-file-title > .nav-file-tag {

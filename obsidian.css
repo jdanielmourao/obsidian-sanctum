@@ -880,7 +880,6 @@ body:not(.no-sanctum-icons) .nav-action-button svg {
   border-radius: 0px;
   width: unset;
   font-size: var(--font-scale-00);
-  font-weight: var(--font-regular);
   color: var(--text-muted);
 }
 
@@ -1463,6 +1462,11 @@ body, body body input, body body button {
   font-size: 0.875rem;
   line-height: 1.25em;
   letter-spacing: 0.16px;
+}
+body.theme-dark,
+body body.theme-dark input,
+body body.theme-dark button {
+  font-weight: 300;
 }
 
 /* ───────────────────────────── Note Typography ──────────────────────────── */
