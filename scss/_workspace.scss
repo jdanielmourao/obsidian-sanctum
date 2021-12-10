@@ -350,9 +350,9 @@ body:not(.no-sanctum-icons)
 
 /* ────────────────────────────── Side Ribbons ────────────────────────────── */
 .side-dock-ribbon { // side ribbons
-    flex: 0 0 var.$scale-4;
-    display: flex;
-    flex-direction: column;
+	flex: 0 0 var.$scale-4;
+	display: flex;
+	flex-direction: column;
 }
 
 // ribbon icons
@@ -361,6 +361,7 @@ body:not(.no-sanctum-icons)
 }
 
 .workspace-ribbon { // side ribbons
+	display: flex;
     overflow: hidden;
     width: var.$scale-4;
     background-color: var(--background-primary);

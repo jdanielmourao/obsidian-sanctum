@@ -752,6 +752,7 @@ body:not(.no-sanctum-icons) .nav-action-button svg {
 }
 
 .workspace-ribbon {
+  display: flex;
   overflow: hidden;
   width: 32px;
   background-color: var(--background-primary);
@@ -6960,7 +6961,8 @@ body:not(.no-sanctum-icons) svg.changelog,
 body:not(.no-sanctum-icons) svg.fa-copy,
 body:not(.no-sanctum-icons) svg.fantasy-calendar-reveal,
 body:not(.no-sanctum-icons) svg.BratIcon,
-body:not(.no-sanctum-icons) svg.running-man {
+body:not(.no-sanctum-icons) svg.running-man,
+body:not(.no-sanctum-icons) svg.reading-glasses {
   background-color: currentColor;
 }
 
@@ -7125,7 +7127,8 @@ body:not(.no-sanctum-icons) svg.changelog > path,
 body:not(.no-sanctum-icons) svg.fa-copy > path,
 body:not(.no-sanctum-icons) svg.fantasy-calendar-reveal > path,
 body:not(.no-sanctum-icons) svg.BratIcon > path,
-body:not(.no-sanctum-icons) svg.running-man > path {
+body:not(.no-sanctum-icons) svg.running-man > path,
+body:not(.no-sanctum-icons) svg.reading-glasses > path {
   display: none;
 }
 
@@ -7736,6 +7739,11 @@ body:not(.no-sanctum-icons) svg.wrench-screwdriver-glyph {
 
 body:not(.no-sanctum-icons) svg.yesterday-glyph {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="red" d="M33.333 54.167H66.667V62.5H33.333z M79.167 16.667h-8.333V8.333h-8.333v8.333H37.5V8.333H29.167v8.333H20.833C16.238 16.667 12.5 20.404 12.5 25v8.333v50c0 4.596 3.738 8.333 8.333 8.333h58.333c4.596 0 8.333 -3.738 8.333 -8.333V33.333V25C87.5 20.404 83.763 16.667 79.167 16.667zM79.175 83.333H20.833V33.333h58.333L79.175 83.333z"></path></svg>');
+}
+
+body:not(.no-sanctum-icons) svg.reading-glasses {
+  transform: translateY(1px) scale(1.1) translateX(-1.5px);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eview%3C/title%3E%3Cpath d='M30.94,15.66A16.69,16.69,0,0,0,16,5,16.69,16.69,0,0,0,1.06,15.66a1,1,0,0,0,0,.68A16.69,16.69,0,0,0,16,27,16.69,16.69,0,0,0,30.94,16.34,1,1,0,0,0,30.94,15.66ZM16,25c-5.3,0-10.9-3.93-12.93-9C5.1,10.93,10.7,7,16,7s10.9,3.93,12.93,9C26.9,21.07,21.3,25,16,25Z' transform='translate(0 0)'/%3E%3Cpath d='M16,10a6,6,0,1,0,6,6A6,6,0,0,0,16,10Zm0,10a4,4,0,1,1,4-4A4,4,0,0,1,16,20Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
 body:not(.no-sanctum-icons) svg.fa-copy {
