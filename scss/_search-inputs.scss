@@ -23,7 +23,9 @@ input[type='number'] {
 	}
 }
 
-
+.document-search-container.mod-replace-mode { // Find and Replace
+	height: var.$size-10;
+}
 
 // Document Search
 .document-search-container {

@@ -4363,6 +4363,16 @@ span[title="Unfold line"]:hover,
   border-right: 2px solid var(--color-accent);
 }
 
+.cm-focused .cm-cursor-primary.cm-fat-cursor,
+.cm-fat-cursor .CodeMirror-cursor {
+  background: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.CodeMirror div.CodeMirror-secondarycursor {
+  border-left: 2px solid var(--color-accent);
+}
+
 select.dropdown {
   appearance: none;
   font-family: var(--font-ui);
@@ -5064,6 +5074,10 @@ input[type=password]:focus,
 input[type=number]:focus {
   border-bottom: 0px solid transparent;
   outline: 1px solid var(--color-blue);
+}
+
+.document-search-container.mod-replace-mode {
+  height: 64px;
 }
 
 .document-search-container {
