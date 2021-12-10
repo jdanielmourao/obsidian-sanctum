@@ -983,6 +983,8 @@ body:not(.no-sanctum-icons) .workspace-split.mod-left-split
 body:not(.no-sanctum-icons) .workspace-split.mod-left-split
   .nav-action-button[aria-label="Reveal active file"]
   svg { // set as 20px x 20px by default
+	background-color: currentColor;
 	height: var.$scale-2;
 	width: var.$scale-2;
+	-webkit-mask-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 32 32' %3E%3Cpath d='M30 15h-2.05A12.007 12.007 0 0 0 17 4.05V2h-2v2.05A12.007 12.007 0 0 0 4.05 15H2v2h2.05A12.007 12.007 0 0 0 15 27.95V30h2v-2.05A12.007 12.007 0 0 0 27.95 17H30ZM17 25.95V22h-2v3.95A10.017 10.017 0 0 1 6.05 17H10v-2H6.05A10.017 10.017 0 0 1 15 6.05V10h2V6.05A10.017 10.017 0 0 1 25.95 15H22v2h3.95A10.017 10.017 0 0 1 17 25.95Z' style='fill:%23000'/%3E%3Cpath data-name='%26lt%3BTransparent Rectangle%26gt%3B' style='fill:none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
 }
