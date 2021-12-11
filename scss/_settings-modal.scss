@@ -124,7 +124,7 @@
 
 .vertical-tab-header-group-title { // settings left panel group title
     font-size: var.$font-scale-00;
-    font-weight: var.$font-semi-bold;
+    font-weight: var(--font-semi-bold);
     color: var(--text-muted);
     text-transform: capitalize;
     color: var(--text-normal);

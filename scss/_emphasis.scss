@@ -6,13 +6,13 @@
 strong { /* Bold */
     font-style: normal;
     color: currentColor;
-    font-weight: var.$font-bold;
+    font-weight: var(--font-bold);
 }
 /* ───────────────────────────────── Italic ───────────────────────────────── */
 .cm-em,
 em {  /* Italic */
     font-style: italic;
-    font-weight: var.$font-light;
+    font-weight: var(--font-light);
 }
 
 /* ──────────────────────── Highlighting & Selection ──────────────────────── */

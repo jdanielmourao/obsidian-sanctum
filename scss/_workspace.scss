@@ -542,16 +542,19 @@ body:not(.no-sanctum-icons)
 .nav-file-title,
 .nav-folder-title {
     border-radius: 0px;
+	border:none;
 }
 
 .nav-file div.nav-file-title:hover,
 .nav-folder div.nav-folder-title:hover {
     background-color: var(--color-hover);
     border-radius: 0px;
+	border:none;
 }
 
 .nav-file-title.is-active .nav-file-title-content {
 	color: var(--background-primary);
+	border:none;
 
     &:focus {
         background-color: transparent;
@@ -563,6 +566,7 @@ body:not(.no-sanctum-icons)
 .nav-file-title.is-active:hover .nav-file-title-content,
 .nav-file-title.is-active:hover .nav-file-title-content::before {
     color: var(--text-normal);
+	border:none;
 }
 
 body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-child:hover::before {
@@ -579,9 +583,11 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
     background-color: var(--color-primary-100);
     color: var(--background-primary);
 	border-radius: 0px;
+	border:none;
     
     & .nav-file-title-content::before {
         color: var(--color-primary-w);
+		border:none;
     }
 }
 
@@ -589,10 +595,10 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 .nav-folder-title.is-being-dragged-over,
 .drag-ghost,
 .workspace-drop-overlay:before {
-    border:none;
-    border-radius: var.$size-4;
+	border:none;
+	border-radius: var.$size-4;
 	background-color: var(--color-hover);
-    color: var(--text-normal);
+	color: var(--text-normal);
 }
 
 .nav-folder-children {

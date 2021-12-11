@@ -259,7 +259,7 @@ body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
 
 .is-mobile .vertical-tab-header-group-title {
 	font-size: var.$font-scale-0;
-	font-weight: var.$font-semi-bold;
+	font-weight: var(--font-semi-bold);
 	color: var(--text-muted);
 	text-transform: uppercase;
 	color: var(--text-normal);
@@ -452,7 +452,7 @@ html .is-mobile div.menu {
 
 	&:before {
 		content: "\D7";
-		font-weight: var.$font-light;
+		font-weight: var(--font-light);
 		color: var(--text-muted);
 		background: none;
 	}

@@ -3,7 +3,7 @@
 /* ───────────────────────────── METADATA BLOCK ───────────────────────────── */
 .markdown-preview-view .frontmatter-container {
 	font-size: .75rem;
-	font-weight: var.$font-medium;
+	font-weight: var(--font-medium);
 	color: var(--text-muted);
 	background-color: transparent;
 	border: var.$size-0;
@@ -41,7 +41,7 @@
 		border-radius: 30px;
 		background-color: var(--background-primary-alt);
 		font-size: var.$font-scale-000;
-		font-weight: var.$font-medium;
+		font-weight: var(--font-medium);
 		line-height: var.$leading-4;
 		color: var(--text-muted);
 		margin-left: var.$size-0;
@@ -58,7 +58,7 @@
 // YAML
 body .markdown-preview-view pre.frontmatter.language-yaml { // big metadata and yaml container
 	background: var(--background-primary);
-	font-weight: var.$font-regular;
+	font-weight: var(--font-regular);
 	text-shadow: none;
 	border-radius: 0;
 	border-bottom: 1.5px solid var(--color-border-2);
@@ -74,7 +74,7 @@ code.language-yaml.is-loaded {
 	place-items: center start;
 	gap: 0px 8px;*/
 	font-family: var(--font-preview);
-	font-weight: var.$font-regular;
+	font-weight: var(--font-regular);
 	background-color: transparent;
 	text-shadow: none;
 	font-size: var.$font-scale-00;
@@ -105,7 +105,7 @@ code.language-yaml.is-loaded {
 		background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(20, 1.4%, 59.4%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
 	}
 	& .token {
-		font-weight: var.$font-regular;
+		font-weight: var(--font-regular);
 	}
 	& .token.selector,
 	& .token.attr-name,
@@ -128,7 +128,7 @@ code.language-yaml.is-loaded {
 	}
 	.token.key.atrule {
 		color: var(--color-accent); // this adds a bit more contrast compared to text-normal
-		font-weight: var.$font-semi-bold;
+		font-weight: var(--font-semi-bold);
 	}
 }
 

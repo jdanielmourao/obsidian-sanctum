@@ -8,15 +8,10 @@ body {
 		font-optical-sizing: auto;
 		font-family: var(--font-ui);
 		font-feature-settings: "zero", "ss05" on;
-		font-weight:  var.$font-regular;
+		font-weight:  var(--font-regular);
 		font-size: var.$font-scale-00;
 		line-height: var.$leading-2;
 		letter-spacing: var.$tracking-1;
-	}
-	&.theme-dark,
-	body.theme-dark input,
-	body.theme-dark button {
-		font-weight:  var.$font-light;
 	}
 }
 

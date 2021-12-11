@@ -4,7 +4,7 @@ select.dropdown {
 	appearance: none;
 	font-family: var(--font-ui);
 	font-size: var.$font-scale-00;
-	font-weight: var.$font-regular;
+	font-weight: var(--font-regular);
 	color: var(--text-normal);
 	line-height: var.$leading-1;
 	padding: var.$size-2

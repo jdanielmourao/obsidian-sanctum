@@ -437,7 +437,7 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 	border-left: 1.5px solid var.$color-red;
 	padding: 0px 4px 4px 4px;
 	color: var(--color-primary-w);
-	font-weight: var.$font-regular;
+	font-weight: var(--font-regular);
 	margin-left: 4px;
 
 	.theme-dark & {
@@ -503,7 +503,7 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 	padding: 0px 4px 4px 4px;
 	text-decoration: none;
 	color: var(--color-primary-k);
-	font-weight: var.$font-regular;
+	font-weight: var(--font-regular);
 	margin-left: 4px;
 
 	.theme-dark & {
@@ -554,7 +554,7 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 	padding: 0px 4px 4px 4px;
 	text-decoration: none;
 	color: var(--color-primary-w);
-	font-weight: var.$font-regular;
+	font-weight: var(--font-regular);
 	margin-left: 4px;
 
 	.theme-dark & {
@@ -616,7 +616,7 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 	padding: 0px 4px 4px 4px;
 	text-decoration: none;
 	color: #{var.$color-white};
-	font-weight: var.$font-regular;
+	font-weight: var(--font-regular);
 	margin-left: 4px;
 
 	.theme-dark & {
@@ -674,7 +674,7 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 	padding: 0px 4px 4px 4px;
 	text-decoration: none;
 	color: var(--text-normal);
-	font-weight: var.$font-regular;
+	font-weight: var(--font-regular);
 	margin-left: 4px;
 
 	& li::marker {
@@ -703,7 +703,7 @@ body .markdown-preview-view ul > li[data-task="?"].task-list-item.is-checked {
 	color: #{var.$color-white};
 	padding: 0px 4px 4px 4px;
 	margin-left: 4px;
-	font-weight: var.$font-regular;
+	font-weight: var(--font-regular);
 
 	& ul li::marker {
 		color: var(--color-primary-w);

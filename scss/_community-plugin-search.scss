@@ -63,7 +63,7 @@ div.community-plugin-item .community-plugin-version {
 .community-plugin-name {
 	line-height: var.$leading-2;
 	font-size: var.$font-scale-00;
-	font-weight: var.$font-medium;
+	font-weight: var(--font-medium);
 
 	& .flair.mod-pop {
 		top: var.$size-2;

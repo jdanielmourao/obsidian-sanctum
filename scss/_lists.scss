@@ -1,7 +1,7 @@
 @use 'var';
 
 ol > li::marker {
-	font-weight: var.$font-regular;
+	font-weight: var(--font-regular);
 	font-size: var.$font-scale-0;
 	color: var(--text-normal);
 	font-family: var(--font-sans); // not font-preview, because otherwise it will change
@@ -9,16 +9,19 @@ ol > li::marker {
 }
 
 .markdown-preview-view {
-	& .list-collapse-indicator {
+	& .list-collapse-indicator { // generic ul and task list
 		margin-left: -3.5rem;
 		color: var(--text-faint);
 	}
-	& ol li:nth-child(n+10) ol ol li:nth-child(n+10) .list-collapse-indicator,
+	& ol li .list-collapse-indicator { // ol under 10
+		margin-left: -3rem;
+	}
+	& ol li:nth-child(n+10) ol ol li:nth-child(n+10) .list-collapse-indicator, // ol over 10
 	& ol li:nth-child(n+10) .list-collapse-indicator {
-		margin-left: -4rem;
+		margin-left: -3rem;
 	}
 	& ol li:nth-child(n+10) ol .list-collapse-indicator {
-		margin-left: -4rem;
+		margin-left: -3rem;
 	}
 }
 
@@ -78,7 +81,7 @@ ul ol ol ul ul {
 
 // Unordered list bullet thickness and size
 ul > li::marker {
-	font-weight: var.$font-semi-bold;
+	font-weight: var(--font-semi-bold);
 	font-size: var.$font-scale-0;
 	color: var(--text-normal);
 	margin-right: var.$size-0;

@@ -18,7 +18,7 @@
 .theme-light code[class*=language-],
 .theme-light pre[class*=language-] {
 	font-family: var(--font-mono);
-	font-weight: var.$font-medium;
+	font-weight: var(--font-medium);
 	font-size: var.$font-scale-0;
 	line-height: var.$leading-2;
 	letter-spacing: var.$tracking-2;
@@ -119,7 +119,7 @@
 /* ────────────────────────────── Code Comments ───────────────────────────── */
 .cm-s-obsidian .HyperMD-codeblock span.cm-comment,
 .markdown-preview-view code .token.comment {
-	font-weight: var.$font-light;
+	font-weight: var(--font-light);
 	font-style: normal;
 }
 
@@ -151,7 +151,7 @@ code[class*=language-pure-text],
 .markdown-preview-view div.el-pre pre[class*=language-pure-text] .language-pure-text.is-loaded {
 	color: var(--text-normal);
 	font-family: var(--font-preview);
-	font-weight: var.$font-regular;
+	font-weight: var(--font-regular);
 	white-space: normal;
 	text-shadow: transparent 0px 1px;
 	hyphens: auto;

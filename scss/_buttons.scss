@@ -8,7 +8,7 @@
 			 var.$size-3
 			 var.$size-5;
 	font-size: var.$font-scale-00;
-	font-weight: var.$font-regular;
+	font-weight: var(--font-regular);
 	font-family: var(--font-ui);
 }
 
@@ -19,7 +19,7 @@
 			 var.$size-2
 			 var.$size-5;
 	font-size: var.$font-scale-00;
-	font-weight: var.$font-regular;
+	font-weight: var(--font-regular);
 	font-family: var(--font-ui);
 }
 
@@ -30,7 +30,7 @@
 			 var.$size-1
 			 var.$size-2;
 	font-size: var.$font-scale-00;
-	font-weight: var.$font-regular;
+	font-weight: var(--font-regular);
 	font-family: var(--font-ui);
 }
 

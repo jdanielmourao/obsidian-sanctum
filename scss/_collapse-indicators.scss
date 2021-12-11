@@ -11,7 +11,7 @@
 .markdown-preview-view li.is-collapsed::after {
 	content: "…";
 	font-family: var(--font-preview);
-	font-weight: var.$font-regular;
+	font-weight: var(--font-regular);
 	color: var(--text-normal);
 	padding-left: var.$size-2;
 }

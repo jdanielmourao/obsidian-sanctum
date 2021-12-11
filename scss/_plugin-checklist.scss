@@ -57,14 +57,14 @@
 	}
 	.theme-light & header .count {
 		background: var(--color-primary-20);
-		font-weight: var.$font-regular;
+		font-weight: var(--font-regular);
 	}
 	& header .count {  // Counter
 		padding: var(--todoList-countPadding);
 		background: var(--color-primary-10);
 		border-radius: var.$size-7;
 		font-size: var.$font-scale-000;
-		font-weight: var.$font-light;
+		font-weight: var(--font-light);
 	}
 	& header.group-header.page {
 		margin: var(--todoList-pageMargin);
@@ -72,7 +72,7 @@
 		transition: opacity var.$duration-moderate-1 var.$motion-standard-productive;
 		cursor: pointer;
 		font-size: var.$font-scale-0;
-		font-weight: var.$font-regular;
+		font-weight: var(--font-regular);
 	}
 	& .header {
 		margin: var(--todoList-headerMargin);

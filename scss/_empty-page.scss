@@ -3,7 +3,7 @@
 .empty-state {
 	&-title {
 		margin-top: var.$size-6;
-		font-weight: var.$font-bold;
+		font-weight: var(--font-bold);
 		font-size: var.$font-scale-5;
 		position: relative;
 	}
