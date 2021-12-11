@@ -13,7 +13,7 @@
 	position: absolute;
 	display: block;
 	content: "";
-	height: 0.03ch;
+	height: 0.1ch; /* unit relative to the width of your font's "0"*/
 	width: 6px;
 	top: 14px;
 	left: 2px;
@@ -28,7 +28,7 @@
 	display: block;
 	content: "";
 	height: 100%;
-	width: 0.03ch;
+	width: 0.1ch;
 	top: 0px;
 	left: 2px;
 	background-color: var(--text-muted);
@@ -41,11 +41,10 @@
 	position: absolute;
 	display: block;
 	content: "";
+	height: 0.1ch;
+	width: 6px;
 	top: 14px;
 	left: 2px;
-	height: 0.03ch;
-	width: 6px;
-	margin: auto;
 	background-color: var(--text-muted);
 }
 
@@ -56,11 +55,10 @@
 	position: absolute;
 	display: block;
 	content: "";
+	height: 14px;
+	width: 0.1ch;
 	top: 0px;
 	left: 2px;
-	height: 14px;
-	width: 0.03ch;
-	margin: auto;
 	background-color: var(--text-muted);
 	background-repeat: repeat;
 }
