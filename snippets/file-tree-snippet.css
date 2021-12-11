@@ -2,7 +2,7 @@
 /* ──────────────────────────── by jdanielmourao ──────────────────────────── */
 
 .nav-folder-children .nav-file,
-.nav-folder-children .nav-folder { /*this is necessary for all of this to work*/
+.nav-folder-children .nav-folder {
 	position: relative;
 }
 
