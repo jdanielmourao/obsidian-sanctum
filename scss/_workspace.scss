@@ -486,21 +486,22 @@ body:not(.no-sanctum-icons)
     overflow: hidden;
     text-overflow: ellipsis;
     color: var(--text-normal);
-    padding: var.$size-1
+    padding: var.$size-2
              var.$size-2
              var.$size-1
              var.$size-2;
     width: 100%;
+	border:none;
 }
 
 .nav-folder,
 .nav-file {
-    padding: var.$size-0
-             var.$size-0
-             var.$size-0
-             var.$size-0;
-    margin-left: var.$size-0;
-    margin-right: var.$size-0;
+	padding: var.$size-0
+			 var.$size-0
+			 var.$size-0
+			 var.$size-0;
+	margin-left: var.$size-0;
+	margin-right: var.$size-0;
 }
 
 .nav-file-title,
