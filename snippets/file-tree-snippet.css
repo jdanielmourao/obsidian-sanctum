@@ -43,7 +43,7 @@
 	content: "";
 	top: 14px;
 	left: 2px;
-	height: 0.03ch !;
+	height: 0.03ch;
 	width: 6px;
 	margin: auto;
 	background-color: var(--text-muted);
