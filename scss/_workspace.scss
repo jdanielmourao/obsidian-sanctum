@@ -486,7 +486,7 @@ body:not(.no-sanctum-icons)
     overflow: hidden;
     text-overflow: ellipsis;
     color: var(--text-normal);
-    padding: var.$size-2
+    padding: var.$size-1
              var.$size-2
              var.$size-1
              var.$size-2;
@@ -695,6 +695,7 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
         display: inline-block;
         margin-right: var.$size-3;
         margin-left: var.$size-0;
+		vertical-align: -2px;
         
         body.no-file-icons & {
             display: none;

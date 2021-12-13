@@ -33,13 +33,19 @@ input[type='number'] {
 	bottom: var.$size-0;
 	top: var.$size-7;
 	width: 100%;
-	height: var.$size-7;
+	height: min-content;
 	background-color: var(--background-primary);
 	display: flex;
 	flex-direction: column;
 	padding: var.$size-0;
 	z-index: var(--layer-popover);
 
+	& .document-search {
+		height: var.$size-7;
+	}
+	& .document-replace {
+		height: var.$size-7;
+	}
 	& .document-search-button {
 		height: var.$scale-3;
 		font-size: var.$font-scale-00;
