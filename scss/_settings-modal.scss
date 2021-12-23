@@ -210,6 +210,7 @@
 	line-height: var.$leading-7;
 }
 
+
 .setting-hotkey.mod-empty { // "Blank", aka unset hotkey
 	color: var(--text-muted);
 	padding-right: var.$size-3;
@@ -218,16 +219,51 @@
 
 .setting-hotkey-icon.setting-delete-hotkey {
 	line-height: var.$leading-0; //centers x
+	margin-left: 4px;
+	background-color: var(--color-primary-1);
+	border: 1px solid var(--color-primary-2);
+
+	&:hover {
+		background-color: var.$color-red-7;
+		.theme-light & {
+			background-color: var.$color-red;
+		}
+	}
 }
 
 .hotkey-list-container {
 	padding-right: 0;
 
-	.hotkey-list-container .setting-item {
+	& .setting-item {
 		padding: var.$size-4
 				 var.$size-0
 				 var.$size-4
 				 var.$size-0;
+		display: flex;
+		flex-direction: row;
+		align-items: baseline;
+
+		& .setting-item-info {
+			margin-right: 0;
+		}
+		& .setting-item-control {
+			min-width: max-content;
+		
+			& .setting-hotkey {
+				line-height: var.$leading-3;
+				background-color: var(--color-primary-0);
+				border: 1px solid var(--color-primary-2);
+				padding: 2px 8px;
+				display: flex;
+				flex-direction: row;
+			}
+			& .setting-hotkey.mod-active {
+				background-color: var.$color-green;
+			}
+			& .setting-hotkey.has-conflict {
+				background-color: var.$color-red;
+			}
+		}
 	}
 }
 

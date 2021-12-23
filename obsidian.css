@@ -5262,13 +5262,45 @@ div.community-plugin-item .community-plugin-version {
 
 .setting-hotkey-icon.setting-delete-hotkey {
   line-height: 1em;
+  margin-left: 4px;
+  background-color: var(--color-primary-1);
+  border: 1px solid var(--color-primary-2);
+}
+.setting-hotkey-icon.setting-delete-hotkey:hover {
+  background-color: #941f1e;
+}
+.theme-light .setting-hotkey-icon.setting-delete-hotkey:hover {
+  background-color: #f15148;
 }
 
 .hotkey-list-container {
   padding-right: 0;
 }
-.hotkey-list-container .hotkey-list-container .setting-item {
+.hotkey-list-container .setting-item {
   padding: 12px 0px 12px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.hotkey-list-container .setting-item .setting-item-info {
+  margin-right: 0;
+}
+.hotkey-list-container .setting-item .setting-item-control {
+  min-width: max-content;
+}
+.hotkey-list-container .setting-item .setting-item-control .setting-hotkey {
+  line-height: 1.375em;
+  background-color: var(--color-primary-0);
+  border: 1px solid var(--color-primary-2);
+  padding: 2px 8px;
+  display: flex;
+  flex-direction: row;
+}
+.hotkey-list-container .setting-item .setting-item-control .setting-hotkey.mod-active {
+  background-color: #8c8d3b;
+}
+.hotkey-list-container .setting-item .setting-item-control .setting-hotkey.has-conflict {
+  background-color: #f15148;
 }
 
 .setting-editor-extra-setting-button.clickable-icon[aria-label="Open themes folder"] {
@@ -9184,5 +9216,3 @@ community:
 - templater-obsidian 
 
 */
-
-/*# sourceMappingURL=base.css.map */
