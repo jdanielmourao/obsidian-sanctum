@@ -87,8 +87,8 @@ body:not(body.plugin-sliding-panes-rotate-header) .workspace-leaf:not(.mod-activ
 	--background-primary: transparent;
 }
 
-.cm-scroller,
-.markdown-preview-view { //shadow on reading and editing modes, credit @mgmeyers
+:not(.is-mobile) .cm-scroller,
+:not(.is-mobile) .markdown-preview-view { //shadow on reading and editing modes, credit @mgmeyers
 	background:
 		linear-gradient(
 			var(--background-primary) 30%,
