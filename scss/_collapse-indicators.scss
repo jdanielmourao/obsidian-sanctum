@@ -1,38 +1,9 @@
 @use 'var';
-
-// Makes it so when a header or list is collapsed, an ellipsis appears to tell it has content
-// "..." Preview Mode
-.markdown-preview-view div.is-collapsed h1::after,
-.markdown-preview-view div.is-collapsed h2::after,
-.markdown-preview-view div.is-collapsed h3::after,
-.markdown-preview-view div.is-collapsed h4::after,
-.markdown-preview-view div.is-collapsed h5::after,
-.markdown-preview-view div.is-collapsed h6::after,
-.markdown-preview-view li.is-collapsed::after {
-	content: "…";
-	font-family: var(--font-preview);
-	font-weight: var(--font-regular);
-	color: var(--text-normal);
-	padding-left: var.$size-2;
-}
-
-// "..." Edit Mode
-.CodeMirror-foldmarker {
-	color: transparent;
-	margin-left: -1.5rem; // setting for iA Writer Quattro
-}
-
-.CodeMirror-foldmarker::after {
-	content: "…";
-	display: inline-block;
-	font-size: inherit;
-	color: var(--text-muted);
-	margin-left: 0; // if increased too much, it can bug the line height
-	visibility: visible;
-}
 // Live Preview
 .markdown-source-view.mod-cm6 .cm-foldPlaceholder {
 	color: var(--text-normal);
+	padding: 0;
+	margin-left: 4px;
 }
 // Collapse Icon in Frontmatter
 .frontmatter-collapse-indicator svg.right-triangle {
@@ -45,7 +16,7 @@
 	padding: 0;
 }
 
-.CodeMirror-foldgutter-folded,
+.CodeMirror-foldgutter-folded, // Source Mode (legacy)
 .CodeMirror-foldgutter-open {
 	cursor: pointer;
 	margin-top: var.$size-0;
@@ -63,22 +34,22 @@ span[title="Unfold line"],
 }
 
 span[title="Fold line"],
-.CodeMirror-foldgutter-folded:after {
+.CodeMirror-foldgutter-folded:after { // color of muted text (color-primary-7)
 	.theme-light & {
-		background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(20, 1.3%, 43.7%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
+		background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(340, 1.9%, 30.4%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
 	}
 	.theme-dark & {
-		background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(34.3, 21.2%, 93.5%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
+		background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(24, 4.4%, 77.8%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
 	}
 }
 
 .CodeMirror-foldgutter-open:after,
-span[title="Unfold line"] {
+span[title="Unfold line"] { // color of muted text
 	.theme-light & {
-		background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,10 26,20 24.6,21.4 16,12.8 7.4,21.4 6,20 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
+		background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(340, 1.9%, 30.4%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,10 26,20 24.6,21.4 16,12.8 7.4,21.4 6,20 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
 	}
 	.theme-dark & {
-		background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(34.3, 21.2%, 93.5%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,10 26,20 24.6,21.4 16,12.8 7.4,21.4 6,20 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
+		background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(24, 4.4%, 77.8%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,10 26,20 24.6,21.4 16,12.8 7.4,21.4 6,20 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
 	}
 }
 
@@ -92,7 +63,7 @@ span[title="Fold line"],
 	opacity:0.5;
 }
 
-span[title="Unfold line"]:hover,
+span[title="Unfold line"]:hover, //end of source mode (legacy)
 .CodeMirror-code > div:hover .CodeMirror-foldgutter-open:hover:after,
 .CodeMirror-code > div:hover .CodeMirror-foldgutter-folded:hover:after {
 	opacity:1;

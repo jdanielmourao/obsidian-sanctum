@@ -4,34 +4,45 @@
 .cm-s-obsidian .cm-strong,
 .markdown-preview-section strong,
 strong { /* Bold */
-    font-style: normal;
-    color: currentColor;
-    font-weight: var(--font-bold);
+	font-style: normal;
+	color: currentColor;
+	font-weight: var(--font-bold);
 }
 /* ───────────────────────────────── Italic ───────────────────────────────── */
 .cm-em,
 em {  /* Italic */
-    font-style: italic;
-    font-weight: var(--font-light);
+	font-style: italic;
+	font-weight: var(--font-light);
 }
 
 /* ──────────────────────── Highlighting & Selection ──────────────────────── */
 // highlight active line
+.cm-active.cm-line,
 .CodeMirror-activeline .CodeMirror-linebackground {
-	background-color: var(--color-primary-20);
-}
-// highlight active line number + gutter
-.CodeMirror-activeline-gutter {
-    background-color: var(--color-primary-20);
-}
-// accent color active line highlight
-.accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
-    background-color: hsla(var(--color-l-accent-h),var(--color-l-accent-s),var(--color-l-accent-l),.35);
-}
-.accent-active-line .CodeMirror-activeline-gutter {
-    background-color: hsla(var(--color-l-accent-h),var(--color-l-accent-s),var(--color-l-accent-l),.35);
+	position: relative;
+	background-color: var(--color-primary-2);
 }
 
+// highlight active line number + gutter
+.CodeMirror-activeline-gutter {
+	background-color: var(--color-primary-2);
+}
+// accent color active line highlight
+.accent-active-line .cm-active.cm-line,
+.accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
+	background-color: hsla(var(--color-l-accent-h),var(--color-l-accent-s),var(--color-l-accent-l),.3);
+}
+.theme-dark.accent-active-line .cm-active.cm-line,
+.theme-dark.accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
+	background-color: hsla(var(--color-d-accent-h),var(--color-d-accent-s),var(--color-d-accent-l),.3);
+}
+
+.accent-active-line .CodeMirror-activeline-gutter {
+	background-color: hsla(var(--color-l-accent-h),var(--color-l-accent-s),var(--color-l-accent-l),.3);
+}
+.theme-dark.accent-active-line .CodeMirror-activeline-gutter {
+	background-color: hsla(var(--color-d-accent-h),var(--color-d-accent-s),var(--color-d-accent-l),.3);
+}
 // ───────────────────────────── text selection ───────────────────────────── */
 // for text selection, check the --text-selection custom property in _var
 
@@ -40,67 +51,80 @@ em {  /* Italic */
 /* ───────────────── Yellow Highlight (Regular highlight 1) ───────────────── */
 .cm-s-obsidian span.cm-formatting-highlight,
  .cm-s-obsidian span.cm-highlight {
-    background-color: unset;
+	background-color: unset;
 }
 .markdown-preview-view mark {
-    overflow: hidden;
-    background-color: transparent;
-    padding: 0 2px;
-    vertical-align: middle;
+	overflow: hidden;
+	background-color: transparent;
+	padding: 0 2px;
+	vertical-align: middle;
 }
 .markdown-preview-view mark,
  span.cm-highlight {
-    font-weight: normal;
-    color: var(--text-normal);
-    background-color: transparent;
-    background-image: linear-gradient(120deg,var(--color-highlight-1),var(--color-highlight-1));
-    background-position: 0 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 3px;
-    transition: background var.$duration-slow-1 var.$motion-entrance-productive;
+	font-weight: var(--font-regular);
+	color: var(--text-normal);
+	text-decoration: underline solid var(--color-highlight-1) 2.5px;
+	background-color: transparent;
+	background-image: linear-gradient(120deg,var(--color-highlight-1),var(--color-highlight-1));
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	background-size: 100% 0px;
+	transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
 }
 .markdown-preview-view mark:hover,
  span.cm-highlight:hover {
-    background-size: 100% 100%;
-    color: var(--color-highlight-1-h);
+	text-decoration: none;
+	background-size: 100% 100%;
+	color: var(--color-highlight-1-h);
 }
 
 /* ──────────────────────────── Cyan Highlight 2 ──────────────────────────── */
 
 .markdown-preview-view em > mark,
  span.cm-em.cm-highlight {
-    font-style: normal;
-    font-weight: normal;
-    background-image: linear-gradient(120deg,var(--color-highlight-2),var(--color-highlight-2));
-    background-position: 0 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 3px;
-    transition: background var.$duration-slow-1 var.$motion-entrance-productive;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: underline solid var(--color-highlight-2) 2.5px;
+	background-image: linear-gradient(120deg,var(--color-highlight-2),var(--color-highlight-2));
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	background-size: 100% 0px;
+	transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
 }
 .markdown-preview-view em > mark:hover,
  span.cm-em.cm-highlight:hover {
-    background-size: 100% 100%;
-    color: var(--color-highlight-2-h);
+	text-decoration: none;
+	background-size: 100% 100%;
+	color: var(--color-highlight-2-h);
 }
 
 /* ─────────────────────────── Magenta Highlight 3 ────────────────────────── */
 .markdown-preview-view strong > mark,
  span.cm-strong.cm-highlight {
-    font-weight: normal;
-    background-image: linear-gradient(120deg,var(--color-highlight-3),var(--color-highlight-3));
-    background-position: 0 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 3px;
-    transition: background var.$duration-slow-1 var.$motion-entrance-productive;
+	font-weight: normal;
+	text-decoration: underline solid var(--color-highlight-3) 2.5px;
+	background-image: linear-gradient(120deg,var(--color-highlight-3),var(--color-highlight-3));
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	background-size: 100% 0px;
+	transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
 }
 .markdown-preview-view strong > mark:hover,
  span.cm-strong.cm-highlight:hover {
-    background-size: 100% 100%;
-    color: var(--color-highlight-3-h);
+	text-decoration: none;
+	background-size: 100% 100%;
+	color: var(--color-highlight-3-h);
 }
 
 /* ────────────────────────────── Strikethrough ───────────────────────────── */
 .cm-strikethrough,
 del {
-    text-decoration: line-through;
+	text-decoration: line-through;
+}
+
+/* ────────────────────────── Spell Check highlight ───────────────────────── */
+.CodeMirror .cm-spell-error {
+	background-image: none;
+	text-decoration: underline solid var.$color-red-5;
+	text-decoration-thickness: 2px;
 }

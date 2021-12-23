@@ -1,13 +1,13 @@
 @use 'var';
 
 div#wordsprint div.status.pending {
-	background-color: var(--color-primary-10);
-	color: #{var.$color-white};
+	background-color: var(--color-primary-1);
+	color: #{var(--color-primary-0)};
 }
 
 body div#wordsprint div#statsPanel button:not(.statsTab):not(.goalsTab),
 body div#wordsprint div#sprintActionPanel button:not(.statsTab):not(.goalsTab) {
-	color: var(--background-primary);
+	color: var(--text-normal);
 	border-radius: 0px;
 	padding: var.$size-3
 			 var.$size-8
@@ -19,17 +19,15 @@ body div#wordsprint div#sprintActionPanel button:not(.statsTab):not(.goalsTab) {
 }
 body .view-content div#wordsprint div#sprintActionPanel button.sprintStart {
 	background-color: var.$color-green;
-	color: #{var.$color-white};
+	color: var.$color-white;
 	border-radius: 8px;
 }
 body .view-content div#wordsprint div#sprintActionPanel button.sprintStop {
 	background-color: var.$color-red;
-	color: #{var.$color-white};
+	color: var.$color-white;
 	border-radius: 8px;
 }
 
-div#wordsprint button.statsTab:hover,
-div#wordsprint button.goalsTab:hover,
 div#wordsprint button.statsTab,
 div#wordsprint button.goalsTab {
 	border-radius: 0px;
@@ -41,9 +39,28 @@ div#wordsprint button.goalsTab {
 	font-weight: var(--font-regular);
 }
 
+
+div#wordsprint #sectionTab {
+	border: 0px solid transparent;
+}
+
+div#wordsprint #sectionTab .goalsTab,
+div#wordsprint #sectionTab .statsTab {
+	background-color: var(--background-primary);
+	border-top: 3px solid transparent;
+	color: var(--text-normal);
+}
+
+div#wordsprint #sectionTab .active {
+	background-color: var(--background-primary);
+	border-top: 3px solid var(--color-accent);
+	color: var(--text-normal);
+}
+
 #wordsprint #statsPanel #sprintViewStats button.viewStats{
 	margin: 0;
-	background-color: var(--color-primary-40);
+	background-color: var(--color-primary-2);
+	border: 1px solid var(--color-primary-0);
 	color: var(--text-normal);
 	border-radius: 8px;
 }
@@ -53,19 +70,20 @@ div#wordsprint div#sprintViewStats {
 }
 
 body div#wordsprint .success {
-	color: #{var.$color-white};
+	color: #{var(--color-primary-0)};
 	background-color: var.$color-green;
 }
 body div#wordsprint .warning {
-	color: #{var.$color-black};
+	color: #{var(--color-primary-10)};
 	background-color: var.$color-yellow;
 }
 
 body div#wordsprint .danger {
-	color: #{var.$color-white};
+	color: #{var(--color-primary-0)};
 	background-color: var.$color-red;
 }
 
 div#wordsprint button {
 	font-family: var(--font-ui);
 }
+

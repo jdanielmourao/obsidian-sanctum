@@ -18,9 +18,9 @@ html body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
 }
 
 .plugin-sliding-panes-rotate-header .workspace-leaf:not(.mod-active) .workspace-leaf-content[data-type='markdown'] .markdown-preview-view {
-	--text-normal: var(--color-primary-80);
-	--text-muted: var(--color-primary-70);
-	--text-faint: var(--color-primary-50);
+	--text-normal: var(--color-primary-6);
+	--text-muted: var(--color-primary-6);
+	--text-faint: var(--color-primary-4);
 	--color-accent: hsla(var(--color-l-accent-h),var(--color-l-accent-s),var(--color-l-accent-l), .6);
 	--text-accent: var(--color-accent);
 	transition: var.$motion-standard-expressive var.$duration-moderate-1;

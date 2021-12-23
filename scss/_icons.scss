@@ -148,7 +148,7 @@ body:not(.no-sanctum-icons) svg.workspace-glyph,
 body:not(.no-sanctum-icons) svg.wrench-screwdriver-glyph,
 body:not(.no-sanctum-icons) svg.yesterday-glyph,
 body:not(.no-sanctum-icons) svg.bar-graph,
-body:not(.no-sanctum-icons) svg.breadcrumbs-trail-icon,
+body:not(.no-sanctum-icons) svg.BC-trail-icon,
 body:not(.no-sanctum-icons) svg.longform,
 body:not(.no-sanctum-icons) svg.sweep,
 body:not(.no-sanctum-icons) svg.excalidraw-icon,
@@ -314,7 +314,7 @@ body:not(.no-sanctum-icons) svg.workspace-glyph > path,
 body:not(.no-sanctum-icons) svg.wrench-screwdriver-glyph > path,
 body:not(.no-sanctum-icons) svg.yesterday-glyph > path,
 body:not(.no-sanctum-icons) svg.bar-graph > path,
-body:not(.no-sanctum-icons) svg.breadcrumbs-trail-icon > path,
+body:not(.no-sanctum-icons) svg.BC-trail-icon > path,
 body:not(.no-sanctum-icons) svg.longform > path,
 body:not(.no-sanctum-icons) svg.sweep > path,
 body:not(.no-sanctum-icons) svg.excalidraw-icon > path,
@@ -890,7 +890,7 @@ body:not(.no-sanctum-icons) svg.bar-graph {
 }
 
 // Breadcrumbs Plugin
-body:not(.no-sanctum-icons) svg.breadcrumbs-trail-icon {
+body:not(.no-sanctum-icons) svg.BC-trail-icon {
 	-webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M30,12V4H22V7H18a2.0023,2.0023,0,0,0-2,2v6H10V12H2v8h8V17h6v6a2.0023,2.0023,0,0,0,2,2h4v3h8V20H22v3H18V9h4v3ZM8,18H4V14H8Zm16,4h4v4H24ZM24,6h4v4H24Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
 

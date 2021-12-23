@@ -2,7 +2,7 @@
 
 .prompt {
 	padding: var.$size-5;
-	box-shadow: var.$elevation-2;
+	box-shadow: var.$elevation-1;
 
 	&-results {
 		padding: var.$size-5
@@ -36,7 +36,7 @@
 	.suggestion-container & .suggestion-flair {
 		margin-left: -4px;
 		transform: scale(.8);
-		margin-top: -2px
+		margin-top: -2px;
 	}
 	&-item { // prompt suggestion
 		position: relative;
@@ -47,6 +47,14 @@
 		cursor: pointer;
 		white-space: pre-wrap;
 		line-height: var.$leading-3;
+		
+		& .suggestion-hotkey {
+			background-color: var(--color-primary-0);
+			border: 1px solid var(--color-border-1);
+		}
+		&:hover .suggestion-hotkey {
+			border-color: var(--color-border-2);
+		}
 	}
 	&-item:hover {
 		background-color: var(--color-hover);

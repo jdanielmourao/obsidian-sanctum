@@ -52,7 +52,7 @@
 }
 
 .modal.mod-settings {
-	box-shadow: var.$elevation-2;
+	box-shadow: var.$elevation-1;
 	height: 80vh;
 	overflow: visible;
 }
@@ -67,11 +67,11 @@
 	left: var.$size-0;
 	width: 100%;
 	height: 100%;
-	background-color: hsla(var(--hsl-color-primary-w), .3);
+	background-color: rgba(var(--rgb-primary-0), .3);
 	backdrop-filter: blur(5px); // blurs the background
 
 	.no-blur & {  // option to remove blur from background of settings
-		background-color: hsla(var(--hsl-color-primary-w), .6);
+		background-color: rgba(var(--rgb-primary-0), .6);
 		backdrop-filter: blur(0px);
 	}
 }
@@ -92,13 +92,14 @@
 }
 
 .vertical-tab-nav-item:hover {
-	border-left-color: var(--color-hover);
+	border-left-color: var(--color-primary-3);
+	color: var(--text-normal);
 }
 
 .vertical-tab-nav-item.is-active {
 	color: var(--text-normal);
 	border-left-color: var(--color-accent);
-	background-color: var(--color-primary-w);
+	background-color: var(--color-primary-2);
 }
 
 .setting-item { // sections of the main panel
@@ -123,21 +124,21 @@
 }
 
 .vertical-tab-header-group-title { // settings left panel group title
-    font-size: var.$font-scale-00;
-    font-weight: var(--font-semi-bold);
-    color: var(--text-muted);
-    text-transform: capitalize;
-    color: var(--text-normal);
-    padding: var.$size-3
-             var.$size-5;
-    user-select: none;
-    height: 100%;
+	font-size: var.$font-scale-00;
+	font-weight: var(--font-semi-bold);
+	color: var(--text-muted);
+	text-transform: capitalize;
+	color: var(--text-normal);
+	padding: var.$size-3
+			 var.$size-5;
+	user-select: none;
+	height: 100%;
 }
 
 .horizontal-tab-content,
- .vertical-tab-content {
-    background-color: var(--background-secondary);
-    padding: 5px 24px;
+.vertical-tab-content {
+	background-color: var(--background-primary);
+	padding: 5px 24px;
 }
 
 // Community Themes
@@ -150,36 +151,29 @@
 				 var.$size-1;
 	}
 	& .theme-list .community-theme {
-		padding:var.$size-3
-				var.$size-3
-				var.$size-3
-				var.$size-3;
-		margin: var.$size-3
-				var.$size-3
-				var.$size-3
-				var.$size-3;
+		padding:var.$size-3 var.$size-3 var.$size-3 var.$size-3;
+		margin: var.$size-3 var.$size-3 var.$size-3 var.$size-3;
+		border: 1px solid transparent;
 
 		&:hover {
 			background-color: var(--color-hover);
-			border-radius: 0;
+			border: 1px solid var(--color-primary-3);
+			border-radius: 8px;
 		}
 		&.is-selected {
-			background-color: var(--color-hover);
-			border-radius: 0;
-		//    outline: 1.5px solid var(--color-accent);
-		//    outline-offset: -1.5px;
-		}
-		&:hover {
-			background-color: var(--color-hover);
+			background-color: var(--color-primary-0);
+			border-radius: 8px;
+			border: 1px solid var(--color-border-1);
 		}
 		& .modal-button-container button {
+			line-height: var.$leading-0;
 			background-color: var(--color-accent);
-			color: #{var.$color-black};
+			color: var(--color-primary-10);
 			border-radius: 0;
 			padding: var.$size-2 var.$size-5;
 
 			&.mod-cta {
-				background-color: var(--color-primary-30);
+				background-color: var(--color-primary-3);
 				color: var(--text-normal);
 			}
 		}
@@ -207,9 +201,23 @@
 	width: 20px;
 }
 
+.modal-content .hotkey-settings-container input {
+	margin-left: 1px;
+}
+
+.setting-hotkey.mod-active,
+.setting-hotkey.has-conflict {
+	line-height: var.$leading-7;
+}
+
 .setting-hotkey.mod-empty { // "Blank", aka unset hotkey
+	color: var(--text-muted);
 	padding-right: var.$size-3;
 	padding-top: var.$size-1;
+}
+
+.setting-hotkey-icon.setting-delete-hotkey {
+	line-height: var.$leading-0; //centers x
 }
 
 .hotkey-list-container {
@@ -235,4 +243,11 @@
 .sync-file-tree-container.file-tree .file-tree-item-icon svg.folder {
 	height: 16px;
 	width: 16px;
+}
+
+//fix for settings headings overlapping
+.vertical-tab-content {
+	h1, h2, h3, h4, h5, h6 {
+	line-height: var.$leading-0;
+	}
 }

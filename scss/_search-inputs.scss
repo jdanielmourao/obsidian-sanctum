@@ -1,11 +1,15 @@
 @use 'var';
 
+.search-result-file-title {
+	font-weight: var(--font-semi-bold);
+}
+
 input[type='text'],
 input[type='search'],
 input[type='email'],
 input[type='password'],
 input[type='number'] {
-	background: var(--color-primary-w);
+	background: var(--color-primary-0);
 	color: var(--text-normal);
 	font-family: var(--font-ui);
 	padding: var.$size-3 var.$size-5;
@@ -14,17 +18,15 @@ input[type='number'] {
 	outline: none;
 	height: var.$scale-3;
 	margin: 0;
+	margin-bottom: 1px; //makes sure there's space for the whole outline in focus to show
 	border-color: transparent;
 	border-bottom: 1px solid var(--color-border-2);
 
 	&:focus {
 		border-bottom: 0px solid transparent;
-		outline: 1px solid var(--color-blue);
+		outline: 1px solid var.$color-blue-5;
+		border: none;
 	}
-}
-
-.document-search-container.mod-replace-mode { // Find and Replace
-	height: var.$size-10;
 }
 
 // Document Search
@@ -63,9 +65,9 @@ input[type='number'] {
 }
 
 body:not(.is-mobile) .document-search, body:not(.is-mobile) .document-replace {
-    width: var(--line-width);
-    margin: 0 auto;
-    padding: 0 4px;
+	width: var(--line-width);
+	margin: 0 auto;
+	padding: 0 4px;
 }
 
 .document-search-close-button:before {
@@ -124,11 +126,11 @@ body:not(.is-mobile) .document-search, body:not(.is-mobile) .document-replace {
 
 .search-result-file-matched-text { // matched highlighted text
 	color: var(--text-normal);
-	background-color: var.$color-green-300;
+	background-color: var.$color-green-3;
 
 	.theme-dark & {
 		color: var(--text-normal);
-		background-color: var.$color-green-700;
+		background-color: var.$color-green-5;
 	}
 }
 
@@ -164,12 +166,4 @@ body:not(.is-mobile) .document-search, body:not(.is-mobile) .document-replace {
 
 .workspace-leaf-content .search-result-container.mod-global-search {
 	padding: var.$size-5;
-}
-
-.modal.mod-settings .vertical-tabs-container .plugin-list-plugins .setting-item .search-input-container {
-	margin-right: 1px; // this makes the outline show completely
-}
-
-.modal.mod-settings .vertical-tabs-container .hotkey-settings-container .hotkey-search-container {
-	margin-left: 1px;
 }

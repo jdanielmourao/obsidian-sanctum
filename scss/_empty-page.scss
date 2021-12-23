@@ -2,20 +2,54 @@
 
 .empty-state {
 	&-title {
-		margin-top: var.$size-6;
-		font-weight: var(--font-bold);
-		font-size: var.$font-scale-5;
+		display: flex;
+		flex-direction: column;
+		font-weight: var(--font-semi-bold);
+		font-size: var.$font-scale-1;
+		line-height: var.$leading-3;
 		position: relative;
+		margin: 0;
+		color: var(--text-normal);
+/*
+		&:after {
+			order: -1;
+			display: flex;
+			align-self: flex-start;
+			justify-content: center;
+			content: "Sanctum Theme";
+			text-transform: capitalize;
+			font-size: var.$font-scale-5;
+			color: var(--text-normal);
+			line-height: var.$leading-0;
+		}*/
+		&:before {
+			display: flex;
+			align-self: flex-start;
+			content: "Happy Holidays! 🎉";
+			text-transform: uppercase;
+			font-size: var.$font-scale-4;
+			line-height: var.$leading-0;
+			padding-bottom: 4px;
+			border-bottom: 1px solid var(--text-faint);
+			margin-bottom: 4px;
+		}
 	}
 	&-action-list {
 		font-size: var.$font-scale-1;
-		line-height: var.$leading-4;
+		line-height: var.$leading-3;
 		color: var(--text-muted);
-		margin-top: var.$size-5;
+		margin-top: var.$size-0;
 	}
 	&-action {
 		cursor: pointer;
-		line-height: var.$leading-7;
+		font-size: var.$font-scale-1;
+		line-height: var.$leading-3;
+
+		&::before {
+			display: inline-flex;
+			content: "↳";
+			padding-right: 4px;
+		}
 	}
 	&-action:hover {
 		color: var(--color-accent);

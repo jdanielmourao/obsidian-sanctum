@@ -1,13 +1,13 @@
 @use 'var';
 
 .modal {
-    border:none;
-    background:var(--background-primary);
-    border-radius: 6px;
-    overflow:hidden;
-    padding: var.$size-5
-             var.$size-5
-             var.$size-3;
+	border:none;
+	background:var(--background-primary);
+	border-radius: 6px;
+	overflow:hidden;
+	padding: var.$size-5
+			 var.$size-5
+			 var.$size-3;
 
 	&-close-button {
 		right: var.$size-4;

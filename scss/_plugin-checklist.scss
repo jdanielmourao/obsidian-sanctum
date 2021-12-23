@@ -40,7 +40,7 @@
 		margin-right: var.$size-3;
 		margin-left: var.$size-0;
 		position: relative;
-		border: 1.5px solid var(--color-primary-40);
+		border: 1.5px solid var(--color-primary-4);
 		border-radius: 4px;
 	}
 	& li.classic .checkbox:hover,
@@ -56,12 +56,12 @@
 		background-color: var(--background-primary);
 	}
 	.theme-light & header .count {
-		background: var(--color-primary-20);
+		background: var(--color-primary-2);
 		font-weight: var(--font-regular);
 	}
 	& header .count {  // Counter
 		padding: var(--todoList-countPadding);
-		background: var(--color-primary-10);
+		background: var(--color-primary-1);
 		border-radius: var.$size-7;
 		font-size: var.$font-scale-000;
 		font-weight: var(--font-light);

@@ -12,25 +12,38 @@
 	& .clickable-icon svg.gear{
 		opacity: .8;
 	}
+	& .day {
+		&:hover {
+			background-color: var(--color-primary-0);
+		}
+		&:active {
+			background-color: var(--color-hover);
+		}
+	}
 	// highlighted day
 	& .day.fantasy-day.viewing {
-		background-color: var(--color-hover);
+		background-color: var(--color-primary-0);
 		border: none;
 		padding: 10px 8px 2px 8px;
+		&:hover {
+			background-color: var(--color-primary-0);
+		}
+		&:active {
+			background-color: var(--color-primary-2);
+		}
 	}
 	& .day.fantasy-day.active {
-		background-color: var(--background-primary);
-		//border-bottom: 2px solid var(--color-accent);
+		background-color: var(--color-primary-2);
 		padding: 10px 8px 2px 8px;
-		border-radius: 0px;
-		box-shadow: inset 0px -3px var(--color-accent);
-	}
-	& .day.fantasy-day.active:hover {
-		background-color: var(--color-hover);
-		transition: background-color var.$duration-slow-2 var.$motion-entrance-expressive;
-	}
-	.theme-dark & .day.fantasy-day.active:hover {
-		background-color: var(--color-primary-20);
+		border-radius: 4px;
+
+		&:hover {
+			background-color: var(--color-primary-3);
+			transition: background-color var.$duration-slow-2 var.$motion-entrance-expressive;
+		}
+		&:active {
+			background-color: var(--color-accent);
+		}
 	}
 	& div.weeks {
 		border-radius: 0px;
@@ -70,8 +83,8 @@
 	--color-text-today: var(--text-accent);
 	--color-text-weeknum: var(--text-muted);
 
-	--color-arrow: var(--color-primary-30);
-	--color-arrow-hover: var(--color-primary-70);
+	--color-arrow: var(--color-primary-3);
+	--color-arrow-hover: var(--color-primary-6);
 
 	& .day,
 	& .week-num {
@@ -86,6 +99,9 @@
 	}
 	& .day:hover {
 		background-color: var(--color-hover);
+	& .day:active {
+		background-color: var(--color-accent);
+	}
 	}
 	& thead {
 		border-top: 1.5px solid var(--color-border-1);
@@ -135,10 +151,10 @@
 		color: var(--color-background-day-empty);
 	}
 	& .reset-button {
-		color: var(--color-primary-60);
+		color: var(--color-primary-5);
 	}
 	& .reset-button:hover {
-		color: var(--color-primary-k);
+		color: var(--color-primary-9);
 	}
 	& .dot-container{
 		background: transparent;

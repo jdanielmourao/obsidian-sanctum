@@ -23,6 +23,10 @@ ol > li::marker {
 	& ol li:nth-child(n+10) ol .list-collapse-indicator {
 		margin-left: -3rem;
 	}
+	.relationship-lines & ul .list-collapse-indicator { // generic ul and task list
+		margin-left: -.9rem;
+		color: var(--text-faint);
+	}
 }
 
 /* ────────────────────────────── Ordered List ────────────────────────────── */
@@ -101,22 +105,88 @@ li {
 }
 
 /* ─────────────────────────── Relationship Lines ─────────────────────────── */
+/*
 .relationship-lines li:not(.task-list-item):not(.footnotes li) {
 	padding-left: .2rem;
-	border-left: 1.5px solid var(--color-primary-20);
+	border-left: 1.5px solid var(--color-primary-2);
 }
 
 .relationship-lines-alternating {
 	& li:not(.task-list-item):not(.footnotes li) {
 		padding-left: .2rem;
-		border-left: 1.5px solid var(--color-primary-20);
+		border-left: 1.5px solid var(--color-primary-2);
 	}
 
 	& li:nth-child(even):not(.task-list-item):not(.footnotes li) {
 		padding-left: .2rem;
-		border-left: 1.5px solid var(--color-primary-40);
+		border-left: 1.5px solid var(--color-primary-4);
 	}
+}*/
+
+/* ────────────────────────── New Relationship Lines ───────────────────────── */
+.relationship-lines ul {
+	list-style-type: none;
 }
+
+ul li {
+	position: relative;
+	margin-bottom: 0;
+}
+
+.relationship-lines ul > li:before {
+	content: "";
+}
+
+.relationship-lines ul > li > ul > li::before {
+	content: "";
+}
+
+// level 2
+.relationship-lines ul > li > ul > li::before {
+	position: absolute;
+	display: block;
+	content: "";
+	height: 100%;
+	width: 1px;
+	top: 1px;
+	left: -24px;
+	background-color: var(--text-faint);
+}
+
+.relationship-lines ul > li > ul > li::after {
+	position: absolute;
+	display: block;
+	content: "";
+	height: 1px;
+	width: 12px;
+	top: 12px;
+	left: -24px;
+	background-color: var(--text-faint);
+}
+
+.relationship-lines ul > li > ul > li:last-child:before {
+	position: absolute;
+	display: block;
+	content: "";
+	height: 12px;
+	width: 1px;
+	top: 0px;
+	left: -24px;
+	background-color: var(--text-faint);
+}
+
+.relationship-lines ul > li > ul > li:last-child:after {
+	position: absolute;
+	display: block;
+	content: "";
+	height: 1px;
+	width: 12px;
+	top: 12px;
+	left: -24px;
+	background-color: var(--text-faint);
+}
+
+/* ──────────────────────────────── Outliner ──────────────────────────────── */
 
 // Some Outliner Edit Mode Corrections 
 .outliner-plugin-bls .cm-s-obsidian span span.cm-formatting-list-ul:before {

@@ -2,74 +2,54 @@
 
 .center-hr .cm-s-obsidian .HyperMD-hr.CodeMirror-line span.cm-hr,
 .cm-s-obsidian .HyperMD-hr.CodeMirror-line span.cm-hr {
-    color: var(--text-muted);
+	color: var(--text-muted);
 }
 
-// Horizontal line in edit mode (in active line)
-.markdown-source-view.mod-cm6 {
-    &:not(.is-live-preview)  span.cm-hr::after { // source mode
-        content: "";
-        position: absolute;
-        background:var(--text-muted);
-        height: 1.5px;
-        width: calc(100% - 2.1rem); // makes room for "---" for ease of typing
-        left: 1.6rem;
-        top: 48%; // hr isn't in dead center
-    }
-    &.is-live-preview div.cm-line { // live preview
-        border: none;
-    }
-}
-
-// Horizontal line in source mode (when leaving active line)
-div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr {
-    color: transparent;
-}
-div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr::after {
-    content: "";
-    position: absolute;
-    background:var(--text-muted);
-    height: 1.5px;
-    width: 100%;
-    left: 0;
-    top: 48%;
+// Horizontal line in live preview (in active line)
+.markdown-source-view {
+	&.is-live-preview span.cm-hr::after {
+		content: "";
+		position: absolute;
+		background:var(--text-muted);
+		height: 1px;
+		width: calc(100% - 2.1rem); // makes room for "---" for ease of typing
+		left: 1.6rem;
+		top: 50%;
+	}
+	&.is-live-preview div.cm-line { // removes that extra line in live preview
+		border: none;
+	}
 }
 
 // Preview Mode hr
 .markdown-preview-view hr {
-    border-top: 1.5px solid;
-    border-color: var(--background-modifier-border);
+	border-top: 1px solid;
+	border-color: var(--background-modifier-border);
 }
 
 div.hr {
-    border-top: 1px solid;
-    border-color: var(--background-modifier-border);
-    margin: var.$size-6 0;
-    border-width: 1px;
-    margin-block-start: var.$size-3;
-    margin-block-end: var.$size-3;
+	border-top: 1px solid;
+	border-color: var(--background-modifier-border);
+	margin: var.$size-6 0;
+	border-width: 1px;
+	margin-block-start: var.$size-3;
+	margin-block-end: var.$size-3;
 }
 
 .markdown-source-view.mod-cm6 div.hr {
-    margin: 0;
+	margin: 0;
 }
-
 
 // center hr
 .center-hr {
-    & div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr,
-    & .cm-s-obsidian span.cm-hr {
-        display: block;
-        text-align: center;
-        color: var(--text-normal);
-    }
-    & div>.CodeMirror-line span.cm-hr::after,
-    & div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr::after {
-        content: none;
-    }
-}
-
-// no edit mode WYSIWYG hr
-.no-editmode-hr .cm-s-obsidian span.cm-hr::after {
-    display: none;
+	& div:not(.cm-active.cm-line)>.cm-line span.cm-hr,
+	& .cm-active.cm-line > span.cm-hr {
+		display: block;
+		text-align: center;
+		color: var(--text-normal);
+	}
+	& div>.cm-line span.cm-hr::after,
+	& div:not(.cm-active.cm-line)>.cm-line span.cm-hr::after {
+		content: none;
+	}
 }

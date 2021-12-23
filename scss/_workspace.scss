@@ -3,38 +3,78 @@
 Title Bar
 Side Dock Ribbon
 Panels
-    Nav
-    Tabs
+	Nav
+	Tabs
 Panel Collapsing Buttons
 Status Bar
-*/ 
+*/
 
 
 /* ──────────────────────────────── Title Bar ─────────────────────────────── */
-.titlebar {
-    background: var(--color-primary);
-    border-bottom: 1.5px solid var(--color-border-1);
+body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
+	padding-top: 28px;
+}
 
-    &-button-container.mod-left,
-    &-text,
-    &-button-container.mod-right,
-    &-left {
-        margin-top: var.$size-0;
-    }
-    &-text {
-        margin-top: 3px;
-    }
-	.no-titlebar-title &-text {
-		display: none;
+body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
+	top: 0;
+	padding-top: 0;
+	border-bottom: 1px solid var(--color-border-1);
+}
+
+.titlebar {
+	line-height: 1;
+	height: 28px;
+	padding-top: 0;
+	background-color: var(--color-primary-0);
+
+	&-inner {
+		color: var(--text-muted);
+		height: 100%;
 	}
-    &-button {
-        -webkit-app-region: no-drag;
-        padding: var.$size-2
-                 var.$size-4;
-        cursor: pointer;
-        opacity: 0.5;
-        display: inline-block;
-    }
+	&-text {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--text-faint);
+		display: visible;
+		letter-spacing: 0;
+		font-weight: 500;
+	}
+	&-button {
+		display: flex;
+		align-items: center;
+		border-radius: 4px;
+		margin-right: 5px;
+		padding: 2px 4px;
+		transition: 100ms opacity ease-out;
+	
+		&:hover {
+			background-color: var(--color-primary-0);
+			color: var(--text-normal);
+		}
+		&.mod-close {
+			margin-right: 0;
+	
+			&:hover {
+				background-color: var(--color-primary-0);
+				color: var.$color-red;
+			}
+		}
+	}
+	&-button-container {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		top: 0;
+	
+		&.mod-right .titlebar-button {
+			margin-left: 0;
+			border-radius: 0;
+			height: 100%;
+			align-items: center;
+			padding: 2px 16px;
+		}
+	}
 }
 
 /* ───────────────────────────────── Panels ───────────────────────────────── */
@@ -43,228 +83,249 @@ Status Bar
 
 /* ─────────────────────────────── Tab Header ─────────────────────────────── */
 .workspace-tab-header-container {
-    background-color: var(--background-primary);
-    height: var.$size-7;
-    padding-top: var.$size-0;
-    padding-bottom: var.$size-0;
-    padding-left: var.$size-5;
-    padding-right: var.$size-5;
-    border-bottom: 1px solid var(--color-border-1);
-    
-    .workspace-split.mod-left-split & {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-    .workspace-split.mod-right-split & {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
+	background-color: var(--background-primary);
+	height: 33px;
+	padding-top: var.$size-0;
+	padding-bottom: var.$size-0;
+	padding-left: var.$size-5;
+	padding-right: var.$size-5;
+	border-bottom: 1px solid var(--color-border-1);
+
+	.workspace-split.mod-left-split & {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+	.workspace-split.mod-right-split & {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
 }
 
 /* ──────────────────────────── Tab Header Icons ──────────────────────────── */
 .workspace-split.mod-left-split,
 .workspace-split.mod-right-split {
-    & .workspace-tab-header-inner {
-        padding: var.$size-3
-                 var(--size-tab-header)
-                 var.$size-3
-                 var(--size-tab-header);
-        border-radius: var(--scale-0);
-        background-color: var(--background-primary);
-        transition: background-color 0s; // reduces hover animation time
-    }
-    // color of icons besides active
-    & .workspace-tab-header:not(.workspace-tab-header.is-active) {
-        color: var(--color-primary-50);
-    }
-    // Tab Header Hover
-    & .workspace-tab-header-inner:hover {
-        background-color: var(--color-hover);
-    }
+	& .workspace-tab-header-inner {
+		padding: var.$size-3
+				 var(--size-tab-header)
+				 var.$size-3
+				 var(--size-tab-header);
+		height: 32px;
+		background-color: var(--background-primary);
+		transition: background-color 0s; // reduces hover animation time
+	}
+	// color of icons besides active
+	& .workspace-tab-header:not(.workspace-tab-header.is-active) {
+		color: var(--text-faint);
+	}
+	// Tab Header Hover
+	& .workspace-tab-header-inner:hover {
+		background-color: var(--color-hover);
+		color: var(--text-muted);
+	}
 }
 
 //removes extra div in tab header that does nothing, really
 .workspace-tab-container-after,
 .workspace-tab-container-before {
-    display: none;
+	display: none;
 }
 
 // Tab Header Active
 .workspace-tab-header.is-active {
-    border-radius: var(--scale-0);
-    color:var(--color-primary-k);
-
-    .theme-light & {
-        color: var(--color-primary-k);
-    }
+	color:var(--text-normal);
 }
 
 .workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
  .workspace-tab-header.is-before-active .workspace-tab-header-inner {
-    border-bottom-left-radius: var.$size-0;
-    border-bottom-right-radius: var.$size-0;
+	border-bottom-left-radius: var.$size-0;
+	border-bottom-right-radius: var.$size-0;
 }
 .workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
 .workspace-tab-header.is-after-active .workspace-tab-header-inner {
-    border-bottom-right-radius: var.$size-0;
-    border-bottom-left-radius: var.$size-0;
+	border-bottom-right-radius: var.$size-0;
+	border-bottom-left-radius: var.$size-0;
 }
 
 /* ─────────────────────────────── Nav Header ─────────────────────────────── */
 .nav-header {
-    height: var.$size-6;
-    padding: var.$size-0
-             var.$size-0
-             var.$size-0
-             var.$size-0;
+	height: var.$size-6;
+	padding: var.$size-0
+			 var.$size-0
+			 var.$size-0
+			 var.$size-0;
 }
 
 .workspace-split.mod-left-split,
 .workspace-split.mod-right-split {
 
-    & .nav-buttons-container {
-        display: flex;
-        flex-direction: row;
-        vertical-align: middle;
-        padding: var.$size-0
-                 var.$size-5
-                 var.$size-0
-                 var.$size-5;
-        background-color: var(--background-primary);
-    }
-    & .nav-action-button {
-        padding: var.$size-2
-                 var.$size-3
-                 var.$size-2
-                 var.$size-3;
-        margin: var.$size-0;
-        height: var.$size-6;
-        border-radius: var.$size-0;
-    }
-}
+	& .nav-buttons-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		padding: var.$size-0
+				 var.$size-5
+				 var.$size-0
+				 var.$size-5;
+		background-color: var(--background-primary);
+	}
+	& .nav-action-button {
+		color: var(--text-faint);
+		padding: var.$size-2
+				 var.$size-3
+				 var.$size-2
+				 var.$size-3;
+		margin: var.$size-0;
+		height: var.$size-6;
+		border-radius: var.$size-0;
 
-.workspace-split.mod-right-split .nav-buttons-container {
-    justify-content: flex-start;
+		&:hover {
+			color: var(--text-muted);
+		}
+		&:active {
+			color: var(--text-normal);
+		}
+	}
 }
+/*
+.workspace-split.mod-right-split .nav-buttons-container {
+	justify-content: flex-start;
+}*/
+/*
+// fixes weird curved top corners in divs
+.workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
+.workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
+	border-radius: var.$size-0;
+}*/
 
 body div.workspace-split.mod-left-split .nav-buttons-container {
-    justify-content: flex-end;
-    height: var.$scale-3;
+	justify-content: flex-end;
+	height: var.$scale-3;
 }
 
 // color of icons besides active
 .nav-action-button {
-    color: var(--color-primary-50);
-    height: var.$scale-2;
-    
-    &.is-active {
-        background-color: var(--background-primary);
-        color: var(--color-primary-100);
-    }
-    // Nav Header Icon Hover */
-    &:hover {
-        color: unset;
-        background-color: var(--color-hover);
-    }
+	color: var(--text-faint);
+	height: var.$scale-2;
+
+	&.is-active {
+		background-color: var(--background-primary);
+		color: var(--text-muted);
+		
+		&:hover {
+			color: var(--text-normal);
+		}
+	}
+	// Nav Header Icon Hover */
+	&:hover {
+		color: var(--text-normal);
+		background-color: var(--color-hover);
+	}
 }
 
 
 // Vault Title
 .nav-folder.mod-root > .nav-folder-title {
-    display: none; // Makes it disappear
-    color: var(--text-muted);
-    font-size: var.$font-scale-0;
-    text-transform: uppercase;
-    margin-left: none;
-    padding-left: 0;
-    height: unset;
+	display: none; // Makes it disappear
+	color: var(--text-muted);
+	font-size: var.$font-scale-0;
+	text-transform: uppercase;
+	margin-left: none;
+	padding-left: 0;
+	height: unset;
 }
 
 .show-vault-name div.nav-folder.mod-root > div.nav-folder-title {
-    display: unset;
+	display: unset;
 
-    &:hover {
-        background-color: transparent;
-    }
-    & .nav-folder-title-content:before {
-        display: none;
-    }
+	&:hover {
+		background-color: transparent;
+	}
+	& .nav-folder-title-content:before {
+		display: none;
+	}
 }
 
 .nav-folder.mod-root > .nav-folder-title:hover {
-    color: none;
-    cursor: pointer;
+	color: none;
+	cursor: pointer;
 }
 
 .item-list {
-    padding: var.$size-5
-             var.$size-5
-             var.$size-5
-             var.$size-5;
-    background-color: var(--background-primary);
+	padding: var.$size-5
+			 var.$size-5
+			 var.$size-5
+			 var.$size-5;
+	background-color: var(--background-primary);
 }
 
 .workspace-split.mod-left-split .view-content,
 .workspace-split.mod-right-split .view-content {
-    height: 100%;
-    overflow: auto;
-    padding: var.$size-5
-             var.$size-5
-             var.$size-5
-             var.$size-5;
-    background-color: var(--background-primary);
+	height: 100%;
+	overflow: auto;
+	padding: var.$size-5
+			 var.$size-5
+			 var.$size-5
+			 var.$size-5;
+	background-color: var(--background-primary);
 }
 
 .outgoing-link-pane {
-    padding: var.$size-0
-             var.$size-0
-             var.$size-0
-             var.$size-5;
-    & .search-result-file-match-destination-file {
-        border-color: transparent;
-        padding: 0;
-        margin: 0;
-    }
+	padding: var.$size-0
+			 var.$size-0
+			 var.$size-0
+			 var.$size-5;
+	& .search-result-file-match-destination-file {
+		border-color: transparent;
+		padding: 0;
+		margin: 0;
+	}
+	& .tree-item-self.is-clickable:hover .tree-item-flair {
+		background-color: var(--color-hover);
+	}
 }
 
 .backlink-pane {
-    padding: var.$size-5
-             var.$size-0
-             var.$size-0
-             var.$size-5;
+	padding: var.$size-5
+			 var.$size-0
+			 var.$size-0
+			 var.$size-5;
 }
 
 // Adds hashtag before tag names in tag pane
 .tag-pane-tag-text:before {
-    margin-left: 3px;
-    content: "#";
-    font-size: var.$font-scale-0;
-    padding-right: var.$size-0;
-    vertical-align: -1px;
+	margin-left: 3px;
+	content: "#";
+	font-size: var.$font-scale-0;
+	padding-right: var.$size-0;
+	vertical-align: -1px;
 }
 
 .tag-pane-tag-count {
-    border-radius: 100%;
+	border-radius: 100%;
 }
 
 .tree-item-self.is-clickable {
-    cursor: pointer;
-    padding: var.$size-0
-             var.$size-0
-             var.$size-1
-             var.$size-0;
-    border-radius: var.$size-0;
+	cursor: pointer;
+	padding: var.$size-0
+			 var.$size-0
+			 var.$size-1
+			 var.$size-0;
+	border-radius: var.$size-0;
+	&:hover .tree-item-flair {
+		background-color: var(--color-hover);
+		color: var(--text-normal);
+	}
 }
 
 div.tree-item-inner {
-    margin-left: 16px;
+	margin-left: 16px;
 }
 
 .tree-item div.tree-item-icon.collapse-icon {
-    margin-left: -2px;
-    margin-right: -20px;
+	margin-left: -2px;
+	margin-right: -20px;
 }
 
 .tree-item-flair {
@@ -274,78 +335,72 @@ div.tree-item-inner {
 }
 
 .tag-container {
-    font-size: var.$font-scale-00;
-    padding: var.$size-5
-             var.$size-5
-             var.$size-5
-             var.$size-5;
-    overflow: auto;
-    background-color: var(--background-primary);
+	font-size: var.$font-scale-00;
+	padding: var.$size-5
+			 var.$size-5
+			 var.$size-5
+			 var.$size-5;
+	overflow: auto;
+	background-color: var(--background-primary);
 
-    & .tree-item-self.is-clickable:hover {
-        background-color: var(--color-hover);
+	& .tree-item-self.is-clickable:hover {
+		background-color: var(--color-hover);
 
-        & .tree-item-flair {
-            all: unset;
-            font-size: var.$font-scale-000;
-            padding: var.$size-0
-                     var.$size-2
-                     var.$size-0
-                     var.$size-2;
-            border-radius: 50%;
-            background-color: transparent;
-        }
-        &:hover .tree-item-flair {
-            border-radius: 6px;
-            background-color: transparent;
-            color: var(--text-normal);
-        }
-    }
+		& .tree-item-flair {
+			all: unset;
+			font-size: var.$font-scale-000;
+			padding: var.$size-0
+					 var.$size-2
+					 var.$size-0
+					 var.$size-2;
+			border-radius: 50%;
+			background-color: transparent;
+		}
+		&:hover .tree-item-flair {
+			border-radius: 6px;
+			background-color: transparent;
+			color: var(--text-normal);
+		}
+	}
 }
 
 .tree-item-self .tree-item-icon:after {
-    display: none;
+	display: none;
 }
-
-// fixes weird curved top corners in divs
-.workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
-.workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
-    border-radius: var.$size-0;
-}
-
+/*
 .workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
-    border-top-right-radius: var.$size-0;
+	border-top-right-radius: var.$size-0;
 }
 .workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
-    border-top-left-radius: var.$size-0;
-}
+	border-top-left-radius: var.$size-0;
+}*/
 
 .workspace-tabs {
-    background-color: var(--background-primary);
-    overflow: hidden;
-    padding-right: var.$size-0;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+	background-color: var(--background-primary);
+	overflow: hidden;
+	padding-right: var.$size-0;
+	display: flex;
+	flex-direction: column;
+	position: relative;
 }
 
 // size of every tab header icon
 body:not(.no-sanctum-icons)
   .workspace-tab-header
   .workspace-tab-header-inner-icon svg {
-    height: var.$scale-2;
-    width: var.$scale-2;
+	height: var.$scale-2;
+	width: var.$scale-2;
 }
 
 body .nav-action-button svg {
-    height: var.$scale-2;
-    width: var.$scale-2;
+	height: var.$scale-2;
+	width: var.$scale-2;
 }
 
 body:not(.no-sanctum-icons)
   .nav-action-button svg {
-    height: var.$scale-2;
-    width: var.$scale-2;
+	height: var.$scale-2;
+	width: var.$scale-2;
 }
 
 /* ────────────────────────────── Side Ribbons ────────────────────────────── */
@@ -357,87 +412,91 @@ body:not(.no-sanctum-icons)
 
 // ribbon icons
 .side-dock-ribbon-action {
-    padding: 12px 7px;
+	padding: 12px 7px;
 }
 
 .workspace-ribbon { // side ribbons
 	display: flex;
-    overflow: hidden;
-    width: var.$scale-4;
-    background-color: var(--background-primary);
-    z-index: var(--layer-sidedock);
-    transition: background-color var.$duration-moderate-2 var.$motion-exit-productive, border-left-color 100ms 100ms cubic-bezier(0.4, 0.14, 0.3, 1);
-    border-left: 3px solid var(--background-primary);
-    border-right: 3px solid var(--background-primary);
+	overflow: hidden;
+	width: var.$scale-4;
+	background-color: var(--background-primary);
+	z-index: var(--layer-sidedock);
+	transition: background-color var.$duration-moderate-2 var.$motion-exit-productive, border-left-color 100ms 100ms cubic-bezier(0.4, 0.14, 0.3, 1);
+	border-left: 3px solid var(--background-primary);
+	border-right: 3px solid var(--background-primary);
 
-    &.is-collapsed {
-        background-color: var(--background-primary);
-    }
-    &.mod-right {
-        opacity:1;
-        height: var.$scale-8;
-        position:fixed;
-        width: var(--scale-7);
-        top: auto;
-        bottom: var.$size-6;
-        z-index:9;
-        right: var.$size-0;
-        position:absolute;
-        background:transparent;
-        border-right:0;
+	&.is-collapsed {
+		background-color: var(--background-primary);
+	}
+	&.mod-right {
+		opacity:1;
+		height: var.$scale-8;
+		position:fixed;
+		width: var(--scale-7);
+		top: auto;
+		bottom: var.$size-6;
+		z-index:9;
+		right: var.$size-0;
+		position:absolute;
+		background:transparent;
+		border-right:0;
 
-        &.is-collapsed {
-            border-left: 1.5px solid transparent;
-            // rotates icons when ribbons are collapsed
-            & .workspace-ribbon-collapse-btn > svg { // right collapse button
-                transform: rotate(.5turn);
-            }
-        }
-    }
-    &.mod-left.is-collapsed {
-            border-right: 1.5px solid transparent;
-        & .workspace-ribbon-collapse-btn > svg { // left collapse button
-            transform: rotate(.5turn);
-        }
-    }
-    &.side-dock-ribbon {
-        &.mod-left .workspace-ribbon-collapse-btn,
-        &.mod-right .workspace-ribbon-collapse-btn {
-        transform: none;
-        transition: transform var.$duration-moderate-2 var.$motion-standard-expressive;
-        }
-        &.mod-left {
-            border-right: 1.5px solid var(--color-border-1);
-            border-left: 0px solid transparent;
+		&.is-collapsed {
+			border-left: 1.5px solid transparent;
+			// rotates icons when ribbons are collapsed
+			& .workspace-ribbon-collapse-btn > svg { // right collapse button
+				transform: rotate(.5turn);
+			}
+		}
+	}
+	&.mod-left.is-collapsed {
+			border-right: 1.5px solid transparent;
+		& .workspace-ribbon-collapse-btn > svg { // left collapse button
+			transform: rotate(.5turn);
+		}
+	}
+	&.side-dock-ribbon {
+		&.mod-left .workspace-ribbon-collapse-btn,
+		&.mod-right .workspace-ribbon-collapse-btn {
+		transform: none;
+		transition: transform var.$duration-moderate-2 var.$motion-standard-expressive;
+		}
+		&.mod-left {
+			border-right: 1.5px solid var(--color-border-1);
+			border-left: 0px solid transparent;
 
-            & .workspace-ribbon-collapse-btn {
-                order: 1;
-                margin-top: var.$size-0;
-                padding: var.$size-0
-                         var.$size-0
-                         var.$size-6
-                         7px;
-                cursor: pointer;
-                color: var(--text-faint);
-            }
-            & .side-dock-actions {
-                margin-top: var.$size-7;
-            }
-        }
-        &.mod-right {
-            flex-direction: column-reverse;
-            border-left: 1.5px solid transparent;
-        }
-    }
+			& .workspace-ribbon-collapse-btn {
+				order: 1;
+				margin-top: var.$size-0;
+				padding: var.$size-0
+						 var.$size-0
+						 24px
+						 7px;
+				cursor: pointer;
+				color: var(--text-faint);
+				
+				&:hover {
+					color: var(--text-muted);
+				}
+			}
+			& .side-dock-actions {
+				margin-top: 32px;
+			}
+		}
+		&.mod-right {
+			flex-direction: column-reverse;
+			border-left: 1.5px solid transparent;
+		}
+	}
 }
 
 .side-dock-settings {
-    margin-bottom: var.$size-3;
+	margin-bottom: var.$size-3;
 
-    .workspace-drawer & {
-        margin-top: auto;
-        margin-bottom: var.$size-6;
-    }
+	.workspace-drawer & {
+		margin-top: auto;
+		margin-bottom: var.$size-6;
+	}
 }
 
 /* ────────────────────────────── Outline Pane ────────────────────────────── */
@@ -451,7 +510,17 @@ body:not(.no-sanctum-icons)
 }
 
 .workspace-leaf-content[data-type=outline] .tree-item-icon.collapse-icon {
-	order:2;
+	order:0;
+	margin-left: -22px;
+	padding: 0 0 0 8px;
+	color: var(--text-faint);
+
+	&:hover {
+		color: var(--text-muted);
+	}
+	&:active {
+		color: var(--text-normal);
+	}
 }
 
 .workspace-leaf-content[data-type=outline] .tree-item-inner {
@@ -472,25 +541,25 @@ body:not(.no-sanctum-icons)
 
 // File Explorer padding
 .nav-files-container {
-    padding: var.$size-5
-             var.$size-0
-             var.$size-0
-             var.$size-5;
-    background-color: var(--background-primary);
+	padding: var.$size-5
+			 var.$size-0
+			 var.$size-0
+			 var.$size-5;
+	background-color: var(--background-primary);
 }
 
 .nav-folder-title-content,
 .nav-file-title-content {
-    line-height: var(--leading-2);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: var(--text-normal);
-    padding: var.$size-1
-             var.$size-2
-             var.$size-1
-             var.$size-2;
-    width: 100%;
+	line-height: var(--leading-2);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: var(--text-normal);
+	padding: var.$size-1
+			 var.$size-2
+			 var.$size-1
+			 var.$size-2;
+	width: 100%;
 	border:none;
 }
 
@@ -513,83 +582,83 @@ body:not(.no-sanctum-icons)
 			 var.$size-5
 			 var.$size-0
 			 var.$size-0;
-	border-radius: 0px;
 	width: unset;
 	font-size: var(--font-scale-00);
 	color: var(--text-muted);
 }
 
 .nav-file-title > .nav-file-tag {
-    order: 1; // makes it go after the file name
+	order: 1; // makes it go after the file name
 }
 
 .nav-file-tag {
-    text-transform: uppercase;
-    text-align: center;
-    font-family: var(--font-mono);
-    font-size: 9px;
-    font-weight: var(--font-semi-bold);
-    letter-spacing: var(--tracking-2);
-    line-height: .75rem;
-    color: var(--text-muted);
-    padding: var.$size-0
-             var.$size-2;
-    border-radius: var.$size-3;
-    align-self: center;
-    border: 1px solid var(--color-border-1);
-    background-color: var(--color-primary-20);
+	text-transform: uppercase;
+	text-align: center;
+	font-family: var(--font-mono);
+	font-size: 9px;
+	font-weight: var(--font-semi-bold);
+	letter-spacing: var(--tracking-2);
+	line-height: .75rem;
+	color: var(--text-muted);
+	padding: var.$size-0
+			 var.$size-2;
+	border-radius: var.$size-3;
+	align-self: center;
+	border: 1px solid var(--color-border-1);
+	background-color: var(--color-primary-2);
 }
-
+/*
 .nav-file-title,
 .nav-folder-title {
-    border-radius: 0px;
+	border-radius: 4px;
 	border:none;
-}
+}*/
 
 .nav-file div.nav-file-title:hover,
 .nav-folder div.nav-folder-title:hover {
-    background-color: var(--color-hover);
-    border-radius: 0px;
-	border:none;
+	background-color: var(--color-hover);
+	//border-radius: 4px;
+	//border:none;
 }
 
 .nav-file-title.is-active .nav-file-title-content {
 	color: var(--background-primary);
-	border:none;
+	//border:none;
 
-    &:focus {
-        background-color: transparent;
-    }
+	&:focus {
+		background-color: transparent;
+	}
 }
 
 
 
 .nav-file-title.is-active:hover .nav-file-title-content,
 .nav-file-title.is-active:hover .nav-file-title-content::before {
-    color: var(--text-normal);
+	color: var(--text-normal);
 	border:none;
 }
 
 body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-child:hover::before {
-    color: var(--color-primary-100);
+	color: var(--text-normal);
 }
 
 // Folder Push Left
 .nav-folder-title {
-    padding-left: var.$size-0;
+	padding-left: var.$size-0;
 }
 
 // File selected
 .nav-file-title.is-active {
-    background-color: var(--color-primary-100);
-    color: var(--background-primary);
-	border-radius: 0px;
+	background-color: var(--color-primary-8);
+	color: var(--background-primary);
+	//border-radius: 4px;
 	border:none;
-    
-    & .nav-file-title-content::before {
-        color: var(--color-primary-w);
+	font-weight: 400;
+
+	& .nav-file-title-content::before {
+		color: var(--color-primary-0);
 		border:none;
-    }
+	}
 }
 
 //
@@ -603,44 +672,45 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 }
 
 .nav-folder-children {
-    padding-left: 16px;
+	padding-left: 16px;
 }
 
 /* ───────────────────────── Nav Collapse Indicators ──────────────────────── */
 .nav-folder .collapse-icon {
-    display: inline-flex;
-    order: 1; // Places them after folder/file titles. Makes it look like an accordion
+	display: inline-flex;
+	order: 1; // Places them after folder/file titles. Makes it look like an accordion
+	margin-left: 0px; //guarantees that no title gets over the collapse icon
 }
 
 .left-nav-arrows .nav-folder .collapse-icon {
-    order: 0;
+	order: 0;
 }
 
 .nav-folder.is-collapsed .collapse-icon svg {
-  transform: rotate(0deg);
-  transition: transform 0s; // disables a weird rotation animation
+	transform: rotate(0deg);
+	transition: transform 0s; // disables a weird rotation animation
 }
 
 .nav-folder .collapse-icon svg {
-    transform: rotate(180deg);
-    transition: transform 0s; // disables a weird rotation animation
+	transform: rotate(180deg);
+	transition: transform 0s; // disables a weird rotation animation
 }
 
 /* ─────────────────────────────── Animations ─────────────────────────────── */
 
 .nav-file-title.is-active {
-    &,
-    .workspace-leaf-content[data-type="file-explorer"]:not(:hover) & {
-      transition: var.$duration-moderate-1 var.$motion-entrance-productive;
-    }
+	&,
+	.workspace-leaf-content[data-type="file-explorer"]:not(:hover) & {
+		transition: var.$duration-moderate-1 var.$motion-entrance-productive;
+	}
 
-    &:hover,
-    .view-content:hover &,
-    .workspace-split.mod-left-split .view-content:hover &,
-    .workspace-split.mod-right-split .view-content:hover &,
-    .workspace-leaf-content[data-type="file-explorer"]:hover & {
-      transition: background-color var.$duration-moderate-1 var.$motion-entrance-productive;
-    }
+	&:hover,
+	.view-content:hover &,
+	.workspace-split.mod-left-split .view-content:hover &,
+	.workspace-split.mod-right-split .view-content:hover &,
+	.workspace-leaf-content[data-type="file-explorer"]:hover & {
+		transition: background-color var.$duration-moderate-1 var.$motion-entrance-productive;
+	}
 }
 
 /* ────────────────────────────── Folder Icons ────────────────────────────── */
@@ -648,418 +718,419 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 // Makes it so there can be content behind folder and file titles
 .nav-folder-title-content::before,
 .nav-file-title-content::before {
-    display: inline-block;
-    content: "";
-    font-size: var.$font-scale-0;
-    vertical-align: -1px;
-    height: var.$scale-2;
-    width: var.$scale-2;
-    background-size: var.$scale-2 var.$scale-2;
+	display: inline-block;
+	content: "";
+	font-size: var.$font-scale-0;
+	vertical-align: -1px;
+	height: var.$scale-2;
+	width: var.$scale-2;
+	background-size: var.$scale-2 var.$scale-2;
 }
 
 .nav-folder.is-collapsed .nav-folder-title .nav-folder-title-content::before,
 .nav-folder .nav-folder-title .nav-folder-title-content::before {
-    background-color: currentColor; // folders colour
-    margin-right: var.$size-3; // spacing between folder icons and titles
-    background-repeat: no-repeat;
-    vertical-align: -2px;
-    height: var.$scale-2;
-    width: var.$scale-2;
+	background-color: currentColor; // folders colour
+	margin-right: var.$size-3; // spacing between folder icons and titles
+	background-repeat: no-repeat;
+	vertical-align: -2px;
+	height: var.$scale-2;
+	width: var.$scale-2;
 }
 
 // Closed Folder Icon
 .nav-folder.is-collapsed .nav-folder-title .nav-folder-title-content::before {
-    -webkit-mask: url("data:image/svg+xml;utf8,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Efolder%3C/title%3E%3Cpath d='M11.17,6l3.42,3.41.58.59H28V26H4V6h7.17m0-2H4A2,2,0,0,0,2,6V26a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2H16L12.59,4.59A2,2,0,0,0,11.17,4Z' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E") no-repeat;
+	-webkit-mask: url("data:image/svg+xml;utf8,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Efolder%3C/title%3E%3Cpath d='M11.17,6l3.42,3.41.58.59H28V26H4V6h7.17m0-2H4A2,2,0,0,0,2,6V26a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2H16L12.59,4.59A2,2,0,0,0,11.17,4Z' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E") no-repeat;
 }
 
 // Opened Folder Icon
 .nav-folder .nav-folder-title .nav-folder-title-content::before {
-    -webkit-mask: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M28,8H20.8284L17.4143,4.5859A2,2,0,0,0,16,4H4A2,2,0,0,0,2,6V26a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10A2,2,0,0,0,28,8ZM8,26V14h8v6.17l-2.59-2.58L12,19l5,5,5-5-1.41-1.41L18,20.17V14a2.0025,2.0025,0,0,0-2-2H8a2.0025,2.0025,0,0,0-2,2V26H4V6H16l4,4h8v2H22v2h6V26Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E") no-repeat;
+	-webkit-mask: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M28,8H20.8284L17.4143,4.5859A2,2,0,0,0,16,4H4A2,2,0,0,0,2,6V26a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10A2,2,0,0,0,28,8ZM8,26V14h8v6.17l-2.59-2.58L12,19l5,5,5-5-1.41-1.41L18,20.17V14a2.0025,2.0025,0,0,0-2-2H8a2.0025,2.0025,0,0,0-2,2V26H4V6H16l4,4h8v2H22v2h6V26Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E") no-repeat;
 }
 
 // No Folder Icons Option
 .no-folder-icons .nav-folder.is-collapsed .nav-folder-title .nav-folder-title-content::before,
 .no-folder-icons .nav-folder .nav-folder-title .nav-folder-title-content::before {
-    display:none;
+	display:none;
 }
 
 /* ─────────────────────────────── File Icons ─────────────────────────────── */
 .nav-file-title-content{
-    .nav-file-title &:before {
-        color: var(--text-normal);
-    }
-    &:before { // Files that aren't notes, aka Attachments
-        background-color: currentColor;
-        -webkit-mask-repeat: no-repeat;
-        -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,30H11a2.0023,2.0023,0,0,1-2-2V22h2v6H26V6H17V4h9a2.0023,2.0023,0,0,1,2,2V28A2.0023,2.0023,0,0,1,26,30Z'/%3E%3Crect x='17' y='10' width='7' height='2'/%3E%3Crect x='16' y='15' width='8' height='2'/%3E%3Crect x='15' y='20' width='9' height='2'/%3E%3Cpath d='M9,19a5.0055,5.0055,0,0,1-5-5V3H6V14a3,3,0,0,0,6,0V5a1,1,0,0,0-2,0V15H8V5a3,3,0,0,1,6,0v9A5.0055,5.0055,0,0,1,9,19Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
-        display: inline-block;
-        margin-right: var.$size-3;
-        margin-left: var.$size-0;
+	.nav-file-title &:before {
+		color: var(--text-normal);
+	}
+	&:before { // Files that aren't notes, aka Attachments
+		background-color: currentColor;
+		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,30H11a2.0023,2.0023,0,0,1-2-2V22h2v6H26V6H17V4h9a2.0023,2.0023,0,0,1,2,2V28A2.0023,2.0023,0,0,1,26,30Z'/%3E%3Crect x='17' y='10' width='7' height='2'/%3E%3Crect x='16' y='15' width='8' height='2'/%3E%3Crect x='15' y='20' width='9' height='2'/%3E%3Cpath d='M9,19a5.0055,5.0055,0,0,1-5-5V3H6V14a3,3,0,0,0,6,0V5a1,1,0,0,0-2,0V15H8V5a3,3,0,0,1,6,0v9A5.0055,5.0055,0,0,1,9,19Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+		display: inline-block;
+		margin-right: var.$size-3;
+		margin-left: var.$size-0;
 		vertical-align: -2px;
-        
-        body.no-file-icons & {
-            display: none;
-        }
-    }
-    &:only-child:before,
-    .search-result-collapse-indicator + span:before {
-        -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100%' height='100%' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Edocument%3C/title%3E%3Cpath d='M25.7,9.3l-7-7C18.5,2.1,18.3,2,18,2H8C6.9,2,6,2.9,6,4v24c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V10C26,9.7,25.9,9.5,25.7,9.3 z M18,4.4l5.6,5.6H18V4.4z M24,28H8V4h8v6c0,1.1,0.9,2,2,2h6V28z'/%3E%3Crect x='10' y='22' width='12' height='2'/%3E%3Crect x='10' y='16' width='12' height='2'/%3E%3Crect class='st0' width='32' height='32'/%3E%3C/svg%3E") no-repeat;
-    }
-    .nav-folder-children &:first-child::before { // File icon for notes (fixes recent files pane)
-        background-color: currentColor;
-        -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100%' height='100%' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Edocument%3C/title%3E%3Cpath d='M25.7,9.3l-7-7C18.5,2.1,18.3,2,18,2H8C6.9,2,6,2.9,6,4v24c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V10C26,9.7,25.9,9.5,25.7,9.3 z M18,4.4l5.6,5.6H18V4.4z M24,28H8V4h8v6c0,1.1,0.9,2,2,2h6V28z'/%3E%3Crect x='10' y='22' width='12' height='2'/%3E%3Crect x='10' y='16' width='12' height='2'/%3E%3Crect class='st0' width='32' height='32'/%3E%3C/svg%3E");
-        display: inline-block;
-        margin-right: var.$size-3;
-        margin-left: 1px;
-    }
-    body.no-file-icons .nav-folder-children &:first-child::before { // option to remove icon
-          display: none;
-    }
-    [data-type="starred"] &:before { // doesn't show icon between icon and starred document title
-        content: none;
-    }
+	
+		body.no-file-icons & {
+			display: none;
+		}
+	}
+	&:only-child:before,
+	.search-result-collapse-indicator + span:before {
+		-webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100%' height='100%' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Edocument%3C/title%3E%3Cpath d='M25.7,9.3l-7-7C18.5,2.1,18.3,2,18,2H8C6.9,2,6,2.9,6,4v24c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V10C26,9.7,25.9,9.5,25.7,9.3 z M18,4.4l5.6,5.6H18V4.4z M24,28H8V4h8v6c0,1.1,0.9,2,2,2h6V28z'/%3E%3Crect x='10' y='22' width='12' height='2'/%3E%3Crect x='10' y='16' width='12' height='2'/%3E%3Crect class='st0' width='32' height='32'/%3E%3C/svg%3E") no-repeat;
+	}
+	.nav-folder-children &:first-child::before { // File icon for notes (fixes recent files pane)
+		background-color: currentColor;
+		-webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100%' height='100%' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Edocument%3C/title%3E%3Cpath d='M25.7,9.3l-7-7C18.5,2.1,18.3,2,18,2H8C6.9,2,6,2.9,6,4v24c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V10C26,9.7,25.9,9.5,25.7,9.3 z M18,4.4l5.6,5.6H18V4.4z M24,28H8V4h8v6c0,1.1,0.9,2,2,2h6V28z'/%3E%3Crect x='10' y='22' width='12' height='2'/%3E%3Crect x='10' y='16' width='12' height='2'/%3E%3Crect class='st0' width='32' height='32'/%3E%3C/svg%3E");
+		display: inline-block;
+		margin-right: var.$size-3;
+		margin-left: 1px;
+	}
+	body.no-file-icons .nav-folder-children &:first-child::before { // option to remove icon
+		display: none;
+	}
+	[data-type="starred"] &:before { // doesn't show icon between icon and starred document title
+		content: none;
+	}
 }
 
 .nav-file-icon{
-    // aligns the svgs vertically in the starred pane starred notes/searches
-    [data-type="starred"] .nav-file .nav-file-title & svg {
-        transform: translateY(2px);
-    }
-    body.no-file-icons .workspace-leaf-content[data-type="starred"] .item-list & {
-        display: none;
-    }
+	// aligns the svgs vertically in the starred pane starred notes/searches
+	[data-type="starred"] .nav-file .nav-file-title & svg {
+		transform: translateY(2px);
+	}
+	body.no-file-icons .workspace-leaf-content[data-type="starred"] .item-list & {
+		display: none;
+	}
 }
 
 /* ──────────────────────── Specific Attachment Icons ─────────────────────── */
 
 .nav-file-title {
-    // PDF
-    &[data-path$="pdf"] .nav-file-title-content:before {
-        -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Edocument--pdf%3C/title%3E%3Cpolygon points='30 18 30 16 24 16 24 26 26 26 26 22 29 22 29 20 26 20 26 18 30 18'/%3E%3Cpath d='M19,26H15V16h4a3.0033,3.0033,0,0,1,3,3v4A3.0033,3.0033,0,0,1,19,26Zm-2-2h2a1.0011,1.0011,0,0,0,1-1V19a1.0011,1.0011,0,0,0-1-1H17Z'/%3E%3Cpath d='M11,16H6V26H8V23h3a2.0027,2.0027,0,0,0,2-2V18A2.0023,2.0023,0,0,0,11,16ZM8,21V18h3l.001,3Z'/%3E%3Cpath d='M22,14V10a.9092.9092,0,0,0-.3-.7l-7-7A.9087.9087,0,0,0,14,2H4A2.0059,2.0059,0,0,0,2,4V28a2,2,0,0,0,2,2H20V28H4V4h8v6a2.0059,2.0059,0,0,0,2,2h6v2Zm-8-4V4.4L19.6,10Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
-        margin-left: 3px;
-    }
-    // Sound
-    &:is([data-path$="3gp"], [data-path$="flac"], [data-path$="m4a"], [data-path$="ogg"], [data-path$="wav"], [data-path$="webm"], [data-path$="mp3"])
-    .nav-file-title-content:before {
-        -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M29,31a.9987.9987,0,0,1-.6245-.2192L23.6494,27H20a1,1,0,0,1-1-1V21a1,1,0,0,1,1-1h3.6494l4.7261-3.7808A1,1,0,0,1,30,17V30a1,1,0,0,1-1,1Zm-8-6h3a1,1,0,0,1,.6245.2192L28,27.9194V19.0806l-3.3755,2.7A1,1,0,0,1,24,22H21Z'/%3E%3Cpath d='M16,28H8V4h8v6a2.0058,2.0058,0,0,0,2,2h6v3l2,0V10a.9092.9092,0,0,0-.3-.7l-7-7A.9087.9087,0,0,0,18,2H8A2.0058,2.0058,0,0,0,6,4V28a2.0058,2.0058,0,0,0,2,2h8ZM18,4.4,23.6,10H18Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
-        margin-left: 1px;
-    }
-    // Word Processor
-    &:is([data-path$="txt"], [data-path$="org"], [data-path$="docx"])
-    .nav-file-title-content:before {
-        -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='28.3 20 27.391 28.611 26 20 24 20 22.609 28.611 21.7 20 20 20 21.36 30 23.64 30 25 21.626 26.36 30 28.64 30 30 20 28.3 20'/%3E%3Cpath d='M25.707,9.293l-7-7A1,1,0,0,0,18,2H8A2.002,2.002,0,0,0,6,4V28a2.0023,2.0023,0,0,0,2,2h8V28H8V4h8v6a2.002,2.002,0,0,0,2,2h6v4h2V10A1,1,0,0,0,25.707,9.293ZM18,4.4141,23.5859,10H18Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
-        margin-left: 1px;
-    }
-    // Calendar
-    &[data-path$="ics"]
-    .nav-file-title-content:before {
-        -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100%' height='100%' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Ecalendar%3C/title%3E%3Cpath d='M26,4h-4V2h-2v2h-8V2h-2v2H6C4.9,4,4,4.9,4,6v20c0,1.1,0.9,2,2,2h20c1.1,0,2-0.9,2-2V6C28,4.9,27.1,4,26,4z M26,26H6V12h20 V26z M26,10H6V6h4v2h2V6h8v2h2V6h4V10z'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
-        margin-left: 1px;
-    }
-    // Excalidraw
-    &:is([data-path$="excalidraw.md"], [data-path$="excalidraw"])
-    .nav-file-title-content:before {
-        -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M29.707,5.293l-3-3a.9994.9994,0,0,0-1.414,0L19.5859,8H17.0947A11.0118,11.0118,0,0,0,6.7124,15.3662L2.0562,28.67a1,1,0,0,0,1.2744,1.2739l13.3037-4.6562A11.012,11.012,0,0,0,24,14.9053V12.4141L29.707,6.707A.9994.9994,0,0,0,29.707,5.293Zm-7.414,6A1,1,0,0,0,22,12v2.9053A9.01,9.01,0,0,1,15.9731,23.4l-9.1677,3.209L16,17.4141,14.5859,16,5.3914,25.1948,8.6,16.0269A9.01,9.01,0,0,1,17.0947,10H20a1,1,0,0,0,.707-.293L26,4.4141,27.5859,6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
-        margin-left: 1px;
-    }
-    // Image Files
-    &:is([data-path$="bmp"], [data-path$="raw"], [data-path$="tiff"], [data-path$="gif"], [data-path$="svg"], [data-path$="jpg"], [data-path$="jpeg"], [data-path$="png"])
-    .nav-file-title-content:before {
-        -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eimage%3C/title%3E%3Cpath d='M19,14a3,3,0,1,0-3-3A3,3,0,0,0,19,14Zm0-4a1,1,0,1,1-1,1A1,1,0,0,1,19,10Z'/%3E%3Cpath d='M26,4H6A2,2,0,0,0,4,6V26a2,2,0,0,0,2,2H26a2,2,0,0,0,2-2V6A2,2,0,0,0,26,4Zm0,22H6V20l5-5,5.59,5.59a2,2,0,0,0,2.82,0L21,19l5,5Zm0-4.83-3.59-3.59a2,2,0,0,0-2.82,0L18,19.17l-5.59-5.59a2,2,0,0,0-2.82,0L6,17.17V6H26Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
-        margin-left: 1px;
-    }
-    // Coding
-    &:is([data-path$="css"], [data-path$="jsx"], [data-path$="js"], [data-path$="py"], [data-path$="xml"], [data-path$="html"], [data-path$="ts"], [data-path$="yml"])
-    .nav-file-title-content:before {
-        -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eterminal%3C/title%3E%3Cpath d='M26,4H6A2,2,0,0,0,4,6V26a2,2,0,0,0,2,2H26a2,2,0,0,0,2-2V6A2,2,0,0,0,26,4Zm0,2v4H6V6ZM6,26V12H26V26Z' transform='translate(0 0.01)'/%3E%3Cpolygon points='10.76 16.18 13.58 19.01 10.76 21.84 12.17 23.25 16.41 19.01 12.17 14.77 10.76 16.18'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
-        margin-left: 1px;
-    }
-    // CAD/Architecture
-    &:is([data-path$="dwg"], [data-path$="dxf"], [data-path$="dwf"], [data-path$="pla"], [data-path$="pln"], [data-path$="2dl"], [data-path$="3dm"], [data-path$="3ds"], [data-path$="rvt"], [data-path$="rfa"], [data-path$="rte"], [data-path$="rft"])
-    .nav-file-title-content:before {
-        -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Echart--3D%3C/title%3E%3Cpath d='M28,23v3.5859l-5-5V15a1,1,0,0,0-.5527-.8945L17,11.3818V5.8281l2.5859,2.586L21,7,16,2,11,7l1.4141,1.4141L15,5.8281v5.5537L9.5527,14.1055A1,1,0,0,0,9,15v6.5859l-5,5V23H2v7H9V28H5.4141l4.7832-4.7832,5.3554,2.6777a1.001,1.001,0,0,0,.8946,0l5.3554-2.6777L26.5859,28H23v2h7V23Zm-13,.3818-4-2V16.6182l4,2Zm1-6.5L12.2363,15,16,13.1182,19.7637,15Zm5,4.5-4,2V18.6182l4-2Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
-        margin-left: 1px;
-    }
+	// PDF
+	&[data-path$="pdf"] .nav-file-title-content:before {
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Edocument--pdf%3C/title%3E%3Cpolygon points='30 18 30 16 24 16 24 26 26 26 26 22 29 22 29 20 26 20 26 18 30 18'/%3E%3Cpath d='M19,26H15V16h4a3.0033,3.0033,0,0,1,3,3v4A3.0033,3.0033,0,0,1,19,26Zm-2-2h2a1.0011,1.0011,0,0,0,1-1V19a1.0011,1.0011,0,0,0-1-1H17Z'/%3E%3Cpath d='M11,16H6V26H8V23h3a2.0027,2.0027,0,0,0,2-2V18A2.0023,2.0023,0,0,0,11,16ZM8,21V18h3l.001,3Z'/%3E%3Cpath d='M22,14V10a.9092.9092,0,0,0-.3-.7l-7-7A.9087.9087,0,0,0,14,2H4A2.0059,2.0059,0,0,0,2,4V28a2,2,0,0,0,2,2H20V28H4V4h8v6a2.0059,2.0059,0,0,0,2,2h6v2Zm-8-4V4.4L19.6,10Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+		margin-left: 3px;
+	}
+	// Sound
+	&:is([data-path$="3gp"], [data-path$="flac"], [data-path$="m4a"], [data-path$="ogg"], [data-path$="wav"], [data-path$="webm"], [data-path$="mp3"])
+	.nav-file-title-content:before {
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M29,31a.9987.9987,0,0,1-.6245-.2192L23.6494,27H20a1,1,0,0,1-1-1V21a1,1,0,0,1,1-1h3.6494l4.7261-3.7808A1,1,0,0,1,30,17V30a1,1,0,0,1-1,1Zm-8-6h3a1,1,0,0,1,.6245.2192L28,27.9194V19.0806l-3.3755,2.7A1,1,0,0,1,24,22H21Z'/%3E%3Cpath d='M16,28H8V4h8v6a2.0058,2.0058,0,0,0,2,2h6v3l2,0V10a.9092.9092,0,0,0-.3-.7l-7-7A.9087.9087,0,0,0,18,2H8A2.0058,2.0058,0,0,0,6,4V28a2.0058,2.0058,0,0,0,2,2h8ZM18,4.4,23.6,10H18Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+		margin-left: 1px;
+	}
+	// Word Processor
+	&:is([data-path$="txt"], [data-path$="org"], [data-path$="docx"])
+	.nav-file-title-content:before {
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='28.3 20 27.391 28.611 26 20 24 20 22.609 28.611 21.7 20 20 20 21.36 30 23.64 30 25 21.626 26.36 30 28.64 30 30 20 28.3 20'/%3E%3Cpath d='M25.707,9.293l-7-7A1,1,0,0,0,18,2H8A2.002,2.002,0,0,0,6,4V28a2.0023,2.0023,0,0,0,2,2h8V28H8V4h8v6a2.002,2.002,0,0,0,2,2h6v4h2V10A1,1,0,0,0,25.707,9.293ZM18,4.4141,23.5859,10H18Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+		margin-left: 1px;
+	}
+	// Calendar
+	&[data-path$="ics"]
+	.nav-file-title-content:before {
+		-webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100%' height='100%' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Ecalendar%3C/title%3E%3Cpath d='M26,4h-4V2h-2v2h-8V2h-2v2H6C4.9,4,4,4.9,4,6v20c0,1.1,0.9,2,2,2h20c1.1,0,2-0.9,2-2V6C28,4.9,27.1,4,26,4z M26,26H6V12h20 V26z M26,10H6V6h4v2h2V6h8v2h2V6h4V10z'/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+		margin-left: 1px;
+	}
+	// Excalidraw
+	&:is([data-path$="excalidraw.md"], [data-path$="excalidraw"])
+	.nav-file-title-content:before {
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M29.707,5.293l-3-3a.9994.9994,0,0,0-1.414,0L19.5859,8H17.0947A11.0118,11.0118,0,0,0,6.7124,15.3662L2.0562,28.67a1,1,0,0,0,1.2744,1.2739l13.3037-4.6562A11.012,11.012,0,0,0,24,14.9053V12.4141L29.707,6.707A.9994.9994,0,0,0,29.707,5.293Zm-7.414,6A1,1,0,0,0,22,12v2.9053A9.01,9.01,0,0,1,15.9731,23.4l-9.1677,3.209L16,17.4141,14.5859,16,5.3914,25.1948,8.6,16.0269A9.01,9.01,0,0,1,17.0947,10H20a1,1,0,0,0,.707-.293L26,4.4141,27.5859,6Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
+		margin-left: 1px;
+	}
+	// Image Files
+	&:is([data-path$="bmp"], [data-path$="raw"], [data-path$="tiff"], [data-path$="gif"], [data-path$="svg"], [data-path$="jpg"], [data-path$="jpeg"], [data-path$="png"])
+	.nav-file-title-content:before {
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eimage%3C/title%3E%3Cpath d='M19,14a3,3,0,1,0-3-3A3,3,0,0,0,19,14Zm0-4a1,1,0,1,1-1,1A1,1,0,0,1,19,10Z'/%3E%3Cpath d='M26,4H6A2,2,0,0,0,4,6V26a2,2,0,0,0,2,2H26a2,2,0,0,0,2-2V6A2,2,0,0,0,26,4Zm0,22H6V20l5-5,5.59,5.59a2,2,0,0,0,2.82,0L21,19l5,5Zm0-4.83-3.59-3.59a2,2,0,0,0-2.82,0L18,19.17l-5.59-5.59a2,2,0,0,0-2.82,0L6,17.17V6H26Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+		margin-left: 1px;
+	}
+	// Coding
+	&:is([data-path$="css"], [data-path$="jsx"], [data-path$="js"], [data-path$="py"], [data-path$="xml"], [data-path$="html"], [data-path$="ts"], [data-path$="yml"])
+	.nav-file-title-content:before {
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eterminal%3C/title%3E%3Cpath d='M26,4H6A2,2,0,0,0,4,6V26a2,2,0,0,0,2,2H26a2,2,0,0,0,2-2V6A2,2,0,0,0,26,4Zm0,2v4H6V6ZM6,26V12H26V26Z' transform='translate(0 0.01)'/%3E%3Cpolygon points='10.76 16.18 13.58 19.01 10.76 21.84 12.17 23.25 16.41 19.01 12.17 14.77 10.76 16.18'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+		margin-left: 1px;
+	}
+	// CAD/Architecture
+	&:is([data-path$="dwg"], [data-path$="dxf"], [data-path$="dwf"], [data-path$="pla"], [data-path$="pln"], [data-path$="2dl"], [data-path$="3dm"], [data-path$="3ds"], [data-path$="rvt"], [data-path$="rfa"], [data-path$="rte"], [data-path$="rft"])
+	.nav-file-title-content:before {
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Echart--3D%3C/title%3E%3Cpath d='M28,23v3.5859l-5-5V15a1,1,0,0,0-.5527-.8945L17,11.3818V5.8281l2.5859,2.586L21,7,16,2,11,7l1.4141,1.4141L15,5.8281v5.5537L9.5527,14.1055A1,1,0,0,0,9,15v6.5859l-5,5V23H2v7H9V28H5.4141l4.7832-4.7832,5.3554,2.6777a1.001,1.001,0,0,0,.8946,0l5.3554-2.6777L26.5859,28H23v2h7V23Zm-13,.3818-4-2V16.6182l4,2Zm1-6.5L12.2363,15,16,13.1182,19.7637,15Zm5,4.5-4,2V18.6182l4-2Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+		margin-left: 1px;
+	}
 
-    // Remove icons option
-    .no-file-icons &[data-path$="pdf"] .nav-file-title-content:before,
-    .no-file-icons &:is([data-path$="ogv"], [data-path$="webm"], [data-path$="mp4"], [data-path$="mov"])
-    .nav-file-title-content:before,
-    .no-file-icons &:is([data-path$="3gp"], [data-path$="flac"], [data-path$="m4a"], [data-path$="ogg"], [data-path$="wav"], [data-path$="webm"], [data-path$="mp3"])
-    .nav-file-title-content:before,
-    .no-file-icons &:is([data-path$="txt"], [data-path$="org"], [data-path$="docx"])
-    .nav-file-title-content:before,
-    .no-file-icons &[data-path$="ics"]
-    .nav-file-title-content:before,
-    .no-file-icons &:is([data-path$="excalidraw.md"], [data-path$="excalidraw"])
-    .nav-file-title-content:before,
-    .no-file-icons &:is([data-path$="bmp"], [data-path$="raw"], [data-path$="tiff"], [data-path$="gif"], [data-path$="svg"], [data-path$="jpg"], [data-path$="jpeg"], [data-path$="png"])
-    .nav-file-title-content:before,
-    .no-file-icons &:is([data-path$="css"], [data-path$="jsx"], [data-path$="js"], [data-path$="py"], [data-path$="xml"], [data-path$="html"], [data-path$="ts"], [data-path$="yml"])
-    .nav-file-title-content:before,
-    .no-file-icons &:is([data-path$="dwg"], [data-path$="dxf"], [data-path$="dwf"], [data-path$="pla"], [data-path$="pln"], [data-path$="2dl"], [data-path$="3dm"], [data-path$="3ds"], [data-path$="rvt"], [data-path$="rfa"], [data-path$="rte"], [data-path$="rft"])
-    .nav-file-title-content:before {
-        display: none;
-    }
+	// Remove icons option
+	.no-file-icons &[data-path$="pdf"] .nav-file-title-content:before,
+	.no-file-icons &:is([data-path$="ogv"], [data-path$="webm"], [data-path$="mp4"], [data-path$="mov"])
+	.nav-file-title-content:before,
+	.no-file-icons &:is([data-path$="3gp"], [data-path$="flac"], [data-path$="m4a"], [data-path$="ogg"], [data-path$="wav"], [data-path$="webm"], [data-path$="mp3"])
+	.nav-file-title-content:before,
+	.no-file-icons &:is([data-path$="txt"], [data-path$="org"], [data-path$="docx"])
+	.nav-file-title-content:before,
+	.no-file-icons &[data-path$="ics"]
+	.nav-file-title-content:before,
+	.no-file-icons &:is([data-path$="excalidraw.md"], [data-path$="excalidraw"])
+	.nav-file-title-content:before,
+	.no-file-icons &:is([data-path$="bmp"], [data-path$="raw"], [data-path$="tiff"], [data-path$="gif"], [data-path$="svg"], [data-path$="jpg"], [data-path$="jpeg"], [data-path$="png"])
+	.nav-file-title-content:before,
+	.no-file-icons &:is([data-path$="css"], [data-path$="jsx"], [data-path$="js"], [data-path$="py"], [data-path$="xml"], [data-path$="html"], [data-path$="ts"], [data-path$="yml"])
+	.nav-file-title-content:before,
+	.no-file-icons &:is([data-path$="dwg"], [data-path$="dxf"], [data-path$="dwf"], [data-path$="pla"], [data-path$="pln"], [data-path$="2dl"], [data-path$="3dm"], [data-path$="3ds"], [data-path$="rvt"], [data-path$="rfa"], [data-path$="rte"], [data-path$="rft"])
+	.nav-file-title-content:before {
+		display: none;
+	}
 }
 
 // Show full titles
 .show-full-titles {
-    & .nav-file-title, .nav-folder-title {
-        height: unset;
-    }
-    & .nav-folder-title-content,
-    & .nav-file-title-content {
-        text-overflow: unset;
-        overflow-wrap: break-all;
-        white-space: pre-wrap;
-        overflow: scroll;
-    }
-    & .nav-file-title-content {
-        margin-left: 7px;
-        padding-left: 2px;
-    }
-    &:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:before {
-        margin-left: -4px;
-    }
+	& .nav-file-title, .nav-folder-title {
+		height: unset;
+	}
+	& .nav-folder-title-content,
+	& .nav-file-title-content {
+		text-overflow: unset;
+		overflow-wrap: break-all;
+		white-space: pre-wrap;
+		overflow: scroll;
+	}
+	& .nav-file-title-content {
+		margin-left: 7px;
+		padding-left: 2px;
+	}
+	&:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:before {
+		margin-left: -4px;
+	}
 }
 
+/*
 // Relationship Lines in File Explorer
 .fx-rl .nav-folder-children .nav-folder-children {
-    margin-left: 14px;
-    padding-left: 0;
-    border-left: 1px solid var(--color-primary-30);
-    transition: border var.$duration-moderate-2 var.$motion-entrance-productive;
+	margin-left: 14px;
+	padding-left: 0;
+	border-left: 1px solid var(--color-primary-3);
+	transition: border var.$duration-moderate-2 var.$motion-entrance-productive;
 
-    &:hover {
-        border-left-color: var(--color-primary-70);
-    }
-}
+	&:hover {
+		border-left-color: var(--color-primary-6);
+	}
+}*/
 
 
 /* ───────────────────────────────── KANBAN ───────────────────────────────── */
 // To be reviewed
 
 .kanban .task-list-item-checkbox {
-    margin-left: 24px;
-    margin-right: 0;
-    margin-top: 0
+	margin-left: 24px;
+	margin-right: 0;
+	margin-top: 0;
 }
 
 .kanban:not(.k-o):not(.dvl) ul li {
-    padding-left: 0
+	padding-left: 0;
 }
 
 .kanban ul,
 ul.kanban {
-    list-style: none
+	list-style: none;
 }
 
 .kanban ul li::before,
 ul.kanban li::before {
-    content: "";
-    margin-left: 4px;
-    padding: 0
+	content: "";
+	margin-left: 4px;
+	padding: 0;
 }
 
 .kanban ul,
 .kanban ol,
 ul.kanban,
 ol.kanban {
-    display: flex;
-    flex-direction: row;
-    border-radius: 0;
-    flex-wrap: wrap;
-    padding-inline-start: 0;
-    margin-left: 0;
-    width: 100%
+	display: flex;
+	flex-direction: row;
+	border-radius: 0;
+	flex-wrap: wrap;
+	padding-inline-start: 0;
+	margin-left: 0;
+	width: 100%;
 }
 
 .kanban ul li,
 ul.kanban li {
-    flex: 1 1 20%;
-    margin-left: 0;
-    margin-right: 0;
-    border: 0
+	flex: 1 1 20%;
+	margin-left: 0;
+	margin-right: 0;
+	border: 0;
 }
 
 .kanban ol li,
 ol.kanban li {
-    flex: 1 1 20%;
-    margin-right: 10px;
-    margin-left: 30px;
-    border: 0
+	flex: 1 1 20%;
+	margin-right: 10px;
+	margin-left: 30px;
+	border: 0;
 }
 
 .kanban ul ul,
 ul.kanban ul,
 .kanban ol ol,
 ol.kanban ol {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 0;
-    margin-top: 4px;
-    background: 0 0
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-right: 0;
+	margin-top: 4px;
+	background: 0 0;
 }
 
 .kanban ul ul,
 ul.kanban ul {
-    margin-left: 0;
-    border-left: 0 solid var(--color-border-2)
+	margin-left: 0;
+	border-left: 0 solid var(--color-border-2);
 }
 
 .kanban ol ol ol.kanban ol {
-    margin-left: -16px;
-    padding-left: 16px;
-    border-left: 0 solid var(--background-modifier-border)
+	margin-left: -16px;
+	padding-left: 16px;
+	border-left: 0 solid var(--background-modifier-border);
 }
 
 .kanban ul ul li,
 ul.kanban ul li {
-    width: 100%;
-    display: block;
-    background: hsla(var(--hsl-color-primary-w), 0.8);
-    border-radius: 0
+	width: 100%;
+	display: block;
+	background: rgba(var(--rgb-primary-0), 0.8);
+	border-radius: 0;
 }
 
 .kanban ul ul li:nth-child(odd) .task-list-item-checkbox:not(.task-list-item-checkbox:checked),
 ul.kanban ul li:nth-child(odd) .task-list-item-checkbox:not(.task-list-item-checkbox:checked) {
-    background-color: hsla(var(--hsl-color-primary-w),.8)
+	background-color: rgba(var(--rgb-primary-0),.8);
 }
 
 .kanban ol ol li,ol.kanban ol li {
-    width: 100%;
-    background: hsla(var(--hsl-color-primary-w),.8);
-    margin-left: 14px
+	width: 100%;
+	background: rgba(var(--rgb-primary-0),.8);
+	margin-left: 14px
 }
 
 .kanban ol ol li:nth-child(odd) .task-list-item-checkbox:not(.task-list-item-checkbox:checked),
 ol.kanban ol li:nth-child(odd) .task-list-item-checkbox:not(.task-list-item-checkbox:checked) {
-    background-color: hsla(var(--hsl-color-primary-w),.8)
+	background-color: rgba(var(--rgb-primary-0),.8);
 }
 
 .kanban ul ul li:nth-child(even),
 ul.kanban ul li:nth-child(even),
 .kanban ol ol li:nth-child(even),
 ol.kanban ol li:nth-child(even) {
-    background: var(--background-primary);
-    border: 0
+	background: var(--background-primary);
+	border: 0
 }
 /*
 .kanban ul ul li:hover,ul ul li.kanban:hover,
 .kanban ol ol li:hover,ol.kanban ol li:hover {
-    background: var(--color-hover)
+	background: var(--color-hover)
 }*/
 
 .kanban .list-collapse-indicator,
 .list-collapse-indicator.kanban {
-    width: 16px
+	width: 16px;
 }
 
 .kanban .list-collapse-indicator svg,
 .list-collapse-indicator.kanban svg {
-    background-repeat: no-repeat
+	background-repeat: no-repeat;
 }
 
 .kanban ul .list-collapse-indicator,
 ul.kanban .list-collapse-indicator {
-    margin-left: 0;
-    padding-left: 0
+	margin-left: 0;
+	padding-left: 0;
 }
 
 .kanban .task-list-item .list-collapse-indicator,
 .task-list-item.kanban .list-collapse-indicator {
-    position: relative
+	position: relative;
 }
 
 .kanban ol .list-collapse-indicator,
 .kanban ol .task-list-item .list-collapse-indicator,
 ol.kanban .list-collapse-indicator,
 ol.kanban .task-list-item .list-collapse-indicator {
-    margin-left: -38px;
-    padding-left: 5px
+	margin-left: -38px;
+	padding-left: 5px;
 }
 
-.kanban ul li>p {
-    margin-block-start: 0
+.kanban ul li > p {
+	margin-block-start: 0;
 }
 
 .kanban .internal-embed blockquote {
-    padding-top: 2px;
-    padding-left: 10px;
-    font-size: 12px;
-    line-height: 15px;
-    border-left-width: 3px;
-    margin: 0;
-    overflow: hidden
+	padding-top: 2px;
+	padding-left: 10px;
+	font-size: 12px;
+	line-height: 15px;
+	border-left-width: 3px;
+	margin: 0;
+	overflow: hidden;
 }
 
 .kanban-o .internal-embed blockquote:before {
-    display: none
+	display: none;
 }
 
 .markdown-preview-view .markdown-embed,.markdown-preview-view .file-embed {
-    margin: 0
+	margin: 0;
 }
 
 .kanban .internal-embed .markdown-embed .markdown-preview-view {
-    margin: 0;
-    padding: 6px
+	margin: 0;
+	padding: 6px;
 }
 
 .kanban hr {
-    margin: 0;
-    margin-bottom: 10px
+	margin: 0;
+	margin-bottom: 10px;
 }
 
 /* ─────────────────────────────── Status Bar ─────────────────────────────── */
 .status-bar {
-    background-color: var(--background-primary);
-    border-top: 1.5px solid var(--color-border-1);
-    color: var(--text-muted);
-    display: flex;
-    justify-content: flex-end;
-    line-height: var.$size-6;
-    max-height: var.$size-6;
-    padding: var.$size-0
-             var.$size-5
-             var.$size-0
-             var.$size-0;
-    user-select: none;
-    z-index: var(--layer-status-bar);
+	background-color: var(--background-primary);
+	border-top: 1.5px solid var(--color-border-1);
+	color: var(--text-muted);
+	display: flex;
+	justify-content: flex-end;
+	line-height: var.$size-6;
+	max-height: var.$size-6;
+	padding: var.$size-0
+			 var.$size-5
+			 var.$size-0
+			 var.$size-0;
+	user-select: none;
+	z-index: var(--layer-status-bar);
 
-    &-item {
-        padding: var.$size-0 
-                 var.$size-3
-                 var.$size-0
-                 var.$size-3;
-        color: var(--text-muted);
-        font-size: var.$font-scale-000;
-    }
+	&-item {
+		padding: var.$size-0 
+				 var.$size-3
+				 var.$size-0
+				 var.$size-3;
+		color: var(--text-muted);
+		font-size: var.$font-scale-000;
+	}
 }
 
 
 // sync status icons
 .sync-status-icon.mod-working svg {
-    color: var(--text-muted);
-    height: var.$scale-2;
-    width: var.$scale-2;
-    vertical-align: -2px;
+	color: var(--text-muted);
+	height: var.$scale-2;
+	width: var.$scale-2;
+	transform: scale(.9);
+	vertical-align: -1px;
 }
 
 .sync-status-icon.mod-success svg {
-    color: var(--color-green);
-    height: var.$scale-2;
-    width: var.$scale-2;
-    vertical-align: -2px;
+	color: var.$color-green;
+	height: var.$scale-2;
+	width: var.$scale-2;
+	vertical-align: -1px;
 }
 
 .topside-status-bar div.status-bar {
-    position: absolute;
-    margin-top: -23px;  
-    opacity: .8;
-    right: 260px;
-    background-color: transparent;
+	position: absolute;
+	margin-top: -23px;
+	opacity: .8;
+	right: 260px;
+	background-color: transparent;
 }
-

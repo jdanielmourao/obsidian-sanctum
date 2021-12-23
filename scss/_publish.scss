@@ -21,18 +21,18 @@
 
 .publish-change-list .mod-deleted .tree-item-flair-outer {
 	font-weight: var(--font-regular);
-	background-color: var(--color-red);
+	background-color: var.$color-red-5;
 	border-radius: 4px;
 }
 
 .publish-change-list .mod-new .tree-item-flair-outer {
 	font-weight: var(--font-regular);
-	background-color: var(--color-green);
+	background-color: var.$color-green-5;
 	border-radius: 4px;
 }
 .file-tree.publish-section .mod-deleted .tree-item-flair,
 .file-tree.publish-section .mod-new .tree-item-flair {
-	color: #{var.$color-white};
+	color: var(--color-primary-0);
 }
 
 // Hide publish.css file from vault
@@ -69,8 +69,8 @@ div.markdown-preview-sizer.markdown-preview-section {
 }
 
 .nav-view-outer .tree-item-self.mod-active {
-	background-color: #{var.$color-white};
-	color: #{var.$color-black};
+	background-color: var(--color-primary-0);
+	color: var(--color-primary-10);
 	font-weight: 400;
 }
 
@@ -133,7 +133,7 @@ body .published-section-header-icon svg.dot-network {
 html .site-body .markdown-preview-view .tag:not(.token) {
 	background-color: var(--color-accent);
 	border-color: transparent;
-	color: #{var.$color-black};
+	color: var(--color-primary-10);
 	padding: 0 8px;
 	font-size: var.$font-scale-00;
 }

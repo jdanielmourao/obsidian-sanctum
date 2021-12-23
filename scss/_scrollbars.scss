@@ -5,7 +5,7 @@
 		visibility: visible;
 		border: 4px solid var(--background-primary);
 		border-radius: 32px; // roundedness of scrollbar
-		background-color: var(--color-primary-20); // color of scrollbar (part that moves)
+		background-color: var(--color-primary-2); // color of scrollbar (part that moves)
 	}
 	&::-webkit-scrollbar-thumb:hover {
 		border-width: 3px;
@@ -19,15 +19,17 @@
 		background-color: transparent; // color of scrollbar area
 	}
 	&::-webkit-scrollbar-thumb:active {
-		background-color: var(--color-primary-30);
+		background-color: var(--color-primary-3);
 	}
 }
 
-code::-webkit-scrollbar-thumb {
-	border-color: var(--color-primary-w);
-
-	.theme-dark & {
-		border-color: var.$color-dark;
+code {
+	&::-webkit-scrollbar-thumb {
+		border-color: var(--color-primary-0);
+		background-color: var(--color-primary-2);
+	}
+	&::-webkit-scrollbar-thumb:active {
+		background-color: var(--color-primary-3);
 	}
 }
 

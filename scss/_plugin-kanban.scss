@@ -25,20 +25,15 @@ div.kanban-plugin__lane {
 	border-radius: 4px;
 	padding: var.$size-2;
 	box-shadow: var.$elevation-1;
-	border: 1px solid var(--color-primary-w);
+	border: 1px solid var(--color-primary-0);
+
+	.theme-dark & {
+		box-shadow: var.$elevation-2;
+	}
 }
 
 .theme-dark div.kanban-plugin__lane {
-	border: 1px solid var(--color-primary-10);
-}
-
-button.kanban-plugin__new-lane-button {
-	background-color: var(--color-red);
-	color: var(--text-muted);
-	width: 100%;
-	text-align: left;
-	margin: var.$size-1;
-	border: 1px solid var(--color-border-1);
+	border: 1px solid var(--color-primary-1);
 }
 
 div.kanban-plugin__item {

@@ -8,13 +8,13 @@
 
 // Desaturate images
 .markdown-preview-view img:not(.link-favicon) {
-	opacity:0.75;
+	opacity: 0.75;
 	transition: opacity var.$duration-slow-1 var.$motion-exit-expressive;
 }
 
 .workspace-leaf-content img:not([width]):hover,
 .markdown-preview-view img:hover {
-	opacity:1;
+	opacity: 1;
 	transition: opacity var.$duration-slow-1 var.$motion-entrance-expressive;
 }
 

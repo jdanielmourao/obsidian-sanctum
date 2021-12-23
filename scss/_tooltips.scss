@@ -8,10 +8,10 @@
 	z-index: var(--layer-tooltip);
 	pointer-events: none;
 	box-shadow: var.$elevation-1;
-	background-color: var(--color-primary-k);
-	color: var(--color-primary-10);
+	background-color: var(--text-normal);
+	color: var(--color-primary-0);
 	font-size: var.$font-scale-00;
-	font-weight: var(--font-regular);
+	font-weight: 400;
 	line-height: 20px;
 	border-radius: 3px;
 	left: 50%;
@@ -26,19 +26,19 @@
 	}
 
 	& .tooltip-arrow {
-		border-bottom: 5px solid var(--color-primary-k);
+		border-bottom: 5px solid var(--text-normal);
 	}
 
 	&.mod-right .tooltip-arrow {
-		border-right: 5px solid var(--color-primary-k);
+		border-right: 5px solid var(--text-normal);
 	}
 
 	&.mod-left .tooltip-arrow {
-		border-left: 5px solid var(--color-primary-k);
+		border-left: 5px solid var(--text-normal);
 	}
 
 	&.mod-top .tooltip-arrow {
-		border-top: 5px solid var(--color-primary-k);
+		border-top: 5px solid var(--text-normal);
 	}
 
 	&.mod-error .tooltip-arrow {

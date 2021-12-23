@@ -27,7 +27,7 @@
 	border-radius: 3px;
 	padding: var.$size-2
 			 var.$size-2
-			 var.$size-1
+			 var.$size-0
 			 var.$size-2;
 	font-size: var.$font-scale-00;
 	font-weight: var(--font-regular);
@@ -47,13 +47,14 @@ button.mod-cta {
 	@include button-l;
 	background-color: var(--color-accent);
 
+	.theme-dark & {
+		font-weight: var(--font-medium);
+	}
 	&:hover {
-		background-color: var(--color-hover);
-		color: var(--text-normal);
+		background-color: var(--color-primary-4);
 	}
 	&:active {
-		background-color: var(--color-primary-50);
-		color: var(--text-normal);
+		background-color: var(--color-primary-5);
 	}
 }
 
@@ -63,31 +64,31 @@ button.mod-cta {
 	& button.mod-cta {
 		color: var(--text-normal);
 		@include button-m;
-		background-color: var(--color-primary-20);
 		outline: 1px solid transparent;
 	}
 	&:hover button.mod-cta {
-		background-color: var(--color-primary-30);
+		background-color: var(--color-primary-3);
 	}
 	&:hover button.mod-cta:hover {
-		background-color: var(--color-primary-40);
+		background-color: var(--color-primary-4);
 	}
 	&:hover button.mod-cta:active {
-		background-color: var(--color-primary-50);
+		background-color: var(--color-primary-5);
 	}
 }
 
 /* Sort, Selected icons*/
 .modal.mod-community-plugin .setting-item-control button.clickable-icon,
 .modal.mod-community-theme .setting-item-control button.clickable-icon {
-	color: var(--text-normal);
+	color: var(--text-faint);
 	@include button-s;
-	background-color: var(--color-primary-20);
+	background-color: var(--background-primary);
+	margin-left: 0;
 }
 
 // Publish Page buttons
 .modal.mod-publish button:not(.mod-cta):not(.mod-warning) {
-	color: #{var.$color-white};
+	color: var(--color-primary-2);
 	@include button-l;
 	background-color: var(--color-hover);
 }
@@ -98,5 +99,12 @@ button.mod-cta {
 .modal.mod-community-plugin .community-plugin-info p button:not(.mod-cta):not(.mod-warning) {
 	color: var(--text-normal);
 	@include button-l;
-	background-color: var(--color-primary-20);
+	background-color: var(--color-primary-2);
+
+	&:hover {
+		background-color: var(--color-primary-3);
+	}
+	&:active {
+		background-color: var(--color-primary-4);
+	}
 }

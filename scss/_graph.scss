@@ -3,7 +3,7 @@
 .graph-view.color {
 	// color of nodes
 	&-fill {
-		color: var(--color-primary-70);
+		color: var(--color-primary-5);
 
 		&-focused {
 			color: var(--color-fill-focused);
@@ -26,40 +26,36 @@
 	}
 	// focused node border color
 	&-circle {
-	    color: var(--color-primary-70);
+	    color: var(--color-primary-6);
 	}
 	&-line {
 		.theme-light &,
 		.theme-dark & {
-		    color: var(--color-primary-40);
+		    color: var(--color-primary-3);
 		    opacity: .5;
 		}
 		// focused node connections
 		&-highlight {
-		    color: var(--color-primary-70);
+		    color: var(--color-primary-5);
 		}
 	}
 	&-arrow {
-	    color: var(--color-primary-70);
+	    color: var(--color-primary-5);
 	    opacity: 1;
 	}
 	&-text {
-	    color: var(--text-muted);
+	    color: var(--text-faint);
 	}
 }
 
 .graph-controls {
 	border-color: var(--color-border-1);
+	background-color: rgba(var(--rgb-primary-0), .15);
+	backdrop-filter: blur(4px);
+	transition: var.$duration-fast-1 var.$motion-standard-expressive;
 
-	.theme-light & {
-		background-color: var(--background-primary);
-		transition: var.$duration-fast-1 var.$motion-standard-expressive;
-	}
-	.theme-light & {
-		background-color: hsla(34.3, 21.2%, 93.5%, .9);
-	}
-	.theme-dark &:not(.tree-item-self) {
-		background-color: hsla(0, 0%, 7.8%, .9);
+	& div.setting-item .setting-item-name {
+		font-size: var.$font-scale-00;
 	}
 	&.is-close {
 		min-width: inherit;
@@ -81,5 +77,12 @@
 		&:hover {
 			border-width: 2px;
 		}
+	}
+	& .tree-item-self {
+		font-size: var.$font-scale-00;
+		padding-left: 0;
+	}
+	& .tree-item-icon.collapse-icon {
+		padding-right: 8px;
 	}
 }

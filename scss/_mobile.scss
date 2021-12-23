@@ -1,16 +1,16 @@
 @use 'var';
 
 .is-mobile .titlebar {
-    background: var(--color-primary);
-    border-bottom: 1.5px solid var(--color-border-1);
+	background: var(--color-primary);
+	border-bottom: 1.5px solid var(--color-border-1);
 
-    &-text {
-        margin-top: 3px;
+	&-text {
+		margin-top: 2px;
 		color: var(--text-faint);
-    }
-    &-button {
+	}
+	&-button {
 		display: none;
-    }
+	}
 }
 
 .is-mobile .modal-bg {  // background of settings
@@ -19,7 +19,7 @@
 	left: var.$size-0;
 	width: 100%;
 	height: 100%;
-	background-color: var(--hsl-color-primary);
+	background-color: var(--color-primary-0);
 	backdrop-filter: blur(0px); //removed blur for performance
 }
 
@@ -30,29 +30,16 @@
 	overflow: hidden;
 	height: 100vh;
 	width: 100%;
-	max-width: 300pt;
+	max-width: 400pt; // width so that the border/scrollbar of note won't show when side panel is opened.
+	// this matches the pinned side panel max width
 	z-index: var(--layer-sidedock);
 
 	&.mod-left {
-		border-right: 1px  solid var(--color-border-1);
+		border-right: 1px solid var(--color-border-1);
 	}
 	&.mod-right {
-		border-left: 1px  solid var(--color-border-1);
+		border-left: 1px solid var(--color-border-1);
 	}
-}
-
-
-// Pinned Drawer
-.workspace-drawer.is-pinned.mod-right,
-.workspace-drawer.is-pinned.mod-left {
-	position: relative;
-	max-width: 400pt;
-}
-.workspace-drawer.is-pinned.mod-right {
-	border-left: 1px solid var(--color-border-1);
-}
-.workspace-drawer.is-pinned.mod-left {
-	border-right: 1px solid var(--color-border-1);
 }
 
 //Mobile Nav
@@ -97,25 +84,72 @@
 	padding-left: 8px;
 	margin-left: 64px; //subtracts width of icons ribbon
 	border-left: 1px solid var(--color-border-1);
-	display: none;
+	display: visible;
+
+	& .workspace-drawer-header-icon:before {
+		content: "Click the icon to unpin →";
+		font-size: var.$font-scale-00;
+		line-height: var.$leading-0;
+	}
 
 	& .workspace-drawer-header-left {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		
+		& .workspace-drawer-header-name { // vault name
+			display: none;
+		}
 		& .workspace-drawer-header-info { //file and folder counter
 			display: flex;
 			color: var(--text-muted);
 			margin: 0;
 			font-size: 16px;
 
-			& div {
+			& div { // number for files and folders
 				margin-top: auto;
 				margin-left: 16px;
+				display: none;
 			}
 		}
 	}
+}
+
+.workspace-drawer.mod-left:not(.workspace-drawer.is-pinned.mod-left) .workspace-drawer-header {
+	display: none; // makes it so that it only shows the unpin button when it's already pinned
+}
+
+div.workspace-drawer.is-pinned.mod-left .workspace-drawer-active-tab-header {
+	padding-top: 16px; // makes the tab header closer to the unpin icon when it's pinned.
+}
+	
+// Pinned Drawer
+.workspace-drawer.is-pinned.mod-right,
+.workspace-drawer.is-pinned.mod-left {
+	position: relative;
+	max-width: 400pt;
+}
+.workspace-drawer.is-pinned.mod-right {
+	border-left: 1px solid var(--color-border-1);
+}
+.workspace-drawer.is-pinned.mod-left {
+	border-right: 1px solid var(--color-border-1);
+}
+
+.is-mobile .workspace-drawer-header-icon svg.pin { // hide Pin icon
+	display: none;
+}
+
+.is-mobile .workspace-drawer-header-icon svg.filled-pin { // show UnPin icon
+	display: visible;
+}
+
+.is-mobile .workspace-drawer-header-icon  svg { // Pin Icon
+	color: var(--text-faint);
+	cursor: pointer;
+	margin-left: var.$size-3;
+	height: 20px;
+	width: 20px;
 }
 
 .workspace-drawer-active-tab-header {
@@ -143,17 +177,8 @@
 	padding-left: 32px;
 }
 
-div.workspace-drawer-active-tab-icon svg.fullscreen, // hide "maximise"
-.is-mobile .workspace-drawer-header-icon svg.pin { // hide Pin icon
+div.workspace-drawer-active-tab-icon svg.fullscreen { // hide "maximise"
 	display: none;
-}
-
-.is-mobile .workspace-drawer-header-icon  svg{ // Pin Icon
-	color: var(--text-faint);
-	cursor: pointer;
-	margin-left: var.$size-3;
-	height: 20px;
-	width: 20px;
 }
 
 .workspace-drawer-active-tab-back-icon {
@@ -243,9 +268,13 @@ body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
 	bottom: 0;
 	border-radius: 6px 6px 0 0;
 	padding: 12px 24px;
-	box-shadow: var.$elevation-1;
+	box-shadow: var.$elevation-2;
 	background-color: var(--background-primary);
-	border: 1px solid var(--color-primary-w);
+	border: 1px solid var(--color-primary-0);
+}
+
+.is-mobile .suggestion-hotkey {
+	display: none;
 }
 
 .is-mobile .setting-item-control {
@@ -270,8 +299,8 @@ body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
 
 .is-mobile .modal.mod-settings .vertical-tab-header:before { //adds the "Settings" portion at the top of the mobile menu
 	content: "Settings";
-	font-weight: 600;
-	font-size: var(--font-settings);
+	font-weight: var(--font-semi-bold);
+	font-size: var.$font-scale-2;
 	position: sticky;
 	display: flex;
 	height: 48px;
@@ -279,7 +308,7 @@ body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	border-bottom: 1px solid var(--color-border-2);
+	border-bottom: 1px solid var(--color-border-1);
 	background: var(--background-primary);
 	left: 0;
 	top: -1px;
@@ -355,12 +384,12 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 	top: var.$size-0;
 	left: var.$size-0;
 	opacity: 1;
-	background-color: hsla(var(--hsl-color-primary-k), 1);
+	background-color: var(--background-primary);
 	transition: opacity var.$motion-exit-productive var.$duration-moderate-1;
 }
 
 .no-blur .is-mobile .workspace-drawer-backdrop {
-	background-color: hsla(var(--hsl-color-primary-k), .7);
+	background-color: hsla(var(--hsl-90), .7);
 	backdrop-filter: blur(0px);
 }
 
@@ -382,7 +411,7 @@ html .is-mobile div.menu {
 	padding-left: 8px;
 	top: unset;
 	overflow-y: auto;
-	background-color: var(--color-primary-10);
+	background-color: var(--color-primary-1);
 	box-shadow: var.$elevation-1;
 }
 
@@ -391,7 +420,7 @@ html .is-mobile div.menu {
 			 var.$size-0
 			 var.$size-2
 			 var.$size-0;
-	background-color: var(--color-primary-10);
+	background-color: var(--color-primary-1);
 }
 
 
@@ -456,6 +485,17 @@ html .is-mobile div.menu {
 		color: var(--text-muted);
 		background: none;
 	}
+}
+
+.is-mobile .modal.mod-community-plugin .modal-close-button {
+	display: none;
+}
+
+.is-mobile .community-plugin-search .setting-item-control {
+	padding-right: 20px; // is needed for the plugin search, otherwise it won't be centered in phones
+}
+.is-mobile .community-plugin-search .search-input-container {
+	width: 100%;
 }
 
 .is-mobile button { //general button formatting
@@ -578,7 +618,7 @@ body.is-mobile .nav-action-button svg {
 
 .is-mobile .horizontal-main-container {
 	position: relative;
-	background-color: var(--color-primary-w);
+	background-color: var(--color-primary-0);
 }
 
 .is-mobile .suggestion-item {
@@ -601,10 +641,8 @@ body.is-mobile .nav-action-button svg {
 			 var.$size-3;
 }
 
-.is-mobile [aria-label='Edit (⌘+Click to edit in new pane)'],
-.is-mobile [aria-label='Edit (Ctrl+Click to edit in new pane)'],
-.is-mobile [aria-label='Preview (⌘+Click to open in new pane)'],
-.is-mobile [aria-label='Preview (Ctrl+Click to open in new pane)'] {
+.is-mobile [aria-label*='Current view: reading'],
+.is-mobile [aria-label*='Current view: editing'] { //floating button mode switch
 	display: flex;
 	position: fixed;
 	justify-content: center;
@@ -613,12 +651,20 @@ body.is-mobile .nav-action-button svg {
 	height: 48px;
 	top: calc(100vh - 96px);
 	right: 0.5vw;
-	color: var(--color-primary-k);
-	background-color: var(--color-primary-10);
-	border: 1px solid var(--color-primary-w);
+	color: var(--color-accent);
+	background-color: var(--color-primary-1);
+	border: 1px solid var(--color-primary-0);
 	transform: translate(-16px, -24%);
 	border-radius: 50%;
-	box-shadow: var.$elevation-1;
+	box-shadow: var.$elevation-2;
+}
+
+.is-mobile .view-action svg.reading-glasses { // visually center eye
+	transform: translateX(0px) scale(1.1) translateY(-.5px);
+}
+
+.is-mobile .view-action svg.pencil { //visually center pencil
+	transform: translateX(0px) scale(1.1) translateY(-1px);
 }
 
 .is-mobile .view-action {
@@ -636,12 +682,13 @@ body.is-mobile .nav-action-button svg {
 	height: 48px;
 	width: 100%;
 	overflow-y: hidden;
-	border-top: 1px solid var(--color-border-1);
+	border-top: 1px solid var(--color-border-2);
 	background-color: var(--background-primary-alt);
 }
 
 .mobile-toolbar-options-container {
-	background-color: var(--background-primary);
+	background-color: var(--color-primary-1);
+	border: 1px solid var(--color-primary-0);
 	height: 48px;
 	display: flex;
 	overflow-x: auto;
@@ -696,4 +743,18 @@ body.is-mobile .nav-action-button svg {
 		margin-left: 2px;
 		margin-bottom: 2px;
 	}
+}
+
+.pull-action.mod-activated { // when you pull down to show prompt
+	background-color: var(--interactive-accent);
+	color: var(--text-on-accent);
+}
+.pull-down-action {
+	top: 0;
+	width: 100%;
+	min-width: 100vw;
+	padding: 32px 8px;
+	text-align: center;
+	border-bottom: 1px solid var(--color-border-2);
+	box-shadow: var.$elevation-1;
 }

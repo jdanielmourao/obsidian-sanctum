@@ -1,5 +1,18 @@
 @use 'var';
 
+div#quick-explorer .explorable.selected,
+div#quick-explorer .explorable,
+div#quick-explorer .explorable:hover {
+	padding: 2px 4px;
+}
+
+div#quick-explorer .explorable.selected,
+div#quick-explorer .explorable:hover {
+	color: var(--text-muted);
+	border-radius: 0px;
+	background-color: transparent;
+}
+
 .qe-popup-menu .menu-item {
 	display: flex;
 	padding-left: var.$size-5;
