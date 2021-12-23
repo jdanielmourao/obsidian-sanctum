@@ -1624,6 +1624,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
   font-variant-ligatures: common-ligatures;
 }
 
+.cm-list-1, .cm-list-2, .cm-list-3, .cm-list-4, .cm-list-5, .cm-list-6, .cm-list-7, .cm-list-8, .cm-list-9, .cm-list-10,
 .cm-line,
 .markdown-source-view.mod-cm6 .cm-scroller,
 .markdown-source-view,
@@ -5293,8 +5294,6 @@ div.community-plugin-item .community-plugin-version {
   background-color: var(--color-primary-0);
   border: 1px solid var(--color-primary-2);
   padding: 2px 8px;
-  display: flex;
-  flex-direction: row;
 }
 .hotkey-list-container .setting-item .setting-item-control .setting-hotkey.mod-active {
   background-color: #8c8d3b;

@@ -254,8 +254,6 @@
 				background-color: var(--color-primary-0);
 				border: 1px solid var(--color-primary-2);
 				padding: 2px 8px;
-				display: flex;
-				flex-direction: row;
 			}
 			& .setting-hotkey.mod-active {
 				background-color: var.$color-green;
