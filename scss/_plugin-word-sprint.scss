@@ -2,7 +2,7 @@
 
 div#wordsprint div.status.pending {
 	background-color: var(--color-primary-1);
-	color: #{var(--color-primary-0)};
+	color: var(text-normal);
 }
 
 body div#wordsprint div#statsPanel button:not(.statsTab):not(.goalsTab),
