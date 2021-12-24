@@ -6221,12 +6221,12 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
   top: 0px;
   left: 0px;
   opacity: 1;
-  background-color: var(--background-primary);
+  background-color: transparent;
   transition: opacity cubic-bezier(0.2, 0, 1, 0.9) 150ms;
 }
 
 .no-blur .is-mobile .workspace-drawer-backdrop {
-  background-color: hsla(var(--hsl-90), 0.7);
+  background-color: transparent;
   backdrop-filter: blur(0px);
 }
 

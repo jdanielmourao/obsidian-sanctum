@@ -384,12 +384,12 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 	top: var.$size-0;
 	left: var.$size-0;
 	opacity: 1;
-	background-color: var(--background-primary);
+	background-color: transparent;
 	transition: opacity var.$motion-exit-productive var.$duration-moderate-1;
 }
 
 .no-blur .is-mobile .workspace-drawer-backdrop {
-	background-color: hsla(var(--hsl-90), .7);
+	background-color: transparent;
 	backdrop-filter: blur(0px);
 }
 
