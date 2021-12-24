@@ -87,8 +87,8 @@ body:not(body.plugin-sliding-panes-rotate-header) .workspace-leaf:not(.mod-activ
 	--background-primary: transparent;
 }
 
-:not(.is-mobile) .cm-scroller,
-:not(.is-mobile) .markdown-preview-view { //shadow on reading and editing modes, credit @mgmeyers
+body:not(.is-mobile) .cm-scroller,
+body:not(.is-mobile) .markdown-preview-view { //shadow on reading and editing modes, credit @mgmeyers
 	background:
 		linear-gradient(
 			var(--background-primary) 30%,
@@ -105,8 +105,11 @@ body:not(body.plugin-sliding-panes-rotate-header) .workspace-leaf:not(.mod-activ
 	background-repeat: no-repeat;
 	background-size: 100% 40px, 120% 4px;
 	background-attachment: local, scroll;
+}
 
-	.theme-dark & {
+body:not(.is-mobile) {
+	&.theme-dark .cm-scroller, 
+	&.theme-dark .markdown-preview-view {
 		background:
 		linear-gradient(
 			var(--background-primary) 30%,
