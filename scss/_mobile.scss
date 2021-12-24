@@ -36,9 +36,11 @@
 
 	&.mod-left {
 		border-right: 1px solid var(--color-border-1);
+		box-shadow: var.$elevation-1;
 	}
 	&.mod-right {
 		border-left: 1px solid var(--color-border-1);
+		box-shadow: var.$elevation-1;
 	}
 }
 
@@ -431,7 +433,6 @@ html .is-mobile div.menu {
 	height: var.$scale-6;
 	color: var(--text-normal);
 	background-color: var(--background-primary);
-	box-shadow: var.$elevation-1;
 }
 
 .is-mobile .modal-setting-back-button-icon {
@@ -641,8 +642,8 @@ body.is-mobile .nav-action-button svg {
 			 var.$size-3;
 }
 
-.view-action:nth-last-of-type(5),
-.view-action:nth-last-of-type(4) { //floating button mode switch
+.is-mobile .view-action:nth-last-of-type(5),
+.is-mobile .view-action:nth-last-of-type(4) { //floating button mode switch
 	display: flex;
 	position: fixed;
 	justify-content: center;

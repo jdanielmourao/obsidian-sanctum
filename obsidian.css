@@ -1,4 +1,4 @@
-@charset "UTF-8";
+«@charset "UTF-8";
 /* ─────────────────────────────────────────────────────────────────────────
 SANCTUM
 Version 0.5
@@ -5896,9 +5896,11 @@ input[type=range]::-webkit-slider-thumb {
 }
 .workspace-drawer.mod-left {
   border-right: 1px solid var(--color-border-1);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
 }
 .workspace-drawer.mod-right {
   border-left: 1px solid var(--color-border-1);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
 .is-mobile .nav-file-title-content:before {
@@ -6267,7 +6269,6 @@ html .is-mobile div.menu {
   height: 48px;
   color: var(--text-normal);
   background-color: var(--background-primary);
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
 .is-mobile .modal-setting-back-button-icon {
@@ -6466,8 +6467,8 @@ body.is-mobile .nav-action-button svg {
   padding: 4px 8px;
 }
 
-.view-action:nth-last-of-type(5),
-.view-action:nth-last-of-type(4) {
+.is-mobile .view-action:nth-last-of-type(5),
+.is-mobile .view-action:nth-last-of-type(4) {
   display: flex;
   position: fixed;
   justify-content: center;
@@ -6506,7 +6507,7 @@ body.is-mobile .nav-action-button svg {
   bottom: 0;
   height: 48px;
   width: 100%;
-  overflow-y: auto;
+  overflow-y: hidden;
   border-top: 1px solid var(--color-border-2);
   background-color: var(--background-primary-alt);
 }
