@@ -641,8 +641,8 @@ body.is-mobile .nav-action-button svg {
 			 var.$size-3;
 }
 
-.is-mobile [aria-label*='Current view: reading'],
-.is-mobile [aria-label*='Current view: editing'] { //floating button mode switch
+.view-action:nth-last-of-type(5),
+.view-action:nth-last-of-type(4) { //floating button mode switch
 	display: flex;
 	position: fixed;
 	justify-content: center;
@@ -651,7 +651,7 @@ body.is-mobile .nav-action-button svg {
 	height: 48px;
 	top: calc(100vh - 96px);
 	right: 0.5vw;
-	color: var(--color-accent);
+	color: var(--text-muted);
 	background-color: var(--color-primary-1);
 	border: 1px solid var(--color-primary-0);
 	transform: translate(-16px, -24%);
