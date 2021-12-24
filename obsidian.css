@@ -5880,7 +5880,7 @@ input[type=range]::-webkit-slider-thumb {
   left: 0px;
   width: 100%;
   height: 100%;
-  background-color: var(--color-primary-0);
+  background-color: transparent;
   backdrop-filter: blur(0px);
 }
 
