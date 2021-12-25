@@ -50,6 +50,10 @@ aside {
 	word-break: break-word;
 }
 
+.markdown-source-view.is-live-preview.is-readable-line-width .aside-left {
+	margin-left: -21.5rem;
+}
+
 .aside-right {
 	float: right;
 	position: relative;
