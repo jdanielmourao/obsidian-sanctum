@@ -20,7 +20,6 @@ aside {
 	text-align: start;
 	font-weight: unset;
 	font-size: var.$font-scale-00;
-	line-height: var.$leading-2;
 	background-color: transparent;
 	border-left: 1.5px solid var(--color-accent);
 }
@@ -47,7 +46,6 @@ aside {
 	text-align: start; // aligns left
 	font-size: var.$font-scale-00;
 	font-weight: unset;
-	line-height: var.$leading-2;
 	white-space: normal;
 	word-break: break-word;
 }
@@ -71,7 +69,6 @@ aside {
 	text-align: start; /* aligns left */
 	font-size: var.$font-scale-00;
 	font-weight: unset;
-	line-height: var.$leading-2;
 	text-align: start;
 }
 
@@ -100,7 +97,6 @@ aside {
 	text-align: start;
 	font-weight: unset;
 	background-color: transparent;
-	line-height: var.$leading-0;
 
 	&:before {
 		display: block;
@@ -128,7 +124,6 @@ aside {
 		// border-right: 1.5px solid #{var.$80};
 		border-radius: 0px;
 		font-size: var.$font-scale-00;
-		line-height: var.$leading-2;
 		width: 300px;
 		padding: var.$size-0
 				 var.$size-0
@@ -156,7 +151,6 @@ aside {
 	text-align: start;
 	font-weight: unset;
 	font-size: var.$font-scale-00;
-	line-height: var.$leading-2;
 	background-color: transparent;
 	border-left: 1.5px solid var(--color-accent);
 

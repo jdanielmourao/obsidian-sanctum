@@ -23,7 +23,7 @@ body {
 .markdown-preview-view { //preview
 	font-optical-sizing: auto;
 	font-family: var(--font-preview);
-	line-height: var.$leading-3;
+	line-height: var.$leading-4;
 	letter-spacing: var.$tracking-0;
 	hyphens: auto;
 	font-variant-ligatures: common-ligatures;
@@ -38,7 +38,7 @@ body {
 	font-variant-ligatures: common-ligatures;
 	font-optical-sizing: auto;
 	font-family: var(--font-editor);
-	line-height: var.$leading-3;
+	line-height: var.$leading-4;
 	letter-spacing: var.$tracking-2;
 }
 
@@ -46,12 +46,11 @@ body {
 	font-variant-ligatures: common-ligatures;
 	font-optical-sizing: auto;
 	font-family: var(--font-editor);
-	line-height: var.$leading-3;
 	letter-spacing: var.$tracking-2;
 }
 
-.CodeMirror-sizer {
-	line-height: var.$leading-2;
+.CodeMirror-sizer { // Legacy Editor
+	line-height: var.$leading-4;
 }
 /*
 .CodeMirror-wrap .CodeMirror-line,
