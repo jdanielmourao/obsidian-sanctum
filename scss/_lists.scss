@@ -9,6 +9,15 @@ ol > li::marker {
 }
 
 .markdown-preview-view {
+	& ol li p {
+		margin: 0;
+	}
+	& ol li,
+	& ul li {
+		line-height: var.$leading-4; //adds white space to lists, and makes it match task lists
+		margin: 4px 0;
+	}
+	
 	& .list-collapse-indicator { // generic ul and task list
 		margin-left: -3.5rem;
 		color: var(--text-faint);
@@ -66,7 +75,7 @@ ul ol ul ul ul {
 	list-style-type: '–  ';
 	margin: var.$size-0;
 	padding: var.$size-0;
-	margin-left: 1.5rem;
+	padding-left: 1.5rem;
 }
 
 ul ul,
@@ -80,7 +89,7 @@ ol ul ol ul ul,
 ul ol ol ul ul {
 	list-style-type: '▪  '; // don't set it as square, because it will misalign
 	padding: var.$size-0;
-	margin-left: 1.5rem;
+	padding-left: 1.5rem;
 }
 
 // Unordered list bullet thickness and size
@@ -137,10 +146,6 @@ ul li {
 	content: "";
 }
 
-.relationship-lines ul > li > ul > li::before {
-	content: "";
-}
-
 // level 2
 .relationship-lines ul > li > ul > li::before {
 	position: absolute;
@@ -168,9 +173,9 @@ ul li {
 	position: absolute;
 	display: block;
 	content: "";
-	height: 12px;
+	height: 15px;
 	width: 1px;
-	top: 0px;
+	top: -3px;
 	left: -24px;
 	background-color: var(--text-faint);
 }
