@@ -1,4 +1,4 @@
-«@charset "UTF-8";
+@charset "UTF-8";
 /* ─────────────────────────────────────────────────────────────────────────
 SANCTUM
 Version 0.5
@@ -413,85 +413,112 @@ body.no-animation * {
   display: none;
 }
 
-object.link-favicon[data-host*="trello.com"] {
-  content: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg fill='hsl(0, 0%, 7.8%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' %3E%3Cpath d='M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M21,36c0,1.1-0.9,2-2,2h-7 c-1.1,0-2-0.9-2-2V12c0-1.1,0.9-2,2-2h7c1.1,0,2,0.9,2,2V36z M40,24c0,1.1-0.9,2-2,2h-7c-1.1,0-2-0.9-2-2V12c0-1.1,0.9-2,2-2h7 c1.1,0,2,0.9,2,2V24z'/%3E%3C/svg%3E");
-  width: 16px;
-  height: 16px;
+/*
+object.link-favicon[data-host*="wikipedia.org"] {
 }
-.theme-dark object.link-favicon[data-host*="trello.com"] {
-  filter: invert(1) grayscale(1);
+
+
+object.link-favicon[data-host*="trello.com"] {
+	content: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3Csvg fill='hsl(0, 0%, 7.8%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' %3E%3Cpath d='M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M21,36c0,1.1-0.9,2-2,2h-7 c-1.1,0-2-0.9-2-2V12c0-1.1,0.9-2,2-2h7c1.1,0,2,0.9,2,2V36z M40,24c0,1.1-0.9,2-2,2h-7c-1.1,0-2-0.9-2-2V12c0-1.1,0.9-2,2-2h7 c1.1,0,2,0.9,2,2V24z'/%3E%3C/svg%3E");
+	width: 16px;
+	height: 16px;
+	.theme-dark & {
+		filter: invert(1) grayscale(1);
+	}
 }
 
 object.link-favicon[data-host*="docs.google.com"] {
-  content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg viewBox='0 0 47 65' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EDocs-icon%3C/title%3E%3Cdefs%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z' id='path-1'/%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z' id='path-3'/%3E%3ClinearGradient x1='50.0053945%25' y1='8.58610612%25' x2='50.0053945%25' y2='100.013939%25' id='linearGradient-5'%3E%3Cstop stop-color='%231A237E' stop-opacity='0.2' offset='0%25'/%3E%3Cstop stop-color='%231A237E' stop-opacity='0.02' offset='100%25'/%3E%3C/linearGradient%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z' id='path-6'/%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z' id='path-8'/%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z' id='path-10'/%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z' id='path-12'/%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z' id='path-14'/%3E%3CradialGradient cx='3.16804688%25' cy='2.71744318%25' fx='3.16804688%25' fy='2.71744318%25' r='161.248516%25' gradientTransform='translate(0.031680,0.027174),scale(1.000000,0.723077),translate(-0.031680,-0.027174)' id='radialGradient-16'%3E%3Cstop stop-color='%23FFFFFF' stop-opacity='0.1' offset='0%25'/%3E%3Cstop stop-color='%23FFFFFF' stop-opacity='0' offset='100%25'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Consumer-Apps-Docs-Large-VD-R8' transform='translate(-451.000000, -463.000000)'%3E%3Cg id='Hero' transform='translate(0.000000, 63.000000)'%3E%3Cg id='Personal' transform='translate(277.000000, 309.000000)'%3E%3Cg id='Docs-icon' transform='translate(174.000000, 91.000000)'%3E%3Cg id='Group'%3E%3Cg id='Clipped'%3E%3Cmask id='mask-2' fill='white'%3E%3Cuse xlink:href='%23path-1'/%3E%3C/mask%3E%3Cg id='SVGID_1_'/%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L36.71875,10.3409091 L29.375,0 Z' id='Path' fill='%234285F4' fill-rule='nonzero' mask='url(%23mask-2)'/%3E%3C/g%3E%3Cg id='Clipped'%3E%3Cmask id='mask-4' fill='white'%3E%3Cuse xlink:href='%23path-3'/%3E%3C/mask%3E%3Cg id='SVGID_1_'/%3E%3Cpolygon id='Path' fill='url(%23linearGradient-5)' fill-rule='nonzero' mask='url(%23mask-4)' points='30.6638281 16.4309659 47 32.8582386 47 17.7272727'/%3E%3C/g%3E%3Cg id='Clipped'%3E%3Cmask id='mask-7' fill='white'%3E%3Cuse xlink:href='%23path-6'/%3E%3C/mask%3E%3Cg id='SVGID_1_'/%3E%3Cpath d='M11.75,47.2727273 L35.25,47.2727273 L35.25,44.3181818 L11.75,44.3181818 L11.75,47.2727273 Z M11.75,53.1818182 L29.375,53.1818182 L29.375,50.2272727 L11.75,50.2272727 L11.75,53.1818182 Z M11.75,32.5 L11.75,35.4545455 L35.25,35.4545455 L35.25,32.5 L11.75,32.5 Z M11.75,41.3636364 L35.25,41.3636364 L35.25,38.4090909 L11.75,38.4090909 L11.75,41.3636364 Z' id='Shape' fill='%23F1F1F1' fill-rule='nonzero' mask='url(%23mask-7)'/%3E%3C/g%3E%3Cg id='Clipped'%3E%3Cmask id='mask-9' fill='white'%3E%3Cuse xlink:href='%23path-8'/%3E%3C/mask%3E%3Cg id='SVGID_1_'/%3E%3Cg id='Group' mask='url(%23mask-9)'%3E%3Cg transform='translate(26.437500, -2.954545)'%3E%3Cpath d='M2.9375,2.95454545 L2.9375,16.25 C2.9375,18.6985795 4.90929688,20.6818182 7.34375,20.6818182 L20.5625,20.6818182 L2.9375,2.95454545 Z' id='Path' fill='%23A1C2FA' fill-rule='nonzero'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cg id='Clipped'%3E%3Cmask id='mask-11' fill='white'%3E%3Cuse xlink:href='%23path-10'/%3E%3C/mask%3E%3Cg id='SVGID_1_'/%3E%3Cpath d='M4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,4.80113636 C0,2.36363636 1.9828125,0.369318182 4.40625,0.369318182 L29.375,0.369318182 L29.375,0 L4.40625,0 Z' id='Path' fill-opacity='0.2' fill='%23FFFFFF' fill-rule='nonzero' mask='url(%23mask-11)'/%3E%3C/g%3E%3Cg id='Clipped'%3E%3Cmask id='mask-13' fill='white'%3E%3Cuse xlink:href='%23path-12'/%3E%3C/mask%3E%3Cg id='SVGID_1_'/%3E%3Cpath d='M42.59375,64.6306818 L4.40625,64.6306818 C1.9828125,64.6306818 0,62.6363636 0,60.1988636 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,60.1988636 C47,62.6363636 45.0171875,64.6306818 42.59375,64.6306818 Z' id='Path' fill-opacity='0.2' fill='%231A237E' fill-rule='nonzero' mask='url(%23mask-13)'/%3E%3C/g%3E%3Cg id='Clipped'%3E%3Cmask id='mask-15' fill='white'%3E%3Cuse xlink:href='%23path-14'/%3E%3C/mask%3E%3Cg id='SVGID_1_'/%3E%3Cpath d='M33.78125,17.7272727 C31.3467969,17.7272727 29.375,15.7440341 29.375,13.2954545 L29.375,13.6647727 C29.375,16.1133523 31.3467969,18.0965909 33.78125,18.0965909 L47,18.0965909 L47,17.7272727 L33.78125,17.7272727 Z' id='Path' fill-opacity='0.1' fill='%231A237E' fill-rule='nonzero' mask='url(%23mask-15)'/%3E%3C/g%3E%3C/g%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z' id='Path' fill='url(%23radialGradient-16)' fill-rule='nonzero'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  width: 16px;
-  height: 16px;
+	content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg viewBox='0 0 47 65' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EDocs-icon%3C/title%3E%3Cdefs%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z' id='path-1'/%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z' id='path-3'/%3E%3ClinearGradient x1='50.0053945%25' y1='8.58610612%25' x2='50.0053945%25' y2='100.013939%25' id='linearGradient-5'%3E%3Cstop stop-color='%231A237E' stop-opacity='0.2' offset='0%25'/%3E%3Cstop stop-color='%231A237E' stop-opacity='0.02' offset='100%25'/%3E%3C/linearGradient%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z' id='path-6'/%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z' id='path-8'/%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z' id='path-10'/%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z' id='path-12'/%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z' id='path-14'/%3E%3CradialGradient cx='3.16804688%25' cy='2.71744318%25' fx='3.16804688%25' fy='2.71744318%25' r='161.248516%25' gradientTransform='translate(0.031680,0.027174),scale(1.000000,0.723077),translate(-0.031680,-0.027174)' id='radialGradient-16'%3E%3Cstop stop-color='%23FFFFFF' stop-opacity='0.1' offset='0%25'/%3E%3Cstop stop-color='%23FFFFFF' stop-opacity='0' offset='100%25'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Consumer-Apps-Docs-Large-VD-R8' transform='translate(-451.000000, -463.000000)'%3E%3Cg id='Hero' transform='translate(0.000000, 63.000000)'%3E%3Cg id='Personal' transform='translate(277.000000, 309.000000)'%3E%3Cg id='Docs-icon' transform='translate(174.000000, 91.000000)'%3E%3Cg id='Group'%3E%3Cg id='Clipped'%3E%3Cmask id='mask-2' fill='white'%3E%3Cuse xlink:href='%23path-1'/%3E%3C/mask%3E%3Cg id='SVGID_1_'/%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L36.71875,10.3409091 L29.375,0 Z' id='Path' fill='%234285F4' fill-rule='nonzero' mask='url(%23mask-2)'/%3E%3C/g%3E%3Cg id='Clipped'%3E%3Cmask id='mask-4' fill='white'%3E%3Cuse xlink:href='%23path-3'/%3E%3C/mask%3E%3Cg id='SVGID_1_'/%3E%3Cpolygon id='Path' fill='url(%23linearGradient-5)' fill-rule='nonzero' mask='url(%23mask-4)' points='30.6638281 16.4309659 47 32.8582386 47 17.7272727'/%3E%3C/g%3E%3Cg id='Clipped'%3E%3Cmask id='mask-7' fill='white'%3E%3Cuse xlink:href='%23path-6'/%3E%3C/mask%3E%3Cg id='SVGID_1_'/%3E%3Cpath d='M11.75,47.2727273 L35.25,47.2727273 L35.25,44.3181818 L11.75,44.3181818 L11.75,47.2727273 Z M11.75,53.1818182 L29.375,53.1818182 L29.375,50.2272727 L11.75,50.2272727 L11.75,53.1818182 Z M11.75,32.5 L11.75,35.4545455 L35.25,35.4545455 L35.25,32.5 L11.75,32.5 Z M11.75,41.3636364 L35.25,41.3636364 L35.25,38.4090909 L11.75,38.4090909 L11.75,41.3636364 Z' id='Shape' fill='%23F1F1F1' fill-rule='nonzero' mask='url(%23mask-7)'/%3E%3C/g%3E%3Cg id='Clipped'%3E%3Cmask id='mask-9' fill='white'%3E%3Cuse xlink:href='%23path-8'/%3E%3C/mask%3E%3Cg id='SVGID_1_'/%3E%3Cg id='Group' mask='url(%23mask-9)'%3E%3Cg transform='translate(26.437500, -2.954545)'%3E%3Cpath d='M2.9375,2.95454545 L2.9375,16.25 C2.9375,18.6985795 4.90929688,20.6818182 7.34375,20.6818182 L20.5625,20.6818182 L2.9375,2.95454545 Z' id='Path' fill='%23A1C2FA' fill-rule='nonzero'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cg id='Clipped'%3E%3Cmask id='mask-11' fill='white'%3E%3Cuse xlink:href='%23path-10'/%3E%3C/mask%3E%3Cg id='SVGID_1_'/%3E%3Cpath d='M4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,4.80113636 C0,2.36363636 1.9828125,0.369318182 4.40625,0.369318182 L29.375,0.369318182 L29.375,0 L4.40625,0 Z' id='Path' fill-opacity='0.2' fill='%23FFFFFF' fill-rule='nonzero' mask='url(%23mask-11)'/%3E%3C/g%3E%3Cg id='Clipped'%3E%3Cmask id='mask-13' fill='white'%3E%3Cuse xlink:href='%23path-12'/%3E%3C/mask%3E%3Cg id='SVGID_1_'/%3E%3Cpath d='M42.59375,64.6306818 L4.40625,64.6306818 C1.9828125,64.6306818 0,62.6363636 0,60.1988636 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,60.1988636 C47,62.6363636 45.0171875,64.6306818 42.59375,64.6306818 Z' id='Path' fill-opacity='0.2' fill='%231A237E' fill-rule='nonzero' mask='url(%23mask-13)'/%3E%3C/g%3E%3Cg id='Clipped'%3E%3Cmask id='mask-15' fill='white'%3E%3Cuse xlink:href='%23path-14'/%3E%3C/mask%3E%3Cg id='SVGID_1_'/%3E%3Cpath d='M33.78125,17.7272727 C31.3467969,17.7272727 29.375,15.7440341 29.375,13.2954545 L29.375,13.6647727 C29.375,16.1133523 31.3467969,18.0965909 33.78125,18.0965909 L47,18.0965909 L47,17.7272727 L33.78125,17.7272727 Z' id='Path' fill-opacity='0.1' fill='%231A237E' fill-rule='nonzero' mask='url(%23mask-15)'/%3E%3C/g%3E%3C/g%3E%3Cpath d='M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z' id='Path' fill='url(%23radialGradient-16)' fill-rule='nonzero'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	width: 16px;
+	height: 16px;
 }
 
 object.link-favicon[data-host*="drive.google.com"] {
-  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 87.3 78' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z' fill='%230066da'/%3E%3Cpath d='m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z' fill='%2300ac47'/%3E%3Cpath d='m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z' fill='%23ea4335'/%3E%3Cpath d='m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z' fill='%2300832d'/%3E%3Cpath d='m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z' fill='%232684fc'/%3E%3Cpath d='m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z' fill='%23ffba00'/%3E%3C/svg%3E");
-  width: 16px;
-  height: 16px;
+	content: url("data:image/svg+xml,%3Csvg viewBox='0 0 87.3 78' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z' fill='%230066da'/%3E%3Cpath d='m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z' fill='%2300ac47'/%3E%3Cpath d='m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z' fill='%23ea4335'/%3E%3Cpath d='m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z' fill='%2300832d'/%3E%3Cpath d='m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z' fill='%232684fc'/%3E%3Cpath d='m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z' fill='%23ffba00'/%3E%3C/svg%3E");
+	width: 16px;
+	height: 16px;
 }
 
 object.link-favicon[data-host*="mail.google.com"] {
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='52 42 88 66'%3E%3Cpath fill='%234285f4' d='M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6'/%3E%3Cpath fill='%2334a853' d='M120 108h14c3.32 0 6-2.69 6-6V59l-20 15'/%3E%3Cpath fill='%23fbbc04' d='M120 48v26l20-15v-8c0-7.42-8.47-11.65-14.4-7.2'/%3E%3Cpath fill='%23ea4335' d='M72 74V48l24 18 24-18v26L96 92'/%3E%3Cpath fill='%23c5221f' d='M52 51v8l20 15V48l-5.6-4.2c-5.94-4.45-14.4-.22-14.4 7.2'/%3E%3C/svg%3E");
-  width: 16px;
-  height: 16px;
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='52 42 88 66'%3E%3Cpath fill='%234285f4' d='M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6'/%3E%3Cpath fill='%2334a853' d='M120 108h14c3.32 0 6-2.69 6-6V59l-20 15'/%3E%3Cpath fill='%23fbbc04' d='M120 48v26l20-15v-8c0-7.42-8.47-11.65-14.4-7.2'/%3E%3Cpath fill='%23ea4335' d='M72 74V48l24 18 24-18v26L96 92'/%3E%3Cpath fill='%23c5221f' d='M52 51v8l20 15V48l-5.6-4.2c-5.94-4.45-14.4-.22-14.4 7.2'/%3E%3C/svg%3E");
+	width: 16px;
+	height: 16px;
 }
 
 object.link-favicon[data-host*="github.com"] {
-  content: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill-rule:evenodd;%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elogo--github%3C/title%3E%3Cpath class='cls-1' d='M16,2a14,14,0,0,0-4.43,27.28c.7.13,1-.3,1-.67s0-1.21,0-2.38c-3.89.84-4.71-1.88-4.71-1.88A3.71,3.71,0,0,0,6.24,22.3c-1.27-.86.1-.85.1-.85A2.94,2.94,0,0,1,8.48,22.9a3,3,0,0,0,4.08,1.16,2.93,2.93,0,0,1,.88-1.87c-3.1-.36-6.37-1.56-6.37-6.92a5.4,5.4,0,0,1,1.44-3.76,5,5,0,0,1,.14-3.7s1.17-.38,3.85,1.43a13.3,13.3,0,0,1,7,0c2.67-1.81,3.84-1.43,3.84-1.43a5,5,0,0,1,.14,3.7,5.4,5.4,0,0,1,1.44,3.76c0,5.38-3.27,6.56-6.39,6.91a3.33,3.33,0,0,1,.95,2.59c0,1.87,0,3.38,0,3.84s.25.81,1,.67A14,14,0,0,0,16,2Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
-}
-.theme-dark object.link-favicon[data-host*="github.com"] {
-  content: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(34.3, 21.2%, 93.5%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill-rule:evenodd;%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elogo--github%3C/title%3E%3Cpath class='cls-1' d='M16,2a14,14,0,0,0-4.43,27.28c.7.13,1-.3,1-.67s0-1.21,0-2.38c-3.89.84-4.71-1.88-4.71-1.88A3.71,3.71,0,0,0,6.24,22.3c-1.27-.86.1-.85.1-.85A2.94,2.94,0,0,1,8.48,22.9a3,3,0,0,0,4.08,1.16,2.93,2.93,0,0,1,.88-1.87c-3.1-.36-6.37-1.56-6.37-6.92a5.4,5.4,0,0,1,1.44-3.76,5,5,0,0,1,.14-3.7s1.17-.38,3.85,1.43a13.3,13.3,0,0,1,7,0c2.67-1.81,3.84-1.43,3.84-1.43a5,5,0,0,1,.14,3.7,5.4,5.4,0,0,1,1.44,3.76c0,5.38-3.27,6.56-6.39,6.91a3.33,3.33,0,0,1,.95,2.59c0,1.87,0,3.38,0,3.84s.25.81,1,.67A14,14,0,0,0,16,2Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
-  filter: invert(1);
+	content: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill-rule:evenodd;%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elogo--github%3C/title%3E%3Cpath class='cls-1' d='M16,2a14,14,0,0,0-4.43,27.28c.7.13,1-.3,1-.67s0-1.21,0-2.38c-3.89.84-4.71-1.88-4.71-1.88A3.71,3.71,0,0,0,6.24,22.3c-1.27-.86.1-.85.1-.85A2.94,2.94,0,0,1,8.48,22.9a3,3,0,0,0,4.08,1.16,2.93,2.93,0,0,1,.88-1.87c-3.1-.36-6.37-1.56-6.37-6.92a5.4,5.4,0,0,1,1.44-3.76,5,5,0,0,1,.14-3.7s1.17-.38,3.85,1.43a13.3,13.3,0,0,1,7,0c2.67-1.81,3.84-1.43,3.84-1.43a5,5,0,0,1,.14,3.7,5.4,5.4,0,0,1,1.44,3.76c0,5.38-3.27,6.56-6.39,6.91a3.33,3.33,0,0,1,.95,2.59c0,1.87,0,3.38,0,3.84s.25.81,1,.67A14,14,0,0,0,16,2Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
+	.theme-dark & {
+		content: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(34.3, 21.2%, 93.5%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill-rule:evenodd;%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elogo--github%3C/title%3E%3Cpath class='cls-1' d='M16,2a14,14,0,0,0-4.43,27.28c.7.13,1-.3,1-.67s0-1.21,0-2.38c-3.89.84-4.71-1.88-4.71-1.88A3.71,3.71,0,0,0,6.24,22.3c-1.27-.86.1-.85.1-.85A2.94,2.94,0,0,1,8.48,22.9a3,3,0,0,0,4.08,1.16,2.93,2.93,0,0,1,.88-1.87c-3.1-.36-6.37-1.56-6.37-6.92a5.4,5.4,0,0,1,1.44-3.76,5,5,0,0,1,.14-3.7s1.17-.38,3.85,1.43a13.3,13.3,0,0,1,7,0c2.67-1.81,3.84-1.43,3.84-1.43a5,5,0,0,1,.14,3.7,5.4,5.4,0,0,1,1.44,3.76c0,5.38-3.27,6.56-6.39,6.91a3.33,3.33,0,0,1,.95,2.59c0,1.87,0,3.38,0,3.84s.25.81,1,.67A14,14,0,0,0,16,2Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
+		filter: invert(1);
+	}
 }
 
-.theme-dark object.link-favicon[data-host*="digg.com"] {
-  filter: invert(100);
+object.link-favicon[data-host*="digg.com"] {
+	.theme-dark &{
+		filter: invert(100);
+	}
+}
+
+object.link-favicon[data-host*="discord.com"],
+object.link-favicon[data-host*="discordapp.com"] {
+}
+
+object.link-favicon[data-host*="facebook.com"] {
+}
+
+object.link-favicon[data-host*="instagram.com"] {
+}
+
+object.link-favicon[data-host*="linkedin.com"] {
 }
 
 object.link-favicon[data-host*="livestream.com"] {
-  content: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(354.9, 73.9%, 46.7%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elogo--livestream%3C/title%3E%3Cpath d='M22.49,23.71h-.76c-2.26,0-4.52,0-6.78,0a3.12,3.12,0,0,1-2.41-1A14.91,14.91,0,0,1,10,18.88c-1.3-2.6-2.54-5.22-3.82-7.82-.39-.8-.82-1.56-1.28-2.32A7.84,7.84,0,0,0,2,5.6c1.24,0,2.41,0,3.57,0a45.63,45.63,0,0,1,7,.61,8.09,8.09,0,0,1,6.34,5.09,48.51,48.51,0,0,1,2.17,7.36A26,26,0,0,0,22.49,23.71Z'/%3E%3Cpath d='M28.1,26.38a2.93,2.93,0,0,1-2.74-2.64,42.08,42.08,0,0,1-.14-4.9,48,48,0,0,0-.61-7.58,3.75,3.75,0,0,0-.83-2h2.65c.54,0,.73.37.89.78A12.1,12.1,0,0,1,28,13.28c.29,2.72.31,5.45.33,8.18a10.94,10.94,0,0,0,0,1.15c.09.78.4,1.1,1.17,1.08.5,0,.5-.06.5-.06v2.69A8.62,8.62,0,0,1,28.1,26.38Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+	content: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(354.9, 73.9%, 46.7%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elogo--livestream%3C/title%3E%3Cpath d='M22.49,23.71h-.76c-2.26,0-4.52,0-6.78,0a3.12,3.12,0,0,1-2.41-1A14.91,14.91,0,0,1,10,18.88c-1.3-2.6-2.54-5.22-3.82-7.82-.39-.8-.82-1.56-1.28-2.32A7.84,7.84,0,0,0,2,5.6c1.24,0,2.41,0,3.57,0a45.63,45.63,0,0,1,7,.61,8.09,8.09,0,0,1,6.34,5.09,48.51,48.51,0,0,1,2.17,7.36A26,26,0,0,0,22.49,23.71Z'/%3E%3Cpath d='M28.1,26.38a2.93,2.93,0,0,1-2.74-2.64,42.08,42.08,0,0,1-.14-4.9,48,48,0,0,0-.61-7.58,3.75,3.75,0,0,0-.83-2h2.65c.54,0,.73.37.89.78A12.1,12.1,0,0,1,28,13.28c.29,2.72.31,5.45.33,8.18a10.94,10.94,0,0,0,0,1.15c.09.78.4,1.1,1.17,1.08.5,0,.5-.06.5-.06v2.69A8.62,8.62,0,0,1,28.1,26.38Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+}
+
+object.link-favicon[data-host*="flickr.com"] {
 }
 
 object.link-favicon[data-host*="medium.com"] {
-  content: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(34.3, 21.2%, 93.5%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23000000;%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elogo--medium%3C/title%3E%3Cpath class='cls-1' d='M4,4V28H28V4ZM23.9385,9.6865,22.6514,10.92a.3766.3766,0,0,0-.1431.3613v9.0674a.3765.3765,0,0,0,.1431.3613l1.257,1.2339v.271h-6.323v-.271L18.8877,20.68c.1279-.128.1279-.1656.1279-.3609V12.99l-3.62,9.1958H14.906L10.6907,12.99v6.1631a.8505.8505,0,0,0,.2334.7071l1.6936,2.0547v.2709H7.8154v-.2709L9.509,19.86a.82.82,0,0,0,.2183-.7071V12.0264A.6231.6231,0,0,0,9.5239,11.5L8.0186,9.6865v-.271h4.6743l3.613,7.9239,3.1765-7.9239h4.4561Z'/%3E%3Cpath id='inner-path' class='cls-2' d='M9.7273,12.0266A.6246.6246,0,0,0,9.524,11.5L8.0186,9.6863V9.4154H12.693l3.613,7.9238,3.1764-7.9238h4.4561v.2709L22.6513,10.92a.3763.3763,0,0,0-.143.3612v9.0676a.3763.3763,0,0,0,.143.3612l1.2571,1.2341v.2709H17.5856v-.2709L18.8878,20.68c.1279-.1279.1279-.1656.1279-.3612V12.99l-3.62,9.1955h-.4893L10.6907,12.99v6.1629a.8506.8506,0,0,0,.2334.7074l1.6936,2.0543v.2709H7.8154v-.2709L9.509,19.86a.82.82,0,0,0,.2183-.7074Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
-}
-.theme-dark object.link-favicon[data-host*="medium.com"] {
-  filter: invert(100);
-}
-
-object.link-favicon[data-host*=pinterest] {
-  content: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(353.4, 91.9%, 38.6%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elogo--pinterest%3C/title%3E%3Cpath id='_Path_' data-name='&lt;Path&gt;' d='M16,2a14,14,0,0,0-5.1,27,13.24,13.24,0,0,1,0-4l1.65-7A5.05,5.05,0,0,1,12.17,16c0-1.94,1.13-3.4,2.53-3.4a1.76,1.76,0,0,1,1.77,2c0,1.2-.76,3-1.16,4.66a2,2,0,0,0,2.08,2.53c2.48,0,4.4-2.63,4.4-6.41a5.53,5.53,0,0,0-5.85-5.7,6.06,6.06,0,0,0-6.32,6.08,5.42,5.42,0,0,0,1,3.19.44.44,0,0,1,.1.4c-.11.44-.35,1.4-.39,1.59s-.21.31-.47.19c-1.75-.82-2.84-3.37-2.84-5.43,0-4.41,3.21-8.47,9.25-8.47,4.85,0,8.63,3.46,8.63,8.09,0,4.82-3,8.7-7.27,8.7a3.76,3.76,0,0,1-3.21-1.6l-.87,3.33a15.55,15.55,0,0,1-1.74,3.67A14.17,14.17,0,0,0,16,30,14,14,0,0,0,16,2' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+	content: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(34.3, 21.2%, 93.5%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23000000;%7D.cls-2%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elogo--medium%3C/title%3E%3Cpath class='cls-1' d='M4,4V28H28V4ZM23.9385,9.6865,22.6514,10.92a.3766.3766,0,0,0-.1431.3613v9.0674a.3765.3765,0,0,0,.1431.3613l1.257,1.2339v.271h-6.323v-.271L18.8877,20.68c.1279-.128.1279-.1656.1279-.3609V12.99l-3.62,9.1958H14.906L10.6907,12.99v6.1631a.8505.8505,0,0,0,.2334.7071l1.6936,2.0547v.2709H7.8154v-.2709L9.509,19.86a.82.82,0,0,0,.2183-.7071V12.0264A.6231.6231,0,0,0,9.5239,11.5L8.0186,9.6865v-.271h4.6743l3.613,7.9239,3.1765-7.9239h4.4561Z'/%3E%3Cpath id='inner-path' class='cls-2' d='M9.7273,12.0266A.6246.6246,0,0,0,9.524,11.5L8.0186,9.6863V9.4154H12.693l3.613,7.9238,3.1764-7.9238h4.4561v.2709L22.6513,10.92a.3763.3763,0,0,0-.143.3612v9.0676a.3763.3763,0,0,0,.143.3612l1.2571,1.2341v.2709H17.5856v-.2709L18.8878,20.68c.1279-.1279.1279-.1656.1279-.3612V12.99l-3.62,9.1955h-.4893L10.6907,12.99v6.1629a.8506.8506,0,0,0,.2334.7074l1.6936,2.0543v.2709H7.8154v-.2709L9.509,19.86a.82.82,0,0,0,.2183-.7074Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-2' width='32' height='32'/%3E%3C/svg%3E");
+	.theme-dark & {
+		filter: invert(100);
+	}
 }
 
-.theme-dark object.link-favicon[data-host*="tumblr.com"] {
-  filter: invert(100);
+object.link-favicon[data-host*="pinterest"] {
+	content: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(353.4, 91.9%, 38.6%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elogo--pinterest%3C/title%3E%3Cpath id='_Path_' data-name='&lt;Path&gt;' d='M16,2a14,14,0,0,0-5.1,27,13.24,13.24,0,0,1,0-4l1.65-7A5.05,5.05,0,0,1,12.17,16c0-1.94,1.13-3.4,2.53-3.4a1.76,1.76,0,0,1,1.77,2c0,1.2-.76,3-1.16,4.66a2,2,0,0,0,2.08,2.53c2.48,0,4.4-2.63,4.4-6.41a5.53,5.53,0,0,0-5.85-5.7,6.06,6.06,0,0,0-6.32,6.08,5.42,5.42,0,0,0,1,3.19.44.44,0,0,1,.1.4c-.11.44-.35,1.4-.39,1.59s-.21.31-.47.19c-1.75-.82-2.84-3.37-2.84-5.43,0-4.41,3.21-8.47,9.25-8.47,4.85,0,8.63,3.46,8.63,8.09,0,4.82-3,8.7-7.27,8.7a3.76,3.76,0,0,1-3.21-1.6l-.87,3.33a15.55,15.55,0,0,1-1.74,3.67A14.17,14.17,0,0,0,16,30,14,14,0,0,0,16,2' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+}
+
+object.link-favicon[data-host*="slack.com"] {
+}
+
+object.link-favicon[data-host*="tumblr.com"] {
+	.theme-dark & {
+		filter: invert(100);
+	}
 }
 
 object.link-favicon[data-host*="twitter.com"] {
-  content: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(202.8, 89.1%, 53.1%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elogo--twitter%3C/title%3E%3Cpath d='M11.92,24.94A12.76,12.76,0,0,0,24.76,12.1c0-.2,0-.39,0-.59A9.4,9.4,0,0,0,27,9.18a9.31,9.31,0,0,1-2.59.71,4.56,4.56,0,0,0,2-2.5,8.89,8.89,0,0,1-2.86,1.1,4.52,4.52,0,0,0-7.7,4.11,12.79,12.79,0,0,1-9.3-4.71,4.51,4.51,0,0,0,1.4,6,4.47,4.47,0,0,1-2-.56v.05A4.53,4.53,0,0,0,9.5,17.83a4.53,4.53,0,0,1-2,.08A4.51,4.51,0,0,0,11.68,21,9.05,9.05,0,0,1,6.07,23,9.77,9.77,0,0,1,5,22.91a12.77,12.77,0,0,0,6.92,2' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+	content: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(202.8, 89.1%, 53.1%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elogo--twitter%3C/title%3E%3Cpath d='M11.92,24.94A12.76,12.76,0,0,0,24.76,12.1c0-.2,0-.39,0-.59A9.4,9.4,0,0,0,27,9.18a9.31,9.31,0,0,1-2.59.71,4.56,4.56,0,0,0,2-2.5,8.89,8.89,0,0,1-2.86,1.1,4.52,4.52,0,0,0-7.7,4.11,12.79,12.79,0,0,1-9.3-4.71,4.51,4.51,0,0,0,1.4,6,4.47,4.47,0,0,1-2-.56v.05A4.53,4.53,0,0,0,9.5,17.83a4.53,4.53,0,0,1-2,.08A4.51,4.51,0,0,0,11.68,21,9.05,9.05,0,0,1,6.07,23,9.77,9.77,0,0,1,5,22.91a12.77,12.77,0,0,0,6.92,2' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 
 .link-favicon[data-host*="wechat.com"] {
-  content: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill-rule: evenodd; %7D .cls-2 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M27.0857,24.7792A6.6179,6.6179,0,0,0,30,19.4662c0-3.88-3.7765-7.0269-8.4338-7.0269s-8.4339,3.1465-8.4339,7.0269,3.7765,7.028,8.4339,7.028a9.9547,9.9547,0,0,0,2.7533-.385l.2473-.0374a.8923.8923,0,0,1,.448.13l1.8469,1.0664.1621.0525a.2813.2813,0,0,0,.2812-.2812l-.0455-.2053-.38-1.4175-.0292-.18A.56.56,0,0,1,27.0857,24.7792ZM12.1208,4.68C6.5313,4.68,2,8.4552,2,13.1137a7.9386,7.9386,0,0,0,3.4965,6.3746.6713.6713,0,0,1,.2835.55l-.035.2147-.4562,1.701L5.234,22.2a.3384.3384,0,0,0,.3372.3383l.196-.063,2.2155-1.28a1.0584,1.0584,0,0,1,.5366-.1552l.2975.0443a11.9674,11.9674,0,0,0,3.304.4632l.5554-.014a6.5153,6.5153,0,0,1-.3395-2.0662c0-4.2478,4.1323-7.6918,9.2295-7.6918l.55.014C21.3538,7.761,17.169,4.68,12.1208,4.68Zm6.6337,13.6629a1.1247,1.1247,0,1,1,1.1247-1.1247A1.1243,1.1243,0,0,1,18.7545,18.3427Zm5.6233,0a1.1247,1.1247,0,1,1,1.1235-1.1247A1.1245,1.1245,0,0,1,24.3778,18.3427ZM8.7468,11.7638a1.3493,1.3493,0,1,1,1.35-1.3486A1.3485,1.3485,0,0,1,8.7468,11.7638Zm6.7469,0a1.3493,1.3493,0,1,1,1.35-1.3486A1.3486,1.3486,0,0,1,15.4937,11.7638Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-2' width='32' height='32'/%3E%3C/svg%3E%0A");
-}
-.theme-dark .link-favicon[data-host*="wechat.com"] {
-  content: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(34.3, 21.2%, 93.5%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill-rule: evenodd; %7D .cls-2 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M27.0857,24.7792A6.6179,6.6179,0,0,0,30,19.4662c0-3.88-3.7765-7.0269-8.4338-7.0269s-8.4339,3.1465-8.4339,7.0269,3.7765,7.028,8.4339,7.028a9.9547,9.9547,0,0,0,2.7533-.385l.2473-.0374a.8923.8923,0,0,1,.448.13l1.8469,1.0664.1621.0525a.2813.2813,0,0,0,.2812-.2812l-.0455-.2053-.38-1.4175-.0292-.18A.56.56,0,0,1,27.0857,24.7792ZM12.1208,4.68C6.5313,4.68,2,8.4552,2,13.1137a7.9386,7.9386,0,0,0,3.4965,6.3746.6713.6713,0,0,1,.2835.55l-.035.2147-.4562,1.701L5.234,22.2a.3384.3384,0,0,0,.3372.3383l.196-.063,2.2155-1.28a1.0584,1.0584,0,0,1,.5366-.1552l.2975.0443a11.9674,11.9674,0,0,0,3.304.4632l.5554-.014a6.5153,6.5153,0,0,1-.3395-2.0662c0-4.2478,4.1323-7.6918,9.2295-7.6918l.55.014C21.3538,7.761,17.169,4.68,12.1208,4.68Zm6.6337,13.6629a1.1247,1.1247,0,1,1,1.1247-1.1247A1.1243,1.1243,0,0,1,18.7545,18.3427Zm5.6233,0a1.1247,1.1247,0,1,1,1.1235-1.1247A1.1245,1.1245,0,0,1,24.3778,18.3427ZM8.7468,11.7638a1.3493,1.3493,0,1,1,1.35-1.3486A1.3485,1.3485,0,0,1,8.7468,11.7638Zm6.7469,0a1.3493,1.3493,0,1,1,1.35-1.3486A1.3486,1.3486,0,0,1,15.4937,11.7638Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-2' width='32' height='32'/%3E%3C/svg%3E%0A");
+	content: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill-rule: evenodd; %7D .cls-2 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M27.0857,24.7792A6.6179,6.6179,0,0,0,30,19.4662c0-3.88-3.7765-7.0269-8.4338-7.0269s-8.4339,3.1465-8.4339,7.0269,3.7765,7.028,8.4339,7.028a9.9547,9.9547,0,0,0,2.7533-.385l.2473-.0374a.8923.8923,0,0,1,.448.13l1.8469,1.0664.1621.0525a.2813.2813,0,0,0,.2812-.2812l-.0455-.2053-.38-1.4175-.0292-.18A.56.56,0,0,1,27.0857,24.7792ZM12.1208,4.68C6.5313,4.68,2,8.4552,2,13.1137a7.9386,7.9386,0,0,0,3.4965,6.3746.6713.6713,0,0,1,.2835.55l-.035.2147-.4562,1.701L5.234,22.2a.3384.3384,0,0,0,.3372.3383l.196-.063,2.2155-1.28a1.0584,1.0584,0,0,1,.5366-.1552l.2975.0443a11.9674,11.9674,0,0,0,3.304.4632l.5554-.014a6.5153,6.5153,0,0,1-.3395-2.0662c0-4.2478,4.1323-7.6918,9.2295-7.6918l.55.014C21.3538,7.761,17.169,4.68,12.1208,4.68Zm6.6337,13.6629a1.1247,1.1247,0,1,1,1.1247-1.1247A1.1243,1.1243,0,0,1,18.7545,18.3427Zm5.6233,0a1.1247,1.1247,0,1,1,1.1235-1.1247A1.1245,1.1245,0,0,1,24.3778,18.3427ZM8.7468,11.7638a1.3493,1.3493,0,1,1,1.35-1.3486A1.3485,1.3485,0,0,1,8.7468,11.7638Zm6.7469,0a1.3493,1.3493,0,1,1,1.35-1.3486A1.3486,1.3486,0,0,1,15.4937,11.7638Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-2' width='32' height='32'/%3E%3C/svg%3E%0A");
+	.theme-dark & {
+		content: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(34.3, 21.2%, 93.5%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill-rule: evenodd; %7D .cls-2 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M27.0857,24.7792A6.6179,6.6179,0,0,0,30,19.4662c0-3.88-3.7765-7.0269-8.4338-7.0269s-8.4339,3.1465-8.4339,7.0269,3.7765,7.028,8.4339,7.028a9.9547,9.9547,0,0,0,2.7533-.385l.2473-.0374a.8923.8923,0,0,1,.448.13l1.8469,1.0664.1621.0525a.2813.2813,0,0,0,.2812-.2812l-.0455-.2053-.38-1.4175-.0292-.18A.56.56,0,0,1,27.0857,24.7792ZM12.1208,4.68C6.5313,4.68,2,8.4552,2,13.1137a7.9386,7.9386,0,0,0,3.4965,6.3746.6713.6713,0,0,1,.2835.55l-.035.2147-.4562,1.701L5.234,22.2a.3384.3384,0,0,0,.3372.3383l.196-.063,2.2155-1.28a1.0584,1.0584,0,0,1,.5366-.1552l.2975.0443a11.9674,11.9674,0,0,0,3.304.4632l.5554-.014a6.5153,6.5153,0,0,1-.3395-2.0662c0-4.2478,4.1323-7.6918,9.2295-7.6918l.55.014C21.3538,7.761,17.169,4.68,12.1208,4.68Zm6.6337,13.6629a1.1247,1.1247,0,1,1,1.1247-1.1247A1.1243,1.1243,0,0,1,18.7545,18.3427Zm5.6233,0a1.1247,1.1247,0,1,1,1.1235-1.1247A1.1245,1.1245,0,0,1,24.3778,18.3427ZM8.7468,11.7638a1.3493,1.3493,0,1,1,1.35-1.3486A1.3485,1.3485,0,0,1,8.7468,11.7638Zm6.7469,0a1.3493,1.3493,0,1,1,1.35-1.3486A1.3486,1.3486,0,0,1,15.4937,11.7638Z' transform='translate(0 0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-2' width='32' height='32'/%3E%3C/svg%3E%0A");
+	}
 }
 
 object.link-favicon[data-host*="youtube.com"] {
-  content: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(0, 100%, 50%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elogo--youtube%3C/title%3E%3Cpath d='M29.41,9.26a3.5,3.5,0,0,0-2.47-2.47C24.76,6.2,16,6.2,16,6.2s-8.76,0-10.94.59A3.5,3.5,0,0,0,2.59,9.26,36.13,36.13,0,0,0,2,16a36.13,36.13,0,0,0,.59,6.74,3.5,3.5,0,0,0,2.47,2.47C7.24,25.8,16,25.8,16,25.8s8.76,0,10.94-.59a3.5,3.5,0,0,0,2.47-2.47A36.13,36.13,0,0,0,30,16,36.13,36.13,0,0,0,29.41,9.26ZM13.2,20.2V11.8L20.47,16Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
+	content: url("data:image/svg+xml,%3Csvg id='icon' fill='hsl(0, 100%, 50%)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Elogo--youtube%3C/title%3E%3Cpath d='M29.41,9.26a3.5,3.5,0,0,0-2.47-2.47C24.76,6.2,16,6.2,16,6.2s-8.76,0-10.94.59A3.5,3.5,0,0,0,2.59,9.26,36.13,36.13,0,0,0,2,16a36.13,36.13,0,0,0,.59,6.74,3.5,3.5,0,0,0,2.47,2.47C7.24,25.8,16,25.8,16,25.8s8.76,0,10.94-.59a3.5,3.5,0,0,0,2.47-2.47A36.13,36.13,0,0,0,30,16,36.13,36.13,0,0,0,29.41,9.26ZM13.2,20.2V11.8L20.47,16Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");    background-repeat: no-repeat;
 }
 
 object.link-favicon[data-host*="forum.obsidian.md"] {
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' class='logo-crystal'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='82.85' y1='30.41' x2='51.26' y2='105.9' gradientTransform='matrix(1, 0, 0, -1, -22.41, 110.97)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%236c56cc'%3E%3C/stop%3E%3Cstop offset='1' stop-color='%239785e5'%3E%3C/stop%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='62.61,0 30.91,17.52 18,45.45 37.57,90.47 65.35,100 70.44,89.8 81,26.39 62.61,0' fill='%2334208c'%3E%3C/polygon%3E%3Cpolygon points='81,26.39 61.44,14.41 34.43,35.7 65.35,100 70.44,89.8 81,26.39' fill='url(%23a)'%3E%3C/polygon%3E%3Cpolygon points='81,26.39 81,26.39 62.61,0 61.44,14.41 81,26.39' fill='%23af9ff4'%3E%3C/polygon%3E%3Cpolygon points='61.44,14.41 62.61,0 30.91,17.52 34.43,35.7 61.44,14.41' fill='%234a37a0'%3E%3C/polygon%3E%3Cpolygon points='34.43,35.7 37.57,90.47 65.35,100 34.43,35.7' fill='%234a37a0'%3E%3C/polygon%3E%3C/svg%3E");
-  transform: scale(1.2);
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' class='logo-crystal'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='82.85' y1='30.41' x2='51.26' y2='105.9' gradientTransform='matrix(1, 0, 0, -1, -22.41, 110.97)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%236c56cc'%3E%3C/stop%3E%3Cstop offset='1' stop-color='%239785e5'%3E%3C/stop%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='62.61,0 30.91,17.52 18,45.45 37.57,90.47 65.35,100 70.44,89.8 81,26.39 62.61,0' fill='%2334208c'%3E%3C/polygon%3E%3Cpolygon points='81,26.39 61.44,14.41 34.43,35.7 65.35,100 70.44,89.8 81,26.39' fill='url(%23a)'%3E%3C/polygon%3E%3Cpolygon points='81,26.39 81,26.39 62.61,0 61.44,14.41 81,26.39' fill='%23af9ff4'%3E%3C/polygon%3E%3Cpolygon points='61.44,14.41 62.61,0 30.91,17.52 34.43,35.7 61.44,14.41' fill='%234a37a0'%3E%3C/polygon%3E%3Cpolygon points='34.43,35.7 37.57,90.47 65.35,100 34.43,35.7' fill='%234a37a0'%3E%3C/polygon%3E%3C/svg%3E");
+	transform: scale(1.2);
 }
-
+*/
 /* ───────────────────────────── Pandoc Citation ──────────────────────────── */
 /* Pandoc Citations (applies to all []-links, except if they're highlights. Credit @pseudometa) */
 .cm-hmd-barelink:not(span.cm-strong.cm-highlight) :not(span.cm-em.cm-highlight):not(.cm-s-obsidian span.cm-highlight) {
@@ -1622,7 +1649,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .markdown-preview-view {
   font-optical-sizing: auto;
   font-family: var(--font-preview);
-  line-height: 1.375em;
+  line-height: 1.5em;
   letter-spacing: 0px;
   hyphens: auto;
   font-variant-ligatures: common-ligatures;
@@ -1637,7 +1664,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
   font-variant-ligatures: common-ligatures;
   font-optical-sizing: auto;
   font-family: var(--font-editor);
-  line-height: 1.375em;
+  line-height: 1.5em;
   letter-spacing: 0.32px;
 }
 
@@ -1645,12 +1672,11 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
   font-variant-ligatures: common-ligatures;
   font-optical-sizing: auto;
   font-family: var(--font-editor);
-  line-height: 1.375em;
   letter-spacing: 0.32px;
 }
 
 .CodeMirror-sizer {
-  line-height: 1.25em;
+  line-height: 1.5em;
 }
 
 /*
@@ -2117,6 +2143,11 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
     margin-bottom: 1.125em;
   }
 }
+.markdown-source-view.mod-cm5 .cm-s-obsidian .HyperMD-header {
+  padding: 0;
+  margin: 0;
+}
+
 /* ─────────────────────────── Productive Headings ────────────────────────── */
 :root {
   --productive-heading-1: 2rem;
@@ -2350,7 +2381,7 @@ span.cm-highlight {
   color: var(--text-normal);
   text-decoration: underline solid var(--color-highlight-1) 2.5px;
   background-color: transparent;
-  background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
+  background: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 100% 0px;
@@ -2370,7 +2401,7 @@ span.cm-em.cm-highlight {
   font-style: normal;
   font-weight: normal;
   text-decoration: underline solid var(--color-highlight-2) 2.5px;
-  background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
+  background: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 100% 0px;
@@ -2389,7 +2420,7 @@ span.cm-em.cm-highlight:hover {
 span.cm-strong.cm-highlight {
   font-weight: normal;
   text-decoration: underline solid var(--color-highlight-3) 2.5px;
-  background-image: linear-gradient(120deg, var(--color-highlight-3), var(--color-highlight-3));
+  background: linear-gradient(120deg, var(--color-highlight-3), var(--color-highlight-3));
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 100% 0px;
@@ -2430,6 +2461,13 @@ ol > li::marker {
   font-variant-numeric: tabular-nums;
 }
 
+.markdown-preview-view ol li p {
+  margin: 0;
+}
+.markdown-preview-view ol li, .markdown-preview-view ul li {
+  line-height: 1.5em;
+  margin: 4px 0;
+}
 .markdown-preview-view .list-collapse-indicator {
   margin-left: -3.5rem;
   color: var(--text-faint);
@@ -2484,7 +2522,7 @@ ul ol ul ul ul {
   list-style-type: "–  ";
   margin: 0px;
   padding: 0px;
-  margin-left: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 ul ul,
@@ -2498,7 +2536,7 @@ ol ul ol ul ul,
 ul ol ol ul ul {
   list-style-type: "▪  ";
   padding: 0px;
-  margin-left: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 ul > li::marker {
@@ -2554,10 +2592,6 @@ ul li {
 }
 
 .relationship-lines ul > li > ul > li::before {
-  content: "";
-}
-
-.relationship-lines ul > li > ul > li::before {
   position: absolute;
   display: block;
   content: "";
@@ -2583,9 +2617,9 @@ ul li {
   position: absolute;
   display: block;
   content: "";
-  height: 12px;
+  height: 15px;
   width: 1px;
-  top: 0px;
+  top: -3px;
   left: -24px;
   background-color: var(--text-faint);
 }
@@ -2747,7 +2781,7 @@ input[type=checkbox]:checked:before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(36, 20%, 95.1%)' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 70%;
+  background-size: 75%;
   transform: translateX(0px) translateY(0px);
   width: 100%;
   height: 100%;
@@ -3090,21 +3124,12 @@ input[type=checkbox]:checked:active, input[type=checkbox]:checked:hover {
 }
 
 /* ─────────────────────────────── Admonitions ────────────────────────────── */
-:root {
-  --hsl-color-red: 3.2, 85.8%, 61.4%;
-  --hsl-color-yellow: 43.4, 80.3%, 62.2%;
-  --hsl-color-blue: 201.9, 25.9%, 52.4%;
-  --hsl-color-green: 60.7, 41%, 39.2%;
-  --hsl-color-pink: 350.5, 79.1%, 62.5%;
-  --hsl-color-grey: 24, 4.4%, 77.8%;
-}
-
 /* ──────────────────────── Important (!) admonition ──────────────────────── */
 /* ───────────────────────────── Cons Admonition ──────────────────────────── */
 /* ───────────────────────────────── Failure ──────────────────────────────── */
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] {
+.admonitions ul li.task-list-item.is-checked[data-task=X],
+.admonitions ul li.task-list-item.is-checked[data-task=c],
+.admonitions ul li.task-list-item.is-checked[data-task="!"] {
   background-color: #fc867a;
   border-radius: 0px 4px 4px 4px;
   border-left: 1.5px solid #f15148;
@@ -3113,79 +3138,74 @@ input[type=checkbox]:checked:active, input[type=checkbox]:checked:hover {
   font-weight: var(--font-regular);
   margin-left: 4px;
 }
-.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X],
-.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c],
-.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] {
+.theme-dark .admonitions ul li.task-list-item.is-checked[data-task=X],
+.theme-dark .admonitions ul li.task-list-item.is-checked[data-task=c],
+.theme-dark .admonitions ul li.task-list-item.is-checked[data-task="!"] {
   color: var(--color-primary-10);
   background-color: #f15148;
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] ul li::marker,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] ul li::marker,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] ul li::marker {
+.admonitions ul li.task-list-item.is-checked[data-task=X] ul li::marker,
+.admonitions ul li.task-list-item.is-checked[data-task=c] ul li::marker,
+.admonitions ul li.task-list-item.is-checked[data-task="!"] ul li::marker {
   color: var(--color-primary-0);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] a,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] a,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] a {
+.admonitions ul li.task-list-item.is-checked[data-task=X] a,
+.admonitions ul li.task-list-item.is-checked[data-task=c] a,
+.admonitions ul li.task-list-item.is-checked[data-task="!"] a {
   color: inherit;
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] a.external-link,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] a.external-link,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] a.external-link {
+.admonitions ul li.task-list-item.is-checked[data-task=X] a.external-link,
+.admonitions ul li.task-list-item.is-checked[data-task=c] a.external-link,
+.admonitions ul li.task-list-item.is-checked[data-task="!"] a.external-link {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] mark,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] mark,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] mark {
+.admonitions ul li.task-list-item.is-checked[data-task=X] mark,
+.admonitions ul li.task-list-item.is-checked[data-task=c] mark,
+.admonitions ul li.task-list-item.is-checked[data-task="!"] mark {
   background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] mark:hover,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] mark:hover,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] mark:hover {
+.admonitions ul li.task-list-item.is-checked[data-task=X] mark:hover,
+.admonitions ul li.task-list-item.is-checked[data-task=c] mark:hover,
+.admonitions ul li.task-list-item.is-checked[data-task="!"] mark:hover {
   color: var(--color-primary-10);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] em > mark,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] em > mark,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] em > mark {
+.admonitions ul li.task-list-item.is-checked[data-task=X] em > mark,
+.admonitions ul li.task-list-item.is-checked[data-task=c] em > mark,
+.admonitions ul li.task-list-item.is-checked[data-task="!"] em > mark {
   background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] strong > mark,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] strong > mark,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] strong > mark {
+.admonitions ul li.task-list-item.is-checked[data-task=X] strong > mark,
+.admonitions ul li.task-list-item.is-checked[data-task=c] strong > mark,
+.admonitions ul li.task-list-item.is-checked[data-task="!"] strong > mark {
   background-image: linear-gradient(120deg, var(--color-primary-1), var(--color-primary-1));
   text-decoration-color: var(--color-primary-1);
 }
-.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] ul li::marker,
-.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] ul li::marker,
-.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] ul li::marker {
+.theme-dark .admonitions ul li.task-list-item.is-checked[data-task=X] ul li::marker,
+.theme-dark .admonitions ul li.task-list-item.is-checked[data-task=c] ul li::marker,
+.theme-dark .admonitions ul li.task-list-item.is-checked[data-task="!"] ul li::marker {
   color: var(--color-primary-9);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X].is-collapsed::after,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c].is-collapsed::after,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"].is-collapsed::after {
+.admonitions ul li.task-list-item.is-checked[data-task=X].is-collapsed::after,
+.admonitions ul li.task-list-item.is-checked[data-task=c].is-collapsed::after,
+.admonitions ul li.task-list-item.is-checked[data-task="!"].is-collapsed::after {
   color: var(--color-primary-0);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=X] .list-collapse-indicator,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=c] .list-collapse-indicator,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] .list-collapse-indicator {
+.admonitions ul li.task-list-item.is-checked[data-task=X] .list-collapse-indicator,
+.admonitions ul li.task-list-item.is-checked[data-task=c] .list-collapse-indicator,
+.admonitions ul li.task-list-item.is-checked[data-task="!"] .list-collapse-indicator {
   margin-left: -3.57rem;
 }
 
-.admonitions.markdown-preview-view li[data-task=X] > .task-list-item-checkbox,
-.admonitions.markdown-preview-view li[data-task=c] > .task-list-item-checkbox,
-.admonitions.markdown-preview-view li[data-task="!"] > .task-list-item-checkbox {
+.admonitions li[data-task=X] > .task-list-item-checkbox,
+.admonitions li[data-task=c] > .task-list-item-checkbox,
+.admonitions li[data-task="!"] > .task-list-item-checkbox {
   margin-left: -5px;
   margin-right: 16px;
 }
-.admonitions.markdown-preview-view li[data-task=X] > .task-list-item-checkbox:checked::before,
-.admonitions.markdown-preview-view li[data-task=c] > .task-list-item-checkbox:checked::before,
-.admonitions.markdown-preview-view li[data-task="!"] > .task-list-item-checkbox:checked::before {
-  margin-top: -1px;
-}
 
 /* ───────────────────────── Question (?) admonition ──────────────────────── */
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] {
+.admonitions ul li.task-list-item.is-checked[data-task=I],
+.admonitions ul li.task-list-item.is-checked[data-task="?"] {
   background-color: #ecc151;
   border-radius: 0px 4px 4px 4px;
   border-left: 1.5px solid #af8122;
@@ -3195,54 +3215,50 @@ input[type=checkbox]:checked:active, input[type=checkbox]:checked:hover {
   font-weight: var(--font-regular);
   margin-left: 4px;
 }
-.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I],
-.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] {
+.theme-dark .admonitions ul li.task-list-item.is-checked[data-task=I],
+.theme-dark .admonitions ul li.task-list-item.is-checked[data-task="?"] {
   background-color: #d69f28;
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] li::marker,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] li::marker {
+.admonitions ul li.task-list-item.is-checked[data-task=I] li::marker,
+.admonitions ul li.task-list-item.is-checked[data-task="?"] li::marker {
   color: var(--color-primary-9);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] a,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] a {
+.admonitions ul li.task-list-item.is-checked[data-task=I] a,
+.admonitions ul li.task-list-item.is-checked[data-task="?"] a {
   color: inherit;
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] mark,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] mark {
+.admonitions ul li.task-list-item.is-checked[data-task=I] mark,
+.admonitions ul li.task-list-item.is-checked[data-task="?"] mark {
   background-image: linear-gradient(120deg, var(--color-primary-1), var(--color-primary-1));
   text-decoration-color: var(--color-primary-1);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] mark:hover,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] mark:hover {
+.admonitions ul li.task-list-item.is-checked[data-task=I] mark:hover,
+.admonitions ul li.task-list-item.is-checked[data-task="?"] mark:hover {
   color: var(--color-primary-10);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] em > mark,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] em > mark {
+.admonitions ul li.task-list-item.is-checked[data-task=I] em > mark,
+.admonitions ul li.task-list-item.is-checked[data-task="?"] em > mark {
   background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
   text-decoration-color: var(--color-highlight-2);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] strong > mark,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] strong > mark {
+.admonitions ul li.task-list-item.is-checked[data-task=I] strong > mark,
+.admonitions ul li.task-list-item.is-checked[data-task="?"] strong > mark {
   background-image: linear-gradient(120deg, var(--color-highlight-3), var(--color-highlight-3));
   text-decoration-color: var(--color-highlight-3);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=I] .list-collapse-indicator,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] .list-collapse-indicator {
+.admonitions ul li.task-list-item.is-checked[data-task=I] .list-collapse-indicator,
+.admonitions ul li.task-list-item.is-checked[data-task="?"] .list-collapse-indicator {
   margin-left: -3.57rem;
 }
 
-.admonitions.markdown-preview-view li[data-task=I] > .task-list-item-checkbox,
-.admonitions.markdown-preview-view li[data-task="?"] > .task-list-item-checkbox {
+.admonitions li[data-task=I] > .task-list-item-checkbox,
+.admonitions li[data-task="?"] > .task-list-item-checkbox {
   margin-left: -5px;
   margin-right: 16px;
 }
-.admonitions.markdown-preview-view li[data-task=I] > .task-list-item-checkbox:checked::before,
-.admonitions.markdown-preview-view li[data-task="?"] > .task-list-item-checkbox:checked::before {
-  margin-top: -1px;
-}
 
 /* ─────────────────────── Information (i) admonition ─────────────────────── */
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] {
+.admonitions ul li.task-list-item.is-checked[data-task=i] {
   background-color: #88adc2;
   border-radius: 0px 4px 4px 4px;
   border-left: 1.5px solid #409693;
@@ -3252,54 +3268,51 @@ input[type=checkbox]:checked:active, input[type=checkbox]:checked:hover {
   font-weight: var(--font-regular);
   margin-left: 4px;
 }
-.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] {
+.theme-dark .admonitions ul li.task-list-item.is-checked[data-task=i] {
   color: var(--text-normal);
   background-color: #668ea5;
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] li::marker {
+.admonitions ul li.task-list-item.is-checked[data-task=i] li::marker {
   color: var(--color-primary-0);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] a {
+.admonitions ul li.task-list-item.is-checked[data-task=i] a {
   color: inherit;
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] mark {
+.admonitions ul li.task-list-item.is-checked[data-task=i] mark {
   background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
   color: #f5f3f0;
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] em > mark {
+.admonitions ul li.task-list-item.is-checked[data-task=i] em > mark {
   background-image: linear-gradient(120deg, var(--color-primary-1), var(--color-primary-1));
   text-decoration-color: var(--color-primary-1);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] mark:hover {
+.admonitions ul li.task-list-item.is-checked[data-task=i] mark:hover {
   color: var(--color-primary-10);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] strong > mark {
+.admonitions ul li.task-list-item.is-checked[data-task=i] strong > mark {
   background-image: linear-gradient(120deg, var(--color-highlight-3), var(--color-highlight-3));
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] a.external-link {
+.admonitions ul li.task-list-item.is-checked[data-task=i] a.external-link {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
-.theme-light .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i].is-collapsed::after {
+.theme-light .admonitions ul li.task-list-item.is-checked[data-task=i].is-collapsed::after {
   color: var(--color-primary-0);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=i] .list-collapse-indicator {
+.admonitions ul li.task-list-item.is-checked[data-task=i] .list-collapse-indicator {
   margin-left: -3.57rem;
 }
 
-.admonitions.markdown-preview-view li[data-task=i] > .task-list-item-checkbox {
+.admonitions li[data-task=i] > .task-list-item-checkbox {
   margin-left: -5px;
   margin-right: 16px;
-}
-.admonitions.markdown-preview-view li[data-task=i] > .task-list-item-checkbox:checked::before {
-  margin-top: -1px;
 }
 
 /* ───────────────────────────── Pros Admonition ──────────────────────────── */
 /* ─────────────────────────── Reward/Win Admonition ─────────────────────────── */
 /* ───────────────────────────────── Success ──────────────────────────────── */
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] {
+.admonitions ul li.task-list-item.is-checked[data-task="1"],
+.admonitions ul li.task-list-item.is-checked[data-task=W],
+.admonitions ul li.task-list-item.is-checked[data-task=p] {
   background-color: #8c8d3b;
   border-radius: 0px 4px 4px 4px;
   border-left: 1.5px solid #8c8d3b;
@@ -3309,70 +3322,65 @@ input[type=checkbox]:checked:active, input[type=checkbox]:checked:hover {
   font-weight: var(--font-regular);
   margin-left: 4px;
 }
-.theme-light .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"],
-.theme-light .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W],
-.theme-light .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] {
+.theme-light .admonitions ul li.task-list-item.is-checked[data-task="1"],
+.theme-light .admonitions ul li.task-list-item.is-checked[data-task=W],
+.theme-light .admonitions ul li.task-list-item.is-checked[data-task=p] {
   color: var(--color-primary-0);
   background-color: #abad55;
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"], .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] mark, .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] li mark, .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] li::marker,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] mark,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] li mark,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] li::marker,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] mark,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] li mark,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] li::marker {
+.admonitions ul li.task-list-item.is-checked[data-task="1"], .admonitions ul li.task-list-item.is-checked[data-task="1"] mark, .admonitions ul li.task-list-item.is-checked[data-task="1"] li mark, .admonitions ul li.task-list-item.is-checked[data-task="1"] li::marker,
+.admonitions ul li.task-list-item.is-checked[data-task=W],
+.admonitions ul li.task-list-item.is-checked[data-task=W] mark,
+.admonitions ul li.task-list-item.is-checked[data-task=W] li mark,
+.admonitions ul li.task-list-item.is-checked[data-task=W] li::marker,
+.admonitions ul li.task-list-item.is-checked[data-task=p],
+.admonitions ul li.task-list-item.is-checked[data-task=p] mark,
+.admonitions ul li.task-list-item.is-checked[data-task=p] li mark,
+.admonitions ul li.task-list-item.is-checked[data-task=p] li::marker {
   color: #f5f3f0;
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] mark:hover,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] mark:hover,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] mark:hover {
+.admonitions ul li.task-list-item.is-checked[data-task="1"] mark:hover,
+.admonitions ul li.task-list-item.is-checked[data-task=W] mark:hover,
+.admonitions ul li.task-list-item.is-checked[data-task=p] mark:hover {
   color: var(--color-primary-10);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] a,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] a,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] a {
+.admonitions ul li.task-list-item.is-checked[data-task="1"] a,
+.admonitions ul li.task-list-item.is-checked[data-task=W] a,
+.admonitions ul li.task-list-item.is-checked[data-task=p] a {
   color: inherit;
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] a.external-link,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] a.external-link,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] a.external-link {
+.admonitions ul li.task-list-item.is-checked[data-task="1"] a.external-link,
+.admonitions ul li.task-list-item.is-checked[data-task=W] a.external-link,
+.admonitions ul li.task-list-item.is-checked[data-task=p] a.external-link {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"].is-collapsed::after,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W].is-collapsed::after,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p].is-collapsed::after {
+.admonitions ul li.task-list-item.is-checked[data-task="1"].is-collapsed::after,
+.admonitions ul li.task-list-item.is-checked[data-task=W].is-collapsed::after,
+.admonitions ul li.task-list-item.is-checked[data-task=p].is-collapsed::after {
   color: var(--color-primary-0);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"] .list-collapse-indicator,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=W] .list-collapse-indicator,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=p] .list-collapse-indicator {
+.admonitions ul li.task-list-item.is-checked[data-task="1"] .list-collapse-indicator,
+.admonitions ul li.task-list-item.is-checked[data-task=W] .list-collapse-indicator,
+.admonitions ul li.task-list-item.is-checked[data-task=p] .list-collapse-indicator {
   margin-left: -3.57rem;
 }
 
-.admonitions.markdown-preview-view li[data-task="1"] > .task-list-item-checkbox,
-.admonitions.markdown-preview-view li[data-task=W] > .task-list-item-checkbox,
-.admonitions.markdown-preview-view li[data-task=p] > .task-list-item-checkbox {
+.admonitions li[data-task="1"] > .task-list-item-checkbox,
+.admonitions li[data-task=W] > .task-list-item-checkbox,
+.admonitions li[data-task=p] > .task-list-item-checkbox {
   margin-left: -5px;
   margin-right: 16px;
 }
-.admonitions.markdown-preview-view li[data-task="1"] > .task-list-item-checkbox:checked::before,
-.admonitions.markdown-preview-view li[data-task=W] > .task-list-item-checkbox:checked::before,
-.admonitions.markdown-preview-view li[data-task=p] > .task-list-item-checkbox:checked::before {
-  margin-top: -1px;
-}
-.admonitions.markdown-preview-view li[data-task="1"] > .task-list-item-checkbox .list-collapse-indicator,
-.admonitions.markdown-preview-view li[data-task=W] > .task-list-item-checkbox .list-collapse-indicator,
-.admonitions.markdown-preview-view li[data-task=p] > .task-list-item-checkbox .list-collapse-indicator {
+.admonitions li[data-task="1"] > .task-list-item-checkbox .list-collapse-indicator,
+.admonitions li[data-task=W] > .task-list-item-checkbox .list-collapse-indicator,
+.admonitions li[data-task=p] > .task-list-item-checkbox .list-collapse-indicator {
   margin-left: -3.57rem;
 }
 
 /* ─────────────────────────── Note (n) Admonition ────────────────────────── */
 /* ─────────────────────────── Bookmark Admonition ────────────────────────── */
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=n],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=b] {
+.admonitions ul li.task-list-item.is-checked[data-task=n],
+.admonitions ul li.task-list-item.is-checked[data-task=b] {
   background-color: var(--color-primary-2);
   border-radius: 0px 4px 4px 4px;
   border-left: 1.5px solid var(--color-border-2);
@@ -3382,27 +3390,23 @@ input[type=checkbox]:checked:active, input[type=checkbox]:checked:hover {
   font-weight: var(--font-regular);
   margin-left: 4px;
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=n] li::marker,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=b] li::marker {
+.admonitions ul li.task-list-item.is-checked[data-task=n] li::marker,
+.admonitions ul li.task-list-item.is-checked[data-task=b] li::marker {
   color: var(--color-primary-0);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=n] .list-collapse-indicator,
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=b] .list-collapse-indicator {
+.admonitions ul li.task-list-item.is-checked[data-task=n] .list-collapse-indicator,
+.admonitions ul li.task-list-item.is-checked[data-task=b] .list-collapse-indicator {
   margin-left: -3.57rem;
 }
 
-.admonitions.markdown-preview-view li[data-task=n] > .task-list-item-checkbox,
-.admonitions.markdown-preview-view li[data-task=b] > .task-list-item-checkbox {
+.admonitions li[data-task=n] > .task-list-item-checkbox,
+.admonitions li[data-task=b] > .task-list-item-checkbox {
   margin-left: -5px;
   margin-right: 16px;
 }
-.admonitions.markdown-preview-view li[data-task=n] > .task-list-item-checkbox:checked::before,
-.admonitions.markdown-preview-view li[data-task=b] > .task-list-item-checkbox:checked::before {
-  margin-top: -1px;
-}
 
 /* ────────────────────────────────── Debug ───────────────────────────────── */
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] {
+.admonitions ul li.task-list-item.is-checked[data-task=B] {
   background-color: #eb546c;
   border-left: 1.5px solid #eb546c;
   border-radius: 0px 4px 4px 4px;
@@ -3411,52 +3415,49 @@ input[type=checkbox]:checked:active, input[type=checkbox]:checked:hover {
   margin-left: 4px;
   font-weight: var(--font-regular);
 }
-.theme-light .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] {
+.theme-light .admonitions ul li.task-list-item.is-checked[data-task=B] {
   color: var(--color-primary-0);
   background-color: #f08a9c;
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] ul li::marker {
+.admonitions ul li.task-list-item.is-checked[data-task=B] ul li::marker {
   color: var(--color-primary-0);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] a {
+.admonitions ul li.task-list-item.is-checked[data-task=B] a {
   color: inherit;
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] a.external-link {
+.admonitions ul li.task-list-item.is-checked[data-task=B] a.external-link {
   background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,28H6a2.0027,2.0027,0,0,1-2-2V6A2.0027,2.0027,0,0,1,6,4H16V6H6V26H26V16h2V26A2.0027,2.0027,0,0,1,26,28Z'/%3E%3Cpolygon points='20 2 20 4 26.586 4 18 12.586 19.414 14 28 5.414 28 12 30 12 30 2 20 2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] mark {
+.admonitions ul li.task-list-item.is-checked[data-task=B] mark {
   background-image: linear-gradient(120deg, var(--color-highlight-1), var(--color-highlight-1));
   color: white;
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] mark:hover {
+.admonitions ul li.task-list-item.is-checked[data-task=B] mark:hover {
   color: var(--background-primary);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] em > mark {
+.admonitions ul li.task-list-item.is-checked[data-task=B] em > mark {
   background-image: linear-gradient(120deg, var(--color-highlight-2), var(--color-highlight-2));
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] strong > mark {
+.admonitions ul li.task-list-item.is-checked[data-task=B] strong > mark {
   background-image: linear-gradient(120deg, var(--color-primary-1), var(--color-primary-1));
   text-decoration-color: var(--color-primary-1);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] strong > mark:hover {
+.admonitions ul li.task-list-item.is-checked[data-task=B] strong > mark:hover {
   color: var(--text-normal);
 }
-.theme-dark .admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] ul li::marker {
+.theme-dark .admonitions ul li.task-list-item.is-checked[data-task=B] ul li::marker {
   color: var(--color-primary-9);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B].is-collapsed::after {
+.admonitions ul li.task-list-item.is-checked[data-task=B].is-collapsed::after {
   color: var(--color-primary-0);
 }
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task=B] .list-collapse-indicator {
+.admonitions ul li.task-list-item.is-checked[data-task=B] .list-collapse-indicator {
   margin-left: -3.57rem;
 }
 
-.admonitions.markdown-preview-view li[data-task=B] > .task-list-item-checkbox {
+.admonitions li[data-task=B] > .task-list-item-checkbox {
   margin-left: -5px;
   margin-right: 16px;
-}
-.admonitions.markdown-preview-view li[data-task=B] > .task-list-item-checkbox:checked::before {
-  margin-top: -1px;
 }
 
 /* Tags in Edit Mode */
@@ -3521,7 +3522,6 @@ aside {
   text-align: start;
   font-weight: unset;
   font-size: 0.875rem;
-  line-height: 1.25em;
   background-color: transparent;
   border-left: 1.5px solid var(--color-accent);
 }
@@ -3543,7 +3543,6 @@ aside {
   text-align: start;
   font-size: 0.875rem;
   font-weight: unset;
-  line-height: 1.25em;
   white-space: normal;
   word-break: break-word;
 }
@@ -3564,7 +3563,6 @@ aside {
   /* aligns left */
   font-size: 0.875rem;
   font-weight: unset;
-  line-height: 1.25em;
   text-align: start;
 }
 
@@ -3592,7 +3590,6 @@ aside {
   text-align: start;
   font-weight: unset;
   background-color: transparent;
-  line-height: 1em;
 }
 .aside-hide:before {
   display: block;
@@ -3617,7 +3614,6 @@ aside {
   padding-top: 8px;
   border-radius: 0px;
   font-size: 0.875rem;
-  line-height: 1.25em;
   width: 300px;
   padding: 0px 0px 0px 0px;
   margin-right: -20rem;
@@ -3639,7 +3635,6 @@ aside {
   text-align: start;
   font-weight: unset;
   font-size: 0.875rem;
-  line-height: 1.25em;
   background-color: transparent;
   border-left: 1.5px solid var(--color-accent);
 }
@@ -3995,8 +3990,8 @@ button.copy-code-button:active {
 
 /* ───────────────────────────── Pure Text Block ──────────────────────────── */
 code[class*=language-pure-text],
-.markdown-preview-view div.el-pre pre[class*=language-pure-text],
-.markdown-preview-view div.el-pre pre[class*=language-pure-text] .language-pure-text.is-loaded {
+.markdown-preview-view div.el-pre:not(pre.frontmatter.language-yaml) pre[class*=language-pure-text],
+.markdown-preview-view div.el-pre:not(pre.frontmatter.language-yaml) pre[class*=language-pure-text] .language-pure-text.is-loaded {
   font-variant-ligatures: common-ligatures;
   color: var(--text-normal);
   font-family: var(--font-preview);
@@ -4006,6 +4001,7 @@ code[class*=language-pure-text],
   hyphens: auto;
   background-color: transparent;
   padding-left: 0;
+  border: 0px solid transparent;
 }
 
 /* ───────────────────────────── Code Highlights ──────────────────────────── */
@@ -5219,6 +5215,10 @@ div.community-plugin-item .community-plugin-version {
   background-color: var(--color-primary-0);
   border-radius: 8px;
   border: 1px solid var(--color-border-1);
+  color: var(--text-normal);
+}
+.community-theme-container .theme-list .community-theme.is-selected .community-theme-info {
+  color: var(--text-normal);
 }
 .community-theme-container .theme-list .community-theme .modal-button-container button {
   line-height: 1em;
@@ -6513,6 +6513,7 @@ body.is-mobile .nav-action-button svg {
 }
 
 .mobile-toolbar-options-container {
+  --at-spacing: 2px;
   background-color: var(--color-primary-1);
   border: 1px solid var(--color-primary-0);
   height: 48px;
@@ -6520,7 +6521,7 @@ body.is-mobile .nav-action-button svg {
   overflow-x: auto;
   overflow-y: hidden;
   width: 100%;
-  padding: 0 8px;
+  padding: 0 10px;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
