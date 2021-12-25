@@ -164,6 +164,11 @@
 			background-color: var(--color-primary-0);
 			border-radius: 8px;
 			border: 1px solid var(--color-border-1);
+			color: var(--text-normal);
+
+			& .community-theme-info {
+				color: var(--text-normal);
+			}
 		}
 		& .modal-button-container button {
 			line-height: var.$leading-0;
