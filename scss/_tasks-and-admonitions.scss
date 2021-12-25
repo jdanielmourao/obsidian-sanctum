@@ -459,10 +459,6 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 .admonitions.markdown-preview-view li[data-task="!"] > .task-list-item-checkbox {
 	margin-left: -5px;
 	margin-right: var.$size-5;
-
-	&:checked::before {
-		margin-top: -1px;
-	}
 }
 
 /* ───────────────────────── Question (?) admonition ──────────────────────── */
@@ -511,10 +507,6 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 .admonitions.markdown-preview-view li[data-task="?"] > .task-list-item-checkbox {
 	margin-left: -5px;
 	margin-right: var.$size-5;
-
-	&:checked::before {
-		margin-top: -1px;
-	}
 }
 
 /* ─────────────────────── Information (i) admonition ─────────────────────── */
@@ -566,10 +558,6 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 .admonitions.markdown-preview-view li[data-task="i"] > .task-list-item-checkbox {
 	margin-left: -5px;
 	margin-right: var.$size-5;
-
-	&:checked::before {
-		margin-top: -1px;
-	}
 }
 
 /* ───────────────────────────── Pros Admonition ──────────────────────────── */
@@ -621,9 +609,6 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	margin-left: -5px;
 	margin-right: var.$size-5;
 
-	&:checked::before {
-		margin-top: -1px;
-	}
 	& .list-collapse-indicator {
 		margin-left: -3.57rem;
 	}
@@ -655,9 +640,6 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	margin-left: -5px;
 	margin-right: var.$size-5;
 
-	&:checked::before {
-		margin-top: -1px;
-	}
 }
 
 /* ────────────────────────────────── Debug ───────────────────────────────── */
@@ -715,8 +697,4 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 .admonitions.markdown-preview-view li[data-task="B"] > .task-list-item-checkbox {
 	margin-left: -5px;
 	margin-right: var.$size-5;
-
-	&:checked::before {
-		margin-top: -1px;
-	}
 }
