@@ -688,7 +688,9 @@ body.is-mobile .nav-action-button svg {
 }
 
 .mobile-toolbar-options-container {
+	--at-spacing: 2px; //variable for advanced mobile toolbar
 	background-color: var(--color-primary-1);
+	border: 1px solid var(--color-primary-0);
 	height: 48px;
 	display: flex;
 	overflow-x: auto;

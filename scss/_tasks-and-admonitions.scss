@@ -391,21 +391,13 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 }
 
 /* ─────────────────────────────── Admonitions ────────────────────────────── */
-:root {
-	--hsl-color-red: 3.2, 85.8%, 61.4%;
-	--hsl-color-yellow: 43.4, 80.3%, 62.2%;
-	--hsl-color-blue: 201.9, 25.9%, 52.4%;
-	--hsl-color-green: 60.7, 41%, 39.2%;
-	--hsl-color-pink: 350.5, 79.1%, 62.5%;
-	--hsl-color-grey: 24, 4.4%, 77.8%;
-}
 
 /* ──────────────────────── Important (!) admonition ──────────────────────── */
 /* ───────────────────────────── Cons Admonition ──────────────────────────── */
 /* ───────────────────────────────── Failure ──────────────────────────────── */
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="X"],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="c"],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="!"] {
+.admonitions ul li.task-list-item.is-checked[data-task="X"],
+.admonitions ul li.task-list-item.is-checked[data-task="c"],
+.admonitions ul li.task-list-item.is-checked[data-task="!"] {
 	background-color: var.$color-red-4;
 	border-radius: 0px 4px 4px 4px;
 	border-left: 1.5px solid var.$color-red;
@@ -454,16 +446,16 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	}
 }
 
-.admonitions.markdown-preview-view li[data-task="X"] > .task-list-item-checkbox,
-.admonitions.markdown-preview-view li[data-task="c"] > .task-list-item-checkbox,
-.admonitions.markdown-preview-view li[data-task="!"] > .task-list-item-checkbox {
+.admonitions li[data-task="X"] > .task-list-item-checkbox,
+.admonitions li[data-task="c"] > .task-list-item-checkbox,
+.admonitions li[data-task="!"] > .task-list-item-checkbox {
 	margin-left: -5px;
 	margin-right: var.$size-5;
 }
 
 /* ───────────────────────── Question (?) admonition ──────────────────────── */
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="I"],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="?"] {
+.admonitions ul li.task-list-item.is-checked[data-task="I"],
+.admonitions ul li.task-list-item.is-checked[data-task="?"] {
 	background-color: var.$color-yellow-3;
 	border-radius: 0px 4px 4px 4px;
 	border-left: 1.5px solid var.$color-yellow-5;
@@ -503,14 +495,14 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	}
 }
 
-.admonitions.markdown-preview-view li[data-task="I"] > .task-list-item-checkbox,
-.admonitions.markdown-preview-view li[data-task="?"] > .task-list-item-checkbox {
+.admonitions li[data-task="I"] > .task-list-item-checkbox,
+.admonitions li[data-task="?"] > .task-list-item-checkbox {
 	margin-left: -5px;
 	margin-right: var.$size-5;
 }
 
 /* ─────────────────────── Information (i) admonition ─────────────────────── */
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="i"] {
+.admonitions ul li.task-list-item.is-checked[data-task="i"] {
 	background-color: var.$color-blue-4;
 	border-radius: 0px 4px 4px 4px;
 	border-left: 1.5px solid var.$color-teal;
@@ -555,7 +547,7 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	}
 }
 
-.admonitions.markdown-preview-view li[data-task="i"] > .task-list-item-checkbox {
+.admonitions li[data-task="i"] > .task-list-item-checkbox {
 	margin-left: -5px;
 	margin-right: var.$size-5;
 }
@@ -563,9 +555,9 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 /* ───────────────────────────── Pros Admonition ──────────────────────────── */
 /* ─────────────────────────── Reward/Win Admonition ─────────────────────────── */
 /* ───────────────────────────────── Success ──────────────────────────────── */
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="1"],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="W"],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="p"] {
+.admonitions ul li.task-list-item.is-checked[data-task="1"],
+.admonitions ul li.task-list-item.is-checked[data-task="W"],
+.admonitions ul li.task-list-item.is-checked[data-task="p"] {
 	background-color: var.$color-green-5;
 	border-radius: 0px 4px 4px 4px;
 	border-left: 1.5px solid var.$color-green;
@@ -603,9 +595,9 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	}
 }
 
-.admonitions.markdown-preview-view li[data-task="1"] > .task-list-item-checkbox,
-.admonitions.markdown-preview-view li[data-task="W"] > .task-list-item-checkbox,
-.admonitions.markdown-preview-view li[data-task="p"] > .task-list-item-checkbox {
+.admonitions li[data-task="1"] > .task-list-item-checkbox,
+.admonitions li[data-task="W"] > .task-list-item-checkbox,
+.admonitions li[data-task="p"] > .task-list-item-checkbox {
 	margin-left: -5px;
 	margin-right: var.$size-5;
 
@@ -616,8 +608,8 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 
 /* ─────────────────────────── Note (n) Admonition ────────────────────────── */
 /* ─────────────────────────── Bookmark Admonition ────────────────────────── */
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="n"],
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="b"] {
+.admonitions ul li.task-list-item.is-checked[data-task="n"],
+.admonitions ul li.task-list-item.is-checked[data-task="b"] {
 	background-color: var(--color-primary-2);
 	border-radius: 0px 4px 4px 4px;
 	border-left: 1.5px solid var(--color-border-2);
@@ -635,15 +627,15 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	}
 }
 
-.admonitions.markdown-preview-view li[data-task="n"] > .task-list-item-checkbox,
-.admonitions.markdown-preview-view li[data-task="b"] > .task-list-item-checkbox {
+.admonitions li[data-task="n"] > .task-list-item-checkbox,
+.admonitions li[data-task="b"] > .task-list-item-checkbox {
 	margin-left: -5px;
 	margin-right: var.$size-5;
 
 }
 
 /* ────────────────────────────────── Debug ───────────────────────────────── */
-.admonitions.markdown-preview-view ul li.task-list-item.is-checked[data-task="B"] {
+.admonitions ul li.task-list-item.is-checked[data-task="B"] {
 	background-color: var.$color-pink-5;
 	border-left: 1.5px solid var.$color-pink;
 	border-radius: 0px 4px 4px 4px;
@@ -694,7 +686,7 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	}
 }
 
-.admonitions.markdown-preview-view li[data-task="B"] > .task-list-item-checkbox {
+.admonitions li[data-task="B"] > .task-list-item-checkbox {
 	margin-left: -5px;
 	margin-right: var.$size-5;
 }
