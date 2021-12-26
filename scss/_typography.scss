@@ -679,51 +679,48 @@ body {
 	--h6: 0.7rem;
 }
 
-div:not(.CodeMirror-activeline) > .HyperMD-header-1:before {
-	content: "H1";
-	display: inline-block;
-	color: var(--text-faint);
-	font-size: var(--h1);
-	font-family: var(--font-editor);
-	margin-right: calc(var(--h1) / 2);
-}
-
-div:not(.CodeMirror-activeline) > .HyperMD-header-2:before {
-	content: "H2";
-	color: var(--text-faint);
-	font-size: var(--h2);
-	font-family: var(--font-editor);
-	margin-right: calc(var(--h1) / 2);
-}
-
-div:not(.CodeMirror-activeline) > .HyperMD-header-3:before {
-	content: "H3";
-	color: var(--text-faint);
-	font-size: var(--h3);
-	font-family: var(--font-editor);
-	margin-right: calc(var(--h1) / 2);
-}
-
-div:not(.CodeMirror-activeline) > .HyperMD-header-4:before {
-	content: "H4";
-	color: var(--text-faint);
-	font-size: var(--h4);
-	font-family: var(--font-editor);
-	margin-right: calc(var(--h1) / 2);
-}
-
-div:not(.CodeMirror-activeline) > .HyperMD-header-5:before {
-	content: "H5";
-	color: var(--text-faint);
-	font-size: var(--h5);
-	font-family: var(--font-editor);
-	margin-right: calc(var(--h1) / 2);
-}
-
-div:not(.CodeMirror-activeline) > .HyperMD-header-6:before {
-	content: "H6";
-	color: var(--text-faint);
-	font-size: var(--h6);
-	font-family: var(--font-editor);
-	margin-right: calc(var(--h1) / 2);
+div:not(.CodeMirror-activeline) {
+	& > .HyperMD-header-1:before {
+		content: "H1";
+		display: inline-block;
+		color: var(--color-accent);
+		font-size: var(--h1);
+		font-family: var(--font-editor);
+		margin-right: .5rem;
+	}
+	& > .HyperMD-header-2:before {
+		content: "H2";
+		color: var(--color-accent);
+		font-size: var(--h2);
+		font-family: var(--font-editor);
+		margin-right: .5rem;
+	}
+	& > .HyperMD-header-3:before {
+		content: "H3";
+		color: var(--color-accent);
+		font-size: var(--h3);
+		font-family: var(--font-editor);
+		margin-right: .5rem;
+	}
+	& > .HyperMD-header-4:before {
+		content: "H4";
+		color: var(--color-accent);
+		font-size: var(--h4);
+		font-family: var(--font-editor);
+		margin-right: .5rem;
+	}
+	& > .HyperMD-header-5:before {
+		content: "H5";
+		color: var(--color-accent);
+		font-size: var(--h5);
+		font-family: var(--font-editor);
+		margin-right: .5rem;
+	}
+	& > .HyperMD-header-6:before {
+		content: "H6";
+		color: var(--color-accent);
+		font-size: var(--h6);
+		font-family: var(--font-editor);
+		margin-right: .5rem;
+	}
 }
