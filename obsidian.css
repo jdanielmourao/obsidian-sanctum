@@ -2668,26 +2668,27 @@ ul li {
   letter-spacing: 0px;
 }
 
-.outliner-plugin-bls .CodeMirror-line span .cm-hmd-list-indent::before {
+body.outliner-plugin-bls .cm-line .cm-hmd-list-indent::before {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to right, var(--text-faint) 0.5px, transparent 0px);
-  background-size: 1.6ch 1.5px;
+  background-image: linear-gradient(to right, var(--text-faint) 1px, transparent 1px);
+  background-size: 2.9ch 1px;
   background-position-x: 3px;
   width: 100%;
+  left: 0;
   top: -1.6em;
   padding-bottom: 999em;
 }
 
-body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul:before {
-  content: "▪";
+body.outliner-plugin-bls .cm-s-obsidian:not(.is-live-preview) .cm-formatting-list-ul:before,
+body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
+  content: "–  ";
+  font-size: 100%;
   position: absolute;
-  margin-left: 0px;
-  margin-top: 0px;
-  font-size: 20px;
+  margin-top: -1px;
+  margin-left: -4px;
   color: var(--text-muted);
-  font-family: var(--font-sans);
 }
 
 .list-bullet {
@@ -2779,6 +2780,13 @@ input[type=checkbox] {
   border-radius: 2px;
   border: 1.5px solid var(--color-primary-4);
   transition: background-color 240ms cubic-bezier(0, 0, 0.3, 1);
+}
+
+input[type=checkbox]:focus,
+input[type=checkbox]:hover {
+  outline: 0;
+  box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(140, 141, 59, 0.35);
+  border-color: #8c8d3b;
 }
 
 .markdown-preview-view input[type=checkbox] {
@@ -3155,23 +3163,25 @@ input[type=checkbox]:checked:active, input[type=checkbox]:checked:hover {
 .admonitions ul li.task-list-item.is-checked[data-task=c],
 .admonitions ul li.task-list-item.is-checked[data-task="!"] {
   background-color: #fc867a;
-  border-radius: 0px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
   border-left: 1.5px solid #f15148;
-  padding: 0px 4px 4px 4px;
+  padding: 4px 4px 4px 4px;
   color: var(--text-normal);
   font-weight: var(--font-regular);
   margin-left: 4px;
 }
+.theme-light .admonitions ul li.task-list-item.is-checked[data-task=X] ul li::marker, .theme-light .admonitions ul li.task-list-item.is-checked[data-task=X],
+.theme-light .admonitions ul li.task-list-item.is-checked[data-task=c] ul li::marker,
+.theme-light .admonitions ul li.task-list-item.is-checked[data-task=c],
+.theme-light .admonitions ul li.task-list-item.is-checked[data-task="!"] ul li::marker,
+.theme-light .admonitions ul li.task-list-item.is-checked[data-task="!"] {
+  color: var(--background-primary);
+}
 .theme-dark .admonitions ul li.task-list-item.is-checked[data-task=X],
 .theme-dark .admonitions ul li.task-list-item.is-checked[data-task=c],
 .theme-dark .admonitions ul li.task-list-item.is-checked[data-task="!"] {
-  color: var(--color-primary-10);
   background-color: #f15148;
-}
-.admonitions ul li.task-list-item.is-checked[data-task=X] ul li::marker,
-.admonitions ul li.task-list-item.is-checked[data-task=c] ul li::marker,
-.admonitions ul li.task-list-item.is-checked[data-task="!"] ul li::marker {
-  color: var(--color-primary-0);
+  border-left-color: #c82b29;
 }
 .admonitions ul li.task-list-item.is-checked[data-task=X] a,
 .admonitions ul li.task-list-item.is-checked[data-task=c] a,
@@ -3230,22 +3240,29 @@ input[type=checkbox]:checked:active, input[type=checkbox]:checked:hover {
 /* ───────────────────────── Question (?) admonition ──────────────────────── */
 .admonitions ul li.task-list-item.is-checked[data-task=I],
 .admonitions ul li.task-list-item.is-checked[data-task="?"] {
-  background-color: #ecc151;
-  border-radius: 0px 4px 4px 4px;
+  background-color: rgba(214, 159, 40, 0.8);
+  border-radius: 4px 4px 4px 4px;
   border-left: 1.5px solid #af8122;
-  padding: 0px 4px 4px 4px;
+  padding: 4px 4px 4px 4px;
   text-decoration: none;
   color: var(--color-primary-9);
   font-weight: var(--font-regular);
   margin-left: 4px;
 }
+.theme-light .admonitions ul li.task-list-item.is-checked[data-task=I] li::marker, .theme-light .admonitions ul li.task-list-item.is-checked[data-task=I],
+.theme-light .admonitions ul li.task-list-item.is-checked[data-task="?"] li::marker,
+.theme-light .admonitions ul li.task-list-item.is-checked[data-task="?"] {
+  color: #fefefe;
+  text-shadow: #af8122 0px 1px 1px;
+}
 .theme-dark .admonitions ul li.task-list-item.is-checked[data-task=I],
 .theme-dark .admonitions ul li.task-list-item.is-checked[data-task="?"] {
   background-color: #d69f28;
+  border-left-color: #af8122;
 }
 .admonitions ul li.task-list-item.is-checked[data-task=I] li::marker,
 .admonitions ul li.task-list-item.is-checked[data-task="?"] li::marker {
-  color: var(--color-primary-9);
+  color: var(--color-primary-10);
 }
 .admonitions ul li.task-list-item.is-checked[data-task=I] a,
 .admonitions ul li.task-list-item.is-checked[data-task="?"] a {
@@ -3284,19 +3301,22 @@ input[type=checkbox]:checked:active, input[type=checkbox]:checked:hover {
 /* ─────────────────────── Information (i) admonition ─────────────────────── */
 .admonitions ul li.task-list-item.is-checked[data-task=i] {
   background-color: #88adc2;
-  border-radius: 0px 4px 4px 4px;
-  border-left: 1.5px solid #409693;
-  padding: 0px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  border-left: 1.5px solid #668ea5;
+  padding: 4px 4px 4px 4px;
   text-decoration: none;
   color: var(--color-primary-0);
   font-weight: var(--font-regular);
   margin-left: 4px;
 }
 .theme-dark .admonitions ul li.task-list-item.is-checked[data-task=i] {
+  border-left-color: #416e87;
+}
+.theme-dark .admonitions ul li.task-list-item.is-checked[data-task=i] li::marker, .theme-dark .admonitions ul li.task-list-item.is-checked[data-task=i] {
   color: var(--text-normal);
   background-color: #668ea5;
 }
-.admonitions ul li.task-list-item.is-checked[data-task=i] li::marker {
+.theme-light .admonitions ul li.task-list-item.is-checked[data-task=i], .admonitions ul li.task-list-item.is-checked[data-task=i] li::marker {
   color: var(--color-primary-0);
 }
 .admonitions ul li.task-list-item.is-checked[data-task=i] a {
@@ -3338,9 +3358,9 @@ input[type=checkbox]:checked:active, input[type=checkbox]:checked:hover {
 .admonitions ul li.task-list-item.is-checked[data-task=W],
 .admonitions ul li.task-list-item.is-checked[data-task=p] {
   background-color: #8c8d3b;
-  border-radius: 0px 4px 4px 4px;
-  border-left: 1.5px solid #8c8d3b;
-  padding: 0px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  border-left: 1.5px solid #6c6c2e;
+  padding: 4px 4px 4px 4px;
   text-decoration: none;
   color: var(--color-primary-0);
   font-weight: var(--font-regular);
@@ -3351,6 +3371,7 @@ input[type=checkbox]:checked:active, input[type=checkbox]:checked:hover {
 .theme-light .admonitions ul li.task-list-item.is-checked[data-task=p] {
   color: var(--color-primary-0);
   background-color: #abad55;
+  border-left-color: #8c8d3b;
 }
 .admonitions ul li.task-list-item.is-checked[data-task="1"], .admonitions ul li.task-list-item.is-checked[data-task="1"] mark, .admonitions ul li.task-list-item.is-checked[data-task="1"] li mark, .admonitions ul li.task-list-item.is-checked[data-task="1"] li::marker,
 .admonitions ul li.task-list-item.is-checked[data-task=W],
@@ -3406,17 +3427,13 @@ input[type=checkbox]:checked:active, input[type=checkbox]:checked:hover {
 .admonitions ul li.task-list-item.is-checked[data-task=n],
 .admonitions ul li.task-list-item.is-checked[data-task=b] {
   background-color: var(--color-primary-2);
-  border-radius: 0px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
   border-left: 1.5px solid var(--color-border-2);
-  padding: 0px 4px 4px 4px;
+  padding: 4px 4px 4px 4px;
   text-decoration: none;
   color: var(--text-normal);
   font-weight: var(--font-regular);
   margin-left: 4px;
-}
-.admonitions ul li.task-list-item.is-checked[data-task=n] li::marker,
-.admonitions ul li.task-list-item.is-checked[data-task=b] li::marker {
-  color: var(--color-primary-0);
 }
 .admonitions ul li.task-list-item.is-checked[data-task=n] .list-collapse-indicator,
 .admonitions ul li.task-list-item.is-checked[data-task=b] .list-collapse-indicator {
@@ -3432,16 +3449,17 @@ input[type=checkbox]:checked:active, input[type=checkbox]:checked:hover {
 /* ────────────────────────────────── Debug ───────────────────────────────── */
 .admonitions ul li.task-list-item.is-checked[data-task=B] {
   background-color: #eb546c;
-  border-left: 1.5px solid #eb546c;
-  border-radius: 0px 4px 4px 4px;
+  border-left: 1.5px solid #c23146;
+  border-radius: 4px 4px 4px 4px;
   color: var(--text-normal);
-  padding: 0px 4px 4px 4px;
+  padding: 4px 4px 4px 4px;
   margin-left: 4px;
   font-weight: var(--font-regular);
 }
 .theme-light .admonitions ul li.task-list-item.is-checked[data-task=B] {
-  color: var(--color-primary-0);
+  color: var(--background-primary);
   background-color: #f08a9c;
+  border-left-color: #eb546c;
 }
 .admonitions ul li.task-list-item.is-checked[data-task=B] ul li::marker {
   color: var(--color-primary-0);
@@ -3470,7 +3488,7 @@ input[type=checkbox]:checked:active, input[type=checkbox]:checked:hover {
   color: var(--text-normal);
 }
 .theme-dark .admonitions ul li.task-list-item.is-checked[data-task=B] ul li::marker {
-  color: var(--color-primary-9);
+  color: var(--text-normal);
 }
 .admonitions ul li.task-list-item.is-checked[data-task=B].is-collapsed::after {
   color: var(--color-primary-0);
@@ -7046,20 +7064,20 @@ button.table-close::before {
 }
 
 /* ──────────────── For the icon(s), check SVG Replacement ──────────────── */
-.is-mobile .checklist-plugin-main button {
+.is-mobile body .checklist-plugin-main button {
   width: 15%;
 }
-.is-mobile .checklist-plugin-main ul {
+.is-mobile body .checklist-plugin-main ul {
   padding-inline-start: 0px;
 }
-.checklist-plugin-main button {
+body .checklist-plugin-main button {
   margin: initial;
 }
-.checklist-plugin-main p {
+body .checklist-plugin-main p {
   margin: initial;
   font-family: var(--font-ui);
 }
-.checklist-plugin-main ul li.classic, .checklist-plugin-main ul li.compact {
+body .checklist-plugin-main ul li.classic, body .checklist-plugin-main ul li.compact {
   display: flex;
   align-items: center;
   background-color: var(--background-primary);
@@ -7071,7 +7089,7 @@ button.table-close::before {
   line-height: 1.375em;
   margin-bottom: 2px;
 }
-.checklist-plugin-main li.classic .checkbox, .checklist-plugin-main li.compact .checkbox {
+body .checklist-plugin-main li.classic .checkbox, body .checklist-plugin-main li.compact .checkbox {
   width: 16px;
   height: 16px;
   min-width: 16px;
@@ -7084,28 +7102,38 @@ button.table-close::before {
   border: 1.5px solid var(--color-primary-4);
   border-radius: 4px;
 }
-.checklist-plugin-main li.classic .checkbox:hover, .checklist-plugin-main li.compact .checkbox:hover {
-  filter: brightness(150%);
+body .checklist-plugin-main li.classic, body .checklist-plugin-main li.compact {
+  border: 1px solid transparent;
 }
-.checklist-plugin-main li.classic .toggle, .checklist-plugin-main li.compact .toggle {
+body .checklist-plugin-main li.classic:hover, body .checklist-plugin-main li.compact:hover {
+  background-color: var(--color-primary-0);
+  border: 1px solid var(--color-border-1);
+  border-radius: 4px;
+}
+body .checklist-plugin-main li.classic .checkbox:focus, body .checklist-plugin-main li.compact .checkbox:focus, body .checklist-plugin-main li.classic .checkbox:hover, body .checklist-plugin-main li.compact .checkbox:hover {
+  outline: 0;
+  box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(140, 141, 59, 0.35);
+  border-color: #8c8d3b;
+}
+body .checklist-plugin-main li.classic .toggle, body .checklist-plugin-main li.compact .toggle {
   padding: 0px;
   padding-left: 8px;
 }
-.checklist-plugin-main button:hover {
+body .checklist-plugin-main button:hover {
   background-color: var(--background-primary);
 }
-.theme-light .checklist-plugin-main header .count {
+.theme-light body .checklist-plugin-main header .count {
   background: var(--color-primary-2);
   font-weight: var(--font-regular);
 }
-.checklist-plugin-main header .count {
+body .checklist-plugin-main header .count {
   padding: var(--todoList-countPadding);
   background: var(--color-primary-1);
   border-radius: 32px;
   font-size: 0.75rem;
   font-weight: var(--font-light);
 }
-.checklist-plugin-main header.group-header.page {
+body .checklist-plugin-main header.group-header.page {
   margin: var(--todoList-pageMargin);
   color: var(--text-normal);
   transition: opacity 150ms cubic-bezier(0.2, 0, 0.38, 0.9);
@@ -7113,28 +7141,28 @@ button.table-close::before {
   font-size: 1rem;
   font-weight: var(--font-regular);
 }
-.checklist-plugin-main .header {
+body .checklist-plugin-main .header {
   margin: var(--todoList-headerMargin);
   display: flex;
   gap: var(--todoList-headerGap);
   align-items: center;
 }
-.checklist-plugin-main .collapse .down {
+body .checklist-plugin-main .collapse .down {
   transform: rotate(180deg);
   transition: 0s;
 }
-.checklist-plugin-main .collapse .left {
+body .checklist-plugin-main .collapse .left {
   transform: rotate(0deg);
   transition: 0s;
 }
-.checklist-plugin-main .group-header.tag {
+body .checklist-plugin-main .group-header.tag {
   display: flex;
   background-color: transparent;
   color: var(--text-normal);
   padding: 0px 8px 0px 8px;
   font-size: 0.875rem;
 }
-.checklist-plugin-main .group-header.tag title {
+body .checklist-plugin-main .group-header.tag title {
   background-color: var(--color-accent);
   border-radius: 40px;
 }
