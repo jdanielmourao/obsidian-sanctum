@@ -225,26 +225,27 @@ ul li {
 	letter-spacing: 0px;
 }
 
-.outliner-plugin-bls .CodeMirror-line span .cm-hmd-list-indent::before {
-	content: '';
+body.outliner-plugin-bls .cm-line .cm-hmd-list-indent::before {
+	content: "";
 	display: block;
 	position: absolute;
-	background-image: linear-gradient(to right, var(--text-faint) .5px, transparent 0px);
-	background-size: 1.6ch 1.5px;
+	background-image: linear-gradient( to right, var(--text-faint) 1px, transparent 1px );
+	background-size: 3.1ch 1px;
 	background-position-x: 3px;
 	width: 100%;
+	left: 0;
 	top: -1.6em;
 	padding-bottom: 999em;
 }
 
-body.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list-ul:before {
-	content: "▪";
+body.outliner-plugin-bls .cm-s-obsidian:not(.is-live-preview) .cm-formatting-list-ul:before,
+body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
+	content: "•";
+	font-size: 150%;
 	position: absolute;
+	margin-top: -1px;
 	margin-left: 0px;
-	margin-top: 0px;
-	font-size: 20px;
 	color: var(--text-muted);
-	font-family: var(--font-sans);
 }
 
 // Live Preview bullet points
