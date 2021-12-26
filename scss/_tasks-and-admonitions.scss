@@ -26,6 +26,15 @@ input[type=checkbox] {
 	transition: background-color var.$duration-moderate-2 var.$motion-entrance-expressive;
 }
 
+input[type="checkbox"]:focus,
+input[type="checkbox"]:hover {
+	outline: 0;
+	box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.1),
+	0 0 0 3px hsla(60.7, 41%, 39.2%, .35);
+	border-color: var.$color-green-5;
+}
+
+
 .markdown-preview-view input[type=checkbox] { //vertically align checkboxes in reading view
 	transform: translateY(-4px)
 }
