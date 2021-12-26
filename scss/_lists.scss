@@ -156,7 +156,7 @@ li {
 }*/
 
 /* ────────────────────────── New Relationship Lines ───────────────────────── */
-
+/*
 .relationship-lines ul {
 	list-style-type: none;
 }
@@ -213,8 +213,122 @@ ul li {
 	top: 12px;
 	left: -24px;
 	background-color: var(--text-faint);
+}*/
+
+/* Relationship lines in Reading View */
+
+body:not(.remove-rel-lines) ul > li,
+body:not(.remove-rel-lines) ol > li {
+	position: relative;
 }
 
+body:not(.remove-rel-lines) ol,
+body:not(.remove-rel-lines) ul {
+	position: relative;
+}
+
+body:not(.remove-rel-lines) .markdown-preview-view ul ul,
+body:not(.remove-rel-lines) .markdown-preview-view ol ol {
+	position: relative;
+}
+
+body:not(.remove-rel-lines) ul > li::before,
+body:not(.remove-rel-lines) ol > li::before {
+	position: absolute;
+	content: "";
+	border-left: 1px solid var(--text-faint);
+	opacity: .7;
+	height: calc(100% - 2em);
+	margin-left: -2.1em;
+	top: 1.5em;
+}
+
+body:not(.remove-rel-lines) ul ul::before,
+body:not(.remove-rel-lines) ol ol::before {
+	content: "";
+	position: absolute;
+}
+
+body:not(.remove-rel-lines) .markdown-preview-view ol ol::before {
+	margin-left: -0.8em;
+}
+
+
+/* Relationship lines in Reading View */
+
+body:not(.remove-rel-lines) ul > li,
+body:not(.remove-rel-lines) ol > li {
+	position: relative;
+}
+
+body:not(.remove-rel-lines) ol,
+body:not(.remove-rel-lines) ul {
+	position: relative;
+}
+
+body:not(.remove-rel-lines) .markdown-preview-view ul ul,
+body:not(.remove-rel-lines) .markdown-preview-view ol ol {
+	position: relative;
+}
+
+body:not(.remove-rel-lines) ul > li::before,
+body:not(.remove-rel-lines) ol > li::before {
+	position: absolute;
+	content: "";
+	border-left: 1px solid var(--text-faint);
+	opacity: .7;
+	height: calc(100% - 2em);
+	margin-left: -2.1em;
+	top: 1.5em;
+}
+
+body:not(.remove-rel-lines) :not(.admonitions) ul > li.task-list-item.is-checked::before,
+body:not(.remove-rel-lines) :not(.admonitions) ol > li.task-list-item.is-checked::before {
+	left: 21px;
+}
+
+body:not(.remove-rel-lines) .admonitions ul > li.task-list-item.is-checked::before,
+body:not(.remove-rel-lines) .admonitions ol > li.task-list-item.is-checked::before {
+	left: 16.5px;
+}
+
+body:not(.remove-rel-lines) ul ul::before,
+body:not(.remove-rel-lines) ol ol::before {
+	content: "";
+	position: absolute;
+}
+
+body:not(.remove-rel-lines) .markdown-preview-view ol ol::before {
+	margin-left: -0.8em;
+}
+
+:root {
+	--rel-line-width: 3.05ch;
+}
+
+/* Relationship Lines in Editing View */
+body:not(.remove-rel-lines) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line {
+	overflow: hidden;
+}
+body:not(.remove-rel-lines) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
+	position: relative;
+/*	font-family: var(--font-editor);
+	font-size: var(--editor-font-size);*/
+}
+body:not(.remove-rel-lines) .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
+	content: '';
+/*	font-family: var(--font-editor);
+	font-size: var(--editor-font-size);*/
+	display: block;
+	position: absolute;
+	width: 100%;
+	top: -1.6em;
+	padding-bottom: 999em;
+	background-image: linear-gradient( to right, var(--text-faint) 1px, transparent 1px);
+	background-size: var(--rel-line-width) 1px;
+	left: 3px;
+	opacity: .7;
+}
 /* ──────────────────────────────── Outliner ──────────────────────────────── */
 
 // Some Outliner Edit Mode Corrections 

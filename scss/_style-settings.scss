@@ -589,11 +589,27 @@ settings:
 		level: 3
 		collapsed: true
 	-
-		id: relationship-lines
+		id: remove-rel-lines
 		title: Relationship Lines
-		description: Toggle relationship lines on lists. This only works for Reading View.
+		description: Toggle relationship lines on lists for Reading and Editing View (Live Preview).
 		type: class-toggle
 		default: false
+	-
+		id: rel-line-width
+		title: Relationship Lines Spacing
+		description: Leave as default if you're using the default font. If using another font, you may try the other settings. If using IBM Plex, try the 'Proportional Font Fix' option.
+		type: variable-select
+		default: 3.05ch
+		options:
+			-
+				label: Monospaced Font Fix
+				value: 4.0ch
+			-
+				label: Default
+				value: 3.05ch
+			-
+				label: Proportional Font Fix
+				value: 1.8ch
 	-
 		id: elements-title
 		title: Elements
@@ -653,7 +669,7 @@ settings:
 		default: false
 	-
 		id: fx-rl
-		title: File Explorer Relationship Lines
+		title: File Explorer Relationship Lines [Temporarily Disabled]
 		description: Adds hierarchy lines in File explorer.
 		type: class-toggle
 		default: false
