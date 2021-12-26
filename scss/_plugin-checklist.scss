@@ -1,7 +1,7 @@
 @use 'var';
 
 /* ──────────────── For the icon(s), check SVG Replacement ──────────────── */
-.checklist-plugin-main {
+body .checklist-plugin-main {
 
 	.is-mobile & button {
 		width: 15%;
@@ -43,9 +43,24 @@
 		border: 1.5px solid var(--color-primary-4);
 		border-radius: 4px;
 	}
+	& li.classic,
+	& li.compact {
+		border: 1px solid transparent;
+	}
+	& li.classic:hover,
+	& li.compact:hover {
+		background-color: var(--color-primary-0);
+		border: 1px solid var(--color-border-1);
+		border-radius: 4px;
+	}
+	& li.classic .checkbox:focus,
+	& li.compact .checkbox:focus,
 	& li.classic .checkbox:hover,
 	& li.compact .checkbox:hover {
-		filter: brightness(150%);
+		outline: 0;
+		box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.1),
+		0 0 0 3px hsla(60.7, 41%, 39.2%, .35);
+		border-color: var.$color-green-5;
 	}
 	& li.classic .toggle,
 	& li.compact .toggle {
