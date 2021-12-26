@@ -97,14 +97,31 @@ ul ol ol ul ul {
 	padding: var.$size-0;
 	padding-left: 1.5rem;
 }
-
-// Unordered list bullet thickness and size
-ul > li::marker {
-	font-weight: var(--font-semi-bold);
-	font-size: var.$font-scale-0;
-	color: var(--text-normal);
-	margin-right: var.$size-0;
+/*
+ul,
+ul ul ul,
+ul ul ul ul ul,
+ul ul ul ul ul ul ul,
+ol ul, // making sure that even if you indent an ul inside an ol, it will display the correct list-style-type
+ul ol ul,
+ol ol ul,
+ol ul ol ul,
+ol ul ul ul,
+ul ol ul ul ul {
+	list-style-type: disc;
 }
+
+ul ul,
+ul ul ul ul,
+ul ul ul ul ul ul,
+ul ul ul ul ul ul ul ul,
+ol ul ul,
+ol ol ul ul,
+ul ol ul ul,
+ol ul ol ul ul,
+ul ol ol ul ul {
+	list-style-type: circle;
+}*/
 
 ol {
 	padding-inline-start: 1.5em;
@@ -139,6 +156,7 @@ li {
 }*/
 
 /* ────────────────────────── New Relationship Lines ───────────────────────── */
+
 .relationship-lines ul {
 	list-style-type: none;
 }

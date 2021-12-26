@@ -2453,12 +2453,18 @@ del {
   align-self: center;
 }
 
-ol > li::marker {
+ul li::marker,
+ol li::marker {
   font-weight: var(--font-regular);
   font-size: 1rem;
   color: var(--text-normal);
   font-family: var(--font-sans);
   font-variant-numeric: tabular-nums;
+}
+
+li::marker {
+  color: inherit;
+  -webkit-font-smoothing: auto;
 }
 
 .markdown-preview-view ol li p {
@@ -2469,7 +2475,7 @@ ol > li::marker {
   margin: 4px 0;
 }
 .markdown-preview-view .list-collapse-indicator {
-  margin-left: -3.5rem;
+  margin-left: -3rem;
   color: var(--text-faint);
 }
 .markdown-preview-view ol li .list-collapse-indicator {
@@ -2539,13 +2545,31 @@ ul ol ol ul ul {
   padding-left: 1.5rem;
 }
 
-ul > li::marker {
-  font-weight: var(--font-semi-bold);
-  font-size: 1rem;
-  color: var(--text-normal);
-  margin-right: 0px;
+/*
+ul,
+ul ul ul,
+ul ul ul ul ul,
+ul ul ul ul ul ul ul,
+ol ul, // making sure that even if you indent an ul inside an ol, it will display the correct list-style-type
+ul ol ul,
+ol ol ul,
+ol ul ol ul,
+ol ul ul ul,
+ul ol ul ul ul {
+	list-style-type: disc;
 }
 
+ul ul,
+ul ul ul ul,
+ul ul ul ul ul ul,
+ul ul ul ul ul ul ul ul,
+ol ul ul,
+ol ol ul ul,
+ul ol ul ul,
+ol ul ol ul ul,
+ul ol ol ul ul {
+	list-style-type: circle;
+}*/
 ol {
   padding-inline-start: 1.5em;
   list-style-position: outside;
@@ -3545,6 +3569,10 @@ aside {
   font-weight: unset;
   white-space: normal;
   word-break: break-word;
+}
+
+.markdown-source-view.is-live-preview.is-readable-line-width .aside-left {
+  margin-left: -21.5rem;
 }
 
 .aside-right {
@@ -5905,11 +5933,6 @@ input[type=range]::-webkit-slider-thumb {
 
 .is-mobile .nav-file-title-content:before {
   transform: translateY(0px);
-}
-
-.is-mobile .markdown-preview-view ul,
-.is-mobile .markdown-preview-view ol {
-  padding-inline-start: 0;
 }
 
 .is-mobile .nav-file-title,
