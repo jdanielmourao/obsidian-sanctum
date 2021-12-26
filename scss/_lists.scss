@@ -1,11 +1,17 @@
 @use 'var';
 
-ol > li::marker {
+ul li::marker,
+ol li::marker {
 	font-weight: var(--font-regular);
 	font-size: var.$font-scale-0;
 	color: var(--text-normal);
 	font-family: var(--font-sans); // not font-preview, because otherwise it will change
 	font-variant-numeric: tabular-nums;
+}
+
+li::marker {
+	color: inherit;
+	-webkit-font-smoothing: auto;
 }
 
 .markdown-preview-view {
@@ -19,7 +25,7 @@ ol > li::marker {
 	}
 	
 	& .list-collapse-indicator { // generic ul and task list
-		margin-left: -3.5rem;
+		margin-left: -3rem;
 		color: var(--text-faint);
 	}
 	& ol li .list-collapse-indicator { // ol under 10
