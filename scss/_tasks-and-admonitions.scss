@@ -34,7 +34,6 @@ input[type="checkbox"]:hover {
 	border-color: var.$color-green-5;
 }
 
-
 .markdown-preview-view input[type=checkbox] { //vertically align checkboxes in reading view
 	transform: translateY(-4px)
 }
@@ -415,15 +414,13 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	font-weight: var(--font-regular);
 	margin-left: 4px;
 
+	.theme-light & ul li::marker,
+	.theme-light & {
+		color: var(--background-primary);
+	}
 	.theme-dark & {
-		color: var(--color-primary-10);
 		background-color: var.$color-red-5;
 	}
-
-	& ul li::marker {
-		color: var(--color-primary-0);
-	}
-
 	& a {
 		color: inherit;
 	}
@@ -477,9 +474,8 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	.theme-dark & {
 		background-color: var.$color-yellow-4;
 	}
-
 	& li::marker{
-		color: var(--color-primary-9);
+		color: var(--color-primary-10);
 	}
 	& a {
 		color: inherit;
@@ -521,10 +517,12 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	font-weight: var(--font-regular);
 	margin-left: 4px;
 
+	.theme-dark & li::marker, 
 	.theme-dark & {
 		color: var(--text-normal);
 		background-color: var.$color-blue-5;
 	}
+	.theme-light &,
 	& li::marker {
 		color: var(--color-primary-0);
 	}
@@ -628,9 +626,6 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	font-weight: var(--font-regular);
 	margin-left: 4px;
 
-	& li::marker {
-		color: var(--color-primary-0);
-	}
 	& .list-collapse-indicator {
 		margin-left: -3.57rem;
 	}
@@ -654,7 +649,7 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	font-weight: var(--font-regular);
 
 	.theme-light & {
-		color: var(--color-primary-0);
+		color: var(--background-primary);
 		background-color: var.$color-pink-4;
 	}
 	& ul li::marker {
@@ -685,7 +680,7 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 		}
 	}
 	.theme-dark & ul li::marker {
-		color: var(--color-primary-9);
+		color: var(--text-normal);
 	}
 	&.is-collapsed::after {
 		color: var(--color-primary-0);
