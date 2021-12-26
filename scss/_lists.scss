@@ -230,7 +230,7 @@ body.outliner-plugin-bls .cm-line .cm-hmd-list-indent::before {
 	display: block;
 	position: absolute;
 	background-image: linear-gradient( to right, var(--text-faint) 1px, transparent 1px );
-	background-size: 3.1ch 1px;
+	background-size: 2.9ch 1px;
 	background-position-x: 3px;
 	width: 100%;
 	left: 0;
@@ -240,11 +240,11 @@ body.outliner-plugin-bls .cm-line .cm-hmd-list-indent::before {
 
 body.outliner-plugin-bls .cm-s-obsidian:not(.is-live-preview) .cm-formatting-list-ul:before,
 body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
-	content: "•";
-	font-size: 150%;
+	content: "–  ";
+	font-size: 100%;
 	position: absolute;
 	margin-top: -1px;
-	margin-left: 0px;
+	margin-left: -4px;
 	color: var(--text-muted);
 }
 
