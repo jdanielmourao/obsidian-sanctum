@@ -407,9 +407,9 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 .admonitions ul li.task-list-item.is-checked[data-task="c"],
 .admonitions ul li.task-list-item.is-checked[data-task="!"] {
 	background-color: var.$color-red-4;
-	border-radius: 0px 4px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
 	border-left: 1.5px solid var.$color-red;
-	padding: 0px 4px 4px 4px;
+	padding: 4px 4px 4px 4px;
 	color: var(--text-normal);
 	font-weight: var(--font-regular);
 	margin-left: 4px;
@@ -463,9 +463,9 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 .admonitions ul li.task-list-item.is-checked[data-task="I"],
 .admonitions ul li.task-list-item.is-checked[data-task="?"] {
 	background-color: var.$color-yellow-3;
-	border-radius: 0px 4px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
 	border-left: 1.5px solid var.$color-yellow-5;
-	padding: 0px 4px 4px 4px;
+	padding: 4px 4px 4px 4px;
 	text-decoration: none;
 	color: var(--color-primary-9);
 	font-weight: var(--font-regular);
@@ -509,9 +509,9 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 /* ─────────────────────── Information (i) admonition ─────────────────────── */
 .admonitions ul li.task-list-item.is-checked[data-task="i"] {
 	background-color: var.$color-blue-4;
-	border-radius: 0px 4px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
 	border-left: 1.5px solid var.$color-teal;
-	padding: 0px 4px 4px 4px;
+	padding: 4px 4px 4px 4px;
 	text-decoration: none;
 	color: var(--color-primary-0);
 	font-weight: var(--font-regular);
@@ -566,9 +566,9 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 .admonitions ul li.task-list-item.is-checked[data-task="W"],
 .admonitions ul li.task-list-item.is-checked[data-task="p"] {
 	background-color: var.$color-green-5;
-	border-radius: 0px 4px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
 	border-left: 1.5px solid var.$color-green;
-	padding: 0px 4px 4px 4px;
+	padding: 4px 4px 4px 4px;
 	text-decoration: none;
 	color: var(--color-primary-0);
 	font-weight: var(--font-regular);
@@ -618,9 +618,9 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 .admonitions ul li.task-list-item.is-checked[data-task="n"],
 .admonitions ul li.task-list-item.is-checked[data-task="b"] {
 	background-color: var(--color-primary-2);
-	border-radius: 0px 4px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
 	border-left: 1.5px solid var(--color-border-2);
-	padding: 0px 4px 4px 4px;
+	padding: 4px 4px 4px 4px;
 	text-decoration: none;
 	color: var(--text-normal);
 	font-weight: var(--font-regular);
@@ -642,9 +642,9 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 .admonitions ul li.task-list-item.is-checked[data-task="B"] {
 	background-color: var.$color-pink-5;
 	border-left: 1.5px solid var.$color-pink;
-	border-radius: 0px 4px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
 	color: var(--text-normal);
-	padding: 0px 4px 4px 4px;
+	padding: 4px 4px 4px 4px;
 	margin-left: 4px;
 	font-weight: var(--font-regular);
 
