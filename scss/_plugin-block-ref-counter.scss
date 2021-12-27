@@ -1,26 +1,29 @@
 @use 'var';
 
 button.block-ref-count {
+	font-family: var(--font-sans);
 	float: right;
-	color: var(--background-primary);
+	color: var(--text-faint);
 	size: 8px;
-	padding: 10px 8px 8px 8px;
+	padding: 8px 8px 8px 8px;
 	width: 20px;
 	height: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	text-align: center;
 	position: relative;
 	left: 20px;
 	border-radius: 50%;
-	background-color: var(--color-accent);
+	border: 1px solid var(--color-border-1);
+	background-color: var(--color-primary-0);
 	transition: var.$duration-moderate-2 var.$motion-standard-expressive;
 
 	&:hover {
-		color: var(--background-primary);
-		background-color: var(--color-accent);
-		border: 0px solid transparent;
+		color: var(--text-normal);
+		background-color: var(--background-primary);
+		border: 0px inset transparent;
+		border: 1px solid;
+		border-color: var(--color-border-1);
 		border-radius: 15%;
 	}
 	&:active {
