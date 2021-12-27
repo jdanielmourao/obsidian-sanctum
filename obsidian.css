@@ -1804,7 +1804,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-1 {
     font-size: 2rem;
     line-height: 1.125em;
-    font-weight: var(--heading-semi-bold);
+    font-weight: var(--font-semi-bold);
     letter-spacing: 0px;
     margin-top: 0.625em;
     margin-bottom: 0.625em;
@@ -1815,7 +1815,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-2 {
     font-size: 2rem;
     line-height: 1.125em;
-    font-weight: var(--heading-regular);
+    font-weight: var(--font-regular);
     letter-spacing: 0px;
     margin-top: 0.625em;
     margin-bottom: 0.625em;
@@ -1826,7 +1826,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-3 {
     font-size: 1.75rem;
     line-height: 1.125em;
-    font-weight: var(--heading-regular);
+    font-weight: var(--font-regular);
     letter-spacing: 0px;
     margin-top: 0.5625em;
     margin-bottom: 0.5625em;
@@ -1837,7 +1837,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-4 {
     font-size: 1.125rem;
     line-height: 1.125em;
-    font-weight: var(--heading-regular);
+    font-weight: var(--font-regular);
     letter-spacing: 0px;
     margin-top: 0.5625em;
     margin-bottom: 0.5625em;
@@ -1849,7 +1849,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
     color: var(--text-normal);
     font-size: 1rem;
     line-height: 1.125em;
-    font-weight: var(--heading-semi-bold);
+    font-weight: var(--font-semi-bold);
     letter-spacing: 0px;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -1861,7 +1861,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
     color: var(--text-normal);
     font-size: 0.875rem;
     line-height: 1.125em;
-    font-weight: var(--heading-semi-bold);
+    font-weight: var(--font-semi-bold);
     letter-spacing: 0.16px;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -1873,7 +1873,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-1 {
     font-size: 2.625rem;
     line-height: 1.125em;
-    font-weight: var(--heading-semi-bold);
+    font-weight: var(--font-semi-bold);
     letter-spacing: 0px;
     margin-top: 0.625em;
     margin-bottom: 0.625em;
@@ -1884,7 +1884,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-2 {
     font-size: 2.25rem;
     line-height: 1.125em;
-    font-weight: var(--heading-light);
+    font-weight: var(--font-light);
     letter-spacing: 0px;
     margin-top: 0.625em;
     margin-bottom: 0.625em;
@@ -1895,7 +1895,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-3 {
     font-size: 1.75rem;
     line-height: 1.125em;
-    font-weight: var(--heading-regular);
+    font-weight: var(--font-regular);
     letter-spacing: 0px;
     margin-top: 0.5625em;
     margin-bottom: 0.5625em;
@@ -1906,7 +1906,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-4 {
     font-size: 1.25rem;
     line-height: 1.125em;
-    font-weight: var(--heading-regular);
+    font-weight: var(--font-regular);
     letter-spacing: 0px;
     margin-top: 0.5625em;
     margin-bottom: 0.5625em;
@@ -1918,7 +1918,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
     color: var(--text-normal);
     font-size: 1rem;
     line-height: 1.125em;
-    font-weight: var(--heading-semi-bold);
+    font-weight: var(--font-semi-bold);
     letter-spacing: 0px;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -1930,7 +1930,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
     color: var(--text-normal);
     font-size: 0.875rem;
     line-height: 1.125em;
-    font-weight: var(--heading-semi-bold);
+    font-weight: var(--font-semi-bold);
     letter-spacing: 0.16px;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -1942,7 +1942,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-1 {
     font-size: 2.625rem;
     line-height: 1.125em;
-    font-weight: var(--heading-semi-bold);
+    font-weight: var(--font-semi-bold);
     letter-spacing: 0px;
     margin-top: 0.6875em;
     margin-bottom: 0.6875em;
@@ -1953,7 +1953,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-2 {
     font-size: 2.625rem;
     line-height: 1.125em;
-    font-weight: var(--heading-light);
+    font-weight: var(--font-light);
     letter-spacing: 0px;
     margin-top: 0.6875em;
     margin-bottom: 0.6875em;
@@ -1964,7 +1964,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-3 {
     font-size: 1.75rem;
     line-height: 1.125em;
-    font-weight: var(--heading-regular);
+    font-weight: var(--font-regular);
     letter-spacing: 0px;
     margin-top: 0.625em;
     margin-bottom: 0.625em;
@@ -1975,7 +1975,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-4 {
     font-size: 1.25rem;
     line-height: 1.125em;
-    font-weight: var(--heading-regular);
+    font-weight: var(--font-regular);
     letter-spacing: 0px;
     margin-top: 0.625em;
     margin-bottom: 0.625em;
@@ -1987,7 +1987,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
     color: var(--text-normal);
     font-size: 1rem;
     line-height: 1.125em;
-    font-weight: var(--heading-semi-bold);
+    font-weight: var(--font-semi-bold);
     letter-spacing: 0px;
     margin-top: 0.5625em;
     margin-bottom: 0.5625em;
@@ -1999,7 +1999,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
     color: var(--text-normal);
     font-size: 0.875rem;
     line-height: 1.125em;
-    font-weight: var(--heading-semi-bold);
+    font-weight: var(--font-semi-bold);
     letter-spacing: 0.16px;
     margin-top: 0.5625em;
     margin-bottom: 0.5625em;
@@ -2011,7 +2011,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-1 {
     font-size: 3rem;
     line-height: 1.125em;
-    font-weight: var(--heading-semi-bold);
+    font-weight: var(--font-semi-bold);
     letter-spacing: 0px;
     margin-top: 0.6875em;
     margin-bottom: 0.6875em;
@@ -2022,7 +2022,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-2 {
     font-size: 3rem;
     line-height: 1.125em;
-    font-weight: var(--heading-light);
+    font-weight: var(--font-light);
     letter-spacing: 0px;
     margin-top: 0.6875em;
     margin-bottom: 0.6875em;
@@ -2033,7 +2033,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-3 {
     font-size: 2rem;
     line-height: 1.125em;
-    font-weight: var(--heading-regular);
+    font-weight: var(--font-regular);
     letter-spacing: 0px;
     margin-top: 0.625em;
     margin-bottom: 0.625em;
@@ -2044,7 +2044,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-4 {
     font-size: 1.25rem;
     line-height: 1.125em;
-    font-weight: var(--heading-regular);
+    font-weight: var(--font-regular);
     letter-spacing: 0px;
     margin-top: 0.625em;
     margin-bottom: 0.625em;
@@ -2056,7 +2056,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
     color: var(--text-normal);
     font-size: 1rem;
     line-height: 1.125em;
-    font-weight: var(--heading-semi-bold);
+    font-weight: var(--font-semi-bold);
     letter-spacing: 0px;
     margin-top: 0.5625em;
     margin-bottom: 0.5625em;
@@ -2068,7 +2068,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
     color: var(--text-normal);
     font-size: 0.875rem;
     line-height: 1.125em;
-    font-weight: var(--heading-semi-bold);
+    font-weight: var(--font-semi-bold);
     letter-spacing: 0.16px;
     margin-top: 0.5625em;
     margin-bottom: 0.5625em;
@@ -2080,7 +2080,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-1 {
     font-size: 3rem;
     line-height: 1.125em;
-    font-weight: var(--heading-semi-bold);
+    font-weight: var(--font-semi-bold);
     letter-spacing: 0px;
     margin-top: 0.65em;
     margin-bottom: 0.65em;
@@ -2091,7 +2091,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-2 {
     font-size: 3rem;
     line-height: 1.125em;
-    font-weight: var(--heading-light);
+    font-weight: var(--font-light);
     letter-spacing: 0px;
     margin-top: 0.65em;
     margin-bottom: 0.65em;
@@ -2102,7 +2102,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-3 {
     font-size: 2rem;
     line-height: 1.125em;
-    font-weight: var(--heading-regular);
+    font-weight: var(--font-regular);
     letter-spacing: 0px;
     margin-top: 0.6875em;
     margin-bottom: 0.6875em;
@@ -2113,7 +2113,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-4 {
     font-size: 1.5rem;
     line-height: 1.125em;
-    font-weight: var(--heading-regular);
+    font-weight: var(--font-regular);
     letter-spacing: 0px;
     margin-top: 0.6875em;
     margin-bottom: 0.6875em;
@@ -2125,7 +2125,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
     color: var(--text-normal);
     font-size: 1rem;
     line-height: 1.125em;
-    font-weight: var(--heading-semi-bold);
+    font-weight: var(--font-semi-bold);
     letter-spacing: 0px;
     margin-top: 1.125em;
     margin-bottom: 1.125em;
@@ -2137,7 +2137,7 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
     color: var(--text-normal);
     font-size: 0.875rem;
     line-height: 1.125em;
-    font-weight: var(--heading-semi-bold);
+    font-weight: var(--font-semi-bold);
     letter-spacing: 0.16px;
     margin-top: 1.125em;
     margin-bottom: 1.125em;
@@ -2267,6 +2267,60 @@ body.theme-dark, body body.theme-dark input, body body.theme-dark button {
 }
 .is-mobile .markdown-preview-view div[data-tag-name=h1] + div > hr, .is-mobile .markdown-preview-view div[data-tag-name=h2] + div > hr, .is-mobile .markdown-preview-view div[data-tag-name=h3] + div > hr, .is-mobile .markdown-preview-view div[data-tag-name=h4] + div > hr, .is-mobile .markdown-preview-view div[data-tag-name=h5] + div > hr, .is-mobile .markdown-preview-view div[data-tag-name=h6] + div > hr {
   margin-top: -0.5em;
+}
+
+/* ──────────────────────── Typora-like heading tags ──────────────────────── */
+:root {
+  --h1: .95rem;
+  --h2: 0.9rem;
+  --h3: 0.85rem;
+  --h4: 0.8rem;
+  --h5: 0.75rem;
+  --h6: 0.7rem;
+}
+
+.mod-cm6.is-live-preview div:not(.CodeMirror-activeline) > .HyperMD-header-1:before {
+  content: "H1";
+  display: inline-block;
+  color: var(--color-accent);
+  font-size: var(--h1);
+  font-family: var(--font-editor);
+  margin-right: 0.5rem;
+}
+.mod-cm6.is-live-preview div:not(.CodeMirror-activeline) > .HyperMD-header-2:before {
+  content: "H2";
+  color: var(--color-accent);
+  font-size: var(--h2);
+  font-family: var(--font-editor);
+  margin-right: 0.5rem;
+}
+.mod-cm6.is-live-preview div:not(.CodeMirror-activeline) > .HyperMD-header-3:before {
+  content: "H3";
+  color: var(--color-accent);
+  font-size: var(--h3);
+  font-family: var(--font-editor);
+  margin-right: 0.5rem;
+}
+.mod-cm6.is-live-preview div:not(.CodeMirror-activeline) > .HyperMD-header-4:before {
+  content: "H4";
+  color: var(--color-accent);
+  font-size: var(--h4);
+  font-family: var(--font-editor);
+  margin-right: 0.5rem;
+}
+.mod-cm6.is-live-preview div:not(.CodeMirror-activeline) > .HyperMD-header-5:before {
+  content: "H5";
+  color: var(--color-accent);
+  font-size: var(--h5);
+  font-family: var(--font-editor);
+  margin-right: 0.5rem;
+}
+.mod-cm6.is-live-preview div:not(.CodeMirror-activeline) > .HyperMD-header-6:before {
+  content: "H6";
+  color: var(--color-accent);
+  font-size: var(--h6);
+  font-family: var(--font-editor);
+  margin-right: 0.5rem;
 }
 
 .center-hr .cm-s-obsidian .HyperMD-hr.CodeMirror-line span.cm-hr,
@@ -2602,61 +2656,176 @@ li {
 	}
 }*/
 /* ────────────────────────── New Relationship Lines ───────────────────────── */
+/*
 .relationship-lines ul {
-  list-style-type: none;
+	list-style-type: none;
 }
 
 ul li {
-  position: relative;
-  margin-bottom: 0;
+	position: relative;
+	margin-bottom: 0;
 }
 
 .relationship-lines ul > li:before {
-  content: "";
+	content: "";
 }
 
+// level 2
 .relationship-lines ul > li > ul > li::before {
-  position: absolute;
-  display: block;
-  content: "";
-  height: 100%;
-  width: 1px;
-  top: 1px;
-  left: -24px;
-  background-color: var(--text-faint);
+	position: absolute;
+	display: block;
+	content: "";
+	height: 100%;
+	width: 1px;
+	top: 1px;
+	left: -24px;
+	background-color: var(--text-faint);
 }
 
 .relationship-lines ul > li > ul > li::after {
-  position: absolute;
-  display: block;
-  content: "";
-  height: 1px;
-  width: 12px;
-  top: 12px;
-  left: -24px;
-  background-color: var(--text-faint);
+	position: absolute;
+	display: block;
+	content: "";
+	height: 1px;
+	width: 12px;
+	top: 12px;
+	left: -24px;
+	background-color: var(--text-faint);
 }
 
 .relationship-lines ul > li > ul > li:last-child:before {
-  position: absolute;
-  display: block;
-  content: "";
-  height: 15px;
-  width: 1px;
-  top: -3px;
-  left: -24px;
-  background-color: var(--text-faint);
+	position: absolute;
+	display: block;
+	content: "";
+	height: 15px;
+	width: 1px;
+	top: -3px;
+	left: -24px;
+	background-color: var(--text-faint);
 }
 
 .relationship-lines ul > li > ul > li:last-child:after {
+	position: absolute;
+	display: block;
+	content: "";
+	height: 1px;
+	width: 12px;
+	top: 12px;
+	left: -24px;
+	background-color: var(--text-faint);
+}*/
+/* Relationship lines in Reading View */
+.relationship-lines ul > li,
+.relationship-lines ol > li {
+  position: relative;
+}
+
+.relationship-lines ol,
+.relationship-lines ul {
+  position: relative;
+}
+
+.relationship-lines .markdown-preview-view ul ul,
+.relationship-lines .markdown-preview-view ol ol {
+  position: relative;
+}
+
+.relationship-lines ul > li::before,
+.relationship-lines ol > li::before {
   position: absolute;
-  display: block;
   content: "";
-  height: 1px;
-  width: 12px;
-  top: 12px;
-  left: -24px;
-  background-color: var(--text-faint);
+  border-left: 1px solid var(--text-faint);
+  opacity: 0.7;
+  height: calc(100% - 2em);
+  margin-left: -2.1em;
+  top: 1.5em;
+}
+
+.relationship-lines ul ul::before,
+.relationship-lines ol ol::before {
+  content: "";
+  position: absolute;
+}
+
+.relationship-lines .markdown-preview-view ol ol::before {
+  margin-left: -0.8em;
+}
+
+/* Relationship lines in Reading View */
+.relationship-lines ul > li,
+.relationship-lines ol > li {
+  position: relative;
+}
+
+.relationship-lines ol,
+.relationship-lines ul {
+  position: relative;
+}
+
+.relationship-lines .markdown-preview-view ul ul,
+.relationship-lines .markdown-preview-view ol ol {
+  position: relative;
+}
+
+.relationship-lines ul > li::before,
+.relationship-lines ol > li::before {
+  position: absolute;
+  content: "";
+  border-left: 1px solid var(--text-faint);
+  opacity: 0.7;
+  height: calc(100% - 2em);
+  margin-left: -2.1em;
+  top: 1.5em;
+}
+
+.relationship-lines :not(.admonitions) ul > li.task-list-item.is-checked::before,
+.relationship-lines :not(.admonitions) ol > li.task-list-item.is-checked::before {
+  left: 21px;
+}
+
+.relationship-lines .admonitions ul > li.task-list-item.is-checked::before,
+.relationship-lines .admonitions ol > li.task-list-item.is-checked::before {
+  left: 16.5px;
+}
+
+.relationship-lines ul ul::before,
+.relationship-lines ol ol::before {
+  content: "";
+  position: absolute;
+}
+
+.relationship-lines .markdown-preview-view ol ol::before {
+  margin-left: -0.8em;
+}
+
+:root {
+  --rel-line-width: 3.05ch;
+}
+
+/* Relationship Lines in Editing View */
+.relationship-lines .mod-cm6.is-live-preview .HyperMD-list-line.cm-line {
+  overflow: hidden;
+}
+
+.relationship-lines .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
+  position: relative;
+  /*	font-family: var(--font-editor);
+  	font-size: var(--editor-font-size);*/
+}
+
+.relationship-lines .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
+  content: "";
+  /*	font-family: var(--font-editor);
+  	font-size: var(--editor-font-size);*/
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: -1.6em;
+  padding-bottom: 999em;
+  background-image: linear-gradient(to right, var(--text-faint) 1px, transparent 1px);
+  background-size: var(--rel-line-width) 1px;
+  left: 3px;
+  opacity: 0.7;
 }
 
 /* ──────────────────────────────── Outliner ──────────────────────────────── */
@@ -5415,16 +5584,13 @@ div.menu .menu-item:hover .menu-item-title {
 .popover.hover-popover {
   border-radius: 4px;
   animation: 110ms cubic-bezier(0.2, 0, 0.38, 0.9);
-  transform: cubic-bezier(0.2, 0, 0.38, 0.9);
   transition: cubic-bezier(0.2, 0, 0.38, 0.9);
   width: 40vw;
   background-color: var(--background-primary);
   max-height: 100%;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
   border: 1px solid var(--color-border-1);
-}
-.popover.hover-popover ::-webkit-scrollbar {
-  display: none;
+  overflow: auto;
 }
 .popover.hover-popover .markdown-preview-view {
   padding-bottom: 16px;
@@ -5436,6 +5602,9 @@ div.menu .menu-item:hover .menu-item-title {
   height: auto;
   max-height: 40vh;
   overflow: auto;
+}
+.popover.hover-popover.is-loaded .markdown-embed-link {
+  top: 16px;
 }
 
 .markdown-source-view.is-live-preview progress,
@@ -9065,9 +9234,25 @@ settings:
 	-
 		id: relationship-lines
 		title: Relationship Lines
-		description: Toggle relationship lines on lists. This only works for Reading View.
+		description: Toggle relationship lines on lists for Reading and Editing View (Live Preview).
 		type: class-toggle
 		default: false
+	-
+		id: rel-line-width
+		title: Relationship Lines Spacing
+		description: Leave as default if you're using the default font. If using another font, you may try the other settings. If using IBM Plex, try the 'Proportional Font Fix' option.
+		type: variable-select
+		default: 3.05ch
+		options:
+			-
+				label: Monospaced Font Fix
+				value: 4.0ch
+			-
+				label: Default
+				value: 3.05ch
+			-
+				label: Proportional Font Fix
+				value: 1.8ch
 	-
 		id: elements-title
 		title: Elements
@@ -9127,7 +9312,7 @@ settings:
 		default: false
 	-
 		id: fx-rl
-		title: File Explorer Relationship Lines
+		title: File Explorer Relationship Lines [Temporarily Disabled]
 		description: Adds hierarchy lines in File explorer.
 		type: class-toggle
 		default: false
