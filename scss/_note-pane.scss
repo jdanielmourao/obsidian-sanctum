@@ -18,7 +18,6 @@
 	overflow: hidden;
 	padding-left: var.$size-3;
 	position: relative;
-	height: 34px;
 	background-color: var(--background-primary);
 }
 
@@ -30,20 +29,6 @@
 
 .view-header-title-container div.view-header-title::-webkit-scrollbar {
 	display: none;
-}
-
-:not(.is-mobile) .view-action {
-	color: var(--text-faint);
-
-	&:hover {
-		color: var(--text-muted);
-	}
-	&:active {
-		color: var(--text-normal);
-	}
-	&.mod-close-leaf:hover { //close note pane button
-		color: var.$color-red;
-	}
 }
 
 .view-header-title, // actual note titles
@@ -85,6 +70,20 @@ div.view-header-icon { // dragable icon in note header
 		&:active {
 			color: var(--color-accent);
 		}
+	}
+}
+
+:not(.is-mobile) .view-action {
+	color: var(--text-faint);
+
+	&:hover {
+		color: var(--text-muted);
+	}
+	&:active {
+		color: var(--text-normal);
+	}
+	&.mod-close-leaf:hover { //close note pane button
+		color: var.$color-red;
 	}
 }
 
