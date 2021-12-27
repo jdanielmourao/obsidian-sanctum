@@ -507,6 +507,7 @@ body:not(.no-sanctum-icons)
 
 .workspace-leaf-content[data-type=outline] .tree-item-inner:hover {
 	background-color: var(--color-hover);
+	border-radius: 4px;
 }
 
 .workspace-leaf-content[data-type=outline] .tree-item-icon.collapse-icon {
@@ -527,7 +528,7 @@ body:not(.no-sanctum-icons)
 	padding: 2px 0;
 }
 
-.compact-outline .workspace-leaf-content[data-type=outline] .tree-item-inner {
+.compact-outline .workspace-leaf-content[data-type=outline] .tree-item-inner:not(:hover) {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
