@@ -38,8 +38,9 @@ li::marker {
 	& ol li:nth-child(n+10) ol .list-collapse-indicator {
 		margin-left: -3rem;
 	}
-	.relationship-lines & ul .list-collapse-indicator { // generic ul and task list
-		margin-left: -.9rem;
+	.relationship-lines & ul .list-collapse-indicator,
+	.relationship-lines & ol .list-collapse-indicator { // generic ul and task list
+		margin-left: -2.5em;
 		color: var(--text-faint);
 	}
 }
@@ -243,11 +244,11 @@ ul li {
 	}
 	& :not(.admonitions) ul > li.task-list-item.is-checked::before,
 	& :not(.admonitions) ol > li.task-list-item.is-checked::before {
-		left: 21px;
+		left: .9em;
 	}
 	& .admonitions ul > li.task-list-item.is-checked::before,
 	& .admonitions ol > li.task-list-item.is-checked::before {
-		left: 16.5px;
+		left: 9px;
 	}
 	& ul ul::before,
 	& ol ol::before {
