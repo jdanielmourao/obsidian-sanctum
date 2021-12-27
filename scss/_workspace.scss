@@ -528,7 +528,7 @@ body:not(.no-sanctum-icons)
 	padding: 2px 0;
 }
 
-.compact-outline .workspace-leaf-content[data-type=outline] .tree-item-inner:not(:hover) {
+.compact-outline .workspace-leaf-content[data-type=outline] .tree-item-inner:not(:hover):not(:focus) {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
