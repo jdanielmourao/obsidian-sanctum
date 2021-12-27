@@ -256,50 +256,46 @@ ul li {
 
 /* Relationship lines in Reading View */
 
-.relationship-lines ul > li,
-.relationship-lines ol > li {
+.relationship-lines {
+
+	& ul > li,
+	& ol > li {
 	position: relative;
-}
-
-.relationship-lines ol,
-.relationship-lines ul {
-	position: relative;
-}
-
-.relationship-lines .markdown-preview-view ul ul,
-.relationship-lines .markdown-preview-view ol ol {
-	position: relative;
-}
-
-.relationship-lines ul > li::before,
-.relationship-lines ol > li::before {
-	position: absolute;
-	content: "";
-	border-left: 1px solid var(--text-faint);
-	opacity: .7;
-	height: calc(100% - 2em);
-	margin-left: -2.1em;
-	top: 1.5em;
-}
-
-.relationship-lines :not(.admonitions) ul > li.task-list-item.is-checked::before,
-.relationship-lines :not(.admonitions) ol > li.task-list-item.is-checked::before {
-	left: 21px;
-}
-
-.relationship-lines .admonitions ul > li.task-list-item.is-checked::before,
-.relationship-lines .admonitions ol > li.task-list-item.is-checked::before {
-	left: 16.5px;
-}
-
-.relationship-lines ul ul::before,
-.relationship-lines ol ol::before {
-	content: "";
-	position: absolute;
-}
-
-.relationship-lines .markdown-preview-view ol ol::before {
-	margin-left: -0.8em;
+	}
+	& ol,
+	& ul {
+		position: relative;
+	}
+	& .markdown-preview-view ul ul,
+	& .markdown-preview-view ol ol {
+		position: relative;
+	}
+	& ul > li::before,
+	& ol > li::before {
+		position: absolute;
+		content: "";
+		border-left: 1px solid var(--text-faint);
+		opacity: .7;
+		height: calc(100% - 2em);
+		margin-left: -1.65em;
+		top: 1.5em;
+	}
+	& :not(.admonitions) ul > li.task-list-item.is-checked::before,
+	& :not(.admonitions) ol > li.task-list-item.is-checked::before {
+		left: 21px;
+	}
+	& .admonitions ul > li.task-list-item.is-checked::before,
+	& .admonitions ol > li.task-list-item.is-checked::before {
+		left: 16.5px;
+	}
+	& ul ul::before,
+	& ol ol::before {
+		content: "";
+		position: absolute;
+	}
+	& .markdown-preview-view ol ol::before {
+		margin-left: -0.8em;
+	}
 }
 
 :root {
@@ -307,27 +303,29 @@ ul li {
 }
 
 /* Relationship Lines in Editing View */
-.relationship-lines .mod-cm6.is-live-preview .HyperMD-list-line.cm-line {
-	overflow: hidden;
-}
-.relationship-lines .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
-	position: relative;
-/*	font-family: var(--font-editor);
-	font-size: var(--editor-font-size);*/
-}
-.relationship-lines .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
-	content: '';
-/*	font-family: var(--font-editor);
-	font-size: var(--editor-font-size);*/
-	display: block;
-	position: absolute;
-	width: 100%;
-	top: -1.6em;
-	padding-bottom: 999em;
-	background-image: linear-gradient( to right, var(--text-faint) 1px, transparent 1px);
-	background-size: var(--rel-line-width) 1px;
-	left: 3px;
-	opacity: .7;
+.relationship-lines {
+	& .mod-cm6.is-live-preview .HyperMD-list-line.cm-line {
+		overflow: hidden;
+	}
+	& .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
+		position: relative;
+	/*	font-family: var(--font-editor);
+		font-size: var(--editor-font-size);*/
+	}
+	& .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
+		content: '';
+	/*	font-family: var(--font-editor);
+		font-size: var(--editor-font-size);*/
+		display: block;
+		position: absolute;
+		width: 100%;
+		top: -1.6em;
+		padding-bottom: 999em;
+		background-image: linear-gradient( to right, var(--text-faint) 1px, transparent 1px);
+		background-size: var(--rel-line-width) 1px;
+		left: 3px;
+		opacity: .7;
+	}
 }
 /* ──────────────────────────────── Outliner ──────────────────────────────── */
 
@@ -390,3 +388,35 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
 .HyperMD-list-line-8 .list-bullet::before {
 	font-family: var(--font-sans);
 }
+
+/*
+.relationship-lines {
+	& ul > li:before,
+	& ol > li::before {
+		border-left-color: var(--text-faint);
+	}
+	& ul > li > ul > li:before,
+	& ol > li > ol > li::before {
+		border-left-color: red;
+	}
+	& ul > li > ul > li > ul > li:before,
+	& ol > li > ol > li > ol > li::before {
+		border-left-color: yellow;
+	}
+	& ul > li > ul > li > ul > li > ul > li:before,
+	& ol > li > ol > li > ol > li > ol > li::before {
+		border-left-color: green;
+	}
+	& ul > li > ul > li > ul > li > ul > li > ul > li:before,
+	& ol > li > ol > li > ol > li > ol > li > ol > li::before {
+		border-left-color: blue;
+	}
+	& ul > li > ul > li > ul > li > ul > li > ul > li > ul > li:before,
+	& ol > li > ol > li > ol > li > ol > li > ol > li > ol > violeti::before {
+		border-left-color: violet;
+	}
+	& ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li:before,
+	& ol > li > ol > li > ol > li > ol > li > ol > li > ol > li > ol > li::before {
+		border-left-color: orange;
+	}
+}*/

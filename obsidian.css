@@ -2752,48 +2752,34 @@ ul li {
 }
 
 /* Relationship lines in Reading View */
-.relationship-lines ul > li,
-.relationship-lines ol > li {
+.relationship-lines ul > li, .relationship-lines ol > li {
   position: relative;
 }
-
-.relationship-lines ol,
-.relationship-lines ul {
+.relationship-lines ol, .relationship-lines ul {
   position: relative;
 }
-
-.relationship-lines .markdown-preview-view ul ul,
-.relationship-lines .markdown-preview-view ol ol {
+.relationship-lines .markdown-preview-view ul ul, .relationship-lines .markdown-preview-view ol ol {
   position: relative;
 }
-
-.relationship-lines ul > li::before,
-.relationship-lines ol > li::before {
+.relationship-lines ul > li::before, .relationship-lines ol > li::before {
   position: absolute;
   content: "";
   border-left: 1px solid var(--text-faint);
   opacity: 0.7;
   height: calc(100% - 2em);
-  margin-left: -2.1em;
+  margin-left: -1.65em;
   top: 1.5em;
 }
-
-.relationship-lines :not(.admonitions) ul > li.task-list-item.is-checked::before,
-.relationship-lines :not(.admonitions) ol > li.task-list-item.is-checked::before {
+.relationship-lines :not(.admonitions) ul > li.task-list-item.is-checked::before, .relationship-lines :not(.admonitions) ol > li.task-list-item.is-checked::before {
   left: 21px;
 }
-
-.relationship-lines .admonitions ul > li.task-list-item.is-checked::before,
-.relationship-lines .admonitions ol > li.task-list-item.is-checked::before {
+.relationship-lines .admonitions ul > li.task-list-item.is-checked::before, .relationship-lines .admonitions ol > li.task-list-item.is-checked::before {
   left: 16.5px;
 }
-
-.relationship-lines ul ul::before,
-.relationship-lines ol ol::before {
+.relationship-lines ul ul::before, .relationship-lines ol ol::before {
   content: "";
   position: absolute;
 }
-
 .relationship-lines .markdown-preview-view ol ol::before {
   margin-left: -0.8em;
 }
@@ -2806,13 +2792,11 @@ ul li {
 .relationship-lines .mod-cm6.is-live-preview .HyperMD-list-line.cm-line {
   overflow: hidden;
 }
-
 .relationship-lines .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
   position: relative;
   /*	font-family: var(--font-editor);
   	font-size: var(--editor-font-size);*/
 }
-
 .relationship-lines .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
   content: "";
   /*	font-family: var(--font-editor);
@@ -2924,6 +2908,37 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
   font-family: var(--font-sans);
 }
 
+/*
+.relationship-lines {
+	& ul > li:before,
+	& ol > li::before {
+		border-left-color: var(--text-faint);
+	}
+	& ul > li > ul > li:before,
+	& ol > li > ol > li::before {
+		border-left-color: red;
+	}
+	& ul > li > ul > li > ul > li:before,
+	& ol > li > ol > li > ol > li::before {
+		border-left-color: yellow;
+	}
+	& ul > li > ul > li > ul > li > ul > li:before,
+	& ol > li > ol > li > ol > li > ol > li::before {
+		border-left-color: green;
+	}
+	& ul > li > ul > li > ul > li > ul > li > ul > li:before,
+	& ol > li > ol > li > ol > li > ol > li > ol > li::before {
+		border-left-color: blue;
+	}
+	& ul > li > ul > li > ul > li > ul > li > ul > li > ul > li:before,
+	& ol > li > ol > li > ol > li > ol > li > ol > li > ol > violeti::before {
+		border-left-color: violet;
+	}
+	& ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li:before,
+	& ol > li > ol > li > ol > li > ol > li > ol > li > ol > li > ol > li::before {
+		border-left-color: orange;
+	}
+}*/
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task=" "]) {
   text-decoration: unset;
   color: var(--text-normal);
