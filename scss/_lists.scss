@@ -38,10 +38,11 @@ li::marker {
 	& ol li:nth-child(n+10) ol .list-collapse-indicator {
 		margin-left: -3rem;
 	}
-	.relationship-lines & ul .list-collapse-indicator,
-	.relationship-lines & ol .list-collapse-indicator { // generic ul and task list
+	.relationship-lines & ol .list-collapse-indicator { // generic ol
 		margin-left: -2.5em;
-		color: var(--text-faint);
+	}
+	.relationship-lines & ul .list-collapse-indicator {
+		margin-left: -2.45em;
 	}
 }
 
@@ -79,7 +80,7 @@ ol ol ul,
 ol ul ol ul,
 ol ul ul ul,
 ul ol ul ul ul {
-	list-style-type: '–  ';
+	list-style-type: '–\2009\2009'; // "\2009" stands for thin space
 	margin: var.$size-0;
 	padding: var.$size-0;
 	padding-left: 1.5rem;
@@ -239,24 +240,24 @@ ul li {
 		border-left: 1px solid var(--text-faint);
 		opacity: .7;
 		height: calc(100% - 2em);
-		margin-left: -1.65em;
+		margin-left: -.65em;
 		top: 1.5em;
 	}
+	& ol > li::before { // Ordered Lists
+		margin-left: -.8em;
+	}
 	& :not(.admonitions) ul > li.task-list-item.is-checked::before,
-	& :not(.admonitions) ol > li.task-list-item.is-checked::before {
-		left: .9em;
+	& :not(.admonitions) ol > li.task-list-item.is-checked::before { //task lists, no admonitions
+		left: -.1em;
 	}
 	& .admonitions ul > li.task-list-item.is-checked::before,
-	& .admonitions ol > li.task-list-item.is-checked::before {
-		left: 9px;
+	& .admonitions ol > li.task-list-item.is-checked::before { //task lists, admonitions
+		left: -.4em;
 	}
 	& ul ul::before,
 	& ol ol::before {
 		content: "";
 		position: absolute;
-	}
-	& .markdown-preview-view ol ol::before {
-		margin-left: -0.8em;
 	}
 }
 
