@@ -1,15 +1,17 @@
 @use 'var';
 
 .popover.hover-popover {
+	position: absolute;
 	border-radius: 4px;
 	animation: var.$duration-fast-2 var.$motion-standard-productive;
 	transition: var.$motion-standard-productive;
-	width: 40vw; // width of link popover
+	width: 40vw; // width of popover
 	background-color: var(--background-primary);
-	max-height: 100%;
+	max-height: 40vh; // height of popover
 	box-shadow: var.$elevation-1;
 	border: 1px solid var(--color-border-1);
-	overflow: auto;
+	overflow: hidden;
+	padding: 8px;
 
 	& .markdown-preview-view {
 		padding-bottom: var.$size-5;
@@ -19,8 +21,6 @@
 	}
 	& .markdown-embed {
 		height: auto;
-		max-height: 40vh; // height of link popover
-		overflow: auto;
 	}
 	&.is-loaded .markdown-embed-link { //fixes link icon position
 		top: 16px;
