@@ -31,20 +31,20 @@
 	&-line {
 		.theme-light &,
 		.theme-dark & {
-		    color: var(--color-primary-3);
-		    opacity: .5;
+			color: var(--color-primary-3);
+			opacity: .5;
 		}
 		// focused node connections
 		&-highlight {
-		    color: var(--color-primary-5);
+			color: var(--color-primary-5);
 		}
 	}
 	&-arrow {
-	    color: var(--color-primary-5);
-	    opacity: 1;
+		color: var(--color-primary-5);
+		opacity: 1;
 	}
 	&-text {
-	    color: var(--text-faint);
+		color: var(--text-faint);
 	}
 }
 
