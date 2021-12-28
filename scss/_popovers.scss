@@ -19,9 +19,6 @@
 		padding: var.$size-6;
 		font-size: calc(var.$font-scale-0 - 0.1rem);
 	}
-	& .markdown-embed {
-		height: auto;
-	}
 	&.is-loaded .markdown-embed-link { //fixes link icon position
 		top: 16px;
 	}
