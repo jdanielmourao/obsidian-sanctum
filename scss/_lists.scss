@@ -39,10 +39,16 @@ li::marker {
 		margin-left: -3rem;
 	}
 	.relationship-lines & {
-		& ol .list-collapse-indicator { // generic ol
+		& ol .list-collapse-indicator,
+		& ul ol .list-collapse-indicator,
+		& ol ul ol .list-collapse-indicator,
+		& ul ol ol .list-collapse-indicator { // generic ol
 		margin-left: -2.5em;
 		}
-		& ul .list-collapse-indicator { // generic ul
+		& ul .list-collapse-indicator,
+		& ol ul .list-collapse-indicator,
+		& ul ol ul .list-collapse-indicator,
+		& ol ul ul .list-collapse-indicator { // generic ul
 		margin-left: -2.45em;
 		}
 		& ul li.task-list-item > .list-collapse-indicator { //tasks
