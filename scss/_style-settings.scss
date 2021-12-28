@@ -199,6 +199,11 @@ settings:
 		description: Smaller Headings for more compact notes. This will override Expressive Mode responsive headings!
 		type: class-toggle
 	-
+		id: head-indicator
+		title: Disable Heading Indicators
+		description: Disable the typora-like heading indicators in Live Preview.
+		type: class-toggle
+	-
 		id: heading weights
 		title: Heading Weights
 		description: Only available for Productive Mode
