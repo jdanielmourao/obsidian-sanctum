@@ -7,8 +7,7 @@
 	color: var(--text-muted);
 	background-color: transparent;
 	border: var.$size-0;
-	border-bottom: 1px solid var(--color-border-2);
-	border-style: solid;
+	border-bottom: 1px solid var(--color-border-1);
 	border-radius: 0px;
 	padding: var.$size-3
 			 var.$size-5
@@ -61,7 +60,7 @@ body .markdown-preview-view pre.frontmatter.language-yaml { // big metadata and 
 	font-weight: var(--font-regular);
 	text-shadow: none;
 	border-radius: 0;
-	border-bottom: 1.5px solid var(--color-border-2);
+	border-bottom: 1px solid var(--color-border-2);
 	padding: 4px 0 0 0;
 	margin-bottom: 0;
 	margin-bottom: 16px;
