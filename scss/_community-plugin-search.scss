@@ -74,16 +74,6 @@ div.community-plugin-item .community-plugin-version {
 		top: var.$size-2;
 		background-color: var.$color-green-5;
 	}
-	&::before { // checkmark next to plugin named
-		content: "☐0";
-		color: transparent;
-		background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' fill='hsl(60.7, 41%, 39.2%)' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='13 24 4 15 5.414 13.586 13 21.171 26.586 7.586 28 9 13 24'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E%0A");
-		background-repeat: no-repeat;
-		background-size: var.$scale-2 var.$scale-2;
-		background-position: center center;
-		top: var.$size-2;
-		margin-right: var.$size-2;
-	}
 }
 
 .community-plugin-info .community-plugin-readme {
