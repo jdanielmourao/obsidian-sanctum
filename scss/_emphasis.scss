@@ -23,6 +23,11 @@ em {  /* Italic */
 	background-color: var(--color-primary-2);
 }
 
+/* Focus Mode
+.cm-line:not(.cm-active.cm-line) {
+	opacity: .5;
+}*/
+
 // highlight active line number + gutter
 .CodeMirror-activeline-gutter {
 	background-color: var(--color-primary-2);
