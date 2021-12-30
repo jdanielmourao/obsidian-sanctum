@@ -1,4 +1,4 @@
-@charset "UTF-8";
+«@charset "UTF-8";
 /* ─────────────────────────────────────────────────────────────────────────
 SANCTUM
 Version 0.5
@@ -1581,7 +1581,7 @@ body:not(.no-sanctum-icons) div.view-header-icon svg:active {
   color: #f15148;
 }
 
-body:not(body.plugin-sliding-panes-rotate-header) .workspace-leaf:not(.mod-active) .workspace-leaf-content[data-type=markdown] {
+body:not(body.plugin-sliding-panes) .workspace-leaf:not(.mod-active) .workspace-leaf-content[data-type=markdown] {
   opacity: 0.7;
   transition: cubic-bezier(0.4, 0.14, 0.3, 1) 150ms;
 }
