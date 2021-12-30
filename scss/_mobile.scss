@@ -133,8 +133,8 @@ div.workspace-drawer.is-pinned.mod-left .workspace-drawer-active-tab-header {
 	border-right: 1px solid var(--color-border-1);
 }
 
-.is-mobile .workspace-drawer-header-icon svg.pin { // hide Pin icon
-	display: none;
+.is-mobile .workspace-drawer.mod-right .workspace-drawer-header-icon svg.pin { // hide Pin icon
+	display: inline;
 }
 
 .is-mobile .workspace-drawer-header-icon svg.filled-pin { // show UnPin icon

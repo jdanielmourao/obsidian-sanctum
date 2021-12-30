@@ -26,11 +26,14 @@ settings:
 		description: Background color palette for dark mode
 		type: class-select
 		allowEmpty: false
-		default: sanctum-dark-default
+		default: sanctum-dark
 		options:
 			-
 				label: Default
-				value: sanctum-dark-default
+				value: sanctum-dark
+			-
+				label: True Black
+				value: sanctum-true-black
 	-
 		id: accent-active-line
 		title: Use Accent color as Active Line Highlight

@@ -359,22 +359,22 @@ $duration-slow-2:     700ms;
 }
 
 /* ─────────────────────────── Dark Theme Colours ─────────────────────────── */
-.theme-dark.sanctum-dark-template {
-	--rgb-primary-0:	;
-	--color-primary-0:	;
-	--color-primary-1:	;
-	--color-primary-2:	;
-	--color-primary-3:	;
-	--color-primary-4:	;
-	--color-primary-5:	;
-	--color-primary-6:	;
-	--color-primary-7:	;
-	--color-primary-8:	;
-	--color-primary-9:	;
-	--color-primary-10:	;
+.theme-dark.sanctum-true-black {
+	--rgb-primary-0: 0,0,0 ;
+	--color-primary-0:	#080808;
+	--color-primary-1:	#000000;
+	--color-primary-2:	#080808;
+	--color-primary-3:	#151515;
+	--color-primary-4:	#312F30;
+	--color-primary-5:	#4f4c4d;
+	--color-primary-6:	#6b6868;
+	--color-primary-7:	#8b8888;
+	--color-primary-8:	#aaa8a6;
+	--color-primary-9:	#c9c6c4;
+	--color-primary-10: #e2dfdc;
 }
 
-.theme-dark {
+.theme-dark.sanctum-dark {
 	--rgb-primary-0: 0,0,0 ;
 	--color-primary-0:	#080808;
 	--color-primary-1:	#151515;
@@ -389,7 +389,8 @@ $duration-slow-2:     700ms;
 	--color-primary-10: #fefefe;
 	
 }
-.theme-dark {
+.theme-dark.sanctum-true-black,
+.theme-dark.sanctum-dark {
 	
 	--font-thin: 100;
 	--font-extra-light: 100;

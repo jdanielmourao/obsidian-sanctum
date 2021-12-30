@@ -50,8 +50,8 @@
 
 .graph-controls {
 	border-color: var(--color-border-1);
-	background-color: rgba(var(--rgb-primary-0), .15);
-	backdrop-filter: blur(4px);
+	background-color: rgba(var(--rgb-primary-0), .5);
+	backdrop-filter: blur(0px);
 	transition: var.$duration-fast-1 var.$motion-standard-expressive;
 
 	& div.setting-item .setting-item-name {
@@ -85,4 +85,10 @@
 	& .tree-item-icon.collapse-icon {
 		padding-right: 8px;
 	}
+}
+
+.graph-color-button-container button.mod-cta {
+	width: 100%;
+	margin: 0;
+	padding: 8px;
 }
