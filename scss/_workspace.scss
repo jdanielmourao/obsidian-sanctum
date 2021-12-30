@@ -332,6 +332,10 @@ div.tree-item-inner {
 	border-radius: 6px;
 	background-color: transparent;
 	color: var(--text-normal);
+
+	.theme-dark.sanctum-true-black & {
+		color: var(--text-muted);
+	}
 }
 
 .tag-container {
