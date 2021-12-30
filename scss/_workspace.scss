@@ -639,6 +639,27 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 	color: var(--text-normal);
 }
 
+.theme-dark.sanctum-true-black:not(.no-sanctum-icons) {
+	& .nav-folder-title-content,
+	& .nav-file-title-content {
+		color: var(--text-muted);
+		&:hover {
+			color: var(--text-normal);
+		}
+	}
+	& .nav-file-title.is-active:hover .nav-file-title-content,
+	& .nav-file-title.is-active:hover .nav-file-title-content::before {
+	color: var(--text-muted);
+	}
+	& .nav-folder-children .nav-file-title-content::before {
+	color: var(--text-muted);
+	}
+	& .nav-folder-children .nav-file-title:hover .nav-file-title-content::before {
+		color: var(--text-normal);
+	}
+}
+
+
 // Folder Push Left
 .nav-folder-title {
 	padding-left: var.$size-0;
