@@ -335,30 +335,24 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
 }
 
 // Live Preview bullet points
-.list-bullet { color: transparent; }
-.list-bullet::before { color:var(--text-normal); margin-right: -12px; }
-.HyperMD-list-line-1 .list-bullet::before { content: "–  "; }
-.HyperMD-list-line-2 .list-bullet::before { content: "▪  "; }
-.HyperMD-list-line-3 .list-bullet::before { content: "–  "; }
-.HyperMD-list-line-4 .list-bullet::before { content: "▪  "; }
-.HyperMD-list-line-5 .list-bullet::before { content: "–  "; }
-.HyperMD-list-line-6 .list-bullet::before { content: "▪  "; }
-.HyperMD-list-line-7 .list-bullet::before { content: "–  "; }
-.HyperMD-list-line-8 .list-bullet::before { content: "▪  "; }
-.HyperMD-list-line-8 .list-bullet::before { content: "–  "; }
-.HyperMD-list-line-8 .list-bullet::before { content: "▪  "; }
-
-.list-bullet,
-.list-bullet::before,
-.HyperMD-list-line-1 .list-bullet::before,
-.HyperMD-list-line-2 .list-bullet::before,
-.HyperMD-list-line-3 .list-bullet::before,
-.HyperMD-list-line-4 .list-bullet::before,
-.HyperMD-list-line-5 .list-bullet::before,
-.HyperMD-list-line-6 .list-bullet::before,
-.HyperMD-list-line-7 .list-bullet::before,
-.HyperMD-list-line-8 .list-bullet::before,
-.HyperMD-list-line-8 .list-bullet::before,
-.HyperMD-list-line-8 .list-bullet::before {
+.markdown-source-view.mod-cm6 .list-bullet::after {
 	font-family: var(--font-sans);
 }
+.list-bullet::after {
+	color:var(--text-normal); margin-right: -12px;
+	transform: translateY(-2px); }
+
+.markdown-source-view.mod-cm6 .cm-list-1 .list-bullet::after { content: "–\2009\2009"; }
+.markdown-source-view.mod-cm6 .cm-list-2 .list-bullet::after { content: "▪  "; }
+.markdown-source-view.mod-cm6 .cm-list-3 .list-bullet::after { content: "–\2009\2009"; }
+.markdown-source-view.mod-cm6 .cm-list-4 .list-bullet::after { content: "▪  "; }
+.markdown-source-view.mod-cm6 .cm-list-5 .list-bullet::after { content: "–\2009\2009"; }
+.markdown-source-view.mod-cm6 .cm-list-6 .list-bullet::after { content: "▪  "; }
+.markdown-source-view.mod-cm6 .cm-list-7 .list-bullet::after { content: "–\2009\2009"; }
+.markdown-source-view.mod-cm6 .cm-list-8 .list-bullet::after { content: "▪  "; }
+.markdown-source-view.mod-cm6 .cm-list-9 .list-bullet::after { content: "–\2009\2009"; }
+.markdown-source-view.mod-cm6 .cm-list-10 .list-bullet::after { content: "▪  "; }
+
+span.cm-comment .list-bullet::after { // makes bullets same colors as comments when inside them
+	color: var(--text-faint);}
+
