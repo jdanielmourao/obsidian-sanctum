@@ -356,3 +356,30 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
 span.cm-comment .list-bullet::after { // makes bullets same colors as comments when inside them
 	color: var(--text-faint);}
 
+.list-bullet { color: transparent; }
+.list-bullet::before { color:var(--text-normal); margin-right: -12px; }
+.HyperMD-list-line-1 .list-bullet::before { content: "–  "; }
+.HyperMD-list-line-2 .list-bullet::before { content: "▪  "; }
+.HyperMD-list-line-3 .list-bullet::before { content: "–  "; }
+.HyperMD-list-line-4 .list-bullet::before { content: "▪  "; }
+.HyperMD-list-line-5 .list-bullet::before { content: "–  "; }
+.HyperMD-list-line-6 .list-bullet::before { content: "▪  "; }
+.HyperMD-list-line-7 .list-bullet::before { content: "–  "; }
+.HyperMD-list-line-8 .list-bullet::before { content: "▪  "; }
+.HyperMD-list-line-8 .list-bullet::before { content: "–  "; }
+.HyperMD-list-line-8 .list-bullet::before { content: "▪  "; }
+
+.list-bullet,
+.list-bullet::before,
+.HyperMD-list-line-1 .list-bullet::before,
+.HyperMD-list-line-2 .list-bullet::before,
+.HyperMD-list-line-3 .list-bullet::before,
+.HyperMD-list-line-4 .list-bullet::before,
+.HyperMD-list-line-5 .list-bullet::before,
+.HyperMD-list-line-6 .list-bullet::before,
+.HyperMD-list-line-7 .list-bullet::before,
+.HyperMD-list-line-8 .list-bullet::before,
+.HyperMD-list-line-8 .list-bullet::before,
+.HyperMD-list-line-8 .list-bullet::before {
+	font-family: var(--font-sans);
+}
