@@ -151,7 +151,7 @@ body:not(.is-mobile) {
 // Preview size
 .markdown-preview-view.is-readable-line-width div.markdown-preview-sizer {
 	width: var(--line-width);
-	max-width: 80%;
+	max-width: 100%;
 	margin-right: auto;
 	margin-left: auto;
 	margin-bottom: 0;
