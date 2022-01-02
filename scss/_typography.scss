@@ -87,6 +87,67 @@ body {
 	font-family: var(--font-heading-editor) !important; //!important is for edge cases like underline, which inherit body text font family
 }
 
+.theme-light {
+	--color-heading-1: var(--color-heading-1-l);
+	--color-heading-2: var(--color-heading-2-l);
+	--color-heading-3: var(--color-heading-3-l);
+	--color-heading-4: var(--color-heading-4-l);
+	--color-heading-5: var(--color-heading-5-l);
+	--color-heading-6: var(--color-heading-6-l);
+
+	--color-heading-1-bg: var(--color-heading-1-bg-l);
+	--color-heading-2-bg: var(--color-heading-2-bg-l);
+	--color-heading-3-bg: var(--color-heading-3-bg-l);
+	--color-heading-4-bg: var(--color-heading-4-bg-l);
+	--color-heading-5-bg: var(--color-heading-5-bg-l);
+	--color-heading-6-bg: var(--color-heading-6-bg-l);
+
+	--color-heading-1-l: rgb(8, 8, 8); 
+	--color-heading-2-l: rgb(8, 8, 8);
+	--color-heading-3-l: rgb(8, 8, 8);
+	--color-heading-4-l: rgb(8, 8, 8);
+	--color-heading-5-l: rgb(8, 8, 8);
+	--color-heading-6-l: rgb(8, 8, 8);
+
+	--color-heading-1-bg-l: rgb(245, 243, 240);
+	--color-heading-2-bg-l: rgb(245, 243, 240);
+	--color-heading-3-bg-l: rgb(245, 243, 240);
+	--color-heading-4-bg-l: rgb(245, 243, 240);
+	--color-heading-5-bg-l: rgb(245, 243, 240);
+	--color-heading-6-bg-l: rgb(245, 243, 240);
+}
+
+.theme-dark {
+	--color-heading-1: var(--color-heading-1-d);
+	--color-heading-2: var(--color-heading-2-d);
+	--color-heading-3: var(--color-heading-3-d);
+	--color-heading-4: var(--color-heading-4-d);
+	--color-heading-5: var(--color-heading-5-d);
+	--color-heading-6: var(--color-heading-6-d);
+
+	--color-heading-1-bg: var(--color-heading-1-bg-d);
+	--color-heading-2-bg: var(--color-heading-2-bg-d);
+	--color-heading-3-bg: var(--color-heading-3-bg-d);
+	--color-heading-4-bg: var(--color-heading-4-bg-d);
+	--color-heading-5-bg: var(--color-heading-5-bg-d);
+	--color-heading-6-bg: var(--color-heading-6-bg-d);
+
+	--color-heading-1-d: rgb(254, 254, 254);
+	--color-heading-2-d: rgb(254, 254, 254);
+	--color-heading-3-d: rgb(254, 254, 254);
+	--color-heading-4-d: rgb(254, 254, 254);
+	--color-heading-5-d: rgb(254, 254, 254);
+	--color-heading-6-d: rgb(254, 254, 254);
+
+	--color-heading-1-bg-d: rgb(21, 21, 21);
+	--color-heading-2-bg-d: rgb(21, 21, 21);
+	--color-heading-3-bg-d: rgb(21, 21, 21);
+	--color-heading-4-bg-d: rgb(21, 21, 21);
+	--color-heading-5-bg-d: rgb(21, 21, 21);
+	--color-heading-6-bg-d: rgb(21, 21, 21);
+}
+
+
 
 .markdown-preview-view {
 	.heading-clr & {
@@ -159,33 +220,39 @@ body {
 		}
 	}
 	.heading-clr-bg & {
-		.cm-header-1 {
+		& .cm-header-1,
+		& .HyperMD-header-1.cm-line {
 			background-color: var(--color-heading-1-bg);
 			padding: 4px;
 		}
-		.cm-header-2 {
+		& .cm-header-2,
+		& .HyperMD-header-2.cm-line {
 			background-color: var(--color-heading-2-bg);
 			padding: 4px;
 		}
-		.cm-header-3 {
+		& .cm-header-3,
+		& .HyperMD-header-3.cm-line {
 			background-color: var(--color-heading-3-bg);
 			padding: 4px;
 		}
-		.cm-header-4 {
+		& .cm-header-4,
+		& .HyperMD-header-4.cm-line {
 			background-color: var(--color-heading-4-bg);
 			padding: 4px;
 		}
-		.cm-header-5 {
+		& .cm-header-5,
+		& .HyperMD-header-5.cm-line {
 			background-color: var(--color-heading-5-bg);
 			padding: 4px;
 		}
-		.cm-header-6 {
+		& .cm-header-6,
+		& .HyperMD-header-6.cm-line {
 			background-color: var(--color-heading-6-bg);
 			padding: 4px;
 		}
 	}
 }
-
+/*
 @media (max-width:320px){
 	.markdown-preview-view h1,
 	.cm-s-obsidian .cm-header-1,
@@ -445,71 +512,87 @@ body {
 	margin-bottom: .5625em;
 	}
 }
+*/
 
-@media (min-width:1313px) {
-	.markdown-preview-view h1,
-	.cm-s-obsidian .cm-header-1,
-	.cm-s-obsidian .HyperMD-header-1 {
-	font-size: var.$font-scale-8;
+:root {
+	--heading-1: 2rem;
+	--heading-2: 1.75rem;
+	--heading-3: 1.5rem;
+	--heading-4: 1.25rem;
+	--heading-5: 1.125rem;
+	--heading-6: 1rem;
+
+	--heading-1-weight: 600; //semi-bold by default
+	--heading-2-weight: 600;
+	--heading-3-weight: 600;
+	--heading-4-weight: 600;
+	--heading-5-weight: 600;
+	--heading-6-weight: 600;
+}
+
+.markdown-preview-view h1,
+.cm-s-obsidian .cm-header-1,
+.cm-s-obsidian .HyperMD-header-1 {
+	font-size: var(--heading-1);
 	line-height: var.$leading-1;
-	font-weight: var(--font-semi-bold);
+	font-weight: var(--heading-1-weight);
 	letter-spacing: var.$tracking-0;
-	margin-top: .65em;
-	margin-bottom: .65em;
-	}	
-	.markdown-preview-view h2,
-	.cm-s-obsidian .cm-header-2,
-	.cm-s-obsidian .HyperMD-header-2 {
-	font-size: var.$font-scale-8;
+	margin-top: .5em;
+	margin-bottom: .5em;
+}	
+.markdown-preview-view h2,
+.cm-s-obsidian .cm-header-2,
+.cm-s-obsidian .HyperMD-header-2 {
+	font-size: var(--heading-2);
 	line-height: var.$leading-1;
-	font-weight: var(--font-light);
+	font-weight: var(--heading-2-weight);
 	letter-spacing: var.$tracking-0;
-	margin-top: .65em;
-	margin-bottom: .65em;
-	}	
-	.markdown-preview-view h3,
-	.cm-s-obsidian .cm-header-3,
-	.cm-s-obsidian .HyperMD-header-3 {
-	font-size: var.$font-scale-5;
+	margin-top: .75em;
+	margin-bottom: .75em;
+}	
+.markdown-preview-view h3,
+.cm-s-obsidian .cm-header-3,
+.cm-s-obsidian .HyperMD-header-3 {
+	font-size: var(--heading-3);
 	line-height: var.$leading-1;
-	font-weight: var(--font-regular);
+	font-weight: var(--heading-3-weight);
 	letter-spacing: var.$tracking-0;
-	margin-top: .6875em;
-	margin-bottom: .6875em;
-	}	
-	.markdown-preview-view h4,
-	.cm-s-obsidian .cm-header-4,
-	.cm-s-obsidian .HyperMD-header-4 {
-	font-size: var.$font-scale-3;
+	margin-top: .875em;
+	margin-bottom: .875em;
+}	
+.markdown-preview-view h4,
+.cm-s-obsidian .cm-header-4,
+.cm-s-obsidian .HyperMD-header-4 {
+	font-size: var(--heading-4);
 	line-height: var.$leading-1;
-	font-weight: var(--font-regular);
+	font-weight: var(--heading-4-weight);
 	letter-spacing: var.$tracking-0;
-	margin-top: .6875em;
-	margin-bottom: .6875em;
-	}	
-	.markdown-preview-view h5,
-	.cm-s-obsidian .cm-header-5,
-	.cm-s-obsidian .HyperMD-header-5 {
-	color:var(--text-normal);
-	font-size: var.$font-scale-0;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}	
+.markdown-preview-view h5,
+.cm-s-obsidian .cm-header-5,
+.cm-s-obsidian .HyperMD-header-5 {
+	font-size: var(--heading-5);
 	line-height: var.$leading-1;
-	font-weight: var(--font-semi-bold);
+	font-weight: var(--heading-5-weight);
 	letter-spacing: var.$tracking-0;
 	margin-top: 1.125em;
 	margin-bottom: 1.125em;
-	}	
-	.markdown-preview-view h6,
-	.cm-s-obsidian .cm-header-6,
-	.cm-s-obsidian .HyperMD-header-6 {
 	color:var(--text-normal);
-	font-size: var.$font-scale-00;
+}	
+.markdown-preview-view h6,
+.cm-s-obsidian .cm-header-6,
+.cm-s-obsidian .HyperMD-header-6 {
+	font-size: var(--heading-6);
 	line-height: var.$leading-1;
-	font-weight: var(--font-semi-bold);
+	font-weight: var(--heading-6-weight);
 	letter-spacing: var.$tracking-1;
 	margin-top: 1.125em;
 	margin-bottom: 1.125em;
-	}
+	color:var(--text-normal);
 }
+
 
 // Legacy Editor (fixes the cursor problem)
 .markdown-source-view.mod-cm5 .cm-s-obsidian .HyperMD-header {
@@ -518,87 +601,6 @@ body {
 }
 
 /* ─────────────────────────── Productive Headings ────────────────────────── */
-:root {
-	--productive-heading-1: 2rem;
-	--productive-heading-2: 1.75rem;
-	--productive-heading-3: 1.5rem;
-	--productive-heading-4: 1.25rem;
-	--productive-heading-5: 1.125rem;
-	--productive-heading-6: 1rem;
-
-	--productive-heading-1-weight: 600; //semi-bold by default
-	--productive-heading-2-weight: 600;
-	--productive-heading-3-weight: 600;
-	--productive-heading-4-weight: 600;
-	--productive-heading-5-weight: 600;
-	--productive-heading-6-weight: 600;
-}
-
-
-.productive-mode .markdown-preview-view h1,
-.productive-mode .cm-s-obsidian .cm-header-1,
-.productive-mode .cm-s-obsidian .HyperMD-header-1 {
-	font-size: var(--productive-heading-1);
-	line-height: var.$leading-1;
-	font-weight: var(--productive-heading-1-weight);
-	letter-spacing: var.$tracking-0;
-	margin-top: .5rem;
-	margin-bottom: .5rem;
-}	
-.productive-mode .markdown-preview-view h2,
-.productive-mode .cm-s-obsidian .cm-header-2,
-.productive-mode .cm-s-obsidian .HyperMD-header-2 {
-	font-size: var(--productive-heading-2);
-	line-height: var.$leading-1;
-	font-weight: var(--productive-heading-2-weight);
-	letter-spacing: var.$tracking-0;
-	margin-top: .5rem;
-	margin-bottom: .5rem;
-}	
-.productive-mode .markdown-preview-view h3,
-.productive-mode .cm-s-obsidian .cm-header-3,
-.productive-mode .cm-s-obsidian .HyperMD-header-3 {
-	font-size: var(--productive-heading-3);
-	line-height: var.$leading-1;
-	font-weight: var(--productive-heading-3-weight);
-	letter-spacing: var.$tracking-0;
-	margin-top: .5rem;
-	margin-bottom: .5rem;
-}	
-.productive-mode .markdown-preview-view h4,
-.productive-mode .cm-s-obsidian .cm-header-4,
-.productive-mode .cm-s-obsidian .HyperMD-header-4 {
-	font-size: var(--productive-heading-4);
-	line-height: var.$leading-1;
-	font-weight: var(--productive-heading-4-weight);
-	letter-spacing: var.$tracking-0;
-	margin-top: .5rem;
-	margin-bottom: .5rem;
-}	
-.productive-mode .markdown-preview-view h5,
-.productive-mode .cm-s-obsidian .cm-header-5,
-.productive-mode .cm-s-obsidian .HyperMD-header-5 {
-	color:var(--text-normal);
-	font-size: var(--productive-heading-5);
-	line-height: var.$leading-1;
-	font-weight: var(--productive-heading-5-weight);
-	letter-spacing: var.$tracking-0;
-	margin-top: .5rem;
-	margin-bottom: .5rem;
-}	
-.productive-mode .markdown-preview-view h6,
-.productive-mode .cm-s-obsidian .cm-header-6,
-.productive-mode .cm-s-obsidian .HyperMD-header-6 {
-	color:var(--text-normal);
-	font-size: var(--productive-heading-6);
-	line-height: var.$leading-1;
-	font-weight: var(--productive-heading-6-weight);
-	letter-spacing: var.$tracking-1;
-	margin-top: .5rem;
-	margin-bottom: .5rem;
-}
-
-
 
 .community-plugin-info .community-plugin-readme { // Plugin README headings, tables, lists and paragraphs
 	& table,
@@ -628,44 +630,15 @@ body {
 }
 
 /* ────────────────────────── Contextual Typography ───────────────────────── */
+
 .markdown-preview-view {
-	& div[data-tag-name="h1"] + div > h1,
-	& div[data-tag-name="h1"] + div > h2,
-	& div[data-tag-name="h2"] + div > h2,
-	& div[data-tag-name="h2"] + div > h3,
-	& div[data-tag-name="h3"] + div > h3,
-	& div[data-tag-name="h3"] + div > h4,
-	& div[data-tag-name="h4"] + div > h4,
-	& div[data-tag-name="h4"] + div > h5,
-	& div[data-tag-name="h5"] + div > h5,
-	& div[data-tag-name="h5"] + div > h6,
-	& div[data-tag-name="h6"] + div > h6 {
-		margin-top: -.5em;
-	}
-	& div[data-tag-name="h1"] + div > hr,
-	& div[data-tag-name="h2"] + div > hr,
-	& div[data-tag-name="h3"] + div > hr,
-	& div[data-tag-name="h4"] + div > hr,
-	& div[data-tag-name="h5"] + div > hr,
-	& div[data-tag-name="h6"] + div > hr {
-		margin-top: -.875em;
-	}
-	.productive-mode & div[data-tag-name="h1"] + div > hr,
-	.productive-mode & div[data-tag-name="h2"] + div > hr,
-	.productive-mode & div[data-tag-name="h3"] + div > hr,
-	.productive-mode & div[data-tag-name="h4"] + div > hr,
-	.productive-mode & div[data-tag-name="h5"] + div > hr,
-	.productive-mode & div[data-tag-name="h6"] + div > hr {
-		margin-top: -.5em;
-	}
-	.is-mobile & div[data-tag-name="h1"] + div > hr,
-	.is-mobile & div[data-tag-name="h2"] + div > hr,
-	.is-mobile & div[data-tag-name="h3"] + div > hr,
-	.is-mobile & div[data-tag-name="h4"] + div > hr,
-	.is-mobile & div[data-tag-name="h5"] + div > hr,
-	.is-mobile & div[data-tag-name="h6"] + div > hr {
-		margin-top: -.5em;
-	}
+	
+	& div[data-tag-name="h1"] + div > hr { margin-top: -1.125em; }
+	& div[data-tag-name="h2"] + div > hr { margin-top: -1.375em; }
+	& div[data-tag-name="h3"] + div > hr { margin-top: -1.375em; }
+	& div[data-tag-name="h4"] + div > hr { margin-top: -1.275em; }
+	& div[data-tag-name="h5"] + div > hr { margin-top: -1.275em; }
+	& div[data-tag-name="h6"] + div > hr { margin-top: -1.13em; }
 }
 
 /* ──────────────────────── Typora-like heading tags ──────────────────────── */
@@ -679,8 +652,8 @@ body {
 	--h6: 0.7rem;
 }
 
-body:not(.head-indicator) .mod-cm6.is-live-preview div:not(.CodeMirror-activeline) {
-	& > .HyperMD-header-1:before {
+body:not(.head-indicator) .mod-cm6.is-live-preview .cm-active.cm-line {
+	& > .cm-formatting-header-1:before {
 		content: "H1";
 		display: inline-block;
 		color: var(--color-accent);
@@ -688,35 +661,35 @@ body:not(.head-indicator) .mod-cm6.is-live-preview div:not(.CodeMirror-activelin
 		font-family: var(--font-editor);
 		margin-right: .5rem;
 	}
-	& > .HyperMD-header-2:before {
+	& > .cm-formatting-header-2:before {
 		content: "H2";
 		color: var(--color-accent);
 		font-size: var(--h2);
 		font-family: var(--font-editor);
 		margin-right: .5rem;
 	}
-	& > .HyperMD-header-3:before {
+	& > .cm-formatting-header-3:before {
 		content: "H3";
 		color: var(--color-accent);
 		font-size: var(--h3);
 		font-family: var(--font-editor);
 		margin-right: .5rem;
 	}
-	& > .HyperMD-header-4:before {
+	& > .cm-formatting-header-4:before {
 		content: "H4";
 		color: var(--color-accent);
 		font-size: var(--h4);
 		font-family: var(--font-editor);
 		margin-right: .5rem;
 	}
-	& > .HyperMD-header-5:before {
+	& > .cm-formatting-header-5:before {
 		content: "H5";
 		color: var(--color-accent);
 		font-size: var(--h5);
 		font-family: var(--font-editor);
 		margin-right: .5rem;
 	}
-	& > .HyperMD-header-6:before {
+	& > .cm-formatting-header-6:before {
 		content: "H6";
 		color: var(--color-accent);
 		font-size: var(--h6);
