@@ -15,11 +15,11 @@ settings:
 		description: Background color palette for light mode
 		type: class-select
 		allowEmpty: false
-		default: sanctum-light-default
+		default: sanctum-light
 		options:
 			-
 				label: Default
-				value: sanctum-light-default
+				value: sanctum-light
 	-
 		id: dark-mode-palette
 		title: Dark mode palette
@@ -617,7 +617,7 @@ settings:
 				value: 3.05ch
 			-
 				label: Proportional Font Fix
-				value: 1.6ch
+				value: 1.65ch
 	-
 		id: elements-title
 		title: Elements

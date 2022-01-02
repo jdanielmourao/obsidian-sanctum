@@ -142,8 +142,9 @@ code.language-yaml.is-loaded {
 	color: var(--text-faint);
 	opacity: 1;
 	font-family: var(--font-mono);
-	font-size: var.$font-scale-0;
+	font-size: var.$font-scale-00;
 	line-height: var.$leading-0;
+	font-style: normal;
 }
 
 .frontmatter-container { // disable Metadata container

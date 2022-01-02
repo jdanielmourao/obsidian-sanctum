@@ -281,22 +281,8 @@ $duration-slow-2:     700ms;
 
 
 /* ─────────────────────────── Light Theme Colours ────────────────────────── */
-.theme-light.sanctum-light-template {
-	--rgb-primary-0:	;
-	--color-primary-0:	;
-	--color-primary-1:	;
-	--color-primary-2:	;
-	--color-primary-3:	;
-	--color-primary-4:	;
-	--color-primary-5:	;
-	--color-primary-6:	;
-	--color-primary-7:	;
-	--color-primary-8:	;
-	--color-primary-9:	;
-	--color-primary-10:	;
-}
 
-.theme-light {
+.theme-light.sanctum-light {
 	--rgb-primary-0: 254, 254, 254;
 	--color-primary-0:	#fefefe;
 	--color-primary-1:	#f5f3f0;
@@ -311,6 +297,26 @@ $duration-slow-2:     700ms;
 	--color-primary-10: #080808;
 }
 .theme-light {
+	--rgb-primary-10: 8, 8, 8;
+	--rgb-primary-0: 254, 254, 254;
+	--color-primary-0:	#fefefe;
+	--color-primary-1:	#f5f3f0;
+	--color-primary-2:	#e2dfdc;
+	--color-primary-3:	#c9c6c4;
+	--color-primary-4:	#aaa8a6;
+	--color-primary-5:	#8b8888;
+	--color-primary-6:	#6b6868;
+	--color-primary-7:	#4f4c4d;
+	--color-primary-8:	#312F30;
+	--color-primary-9:	#151515;
+	--color-primary-10: #080808;
+}
+
+.theme-light,
+.theme-light.sanctum-hearth,
+.theme-light.sanctum-moss,
+.theme-light.sanctum-lavender,
+.theme-light.sanctum-light {
 	--color-hover:		var(--color-primary-2);
 	--color-border-1:	var(--color-primary-2);
 	--color-border-2:	var(--color-primary-3);
@@ -375,7 +381,7 @@ $duration-slow-2:     700ms;
 }
 
 .theme-dark.sanctum-dark {
-	--rgb-primary-0: 0,0,0 ;
+	--rgb-primary-0: 8, 8, 8;
 	--color-primary-0:	#080808;
 	--color-primary-1:	#151515;
 	--color-primary-2:	#312F30;
@@ -389,6 +395,25 @@ $duration-slow-2:     700ms;
 	--color-primary-10: #fefefe;
 	
 }
+
+.theme-dark {
+	--rgb-primary-0: 8, 8, 8;
+	--rgb-primary-10: 254, 254, 254;
+	--color-primary-0:	#080808;
+	--color-primary-1:	#151515;
+	--color-primary-2:	#312F30;
+	--color-primary-3:	#4f4c4d;
+	--color-primary-4:	#6b6868;
+	--color-primary-5:	#8b8888;
+	--color-primary-6:	#aaa8a6;
+	--color-primary-7:	#c9c6c4;
+	--color-primary-8:	#e2dfdc;
+	--color-primary-9:	#f5f3f0;
+	--color-primary-10: #fefefe;
+	
+}
+
+.theme-dark,
 .theme-dark.sanctum-true-black,
 .theme-dark.sanctum-dark {
 	

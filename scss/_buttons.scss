@@ -10,8 +10,11 @@
 	font-size: var.$font-scale-00;
 	font-weight: var(--font-regular);
 	font-family: var(--font-ui);
+	//border: 1px solid rgba(var(--rgb-primary-10), .2);
+	//box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.2) inset,
+	//0px 2px 4px 0px rgb(0 0 0 / 20%);
+	//text-shadow: 0 .5px 0px rgba(var(--rgb-primary-10), .3);
 }
-
 @mixin button-m {
 	border-radius: 0px;
 	padding: var.$size-2
@@ -21,6 +24,9 @@
 	font-size: var.$font-scale-00;
 	font-weight: var(--font-regular);
 	font-family: var(--font-ui);
+	//border: 1px solid rgba(var(--rgb-primary-10), .2);
+	//box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.2) inset,
+	//0px 2px 4px 0px rgb(0 0 0 / 20%);
 }
 
 @mixin button-s { // for sort icons, etc
@@ -32,6 +38,9 @@
 	font-size: var.$font-scale-00;
 	font-weight: var(--font-regular);
 	font-family: var(--font-ui);
+	//border: 1px solid rgba(var(--rgb-primary-10), .2);
+	//box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.2) inset,
+	//0px 2px 4px 0px rgb(0 0 0 / 20%);
 }
 
 button.mod-warning {
