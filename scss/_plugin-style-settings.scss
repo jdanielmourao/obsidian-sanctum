@@ -1,0 +1,11 @@
+@use 'var';
+
+
+.style-settings-heading[data-level="0"] + .style-settings-container,
+.style-settings-heading[data-level="1"] + .style-settings-container,
+.style-settings-heading[data-level="2"] + .style-settings-container,
+.style-settings-heading[data-level="3"] + .style-settings-container,
+.style-settings-heading[data-level="4"] + .style-settings-container,
+.style-settings-heading[data-level="5"] + .style-settings-container {
+	padding-left: 16px;
+}
