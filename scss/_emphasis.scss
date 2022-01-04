@@ -1,5 +1,13 @@
 @use 'var';
 
+/* ──────────────────────────────── Flashing ──────────────────────────────── */
+.is-flashing {
+	transition: background-color 1s ease;
+	background-color: var(--text-highlight-bg);
+	color: var(--text-normal);
+	border-radius: 4px;
+}
+
 /* ────────────────────────────────── Bold ────────────────────────────────── */
 .cm-s-obsidian .cm-strong,
 .markdown-preview-section strong,
