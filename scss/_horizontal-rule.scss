@@ -7,15 +7,15 @@
 
 // Horizontal line in live preview (in active line)
 .markdown-source-view {
-	&.is-live-preview span.cm-hr::after {
-		content: "";
-		position: absolute;
-		background:var(--text-faint);
-		height: 1.5px;
-		width: calc(100% - 2.1rem); // makes room for "---" for ease of typing
-		left: 1.6rem;
-		top: 47%;
-	}
+	//&.is-live-preview span.cm-hr::after {
+	//	content: "";
+	//	position: absolute;
+	//	background:var(--text-faint);
+	//	height: 1.5px;
+	//	width: calc(100% - 2.1rem); // makes room for "---" for ease of typing
+	//	left: 1.6rem;
+	//	top: 47%;
+	//}
 	&.is-live-preview div.cm-line { // removes that extra line in live preview
 		border: none;
 	}
