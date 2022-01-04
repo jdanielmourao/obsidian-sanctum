@@ -624,6 +624,7 @@ body:not(.no-sanctum-icons)
 
 .nav-file-title.is-active .nav-file-title-content {
 	color: var(--background-primary);
+	line-height: 23px; //fixes vertical centering
 	//border:none;
 
 	&:focus {
