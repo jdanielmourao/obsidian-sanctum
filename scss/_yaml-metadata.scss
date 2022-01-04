@@ -122,7 +122,7 @@ code.language-yaml.is-loaded {
 	}
 	& .token.boolean,
 	& .token.number {
-		color: var.$color-blue;
+		color: var(--color-blue);
 	}
 	& .token.punctuation {
 		display: visible; // can use this to remove colons

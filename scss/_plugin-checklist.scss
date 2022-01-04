@@ -60,7 +60,7 @@ body .checklist-plugin-main {
 		outline: 0;
 		box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.1),
 		0 0 0 3px hsla(60.7, 41%, 39.2%, .35);
-		border-color: var.$color-green-5;
+		border-color: var(--color-green-5);
 	}
 	& li.classic .toggle,
 	& li.compact .toggle {

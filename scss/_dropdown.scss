@@ -29,7 +29,7 @@ select.dropdown {
 	}
 	&:focus {
 		border-color: transparent;
-		outline: 1px solid var.$color-blue-5;
+		outline: 1px solid var(--color-blue-5);
 		background-color: var(--color-primary-2);
 	}
 }

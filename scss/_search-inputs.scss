@@ -24,7 +24,7 @@ input[type='number'] {
 
 	&:focus {
 		border-bottom: 0px solid transparent;
-		outline: 1px solid var.$color-blue-5;
+		outline: 1px solid var(--color-blue-5);
 		border: none;
 	}
 }
@@ -126,11 +126,11 @@ body:not(.is-mobile) .document-search, body:not(.is-mobile) .document-replace {
 
 .search-result-file-matched-text { // matched highlighted text
 	color: var(--text-normal);
-	background-color: var.$color-green-3;
+	background-color: var(--color-green-2);
 
 	.theme-dark & {
 		color: var(--text-normal);
-		background-color: var.$color-green-5;
+		background-color: var(--color-green-5);
 	}
 }
 

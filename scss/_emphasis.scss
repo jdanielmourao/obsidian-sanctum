@@ -139,6 +139,6 @@ del {
 /* ────────────────────────── Spell Check highlight ───────────────────────── */
 .CodeMirror .cm-spell-error {
 	background-image: none;
-	text-decoration: underline solid var.$color-red-5;
+	text-decoration: underline solid var(--color-red-5);
 	text-decoration-thickness: 2px;
 }

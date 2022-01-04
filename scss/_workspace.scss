@@ -57,7 +57,7 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 	
 			&:hover {
 				background-color: var(--color-primary-0);
-				color: var.$color-red;
+				color: var(--color-red);
 			}
 		}
 	}
@@ -1145,7 +1145,7 @@ ol.kanban .task-list-item .list-collapse-indicator {
 }
 
 .sync-status-icon.mod-success svg {
-	color: var.$color-green;
+	color: var(--color-green);
 	height: var.$scale-2;
 	width: var.$scale-2;
 	vertical-align: -1px;

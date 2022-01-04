@@ -229,9 +229,9 @@
 	border: 1px solid var(--color-primary-2);
 
 	&:hover {
-		background-color: var.$color-red-7;
+		background-color: var(--color-red-7);
 		.theme-light & {
-			background-color: var.$color-red;
+			background-color: var(--color-red);
 		}
 	}
 }
@@ -261,10 +261,10 @@
 				padding: 2px 8px;
 			}
 			& .setting-hotkey.mod-active {
-				background-color: var.$color-green;
+				background-color: var(--color-green);
 			}
 			& .setting-hotkey.has-conflict {
-				background-color: var.$color-red;
+				background-color: var(--color-red);
 			}
 		}
 	}

@@ -70,7 +70,7 @@ pre[class*=language-] {
 
 // preview
 .markdown-preview-view code {
-	color: var.$color-pink-5;
+	color: var(--color-pink-5);
 	padding: 0 4px;
 	font-family: var(--font-mono);
 }
@@ -83,7 +83,7 @@ pre[class*=language-] {
 .cm-s-obsidian .cm-math,
 .cm-s-obsidian .HyperMD-codeblock,
 .cm-s-obsidian span.cm-inline-code {
-	color: var.$color-pink-5;
+	color: var(--color-pink-5);
 }
 
 .cm-s-obsidian span.cm-inline-code {
@@ -193,7 +193,7 @@ code[class*=language-pure-text],
 	.token.deleted,
 	.cm-number,
 	.cm-tag {
-		color: var.$color-pink-5;
+		color: var(--color-pink-5);
 	}
 	.token.selector,
 	.token.attr-name,
@@ -202,7 +202,7 @@ code[class*=language-pure-text],
 	.token.builtin,
 	.token.inserted,
 	.cm-attribute {
-		color: var.$color-green-5;
+		color: var(--color-green-5);
 	}
 	.token.operator,
 	.token.entity,
@@ -213,26 +213,26 @@ code[class*=language-pure-text],
 	.cm-string,
 	.cm-string-2,
 	.cm-link {
-		color: var.$color-orange-5;
+		color: var(--color-orange-5);
 	}
 	.token.atrule,
 	.token.attr-value,
 	.token.keyword,
 	.cm-keyword,
 	.cm-builtin {
-		color: var.$color-teal-5;
+		color: var(--color-teal-5);
 	}
 	.token.function,
 	.token.class-name,
 	.cm-type,
 	.cm-def {
-		color: var.$color-lavender-5;
+		color: var(--color-lavender-5);
 	}
 	.token.regex,
 	.token.important,
 	.token.variable,
 	.cm-variable-2,
 	.cm-variable-3 {
-		color: var.$color-orange-5;
+		color: var(--color-orange-5);
 	}
 }

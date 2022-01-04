@@ -31,7 +31,7 @@ input[type="checkbox"]:hover {
 	outline: 0;
 	box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.1),
 	0 0 0 2px hsla(60.7, 41%, 39.2%, .35);
-	border-color: var.$color-green-5;
+	border-color: var(--color-green-5);
 }
 
 .markdown-preview-view input[type=checkbox] { //vertically align checkboxes in reading view
@@ -46,7 +46,7 @@ input[type="checkbox"]:hover {
 
 input[type=checkbox]:checked {
 	display: inline-block;
-	background: var.$color-green-5;
+	background: var(--color-green-5);
 	filter: saturate(1);
 	border-color: transparent;
 	width: 1rem;
@@ -390,12 +390,12 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 /* ───────────────────────────── Edit Mode Tasks ──────────────────────────── */
 .edit-mode-tasks .cm-s-obsidian span.cm-formatting-task {
 	font-weight: bold;
-	color: var.$color-red;
+	color: var(--color-red);
 }
 
 .edit-mode-tasks .cm-s-obsidian span.cm-formatting-task.cm-property {
 	font-weight: bold;
-	color: var.$color-green;
+	color: var(--color-green);
 }
 
 /* ─────────────────────────────── Admonitions ────────────────────────────── */
@@ -406,9 +406,9 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 .admonitions ul li.task-list-item.is-checked[data-task="X"],
 .admonitions ul li.task-list-item.is-checked[data-task="c"],
 .admonitions ul li.task-list-item.is-checked[data-task="!"] {
-	background-color: var.$color-red-4;
+	background-color: var(--color-red-4);
 	border-radius: 4px 4px 4px 4px;
-	border-left: 1.5px solid var.$color-red;
+	border-left: 1.5px solid var(--color-red);
 	padding: 4px 4px 4px 4px;
 	color: var(--text-normal);
 	font-weight: var(--font-regular);
@@ -419,8 +419,8 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 		color: var(--background-primary);
 	}
 	.theme-dark & {
-		background-color: var.$color-red-5;
-		border-left-color: var.$color-red-6;
+		background-color: var(--color-red-5);
+		border-left-color: var(--color-red-6);
 	}
 	& a {
 		color: inherit;
@@ -465,7 +465,7 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 .admonitions ul li.task-list-item.is-checked[data-task="?"] {
 	background-color: hsla(41, 68.5%, 49.8%, .8);
 	border-radius: 4px 4px 4px 4px;
-	border-left: 1.5px solid var.$color-yellow-5;
+	border-left: 1.5px solid var(--color-yellow-5);
 	padding: 4px 4px 4px 4px;
 	text-decoration: none;
 	color: var(--color-primary-9);
@@ -475,11 +475,11 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	.theme-light & li::marker,
 	.theme-light & {
 		color: var.$color-white;
-		text-shadow: var.$color-yellow-5 0px 1px 1px;
+		text-shadow: var(--color-yellow-5) 0px 1px 1px;
 	}
 	.theme-dark & {
-		background-color: var.$color-yellow-4;
-		border-left-color: var.$color-yellow-5;
+		background-color: var(--color-yellow-4);
+		border-left-color: var(--color-yellow-5);
 	}
 	& li::marker{
 		color: var(--color-primary-10);
@@ -515,9 +515,9 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 
 /* ─────────────────────── Information (i) admonition ─────────────────────── */
 .admonitions ul li.task-list-item.is-checked[data-task="i"] {
-	background-color: var.$color-blue-4;
+	background-color: var(--color-blue-4);
 	border-radius: 4px 4px 4px 4px;
-	border-left: 1.5px solid var.$color-blue-5;
+	border-left: 1.5px solid var(--color-blue-5);
 	padding: 4px 4px 4px 4px;
 	text-decoration: none;
 	color: var(--color-primary-0);
@@ -525,12 +525,12 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	margin-left: 4px;
 
 	.theme-dark & {
-		border-left-color: var.$color-blue-6;
+		border-left-color: var(--color-blue-6);
 	}
 	.theme-dark & li::marker, 
 	.theme-dark & {
 		color: var(--text-normal);
-		background-color: var.$color-blue-5;
+		background-color: var(--color-blue-5);
 	}
 	.theme-light &,
 	& li::marker {
@@ -575,9 +575,9 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 .admonitions ul li.task-list-item.is-checked[data-task="1"],
 .admonitions ul li.task-list-item.is-checked[data-task="W"],
 .admonitions ul li.task-list-item.is-checked[data-task="p"] {
-	background-color: var.$color-green-5;
+	background-color: var(--color-green-5);
 	border-radius: 4px 4px 4px 4px;
-	border-left: 1.5px solid var.$color-green-6;
+	border-left: 1.5px solid var(--color-green-6);
 	padding: 4px 4px 4px 4px;
 	text-decoration: none;
 	color: var(--color-primary-0);
@@ -586,8 +586,8 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 
 	.theme-light & {
 		color: var(--color-primary-0);
-		background-color: var.$color-green-4;
-		border-left-color: var.$color-green-5;
+		background-color: var(--color-green-4);
+		border-left-color: var(--color-green-5);
 	}
 	&,
 	& mark,
@@ -651,8 +651,8 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 
 /* ────────────────────────────────── Debug ───────────────────────────────── */
 .admonitions ul li.task-list-item.is-checked[data-task="B"] {
-	background-color: var.$color-pink-5;
-	border-left: 1.5px solid var.$color-pink-6;
+	background-color: var(--color-pink-5);
+	border-left: 1.5px solid var(--color-pink-6);
 	border-radius: 4px 4px 4px 4px;
 	color: var(--text-normal);
 	padding: 4px 4px 4px 4px;
@@ -661,8 +661,8 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 
 	.theme-light & {
 		color: var(--background-primary);
-		background-color: var.$color-pink-4;
-		border-left-color: var.$color-pink-5;
+		background-color: var(--color-pink-4);
+		border-left-color: var(--color-pink-5);
 	}
 	& ul li::marker {
 		color: var(--color-primary-0);

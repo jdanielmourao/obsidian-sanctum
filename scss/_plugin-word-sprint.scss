@@ -18,12 +18,12 @@ body div#wordsprint div#sprintActionPanel button:not(.statsTab):not(.goalsTab) {
 	margin: var.$size-2 var.$size-5;
 }
 body .view-content div#wordsprint div#sprintActionPanel button.sprintStart {
-	background-color: var.$color-green;
+	background-color: var(--color-green);
 	color: var.$color-white;
 	border-radius: 8px;
 }
 body .view-content div#wordsprint div#sprintActionPanel button.sprintStop {
-	background-color: var.$color-red;
+	background-color: var(--color-red);
 	color: var.$color-white;
 	border-radius: 8px;
 }
@@ -71,16 +71,16 @@ div#wordsprint div#sprintViewStats {
 
 body div#wordsprint .success {
 	color: #{var(--color-primary-0)};
-	background-color: var.$color-green;
+	background-color: var(--color-green);
 }
 body div#wordsprint .warning {
 	color: #{var(--color-primary-10)};
-	background-color: var.$color-yellow;
+	background-color: var(--color-yellow);
 }
 
 body div#wordsprint .danger {
 	color: #{var(--color-primary-0)};
-	background-color: var.$color-red;
+	background-color: var(--color-red);
 }
 
 div#wordsprint button {

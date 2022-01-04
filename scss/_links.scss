@@ -36,7 +36,7 @@
 		filter: brightness(1.2);
 	}
 	&:active {
-		color: var.$color-orange-5;
+		color: var(--color-orange-5);
 		text-decoration-line: blink;
 	}
 }

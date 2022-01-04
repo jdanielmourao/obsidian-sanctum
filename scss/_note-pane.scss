@@ -83,7 +83,7 @@ div.view-header-icon { // dragable icon in note header
 		color: var(--text-normal);
 	}
 	&.mod-close-leaf:hover { //close note pane button
-		color: var.$color-red;
+		color: var(--color-red);
 	}
 }
 

@@ -21,13 +21,13 @@
 
 .publish-change-list .mod-deleted .tree-item-flair-outer {
 	font-weight: var(--font-regular);
-	background-color: var.$color-red-5;
+	background-color: var(--color-red-5);
 	border-radius: 4px;
 }
 
 .publish-change-list .mod-new .tree-item-flair-outer {
 	font-weight: var(--font-regular);
-	background-color: var.$color-green-5;
+	background-color: var(--color-green-5);
 	border-radius: 4px;
 }
 .file-tree.publish-section .mod-deleted .tree-item-flair,

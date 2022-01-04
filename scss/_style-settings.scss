@@ -252,8 +252,13 @@ settings:
 		default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 	-
 		id: head-indicator
-		title: Disable Heading Indicators
+		title: Heading Indicators
 		description: Disable the typora-like heading indicators in Live Preview.
+		type: class-toggle
+	-
+		id: head-indicator-active
+		title: Heading Indicators in active line only
+		description: Enables typora-like heading indicators in Live Preview, only in the active line.
 		type: class-toggle
 	-
 		id: heading weights
