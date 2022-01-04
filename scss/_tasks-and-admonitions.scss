@@ -36,6 +36,10 @@ input[type="checkbox"]:hover {
 
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
 	margin-left: -4px; // aligns custom checkboxes with relationship lines
+	&:focus,
+	&:hover {
+		box-shadow: none; //removes the box-shadow because it gets clipped otherwise
+	}
 }
 
 .markdown-preview-view input[type=checkbox] { //vertically align checkboxes in reading view
