@@ -65,6 +65,14 @@
 }
 
 /* ───────────────────────────── Dataview Tables ──────────────────────────── */
+/*table.table-view-table {
+	margin-top: var.$size-6;
+	margin-bottom: var.$size-6;
+	table-layout: auto;
+	width: 100%;
+}*/
+
+
 table.table-view-table > thead > tr > th {
 	font-size: var.$font-scale-0;
 	background-color: var(--color-primary-2);
