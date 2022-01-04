@@ -17,8 +17,8 @@ em {  /* Italic */
 
 /* ──────────────────────── Highlighting & Selection ──────────────────────── */
 // highlight active line
-.cm-active.cm-line,
-.CodeMirror-activeline .CodeMirror-linebackground {
+body:not(.active-line-hl) .cm-active.cm-line,
+body:not(.active-line-hl) .CodeMirror-activeline .CodeMirror-linebackground {
 	position: relative;
 	background-color: var(--color-primary-2);
 }
