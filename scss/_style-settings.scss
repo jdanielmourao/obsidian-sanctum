@@ -2541,11 +2541,22 @@ settings:
 				label: Greyscale
 				value: aside-in-grayscale
 	-
-		id: relationship-lines-title
-		title: Relationship Lines
+		id: lists
+		title: Lists
 		type: heading
 		level: 3
 		collapsed: true
+	-
+		id: marker-odd
+		title: Odd numbered list marker content
+		description: –\2009\2009 by default, \2009 is unicode for small space
+		type: variable-text
+		default: "'–  '"
+	-
+		id: marker-even
+		title: Even numbered list marker content
+		type: variable-text
+		default: "'▪  '"
 	-
 		id: relationship-lines
 		title: Enable Relationship Lines in Reading View [OFF by default]

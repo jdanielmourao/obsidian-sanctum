@@ -91,7 +91,7 @@ ol ol ul,
 ol ul ol ul,
 ol ul ul ul,
 ul ol ul ul ul {
-	list-style-type: '–\2009\2009'; // "\2009" stands for thin space
+	list-style-type: var(--marker-odd); // "\2009" stands for thin space
 	margin: var.$size-0;
 	padding: var.$size-0;
 	padding-left: 1.5rem;
@@ -106,7 +106,7 @@ ol ol ul ul,
 ul ol ul ul,
 ol ul ol ul ul,
 ul ol ol ul ul {
-	list-style-type: '▪  '; // don't set it as square, because it will misalign
+	list-style-type: var(--marker-even); // don't set it as square, because it will misalign
 	padding: var.$size-0;
 	padding-left: 1.5rem;
 }
@@ -351,16 +351,16 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
 	margin-right: 0px;
 	transform: translateY(-1px); }
 
-.markdown-source-view.mod-cm6 .cm-list-1 .list-bullet::after { content: "–\2009\2009"; }
-.markdown-source-view.mod-cm6 .cm-list-2 .list-bullet::after { content: "▪  "; }
-.markdown-source-view.mod-cm6 .cm-list-3 .list-bullet::after { content: "–\2009\2009"; }
-.markdown-source-view.mod-cm6 .cm-list-4 .list-bullet::after { content: "▪  "; }
-.markdown-source-view.mod-cm6 .cm-list-5 .list-bullet::after { content: "–\2009\2009"; }
-.markdown-source-view.mod-cm6 .cm-list-6 .list-bullet::after { content: "▪  "; }
-.markdown-source-view.mod-cm6 .cm-list-7 .list-bullet::after { content: "–\2009\2009"; }
-.markdown-source-view.mod-cm6 .cm-list-8 .list-bullet::after { content: "▪  "; }
-.markdown-source-view.mod-cm6 .cm-list-9 .list-bullet::after { content: "–\2009\2009"; }
-.markdown-source-view.mod-cm6 .cm-list-10 .list-bullet::after { content: "▪  "; }
+.markdown-source-view.mod-cm6 .cm-list-1 .list-bullet::after { content: var(--marker-odd); }
+.markdown-source-view.mod-cm6 .cm-list-2 .list-bullet::after { content: var(--marker-even); }
+.markdown-source-view.mod-cm6 .cm-list-3 .list-bullet::after { content: var(--marker-odd); }
+.markdown-source-view.mod-cm6 .cm-list-4 .list-bullet::after { content: var(--marker-even); }
+.markdown-source-view.mod-cm6 .cm-list-5 .list-bullet::after { content: var(--marker-odd); }
+.markdown-source-view.mod-cm6 .cm-list-6 .list-bullet::after { content: var(--marker-even); }
+.markdown-source-view.mod-cm6 .cm-list-7 .list-bullet::after { content: var(--marker-odd); }
+.markdown-source-view.mod-cm6 .cm-list-8 .list-bullet::after { content: var(--marker-even); }
+.markdown-source-view.mod-cm6 .cm-list-9 .list-bullet::after { content: var(--marker-odd); }
+.markdown-source-view.mod-cm6 .cm-list-10 .list-bullet::after { content: var(--marker-even); }
 
 span.cm-comment .list-bullet::after { // makes bullets same colors as comments when inside them
 	color: var(--text-faint);
