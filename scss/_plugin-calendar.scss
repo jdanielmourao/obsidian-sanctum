@@ -165,4 +165,11 @@
 	& .year {
 		color: var(--text-normal);
 	}
+	& .active {
+		background-color: var(--color-primary-2);
+		color: var(--text-normal);
+		&:hover {
+			background-color: var(--color-primary-3);
+		}
+	}
 }
