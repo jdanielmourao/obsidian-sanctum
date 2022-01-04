@@ -97,7 +97,7 @@ body:not(.active-line-hl) .CodeMirror-activeline .CodeMirror-linebackground {
 .markdown-preview-view em > mark,
  span.cm-em.cm-highlight {
 	font-style: normal;
-	font-weight: normal;
+	font-weight: var(--font-regular);
 	text-decoration: underline solid var(--color-highlight-2) 2.5px;
 	background: linear-gradient(120deg,var(--color-highlight-2),var(--color-highlight-2));
 	background-position: 0 100%;
@@ -115,7 +115,7 @@ body:not(.active-line-hl) .CodeMirror-activeline .CodeMirror-linebackground {
 /* ─────────────────────────── Magenta Highlight 3 ────────────────────────── */
 .markdown-preview-view strong > mark,
  span.cm-strong.cm-highlight {
-	font-weight: normal;
+	font-weight: var(--font-regular);
 	text-decoration: underline solid var(--color-highlight-3) 2.5px;
 	background: linear-gradient(120deg,var(--color-highlight-3),var(--color-highlight-3));
 	background-position: 0 100%;
