@@ -413,11 +413,12 @@ body {
 	--h6: 0.7rem;
 }
 
-body:not(.head-indicator) .mod-cm6.is-live-preview .cm-formatting-header {
+.markdown-source-view.mod-cm6.is-live-preview .cm-formatting-header {
 	color: var(--text-faint);
 }
 
-body:not(.head-indicator) .mod-cm6.is-live-preview {
+
+.head-indicator-active .mod-cm6.is-live-preview {
 	.HyperMD-header-1.cm-active.cm-line > span:nth-child(2)::before {
 		content: "H1";
 		display: inline-block;
@@ -461,6 +462,53 @@ body:not(.head-indicator) .mod-cm6.is-live-preview {
 		font-family: var(--font-editor);
 		padding-right: 4px;
 	}
+}
+
+
+
+
+body.head-indicator .mod-cm6.is-live-preview {
+	& .HyperMD-header::before {
+		position: relative;
+		display: inline-block;
+		font-family: var(--font-mono);
+		color: var(--color-accent);
+		right: 4px;
+	}
+	& .HyperMD-header-1::before {
+		content: "H1";
+		font-size: var(--h1);
+		bottom: calc(var(--heading-1) / 4);
+	}
+	& .HyperMD-header-2::before {
+		content: "H2";
+		font-size: var(--h2);
+		bottom: calc(var(--heading-2) / 4);
+	}
+	& .HyperMD-header-3::before {
+		content: "H3";
+		font-size: var(--h3);
+		bottom: calc(var(--heading-3) / 4);
+	}
+	& .HyperMD-header-4::before {
+		content: "H4";
+		font-size: var(--h4);
+		bottom: calc(var(--heading-4) / 4);
+	}
+	& .HyperMD-header-5::before {
+		content: "H5";
+		font-size: var(--h5);
+		bottom: calc(var(--heading-5) / 4);
+	}
+	& .HyperMD-header-6::before {
+		content: "H6";
+		font-size: var(--h6);
+		bottom: calc(var(--heading-6) / 4);
+	}
+}
+
+body.head-indicator .markdown-source-view.mod-cm6.is-live-preview .HyperMD-header .cm-fold-indicator .collapse-indicator {
+	transform: translateY(25%);
 }
 
 //Fix collapse indicators size in LP Headings
