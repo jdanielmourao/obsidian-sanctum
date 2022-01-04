@@ -36,7 +36,8 @@
 		}
 		// focused node connections
 		&-highlight {
-			color: var(--color-primary-5);
+			color: var(--color-primary-3);
+			opacity: 1;
 		}
 	}
 	&-arrow {
