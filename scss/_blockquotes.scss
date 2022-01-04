@@ -16,6 +16,7 @@ blockquote p {
 	margin-block-start: var.$size-0;
 	margin-block-end: var.$size-0;
 	margin-bottom: 16px;
+	margin-right: 0;
 	padding: var.$size-2 var.$size-4 var.$size-2 var.$size-4;
 	text-align: left;
 	font-family: var(--font-preview);
@@ -25,7 +26,7 @@ blockquote p {
 	line-height: var.$leading-3;
 	letter-spacing: var.$tracking-0;
 	position: relative;
-
+/*
 	&:after {
 		content: '\201C';
 		font-family: sans-serif;
@@ -34,9 +35,13 @@ blockquote p {
 		left: -28px;
 		font-size: 3.75rem;
 		color: var(--color-accent);
-	}
-	&.paraphrase:after { // when paraphrasing, wrap your quote in <blockquote class="paraphrase">
+	}*/
+	&.paraphrase {
+		border-left: 0px solid transparent;
+
+		&:after { // when paraphrasing, wrap your quote in <blockquote class="paraphrase">
 		display: none;
+		}
 	}
 }
 
@@ -52,7 +57,7 @@ cite { // for citations
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
 	border: 0 solid var(--color-accent);
 	border-left-width: 1px;
-
+/*
 	&:before {
 		content: '\201C';
 		font-family: sans-serif;
@@ -61,12 +66,11 @@ cite { // for citations
 		left: -16px;
 		font-size: 3.75rem;
 		color: var(--color-accent);
-	}
+	}*/
 }
 
 //blockquote and paraphrase Live Preview
-.markdown-source-view.mod-cm6.is-live-preview .cm-html-embed.cm-embed-block blockquote,
-.markdown-source-view.mod-cm6.is-live-preview .cm-html-embed.cm-embed-block blockquote.paraphrase {
+.markdown-source-view.mod-cm6.is-live-preview .cm-html-embed.cm-embed-block blockquote {
 	border-radius: 0;
 	border: none;
 	border-left: 1px solid var(--color-accent);
@@ -75,6 +79,10 @@ cite { // for citations
 	margin-left: 20px;
 	padding-left: 16px;
 	color: var(--text-muted);
+
+	&.paraphrase {
+		border-left: 0px solid transparent;
+	}
 }
 
 .markdown-source-view.mod-cm6.is-live-preview .cm-html-embed.cm-embed-block blockquote:not(.paraphrase) {
