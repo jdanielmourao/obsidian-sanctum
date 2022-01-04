@@ -277,7 +277,7 @@ ul li {
 }
 
 /* Relationship Lines in Editing View */
-body:not(.relationship-lines) {
+body:not(.relationship-lines-lp) {
 	& .mod-cm6.is-live-preview .HyperMD-list-line.cm-line {
 		overflow: hidden;
 	}
@@ -366,13 +366,6 @@ span.cm-comment .list-bullet::after { // makes bullets same colors as comments w
 	color: var(--text-faint);
 }
 
-//Fix collapse indicators size in LP Headings
-.markdown-source-view.mod-cm6 .HyperMD-header-1 > .cm-fold-indicator {font-size: var(--heading-1);}
-.markdown-source-view.mod-cm6 .HyperMD-header-2 > .cm-fold-indicator {font-size: var(--heading-2);}
-.markdown-source-view.mod-cm6 .HyperMD-header-3 > .cm-fold-indicator {font-size: var(--heading-3);}
-.markdown-source-view.mod-cm6 .HyperMD-header-4 > .cm-fold-indicator {font-size: var(--heading-4);}
-.markdown-source-view.mod-cm6 .HyperMD-header-5 > .cm-fold-indicator {font-size: var(--heading-5);}
-.markdown-source-view.mod-cm6 .HyperMD-header-6 > .cm-fold-indicator {font-size: var(--heading-6);}
 
 
 //.markdown-source-view.mod-cm6 .HyperMD-list-line-1.cm-active > .cm-fold-indicator .collapse-icon,
