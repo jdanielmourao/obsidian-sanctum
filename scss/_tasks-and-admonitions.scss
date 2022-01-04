@@ -34,6 +34,10 @@ input[type="checkbox"]:hover {
 	border-color: rgb(var(--color-checkbox));
 }
 
+.mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox {
+	margin-left: -4px; // aligns custom checkboxes with relationship lines
+}
+
 .markdown-preview-view input[type=checkbox] { //vertically align checkboxes in reading view
 	transform: translateY(-4px)
 }
@@ -58,11 +62,15 @@ input[type=checkbox]:checked:before {
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(36, 20%, 95.1%)' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-size: 70%;
-	transform: translateX(1px) translateY(1px);
+	background-size: 75%;
+	transform: translateX(0px) translateY(1px);
 	width: 100%;
 	height: 100%;
 	display: block;
+}
+
+.markdown-source-view input[type=checkbox]:checked:before {
+	transform: translateX(0px) translateY(0.5px); //matches reading view alignment
 }
 
 input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
@@ -76,7 +84,6 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	text-decoration:none;
 	color: var(--text-faint);
 }
-
 
 /* ──────────────────────────── Custom Checkboxes ─────────────────────────── */
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="1"],
