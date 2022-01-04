@@ -35,6 +35,40 @@ settings:
 				label: True Black
 				value: sanctum-true-black
 	-
+		id: color-checkbox
+		title: Checkbox Color
+		description: The color of the regular "- [x]" checkbox
+		type: variable-select
+		default: 140 141 59
+		options:
+			-
+				label: Green
+				value: 140 141 59
+			-
+				label: Viridian
+				value: 70 153 106
+			-
+				label: Teal
+				value: 64 150 147
+			-
+				label: Blue
+				value: 102 142 165
+			-
+				label: Lavender
+				value: 132 132 188
+			-
+				label: Pink
+				value: 235 84 108
+			-
+				label: Red
+				value: 241 81 72
+			-
+				label: Orange
+				value: 214 108 30
+			-
+				label: Yellow
+				value: 214 159 40
+	-
 		id: accent-active-line
 		title: Use Accent color as Active Line Highlight
 		description: Replaces the grey with the accent color for active line highlighting.
