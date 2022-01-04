@@ -235,6 +235,11 @@ settings:
 		type: variable-text
 		default: "'IBM Plex Mono', 'iA Writer Mono V', 'iA IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
 	-
+		id: font-frontmatter
+		title: Frontmatter/YAML Font
+		type: variable-text
+		default: "'IBM Plex Mono', 'iA Writer Mono V', 'iA IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
+	-
 		id: headings-title
 		title: Headings
 		type: heading
