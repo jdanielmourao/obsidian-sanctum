@@ -277,14 +277,15 @@ ul li {
 }
 
 /* Relationship Lines in Editing View */
-.relationship-lines {
+body:not(.relationship-lines) {
 	& .mod-cm6.is-live-preview .HyperMD-list-line.cm-line {
 		overflow: hidden;
 	}
 	& .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
 		position: relative;
-		font-family: 'iA Writer Quattro S';
-		font-size: var(--editor-font-size);
+		font-family: 'IBM Plex Sans';
+		font-size: calc(var(--editor-font-size) + 9px);
+		padding-right: 0px;
 	}
 	& .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent::before {
 		content: '';
@@ -296,9 +297,12 @@ ul li {
 		top: -1.6em;
 		padding-bottom: 999em;
 		background-image: linear-gradient( to right, var(--text-faint) 1px, transparent 1px);
-		background-size: var(--rel-line-width) 1px;
+		background-size: 1.6ch 1px;
 		left: 3px;
 		opacity: .7;
+	}
+	& .mod-cm6.is-live-preview .HyperMD-list-line.cm-line > span:last-child { //adds a bit of spacing between markers and text
+		padding-left: 4px;
 	}
 }
 /* ──────────────────────────────── Outliner ──────────────────────────────── */
@@ -336,7 +340,7 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
 
 // Live Preview bullet points
 .list-bullet {
-	left: 0;
+	left: 0px;
 }
 
 .markdown-source-view.mod-cm6 .list-bullet::after {
@@ -345,7 +349,7 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
 .list-bullet::after {
 	color:var(--text-normal);
 	margin-right: 0px;
-	transform: translateY(-2px); }
+	transform: translateY(-1px); }
 
 .markdown-source-view.mod-cm6 .cm-list-1 .list-bullet::after { content: "–\2009\2009"; }
 .markdown-source-view.mod-cm6 .cm-list-2 .list-bullet::after { content: "▪  "; }
@@ -370,76 +374,62 @@ span.cm-comment .list-bullet::after { // makes bullets same colors as comments w
 .markdown-source-view.mod-cm6 .HyperMD-header-5 > .cm-fold-indicator {font-size: var(--heading-5);}
 .markdown-source-view.mod-cm6 .HyperMD-header-6 > .cm-fold-indicator {font-size: var(--heading-6);}
 
-//Add background in collapse icons in LP so indentation lines don't go on top
-.markdown-source-view.mod-cm6 .HyperMD-list-line-1 > .cm-fold-indicator .collapse-icon,
-.markdown-source-view.mod-cm6 .HyperMD-list-line-2 > .cm-fold-indicator .collapse-icon,
-.markdown-source-view.mod-cm6 .HyperMD-list-line-3 > .cm-fold-indicator .collapse-icon,
-.markdown-source-view.mod-cm6 .HyperMD-list-line-4 > .cm-fold-indicator .collapse-icon,
-.markdown-source-view.mod-cm6 .HyperMD-list-line-5 > .cm-fold-indicator .collapse-icon,
-.markdown-source-view.mod-cm6 .HyperMD-list-line-6 > .cm-fold-indicator .collapse-icon,
-.markdown-source-view.mod-cm6 .HyperMD-list-line-7 > .cm-fold-indicator .collapse-icon,
-.markdown-source-view.mod-cm6 .HyperMD-list-line-8 > .cm-fold-indicator .collapse-icon,
-.markdown-source-view.mod-cm6 .HyperMD-list-line-9 > .cm-fold-indicator .collapse-icon,
-.markdown-source-view.mod-cm6 .HyperMD-list-line-10 > .cm-fold-indicator .collapse-icon {
-	background-color: var(--background-primary);
-	font-family: 'IBM Plex Sans';
-}
 
-.active-line-hl {
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-1.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-2.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-3.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-4.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-5.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-6.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-7.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-8.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-9.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-10.cm-active > .cm-fold-indicator .collapse-icon {
-		background-color: var(--color-primary-2);
-	}
-}
+//.markdown-source-view.mod-cm6 .HyperMD-list-line-1.cm-active > .cm-fold-indicator .collapse-icon,
+//.markdown-source-view.mod-cm6 .HyperMD-list-line-2.cm-active > .cm-fold-indicator .collapse-icon,
+//.markdown-source-view.mod-cm6 .HyperMD-list-line-3.cm-active > .cm-fold-indicator .collapse-icon,
+//.markdown-source-view.mod-cm6 .HyperMD-list-line-4.cm-active > .cm-fold-indicator .collapse-icon,
+//.markdown-source-view.mod-cm6 .HyperMD-list-line-5.cm-active > .cm-fold-indicator .collapse-icon,
+//.markdown-source-view.mod-cm6 .HyperMD-list-line-6.cm-active > .cm-fold-indicator .collapse-icon,
+//.markdown-source-view.mod-cm6 .HyperMD-list-line-7.cm-active > .cm-fold-indicator .collapse-icon,
+//.markdown-source-view.mod-cm6 .HyperMD-list-line-8.cm-active > .cm-fold-indicator .collapse-icon,
+//.markdown-source-view.mod-cm6 .HyperMD-list-line-9.cm-active > .cm-fold-indicator .collapse-icon,
+//.markdown-source-view.mod-cm6 .HyperMD-list-line-10.cm-active > .cm-fold-indicator .collapse-icon {
+//}
 
-.accent-active-line {
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-1.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-2.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-3.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-4.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-5.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-6.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-7.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-8.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-9.cm-active > .cm-fold-indicator .collapse-icon,
-	&.markdown-source-view.mod-cm6 .HyperMD-list-line-10.cm-active > .cm-fold-indicator .collapse-icon {
-		background-color: trasparent;
-	}
-}
 
-/*
-.list-bullet { color: transparent; }
-.list-bullet::before { color:var(--text-normal); margin-right: -12px; }
-.HyperMD-list-line-1 .list-bullet::before { content: "–  "; }
-.HyperMD-list-line-2 .list-bullet::before { content: "▪  "; }
-.HyperMD-list-line-3 .list-bullet::before { content: "–  "; }
-.HyperMD-list-line-4 .list-bullet::before { content: "▪  "; }
-.HyperMD-list-line-5 .list-bullet::before { content: "–  "; }
-.HyperMD-list-line-6 .list-bullet::before { content: "▪  "; }
-.HyperMD-list-line-7 .list-bullet::before { content: "–  "; }
-.HyperMD-list-line-8 .list-bullet::before { content: "▪  "; }
-.HyperMD-list-line-8 .list-bullet::before { content: "–  "; }
-.HyperMD-list-line-8 .list-bullet::before { content: "▪  "; }
 
-.list-bullet,
-.list-bullet::before,
-.HyperMD-list-line-1 .list-bullet::before,
-.HyperMD-list-line-2 .list-bullet::before,
-.HyperMD-list-line-3 .list-bullet::before,
-.HyperMD-list-line-4 .list-bullet::before,
-.HyperMD-list-line-5 .list-bullet::before,
-.HyperMD-list-line-6 .list-bullet::before,
-.HyperMD-list-line-7 .list-bullet::before,
-.HyperMD-list-line-8 .list-bullet::before,
-.HyperMD-list-line-8 .list-bullet::before,
-.HyperMD-list-line-8 .list-bullet::before {
-	font-family: var(--font-sans);
-}*/
+//.list-bullet { color: transparent; }
+//.list-bullet::before { color:var(--text-normal); margin-right: -12px; }
+//.HyperMD-list-line-1 .list-bullet::before { content: "–  "; }
+//.HyperMD-list-line-2 .list-bullet::before { content: "▪  "; }
+//.HyperMD-list-line-3 .list-bullet::before { content: "–  "; }
+//.HyperMD-list-line-4 .list-bullet::before { content: "▪  "; }
+//.HyperMD-list-line-5 .list-bullet::before { content: "–  "; }
+//.HyperMD-list-line-6 .list-bullet::before { content: "▪  "; }
+//.HyperMD-list-line-7 .list-bullet::before { content: "–  "; }
+//.HyperMD-list-line-8 .list-bullet::before { content: "▪  "; }
+//.HyperMD-list-line-8 .list-bullet::before { content: "–  "; }
+//.HyperMD-list-line-8 .list-bullet::before { content: "▪  "; }
+//
+//.list-bullet,
+//.list-bullet::before,
+//.HyperMD-list-line-1 .list-bullet::before,
+//.HyperMD-list-line-2 .list-bullet::before,
+//.HyperMD-list-line-3 .list-bullet::before,
+//.HyperMD-list-line-4 .list-bullet::before,
+//.HyperMD-list-line-5 .list-bullet::before,
+//.HyperMD-list-line-6 .list-bullet::before,
+//.HyperMD-list-line-7 .list-bullet::before,
+//.HyperMD-list-line-8 .list-bullet::before,
+//.HyperMD-list-line-8 .list-bullet::before,
+//.HyperMD-list-line-8 .list-bullet::before {
+//	font-family: var(--font-sans);
+//}
+
+//id: rel-line-width
+//title: Relationship Lines Spacing
+//description: Leave as default if you're using the default font. If using another font, you may try the other settings. If using IBM Plex, try the 'Proportional Font Fix' option.
+//type: variable-select
+//default: 3.05ch
+//options:
+//	-
+//		label: Monospaced Font Fix
+//		value: 4.05ch
+//	-
+//		label: Default
+//		value: 3.05ch
+//	-
+//		label: Proportional Font Fix
+//		value: 1.6ch
+//-
