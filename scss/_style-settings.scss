@@ -2306,6 +2306,11 @@ settings:
 		level: 2
 		collapsed: true
 	-
+		id: active-line-hl
+		title: Disable active line highlighting
+		description: Disables active line highlighting
+		type: class-toggle
+	-
 		id: hr-options
 		title: <hr> ("---") Options
 		description: For Edit Mode
@@ -2439,26 +2444,10 @@ settings:
 		collapsed: true
 	-
 		id: relationship-lines
-		title: Relationship Lines
-		description: Toggle relationship lines on lists for Reading and Editing View (Live Preview).
+		title: Disable Relationship Lines
+		description: Disable relationship lines on lists for Reading and Editing View (Live Preview).
 		type: class-toggle
 		default: false
-	-
-		id: rel-line-width
-		title: Relationship Lines Spacing
-		description: Leave as default if you're using the default font. If using another font, you may try the other settings. If using IBM Plex, try the 'Proportional Font Fix' option.
-		type: variable-select
-		default: 3.05ch
-		options:
-			-
-				label: Monospaced Font Fix
-				value: 4.05ch
-			-
-				label: Default
-				value: 3.05ch
-			-
-				label: Proportional Font Fix
-				value: 1.65ch
 	-
 		id: elements-title
 		title: Elements
