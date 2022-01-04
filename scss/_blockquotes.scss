@@ -12,7 +12,7 @@ blockquote p {
 	border-left: 1px solid var(--color-accent);
 	background-color: transparent;
 	color:var(--text-muted);
-	margin-inline-start: 27px;
+	margin-inline-start: 24px;
 	margin-block-start: var.$size-0;
 	margin-block-end: var.$size-0;
 	margin-bottom: 16px;
@@ -70,13 +70,14 @@ cite { // for citations
 }
 
 //blockquote and paraphrase Live Preview
+.markdown-source-view.mod-cm6.is-live-preview .cm-html-embed.cm-embed-block blockquote:not(.paraphrase),
 .markdown-source-view.mod-cm6.is-live-preview .cm-html-embed.cm-embed-block blockquote {
 	border-radius: 0;
 	border: none;
 	border-left: 1px solid var(--color-accent);
 	padding: 0;
 	margin: 0;
-	margin-left: 20px;
+	margin-left: -4px;
 	padding-left: 16px;
 	color: var(--text-muted);
 
@@ -85,9 +86,7 @@ cite { // for citations
 	}
 }
 
-.markdown-source-view.mod-cm6.is-live-preview .cm-html-embed.cm-embed-block blockquote:not(.paraphrase) {
-	margin-left: 20px;
-	&:after {
+	/*&:after {
 		content: '\201C';
 		font-family: sans-serif;
 		position: absolute;
@@ -95,8 +94,8 @@ cite { // for citations
 		left: 0px;
 		font-size: 3.75rem;
 		color: var(--color-accent);
-	}
-}
+	}*/
+
 
 /*
 .markdown-source-view.mod-cm6.is-live-preview .cm-html-embed.cm-embed-block .edit-block-button {
