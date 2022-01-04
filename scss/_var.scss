@@ -276,6 +276,8 @@ $duration-slow-2:     700ms;
 	--color-fill-tag: rgb(64, 150, 147);
 	--color-fill-attachment: rgb(236, 193, 81);
 
+	--color-accent-l: rgb(64, 150, 147);
+	--color-accent-d: rgb(64, 150, 147);
 }
 /* ────────────────────────────── END OF ROOT ───────────────────────────── */
 
@@ -321,7 +323,7 @@ $duration-slow-2:     700ms;
 	--color-border-1:	var(--color-primary-2);
 	--color-border-2:	var(--color-primary-3);
 
-	--color-accent: hsl(var(--color-l-accent-h),var(--color-l-accent-s),var(--color-l-accent-l));
+	--color-accent: var(--color-accent-l);
 
 	--background-primary:		var(--color-primary-1);
 	--background-primary-alt:	var(--color-primary-0);
@@ -430,7 +432,7 @@ $duration-slow-2:     700ms;
 	--color-border-1:	var(--color-primary-2);
 	--color-border-2:	var(--color-primary-3);
 
-	--color-accent:	hsl(var(--color-d-accent-h),var(--color-d-accent-s),var(--color-d-accent-l));
+	--color-accent: var(--color-accent-d);
 
 	--background-primary:		var(--color-primary-1);
 	--background-primary-alt:	var(--color-primary-0);
