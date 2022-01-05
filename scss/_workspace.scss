@@ -135,7 +135,7 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 
 // Tab Header Active
 .workspace-tab-header.is-active {
-	color:var(--text-normal);
+	color: var(--text-normal);
 }
 
 .workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
