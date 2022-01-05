@@ -31,6 +31,10 @@
 	margin-top: -0.1rem; // aligns to the top of letters
 }
 
+.cm-s-obsidian span.cm-footref {
+	color: var(--color-accent);
+}
+
 .footnotes ol > li::marker {
 	color: var(--text-faint);
 	font-size: var.$font-scale-000;
