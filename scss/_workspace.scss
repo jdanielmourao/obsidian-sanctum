@@ -124,6 +124,8 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 	& .workspace-tab-header-inner:hover {
 		background-color: var(--color-hover);
 		color: var(--text-muted);
+		//border-top-right-radius: 4px;
+		//border-top-left-radius: 4px;
 	}
 }
 
