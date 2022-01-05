@@ -67,14 +67,10 @@ input[type=checkbox]:checked:before {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 75%;
-	transform: translateX(0px) translateY(1px);
+	transform: translateX(0px) translateY(.5px);
 	width: 100%;
 	height: 100%;
 	display: block;
-}
-
-.markdown-source-view input[type=checkbox]:checked:before {
-	transform: translateX(0px) translateY(0.5px); //matches reading view alignment
 }
 
 input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
