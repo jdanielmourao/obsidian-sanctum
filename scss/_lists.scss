@@ -230,7 +230,7 @@ ul li {
 
 /* Relationship lines in Reading View */
 
-.relationship-lines {
+.relationship-lines .markdown-preview-view {
 
 	& ul > li,
 	& ol > li {
@@ -240,8 +240,8 @@ ul li {
 	& ul {
 		position: relative;
 	}
-	& .markdown-preview-view ul ul,
-	& .markdown-preview-view ol ol {
+	& ul ul,
+	& ol ol {
 		position: relative;
 	}
 	& ul > li::before,
@@ -261,8 +261,8 @@ ul li {
 	& :not(.admonitions) ol > li.task-list-item::before { //task lists, no admonitions
 		left: -.1em;
 	}
-	& .admonitions ul > li.task-list-item::before,
-	& .admonitions ol > li.task-list-item::before { //task lists, admonitions
+	&.admonitions ul > li.task-list-item::before,
+	&.admonitions ol > li.task-list-item::before { //task lists, admonitions
 		left: -.4em;
 	}
 	& ul ul::before,
