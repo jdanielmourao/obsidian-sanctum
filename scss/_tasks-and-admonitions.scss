@@ -410,6 +410,23 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 /* ──────────────────────── Important (!) admonition ──────────────────────── */
 /* ───────────────────────────── Cons Admonition ──────────────────────────── */
 /* ───────────────────────────────── Failure ──────────────────────────────── */
+.admonitions ul li.task-list-item.is-checked[data-task="1"] > .list-collapse-indicator,
+.admonitions ul li.task-list-item.is-checked[data-task="B"] > .list-collapse-indicator,
+.admonitions ul li.task-list-item.is-checked[data-task="X"] > .list-collapse-indicator,
+.admonitions ul li.task-list-item.is-checked[data-task="n"] > .list-collapse-indicator,
+.admonitions ul li.task-list-item.is-checked[data-task="p"] > .list-collapse-indicator,
+.admonitions ul li.task-list-item.is-checked[data-task="c"] > .list-collapse-indicator,
+.admonitions ul li.task-list-item.is-checked[data-task="W"] > .list-collapse-indicator,
+.admonitions ul li.task-list-item.is-checked[data-task="b"] > .list-collapse-indicator,
+.admonitions ul li.task-list-item.is-checked[data-task="I"] > .list-collapse-indicator,
+.admonitions ul li.task-list-item.is-checked[data-task="!"] > .list-collapse-indicator,
+.admonitions ul li.task-list-item.is-checked[data-task="?"] > .list-collapse-indicator,
+.admonitions ul li.task-list-item.is-checked[data-task="i"]  > .list-collapse-indicator {
+	margin-left: -3.25rem;
+}
+
+
+
 .admonitions ul li.task-list-item.is-checked[data-task="X"],
 .admonitions ul li.task-list-item.is-checked[data-task="c"],
 .admonitions ul li.task-list-item.is-checked[data-task="!"] {
@@ -454,9 +471,6 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	}
 	&.is-collapsed::after {
 		color: var(--color-primary-0);
-	}
-	& .list-collapse-indicator {
-		margin-left: -3.57rem;
 	}
 }
 
@@ -508,9 +522,6 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	& strong > mark {
 		background-image: linear-gradient(120deg, var(--color-highlight-3), var(--color-highlight-3));
 		text-decoration-color: var(--color-highlight-3);
-	}
-	& .list-collapse-indicator {
-		margin-left: -3.57rem;
 	}
 }
 
@@ -566,9 +577,6 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	.theme-light &.is-collapsed::after {
 		color: var(--color-primary-0);
 	}
-	& .list-collapse-indicator {
-		margin-left: -3.57rem;
-	}
 }
 
 .admonitions li[data-task="i"] > .task-list-item-checkbox {
@@ -615,9 +623,6 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	&.is-collapsed::after {
 		color: var(--color-primary-0);
 	}
-	& .list-collapse-indicator {
-		margin-left: -3.57rem;
-	}
 }
 
 .admonitions li[data-task="1"] > .task-list-item-checkbox,
@@ -625,10 +630,6 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 .admonitions li[data-task="p"] > .task-list-item-checkbox {
 	margin-left: -5px;
 	margin-right: var.$size-5;
-
-	& .list-collapse-indicator {
-		margin-left: -3.57rem;
-	}
 }
 
 /* ─────────────────────────── Note (n) Admonition ────────────────────────── */
@@ -644,9 +645,6 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	font-weight: var(--font-regular);
 	margin-left: 4px;
 
-	& .list-collapse-indicator {
-		margin-left: -3.57rem;
-	}
 }
 
 .admonitions li[data-task="n"] > .task-list-item-checkbox,
@@ -703,9 +701,6 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	}
 	&.is-collapsed::after {
 		color: var(--color-primary-0);
-	}
-	& .list-collapse-indicator {
-		margin-left: -3.57rem;
 	}
 }
 
