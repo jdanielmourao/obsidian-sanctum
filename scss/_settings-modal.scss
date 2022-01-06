@@ -167,6 +167,21 @@
 
 			& .community-theme-info {
 				color: var(--text-normal);
+
+				&::after {
+					content: "v0.5.7";
+					font-family: var(--menu-font-family);
+					font-size: var.$font-scale-000;
+					color: var(--text-normal);
+					background-color: var(--color-primary-0);
+					position: absolute;
+					padding: 2px 8px 0 8px;
+					line-height: 1;
+					top: 8px;
+					right: 40px;
+					border: 1px solid var(--color-border-1);
+					border-radius: 8px;
+				}
 			}
 		}
 		& .modal-button-container button {
