@@ -120,11 +120,14 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 	// color of icons besides active
 	& .workspace-tab-header:not(.workspace-tab-header.is-active) {
 		color: var(--text-faint);
+
+		&:hover {
+			color: var(--color-accent);
+		}
 	}
 	// Tab Header Hover
 	& .workspace-tab-header-inner:hover {
 		background-color: transparent;
-		color: var(--color-accent);
 		//border-top-right-radius: 4px;
 		//border-top-left-radius: 4px;
 	}
