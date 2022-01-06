@@ -169,64 +169,64 @@ li {
 }*/
 
 /* ────────────────────────── New Relationship Lines ───────────────────────── */
-/*
-.relationship-lines ul {
-	list-style-type: none;
-}
 
-ul li {
-	position: relative;
-	margin-bottom: 0;
-}
-
-.relationship-lines ul > li:before {
-	content: "";
-}
-
-// level 2
-.relationship-lines ul > li > ul > li::before {
-	position: absolute;
-	display: block;
-	content: "";
-	height: 100%;
-	width: 1px;
-	top: 1px;
-	left: -24px;
-	background-color: var(--text-faint);
-}
-
-.relationship-lines ul > li > ul > li::after {
-	position: absolute;
-	display: block;
-	content: "";
-	height: 1px;
-	width: 12px;
-	top: 12px;
-	left: -24px;
-	background-color: var(--text-faint);
-}
-
-.relationship-lines ul > li > ul > li:last-child:before {
-	position: absolute;
-	display: block;
-	content: "";
-	height: 15px;
-	width: 1px;
-	top: -3px;
-	left: -24px;
-	background-color: var(--text-faint);
-}
-
-.relationship-lines ul > li > ul > li:last-child:after {
-	position: absolute;
-	display: block;
-	content: "";
-	height: 1px;
-	width: 12px;
-	top: 12px;
-	left: -24px;
-	background-color: var(--text-faint);
-}*/
+//.relationship-lines ul {
+//	list-style-type: none;
+//}
+//
+//ul li {
+//	position: relative;
+//	margin-bottom: 0;
+//}
+//
+//.relationship-lines ul > li:before {
+//	content: "";
+//}
+//
+//// level 2
+//.relationship-lines ul > li > ul > li::before {
+//	position: absolute;
+//	display: block;
+//	content: "";
+//	height: 100%;
+//	width: 1px;
+//	top: 1px;
+//	left: -24px;
+//	background-color: var(--text-faint);
+//}
+//
+//.relationship-lines ul > li > ul > li::after {
+//	position: absolute;
+//	display: block;
+//	content: "";
+//	height: 1px;
+//	width: 12px;
+//	top: 12px;
+//	left: -24px;
+//	background-color: var(--text-faint);
+//}
+//
+//.relationship-lines ul > li > ul > li:last-child:before {
+//	position: absolute;
+//	display: block;
+//	content: "";
+//	height: 15px;
+//	width: 1px;
+//	top: -3px;
+//	left: -24px;
+//	background-color: var(--text-faint);
+//}
+//
+//.relationship-lines ul > li > ul > li:last-child:after {
+//	position: absolute;
+//	display: block;
+//	content: "";
+//	height: 1px;
+//	width: 12px;
+//	top: 12px;
+//	left: -24px;
+//	background-color: var(--text-faint);
+//}
 
 /* Relationship lines in Reading View */
 
@@ -278,8 +278,9 @@ ul li {
 
 /* Relationship Lines in Editing View */
 body:not(.relationship-lines-lp) {
-	& .mod-cm6.is-live-preview .HyperMD-list-line.cm-line {
-		overflow: hidden;
+	& .mod-cm6.is-live-preview .HyperMD-list-line.cm-line { // fix the fact that fold indicators don't show at position 0
+		overflow: unset;
+		overflow-y: clip;
 	}
 	& .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
 		position: relative;
@@ -305,6 +306,9 @@ body:not(.relationship-lines-lp) {
 		padding-left: 4px;
 	}
 }
+
+
+
 /* ──────────────────────────────── Outliner ──────────────────────────────── */
 
 // Some Outliner Edit Mode Corrections 
@@ -340,7 +344,8 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
 
 // Live Preview bullet points
 .list-bullet {
-	left: 0px;
+	left: 1.5px;
+	padding-right: unset; //fixes double markers
 }
 
 .markdown-source-view.mod-cm6 .list-bullet::after {
@@ -366,8 +371,13 @@ span.cm-comment .list-bullet::after { // makes bullets same colors as comments w
 	color: var(--text-faint);
 }
 
-
-
+.markdown-source-view.mod-cm6 .cm-list-1 .list-bullet,
+.markdown-source-view.mod-cm6 .cm-list-3 .list-bullet,
+.markdown-source-view.mod-cm6 .cm-list-5 .list-bullet,
+.markdown-source-view.mod-cm6 .cm-list-7 .list-bullet,
+.markdown-source-view.mod-cm6 .cm-list-9 .list-bullet {
+	left: -1px;
+}
 //.markdown-source-view.mod-cm6 .HyperMD-list-line-1.cm-active > .cm-fold-indicator .collapse-icon,
 //.markdown-source-view.mod-cm6 .HyperMD-list-line-2.cm-active > .cm-fold-indicator .collapse-icon,
 //.markdown-source-view.mod-cm6 .HyperMD-list-line-3.cm-active > .cm-fold-indicator .collapse-icon,
