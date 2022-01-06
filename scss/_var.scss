@@ -285,6 +285,9 @@ $duration-slow-2:     700ms;
 	--color-yellow-9:	#19140c;
 	--color-yellow-10:	#000000;
 	--color-yellow: var(--color-yellow-3);
+
+	--txt-sel: rgba(64 150 147 / .5);
+
 }
 /* ────────────────────────────── END OF ROOT ───────────────────────────── */
 
@@ -359,7 +362,7 @@ $duration-slow-2:     700ms;
 
 	--text-highlight-bg:		var(--color-highlight-1);
 	--text-highlight-bg-active: #b1cad8;
-	--text-selection:			var(--color-accent-l);
+	--text-selection:			var(--txt-sel);
 
 	--interactive-normal:		var(--color-primary-2);
 	--interactive-hover:		var(--color-primary-2);
@@ -468,7 +471,7 @@ $duration-slow-2:     700ms;
 
 	--text-highlight-bg:		var(--color-highlight-1);
 	--text-highlight-bg-active: #668ea5;
-	--text-selection:			var(--color-accent-d);
+	--text-selection:			var(--txt-sel);
 
 	--interactive-normal:		var(--color-primary-2);
 	--interactive-hover:		var(--color-primary-2);

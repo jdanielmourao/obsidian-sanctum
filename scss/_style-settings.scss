@@ -154,6 +154,39 @@ settings:
 		format: rgb
 		default: rgb(214, 108, 30)
 	-
+		id: txt-sel
+		title: Text Selection Color
+		type: variable-select
+		default: rgba(64 150 147 / .5)
+		options:
+			-
+				label: Green
+				value: rgba(140 141 59 / .5)
+			-
+				label: Viridian
+				value: rgba(70 153 106 / .5)
+			-
+				label: Teal
+				value: rgba(64 150 147 / .5)
+			-
+				label: Blue
+				value: rgba(102 142 165 / .5)
+			-
+				label: Lavender
+				value: rgba(132 132 188 / .5)
+			-
+				label: Pink
+				value: rgba(235 84 108 / .5)
+			-
+				label: Red
+				value: rgba(241 81 72 / .5)
+			-
+				label: Orange
+				value: rgba(214 108 30 / .5)
+			-
+				label: Yellow
+				value: rgba(214 159 40 / .5)
+	-
 		id: highlight-colors
 		title: Highlight Colors
 		description: Set the colors for highlights and highlighted text!
