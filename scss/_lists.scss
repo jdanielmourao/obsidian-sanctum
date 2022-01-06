@@ -49,10 +49,10 @@ li::marker {
 		& ol ul .list-collapse-indicator,
 		& ul ol ul .list-collapse-indicator,
 		& ol ul ul .list-collapse-indicator { // generic ul
-		margin-left: -2.45em;
+		margin-left: -2.5em;
 		}
 		& ul li.task-list-item > .list-collapse-indicator { //tasks
-			margin-left: -2.8em;
+			margin-left: -2.5em;
 		}
 	}
 }
@@ -269,6 +269,10 @@ li {
 	& ol ol::before {
 		content: "";
 		position: absolute;
+	}
+	& .task-list-item.is-checked p, //aligns task lists with other lists
+	& .task-list-item p {
+		margin-left: -1.5rem;
 	}
 }
 
