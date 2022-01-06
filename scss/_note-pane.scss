@@ -94,10 +94,6 @@ body:not(body.plugin-sliding-panes) .workspace-leaf:not(.mod-active) .workspace-
 }
 
 /* ────────────────────────────── Editor Width ────────────────────────────── */
-// Scrolling Shadow
-.markdown-source-view.mod-cm6 .cm-gutters { // makes gutters bg transparent so there can be a shadow
-	--background-primary: transparent;
-}
 
 body:not(.is-mobile) .cm-scroller,
 body:not(.is-mobile) .markdown-preview-view { //shadow on reading and editing modes, credit @mgmeyers
