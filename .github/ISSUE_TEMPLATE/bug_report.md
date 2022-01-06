@@ -7,6 +7,11 @@ assignees: jdanielmourao
 
 ---
 
+<!-- Firstly, before submitting a bug:
+- make sure you're using the latest installer. You can simply go to  Settings -> About -> Installer version;
+- check if there are any currently opened issues which tackle your problem as well, and if so, comment on them instead of making a new one;
+-->
+
 **Describe the bug**
 <!-- A clear and concise description of what the bug is.-->
 
@@ -21,7 +26,7 @@ Steps to reproduce the behavior (this is an example):
 <!-- A clear and concise description of what you expected to happen.-->
 
 **Screenshots**
-<!--If applicable, add screenshots to help explain your problem.-->
+<!--If applicable, add screenshots and/or gifs to help explain your problem.-->
 
 **Version [Desktop or Mobile]:**
 
