@@ -359,7 +359,7 @@ $duration-slow-2:     700ms;
 
 	--text-highlight-bg:		var(--color-highlight-1);
 	--text-highlight-bg-active: #b1cad8;
-	--text-selection:			hsla(var(--color-l-accent-h), var(--color-l-accent-s), var(--color-l-accent-l), 0.5);
+	--text-selection:			var(--color-accent-l);
 
 	--interactive-normal:		var(--color-primary-2);
 	--interactive-hover:		var(--color-primary-2);
@@ -468,7 +468,7 @@ $duration-slow-2:     700ms;
 
 	--text-highlight-bg:		var(--color-highlight-1);
 	--text-highlight-bg-active: #668ea5;
-	--text-selection:			hsla(var(--color-d-accent-h), var(--color-d-accent-s), var(--color-d-accent-l), 0.5);
+	--text-selection:			var(--color-accent-d);
 
 	--interactive-normal:		var(--color-primary-2);
 	--interactive-hover:		var(--color-primary-2);
