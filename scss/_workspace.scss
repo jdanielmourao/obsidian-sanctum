@@ -429,15 +429,6 @@ body:not(.no-sanctum-icons)
 		height: 16px;
 		width: 16px;
 	}
-	/*&:nth-child(3):hover {
-		color: var(--color-teal-5);
-	}
-	&:nth-child(2):hover {
-		color: var(--color-yellow-5);
-	}*/
-	&:nth-child(1):hover {
-		color: var(--color-pink-5);
-	}
 }
 
 
@@ -520,6 +511,17 @@ body:not(.no-sanctum-icons)
 	.workspace-drawer & {
 		margin-top: auto;
 		margin-bottom: var.$size-6;
+	}
+	& .side-dock-ribbon-action {
+		/*&:nth-child(3):hover {
+		color: var(--color-teal-5);
+		}
+		&:nth-child(2):hover {
+			color: var(--color-yellow-5);
+		}*/
+		&:nth-child(1):hover {
+			color: var(--color-pink-5);
+		}
 	}
 }
 
