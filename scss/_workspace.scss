@@ -112,9 +112,10 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 				 var.$size-3
 				 var(--size-tab-header);
 		height: 32px;
-		background-color: var(--background-primary);
+		background-color: transparent;
 		transition: background-color 0s; // reduces hover animation time
-		border-bottom: 1px solid var(--color-border-1);
+		border-bottom: 0px solid var(--color-border-1);
+		border-radius: 4px;
 	}
 	// color of icons besides active
 	& .workspace-tab-header:not(.workspace-tab-header.is-active) {
@@ -122,8 +123,8 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 	}
 	// Tab Header Hover
 	& .workspace-tab-header-inner:hover {
-		background-color: var(--color-hover);
-		color: var(--text-muted);
+		background-color: transparent;
+		color: var(--color-accent);
 		//border-top-right-radius: 4px;
 		//border-top-left-radius: 4px;
 	}
@@ -138,22 +139,11 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 // Tab Header Active
 .workspace-tab-header.is-active {
 	color: var(--text-normal);
-}
-
-.workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
- .workspace-tab-header.is-before-active .workspace-tab-header-inner {
-	border-bottom-left-radius: var.$size-0;
-	border-bottom-right-radius: var.$size-0;
-}
-.workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
-.workspace-tab-header.is-after-active .workspace-tab-header-inner {
-	border-bottom-right-radius: var.$size-0;
-	border-bottom-left-radius: var.$size-0;
+	border-radius: 4px;
 }
 
 /* ─────────────────────────────── Nav Header ─────────────────────────────── */
 .nav-header {
-	height: var.$size-6;
 	padding: var.$size-0
 			 var.$size-0
 			 var.$size-0
@@ -169,7 +159,7 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 		justify-content: flex-start;
 		padding: var.$size-0
 				 var.$size-5
-				 var.$size-0
+				 var.$size-2
 				 var.$size-5;
 		background-color: var(--background-primary);
 	}
@@ -180,11 +170,13 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 				 var.$size-2
 				 var.$size-3;
 		margin: var.$size-0;
+		margin-top: 4px;
 		height: var.$size-6;
-		border-radius: var.$size-0;
+		border-radius: 4px;
 
 		&:hover {
-			color: var(--text-muted);
+			color: var(--color-accent);
+			background-color: transparent;
 		}
 		&:active {
 			color: var(--text-normal);
@@ -286,6 +278,19 @@ body div.workspace-split.mod-left-split .nav-buttons-container {
 	}
 	& .tree-item-self.is-clickable:hover .tree-item-flair {
 		background-color: var(--color-hover);
+	}
+}
+
+/* ──────────────────────────────── Backlinks ─────────────────────────────── */
+
+.workspace-leaf-content[data-type='backlink'] {
+
+	& .nav-buttons-container {
+		padding-left: 0;
+		padding-top: 4px;
+	}
+	& .view-content {
+		padding-top: 0;
 	}
 }
 
@@ -412,7 +417,7 @@ body:not(.no-sanctum-icons)
 
 /* ────────────────────────────── Side Ribbons ────────────────────────────── */
 .side-dock-ribbon { // side ribbons
-	flex: 0 0 var.$scale-4;
+	flex: 0 0 40px;
 	display: flex;
 	flex-direction: column;
 }
@@ -425,7 +430,7 @@ body:not(.no-sanctum-icons)
 .workspace-ribbon { // side ribbons
 	display: flex;
 	overflow: hidden;
-	width: var.$scale-4;
+	width: 40px;
 	background-color: var(--background-primary);
 	z-index: var(--layer-sidedock);
 	transition: background-color var.$duration-moderate-2 var.$motion-exit-productive, border-left-color 100ms 100ms cubic-bezier(0.4, 0.14, 0.3, 1);
