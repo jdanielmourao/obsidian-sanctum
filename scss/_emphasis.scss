@@ -31,6 +31,11 @@ body:not(.active-line-hl) .CodeMirror-activeline .CodeMirror-linebackground {
 	background-color: var(--color-primary-2);
 }
 
+.is-mobile .cm-active.cm-line,
+.is-mobile .CodeMirror-activeline .CodeMirror-linebackground {
+	position: unset;
+}
+
 /* Focus Mode
 .cm-line:not(.cm-active.cm-line) {
 	opacity: .5;
