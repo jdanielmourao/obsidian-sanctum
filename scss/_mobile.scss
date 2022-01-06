@@ -58,8 +58,7 @@
 }
 
 .is-mobile div.nav-files-container.node-insert-event.show-unsupported {
-	padding: 16px 4px 0 8px;
-	margin-right: 16px;
+	padding: 16px 0px 0 8px;
 }
 
 .workspace-drawer-active-tab-container {
@@ -722,10 +721,10 @@ body.is-mobile .nav-action-button svg {
 .is-mobile .menu-item.selected:not(.is-disabled):not(.is-label):hover {
 	padding-left: 0;
 }
-
+/*
 .is-mobile .nav-folder .collapse-icon {
 	display: none;
-}
+}*/
 
 .is-mobile .tag-container {
 	padding-left: 0;
