@@ -11,10 +11,6 @@ Status Bar
 
 
 /* ──────────────────────────────── Title Bar ─────────────────────────────── */
-body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
-	padding-top: 28px;
-}
-
 body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 	top: 0;
 	padding-top: 0;
