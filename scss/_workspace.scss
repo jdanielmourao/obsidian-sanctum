@@ -424,7 +424,12 @@ body:not(.no-sanctum-icons)
 
 // ribbon icons
 .side-dock-ribbon-action {
-	padding: 12px 7px;
+	padding: 8px 4px;
+
+	& svg {
+		height: 16px;
+		width: 16px;
+	}
 }
 
 .workspace-ribbon { // side ribbons
@@ -434,8 +439,6 @@ body:not(.no-sanctum-icons)
 	background-color: var(--background-primary);
 	z-index: var(--layer-sidedock);
 	transition: background-color var.$duration-moderate-2 var.$motion-exit-productive, border-left-color 100ms 100ms cubic-bezier(0.4, 0.14, 0.3, 1);
-	border-left: 3px solid var(--background-primary);
-	border-right: 3px solid var(--background-primary);
 
 	&.is-collapsed {
 		background-color: var(--background-primary);
@@ -474,7 +477,7 @@ body:not(.no-sanctum-icons)
 		transition: transform var.$duration-moderate-2 var.$motion-standard-expressive;
 		}
 		&.mod-left {
-			border-right: 1.5px solid var(--color-border-1);
+			border-right: 1px solid var(--color-border-1);
 			border-left: 0px solid transparent;
 
 			& .workspace-ribbon-collapse-btn {
@@ -497,7 +500,7 @@ body:not(.no-sanctum-icons)
 		}
 		&.mod-right {
 			flex-direction: column-reverse;
-			border-left: 1.5px solid transparent;
+			border-left: 1px solid transparent;
 		}
 	}
 }
