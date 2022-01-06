@@ -70,6 +70,8 @@
 				 var.$size-3
 				 var.$size-3
 				 var.$size-3;
+		top: 4px;
+		left: 16px; //makes it so when it's in a side panel, it aligns with nav action buttons
 	}
 	&.is-close:hover {
 	//box-shadow: var.$elevation-1;
@@ -106,4 +108,11 @@
 .graph-controls-button.mod-animate > svg {
 	height: 16px;
 	width: 16px;
+}
+
+.graph-controls-button {
+
+	&:hover {
+		color: var(--color-accent);
+	}
 }
