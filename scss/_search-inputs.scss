@@ -107,6 +107,13 @@ body:not(.is-mobile) .document-search, body:not(.is-mobile) .document-replace {
 	color: var(--text-faint);
 	margin-left: 8px;
 	border-bottom: 1px solid var(--color-border-1);
+
+	& .search-result-hover-button {
+		&:hover {
+			background-color: transparent;
+			color: var(--color-accent);
+		}
+	}
 }
 
 .search-result-file-match-destination-file {
@@ -133,6 +140,9 @@ body:not(.is-mobile) .document-search, body:not(.is-mobile) .document-replace {
 		background-color: var(--color-green-5);
 	}
 }
+
+
+
 
 .search-empty-state { // no results
 	color: var(--text-muted);
