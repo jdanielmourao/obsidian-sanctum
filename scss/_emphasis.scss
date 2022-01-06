@@ -36,10 +36,6 @@ body:not(.active-line-hl) .CodeMirror-activeline .CodeMirror-linebackground {
 	opacity: .5;
 }*/
 
-// highlight active line number + gutter
-.CodeMirror-activeline-gutter {
-	background-color: var(--color-primary-2);
-}
 // accent color active line highlight
 .accent-active-line .cm-active.cm-line,
 .accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
@@ -50,12 +46,6 @@ body:not(.active-line-hl) .CodeMirror-activeline .CodeMirror-linebackground {
 	background-color: hsla(var(--color-d-accent-h),var(--color-d-accent-s),var(--color-d-accent-l),.3);
 }
 
-.accent-active-line .CodeMirror-activeline-gutter {
-	background-color: hsla(var(--color-l-accent-h),var(--color-l-accent-s),var(--color-l-accent-l),.3);
-}
-.theme-dark.accent-active-line .CodeMirror-activeline-gutter {
-	background-color: hsla(var(--color-d-accent-h),var(--color-d-accent-s),var(--color-d-accent-l),.3);
-}
 // ───────────────────────────── text selection ───────────────────────────── */
 // for text selection, check the --text-selection custom property in _var
 
