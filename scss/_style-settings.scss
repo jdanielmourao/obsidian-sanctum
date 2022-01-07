@@ -285,27 +285,27 @@ settings:
 		id: font-preview
 		title: Preview Mode Font
 		type: variable-text
-		default: "'iA Writer Quattro S', 'IBM Plex Sans', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+		default: "'iA Writer Quattro', 'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 	-
 		id: font-editor
 		title: Edit Mode Font
 		type: variable-text
-		default: "'iA Writer Quattro S', 'IBM Plex Sans', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+		default: "'iA Writer Quattro', 'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 	-
 		id: font-ui
 		title: UI font
 		type: variable-text
-		default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+		default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 	-
 		id: font-mono
 		title: Monospace Font
 		type: variable-text
-		default: "'IBM Plex Mono', 'iA Writer Mono V', 'iA IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
+		default: "'IBM Plex Mono', 'iA Writer Mono', 'iA IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
 	-
 		id: font-frontmatter
 		title: Frontmatter/YAML Font
 		type: variable-text
-		default: "'IBM Plex Mono', 'iA Writer Mono V', 'iA IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
+		default: "'IBM Plex Mono', 'iA Writer Mono', 'iA IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
 	-
 		id: headings-title
 		title: Headings
@@ -316,12 +316,12 @@ settings:
 		id: font-heading-preview
 		title: Heading Font Preview Mode
 		type: variable-text
-		default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+		default: "'IBM Plex Sans *', 'iA Writer Quattro', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 	-
 		id: font-heading-editor
 		title: Heading Font Editor Mode
 		type: variable-text
-		default: "'IBM Plex Sans', 'iA Writer Quattro S', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+		default: "'IBM Plex Sans *', 'iA Writer Quattro', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 	-
 		id: head-indicator
 		title: Heading Indicators
