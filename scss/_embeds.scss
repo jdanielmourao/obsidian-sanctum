@@ -101,3 +101,14 @@
 	    border-image: initial;
 	}
 }
+
+/* ────────────────────────────── Live Preview ────────────────────────────── */
+
+.markdown-source-view.mod-cm6 .cm-embed-block {
+	border: 1px solid transparent;
+	border-radius: 4px;
+
+	&:hover {
+		border-color: var(--color-border-2);
+	}
+}
