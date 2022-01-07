@@ -389,9 +389,14 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 	backdrop-filter: blur(0px);
 }
 
-.is-mobile .workspace-leaf.mod-active .view-header-title {
+.is-mobile .workspace-leaf .view-header-title-container {
+	height: 32px;
+}
+
+.is-mobile .workspace-leaf .view-header-title {
 	width: 60vw;
-	font-size: var.$font-scale-0;
+	font-size: var.$font-scale-00;
+	text-align: center;
 }
 
 html .is-mobile div.menu {
