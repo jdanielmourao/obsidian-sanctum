@@ -43,8 +43,18 @@
 button.mod-warning {
 	background-color: var(--background-modifier-error);
 	color: var(--background-primary);
-	border-radius: 0px;
+	text-shadow: 0 -1px rgba(0 0 0 / .3);
+	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.2) inset;
 	@include button-l;
+	
+	&:hover {
+		filter: brightness(.95);
+	}
+	&:active {
+		text-shadow: none;
+		box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.2) inset,
+					0px 1px 0px 0px rgba(245 243 240 / 0.35) inset;
+	}
 }
 
 button.mod-cta {
@@ -82,10 +92,27 @@ button.mod-cta {
 /* Sort, Selected icons*/
 .modal.mod-community-plugin .setting-item-control button.clickable-icon,
 .modal.mod-community-theme .setting-item-control button.clickable-icon {
-	color: var(--text-faint);
+	color: var(--text-muted);
 	@include button-s;
-	background-color: var(--background-primary);
-	margin-left: 0;
+	background-color: var(--color-primary-2);
+	padding: 2px 4px;
+	border: 1px solid var(--color-primary-3);
+	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.1) inset;
+	line-height: .9;
+
+	&:hover {
+		filter: brightness(.95);
+	}
+	&:active {
+		background-color: var(--color-primary-2);
+		text-shadow: none;
+		box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.2) inset,
+					0px 1px 0px 0px rgba(245 243 240 / 0.35) inset;
+	}
+
+	.theme-dark & {
+		box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.2) inset;
+	}
 }
 
 // Publish Page buttons
@@ -102,8 +129,8 @@ button.mod-cta {
 	color: var(--text-normal);
 	@include button-l;
 	background-color: var(--color-primary-2);
-	border: 1px solid var(--color-primary-2);
-	text-shadow: 0 -1px rgba(0 0 0 / .3);
+	border: 1px solid var(--color-primary-3);
+	text-shadow: 0 -1px rgba(254 254 254 / .3);
 	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.1) inset;
 
 	&:hover {
