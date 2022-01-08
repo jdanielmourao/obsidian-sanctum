@@ -242,12 +242,6 @@
 }
 
 
-.setting-hotkey.mod-empty { // "Blank", aka unset hotkey
-	color: var(--text-muted);
-	padding-right: var.$size-3;
-	padding-top: var.$size-1;
-}
-
 .setting-hotkey-icon.setting-delete-hotkey {
 	line-height: var.$leading-0; //centers x
 	margin-left: 4px;
@@ -291,6 +285,11 @@
 			}
 			& .setting-hotkey.has-conflict {
 				background-color: var(--color-red);
+			}
+			& .setting-hotkey.mod-empty { // "Blank", aka unset hotkey
+				color: var(--text-muted);
+				padding: 2px 8px 0px 8px;
+				line-height: 1.5;
 			}
 		}
 	}
