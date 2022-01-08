@@ -17,6 +17,32 @@
 		--font-scale-8:     calc(3rem * .875);
 		--font-scale-9: 	calc(3.375rem * .875);
 		--font-scale-10: 	calc(3.75rem * .875);
+
+		--heading-1-mobile: calc(var(--heading-1) * .875);
+		--heading-2-mobile: calc(var(--heading-2) * .875);
+		--heading-3-mobile: calc(var(--heading-3) * .875);
+		--heading-4-mobile: calc(var(--heading-4) * .875);
+		--heading-5-mobile: calc(var(--heading-5) * .875);
+		--heading-6-mobile: calc(var(--heading-6) * .875);
+
+		.markdown-preview-view h1,
+		.cm-s-obsidian .cm-header-1,
+		.cm-s-obsidian .HyperMD-header-1 {font-size: var(--heading-1-mobile);}	
+		.markdown-preview-view h2,
+		.cm-s-obsidian .cm-header-2,
+		.cm-s-obsidian .HyperMD-header-2 {font-size: var(--heading-2-mobile);}	
+		.markdown-preview-view h3,
+		.cm-s-obsidian .cm-header-3,
+		.cm-s-obsidian .HyperMD-header-3 {font-size: var(--heading-3-mobile);}	
+		.markdown-preview-view h4,
+		.cm-s-obsidian .cm-header-4,
+		.cm-s-obsidian .HyperMD-header-4 {font-size: var(--heading-4-mobile);}
+		.markdown-preview-view h5,
+		.cm-s-obsidian .cm-header-5,
+		.cm-s-obsidian .HyperMD-header-5 {font-size: var(--heading-5-mobile);}
+		.markdown-preview-view h6,
+		.cm-s-obsidian .cm-header-6,
+		.cm-s-obsidian .HyperMD-header-6 {font-size: var(--heading-6-mobile);}
 	}
 }
 
@@ -171,99 +197,39 @@ body {
 
 .markdown-preview-view {
 	.heading-clr & {
-		& h1 {
-			color: var(--color-heading-1);
-		}
-		& h2 {
-			color: var(--color-heading-2);
-		}
-		& h3 {
-			color: var(--color-heading-3);
-		}
-		& h4 {
-			color: var(--color-heading-4);
-		}
-		& h5 {
-			color: var(--color-heading-5);
-		}
-		& h6 {
-			color: var(--color-heading-6);
-		}
+		& h1 {color: var(--color-heading-1);}
+		& h2 {color: var(--color-heading-2);}
+		& h3 {color: var(--color-heading-3);}
+		& h4 {color: var(--color-heading-4);}
+		& h5 {color: var(--color-heading-5);}
+		& h6 {color: var(--color-heading-6);}
 	}
 	.heading-clr-bg & {
-		& h1 {
-			background-color: var(--color-heading-1-bg);
-			padding: 4px;
-		}
-		& h2 {
-			background-color: var(--color-heading-2-bg);
-			padding: 4px;
-		}
-		& h3 {
-			background-color: var(--color-heading-3-bg);
-			padding: 4px;
-		}
-		& h4 {
-			background-color: var(--color-heading-4-bg);
-			padding: 4px;
-		}
-		& h5 {
-			background-color: var(--color-heading-5-bg);
-			padding: 4px;
-		}
-		& h6 {
-			background-color: var(--color-heading-6-bg);
-			padding: 4px;
-		}
+		& h1 {background-color: var(--color-heading-1-bg); padding: 4px;}
+		& h2 {background-color: var(--color-heading-2-bg); padding: 4px;}
+		& h3 {background-color: var(--color-heading-3-bg); padding: 4px;}
+		& h4 {background-color: var(--color-heading-4-bg); padding: 4px;}
+		& h5 {background-color: var(--color-heading-5-bg); padding: 4px;}
+		& h6 {background-color: var(--color-heading-6-bg); padding: 4px;}
 	}
 }
 
 .cm-s-obsidian {
 	.heading-clr & {
-		& .cm-header-1 {
-			color: var(--color-heading-1);
-		}
-		& .cm-header-2 {
-			color: var(--color-heading-2);
-		}
-		& .cm-header-3 {
-			color: var(--color-heading-3);
-		}
-		& .cm-header-4 {
-			color: var(--color-heading-4);
-		}
-		& .cm-header-5 {
-			color: var(--color-heading-5);
-		}
-		& .cm-header-6 {
-			color: var(--color-heading-6);
-		}
+		& .cm-header-1 {color: var(--color-heading-1);}
+		& .cm-header-2 {color: var(--color-heading-2);}
+		& .cm-header-3 {color: var(--color-heading-3);}
+		& .cm-header-4 {color: var(--color-heading-4);}
+		& .cm-header-5 {color: var(--color-heading-5);}
+		& .cm-header-6 {color: var(--color-heading-6);}
 	}
 	.heading-clr-bg & {
-		& .HyperMD-header-1.cm-line {
-			background-color: var(--color-heading-1-bg);
-			padding: 4px;
-		}
-		& .HyperMD-header-2.cm-line {
-			background-color: var(--color-heading-2-bg);
-			padding: 4px;
-		}
-		& .HyperMD-header-3.cm-line {
-			background-color: var(--color-heading-3-bg);
-			padding: 4px;
-		}
-		& .HyperMD-header-4.cm-line {
-			background-color: var(--color-heading-4-bg);
-			padding: 4px;
-		}
-		& .HyperMD-header-5.cm-line {
-			background-color: var(--color-heading-5-bg);
-			padding: 4px;
-		}
-		& .HyperMD-header-6.cm-line {
-			background-color: var(--color-heading-6-bg);
-			padding: 4px;
-		}
+		& .HyperMD-header-1.cm-line {background-color: var(--color-heading-1-bg); padding: 4px;}
+		& .HyperMD-header-2.cm-line {background-color: var(--color-heading-2-bg); padding: 4px;}
+		& .HyperMD-header-3.cm-line {background-color: var(--color-heading-3-bg); padding: 4px;}
+		& .HyperMD-header-4.cm-line {background-color: var(--color-heading-4-bg); padding: 4px;}
+		& .HyperMD-header-5.cm-line {background-color: var(--color-heading-5-bg); padding: 4px;}
+		& .HyperMD-header-6.cm-line {background-color: var(--color-heading-6-bg); padding: 4px;}
 	}
 }
 
