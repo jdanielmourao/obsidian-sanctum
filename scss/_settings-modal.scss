@@ -159,8 +159,11 @@
 			border: 1px solid var(--color-primary-3);
 			border-radius: 8px;
 		}
+		& .community-theme-screenshot.mod-unavailable {
+			color: var(--text-muted);
+		}
 		&.is-selected {
-			background-color: var(--color-primary-0);
+			background-color: rgba(var(--rgb-primary-0), .5);
 			border-radius: 8px;
 			border: 1px solid var(--color-border-1);
 			color: var(--text-normal);
@@ -201,7 +204,8 @@
 				background-color: var(--color-accent);
 				color: var.$color-white;
 				text-shadow: 0 1px rgba(black, .3);
-				box-shadow: 0px 2px 0px 0px rgba(8 8 8 / 0.2) inset;
+				box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.2) inset,
+				0px 1px 0px 0px rgba(245 243 240 / 0.35) inset;
 			}
 		}
 	}
