@@ -333,12 +333,12 @@ settings:
 		id: font-mono
 		title: Monospace Font
 		type: variable-text
-		default: "'IBM Plex Mono', 'iA Writer Mono', 'iA IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
+		default: "'IBM Plex Mono *', 'iA Writer Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
 	-
 		id: font-frontmatter
 		title: Frontmatter/YAML Font
 		type: variable-text
-		default: "'IBM Plex Mono', 'iA Writer Mono', 'iA IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
+		default: "'IBM Plex Mono *', 'iA Writer Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
 	-
 		id: headings-title
 		title: Headings
