@@ -7,22 +7,12 @@ div > .CodeMirror-line span.cm-hashtag-end {
 	color: var(--color-accent);
 }
 
-/* Removes underline from generic tags in edit mode*/
-.cm-s-obsidian span.cm-hashtag { //gotta wait until tags are supported in Live Preview
-	text-decoration: none;
-	color: var(--text-accent);
-	font-weight: var(--font-semi-bold);
-
-	&:hover {
-		filter: brightness(1.2);
-	}
-}
-
 /* Tags in Preview */
+.cm-s-obsidian span.cm-hashtag,
 .tag:not(.token) {
 	display: inline-block;
-	background-color: var(--color-accent);
-	color: var(--background-primary);
+	background-color: rgba(var(--color-tag) / .15);
+	color: var(--text-accent);
 	font-size: var(--font-scale-000);
 	font-weight: var(--font-medium);
 	line-height: var.$leading-0;
@@ -30,15 +20,24 @@ div > .CodeMirror-line span.cm-hashtag-end {
 	text-align: center;
 	text-decoration: none;
 	margin: var.$size-0 var.$size-0;
-	cursor: text;
-	border-radius: var.$size-8; 
+	border-radius: 16px;
 	transition: var.$duration-moderate-1 var.$motion-exit-productive;
-
+	filter: saturate(1.5);
+	
 	&:hover {
 		cursor: pointer;
-		filter: brightness(1.2);
+		color: var(--text-normal);
 	}
 }
+
+.cm-s-obsidian .cm-hashtag-begin.cm-meta {
+	display: none;
+}
+
+.cm-s-obsidian span.cm-hashtag::before { //adds an hashtag in editing view
+	content: "#";
+}
+
 
 /* Frontmatter tag*/
 .frontmatter-container .tag:hover {
