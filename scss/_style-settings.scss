@@ -2747,6 +2747,18 @@ settings:
 		type: class-toggle
 		default: false
 	-
+		id: mobile
+		title: Mobile
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: float-button
+		title: Disable floating button
+		description: This setting disables the floating Editing/Reading view button, making it go back to the top.
+		type: class-toggle
+		default: false
+	-
 		id: advanced-options
 		title: Advanced Options
 		type: heading
