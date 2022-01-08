@@ -82,4 +82,24 @@
 	.markdown-preview-view img:not(.link-favicon) {
 		opacity: 1;
 	}
+
+	mark {
+		font-weight: var(--font-regular);
+		color: var.$color-black;
+		background-color: var(--color-highlight-1);
+		font-weight: 400;
+	}
+
+	em > mark {
+		font-style: normal;
+		font-weight: var(--font-regular);
+		color: var(--text-normal);
+		background-color: var(--color-highlight-2);
+	}
+
+	strong > mark {
+		font-weight: var(--font-regular);
+		background-color: var(--color-highlight-3);
+		color: var(--text-normal);
+	}
 }
