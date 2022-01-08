@@ -11,8 +11,8 @@ div > .CodeMirror-line span.cm-hashtag-end {
 .cm-s-obsidian span.cm-hashtag,
 .tag:not(.token) {
 	display: inline-block;
-	background-color: rgba(var(--color-tag) / .15);
-	color: rgba(var(--color-tag) / 1);
+	background-color: rgba(var(--color-accent-l) / .15);
+	color: var(--color-accent);
 	font-size: var(--font-scale-000);
 	font-weight: var(--font-medium);
 	line-height: var.$leading-0;
@@ -21,13 +21,18 @@ div > .CodeMirror-line span.cm-hashtag-end {
 	text-decoration: none;
 	margin: var.$size-0 var.$size-0;
 	border-radius: 16px;
-	border: 1px solid rgba(var(--color-tag) / .2);
+	border: 1px solid rgba(var(--color-accent-l) / .2);
 	transition: var.$duration-moderate-1 var.$motion-exit-productive;
 	filter: saturate(1);
 	
 	&:hover {
 		cursor: pointer;
 		color: var(--text-normal);
+	}
+
+	.theme-dark & {
+		background-color: rgba(var(--color-accent-d) / .15);
+		border-color: rgba(var(--color-accent-d) / .2);
 	}
 }
 

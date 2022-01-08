@@ -154,39 +154,6 @@ settings:
 				label: Yellow
 				value: 214 159 40
 	-
-		id: color-tag
-		title: Tag Color
-		type: variable-select
-		default: 64 150 147
-		options:
-			-
-				label: Green
-				value: 140 141 59
-			-
-				label: Viridian
-				value: 70 153 106
-			-
-				label: Teal
-				value: 64 150 147
-			-
-				label: Blue
-				value: 102 142 165
-			-
-				label: Lavender
-				value: 132 132 188
-			-
-				label: Pink
-				value: 235 84 108
-			-
-				label: Red
-				value: 241 81 72
-			-
-				label: Orange
-				value: 214 108 30
-			-
-				label: Yellow
-				value: 214 159 40
-	-
 		id: txt-sel
 		title: Text Selection Color
 		type: variable-select
