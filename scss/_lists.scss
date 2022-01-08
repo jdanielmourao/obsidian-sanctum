@@ -282,9 +282,8 @@ li {
 
 /* Relationship Lines in Editing View */
 body:not(.relationship-lines-lp) {
-	& .mod-cm6.is-live-preview .HyperMD-list-line.cm-line { // fix the fact that fold indicators don't show at position 0
-		overflow: unset;
-		overflow-y: clip;
+	& .HyperMD-list-line.cm-line:not(.HyperMD-list-line-1) { // fix the fact that fold indicators don't show at position 0
+		overflow: hidden;
 	}
 	& .mod-cm6.is-live-preview .HyperMD-list-line.cm-line .cm-hmd-list-indent {
 		position: relative;
@@ -310,8 +309,6 @@ body:not(.relationship-lines-lp) {
 		padding-left: 4px;
 	}
 }
-
-
 
 /* ──────────────────────────────── Outliner ──────────────────────────────── */
 
@@ -382,6 +379,7 @@ span.cm-comment .list-bullet::after { // makes bullets same colors as comments w
 .markdown-source-view.mod-cm6 .cm-list-9 .list-bullet {
 	left: -1px;
 }
+
 //.markdown-source-view.mod-cm6 .HyperMD-list-line-1.cm-active > .cm-fold-indicator .collapse-icon,
 //.markdown-source-view.mod-cm6 .HyperMD-list-line-2.cm-active > .cm-fold-indicator .collapse-icon,
 //.markdown-source-view.mod-cm6 .HyperMD-list-line-3.cm-active > .cm-fold-indicator .collapse-icon,
