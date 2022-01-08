@@ -10,8 +10,9 @@ input[type="range" i] {
 
 	&::-webkit-slider-runnable-track {
 		background: var.$color-grey-2;
-		border: 1px solid var(--color-border-1);
-		height: 7px;
+		border: 1px solid var(--color-border-2);
+		outline: 1px solid var(--color-primary-0);
+		height: 5px;
 		width: 128px;
 		box-shadow: 0px 1px 1px 0px rgba(8 8 8 / 0.15) inset,
 					0px 1px 1px 0px rgba(8 8 8 / 0.15) inset,
@@ -75,11 +76,11 @@ input[type="range" i] {
 				transparent 90%, 
 				var(--color-primary-4) 90%, 
 				var(--color-primary-4) 92%,
-				transparent 92%
+				transparent 92%,
 			);
-			background-size: 62.5px 7px;
+			background-size: 63px 5px;
 			background-repeat: repeat-x;
-			min-height: 7px;
+			min-height: 5px;
 
 		.theme-dark & {
 			box-shadow: 0px 1px 1px 0px rgba(8 8 8 / 0.15) inset,
@@ -153,7 +154,7 @@ input[type="range" i] {
 		-webkit-appearance: none;
 		height: 16px;
 		width: 16px;
-		top: -6px;
+		top: -7px;
 		//margin-top: calc(-1 * var.$size-2);
 		cursor: grabbing;
 		transition: var.$duration-slow-1 var.$motion-standard-expressive;
