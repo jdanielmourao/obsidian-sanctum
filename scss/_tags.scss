@@ -12,17 +12,18 @@ div > .CodeMirror-line span.cm-hashtag-end {
 .tag:not(.token) {
 	display: inline-block;
 	background-color: rgba(var(--color-tag) / .15);
-	color: var(--text-accent);
+	color: rgba(var(--color-tag) / 1);
 	font-size: var(--font-scale-000);
 	font-weight: var(--font-medium);
 	line-height: var.$leading-0;
-	padding: var.$size-2 var.$size-3 var.$size-2 var.$size-3;
+	padding: 4px 8px 4px 8px;
 	text-align: center;
 	text-decoration: none;
 	margin: var.$size-0 var.$size-0;
 	border-radius: 16px;
+	border: 1px solid rgba(var(--color-tag) / .2);
 	transition: var.$duration-moderate-1 var.$motion-exit-productive;
-	filter: saturate(1.5);
+	filter: saturate(1);
 	
 	&:hover {
 		cursor: pointer;
