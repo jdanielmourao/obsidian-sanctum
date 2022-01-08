@@ -659,6 +659,11 @@ body.is-mobile:not(.float-button) .view-action:nth-last-of-type(4) { //floating 
 	box-shadow: var.$elevation-2;
 }
 
+body.is-mobile:not(.float-button).AT-multirow .view-action:nth-last-of-type(5), //floating button mode switch when
+body.is-mobile:not(.float-button).AT-multirow .view-action:nth-last-of-type(4) { //Advanced Mobile Toolbar is enabled
+	top: calc(100vh - 180px);
+}
+
 .is-mobile .view-action svg.reading-glasses { // visually center eye
 	transform: translateX(0px) scale(1.1) translateY(-.5px);
 }
