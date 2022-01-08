@@ -58,6 +58,7 @@ button.mod-cta {
 
 	.theme-dark & {
 		font-weight: var(--font-medium);
+		color: var(--color-primary-10);
 	}
 	&:hover {
 		background-color: var(--color-primary-4);
