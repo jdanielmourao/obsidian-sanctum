@@ -58,7 +58,7 @@ body:not(.active-line-hl) .CodeMirror-activeline .CodeMirror-linebackground {
 
 /* ───────────────── Yellow Highlight (Regular highlight 1) ───────────────── */
 .cm-s-obsidian span.cm-formatting-highlight,
- .cm-s-obsidian span.cm-highlight {
+.cm-s-obsidian span.cm-highlight {
 	background-color: unset;
 }
 .markdown-preview-view mark {
@@ -68,61 +68,95 @@ body:not(.active-line-hl) .CodeMirror-activeline .CodeMirror-linebackground {
 	vertical-align: middle;
 }
 
-.markdown-preview-view mark,
- span.cm-highlight {
-	font-weight: var(--font-regular);
-	color: var(--text-normal);
-	text-decoration: underline solid var(--color-highlight-1) 2.5px;
-	background-color: transparent;
-	background: linear-gradient(120deg,var(--color-highlight-1),var(--color-highlight-1));
-	background-position: 0 100%;
-	background-repeat: no-repeat;
-	background-size: 100% 0px;
-	transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
+.is-mobile .markdown-preview
+
+body:not(.is-mobile) {
+	.markdown-preview-view mark,
+	span.cm-highlight {
+		font-weight: var(--font-regular);
+		color: var(--text-normal);
+		text-decoration: underline solid var(--color-highlight-1) 2.5px;
+		background-color: transparent;
+		background: linear-gradient(120deg,var(--color-highlight-1),var(--color-highlight-1));
+		background-position: 0 100%;
+		background-repeat: no-repeat;
+		background-size: 100% 0px;
+		transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
+	}
+	& .markdown-preview-view mark:hover,
+	& span.cm-highlight:hover {
+		text-decoration: none;
+		background-size: 100% 100%;
+		color: var(--color-highlight-1-h);
+	}
 }
-.markdown-preview-view mark:hover,
- span.cm-highlight:hover {
-	text-decoration: none;
-	background-size: 100% 100%;
-	color: var(--color-highlight-1-h);
+.is-mobile {
+	& .markdown-preview-view mark,
+	& span.cm-highlight {
+		font-weight: var(--font-regular);
+		color: var.$color-black;
+		background-color: var(--color-highlight-1);
+		font-weight: 400;
+	}
 }
+
 
 /* ──────────────────────────── Cyan Highlight 2 ──────────────────────────── */
 
-.markdown-preview-view em > mark,
- span.cm-em.cm-highlight {
-	font-style: normal;
-	font-weight: var(--font-regular);
-	text-decoration: underline solid var(--color-highlight-2) 2.5px;
-	background: linear-gradient(120deg,var(--color-highlight-2),var(--color-highlight-2));
-	background-position: 0 100%;
-	background-repeat: no-repeat;
-	background-size: 100% 0px;
-	transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
+body:not(.is-mobile) {
+	& .markdown-preview-view em > mark,
+	& span.cm-em.cm-highlight {
+		font-style: normal;
+		font-weight: var(--font-regular);
+		text-decoration: underline solid var(--color-highlight-2) 2.5px;
+		background: linear-gradient(120deg,var(--color-highlight-2),var(--color-highlight-2));
+		background-position: 0 100%;
+		background-repeat: no-repeat;
+		background-size: 100% 0px;
+		transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
+	}
+	& .markdown-preview-view em > mark:hover,
+	& span.cm-em.cm-highlight:hover {
+		text-decoration: none;
+		background-size: 100% 100%;
+		color: var(--color-highlight-2-h);
+	}
 }
-.markdown-preview-view em > mark:hover,
- span.cm-em.cm-highlight:hover {
-	text-decoration: none;
-	background-size: 100% 100%;
-	color: var(--color-highlight-2-h);
+.is-mobile {
+	& .markdown-preview-view em > mark,
+	& span.cm-em.cm-highlight {
+		font-style: normal;
+		font-weight: var(--font-regular);
+		color: var(--text-normal);
+		background-color: var(--color-highlight-2);
+	}
 }
-
 /* ─────────────────────────── Magenta Highlight 3 ────────────────────────── */
-.markdown-preview-view strong > mark,
- span.cm-strong.cm-highlight {
-	font-weight: var(--font-regular);
-	text-decoration: underline solid var(--color-highlight-3) 2.5px;
-	background: linear-gradient(120deg,var(--color-highlight-3),var(--color-highlight-3));
-	background-position: 0 100%;
-	background-repeat: no-repeat;
-	background-size: 100% 0px;
-	transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
+body:not(.is-mobile) {
+	& .markdown-preview-view strong > mark,
+	& span.cm-strong.cm-highlight {
+		font-weight: var(--font-regular);
+		text-decoration: underline solid var(--color-highlight-3) 2.5px;
+		background: linear-gradient(120deg,var(--color-highlight-3),var(--color-highlight-3));
+		background-position: 0 100%;
+		background-repeat: no-repeat;
+		background-size: 100% 0px;
+		transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
+	}
+	& .markdown-preview-view strong > mark:hover,
+	& span.cm-strong.cm-highlight:hover {
+		text-decoration: none;
+		background-size: 100% 100%;
+		color: var(--color-highlight-3-h);
+	}
 }
-.markdown-preview-view strong > mark:hover,
- span.cm-strong.cm-highlight:hover {
-	text-decoration: none;
-	background-size: 100% 100%;
-	color: var(--color-highlight-3-h);
+.is-mobile {
+	& .markdown-preview-view strong > mark,
+	& span.cm-strong.cm-highlight {
+		font-weight: var(--font-regular);
+		background-color: var(--color-highlight-3);
+		color: var(--text-normal);
+	}
 }
 
 /* ────────────────────────────── Strikethrough ───────────────────────────── */
