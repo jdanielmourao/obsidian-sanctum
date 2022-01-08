@@ -78,7 +78,7 @@ button.mod-cta {
 		font-weight: var(--font-medium);
 		color: var(--color-primary-10);
 		background-color: rgba(var(--color-accent-d) / 1);
-		border: 1px solid rgba(var(--color-accent-d) / .3);
+		border: 1px solid var(--color-primary-0);
 
 		&:hover {
 			background-color: rgba(var(--color-accent-d) / .9);
