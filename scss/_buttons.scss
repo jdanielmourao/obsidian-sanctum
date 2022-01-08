@@ -2,11 +2,8 @@
 @use 'var';
 
 @mixin button-l {
-	border-radius: 0px;
-	padding: var.$size-3
-			 var.$size-8
-			 var.$size-3
-			 var.$size-5;
+	border-radius: 4px;
+	padding: 7px 39px 7px 15px; //take 1px from every side for the border
 	font-size: var(--font-scale-00);
 	font-weight: var(--font-regular);
 	font-family: var(--font-ui);
@@ -52,38 +49,33 @@ button.mod-warning {
 
 button.mod-cta {
 	color: var(--background-primary);
-	border-radius: 0px;
 	@include button-l;
-	background-color: var(--color-accent);
+	background-color: rgba(var(--color-accent-l) / 1);
+	border: 1px solid rgba(var(--color-accent-l) / 1);
+	text-shadow: 0 -1px rgba(0 0 0 / .3);
+	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.2) inset;
 
+	&:hover {
+		background-color: rgba(var(--color-accent-l) / .9);
+	}
+	&:active {
+		background-color: rgba(var(--color-accent-l) / 1);
+		text-shadow: none;
+		box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.2) inset,
+					0px 1px 0px 0px rgba(245 243 240 / 0.35) inset;
+	}
 	.theme-dark & {
 		font-weight: var(--font-medium);
 		color: var(--color-primary-10);
-	}
-	&:hover {
-		background-color: var(--color-primary-4);
-	}
-	&:active {
-		background-color: var(--color-primary-5);
-	}
-}
+		background-color: rgba(var(--color-accent-d) / 1);
+		border: 1px solid rgba(var(--color-accent-d) / 1);
 
-
-.modal.mod-community-theme .theme-list .community-theme {
-	body .modal.mod-publish .publish-changes-info button.publish-changes-add-linked-btn,
-	& button.mod-cta {
-		color: var(--text-normal);
-		@include button-m;
-		outline: 1px solid transparent;
-	}
-	&:hover button.mod-cta {
-		background-color: var(--color-primary-3);
-	}
-	&:hover button.mod-cta:hover {
-		background-color: var(--color-primary-4);
-	}
-	&:hover button.mod-cta:active {
-		background-color: var(--color-primary-5);
+		&:hover {
+			background-color: rgba(var(--color-accent-d) / .9);
+		}
+		&:active {
+			background-color: rgba(var(--color-accent-d) / 1);
+		}
 	}
 }
 
@@ -110,11 +102,21 @@ button.mod-cta {
 	color: var(--text-normal);
 	@include button-l;
 	background-color: var(--color-primary-2);
+	border: 1px solid var(--color-primary-2);
+	text-shadow: 0 -1px rgba(0 0 0 / .3);
+	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.1) inset;
 
 	&:hover {
-		background-color: var(--color-primary-3);
+		filter: brightness(.95);
 	}
 	&:active {
-		background-color: var(--color-primary-4);
+		background-color: var(--color-primary-2);
+		text-shadow: none;
+		box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.2) inset,
+					0px 1px 0px 0px rgba(245 243 240 / 0.35) inset;
+	}
+
+	.theme-dark & {
+		box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.2) inset;
 	}
 }
