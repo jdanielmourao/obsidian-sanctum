@@ -215,7 +215,7 @@ div.workspace-drawer-active-tab-icon svg.fullscreen { // hide "maximise"
 	width: 100%;
 	padding: 8px 14px;
 	height: auto;
-	font-size: 16px;
+	font-size: var(--font-scale-0);
 }
 
 .is-mobile .workspace-leaf-content[data-type='search'] .search-input-container input {
@@ -554,7 +554,7 @@ html .is-mobile div.menu {
 }
 
 .is-mobile .modal.mod-settings .vertical-tab-nav-item {
-	font-size: 16px;
+	font-size: var(--font-scale-0);
 	padding: 8px 16px;
 	border-left: none;
 }
@@ -565,7 +565,7 @@ html .is-mobile div.menu {
 }
 
 .is-mobile .community-plugin-info {
-	font-size: 16px;
+	font-size: var(--font-scale-0);
 	padding: 24px 38px 24px 16px;
 }
 
@@ -641,8 +641,8 @@ body.is-mobile .nav-action-button svg {
 			 var.$size-3;
 }
 
-.is-mobile .view-action:nth-last-of-type(5),
-.is-mobile .view-action:nth-last-of-type(4) { //floating button mode switch
+body.is-mobile:not(.float-button) .view-action:nth-last-of-type(5),
+body.is-mobile:not(.float-button) .view-action:nth-last-of-type(4) { //floating button mode switch
 	display: flex;
 	position: fixed;
 	justify-content: center;
