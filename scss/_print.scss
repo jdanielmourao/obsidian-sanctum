@@ -44,6 +44,7 @@
 	canvas {
 		box-sizing: border-box;
 		width: 50vw !important;
+		height: 30vw !important;
 	}
 	pre.frontmatter.language-yaml {
 		display: none;
@@ -83,23 +84,29 @@
 		opacity: 1;
 	}
 
-	mark {
+	body:not(.is-mobile) .markdown-preview-view mark {
 		font-weight: var(--font-regular);
 		color: var.$color-black;
+		background: none;
 		background-color: var(--color-highlight-1);
 		font-weight: 400;
+		text-decoration: none;
 	}
 
-	em > mark {
+	body:not(.is-mobile) .markdown-preview-view em > mark {
 		font-style: normal;
 		font-weight: var(--font-regular);
 		color: var(--text-normal);
+		background: none;
 		background-color: var(--color-highlight-2);
+		text-decoration: none;
 	}
 
-	strong > mark {
+	body:not(.is-mobile) .markdown-preview-view strong > mark {
 		font-weight: var(--font-regular);
+		background: none;
 		background-color: var(--color-highlight-3);
 		color: var(--text-normal);
+		text-decoration: none;
 	}
 }
