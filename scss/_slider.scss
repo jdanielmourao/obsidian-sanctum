@@ -92,6 +92,7 @@ input[type="range" i] {
 		box-shadow: 0px 1px 1px 0px rgba(254 254 254/ .1) inset,
 					0px -1px 1px 0px rgba(8 8 8 / 0.3) inset,
 					0px 1px 2px 0px rgba(8 8 8 / 0.2);
+		border: 1px solid var(--color-accent);
 	}
 }
 
