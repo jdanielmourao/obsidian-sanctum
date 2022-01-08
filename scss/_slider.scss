@@ -9,6 +9,201 @@ input[type="range" i] {
 	width: 128px;
 
 	&::-webkit-slider-runnable-track {
+		background: var(--color-primary-0);
+		border-bottom: 1px solid var(--color-primary-4);
+		height: 5px;
+		width: 128px;
+		background-image:
+			linear-gradient(90deg, 
+				var(--color-primary-4) 0, 
+				var(--color-primary-4) 2%, 
+				transparent 2%
+			), // limit of intermediate lines
+			linear-gradient(180deg, 
+				var(--background-primary) 30%, 
+				transparent 30%
+			), 
+			linear-gradient(90deg, 
+				transparent 50%, 
+				var(--color-primary-4) 50%, 
+				var(--color-primary-4) 52%, 
+				transparent 52%
+			), //limit of small
+			linear-gradient(180deg, 
+				var(--background-primary) 50%, 
+				transparent 50%
+			),
+			linear-gradient(90deg, 
+				transparent 10%,
+				var(--color-primary-4) 10%, 
+				var(--color-primary-4) 12%, 
+				transparent 12%, 
+	
+				transparent 20%,
+				var(--color-primary-4) 20%, 
+				var(--color-primary-4) 22%, 
+				transparent 22%, 
+	
+				transparent 30%, 
+				var(--color-primary-4) 30%,
+				var(--color-primary-4) 32%, 
+				transparent 32%, 
+	
+				transparent 40%,
+				var(--color-primary-4) 40%, 
+				var(--color-primary-4) 42%, 
+				transparent 42%, 
+	
+				transparent 60%, 
+				var(--color-primary-4) 60%, 
+				var(--color-primary-4) 62%, 
+				transparent 62%, 
+	
+				transparent 70%, 
+				var(--color-primary-4) 70%, 
+				var(--color-primary-4) 72%, 
+				transparent 72%, 
+	
+				transparent 80%, 
+				var(--color-primary-4) 80%, 
+				var(--color-primary-4) 82%, 
+				transparent 82%, 
+			
+				transparent 90%, 
+				var(--color-primary-4) 90%, 
+				var(--color-primary-4) 92%,
+				transparent 92%,
+			);
+			background-size: 63.5px 5px;
+			background-repeat: repeat-x;
+			min-height: 5px;
+	}
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		height: 16px;
+		width: 4px;
+		top: -5px;
+		//margin-top: calc(-1 * var.$size-2);
+		cursor: grabbing;
+		transition: var.$duration-slow-1 var.$motion-standard-expressive;
+		background: var(--color-accent);
+		//border: 2px solid var(--background-primary);
+		border-radius: 16px;
+		box-shadow: 0px 1px 1px 0px rgba(254 254 254/ .1) inset,
+					0px -1px 1px 0px rgba(8 8 8 / 0.3) inset,
+					0px 1px 2px 0px rgba(8 8 8 / 0.2);
+	}
+}
+
+
+
+.graph-controls input[type="range"] {
+	&::-webkit-slider-runnable-track {
+		margin-top: -5px;
+	}
+	&::-webkit-slider-thumb {
+		border-color: var(--background-primary);
+	}
+}
+
+/* Dieter Rams slider 1
+
+	&::-webkit-slider-runnable-track {
+		background: var.$color-grey-1;
+		border: 1px solid var(--color-border-1);
+		height: 16px;
+		width: 128px;
+		box-shadow: 0px 0px 3px 1px rgba(8 8 8 / 0.2) inset;
+		background-image:
+		linear-gradient(90deg, 
+			var(--color-primary-4) 0, 
+			var(--color-primary-4) 1%, 
+			transparent 1%
+		), // limit of intermediate lines
+		linear-gradient(180deg, 
+			#fefefe 50%, 
+			transparent 50%
+		), 
+		linear-gradient(90deg, 
+			transparent 50%, 
+			var(--color-primary-4) 50%, 
+			var(--color-primary-4) 51%, 
+			transparent 51%
+		), //limit of small
+		linear-gradient(180deg, 
+			#fefefe 70%, 
+			transparent 70%
+		),
+		linear-gradient(90deg, 
+			transparent 10%,
+			var(--color-primary-4) 10%, 
+			var(--color-primary-4) 11%, 
+			transparent 11%, 
+
+			transparent 20%,
+			var(--color-primary-4) 20%, 
+			var(--color-primary-4) 21%, 
+			transparent 21%, 
+
+			transparent 30%, 
+			var(--color-primary-4) 30%,
+			var(--color-primary-4) 31%, 
+			transparent 31%, 
+
+			transparent 40%,
+			var(--color-primary-4) 40%, 
+			var(--color-primary-4) 41%, 
+			transparent 41%, 
+
+			transparent 60%, 
+			var(--color-primary-4) 60%, 
+			var(--color-primary-4) 61%, 
+			transparent 61%, 
+
+			transparent 70%, 
+			var(--color-primary-4) 70%, 
+			var(--color-primary-4) 71%, 
+			transparent 71%, 
+
+			transparent 80%, 
+			var(--color-primary-4) 80%, 
+			var(--color-primary-4) 81%, 
+			transparent 81%, 
+		
+			transparent 90%, 
+			var(--color-primary-4) 90%, 
+			var(--color-primary-4) 91%, 
+			transparent 91%
+		);
+		background-size: 63px 16px;
+		background-repeat: repeat-x;
+		min-height: 16px;
+	}
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		height: 14.5px;
+		width: 2px;
+		top: 0px;
+		//margin-top: calc(-1 * var.$size-2);
+		cursor: grabbing;
+		transition: var.$duration-slow-1 var.$motion-standard-expressive;
+		background: var(--color-accent);
+		//border: 2px solid var(--background-primary);
+		border-radius: 8px;
+		box-shadow: 0px 1px 0px 0px rgba(8 8 8 / 0.2) inset,
+					0px -4px 0px 0px rgba(8 8 8 / 0.2) inset;
+*/
+
+/* Dieter Rams slider 2
+input[type="range" i] {
+	-webkit-appearance: none;
+	background-color: transparent;
+	height: var.$scale-3;
+	padding: var.$size-0;
+	cursor: default;
+	width: 128px;
+
+	&::-webkit-slider-runnable-track {
 		background: var.$color-grey-2;
 		border: 1px solid var(--color-border-2);
 		outline: 1px solid var(--color-primary-0);
@@ -166,102 +361,105 @@ input[type="range" i] {
 					0px 1px 2px 0px rgba(8 8 8 / 0.5);
 	}
 }
+*/
 
-
-
-.graph-controls input[type="range"] {
-	&::-webkit-slider-runnable-track {
-		margin-top: -5px;
-	}
-	&::-webkit-slider-thumb {
-		border-color: var(--background-primary);
-	}
-}
-
-/* Dieter Rams slider
+/* Dieter Rams slider 3
+input[type="range" i] {
+	-webkit-appearance: none;
+	background-color: transparent;
+	height: var.$scale-3;
+	padding: var.$size-0;
+	cursor: default;
+	width: 128px;
 
 	&::-webkit-slider-runnable-track {
-		background: var.$color-grey-1;
-		border: 1px solid var(--color-border-1);
-		height: 16px;
+		background: var.$color-grey-2;
+		border-bottom: 1px solid var(--color-primary-0);
+		height: 5px;
 		width: 128px;
-		box-shadow: 0px 0px 3px 1px rgba(8 8 8 / 0.2) inset;
 		background-image:
-		linear-gradient(90deg, 
-			var(--color-primary-4) 0, 
-			var(--color-primary-4) 1%, 
-			transparent 1%
-		), // limit of intermediate lines
-		linear-gradient(180deg, 
-			#fefefe 50%, 
-			transparent 50%
-		), 
-		linear-gradient(90deg, 
-			transparent 50%, 
-			var(--color-primary-4) 50%, 
-			var(--color-primary-4) 51%, 
-			transparent 51%
-		), //limit of small
-		linear-gradient(180deg, 
-			#fefefe 70%, 
-			transparent 70%
-		),
-		linear-gradient(90deg, 
-			transparent 10%,
-			var(--color-primary-4) 10%, 
-			var(--color-primary-4) 11%, 
-			transparent 11%, 
+			linear-gradient(90deg, 
+				var(--color-primary-4) 0, 
+				var(--color-primary-4) 2%, 
+				transparent 2%
+			), // limit of intermediate lines
+			linear-gradient(180deg, 
+				var(--background-primary) 30%, 
+				transparent 30%
+			), 
+			linear-gradient(90deg, 
+				transparent 50%, 
+				var(--color-primary-4) 50%, 
+				var(--color-primary-4) 52%, 
+				transparent 52%
+			), //limit of small
+			linear-gradient(180deg, 
+				var(--background-primary) 50%, 
+				transparent 50%
+			),
+			linear-gradient(90deg, 
+				transparent 10%,
+				var(--color-primary-4) 10%, 
+				var(--color-primary-4) 12%, 
+				transparent 12%, 
+	
+				transparent 20%,
+				var(--color-primary-4) 20%, 
+				var(--color-primary-4) 22%, 
+				transparent 22%, 
+	
+				transparent 30%, 
+				var(--color-primary-4) 30%,
+				var(--color-primary-4) 32%, 
+				transparent 32%, 
+	
+				transparent 40%,
+				var(--color-primary-4) 40%, 
+				var(--color-primary-4) 42%, 
+				transparent 42%, 
+	
+				transparent 60%, 
+				var(--color-primary-4) 60%, 
+				var(--color-primary-4) 62%, 
+				transparent 62%, 
+	
+				transparent 70%, 
+				var(--color-primary-4) 70%, 
+				var(--color-primary-4) 72%, 
+				transparent 72%, 
+	
+				transparent 80%, 
+				var(--color-primary-4) 80%, 
+				var(--color-primary-4) 82%, 
+				transparent 82%, 
+			
+				transparent 90%, 
+				var(--color-primary-4) 90%, 
+				var(--color-primary-4) 92%,
+				transparent 92%,
+			);
+			background-size: 63px 5px;
+			background-repeat: repeat-x;
+			min-height: 5px;
 
-			transparent 20%,
-			var(--color-primary-4) 20%, 
-			var(--color-primary-4) 21%, 
-			transparent 21%, 
-
-			transparent 30%, 
-			var(--color-primary-4) 30%,
-			var(--color-primary-4) 31%, 
-			transparent 31%, 
-
-			transparent 40%,
-			var(--color-primary-4) 40%, 
-			var(--color-primary-4) 41%, 
-			transparent 41%, 
-
-			transparent 60%, 
-			var(--color-primary-4) 60%, 
-			var(--color-primary-4) 61%, 
-			transparent 61%, 
-
-			transparent 70%, 
-			var(--color-primary-4) 70%, 
-			var(--color-primary-4) 71%, 
-			transparent 71%, 
-
-			transparent 80%, 
-			var(--color-primary-4) 80%, 
-			var(--color-primary-4) 81%, 
-			transparent 81%, 
-		
-			transparent 90%, 
-			var(--color-primary-4) 90%, 
-			var(--color-primary-4) 91%, 
-			transparent 91%
-		);
-		background-size: 63px 16px;
-		background-repeat: repeat-x;
-		min-height: 16px;
+			.theme-dark & {
+				background-color: var(--color-primary-2);
+				border-bottom: 1px solid var(--color-primary-1);
+			}
 	}
 	&::-webkit-slider-thumb {
 		-webkit-appearance: none;
-		height: 14.5px;
-		width: 2px;
-		top: 0px;
+		height: 16px;
+		width: 4px;
+		top: -7px;
 		//margin-top: calc(-1 * var.$size-2);
 		cursor: grabbing;
 		transition: var.$duration-slow-1 var.$motion-standard-expressive;
 		background: var(--color-accent);
 		//border: 2px solid var(--background-primary);
-		border-radius: 8px;
-		box-shadow: 0px 1px 0px 0px rgba(8 8 8 / 0.2) inset,
-					0px -4px 0px 0px rgba(8 8 8 / 0.2) inset;
-*/
+		border-radius: 16px;
+		box-shadow: 0px 1px 1px 0px rgba(254 254 254/ .1) inset,
+					0px -1px 1px 0px rgba(8 8 8 / 0.3) inset,
+					0px 1px 2px 0px rgba(8 8 8 / 0.2);
+	}
+}*/
