@@ -86,7 +86,7 @@
 	margin: var.$size-1
 			var.$size-0;
 	cursor: default;
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	border-left: 3px solid transparent;
 	color: var(--text-muted);
 }
@@ -111,10 +111,10 @@
 	border-top: 1px solid var(--color-border-1);
 
 	& .setting-item-name {
-		font-size: var.$font-scale-0;
+		font-size: var(--font-scale-0);
 	}
 	& .setting-item-description {
-		font-size: var.$font-scale-00;
+		font-size: var(--font-scale-00);
 	}
 	& .setting-item-control .search-input-container {
 		margin-bottom: 0;
@@ -123,7 +123,7 @@
 }
 
 .vertical-tab-header-group-title { // settings left panel group title
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	font-weight: var(--font-semi-bold);
 	color: var(--text-muted);
 	text-transform: capitalize;
@@ -171,7 +171,7 @@
 				&::after {
 					content: "v0.5.7";
 					font-family: var(--menu-font-family);
-					font-size: var.$font-scale-000;
+					font-size: var(--font-scale-000);
 					color: var(--text-normal);
 					background-color: var(--color-primary-0);
 					position: absolute;

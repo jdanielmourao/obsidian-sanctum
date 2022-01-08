@@ -23,7 +23,7 @@ div > .CodeMirror-line span.cm-hashtag-end {
 	display: inline-block;
 	background-color: var(--color-accent);
 	color: var(--background-primary);
-	font-size: var.$font-scale-000;
+	font-size: var(--font-scale-000);
 	font-weight: var(--font-medium);
 	line-height: var.$leading-0;
 	padding: var.$size-2 var.$size-3 var.$size-2 var.$size-3;

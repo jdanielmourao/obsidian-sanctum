@@ -35,7 +35,7 @@
 .workspace-leaf.mod-active .view-header-title {
 	white-space: pre;
 	overflow: auto;
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	font-weight: var(--font-semi-bold);
 	line-height: var.$leading-3;
 	letter-spacing: var.$tracking-0;
@@ -157,7 +157,7 @@ body:not(.is-mobile) {
 
 .embedded-backlinks {
 	& .tree-item-inner {
-		font-size: var.$font-scale-00;
+		font-size: var(--font-scale-00);
 		margin-left: 0;
 	}
 	& .search-result-file-match:after {

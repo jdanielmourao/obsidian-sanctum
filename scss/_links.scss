@@ -9,7 +9,7 @@
 	color: var(--text-faint);
 	opacity: 1;
 	font-family: var(--font-editor);
-	font-size: var.$font-scale-0;
+	font-size: var(--font-scale-0);
 
 	&:hover {
 		color: var(--text-muted);

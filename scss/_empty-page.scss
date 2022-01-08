@@ -55,11 +55,11 @@
 			display: flex;
 			align-self: center;
 			content: "Sanctum v0.5.7";
-			padding: 4px 8px;
+			padding: 4px 8px 3px;
 			background-color: var(--color-primary-0);
 			border-radius: 8px;
 			border: 1px solid var(--color-border-1);
-			font-size: var.$font-scale-000;
+			font-size: var(--font-scale-000);
 			line-height: var.$leading-0;
 			color: var(--text-faint);
 			margin-right: 4px; //optically centers the element
@@ -71,11 +71,13 @@
 
 			.is-mobile & {
 				margin-right: 0;
+				border-color: var(--color-border-1);
+				font-weight: 400;
 			}
 		}
 	}
 	&-action-list {
-		font-size: var.$font-scale-0;
+		font-size: var(--font-scale-0);
 		font-weight: 400;
 		line-height: var.$leading-3;
 		color: var(--text-faint);
@@ -88,7 +90,7 @@
 	}
 	&-action {
 		cursor: pointer;
-		font-size: var.$font-scale-0;
+		font-size: var(--font-scale-0);
 		line-height: var.$leading-3;
 		padding: 4px 0;
 
@@ -103,7 +105,8 @@
 		.is-mobile & {
 			padding: 4px 32px;
 			border-radius: 8px;
-			font-size: var.$font-scale-00;
+			font-size: var(--font-scale-00);
+			border: 1px solid var(--color-border-1);
 		}
 	}
 	&-action:hover {

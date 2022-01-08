@@ -53,7 +53,7 @@
 .is-mobile .nav-folder-title,
 .is-mobile .outline,
 .is-mobile .tag-container {
-	font-size: var.$font-scale-0;
+	font-size: var(--font-scale-0);
 	line-height: var.$leading-1;
 }
 
@@ -84,7 +84,7 @@
 
 	& .workspace-drawer-header-icon:before {
 		content: "Click the icon to unpin →";
-		font-size: var.$font-scale-00;
+		font-size: var(--font-scale-00);
 		line-height: var.$leading-0;
 	}
 
@@ -163,7 +163,7 @@ div.workspace-drawer.is-pinned.mod-left .workspace-drawer-active-tab-header {
 		border-bottom: 1px solid var(--color-border-1);
 
 		& .workspace-drawer-active-tab-title {
-			font-size: var.$font-scale-2;
+			font-size: var(--font-scale-2);
 			line-height: var.$leading-2;
 		}
 	}
@@ -283,7 +283,7 @@ body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
 }
 
 .is-mobile .vertical-tab-header-group-title {
-	font-size: var.$font-scale-0;
+	font-size: var(--font-scale-0);
 	font-weight: var(--font-semi-bold);
 	color: var(--text-muted);
 	text-transform: uppercase;
@@ -296,7 +296,7 @@ body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
 .is-mobile .modal.mod-settings .vertical-tab-header:before { //adds the "Settings" portion at the top of the mobile menu
 	content: "Settings";
 	font-weight: var(--font-semi-bold);
-	font-size: var.$font-scale-2;
+	font-size: var(--font-scale-2);
 	position: sticky;
 	display: flex;
 	height: 48px;
@@ -395,7 +395,7 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 
 .is-mobile .workspace-leaf .view-header-title {
 	width: 60vw;
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	text-align: center;
 }
 
@@ -579,7 +579,7 @@ html .is-mobile div.menu {
  .workspace-drawer-active-tab-title {
 	color: var(--text-muted);
 	flex: 1 0 0;
-	font-size: var.$font-scale-0;
+	font-size: var(--font-scale-0);
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -622,7 +622,7 @@ body.is-mobile .nav-action-button svg {
 }
 
 .is-mobile .suggestion-item {
-	font-size: var.$font-scale-0;
+	font-size: var(--font-scale-0);
 	padding: var.$size-3;
 	border-radius: 0px;
 }
@@ -632,7 +632,7 @@ body.is-mobile .nav-action-button svg {
 			 var.$size-3;
 	margin-right: var.$size-2;
 	float: right;
-	font-size: var.$font-scale-000;
+	font-size: var(--font-scale-000);
 	font-family: var(--font-mono);
 }
 

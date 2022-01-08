@@ -13,7 +13,7 @@ input[type='number'] {
 	color: var(--text-normal);
 	font-family: var(--font-ui);
 	padding: var.$size-3 var.$size-5;
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	border-radius: 0px;
 	outline: none;
 	height: var.$scale-3;
@@ -50,7 +50,7 @@ input[type='number'] {
 	}
 	& .document-search-button {
 		height: var.$scale-3;
-		font-size: var.$font-scale-00;
+		font-size: var(--font-scale-00);
 		padding: var.$size-1
 				 var.$size-3;
 		color: var(--text-muted);
@@ -100,7 +100,7 @@ body:not(.is-mobile) .document-search, body:not(.is-mobile) .document-replace {
 }
 //global search individual result
 .search-result-file-matches {
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	margin-bottom: 4px;
 	padding-left: 4px;
 	padding-bottom: 4px;
@@ -146,7 +146,7 @@ body:not(.is-mobile) .document-search, body:not(.is-mobile) .document-replace {
 
 .search-empty-state { // no results
 	color: var(--text-muted);
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	margin: var.$size-0
 			var.$size-5
 			var.$size-3

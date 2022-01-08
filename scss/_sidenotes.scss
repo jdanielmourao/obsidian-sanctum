@@ -19,7 +19,7 @@ aside {
 	text-decoration: none;
 	text-align: start;
 	font-weight: unset;
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	background-color: transparent;
 	border-left: 1.5px solid var(--color-accent);
 }
@@ -44,7 +44,7 @@ aside {
 	background-color: transparent;
 	text-decoration: unset;
 	text-align: start; // aligns left
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	font-weight: unset;
 	white-space: normal;
 	word-break: break-word;
@@ -71,7 +71,7 @@ aside {
 	background-color: transparent;
 	text-decoration: unset;
 	text-align: start; /* aligns left */
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	font-weight: unset;
 	text-align: start;
 }
@@ -127,7 +127,7 @@ aside {
 		padding-top: var.$size-3;
 		// border-right: 1.5px solid #{var.$80};
 		border-radius: 0px;
-		font-size: var.$font-scale-00;
+		font-size: var(--font-scale-00);
 		width: 300px;
 		padding: var.$size-0
 				 var.$size-0
@@ -154,7 +154,7 @@ aside {
 	text-decoration: none;
 	text-align: start;
 	font-weight: unset;
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	background-color: transparent;
 	border-left: 1.5px solid var(--color-accent);
 

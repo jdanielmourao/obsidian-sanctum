@@ -2,12 +2,12 @@
 
 //code in footnotes
 .markdown-preview-view .footnotes code {
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 }
 
 // footnotes preview
 .markdown-preview-section .footnotes {
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	text-align: justify;
 	hyphens: auto;
 }
@@ -26,7 +26,7 @@
 // applies to number reference in body text. Pandoc citation section overrides this
 .cm-s-obsidian span.cm-footref,
 .cm-s-obsidian span.cm-blockid {
-	font-size: var.$font-scale-000;
+	font-size: var(--font-scale-000);
 	vertical-align: text-top;
 	margin-top: -0.1rem; // aligns to the top of letters
 }
@@ -37,7 +37,7 @@
 
 .footnotes ol > li::marker {
 	color: var(--text-faint);
-	font-size: var.$font-scale-000;
+	font-size: var(--font-scale-000);
 }
 
 .footnote-backref {

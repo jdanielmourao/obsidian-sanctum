@@ -20,7 +20,7 @@
 	font-variant-ligatures: no-common-ligatures;
 	font-family: var(--font-mono);
 	font-weight: var(--font-medium);
-	font-size: var.$font-scale-0;
+	font-size: var(--font-scale-0);
 	line-height: var.$leading-2;
 	letter-spacing: var.$tracking-2;
 	border-radius: 3px;
@@ -54,7 +54,7 @@ pre[class*=language-] {
 
 .cm-s-obsidian span.cm-inline-code,
 .markdown-preview-view span.cm-inline-code {
-	font-size: var.$font-scale-0;
+	font-size: var(--font-scale-0);
 	line-height: var.$leading-0;
 }
 

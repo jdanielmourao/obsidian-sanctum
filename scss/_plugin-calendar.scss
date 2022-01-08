@@ -71,7 +71,7 @@
 #calendar-container {
 	padding: var.$size-0
 			 var.$size-0;
-	font-size: var.$font-scale-000;
+	font-size: var(--font-scale-000);
 
 	--color-background-day-empty: var(--background-secondary-alt);
 	--color-background-day-active: var(--background-primary-alt);
@@ -98,7 +98,7 @@
 		border-radius: 4px;
 	}
 	.is-mobile & .day {
-		font-size: var.$font-scale-00;
+		font-size: var(--font-scale-00);
 	}
 	& .day:hover {
 		background-color: var(--color-hover);
@@ -110,7 +110,7 @@
 		border-top: 1.5px solid var(--color-border-1);
 	}
 	& tr th {
-		font-size: calc(var.$font-scale-000 - 3px);
+		font-size: calc(var(--font-scale-000) - 3px);
 		font-weight: var(--font-semi-bold);
 		padding-top: var.$size-4;
 	}
@@ -129,12 +129,12 @@
 		width: 100%;
 	}
 	& .reset-button {
-		font-size: calc(var.$font-scale-000 - 2px);
+		font-size: calc(var(--font-scale-000) - 2px);
 	}
 	& h3,
 	& span.month {
 		font-weight: var(--font-regular);
-		font-size: var.$font-scale-0;
+		font-size: var(--font-scale-0);
 	}
 	& .arrow:hover > svg {
 		color: var(--color-arrow-hover);

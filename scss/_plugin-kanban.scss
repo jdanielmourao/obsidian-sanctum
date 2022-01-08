@@ -68,7 +68,7 @@ body .kanban-plugin__grow-wrap:after {
 	padding: var.$size-2
 			 var.$size-3;
 	font: inherit;
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	overflow: hidden;
 	overflow-wrap: break-word;
 	white-space: pre-wrap;
@@ -111,7 +111,7 @@ body .kanban-plugin__drag-container > .kanban-plugin__item-wrapper > .kanban-plu
 }
 
 .kanban-plugin__markdown-preview-view code {
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 }
 
 body .kanban-plugin__markdown-preview-view {

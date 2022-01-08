@@ -60,7 +60,7 @@
 	transition: var.$duration-fast-1 var.$motion-standard-expressive;
 
 	& div.setting-item .setting-item-name {
-		font-size: var.$font-scale-00;
+		font-size: var(--font-scale-00);
 	}
 	&.is-close {
 		min-width: inherit;
@@ -86,7 +86,7 @@
 		}
 	}
 	& .tree-item-self {
-		font-size: var.$font-scale-00;
+		font-size: var(--font-scale-00);
 		padding-left: 0;
 	}
 	& .tree-item-icon.collapse-icon {

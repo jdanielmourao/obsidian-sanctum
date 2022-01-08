@@ -29,7 +29,7 @@
 
 .community-plugin-search-summary { //"showing x plugins:"
 	color: var(--text-faint);
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 }
 
 .community-plugin-item {
@@ -49,7 +49,7 @@
 div.community-plugin-item .community-plugin-author,
 div.community-plugin-item .community-plugin-desc,
 div.community-plugin-item .community-plugin-version {
-	font-size: var.$font-scale-000;
+	font-size: var(--font-scale-000);
 	line-height: var.$leading-0;
 	color: var(--text-muted);
 }
@@ -67,7 +67,7 @@ div.community-plugin-item .community-plugin-version {
 
 .community-plugin-name {
 	line-height: var.$leading-2;
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	font-weight: var(--font-medium);
 
 	& .flair.mod-pop {

@@ -17,7 +17,7 @@
 		padding-bottom: var.$size-5;
 		padding-top: var.$size-0 !important;
 		padding: var.$size-6;
-		font-size: calc(var.$font-scale-0 - 0.1rem);
+		font-size: calc(var(--font-scale-0) - 0.1rem);
 	}
 	&.is-loaded .markdown-embed-link { //fixes link icon position
 		top: 16px;

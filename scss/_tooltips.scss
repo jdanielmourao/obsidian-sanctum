@@ -10,7 +10,7 @@
 	box-shadow: var.$elevation-1;
 	background-color: var(--text-normal);
 	color: var(--color-primary-0);
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	font-weight: 400;
 	line-height: 20px;
 	border-radius: 3px;

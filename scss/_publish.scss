@@ -135,7 +135,7 @@ html .site-body .markdown-preview-view .tag:not(.token) {
 	border-color: transparent;
 	color: var(--color-primary-10);
 	padding: 0 8px;
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 }
 html .site-body * {
 	scrollbar-width: 8px;

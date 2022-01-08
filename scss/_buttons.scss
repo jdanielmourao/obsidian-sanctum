@@ -7,7 +7,7 @@
 			 var.$size-8
 			 var.$size-3
 			 var.$size-5;
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	font-weight: var(--font-regular);
 	font-family: var(--font-ui);
 	//border: 1px solid rgba(var(--rgb-primary-10), .2);
@@ -21,7 +21,7 @@
 			 var.$size-5
 			 var.$size-2
 			 var.$size-5;
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	font-weight: var(--font-regular);
 	font-family: var(--font-ui);
 	//border: 1px solid rgba(var(--rgb-primary-10), .2);
@@ -35,7 +35,7 @@
 			 var.$size-2
 			 var.$size-0
 			 var.$size-2;
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	font-weight: var(--font-regular);
 	font-family: var(--font-ui);
 	//border: 1px solid rgba(var(--rgb-primary-10), .2);

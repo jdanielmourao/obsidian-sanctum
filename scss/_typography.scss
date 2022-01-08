@@ -1,5 +1,25 @@
 @use 'var';
 
+/* ──────────────────────────── Mobile font sizes ─────────────────────────── */
+
+@media (max-width: 400pt) {
+	.is-mobile {
+		--font-scale-000: 	calc(.75rem * .875);
+		--font-scale-00: 	calc(.875 * .875);
+		--font-scale-0: 	calc(1rem * .875);
+		--font-scale-1: 	calc(1.125rem * .875);
+		--font-scale-2:  	calc(1.25rem * .875);
+		--font-scale-3:   	calc(1.5rem * .875);
+		--font-scale-4:  	calc(1.75rem * .875);
+		--font-scale-5:     calc(2rem * .875);
+		--font-scale-6:  	calc(2.25rem * .875);
+		--font-scale-7: 	calc(2.625rem * .875);
+		--font-scale-8:     calc(3rem * .875);
+		--font-scale-9: 	calc(3.375rem * .875);
+		--font-scale-10: 	calc(3.75rem * .875);
+	}
+}
+
 /* ───────────────────────────────── UI Font ──────────────────────────────── */
 body {
 	font-feature-settings: 'zero', 'ss05', 'ss02' on;
@@ -9,7 +29,7 @@ body {
 		font-family: var(--font-ui);
 		font-feature-settings: "zero", "ss05" on;
 		font-weight:  var(--font-regular);
-		font-size: var.$font-scale-00;
+		font-size: var(--font-scale-00);
 		line-height: var.$leading-2;
 		letter-spacing: var.$tracking-1;
 		font-variant-ligatures: no-common-ligatures;
@@ -367,26 +387,26 @@ body {
 	& table,
 	& li,
 	& p {
-		font-size: var.$font-scale-0;
+		font-size: var(--font-scale-0);
 		color: var(--text-normal);
 	}
 	& h1 {
-		font-size: var.$font-scale-6;
+		font-size: var(--font-scale-6);
 	}
 	& h2 {
-		font-size: var.$font-scale-5;
+		font-size: var(--font-scale-5);
 	}
 	& h3 {
-		font-size: var.$font-scale-4;
+		font-size: var(--font-scale-4);
 	}
 	& h4 {
-		font-size: var.$font-scale-3;
+		font-size: var(--font-scale-3);
 	}
 	& h5 {
-		font-size: var.$font-scale-2;
+		font-size: var(--font-scale-2);
 	}
 	& h6 {
-		font-size: var.$font-scale-1;
+		font-size: var(--font-scale-1);
 	}
 }
 

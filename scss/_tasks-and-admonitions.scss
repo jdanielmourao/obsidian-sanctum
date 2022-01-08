@@ -140,7 +140,7 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 .markdown-preview-view li[data-task="n"] .task-list-item-checkbox:checked::before {
 	content: "📜";
 	background: transparent;
-	font-size: var.$font-scale-0;
+	font-size: var(--font-scale-0);
 	transform: scale(0.85) translateY(-5px) translateX(-4px);
 	color: var(--background-primary);
 }

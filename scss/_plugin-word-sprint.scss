@@ -13,7 +13,7 @@ body div#wordsprint div#sprintActionPanel button:not(.statsTab):not(.goalsTab) {
 			 var.$size-8
 			 var.$size-3
 			 var.$size-5;
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	font-weight: var(--font-regular);
 	margin: var.$size-2 var.$size-5;
 }
@@ -35,7 +35,7 @@ div#wordsprint button.goalsTab {
 			 var.$size-8
 			 var.$size-3
 			 var.$size-5;
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	font-weight: var(--font-regular);
 }
 

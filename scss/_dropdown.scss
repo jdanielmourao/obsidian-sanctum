@@ -3,7 +3,7 @@
 select.dropdown {
 	appearance: none;
 	font-family: var(--font-ui);
-	font-size: var.$font-scale-00;
+	font-size: var(--font-scale-00);
 	color: var(--text-normal);
 	line-height: var.$leading-2;
 	padding: var.$size-2 var.$size-6 var.$size-2 var.$size-5;

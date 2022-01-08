@@ -25,7 +25,7 @@ body .checklist-plugin-main {
 		cursor: pointer;
 		transition: background-color var.$duration-fast-2 var.$motion-standard-expressive;
 		padding: var.$size-0;
-		font-size: var.$font-scale-00;
+		font-size: var(--font-scale-00);
 		line-height: var.$leading-3;
 		margin-bottom: var.$size-1;
 	}
@@ -78,7 +78,7 @@ body .checklist-plugin-main {
 		padding: var(--todoList-countPadding);
 		background: var(--color-primary-1);
 		border-radius: var.$size-7;
-		font-size: var.$font-scale-000;
+		font-size: var(--font-scale-000);
 		font-weight: var(--font-light);
 	}
 	& header.group-header.page {
@@ -86,7 +86,7 @@ body .checklist-plugin-main {
 		color: var(--text-normal);
 		transition: opacity var.$duration-moderate-1 var.$motion-standard-productive;
 		cursor: pointer;
-		font-size: var.$font-scale-0;
+		font-size: var(--font-scale-0);
 		font-weight: var(--font-regular);
 	}
 	& .header {
@@ -108,7 +108,7 @@ body .checklist-plugin-main {
 		background-color: transparent;
 		color: var(--text-normal);
 		padding: 0px 8px 0px 8px;
-		font-size: var.$font-scale-00;
+		font-size: var(--font-scale-00);
 
 		& title {
 			background-color: var(--color-accent);
