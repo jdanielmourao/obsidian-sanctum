@@ -68,8 +68,6 @@ body:not(.active-line-hl) .CodeMirror-activeline .CodeMirror-linebackground {
 	vertical-align: middle;
 }
 
-.is-mobile .markdown-preview
-
 body:not(.is-mobile) {
 	.markdown-preview-view mark,
 	span.cm-highlight {
