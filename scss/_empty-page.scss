@@ -35,6 +35,10 @@
 			drop-shadow(-1px 1px 0px #312F30)
 			drop-shadow(1px 1px 0px #312F30)
 		}
+
+		.is-mobile & {
+			transform: translateY(8px) translateX(0px);
+		}
 	}
 
 	&-title {
@@ -64,6 +68,10 @@
 			.theme-light & {
 				border-color: var(--color-border-2);
 			}
+
+			.is-mobile & {
+				margin-right: 0;
+			}
 		}
 	}
 	&-action-list {
@@ -73,6 +81,10 @@
 		color: var(--text-faint);
 		margin-top: 16px;
 		padding: 8px;
+
+		.is-mobile & {
+			margin-top: 8px;
+		}
 	}
 	&-action {
 		cursor: pointer;
@@ -86,6 +98,12 @@
 			display: inline-flex;
 			content: "↳";
 			padding-right: 4px;
+		}
+
+		.is-mobile & {
+			padding: 4px 32px;
+			border-radius: 8px;
+			font-size: var.$font-scale-00;
 		}
 	}
 	&-action:hover {
