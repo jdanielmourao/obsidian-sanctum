@@ -184,16 +184,24 @@
 				}
 			}
 		}
-		& .modal-button-container button {
-			line-height: var.$leading-0;
-			background-color: var(--color-accent);
-			color: var(--color-primary-10);
-			border-radius: 4px;
-			padding: var.$size-2 var.$size-5;
+		& .modal-button-container {
+		
+			& button,
+			& button.mod-cta {
+				line-height: var.$leading-0;
+				border-radius: 4px;
+				margin: 0 2px;
+			}
 
-			&.mod-cta {
-				background-color: var(--color-primary-3);
-				color: var(--text-normal);
+			& button:not(.mod-cta) {
+				padding: 7px 39px 7px 15px;
+				font-size: var(--font-scale-00);
+				font-weight: var(--font-regular);
+				font-family: var(--font-ui);
+				background-color: var(--color-accent);
+				color: var.$color-white;
+				text-shadow: 0 1px rgba(black, .3);
+				box-shadow: 0px 2px 0px 0px rgba(8 8 8 / 0.2) inset;
 			}
 		}
 	}
