@@ -391,22 +391,22 @@ body {
 		color: var(--text-normal);
 	}
 	& h1 {
-		font-size: var(--font-scale-6);
+		font-size: var(--heading-1);
 	}
 	& h2 {
-		font-size: var(--font-scale-5);
+		font-size: var(--heading-2);
 	}
 	& h3 {
-		font-size: var(--font-scale-4);
+		font-size: var(--heading-3);
 	}
 	& h4 {
-		font-size: var(--font-scale-3);
+		font-size: var(--heading-4);
 	}
 	& h5 {
-		font-size: var(--font-scale-2);
+		font-size: var(--heading-5);
 	}
 	& h6 {
-		font-size: var(--font-scale-1);
+		font-size: var(--heading-6);
 	}
 }
 
