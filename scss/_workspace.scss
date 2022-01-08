@@ -649,6 +649,10 @@ body:not(.no-sanctum-icons)
 	line-height: 23px; //fixes vertical centering
 	//border:none;
 
+	.is-mobile & {
+		line-height: 2.7;
+	}
+
 	&:focus {
 		background-color: transparent;
 	}
@@ -693,7 +697,7 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 }
 
 // File selected
-.nav-file-title.is-active {
+.nav-file .nav-file-title.is-active {
 	background-color: var(--color-primary-8);
 	color: var(--background-primary);
 	//border-radius: 4px;
@@ -701,9 +705,21 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 	font-weight: 400;
 	border-radius: 4px;
 
+	body.is-mobile & {
+		background-color: var(--color-primary-8);
+
+		& .nav-file-title-content {
+			color: var(--background-primary);
+		}
+	}
+
 	& .nav-file-title-content::before {
 		color: var(--color-primary-0);
 		border:none;
+
+		body.is-mobile & {
+			color: var(--background-primary);
+		}
 	}
 }
 
