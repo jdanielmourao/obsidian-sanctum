@@ -22,10 +22,16 @@ input[type='number'] {
 	border-color: transparent;
 	border-bottom: 1px solid var(--color-border-2);
 
+	&:hover {
+		background-color: var(--color-hover);
+	}
 	&:focus {
 		border-bottom: 0px solid transparent;
 		outline: 1px solid var(--color-blue-5);
 		border: none;
+	}
+	&:active {
+		background-color: var(--color-primary-0);
 	}
 }
 
