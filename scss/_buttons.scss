@@ -44,16 +44,38 @@ button.mod-warning {
 	background-color: var(--background-modifier-error);
 	color: var(--background-primary);
 	text-shadow: 0 -1px rgba(0 0 0 / .3);
-	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.2) inset;
+	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.2) inset,
+				0 1px 3px 1px rgba(0 0 0 / .1);
 	@include button-l;
-	
+	background: linear-gradient(0deg, 
+				rgba(241 81 72 / 1) 0%, 
+				rgba(200 43 41 / .8) 100%,
+				);
+
 	&:hover {
-		filter: brightness(.95);
+		background: none;
+		background-color: var(--background-modifier-error);
+		text-shadow: none;
 	}
 	&:active {
+		background-color: var(--background-modifier-error);
 		text-shadow: none;
 		box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.2) inset,
-					0px 1px 0px 0px rgba(245 243 240 / 0.35) inset;
+					0px 1px 3px 1px rgba(8 8 8 / 0.2) inset;
+		border-color: var(--color-primary-0);
+	}
+	.theme-dark & {
+		text-shadow: 0 1px rgba(200 43 41 / 1),
+					 0 -1px rgba(241 81 72 / .8);
+
+		&:hover {
+			text-shadow: none;
+		}
+		&:active {
+			background-color: var(--background-modifier-error);
+			box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.5) inset,
+						0px 1px 3px 1px rgba(8 8 8 / 0.5) inset;
+		}
 	}
 }
 
@@ -62,29 +84,45 @@ button.mod-cta {
 	@include button-l;
 	background-color: rgba(var(--color-accent-l) / 1);
 	border: 1px solid rgba(var(--color-accent-l) / 1);
-	text-shadow: 0 -1px rgba(0 0 0 / .3);
-	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.2) inset;
-
+	text-shadow: 0 -1px rgba(0 0 0 / .2);
+	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.2) inset,
+				0 1px 3px 1px rgba(0 0 0 / .1);
+	background: linear-gradient(0deg, 
+				rgba(var(--color-accent-l) / .9) 0%, 
+				rgba(var(--color-accent-l) / 1) 100%,
+				);
 	&:hover {
-		background-color: rgba(var(--color-accent-l) / .9);
+		background: none;
+		background-color: rgba(var(--color-accent-l) / 1);
+		text-shadow: none;
 	}
 	&:active {
 		background-color: rgba(var(--color-accent-l) / 1);
 		text-shadow: none;
 		box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.2) inset,
-					0px 1px 0px 0px rgba(245 243 240 / 0.35) inset;
+					0px 1px 3px 1px rgba(8 8 8 / 0.2) inset;
+		border-color: var(--color-primary-0);
 	}
 	.theme-dark & {
 		font-weight: var(--font-medium);
-		color: var(--color-primary-10);
+		color: var(--color-primary-9);
 		background-color: rgba(var(--color-accent-d) / 1);
 		border: 1px solid var(--color-primary-0);
-
+		box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.2) inset,
+					0 1px 3px 1px rgba(0 0 0 / .1);
+		background: linear-gradient(0deg, 
+		rgba(var(--color-accent-d) / .8) 0%, 
+		rgba(var(--color-accent-d) / 1) 100%,
+		);
 		&:hover {
-			background-color: rgba(var(--color-accent-d) / .9);
+			background: none;
+			background-color: rgba(var(--color-accent-d) / 1);
+			text-shadow: none;
 		}
 		&:active {
 			background-color: rgba(var(--color-accent-d) / 1);
+			box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.2) inset,
+			0px 1px 3px 1px rgba(8 8 8 / 0.3) inset;
 		}
 	}
 }
@@ -94,24 +132,53 @@ button.mod-cta {
 .modal.mod-community-theme .setting-item-control button.clickable-icon {
 	color: var(--text-muted);
 	@include button-s;
-	background-color: var(--color-primary-2);
 	padding: 2px 4px;
-	border: 1px solid var(--color-primary-3);
-	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.1) inset;
 	line-height: .9;
+	background-color: var(--color-primary-2);
+	border: 1px solid var(--color-primary-3);
+	text-shadow: 0 1px rgba(8 8 8 / .2),
+				 0 -1px rgba(254 254 254 / 1);
+	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.1) inset,
+				0 2px 5px 1px rgba(0 0 0 /.1);
+	background: linear-gradient(0deg, 
+				rgba(245 243 240 / .1) 0%, 
+				rgba(226 223 220 / 1) 100%,
+				);
 
 	&:hover {
-		filter: brightness(.95);
+		background: none;
+		background-color: var(--color-primary-2);
+		text-shadow: none;
 	}
 	&:active {
 		background-color: var(--color-primary-2);
 		text-shadow: none;
 		box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.2) inset,
-					0px 1px 0px 0px rgba(245 243 240 / 0.35) inset;
+					0px 1px 3px 1px rgba(8 8 8 / 0.2) inset;
+		border-color: var(--color-primary-0);
 	}
-
 	.theme-dark & {
-		box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.2) inset;
+		background: linear-gradient(0deg, 
+		rgba(79 76 77 / .8) 0%,
+		rgba(49 47 48 / 1) 100%,
+		);
+		box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.5) inset,
+				0 1px 3px 1px rgba(0 0 0 / .1);
+		border: 1px solid var(--color-primary-0);
+
+		&:hover {
+			background: none;
+			background-color: var(--color-primary-2);
+			text-shadow: none;
+			border-color: var(--color-primary-0);
+		}
+		&:active {
+			background-color: var(--color-primary-2);
+			text-shadow: none;
+			box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.5) inset,
+						0px 1px 3px 1px rgba(8 8 8 / 0.5) inset;
+			border-color: var(--color-primary-0);
+		}
 	}
 }
 
@@ -130,20 +197,48 @@ button.mod-cta {
 	@include button-l;
 	background-color: var(--color-primary-2);
 	border: 1px solid var(--color-primary-3);
-	text-shadow: 0 -1px rgba(254 254 254 / .3);
-	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.1) inset;
+	text-shadow: 0 1px rgba(8 8 8 / .2),
+				 0 -1px rgba(254 254 254 / 1);
+	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.1) inset,
+				0 2px 5px 1px rgba(0 0 0 /.1);
+	background: linear-gradient(0deg, 
+				rgba(245 243 240 / .1) 0%, 
+				rgba(226 223 220 / 1) 100%,
+				);
 
 	&:hover {
-		filter: brightness(.95);
+		background: none;
+		background-color: var(--color-primary-2);
+		text-shadow: none;
 	}
 	&:active {
 		background-color: var(--color-primary-2);
 		text-shadow: none;
 		box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.2) inset,
-					0px 1px 0px 0px rgba(245 243 240 / 0.35) inset;
+					0px 1px 3px 1px rgba(8 8 8 / 0.2) inset;
+		border-color: var(--color-primary-0);
 	}
-
 	.theme-dark & {
-		box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.2) inset;
+		background: linear-gradient(0deg, 
+		rgba(79 76 77 / .8) 0%,
+		rgba(49 47 48 / 1) 100%,
+		);
+	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.5) inset,
+				0 1px 3px 1px rgba(0 0 0 / .1);
+		border: 1px solid var(--color-primary-0);
+
+		&:hover {
+			background: none;
+			background-color: var(--color-primary-2);
+			text-shadow: none;
+			border-color: var(--color-primary-0);
+		}
+		&:active {
+			background-color: var(--color-primary-2);
+			text-shadow: none;
+			box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.5) inset,
+						0px 1px 3px 1px rgba(8 8 8 / 0.5) inset;
+			border-color: var(--color-primary-0);
+		}
 	}
 }
