@@ -49,7 +49,7 @@ button.mod-warning {
 	@include button-l;
 	background: linear-gradient(0deg, 
 				rgba(241 81 72 / 1) 0%, 
-				rgba(200 43 41 / .8) 100%,
+				rgba(200 43 41 / 1) 100%,
 				);
 
 	&:hover {
@@ -88,7 +88,7 @@ button.mod-cta {
 	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.2) inset,
 				0 1px 3px 1px rgba(0 0 0 / .1);
 	background: linear-gradient(0deg, 
-				rgba(var(--color-accent-l) / .9) 0%, 
+				rgba(var(--color-accent-l) / .7) 0%, 
 				rgba(var(--color-accent-l) / 1) 100%,
 				);
 	&:hover {
@@ -108,12 +108,12 @@ button.mod-cta {
 		color: var(--color-primary-9);
 		background-color: rgba(var(--color-accent-d) / 1);
 		border: 1px solid var(--color-primary-0);
-		box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.2) inset,
+		box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.3) inset,
 					0 1px 3px 1px rgba(0 0 0 / .1);
 		background: linear-gradient(0deg, 
-		rgba(var(--color-accent-d) / .8) 0%, 
-		rgba(var(--color-accent-d) / 1) 100%,
-		);
+					rgba(var(--color-accent-l) / 1) 0%, 
+					rgba(var(--color-accent-l) / .7) 100%,
+					);
 		&:hover {
 			background: none;
 			background-color: rgba(var(--color-accent-d) / 1);
@@ -158,12 +158,14 @@ button.mod-cta {
 		border-color: var(--color-primary-0);
 	}
 	.theme-dark & {
+		text-shadow: 0 1px rgba(8 8 8 / .2),
+					 0 -1px rgba(49 47 48 / 1);
 		background: linear-gradient(0deg, 
-		rgba(79 76 77 / .8) 0%,
-		rgba(49 47 48 / 1) 100%,
-		);
+					rgba(79 76 77 / 1) 0%,
+					rgba(49 47 48 / .7) 100%,
+					);
 		box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.5) inset,
-				0 1px 3px 1px rgba(0 0 0 / .1);
+					0 1px 3px 1px rgba(0 0 0 / .1);
 		border: 1px solid var(--color-primary-0);
 
 		&:hover {
@@ -181,7 +183,6 @@ button.mod-cta {
 		}
 	}
 }
-
 // Publish Page buttons
 .modal.mod-publish button:not(.mod-cta):not(.mod-warning) {
 	color: var(--color-primary-2);
@@ -219,12 +220,14 @@ button.mod-cta {
 		border-color: var(--color-primary-0);
 	}
 	.theme-dark & {
+		text-shadow: 0 1px rgba(8 8 8 / .2),
+					 0 -1px rgba(49 47 48 / 1);
 		background: linear-gradient(0deg, 
-		rgba(79 76 77 / .8) 0%,
-		rgba(49 47 48 / 1) 100%,
-		);
-	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.5) inset,
-				0 1px 3px 1px rgba(0 0 0 / .1);
+					rgba(79 76 77 / 1) 0%,
+					rgba(49 47 48 / .7) 100%,
+					);
+		box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.5) inset,
+					0 1px 3px 1px rgba(0 0 0 / .1);
 		border: 1px solid var(--color-primary-0);
 
 		&:hover {
