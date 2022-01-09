@@ -10,8 +10,7 @@
 	border-radius: 30px;
 	transition: var.$duration-fast-1 var.$motion-standard-expressive;
 	background-color: var(--color-primary-3);
-	box-shadow: inset 0 1px 1px rgba(0 0 0 / .25),
-				0 1px 0 rgba(254 254 254 / .25);
+	box-shadow: inset 0 1px 1px rgba(0 0 0 / .25);
 }
 
 .checkbox-container:after { //circle
@@ -22,7 +21,8 @@
 	background-color: var.$color-grey-1;
 	width: 18px;
 	height: 18px;
-	inset: 0 0 0 -2px;
+	margin: 0;
+	inset: 3px 0 0px 1px;
 	border-radius: 50%;
 	transition: transform var.$duration-fast-1 var.$motion-entrance-productive,
 				width var.$duration-fast-2 var.$motion-exit-expressive,
@@ -30,7 +30,7 @@
 				-webkit-transform var.$duration-fast-1 var.$motion-standard-expressive;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
 				0 0 0 1px rgba(0, 0, 0, 0.1),
-				0 1px 0 rgba(8 8 8 / .1);
+				0 1px 0 rgba(8 8 8 / .3);
 }
 
 .checkbox-container.is-enabled:after {
