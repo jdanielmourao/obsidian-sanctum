@@ -67,10 +67,14 @@ input[type=checkbox]:checked:before {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 100%;
-	transform: translateX(.5px) translateY(1px) scale(.75);
+	transform: translateX(0px) translateY(1px) scale(.75);
 	width: 100%;
 	height: 100%;
 	display: block;
+}
+
+.markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task='x']:checked:before {
+	transform: translateX(0px) translateY(0px) scale(.75); //fixes alignment in LP
 }
 
 input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
