@@ -26,10 +26,10 @@
 	}
 	// focused node border color
 	&-circle {
-		color: var(--color-primary-6);
+		color: var(--color-pink);
 
 		.theme-light & {
-			color: var(--color-yellow);
+			color: var(--color-pink);
 		}
 	}
 	&-line {
