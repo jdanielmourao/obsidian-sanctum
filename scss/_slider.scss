@@ -106,11 +106,9 @@ input[type="range" i] {
 	}
 }
 
-
-
 .graph-controls input[type="range"] {
 	&::-webkit-slider-runnable-track {
-		margin-top: -5px;
+		margin-top: 0px;
 	}
 	&::-webkit-slider-thumb {
 		border-color: var(--background-primary);

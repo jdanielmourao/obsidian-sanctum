@@ -60,10 +60,11 @@
 	border-radius: 30px;
 }
 .graph-controls .checkbox-container:after {
-	width: 14px;
-	height: 14px;
+	inset: 0px 0 0 -3px;
+	width: 20px;
+	height: 20px;
 }
 .graph-controls .checkbox-container.is-enabled:after {
-	transform: translate3d(22px, 0, 0);
+	transform: translate3d(24px, 0, 0);
 }
 
