@@ -164,7 +164,8 @@ body:not(.no-sanctum-icons) svg.fa-copy,
 body:not(.no-sanctum-icons) svg.fantasy-calendar-reveal,
 body:not(.no-sanctum-icons) svg.BratIcon,
 body:not(.no-sanctum-icons) svg.running-man,
-body:not(.no-sanctum-icons) svg.reading-glasses {
+body:not(.no-sanctum-icons) svg.reading-glasses,
+body:not(.no-sanctum-icons) svg.calendar-day {
 	background-color: currentColor;
 }
 
@@ -331,7 +332,8 @@ body:not(.no-sanctum-icons) svg.fa-copy > path,
 body:not(.no-sanctum-icons) svg.fantasy-calendar-reveal > path,
 body:not(.no-sanctum-icons) svg.BratIcon > path,
 body:not(.no-sanctum-icons) svg.running-man > path,
-body:not(.no-sanctum-icons) svg.reading-glasses > path {
+body:not(.no-sanctum-icons) svg.reading-glasses > path,
+body:not(.no-sanctum-icons) svg.calendar-day > path {
 	display: none;
 }
 
@@ -376,12 +378,17 @@ body:not(.no-sanctum-icons) svg.bullet-list {
 	transform: translateY(1px);
 	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M10 6h18v2H10zm0 18h18v2H10zm0-9h18v2H10zm-6 0h2v2H4zm0-9h2v2H4zm0 18h2v2H4z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
+//Open Today
+body:not(.no-sanctum-icons) svg.calendar-day {
+	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath d='M26 4h-4V2h-2v2h-8V2h-2v2H6c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 22H6V12h20v14zm0-16H6V6h4v2h2V6h8v2h2V6h4v4z'/%3E%3Cpath fill='none' d='M0 0h32v32H0V0z'/%3E%3Cpath d='M13.8 23.3v-1.5H16v-5.6h-.1l-1.7 2.2-1.2-.9 2-2.6h2.8v6.9h1.8v1.5h-5.8z'/%3E%3C/svg%3E");
+}
 // It's not being used?
 body:not(.no-sanctum-icons) svg.calendar-glyph {
 	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M26 4h-4V2h-2v2h-8V2h-2v2H6a2.002 2.002 0 0 0-2 2v20a2.002 2.002 0 0 0 2 2h20a2.002 2.002 0 0 0 2-2V6a2.002 2.002 0 0 0-2-2ZM6 6h4v2h2V6h8v2h2V6h4v4H6Zm0 6h5v6H6Zm13 14h-6v-6h6Zm0-8h-6v-6h6Zm2 8v-6h5l.001 6Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 // Today's Daily Note / Calendar
 body:not(.no-sanctum-icons) svg.calendar-with-checkmark {
+	//-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath fill-rule='evenodd' d='M26 4h-4V2h-2v2h-8V2h-2v2H6c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h6.3v-2H6V6h4v2h2V6h8v2h2V6h4v9h2V6c0-1.1-.9-2-2-2z' clip-rule='evenodd'/%3E%3Cpath fill='none' d='M0 0h32v32H0V0z'/%3E%3Cpath fill='none' stroke='%23000' stroke-miterlimit='10' stroke-width='2' d='m29.9 18.7-9 8.9-5.2-5.1'/%3E%3C/svg%3E");
 	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M26 4h-4V2h-2v2h-8V2h-2v2H6a2.002 2.002 0 0 0-2 2v20a2.002 2.002 0 0 0 2 2h20a2.002 2.002 0 0 0 2-2V6a2.002 2.002 0 0 0-2-2ZM6 6h4v2h2V6h8v2h2V6h4v4H6Zm0 6h5v6H6Zm13 14h-6v-6h6Zm0-8h-6v-6h6Zm2 8v-6h5l.001 6Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 // Circle Checkbox
