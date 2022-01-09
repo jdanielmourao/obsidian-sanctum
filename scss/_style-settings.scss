@@ -2615,9 +2615,9 @@ settings:
 		type: class-toggle
 		default: false
 	-
-		id: hide-frontmatter
-		title: Hide Frontmatter
-		description: This setting hides frontmatter in Preview Mode.
+		id: show-yaml
+		title: Show YAML
+		description: Disables YAML reveal on hover and simply shows it as a code block.
 		type: class-toggle
 		default: false
 	-
