@@ -50,7 +50,10 @@
 body {
 	font-feature-settings: 'zero', 'ss05', 'ss02' on;
 
-	&, body input, body button {
+	&, & input,
+	& button, //buttons
+	& textarea, //text input
+	& select { //dropdowns
 		font-optical-sizing: auto;
 		font-family: var(--font-ui);
 		font-feature-settings: "zero", "ss05" on;
