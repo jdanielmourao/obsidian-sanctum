@@ -69,15 +69,15 @@ input[type=checkbox]:checked:before {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 100%;
-	transform: translateX(0px) translateY(0px) scale(.60);
+	transform: translateX(0px) translateY(0.5px) scale(.65);
 	width: 100%;
 	height: 100%;
 	display: block;
 }
-
+/*
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task='x']:checked:before {
-	transform: translateX(0px) translateY(.5px) scale(.75); //fixes alignment in LP
-}
+	transform: translateX(0px) translateY(0.5px) scale(.65); //fixes alignment in LP
+}*/
 
 input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	filter: brightness(1.1);
