@@ -13,14 +13,13 @@
 .markdown-preview-section strong,
 strong { /* Bold */
 	font-style: normal;
-	color: currentColor;
 	font-weight: var(--font-bold);
 }
 /* ───────────────────────────────── Italic ───────────────────────────────── */
 .cm-em,
 em {  /* Italic */
 	font-style: italic;
-	font-weight: var(--font-light);
+	font-weight: var(--font-regular);
 }
 
 /* ──────────────────────── Highlighting & Selection ──────────────────────── */
@@ -69,35 +68,36 @@ body:not(.active-line-hl) .CodeMirror-activeline .CodeMirror-linebackground {
 }
 
 body:not(.is-mobile) {
-	.markdown-preview-view mark,
-	span.cm-highlight {
-		font-weight: var(--font-regular);
-		color: var(--text-normal);
-		text-decoration: underline solid var(--color-highlight-1) 2.5px;
-		background-color: transparent;
-		background: linear-gradient(120deg,var(--color-highlight-1),var(--color-highlight-1));
-		background-position: 0 100%;
-		background-repeat: no-repeat;
-		background-size: 100% 0px;
-		transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
-	}
-	& .markdown-preview-view mark:hover,
-	& span.cm-highlight:hover {
-		text-decoration: none;
-		background-size: 100% 100%;
-		color: var(--color-highlight-1-h);
-	}
-}
-.is-mobile {
 	& .markdown-preview-view mark,
 	& span.cm-highlight {
 		font-weight: var(--font-regular);
-		color: var.$color-black;
-		background-color: var(--color-highlight-1);
-		font-weight: 400;
+		color: var(--text-normal);
+		background-color: transparent;
+		background: linear-gradient(120deg,var(--color-highlight-1),var(--color-highlight-1));
+		background-position: 50% 100%;
+		background-repeat: no-repeat;
+		background-size: calc(100% - 4px) 8px;
+		transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
+
+		&:hover {
+			background-size: calc(100% - 4px) 100%;
+			background-position: 50% 100%;
+			color: var(--color-highlight-1-h);
+		}
 	}
 }
 
+body.is-mobile {
+	& .markdown-preview-view mark,
+	& span.cm-highlight {
+		font-weight: var(--font-regular);
+		color: var(--text-normal);
+		text-decoration: underline solid var(--color-highlight-1) 8px;
+		text-decoration-skip-ink: none;
+		text-underline-offset: -7px;
+		background-color: transparent;
+	}
+}
 
 /* ──────────────────────────── Cyan Highlight 2 ──────────────────────────── */
 
@@ -106,27 +106,31 @@ body:not(.is-mobile) {
 	& span.cm-em.cm-highlight {
 		font-style: normal;
 		font-weight: var(--font-regular);
-		text-decoration: underline solid var(--color-highlight-2) 2.5px;
+		color: var(--text-normal);
+		background-color: transparent;
 		background: linear-gradient(120deg,var(--color-highlight-2),var(--color-highlight-2));
-		background-position: 0 100%;
+		background-position: 50% 100%;
 		background-repeat: no-repeat;
-		background-size: 100% 0px;
+		background-size: calc(100% - 4px) 8px;
 		transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
-	}
-	& .markdown-preview-view em > mark:hover,
-	& span.cm-em.cm-highlight:hover {
-		text-decoration: none;
-		background-size: 100% 100%;
-		color: var(--color-highlight-2-h);
+
+		&:hover {
+			background-size: calc(100% - 4px) 100%;
+			background-position: 50% 100%;
+			color: var(--text-normal);
+		}
 	}
 }
-.is-mobile {
+body.is-mobile {
 	& .markdown-preview-view em > mark,
 	& span.cm-em.cm-highlight {
 		font-style: normal;
 		font-weight: var(--font-regular);
 		color: var(--text-normal);
-		background-color: var(--color-highlight-2);
+		text-decoration: underline solid var(--color-highlight-2) 8px;
+		text-decoration-skip-ink: none;
+		text-underline-offset: -7px;
+		background-color: transparent;
 	}
 }
 /* ─────────────────────────── Magenta Highlight 3 ────────────────────────── */
@@ -134,29 +138,34 @@ body:not(.is-mobile) {
 	& .markdown-preview-view strong > mark,
 	& span.cm-strong.cm-highlight {
 		font-weight: var(--font-regular);
-		text-decoration: underline solid var(--color-highlight-3) 2.5px;
+		font-weight: var(--font-regular);
+		color: var(--text-normal);
+		background-color: transparent;
 		background: linear-gradient(120deg,var(--color-highlight-3),var(--color-highlight-3));
-		background-position: 0 100%;
+		background-position: 50% 100%;
 		background-repeat: no-repeat;
-		background-size: 100% 0px;
+		background-size: calc(100% - 4px) 8px;
 		transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
-	}
-	& .markdown-preview-view strong > mark:hover,
-	& span.cm-strong.cm-highlight:hover {
-		text-decoration: none;
-		background-size: 100% 100%;
-		color: var(--color-highlight-3-h);
+
+		&:hover {
+			background-size: calc(100% - 4px) 100%;
+			background-position: 50% 100%;
+			color: var(--text-normal);
+		}
 	}
 }
-.is-mobile {
+body.is-mobile {
 	& .markdown-preview-view strong > mark,
 	& span.cm-strong.cm-highlight {
+		font-style: normal;
 		font-weight: var(--font-regular);
-		background-color: var(--color-highlight-3);
 		color: var(--text-normal);
+		text-decoration: underline solid var(--color-highlight-3) 8px;
+		text-decoration-skip-ink: none;
+		text-underline-offset: -7px;
+		background-color: transparent;
 	}
 }
-
 /* ────────────────────────────── Strikethrough ───────────────────────────── */
 .cm-strikethrough,
 del {
