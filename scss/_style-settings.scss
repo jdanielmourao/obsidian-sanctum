@@ -201,13 +201,6 @@ settings:
 		format: rgb
 		default: rgb(234, 183, 70)
 	-
-		id: color-highlight-1-h
-		title: Highlight 1 Text
-		description: The color of highlighted text when hovered.
-		type: variable-color
-		format: rgb
-		default: rgb(8, 8, 8)
-	-
 		id: color-highlight-2
 		title: Highlight 2
 		description: The color of the highlight.
@@ -215,26 +208,12 @@ settings:
 		format: rgb
 		default: rgb(69, 163, 159)
 	-
-		id: color-highlight-2-h
-		title: Highlight 2 Text
-		description: The color of highlighted text when hovered.
-		type: variable-color
-		format: rgb
-		default: rgb(8, 8, 8)
-	-
 		id: color-highlight-3
 		title: Highlight 3
 		description: The color of the highlight.
 		type: variable-color
 		format: rgb
 		default: rgb(234, 76, 103)
-	-
-		id: color-highlight-3-h
-		title: Highlight 3 Text
-		description: The color of highlighted text when hovered.
-		type: variable-color
-		format: rgb
-		default: rgb(8, 8, 8)
 	-
 		id: graph-colors
 		title: Graph Colors
