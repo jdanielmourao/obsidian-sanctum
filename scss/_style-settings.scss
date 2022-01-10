@@ -11,7 +11,7 @@ settings:
 		collapsed: true
 	-
 		id: light-mode-palette
-		title: Light mode palette
+		title: Light mode color scheme
 		description: Background color palette for light mode
 		type: class-select
 		allowEmpty: false
@@ -22,7 +22,7 @@ settings:
 				value: sanctum-light
 	-
 		id: dark-mode-palette
-		title: Dark mode palette
+		title: Dark mode color scheme
 		description: Background color palette for dark mode
 		type: class-select
 		allowEmpty: false
