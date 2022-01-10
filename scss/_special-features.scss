@@ -5,6 +5,13 @@ body.no-animation * {
 	animation: none !important;
 }
 
+/*box sizing reset*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* ────────────────────────────── Link Favicons ───────────────────────────── */
 
 /* Removes Custom External Link Icons from Community Themes Readmes */
