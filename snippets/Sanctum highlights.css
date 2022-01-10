@@ -1,0 +1,71 @@
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian span.cm-highlight {
+	background-color: unset;
+}
+.markdown-preview-view mark {
+	overflow: hidden;
+	background-color: transparent;
+	padding: 0 2px;
+	vertical-align: middle;
+}
+
+body:not(.is-mobile) {
+	.markdown-preview-view mark,
+	span.cm-highlight {
+		font-weight: var(--font-regular);
+		color: var(--text-normal);
+		text-decoration: underline solid var(--color-highlight-1) 2.5px;
+		background-color: transparent;
+		background: linear-gradient(120deg,var(--color-highlight-1),var(--color-highlight-1));
+		background-position: 0 100%;
+		background-repeat: no-repeat;
+		background-size: 100% 0px;
+		transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
+	}
+	& .markdown-preview-view mark:hover,
+	& span.cm-highlight:hover {
+		text-decoration: none;
+		background-size: 100% 100%;
+		color: var(--color-highlight-1-h);
+	}
+}
+
+
+body:not(.is-mobile) {
+	& .markdown-preview-view em > mark,
+	& span.cm-em.cm-highlight {
+		font-style: normal;
+		font-weight: var(--font-regular);
+		text-decoration: underline solid var(--color-highlight-2) 2.5px;
+		background: linear-gradient(120deg,var(--color-highlight-2),var(--color-highlight-2));
+		background-position: 0 100%;
+		background-repeat: no-repeat;
+		background-size: 100% 0px;
+		transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
+	}
+	& .markdown-preview-view em > mark:hover,
+	& span.cm-em.cm-highlight:hover {
+		text-decoration: none;
+		background-size: 100% 100%;
+		color: var(--color-highlight-2-h);
+	}
+}
+
+body:not(.is-mobile) {
+	& .markdown-preview-view strong > mark,
+	& span.cm-strong.cm-highlight {
+		font-weight: var(--font-regular);
+		text-decoration: underline solid var(--color-highlight-3) 2.5px;
+		background: linear-gradient(120deg,var(--color-highlight-3),var(--color-highlight-3));
+		background-position: 0 100%;
+		background-repeat: no-repeat;
+		background-size: 100% 0px;
+		transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
+	}
+	& .markdown-preview-view strong > mark:hover,
+	& span.cm-strong.cm-highlight:hover {
+		text-decoration: none;
+		background-size: 100% 100%;
+		color: var(--color-highlight-3-h);
+	}
+}
