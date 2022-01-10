@@ -85,6 +85,12 @@ body:not(.is-mobile) {
 			color: var(--color-highlight-1-h);
 		}
 	}
+	& span.cm-highlight {
+		background-size: 100% 8px;
+		&:hover {
+			background-size: 100% 100%;
+		}
+	}
 }
 
 body.is-mobile {
@@ -120,6 +126,12 @@ body:not(.is-mobile) {
 			color: var(--text-normal);
 		}
 	}
+	& span.cm-em.cm-highlight {
+		background-size: 100% 8px;
+		&:hover {
+			background-size: 100% 100%;
+		}
+	}
 }
 body.is-mobile {
 	& .markdown-preview-view em > mark,
@@ -151,6 +163,12 @@ body:not(.is-mobile) {
 			background-size: calc(100% - 4px) 100%;
 			background-position: 50% 100%;
 			color: var(--text-normal);
+		}
+	}
+	& span.cm-strong.cm-highlight {
+		background-size: 100% 8px;
+		&:hover {
+			background-size: 100% 100%;
 		}
 	}
 }
