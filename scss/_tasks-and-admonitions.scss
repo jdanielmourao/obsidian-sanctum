@@ -21,7 +21,7 @@ input[type=checkbox] {
 	height: var.$scale-2;
 	vertical-align: -6px;
 	background-color: var(--background-primary);
-	border-radius: 2px;
+	border-radius: 50px;
 	border: 1px solid var(--color-primary-4);
 	transition: background-color var.$duration-moderate-2 var.$motion-entrance-expressive;
 }
@@ -53,6 +53,7 @@ input[type="checkbox"]:hover {
 }
 
 input[type=checkbox]:checked {
+	position: relative;
 	display: inline-block;
 	background: rgb(var(--color-checkbox));
 	filter: saturate(1);
@@ -63,22 +64,19 @@ input[type=checkbox]:checked {
 
 input[type=checkbox]:checked:before {
 	content: ' ';
+	position: absolute;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(36, 20%, 95.1%)' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 100%;
-	transform: translateX(0px) translateY(1px) scale(.75);
+	transform: translateX(0px) translateY(0px) scale(.60);
 	width: 100%;
 	height: 100%;
 	display: block;
 }
 
-.markdown-preview-view .task-list-item.is-checked[data-task='x'] .task-list-item-checkbox:before {
-	transform: translateX(0px) translateY(.5px) scale(.75); //fixes alignment in Preview
-}
-
 .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task='x']:checked:before {
-	transform: translateX(0px) translateY(0px) scale(.75); //fixes alignment in LP
+	transform: translateX(0px) translateY(.5px) scale(.75); //fixes alignment in LP
 }
 
 input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
