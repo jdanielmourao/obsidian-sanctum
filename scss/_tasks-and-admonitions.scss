@@ -378,13 +378,13 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	content: "";
 	background-repeat: no-repeat;
 	background-size: var.$scale-2 var.$scale-2;
-	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' fill='hsl(24, 4.4%, 77.8%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cg id='icon'%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Crect id='_Transparent_Rectangle__1_' x='0.2' y='-0.4' class='st0' width='32' height='32'/%3E%3C/g%3E%3Cg id='Layer_2'%3E%3Cpath d='M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14S23.7,2,16,2z M24,17.6h-2.8h-10H8v-4h3.2h10H24V17.6z'/%3E%3C/g%3E%3C/svg%3E%0A");
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(24, 4.4%, 77.8%)' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath fill='none' d='M0 0h32v32H0V0z'/%3E%3Cpath d='M16 2C8.3 2 2 8.3 2 16s6.3 14 14 14 14-6.3 14-14S23.7 2 16 2zm7 16.1H9v-4h14v4z'/%3E%3C/svg%3E");
 	transform: scale(1.15) translateX(-.25px) translateY(-1px);
 	padding: 2px;
 }
 .theme-light .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="-"]:before,
 .theme-light .markdown-preview-view li[data-task="-"] .task-list-item-checkbox:checked::before {
-	background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' fill='hsl(340, 1.9%, 30.4%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cg id='icon'%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3Crect id='_Transparent_Rectangle__1_' x='0.2' y='-0.4' class='st0' width='32' height='32'/%3E%3C/g%3E%3Cg id='Layer_2'%3E%3Cpath d='M16,2C8.3,2,2,8.3,2,16s6.3,14,14,14s14-6.3,14-14S23.7,2,16,2z M24,17.6h-2.8h-10H8v-4h3.2h10H24V17.6z'/%3E%3C/g%3E%3C/svg%3E%0A");
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(340, 1.9%, 30.4%)' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath fill='none' d='M0 0h32v32H0V0z'/%3E%3Cpath d='M16 2C8.3 2 2 8.3 2 16s6.3 14 14 14 14-6.3 14-14S23.7 2 16 2zm7 16.1H9v-4h14v4z'/%3E%3C/svg%3E");
 }
 
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task="-"]), //Live Preview
