@@ -60,7 +60,10 @@
 		border-bottom: 1px solid var(--color-border-2);
 	}
 	& .overflow	{
-		display: none;
+		position: absolute;
+		bottom: 0;
+		left: 0px;
+		top: 20px;
 	}
 }
 
