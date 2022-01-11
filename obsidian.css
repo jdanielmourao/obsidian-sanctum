@@ -2404,14 +2404,14 @@ body:not(.active-line-hl) .CodeMirror-activeline .CodeMirror-linebackground {
 .cm-line:not(.cm-active.cm-line) {
 	opacity: .5;
 }*/
-.accent-active-line .cm-active.cm-line,
-.accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
-  background-color: hsla(var(--color-l-accent-h), var(--color-l-accent-s), var(--color-l-accent-l), 0.3);
+body:not(.active-line-hl).accent-active-line .cm-active.cm-line,
+body:not(.active-line-hl).accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
+  background-color: rgba(var(--color-accent-l)/0.3);
 }
 
-.theme-dark.accent-active-line .cm-active.cm-line,
-.theme-dark.accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
-  background-color: hsla(var(--color-d-accent-h), var(--color-d-accent-s), var(--color-d-accent-l), 0.3);
+body:not(.active-line-hl).theme-dark.accent-active-line .cm-active.cm-line,
+body:not(.active-line-hl).theme-dark.accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
+  background-color: rgba(var(--color-accent-d)/0.3);
 }
 
 /* ──────────────────────── Multi-Color Highlighting ──────────────────────── */
