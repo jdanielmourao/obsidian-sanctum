@@ -1,0 +1,15 @@
+{
+  "name": "obsidian-sanctum",
+  "version": "1.0.0",
+  "description": "A minimalist theme with the aim of creating a serene space of retreat, for thought and uninterrupted work.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./esbuild.config.mjs",
+    "build": "node ./esbuild.config.mjs production"
+  },
+  "devDependencies": {
+    "dotenv": "^11.0.0",
+    "esbuild": "^0.14.11",
+    "esbuild-sass-plugin": "^2.0.3"
+  }
+}
