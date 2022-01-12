@@ -46,7 +46,7 @@
 		flex-direction: column;
 		font-weight: var(--font-semi-bold);
 		font-size: 0px;
-		line-height: var.$leading-3;
+		line-height: var(--leading-3);
 		position: relative;
 		margin: 0;
 		color: var(--text-normal);
@@ -60,7 +60,7 @@
 			border-radius: 8px;
 			border: 1px solid var(--color-border-1);
 			font-size: var(--font-scale-000);
-			line-height: var.$leading-0;
+			line-height: var(--leading-0);
 			color: var(--text-faint);
 			margin-right: 4px; //optically centers the element
 			//filter: drop-shadow( 0 1px 0 var(--color-primary-2));
@@ -79,7 +79,7 @@
 	&-action-list {
 		font-size: var(--font-scale-0);
 		font-weight: 400;
-		line-height: var.$leading-3;
+		line-height: var(--leading-3);
 		color: var(--text-faint);
 		margin-top: 16px;
 		padding: 8px;
@@ -91,7 +91,7 @@
 	&-action {
 		cursor: pointer;
 		font-size: var(--font-scale-0);
-		line-height: var.$leading-3;
+		line-height: var(--leading-3);
 		padding: 4px 0;
 
 		&:hover:before {

@@ -20,7 +20,7 @@ li::marker {
 	}
 	& ol li,
 	& ul li {
-		line-height: var.$leading-4; //adds white space to lists, and makes it match task lists
+		line-height: var(--leading-4); //adds white space to lists, and makes it match task lists
 		margin: 4px 0;
 	}
 	
@@ -63,7 +63,7 @@ ol,
 ol ol ol,
 ol ol ol ol ol,
 ol ol ol ol ol ol ol {
-	margin-left: var.$size-0;
+	margin-left: 0px;
 	list-style-type: decimal;
 }
 
@@ -71,7 +71,7 @@ ol ol,
 ol ol ol ol,
 ol ol ol ol ol ol,
 ol ol ol ol ol ol ol ol {
-	margin-left: var.$size-0;
+	margin-left: 0px;
 	list-style-type: lower-alpha;
 }
 
@@ -92,8 +92,8 @@ ol ul ol ul,
 ol ul ul ul,
 ul ol ul ul ul {
 	list-style-type: var(--marker-odd); // "\2009" stands for thin space
-	margin: var.$size-0;
-	padding: var.$size-0;
+	margin: 0px;
+	padding: 0px;
 	padding-left: 1.5rem;
 }
 
@@ -107,7 +107,7 @@ ul ol ul ul,
 ol ul ol ul ul,
 ul ol ol ul ul {
 	list-style-type: var(--marker-even); // don't set it as square, because it will misalign
-	padding: var.$size-0;
+	padding: 0px;
 	padding-left: 1.5rem;
 }
 /*
@@ -210,7 +210,7 @@ li {
 //	position: absolute;
 //	display: block;
 //	content: "";
-//	height: 15px;
+//	height: 16px;
 //	width: 1px;
 //	top: -3px;
 //	left: -24px;

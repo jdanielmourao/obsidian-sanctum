@@ -2,7 +2,7 @@
 
 kbd:not(.suggestion-hotkey) {
 	font-family: var(--font-mono);
-	padding: var.$size-1 var.$size-3;
+	padding: 2px 8px;
 	font-size: var(--font-scale-000);
 	background-color: var(--color-primary-0);
 	border: 1px solid var(--color-border-1);

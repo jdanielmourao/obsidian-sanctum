@@ -81,10 +81,10 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 .workspace-tab-header-container {
 	background-color: var(--background-primary);
 	height: 32px;
-	padding-top: var.$size-0;
-	padding-bottom: var.$size-0;
-	padding-left: var.$size-5;
-	padding-right: var.$size-5;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 16px;
+	padding-right: 16px;
 	border-bottom: 1px solid var(--color-border-1);
 
 	.workspace-split.mod-left-split & {
@@ -103,9 +103,9 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 .workspace-split.mod-left-split,
 .workspace-split.mod-right-split {
 	& .workspace-tab-header-inner {
-		padding: var.$size-3
+		padding: 8px
 				 var(--size-tab-header)
-				 var.$size-3
+				 8px
 				 var(--size-tab-header);
 		height: 32px;
 		background-color: transparent;
@@ -143,10 +143,10 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 
 /* ─────────────────────────────── Nav Header ─────────────────────────────── */
 .nav-header {
-	padding: var.$size-0
-			 var.$size-0
-			 var.$size-0
-			 var.$size-0;
+	padding: 0px
+			 0px
+			 0px
+			 0px;
 }
 
 .workspace-split.mod-left-split,
@@ -156,21 +156,21 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
-		padding: var.$size-0
-				 var.$size-5
-				 var.$size-2
-				 var.$size-5;
+		padding: 0px
+				 16px
+				 4px
+				 16px;
 		background-color: var(--background-primary);
 	}
 	& .nav-action-button {
 		color: var(--text-faint);
-		padding: var.$size-2
-				 var.$size-3
-				 var.$size-2
-				 var.$size-3;
-		margin: var.$size-0;
+		padding: 4px
+				 8px
+				 4px
+				 8px;
+		margin: 0px;
 		margin-top: 4px;
-		height: var.$size-6;
+		height: 24px;
 		border-radius: 4px;
 
 		&:hover {
@@ -190,18 +190,18 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 // fixes weird curved top corners in divs
 .workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
 .workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
-	border-radius: var.$size-0;
+	border-radius: 0px;
 }*/
 
 body div.workspace-split.mod-left-split .nav-buttons-container {
 	justify-content: flex-end;
-	height: var.$scale-3;
+	height: 24px;
 }
 
 // color of icons besides active
 .nav-action-button {
 	color: var(--text-faint);
-	height: var.$scale-2;
+	height: 16px;
 
 	&.is-active {
 		background-color: var(--background-primary);
@@ -247,10 +247,10 @@ body div.workspace-split.mod-left-split .nav-buttons-container {
 }
 
 .item-list {
-	padding: var.$size-5
-			 var.$size-5
-			 var.$size-5
-			 var.$size-5;
+	padding: 16px
+			 16px
+			 16px
+			 16px;
 	background-color: var(--background-primary);
 }
 
@@ -258,18 +258,18 @@ body div.workspace-split.mod-left-split .nav-buttons-container {
 .workspace-split.mod-right-split .view-content {
 	height: 100%;
 	overflow: auto;
-	padding: var.$size-5
-			 var.$size-5
-			 var.$size-5
-			 var.$size-5;
+	padding: 16px
+			 16px
+			 16px
+			 16px;
 	background-color: var(--background-primary);
 }
 
 .outgoing-link-pane {
-	padding: var.$size-0
-			 var.$size-0
-			 var.$size-0
-			 var.$size-5;
+	padding: 0px
+			 0px
+			 0px
+			 16px;
 	& .search-result-file-match-destination-file {
 		border-color: transparent;
 		padding: 0;
@@ -294,10 +294,10 @@ body div.workspace-split.mod-left-split .nav-buttons-container {
 }
 
 .backlink-pane {
-	padding: var.$size-5
-			 var.$size-0
-			 var.$size-0
-			 var.$size-5;
+	padding: 16px
+			 0px
+			 0px
+			 16px;
 }
 
 // Adds hashtag before tag names in tag pane
@@ -305,7 +305,7 @@ body div.workspace-split.mod-left-split .nav-buttons-container {
 	margin-left: 3px;
 	content: "#";
 	font-size: var(--font-scale-0);
-	padding-right: var.$size-0;
+	padding-right: 0px;
 	vertical-align: -1px;
 }
 
@@ -315,11 +315,11 @@ body div.workspace-split.mod-left-split .nav-buttons-container {
 
 .tree-item-self.is-clickable {
 	cursor: pointer;
-	padding: var.$size-0
-			 var.$size-0
-			 var.$size-1
-			 var.$size-0;
-	border-radius: var.$size-0;
+	padding: 0px
+			 0px
+			 2px
+			 0px;
+	border-radius: 0px;
 	&:hover .tree-item-flair {
 		background-color: var(--color-hover);
 		color: var(--text-normal);
@@ -347,10 +347,10 @@ div.tree-item-inner {
 
 .tag-container {
 	font-size: var(--font-scale-00);
-	padding: var.$size-5
-			 var.$size-5
-			 var.$size-5
-			 var.$size-5;
+	padding: 16px
+			 16px
+			 16px
+			 16px;
 	overflow: auto;
 	background-color: var(--background-primary);
 
@@ -360,10 +360,10 @@ div.tree-item-inner {
 		& .tree-item-flair {
 			all: unset;
 			font-size: var(--font-scale-000);
-			padding: var.$size-0
-					 var.$size-2
-					 var.$size-0
-					 var.$size-2;
+			padding: 0px
+					 4px
+					 0px
+					 4px;
 			border-radius: 50%;
 			background-color: transparent;
 		}
@@ -380,16 +380,16 @@ div.tree-item-inner {
 }
 /*
 .workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
-	border-top-right-radius: var.$size-0;
+	border-top-right-radius: 0px;
 }
 .workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
-	border-top-left-radius: var.$size-0;
+	border-top-left-radius: 0px;
 }*/
 
 .workspace-tabs {
 	background-color: var(--background-primary);
 	overflow: hidden;
-	padding-right: var.$size-0;
+	padding-right: 0px;
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -399,19 +399,19 @@ div.tree-item-inner {
 body:not(.no-sanctum-icons)
   .workspace-tab-header
   .workspace-tab-header-inner-icon svg {
-	height: var.$scale-2;
-	width: var.$scale-2;
+	height: 16px;
+	width: 16px;
 }
 
 body .nav-action-button svg {
-	height: var.$scale-2;
-	width: var.$scale-2;
+	height: 16px;
+	width: 16px;
 }
 
 body:not(.no-sanctum-icons)
   .nav-action-button svg {
-	height: var.$scale-2;
-	width: var.$scale-2;
+	height: 16px;
+	width: 16px;
 }
 
 /* ────────────────────────────── Side Ribbons ────────────────────────────── */
@@ -438,20 +438,20 @@ body:not(.no-sanctum-icons)
 	width: 40px;
 	background-color: var(--background-primary);
 	z-index: var(--layer-sidedock);
-	transition: background-color var.$duration-moderate-2 var.$motion-exit-productive, border-left-color 100ms 100ms cubic-bezier(0.4, 0.14, 0.3, 1);
+	transition: background-color var(--duration-moderate-2) var(--motion-exit-productive), border-left-color 100ms 100ms cubic-bezier(0.4, 0.14, 0.3, 1);
 
 	&.is-collapsed {
 		background-color: var(--background-primary);
 	}
 	&.mod-right {
 		opacity:1;
-		height: var.$scale-8;
+		height: 64px;
 		position:fixed;
 		width: var(--scale-7);
 		top: auto;
-		bottom: var.$size-6;
+		bottom: 24px;
 		z-index:9;
-		right: var.$size-0;
+		right: 0px;
 		position:absolute;
 		background:transparent;
 		border-right:0;
@@ -474,7 +474,7 @@ body:not(.no-sanctum-icons)
 		&.mod-left .workspace-ribbon-collapse-btn,
 		&.mod-right .workspace-ribbon-collapse-btn {
 		transform: none;
-		transition: transform var.$duration-moderate-2 var.$motion-standard-expressive;
+		transition: transform var(--duration-moderate-2) var(--motion-standard-expressive);
 		}
 		&.mod-left {
 			border-right: 1px solid var(--color-border-1);
@@ -482,9 +482,9 @@ body:not(.no-sanctum-icons)
 
 			& .workspace-ribbon-collapse-btn {
 				order: 1;
-				margin-top: var.$size-0;
-				padding: var.$size-0
-						 var.$size-0
+				margin-top: 0px;
+				padding: 0px
+						 0px
 						 24px
 						 7px;
 				cursor: pointer;
@@ -506,11 +506,11 @@ body:not(.no-sanctum-icons)
 }
 
 .side-dock-settings {
-	margin-bottom: var.$size-3;
+	margin-bottom: 8px;
 
 	.workspace-drawer & {
 		margin-top: auto;
-		margin-bottom: var.$size-6;
+		margin-bottom: 24px;
 	}
 	& .side-dock-ribbon-action {
 		/*&:nth-child(3):hover {
@@ -564,10 +564,10 @@ body:not(.no-sanctum-icons)
 
 // File Explorer padding
 .nav-files-container {
-	padding: var.$size-5
-			 var.$size-0
-			 var.$size-0
-			 var.$size-5;
+	padding: 16px
+			 0px
+			 0px
+			 16px;
 	background-color: var(--background-primary);
 }
 
@@ -578,22 +578,22 @@ body:not(.no-sanctum-icons)
 	overflow: hidden;
 	text-overflow: ellipsis;
 	color: var(--text-normal);
-	padding: var.$size-1
-			 var.$size-2
-			 var.$size-1
-			 var.$size-2;
+	padding: 2px
+			 4px
+			 2px
+			 4px;
 	width: 100%;
 	border:none;
 }
 
 .nav-folder,
 .nav-file {
-	padding: var.$size-0
-			 var.$size-0
-			 var.$size-0
-			 var.$size-0;
-	margin-left: var.$size-0;
-	margin-right: var.$size-0;
+	padding: 0px
+			 0px
+			 0px
+			 0px;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 .nav-file-title,
@@ -601,10 +601,10 @@ body:not(.no-sanctum-icons)
 .nav-vault-title,
 .nav-folder-title.has-folder-note {
 	height: 25px; // can't be 24px because when using IBM Plex gs, etc get cropped
-	padding: var.$size-0
-			 var.$size-5
-			 var.$size-0
-			 var.$size-0;
+	padding: 0px
+			 16px
+			 0px
+			 0px;
 	width: unset;
 	font-size: var(--font-scale-00);
 	color: var(--text-muted);
@@ -623,9 +623,9 @@ body:not(.no-sanctum-icons)
 	letter-spacing: var(--tracking-2);
 	line-height: .75rem;
 	color: var(--text-muted);
-	padding: var.$size-0
-			 var.$size-2;
-	border-radius: var.$size-3;
+	padding: 0px
+			 4px;
+	border-radius: 8px;
 	align-self: center;
 	border: 1px solid var(--color-border-1);
 	background-color: var(--color-primary-2);
@@ -693,7 +693,7 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 
 // Folder Push Left
 .nav-folder-title {
-	padding-left: var.$size-0;
+	padding-left: 0px;
 }
 
 // File selected
@@ -728,7 +728,7 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 .drag-ghost,
 .workspace-drop-overlay:before {
 	border:none;
-	border-radius: var.$size-4;
+	border-radius: 12px;
 	background-color: var(--color-hover);
 	color: var(--text-normal);
 }
@@ -763,7 +763,7 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 .nav-file-title.is-active {
 	&,
 	.workspace-leaf-content[data-type="file-explorer"]:not(:hover) & {
-		transition: var.$duration-moderate-1 var.$motion-entrance-productive;
+		transition: var(--duration-moderate-1) var(--motion-entrance-productive);
 	}
 
 	&:hover,
@@ -771,7 +771,7 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 	.workspace-split.mod-left-split .view-content:hover &,
 	.workspace-split.mod-right-split .view-content:hover &,
 	.workspace-leaf-content[data-type="file-explorer"]:hover & {
-		transition: background-color var.$duration-moderate-1 var.$motion-entrance-productive;
+		transition: background-color var(--duration-moderate-1) var(--motion-entrance-productive);
 	}
 }
 
@@ -784,19 +784,19 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 	content: "";
 	font-size: var(--font-scale-0);
 	vertical-align: -1px;
-	height: var.$scale-2;
-	width: var.$scale-2;
-	background-size: var.$scale-2 var.$scale-2;
+	height: 16px;
+	width: 16px;
+	background-size: 16px 16px;
 }
 
 .nav-folder.is-collapsed .nav-folder-title .nav-folder-title-content::before,
 .nav-folder .nav-folder-title .nav-folder-title-content::before {
 	background-color: currentColor; // folders colour
-	margin-right: var.$size-3; // spacing between folder icons and titles
+	margin-right: 8px; // spacing between folder icons and titles
 	background-repeat: no-repeat;
 	vertical-align: -2px;
-	height: var.$scale-2;
-	width: var.$scale-2;
+	height: 16px;
+	width: 16px;
 }
 
 // Closed Folder Icon
@@ -825,8 +825,8 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 		-webkit-mask-repeat: no-repeat;
 		-webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M26,30H11a2.0023,2.0023,0,0,1-2-2V22h2v6H26V6H17V4h9a2.0023,2.0023,0,0,1,2,2V28A2.0023,2.0023,0,0,1,26,30Z'/%3E%3Crect x='17' y='10' width='7' height='2'/%3E%3Crect x='16' y='15' width='8' height='2'/%3E%3Crect x='15' y='20' width='9' height='2'/%3E%3Cpath d='M9,19a5.0055,5.0055,0,0,1-5-5V3H6V14a3,3,0,0,0,6,0V5a1,1,0,0,0-2,0V15H8V5a3,3,0,0,1,6,0v9A5.0055,5.0055,0,0,1,9,19Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 		display: inline-block;
-		margin-right: var.$size-3;
-		margin-left: var.$size-0;
+		margin-right: 8px;
+		margin-left: 0px;
 		vertical-align: -2px;
 	
 		body.no-file-icons & {
@@ -841,7 +841,7 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 		background-color: currentColor;
 		-webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100%' height='100%' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Edocument%3C/title%3E%3Cpath d='M25.7,9.3l-7-7C18.5,2.1,18.3,2,18,2H8C6.9,2,6,2.9,6,4v24c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V10C26,9.7,25.9,9.5,25.7,9.3 z M18,4.4l5.6,5.6H18V4.4z M24,28H8V4h8v6c0,1.1,0.9,2,2,2h6V28z'/%3E%3Crect x='10' y='22' width='12' height='2'/%3E%3Crect x='10' y='16' width='12' height='2'/%3E%3Crect class='st0' width='32' height='32'/%3E%3C/svg%3E");
 		display: inline-block;
-		margin-right: var.$size-3;
+		margin-right: 8px;
 		margin-left: 1px;
 	}
 	body.no-file-icons .nav-folder-children &:first-child::before { // option to remove icon
@@ -962,7 +962,7 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 	margin-left: 14px;
 	padding-left: 0;
 	border-left: 1px solid var(--color-primary-3);
-	transition: border var.$duration-moderate-2 var.$motion-entrance-productive;
+	transition: border var(--duration-moderate-2) var(--motion-entrance-productive);
 
 	&:hover {
 		border-left-color: var(--color-primary-6);
@@ -1122,7 +1122,7 @@ ol.kanban .task-list-item .list-collapse-indicator {
 	padding-top: 2px;
 	padding-left: 10px;
 	font-size: 12px;
-	line-height: 15px;
+	line-height: 16px;
 	border-left-width: 3px;
 	margin: 0;
 	overflow: hidden;
@@ -1153,20 +1153,20 @@ ol.kanban .task-list-item .list-collapse-indicator {
 	color: var(--text-muted);
 	display: flex;
 	justify-content: flex-end;
-	line-height: var.$size-6;
-	max-height: var.$size-6;
-	padding: var.$size-0
-			 var.$size-5
-			 var.$size-0
-			 var.$size-0;
+	line-height: 24px;
+	max-height: 24px;
+	padding: 0px
+			 16px
+			 0px
+			 0px;
 	user-select: none;
 	z-index: var(--layer-status-bar);
 
 	&-item {
-		padding: var.$size-0 
-				 var.$size-3
-				 var.$size-0
-				 var.$size-3;
+		padding: 0px 
+				 8px
+				 0px
+				 8px;
 		color: var(--text-muted);
 		font-size: var(--font-scale-000);
 	}
@@ -1176,16 +1176,16 @@ ol.kanban .task-list-item .list-collapse-indicator {
 // sync status icons
 .sync-status-icon.mod-working svg {
 	color: var(--text-muted);
-	height: var.$scale-2;
-	width: var.$scale-2;
+	height: 16px;
+	width: 16px;
 	transform: scale(.9);
 	vertical-align: -1px;
 }
 
 .sync-status-icon.mod-success svg {
 	color: var(--color-green);
-	height: var.$scale-2;
-	width: var.$scale-2;
+	height: 16px;
+	width: 16px;
 	vertical-align: -1px;
 }
 

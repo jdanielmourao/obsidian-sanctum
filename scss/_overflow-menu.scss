@@ -4,7 +4,7 @@
 	background-color: var(--color-primary-1);
 	border-radius: 4px;
 	border: 1px solid var(--color-border-1);
-	box-shadow: var.$elevation-1;
+	box-shadow: var(--elevation-1);
 	position: fixed;
 	z-index: var(--layer-menu);
 	user-select: none;
@@ -12,12 +12,12 @@
 	overflow: hidden;
 
 	.theme-dark & {
-		box-shadow: var.$elevation-2;
+		box-shadow: var(--elevation-2);
 	}
 	&-separator {
-		height: var.$size-0;
-		margin: var.$size-2
-				var.$size-0;
+		height: 0px;
+		margin: 4px
+				0px;
 		border-bottom: 1px solid var(--color-primary-1);
 	}
 }
@@ -25,10 +25,10 @@
 .menu-item {
 	&:not(.is-disabled):not(.is-label) {
 		background-color: var(--color-primary-1);
-		padding: var.$size-0
-				 var.$size-5
-				 var.$size-0
-				 var.$size-5;
+		padding: 0px
+				 16px
+				 0px
+				 16px;
 	}
 	&:not(.is-disabled):not(.is-label):hover {
 		background-color: var(--color-hover);

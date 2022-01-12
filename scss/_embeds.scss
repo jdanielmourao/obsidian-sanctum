@@ -8,8 +8,8 @@
 .markdown-source-view .markdown-embed,
 .markdown-source-view .file-embed {
 	border: none;
-	padding: var.$size-0;
-	margin: var.$size-0;
+	padding: 0px;
+	margin: 0px;
 }
 
 .markdown-embed .markdown-preview-view .markdown-preview-sizer.markdown-preview-section {
@@ -28,9 +28,9 @@
 	left: unset;
 	text-align: right;
 	border: none;
-	margin: 0 var.$size-6;
-	width: var.$size-6;
-	height: var.$size-6;
+	margin: 0 24px;
+	width: 24px;
+	height: 24px;
 	color: var(--text-faint);
 	cursor: pointer;
 	display: unset;
@@ -61,9 +61,9 @@
 .markdown-preview-view .markdown-embed-content,
 .markdown-preview-view .markdown-embed-content > .markdown-preview-view { 
 	max-height: unset;
-	padding: var.$size-0;
-	margin: var.$size-0;
-	border: var.$size-0;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
 }
 
 // make tables respect readable line width when having embeds.
@@ -81,7 +81,7 @@
 // remove vertical space added by markdown-preview-sizer
  div.markdown-preview-sizer.markdown-preview-section {
 	min-height: unset;
-	padding-bottom: var.$size-0;
+	padding-bottom: 0px;
 }
 
 // special considerations for printing (PDF export)

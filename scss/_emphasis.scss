@@ -78,7 +78,7 @@ body:not(.is-mobile) {
 		background-position: 50% 100%;
 		background-repeat: no-repeat;
 		background-size: calc(100% - 4px) 8px;
-		transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
+		transition: background var(--duration-moderate-2) var(--motion-entrance-productive);
 
 		&:hover {
 			background-size: calc(100% - 4px) 100%;
@@ -119,7 +119,7 @@ body:not(.is-mobile) {
 		background-position: 50% 100%;
 		background-repeat: no-repeat;
 		background-size: calc(100% - 4px) 8px;
-		transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
+		transition: background var(--duration-moderate-2) var(--motion-entrance-productive);
 
 		&:hover {
 			background-size: calc(100% - 4px) 100%;
@@ -158,7 +158,7 @@ body:not(.is-mobile) {
 		background-position: 50% 100%;
 		background-repeat: no-repeat;
 		background-size: calc(100% - 4px) 8px;
-		transition: background var.$duration-moderate-2 var.$motion-entrance-productive;
+		transition: background var(--duration-moderate-2) var(--motion-entrance-productive);
 
 		&:hover {
 			background-size: calc(100% - 4px) 100%;

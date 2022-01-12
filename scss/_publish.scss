@@ -152,11 +152,11 @@ html .site-body * {
 
 .search-results .suggestion-item {
 	position: relative;
-	padding: var.$size-2
-			 var.$size-5 
-			 var.$size-2 
-			 var.$size-7;
+	padding: 4px
+			 16px 
+			 4px 
+			 32px;
 	cursor: pointer;
 	white-space: pre-wrap;
-	line-height: var.$leading-3;
+	line-height: var(--leading-3);
 }

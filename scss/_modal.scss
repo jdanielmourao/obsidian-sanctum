@@ -5,19 +5,19 @@
 	background:var(--background-primary);
 	border-radius: 6px;
 	overflow:hidden;
-	padding: var.$size-5
-			 var.$size-5
-			 var.$size-3;
+	padding: 16px
+			 16px
+			 8px;
 
 	&-close-button {
-		right: var.$size-4;
-		top: var.$size-4;
+		right: 12px;
+		top: 12px;
 	
 		&:before {
 			color: transparent;
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(0, 0%, 99.6%)' viewBox='0 0 32 32'%3E%3Cpath d='M24 9.4 22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
 			background-repeat: no-repeat;
-			background-size: var.$scale-3 var.$scale-3;
+			background-size: 24px 24px;
 			background-position: center center;
 			opacity: .5;
 
@@ -44,10 +44,10 @@ textarea.sync-history-content {
 
 .sync-history-list {
 	& .setting-item-control div.search-input-container {
-		margin: var.$size-5
-				var.$size-5
-				var.$size-5
-				var.$size-5;
+		margin: 16px
+				16px
+				16px
+				16px;
 	}
 	& .search-input-container .search-input-clear-button {
 		margin-right: -6px;
@@ -55,10 +55,10 @@ textarea.sync-history-content {
 	}
 	&-item {
 		border-left: 1.5px solid transparent;
-		padding: var.$size-3
-				 var.$size-5
-				 var.$size-3
-				 var.$size-5;
+		padding: 8px
+				 16px
+				 8px
+				 16px;
 
 		&.is-active,
 		&:hover {

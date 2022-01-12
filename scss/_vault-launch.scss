@@ -15,19 +15,19 @@
 		background-color: var(--color-primary-0);
 		width: 150%;
 		border-radius: 0px;
-		height: var.$size-3;
+		height: 8px;
 	}
 	&-subline {	// bar
 		position: absolute;
 		background-color: var(--interactive-accent);
 		border-radius: 0px;
-		height: var.$size-3;
+		height: 8px;
 	}
 }
 
 .is-loading:before,
 .search-result-container.is-loading:before {
 	background-color: var(--background-primary);
-	animation: var.$duration-slow-2 var.$motion-standard-productive
-	var.$duration-slow-1 infinite progress-bar;
+	animation: var(--duration-slow-2) var(--motion-standard-productive)
+	var(--duration-slow-1) infinite progress-bar;
 }

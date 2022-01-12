@@ -57,7 +57,7 @@
 	border-color: var(--color-border-1);
 	background-color: rgba(var(--rgb-primary-0), .5);
 	backdrop-filter: blur(0px);
-	transition: var.$duration-fast-1 var.$motion-standard-expressive;
+	transition: var(--duration-fast-1) var(--motion-standard-expressive);
 
 	& div.setting-item .setting-item-name {
 		font-size: var(--font-scale-00);
@@ -66,18 +66,18 @@
 		min-width: inherit;
 		background-color: var(--background-primary);
 		//border: 1px solid var(--color-border-1);
-		padding: var.$size-3
-				 var.$size-3
-				 var.$size-3
-				 var.$size-3;
+		padding: 8px
+				 8px
+				 8px
+				 8px;
 		top: 4px;
 		left: 16px; //makes it so when it's in a side panel, it aligns with nav action buttons
 	}
 	&.is-close:hover {
-	//box-shadow: var.$elevation-1;
+	//box-shadow: var(--elevation-1);
 	}
 	&:not(.graph-controls.is-close) {
-		box-shadow: var.$elevation-1;
+		box-shadow: var(--elevation-1);
 	}
 	&::-webkit-scrollbar-thumb {
 		border-width: 3px;

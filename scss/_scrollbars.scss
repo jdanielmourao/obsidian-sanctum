@@ -9,7 +9,7 @@
 	}
 	&::-webkit-scrollbar-thumb:hover {
 		border-width: 3px;
-		transition: var.$duration-moderate-1 var.$motion-entrance-expressive;
+		transition: var(--duration-moderate-1) var(--motion-entrance-expressive);
 	}
 	&::-webkit-scrollbar {
 		visibility: visible;

@@ -6,7 +6,7 @@ div.kanban-plugin {
 }
 
 .view-content .kanban-plugin .tag {
-	border: var.$size-0;
+	border: 0px;
 	background-color: var(--text-accent);
 	color: var(--background-primary);
 	border-radius: 30px;
@@ -14,21 +14,21 @@ div.kanban-plugin {
 
 .kanban-plugin__item-tags a.kanban-plugin__item-tag {
 	background-color: rgba(var(--interactive-accent-rgb),.1);
-	padding: var.$size-0
-			 var.$size-2;
+	padding: 0px
+			 4px;
 	border-radius: 30px;
-	margin: var.$size-0;
+	margin: 0px;
 }
 
 div.kanban-plugin__lane {
 	background: var(--background-primary);
 	border-radius: 4px;
-	padding: var.$size-2;
-	box-shadow: var.$elevation-1;
+	padding: 4px;
+	box-shadow: var(--elevation-1);
 	border: 1px solid var(--color-primary-0);
 
 	.theme-dark & {
-		box-shadow: var.$elevation-2;
+		box-shadow: var(--elevation-2);
 	}
 }
 
@@ -42,14 +42,14 @@ div.kanban-plugin__item {
 
 div.kanban-plugin__item-button-wrapper {
 	border-top: 1.5px solid var(--color-border-1);
-	padding: var.$size-2;
+	padding: 4px;
 }
 
 div.kanban-plugin__item-title-wrapper {
 	background: var(--background-primary);
 	display: flex;
-	padding: var.$size-2
-			 var.$size-3;
+	padding: 4px
+			 8px;
 }
 
 .kanban-plugin__item-title-wrapper:hover {
@@ -59,14 +59,14 @@ div.kanban-plugin__item-title-wrapper {
 body .kanban-plugin__lane-items.is-dragging-over {
 	border: 1px solid var(--interactive-accent);
 	background-color: var(--background-primary);
-	box-shadow: var.$elevation-1;
+	box-shadow: var(--elevation-1);
 }
 
 body .kanban-plugin__grow-wrap > textarea,
 body .kanban-plugin__grow-wrap:after {
 	border: 1px solid var(--color-border-1);
-	padding: var.$size-2
-			 var.$size-3;
+	padding: 4px
+			 8px;
 	font: inherit;
 	font-size: var(--font-scale-00);
 	overflow: hidden;
@@ -82,11 +82,11 @@ button.kanban-plugin__new-item-button:hover {
 
 textarea.kanban-plugin__item-input:focus {
 	outline: 1px solid var(--color-blue);
-	padding: var.$size-0;
+	padding: 0px;
 }
 
 .kanban-plugin__lane .kanban-plugin__lane-header-wrapper {
-	padding: var.$size-3;
+	padding: 8px;
 	display: flex;
 	align-items: center;
 	flex-shrink: 0;
@@ -95,18 +95,18 @@ textarea.kanban-plugin__item-input:focus {
 }
 
 body .kanban-plugin__drag-container > .kanban-plugin__lane-wrapper > .kanban-plugin__lane {
-	box-shadow: var.$elevation-2;
+	box-shadow: var(--elevation-2);
 }
 
 body .kanban-plugin__drag-container > .kanban-plugin__item-wrapper > .kanban-plugin__item {
-	box-shadow: var.$elevation-2;
+	box-shadow: var(--elevation-2);
 }
 
 .kanban-wrap .kanban-plugin__board.kanban-plugin__board > div {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, var(--lane-width));
 	width: 100%;
-	gap: var.$size-4;
+	gap: 12px;
 	overflow: auto;
 }
 

@@ -30,10 +30,10 @@
 div.hr {
 	border-top: 1px solid;
 	border-color: var(--background-modifier-border);
-	margin: var.$size-6 0;
+	margin: 24px 0;
 	border-width: 1px;
-	margin-block-start: var.$size-3;
-	margin-block-end: var.$size-3;
+	margin-block-start: 8px;
+	margin-block-end: 8px;
 }
 
 .markdown-source-view.mod-cm6 div.hr {

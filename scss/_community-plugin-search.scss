@@ -7,23 +7,23 @@
 
 .community-plugin-info {
 	overflow-y: auto;
-	padding: var.$size-7
-			 var.$size-8
-			 var.$size-6
-			 var.$size-3;
+	padding: 32px
+			 40px
+			 24px
+			 8px;
 }
 
 .community-plugin-search {
 	& .search-input-container input {
-		padding-left: var.$size-3;
+		padding-left: 8px;
 		width: 200px;
 	}
 	& .setting-item-control button {
-		margin-left: var.$size-3;
-		margin-right: var.$size-9;
-		padding: var.$size-2
-				 var.$size-3
-				 var.$size-1;
+		margin-left: 8px;
+		margin-right: 48px;
+		padding: 4px
+				 8px
+				 2px;
 	}
 }
 
@@ -35,9 +35,9 @@
 .community-plugin-item {
 	padding-top: 0.5rem;
 	padding-bottom: .5rem;
-	padding-left: var.$size-5; // removed 3px to make up for border
-	margin: var.$size-0;
-	margin-left: var.$size-0;
+	padding-left: 16px; // removed 3px to make up for border
+	margin: 0px;
+	margin-left: 0px;
 	border-left: 1.5px solid transparent;
 
 	&:hover {
@@ -50,7 +50,7 @@ div.community-plugin-item .community-plugin-author,
 div.community-plugin-item .community-plugin-desc,
 div.community-plugin-item .community-plugin-version {
 	font-size: var(--font-scale-000);
-	line-height: var.$leading-0;
+	line-height: var(--leading-0);
 	color: var(--text-muted);
 }
 
@@ -66,7 +66,7 @@ div.community-plugin-item .community-plugin-version {
 }
 
 .community-plugin-name {
-	line-height: var.$leading-2;
+	line-height: var(--leading-2);
 	font-size: var(--font-scale-00);
 	font-weight: var(--font-medium);
 
@@ -91,6 +91,6 @@ div.community-plugin-item .community-plugin-version {
 .community-plugin-info .community-plugin-readme {
 	overflow-y: visible;
 	height: auto;
-	padding: var.$size-0
-			 var.$size-0;
+	padding: 0px
+			 0px;
 }

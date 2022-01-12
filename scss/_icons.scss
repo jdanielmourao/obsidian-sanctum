@@ -969,8 +969,8 @@ body:not(.no-sanctum-icons)
 body:not(.no-sanctum-icons)
   .nav-action-button[aria-label="New note"]
   svg.document { // set as 20px x 20px by default
-	height: var.$scale-2;
-	width: var.$scale-2;
+	height: 16px;
+	width: 16px;
 	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M30 24h-4v-4h-2v4h-4v2h4v4h2v-4h4v-2z'/%3E%3Cpath d='M16 28H8V4h8v6a2.006 2.006 0 0 0 2 2h6v4h2v-6a.91.91 0 0 0-.3-.7l-7-7A.909.909 0 0 0 18 2H8a2.006 2.006 0 0 0-2 2v24a2.006 2.006 0 0 0 2 2h8Zm2-23.6 5.6 5.6H18Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 
@@ -978,16 +978,16 @@ body:not(.no-sanctum-icons)
 body:not(.no-sanctum-icons)
   .nav-action-button[aria-label="New folder"]
   svg.folder { // set as 20px x 20px by default
-	height: var.$scale-2;
-	width: var.$scale-2;
+	height: 16px;
+	width: 16px;
 	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M26 20h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3Cpath d='M28 8H16l-3.4-3.4c-.4-.4-.9-.6-1.4-.6H4c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h14v-2H4V6h7.2l3.4 3.4.6.6H28v8h2v-8c0-1.1-.9-2-2-2z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
 }
 
 body:not(.no-sanctum-icons) .workspace-split.mod-left-split
   .nav-action-button[aria-label="Change sort order"]
   svg.up-and-down-arrows { // set as 20px x 20px by default
-	height: var.$scale-2;
-	width: var.$scale-2;
+	height: 16px;
+	width: 16px;
 	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M27.6 20.6 24 24.2V4h-2v20.2l-3.6-3.6L17 22l6 6 6-6zM9 4l-6 6 1.4 1.4L8 7.8V28h2V7.8l3.6 3.6L15 10z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
 }
 
@@ -995,7 +995,7 @@ body:not(.no-sanctum-icons) .workspace-split.mod-left-split
   .nav-action-button[aria-label="Reveal active file"]
   svg { // set as 20px x 20px by default
 	background-color: currentColor;
-	height: var.$scale-2;
-	width: var.$scale-2;
+	height: 16px;
+	width: 16px;
 	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M30 15h-6.07A8.008 8.008 0 0 0 17 8.07V2h-2v6.07A8.008 8.008 0 0 0 8.07 15H2v2h6.07A8.008 8.008 0 0 0 15 23.93V30h2v-6.07A8.008 8.008 0 0 0 23.93 17H30Zm-14 7a6 6 0 1 1 6-6 6.007 6.007 0 0 1-6 6Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;' transform='rotate(-180 16 16)'/%3E%3C/svg%3E");
 }

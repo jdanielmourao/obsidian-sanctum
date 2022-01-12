@@ -2,8 +2,8 @@
 
 .markdown-preview-view table {
 	border-collapse: collapse;
-	margin-top: var.$size-6;
-	margin-bottom: var.$size-6;
+	margin-top: 24px;
+	margin-bottom: 24px;
 	table-layout: auto;
 	width: max-content;
 	max-width: var(--limit-tables);
@@ -15,7 +15,7 @@
 }
 
 .markdown-preview-view th { // aka table header
-	padding-left: var.$size-5;
+	padding-left: 16px;
 	text-align: left;
 	font-weight: var(--font-regular);
 	background-color: var(--color-primary-2);
@@ -33,13 +33,13 @@
 .markdown-preview-view td { // aka table data cell
 	font-size: var(--font-scale-00);
 	font-weight: var(--font-regular);
-	padding: var.$size-3
-			 var.$size-5
-			 var.$size-3
-			 var.$size-5;
+	padding: 8px
+			 16px
+			 8px
+			 16px;
 	justify-content: left;
 	background-color: rgba(var(--rgb-primary-0),.8);
-	border: var.$size-0;
+	border: 0px;
 	border: 1px solid var(--color-primary-2);
 	border-bottom-width: 1.5;
 
@@ -66,8 +66,8 @@
 
 /* ───────────────────────────── Dataview Tables ──────────────────────────── */
 .dataview-100 table.table-view-table {
-	margin-top: var.$size-6;
-	margin-bottom: var.$size-6;
+	margin-top: 24px;
+	margin-bottom: 24px;
 	table-layout: auto;
 	width: 100%;
 }

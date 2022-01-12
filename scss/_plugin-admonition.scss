@@ -1,7 +1,7 @@
 @use 'var';
 
 .admonition.admonition-plugin {
-	margin: var.$size-6 var.$size-0;
+	margin: 24px 0px;
 	padding: 0;
 	overflow: hidden;
 	color: var(--text-normal);
@@ -9,7 +9,7 @@
 	background-color: var(--background-primary);
 	border-left: 2px solid rgb(var(--admonition-color));
 	border-radius: 4px;
-	box-shadow: var.$elevation-1;
+	box-shadow: var(--elevation-1);
 }
 
 .admonition-content-copy {

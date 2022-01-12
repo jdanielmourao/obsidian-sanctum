@@ -3,8 +3,8 @@
 input[type="range" i] {
 	-webkit-appearance: none;
 	background-color: transparent;
-	height: var.$scale-3;
-	padding: var.$size-0;
+	height: 24px;
+	padding: 0px;
 	cursor: default;
 	width: 128px;
 	background-image:
@@ -92,9 +92,9 @@ input[type="range" i] {
 		height: 16px;
 		width: 8px;
 		top: -6px;
-		//margin-top: calc(-1 * var.$size-2);
+		//margin-top: calc(-1 * 4px);
 		cursor: grabbing;
-		transition: var.$duration-slow-1 var.$motion-standard-expressive;
+		transition: var(--duration-slow-1) var(--motion-standard-expressive);
 		background: var(--color-accent);
 		//border: 2px solid var(--background-primary);
 		border-radius: 16px;
@@ -118,7 +118,7 @@ input[type="range" i] {
 //Dieter Rams slider 1
 //
 //	&::-webkit-slider-runnable-track {
-//		background: var.$color-grey-1;
+//		background: var(--color-grey-1);
 //		border: 1px solid var(--color-border-1);
 //		height: 16px;
 //		width: 128px;
@@ -193,9 +193,9 @@ input[type="range" i] {
 //		height: 14.5px;
 //		width: 2px;
 //		top: 0px;
-//		//margin-top: calc(-1 * var.$size-2);
+//		//margin-top: calc(-1 * 4px);
 //		cursor: grabbing;
-//		transition: var.$duration-slow-1 var.$motion-standard-expressive;
+//		transition: var(--duration-slow-1) var(--motion-standard-expressive);
 //		background: var(--color-accent);
 //		//border: 2px solid var(--background-primary);
 //		border-radius: 8px;
@@ -207,13 +207,13 @@ input[type="range" i] {
 //input[type="range" i] {
 //	-webkit-appearance: none;
 //	background-color: transparent;
-//	height: var.$scale-3;
-//	padding: var.$size-0;
+//	height: 24px;
+//	padding: 0px;
 //	cursor: default;
 //	width: 128px;
 //
 //	&::-webkit-slider-runnable-track {
-//		background: var.$color-grey-2;
+//		background: var(--color-grey-2);
 //		border: 1px solid var(--color-border-2);
 //		outline: 1px solid var(--color-primary-0);
 //		height: 5px;
@@ -359,9 +359,9 @@ input[type="range" i] {
 //		height: 16px;
 //		width: 16px;
 //		top: -7px;
-//		//margin-top: calc(-1 * var.$size-2);
+//		//margin-top: calc(-1 * 4px);
 //		cursor: grabbing;
-//		transition: var.$duration-slow-1 var.$motion-standard-expressive;
+//		transition: var(--duration-slow-1) var(--motion-standard-expressive);
 //		background: var(--color-accent);
 //		//border: 2px solid var(--background-primary);
 //		border-radius: 16px;
@@ -376,13 +376,13 @@ input[type="range" i] {
 //input[type="range" i] {
 //	-webkit-appearance: none;
 //	background-color: transparent;
-//	height: var.$scale-3;
-//	padding: var.$size-0;
+//	height: 24px;
+//	padding: 0px;
 //	cursor: default;
 //	width: 128px;
 //
 //	&::-webkit-slider-runnable-track {
-//		background: var.$color-grey-2;
+//		background: var(--color-grey-2);
 //		border-bottom: 1px solid var(--color-primary-0);
 //		height: 5px;
 //		width: 128px;
@@ -461,9 +461,9 @@ input[type="range" i] {
 //		height: 16px;
 //		width: 4px;
 //		top: -7px;
-//		//margin-top: calc(-1 * var.$size-2);
+//		//margin-top: calc(-1 * 4px);
 //		cursor: grabbing;
-//		transition: var.$duration-slow-1 var.$motion-standard-expressive;
+//		transition: var(--duration-slow-1) var(--motion-standard-expressive);
 //		background: var(--color-accent);
 //		//border: 2px solid var(--background-primary);
 //		border-radius: 16px;

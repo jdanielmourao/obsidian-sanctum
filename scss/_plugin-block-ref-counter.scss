@@ -16,7 +16,7 @@ button.block-ref-count {
 	border-radius: 50%;
 	border: 1px solid var(--color-border-1);
 	background-color: var(--color-primary-0);
-	transition: var.$duration-moderate-2 var.$motion-standard-expressive;
+	transition: var(--duration-moderate-2) var(--motion-standard-expressive);
 
 	&:hover {
 		color: var(--text-normal);
@@ -32,7 +32,7 @@ button.block-ref-count {
 }
 
 .highlight-animation {
-	transition: background-color var.$duration-slow-1 var.$motion-entrance-expressive;
+	transition: background-color var(--duration-slow-1) var(--motion-entrance-expressive);
 }
 
 [data-block-ref-id] .search-result-file-matched-text {
@@ -68,8 +68,8 @@ button.table-close {
 
 button.table-close::before {
 	content: "";
-	padding: var.$size-4;
-	margin-left: var.$size-3;
+	padding: 12px;
+	margin-left: 8px;
 	background-size: 24px 24px;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(0, 0%, 99.6%)' viewBox='0 0 32 32'%3E%3Cpath d='M24 9.4 22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
 	background-repeat: no-repeat;

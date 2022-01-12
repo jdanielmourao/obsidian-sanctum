@@ -7,7 +7,7 @@
 	transform: translateX(-50%);
 	z-index: var(--layer-tooltip);
 	pointer-events: none;
-	box-shadow: var.$elevation-1;
+	box-shadow: var(--elevation-1);
 	background-color: var(--text-normal);
 	color: var(--color-primary-0);
 	font-size: var(--font-scale-00);
@@ -16,13 +16,13 @@
 	border-radius: 3px;
 	left: 50%;
 	max-width: 300px;
-	padding: var.$size-2 var.$size-3;
-	animation: pop-down var.$duration-moderate-2 forwards var.$motion-standard-expressive;
+	padding: 4px 8px;
+	animation: pop-down var(--duration-moderate-2) forwards var(--motion-standard-expressive);
 	overflow-wrap: break-word;
 
 	&.mod-left,
 	&.mod-right {
-		animation: pop-right var.$duration-moderate-2 forwards var.$motion-standard-expressive;
+		animation: pop-right var(--duration-moderate-2) forwards var(--motion-standard-expressive);
 	}
 
 	& .tooltip-arrow {

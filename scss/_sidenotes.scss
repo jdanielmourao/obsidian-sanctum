@@ -7,15 +7,15 @@ aside {
 	clear: right;
 	width: 300px;
 	z-index: 3;
-	padding: var.$size-0
-			 var.$size-3 // this is to somewhat match the main text
-			 var.$size-0
-			 var.$size-5;
+	padding: 0px
+			 8px // this is to somewhat match the main text
+			 0px
+			 16px;
 	border-radius: 0px;
-	margin-bottom: var.$size-2;
+	margin-bottom: 4px;
 	margin-right: -.55em;
 	margin-left: 1em;
-	margin-top: var.$size-3;
+	margin-top: 8px;
 	text-decoration: none;
 	text-align: start;
 	font-weight: unset;
@@ -31,15 +31,15 @@ aside {
 	position: relative;
 	width: 300px;
 	clear: left;
-	padding: var.$size-0
-			 var.$size-0
-			 var.$size-0
-			 var.$size-0;
+	padding: 0px
+			 0px
+			 0px
+			 0px;
 	border-radius: 0px; // set to 4 for round corners
 	//border-left: 1.5px solid var(--color-primary-8);
-	margin-right: var.$size-0;
-	margin-top: var.$size-1;
-	margin-bottom: var.$size-0;
+	margin-right: 0px;
+	margin-top: 2px;
+	margin-bottom: 0px;
 	margin-left: -20rem;
 	background-color: transparent;
 	text-decoration: unset;
@@ -59,15 +59,15 @@ aside {
 	position: relative;
 	width: 300px;
 	clear: right;
-	padding: var.$size-0
-			 var.$size-0
-			 var.$size-0
-			 var.$size-0;
+	padding: 0px
+			 0px
+			 0px
+			 0px;
 	border-radius: 0px; // set to 4 for round corners
 	//border-left: 1.5px solid var(--color-primary-8);
 	margin-right: -20rem;
-	margin-top: var.$size-1;
-	margin-bottom: var.$size-0;
+	margin-top: 2px;
+	margin-bottom: 0px;
 	background-color: transparent;
 	text-decoration: unset;
 	text-align: start; /* aligns left */
@@ -92,11 +92,11 @@ aside {
 	float: right;
 	position: relative;
 	overflow: hidden;
-	margin: var.$size-3;
+	margin: 8px;
 	margin-right: -2.25rem;
-	margin-top: var.$size-0;
-	width: var.$size-5;
-	height: var.$size-5;
+	margin-top: 0px;
+	width: 16px;
+	height: 16px;
 	text-decoration: unset;
 	text-align: start;
 	font-weight: unset;
@@ -108,8 +108,8 @@ aside {
 		background-color: transparent;
 		background-repeat: no-repeat;
 		background-image: url("data:image/svg+xml,%3Csvg id='icon' fill='black' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Echat%3C/title%3E%3Cpath d='M17.74,30,16,29l4-7h6a2,2,0,0,0,2-2V8a2,2,0,0,0-2-2H6A2,2,0,0,0,4,8V20a2,2,0,0,0,2,2h9v2H6a4,4,0,0,1-4-4V8A4,4,0,0,1,6,4H26a4,4,0,0,1,4,4V20a4,4,0,0,1-4,4H21.16Z' transform='translate(0 0)'/%3E%3Crect x='8' y='10' width='16' height='2'/%3E%3Crect x='8' y='16' width='10' height='2'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
-		height: var.$size-5;
-		width: var.$size-5;
+		height: 16px;
+		width: 16px;
 	}
 
 	.theme-dark &:before {
@@ -123,16 +123,16 @@ aside {
 		width: 350px;
 		height: unset;
 		z-index: 3;
-		padding: var.$size-5;
-		padding-top: var.$size-3;
+		padding: 16px;
+		padding-top: 8px;
 		// border-right: 1.5px solid #{var.$80};
 		border-radius: 0px;
 		font-size: var(--font-scale-00);
 		width: 300px;
-		padding: var.$size-0
-				 var.$size-0
-				 var.$size-0
-				 var.$size-0;
+		padding: 0px
+				 0px
+				 0px
+				 0px;
 		margin-right: -20rem;
 	}
 }
@@ -142,15 +142,15 @@ aside {
 	clear: right;
 	width: 40%; //might be a good idea to make a media query in the future
 	z-index: 3;
-	padding: var.$size-0
-			 var.$size-3 /* this is to somewhat match the main text */
-			 var.$size-0
-			 var.$size-5;
+	padding: 0px
+			 8px /* this is to somewhat match the main text */
+			 0px
+			 16px;
 	border-radius: 0px;
-	margin-bottom: var.$size-2;
+	margin-bottom: 4px;
 	margin-right: -.55em;
 	margin-left: 1em;
-	margin-top: var.$size-3;
+	margin-top: 8px;
 	text-decoration: none;
 	text-align: start;
 	font-weight: unset;
@@ -178,5 +178,5 @@ aside {
 
 /* Shrink Scrollbar */
 .aside > ::-webkit-scrollbar {
-    width: var.$size-2;
+    width: 4px;
 }

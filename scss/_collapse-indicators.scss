@@ -7,8 +7,8 @@
 }
 // Collapse Icon in Frontmatter
 .frontmatter-collapse-indicator svg.right-triangle {
-	height: var.$scale-1;
-	width: var.$scale-1;
+	height: 8px;
+	width: 8px;
 	vertical-align: 0px;
 }
 
@@ -19,9 +19,9 @@
 .CodeMirror-foldgutter-folded, // Source Mode (legacy)
 .CodeMirror-foldgutter-open {
 	cursor: pointer;
-	margin-top: var.$size-0;
-	height: var.$scale-1;
-	width: var.$scale-1;
+	margin-top: 0px;
+	height: 8px;
+	width: 8px;
 }
 
 span[title="Fold line"],
@@ -71,7 +71,7 @@ span[title="Unfold line"]:hover, //end of source mode (legacy)
 
 
 .collapse-icon svg {
-	transition: transform 0ms var.$motion-standard-expressive;
+	transition: transform 0ms var(--motion-standard-expressive);
 	transform: rotate(180deg);
 
 	.is-collapsed & { // corrects collapse chevron direction

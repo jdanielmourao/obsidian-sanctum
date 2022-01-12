@@ -59,8 +59,8 @@ body {
 		font-feature-settings: "zero", "ss05" on;
 		font-weight:  var(--font-regular);
 		font-size: var(--font-scale-00);
-		line-height: var.$leading-2;
-		letter-spacing: var.$tracking-1;
+		line-height: var(--leading-2);
+		letter-spacing: var(--tracking-1);
 		font-variant-ligatures: no-common-ligatures;
 	}
 	&.theme-dark , body.theme-dark input, body.theme-dark button {
@@ -72,8 +72,8 @@ body {
 .markdown-preview-view { //preview
 	font-optical-sizing: auto;
 	font-family: var(--font-preview);
-	line-height: var.$leading-4;
-	letter-spacing: var.$tracking-0;
+	line-height: var(--leading-4);
+	letter-spacing: var(--tracking-0);
 	hyphens: auto;
 	font-variant-ligatures: common-ligatures;
 }
@@ -87,19 +87,19 @@ body {
 	font-variant-ligatures: common-ligatures;
 	font-optical-sizing: auto;
 	font-family: var(--font-editor);
-	line-height: var.$leading-4;
-	letter-spacing: var.$tracking-2;
+	line-height: var(--leading-4);
+	letter-spacing: var(--tracking-2);
 }
 
 .cm-s-obsidian { //edit/source mode
 	font-variant-ligatures: common-ligatures;
 	font-optical-sizing: auto;
 	font-family: var(--font-editor);
-	letter-spacing: var.$tracking-2;
+	letter-spacing: var(--tracking-2);
 }
 
 .CodeMirror-sizer { // Legacy Editor
-	line-height: var.$leading-4;
+	line-height: var(--leading-4);
 }
 /*
 .CodeMirror-wrap .CodeMirror-line,
@@ -284,9 +284,9 @@ body {
 .cm-s-obsidian .cm-header-1,
 .cm-s-obsidian .HyperMD-header-1 {
 	font-size: var(--heading-1);
-	line-height: var.$leading-1;
+	line-height: var(--leading-1);
 	font-weight: var(--heading-1-weight);
-	letter-spacing: var.$tracking-0;
+	letter-spacing: var(--tracking-0);
 	margin-top: .5em;
 	margin-bottom: .5em;
 }	
@@ -294,9 +294,9 @@ body {
 .cm-s-obsidian .cm-header-2,
 .cm-s-obsidian .HyperMD-header-2 {
 	font-size: var(--heading-2);
-	line-height: var.$leading-1;
+	line-height: var(--leading-1);
 	font-weight: var(--heading-2-weight);
-	letter-spacing: var.$tracking-0;
+	letter-spacing: var(--tracking-0);
 	margin-top: .75em;
 	margin-bottom: .75em;
 }	
@@ -304,9 +304,9 @@ body {
 .cm-s-obsidian .cm-header-3,
 .cm-s-obsidian .HyperMD-header-3 {
 	font-size: var(--heading-3);
-	line-height: var.$leading-1;
+	line-height: var(--leading-1);
 	font-weight: var(--heading-3-weight);
-	letter-spacing: var.$tracking-0;
+	letter-spacing: var(--tracking-0);
 	margin-top: .875em;
 	margin-bottom: .875em;
 }	
@@ -314,9 +314,9 @@ body {
 .cm-s-obsidian .cm-header-4,
 .cm-s-obsidian .HyperMD-header-4 {
 	font-size: var(--heading-4);
-	line-height: var.$leading-1;
+	line-height: var(--leading-1);
 	font-weight: var(--heading-4-weight);
-	letter-spacing: var.$tracking-0;
+	letter-spacing: var(--tracking-0);
 	margin-top: 1em;
 	margin-bottom: 1em;
 }	
@@ -324,9 +324,9 @@ body {
 .cm-s-obsidian .cm-header-5,
 .cm-s-obsidian .HyperMD-header-5 {
 	font-size: var(--heading-5);
-	line-height: var.$leading-1;
+	line-height: var(--leading-1);
 	font-weight: var(--heading-5-weight);
-	letter-spacing: var.$tracking-0;
+	letter-spacing: var(--tracking-0);
 	margin-top: 1.125em;
 	margin-bottom: 1.125em;
 	color:var(--text-normal);
@@ -335,9 +335,9 @@ body {
 .cm-s-obsidian .cm-header-6,
 .cm-s-obsidian .HyperMD-header-6 {
 	font-size: var(--heading-6);
-	line-height: var.$leading-1;
+	line-height: var(--leading-1);
 	font-weight: var(--heading-6-weight);
-	letter-spacing: var.$tracking-1;
+	letter-spacing: var(--tracking-1);
 	margin-top: 1.125em;
 	margin-bottom: 1.125em;
 	color:var(--text-normal);

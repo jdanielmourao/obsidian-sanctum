@@ -14,8 +14,8 @@
 
 // set space above and below horizontal line that separate footnotes
 .markdown-preview-view .footnotes hr {
-	margin-top: var.$size-9;
-	margin-bottom: var.$size-5;
+	margin-top: 48px;
+	margin-bottom: 16px;
 }
 
 // applies to number-references in footnote text

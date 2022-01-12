@@ -1,7 +1,7 @@
 @use 'var';
 
 .markdown-preview-view code,.markdown-preview-view pre {
-	border-radius: var.$size-0;
+	border-radius: 0px;
 }
 
 
@@ -21,8 +21,8 @@
 	font-family: var(--font-mono);
 	font-weight: var(--font-medium);
 	font-size: var(--font-scale-00);
-	line-height: var.$leading-2;
-	letter-spacing: var.$tracking-2;
+	line-height: var(--leading-2);
+	letter-spacing: var(--tracking-2);
 	border-radius: 3px;
 }
 
@@ -31,7 +31,7 @@
 	font-variant-ligatures: no-common-ligatures;
 	font-family: var(--font-mono);
 	font-weight: var(--font-medium);
-	letter-spacing: var.$tracking-2;
+	letter-spacing: var(--tracking-2);
 }
 
 .theme-dark code[class*=language-],
@@ -55,14 +55,14 @@ pre[class*=language-] {
 .cm-s-obsidian span.cm-inline-code,
 .markdown-preview-view span.cm-inline-code {
 	font-size: var(--font-scale-00);
-	line-height: var.$leading-0;
+	line-height: var(--leading-0);
 }
 
 .markdown-preview-view div.el-pre pre:not(pre.frontmatter.language-yaml) {
-	padding: var.$size-3
-			 var.$size-8
-			 var.$size-3
-			 var.$size-5;
+	padding: 8px
+			 40px
+			 8px
+			 16px;
 	white-space: wrap;
 	width: 100%;
 	border: 1px solid var(--color-primary-2); //color block borders
@@ -122,11 +122,11 @@ body:not(.is-mobile) button.copy-code-button {
 	background-repeat: no-repeat;
 	color: currentColor;
 	background-color: var(--text-faint);
-	font-size: var.$size-0;
+	font-size: 0px;
 	position: absolute;
 	top: 10px;
 	right: 10px;
-	transition: transform var.$duration-fast-1 var.$motion-standard-expressive;
+	transition: transform var(--duration-fast-1) var(--motion-standard-expressive);
 
 	&:hover {
 		background-color: var(--text-muted);
@@ -134,7 +134,7 @@ body:not(.is-mobile) button.copy-code-button {
 	&:active {
 		background-color: var(--text-normal);
 		transform: scale(1.4); // makes it shrink a bit when clicked
-		transition: transform var.$duration-fast-1 var.$motion-standard-expressive;
+		transition: transform var(--duration-fast-1) var(--motion-standard-expressive);
 	}
 }
 

@@ -15,8 +15,8 @@
 
 .is-mobile .modal-bg {  // background of settings
 	position: absolute;
-	top: var.$size-0;
-	left: var.$size-0;
+	top: 0px;
+	left: 0px;
 	width: 100%;
 	height: 100%;
 	background-color: transparent;
@@ -36,11 +36,11 @@
 
 	&.mod-left {
 		border-right: 1px solid var(--color-border-1);
-		box-shadow: var.$elevation-1;
+		box-shadow: var(--elevation-1);
 	}
 	&.mod-right {
 		border-left: 1px solid var(--color-border-1);
-		box-shadow: var.$elevation-1;
+		box-shadow: var(--elevation-1);
 	}
 }
 
@@ -54,7 +54,7 @@
 .is-mobile .outline,
 .is-mobile .tag-container {
 	font-size: var(--font-scale-0);
-	line-height: var.$leading-1;
+	line-height: var(--leading-1);
 }
 
 .is-mobile div.nav-files-container.node-insert-event.show-unsupported {
@@ -85,7 +85,7 @@
 	& .workspace-drawer-header-icon:before {
 		content: "Click the icon to unpin →";
 		font-size: var(--font-scale-00);
-		line-height: var.$leading-0;
+		line-height: var(--leading-0);
 	}
 
 	& .workspace-drawer-header-left {
@@ -143,7 +143,7 @@ div.workspace-drawer.is-pinned.mod-left .workspace-drawer-active-tab-header {
 .is-mobile .workspace-drawer-header-icon  svg { // Pin Icon
 	color: var(--text-faint);
 	cursor: pointer;
-	margin-left: var.$size-3;
+	margin-left: 8px;
 	height: 20px;
 	width: 20px;
 }
@@ -151,9 +151,9 @@ div.workspace-drawer.is-pinned.mod-left .workspace-drawer-active-tab-header {
 .workspace-drawer-active-tab-header {
 	display: flex;
 	align-items: center;
-	margin: var.$size-5
-			var.$size-0;
-	height: var.$size-6;
+	margin: 16px
+			0px;
+	height: 24px;
 
 	div.workspace-drawer.mod-left & {
 		margin-bottom: 0;
@@ -164,7 +164,7 @@ div.workspace-drawer.is-pinned.mod-left .workspace-drawer-active-tab-header {
 
 		& .workspace-drawer-active-tab-title {
 			font-size: var(--font-scale-2);
-			line-height: var.$leading-2;
+			line-height: var(--leading-2);
 		}
 	}
 }
@@ -192,18 +192,18 @@ div.workspace-drawer-active-tab-icon svg.fullscreen { // hide "maximise"
 
 .is-mobile .nav-file-title,
 .is-mobile .nav-folder-title {
-	height: var.$size-7;
-	margin-top: var.$size-0;
-	margin-bottom: var.$size-0;
+	height: 32px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 .is-mobile .nav-file-title-content,
 .is-mobile .nav-folder-title-content {
-	padding: var.$size-0
-			 var.$size-2
-			 var.$size-1
-			 var.$size-2;
-	line-height: var.$size-7;
+	padding: 0px
+			 4px
+			 2px
+			 4px;
+	line-height: 32px;
 	transform: translateY(-2px); // centers vertically each title's content
 	color: var(--text-normal);
 }
@@ -243,8 +243,8 @@ body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
 
 // correction of "change sort order" in file explorer
 .is-mobile .nav-action-button svg.up-and-down-arrows {
-	height: var.$scale-2;
-	width: var.$scale-2;
+	height: 16px;
+	width: 16px;
 }
 
 // Containers and Modals
@@ -264,7 +264,7 @@ body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
 	bottom: 0;
 	border-radius: 6px 6px 0 0;
 	padding: 12px 24px;
-	box-shadow: var.$elevation-2;
+	box-shadow: var(--elevation-2);
 	background-color: var(--background-primary);
 	border: 1px solid var(--color-primary-0);
 }
@@ -288,7 +288,7 @@ body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
 	color: var(--text-muted);
 	text-transform: uppercase;
 	color: var(--text-normal);
-	padding: var.$size-3 var.$size-5;
+	padding: 8px 16px;
 	user-select: none;
 	height: 100%;
 }
@@ -377,11 +377,11 @@ body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
 	z-index: var(--layer-cover);
 	width: 100%;
 	height: 100%;
-	top: var.$size-0;
-	left: var.$size-0;
+	top: 0px;
+	left: 0px;
 	opacity: 1;
 	background-color: transparent;
-	transition: opacity var.$motion-exit-productive var.$duration-moderate-1;
+	transition: opacity var(--motion-exit-productive) var(--duration-moderate-1);
 }
 
 .no-blur .is-mobile .workspace-drawer-backdrop {
@@ -405,22 +405,22 @@ html .is-mobile div.menu {
 	max-width: calc(100% - 20px);
 	min-width: unset;
 	position: absolute;
-	bottom: var.$size-0;
+	bottom: 0px;
 	border-radius: 6px 6px 0 0;
-	padding: var.$size-2
-			 var.$size-3;
+	padding: 4px
+			 8px;
 	padding-left: 8px;
 	top: unset;
 	overflow-y: auto;
 	background-color: var(--color-primary-1);
-	box-shadow: var.$elevation-1;
+	box-shadow: var(--elevation-1);
 }
 
 .is-mobile .menu-item:not(.is-disabled):not(.is-label) {
-	padding: var.$size-2
-			 var.$size-0
-			 var.$size-2
-			 var.$size-0;
+	padding: 4px
+			 0px
+			 4px
+			 0px;
 	background-color: var(--color-primary-1);
 }
 
@@ -429,7 +429,7 @@ html .is-mobile div.menu {
 	box-shadow: none;
 	border-bottom: 1px solid var(--color-border-2);
 	padding: 12px 24px;
-	height: var.$scale-6;
+	height: 48px;
 	color: var(--text-normal);
 	background-color: var(--background-primary);
 }
@@ -458,9 +458,9 @@ html .is-mobile div.menu {
 	.is-mobile .modal,
 	.is-mobile .modal-container .modal.mod-settings {
 		max-width: 800px;
-		border-top-left-radius: 15px;
-		border-top-right-radius: 15px;
-		margin-bottom: -15px;
+		border-top-left-radius: 16px;
+		border-top-right-radius: 16px;
+		margin-bottom: -16px;
 		overflow: hidden;
 	}
 }
@@ -505,10 +505,10 @@ html .is-mobile div.menu {
 }
 
 .is-mobile .setting-item-control button {
-	padding: var.$size-3
-			 var.$size-8
-			 var.$size-3
-			 var.$size-5;
+	padding: 8px
+			 40px
+			 8px
+			 16px;
 }
 
 .modal.mod-settings .modal-content {
@@ -572,7 +572,7 @@ html .is-mobile div.menu {
 .workspace-drawer-tab-option-item {
 	display: flex;
 	align-items: center;
-	margin: var.$size-5;
+	margin: 16px;
 }
 
 .workspace-drawer-tab-option-item-title,
@@ -590,10 +590,10 @@ html body.is-mobile div.nav-header .nav-buttons-container {
 	flex-direction: row;
 	justify-content: flex-end;
 	flex-wrap: nowrap;
-	padding: var.$size-0
-			 var.$size-0
-			 var.$size-0
-			 var.$size-0;
+	padding: 0px
+			 0px
+			 0px
+			 0px;
 }
 
 .is-mobile .cm-s-obsidian span.cm-hr::after {
@@ -601,18 +601,18 @@ html body.is-mobile div.nav-header .nav-buttons-container {
 }
 
 body.is-mobile .nav-action-button svg {
-	height: var.$scale-2;
-	width:  var.$scale-2;
+	height: 16px;
+	width:  16px;
 }
 
 .workspace-drawer-tab-option-item-title,
 .workspace-drawer-active-tab-title {
-	line-height: var.$leading-1;
+	line-height: var(--leading-1);
 }
 
 .workspace-drawer-active-tab-icon svg {
-	height: var.$scale-2;
-	width: var.$scale-2;
+	height: 16px;
+	width: 16px;
 	-webkit-mask-repeat: no-repeat;
 }
 
@@ -623,22 +623,22 @@ body.is-mobile .nav-action-button svg {
 
 .is-mobile .suggestion-item {
 	font-size: var(--font-scale-0);
-	padding: var.$size-3;
+	padding: 8px;
 	border-radius: 0px;
 }
 
 .suggestion-hotkey {
-	padding: var.$size-0
-			 var.$size-3;
-	margin-right: var.$size-2;
+	padding: 0px
+			 8px;
+	margin-right: 4px;
 	float: right;
 	font-size: var(--font-scale-000);
 	font-family: var(--font-mono);
 }
 
 .is-mobile .view-actions {
-	padding: var.$size-2
-			 var.$size-3;
+	padding: 4px
+			 8px;
 }
 
 body.is-mobile:not(.float-button) .view-action:nth-last-of-type(5),
@@ -656,7 +656,7 @@ body.is-mobile:not(.float-button) .view-action:nth-last-of-type(4) { //floating 
 	border: 1px solid var(--color-primary-0);
 	transform: translateX(-16px);
 	border-radius: 50%;
-	box-shadow: var.$elevation-2;
+	box-shadow: var(--elevation-2);
 }
 
 body.is-mobile:not(.float-button).AT-multirow .view-action:nth-last-of-type(5), //floating button mode switch when
@@ -673,7 +673,7 @@ body.is-mobile:not(.float-button).AT-multirow .view-action:nth-last-of-type(4) {
 }
 
 .is-mobile .view-action {
-	padding-top: var.$size-2;
+	padding-top: 4px;
 }
 
 .is-mobile .view-action svg {
@@ -706,8 +706,8 @@ body.is-mobile:not(.float-button).AT-multirow .view-action:nth-last-of-type(4) {
 }
 
 .is-mobile .view-header-icon {
-	padding: var.$size-3
-			 var.$size-3;
+	padding: 8px
+			 8px;
 }
 
 .is-mobile .view-header-icon svg {
@@ -718,11 +718,11 @@ body.is-mobile:not(.float-button).AT-multirow .view-action:nth-last-of-type(4) {
 .is-mobile .nav-action-button {
 	color: var(--text-muted);
 	cursor: pointer;
-	padding: var.$size-0
-			 var.$size-3
-			 var.$size-0
-			 var.$size-3;
-	margin: var.$size-0 8px;
+	padding: 0px
+			 8px
+			 0px
+			 8px;
+	margin: 0px 8px;
 	border-radius: 4px;
 	transform: translateY(-2px);
 }
@@ -762,5 +762,5 @@ body.is-mobile:not(.float-button).AT-multirow .view-action:nth-last-of-type(4) {
 	padding: 32px 8px;
 	text-align: center;
 	border-bottom: 1px solid var(--color-border-2);
-	box-shadow: var.$elevation-1;
+	box-shadow: var(--elevation-1);
 }

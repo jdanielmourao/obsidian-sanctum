@@ -1,14 +1,14 @@
 @use 'var';
 
 .prompt {
-	padding: var.$size-5;
-	box-shadow: var.$elevation-1;
+	padding: 16px;
+	box-shadow: var(--elevation-1);
 
 	&-results {
-		padding: var.$size-5
-				 var.$size-0
-				 var.$size-0
-				 var.$size-0;
+		padding: 16px
+				 0px
+				 0px
+				 0px;
 	}
 	&-results span.suggestion-flair {
 		left: 0px;
@@ -21,17 +21,17 @@
 
 	&-container{ // hashtag suggestion
 		border: none;
-		box-shadow: var.$elevation-1;
+		box-shadow: var(--elevation-1);
 	}
 	.suggestion-container & .suggestion-item {
 		position: relative;
-		padding: var.$size-2
-				 var.$size-5 
-				 var.$size-2 
-				 var.$size-7;
+		padding: 4px
+				 16px 
+				 4px 
+				 32px;
 		cursor: pointer;
 		white-space: pre-wrap;
-		line-height: var.$leading-3;
+		line-height: var(--leading-3);
 	}
 	.suggestion-container & .suggestion-flair {
 		margin-left: -4px;
@@ -40,13 +40,13 @@
 	}
 	&-item { // prompt suggestion
 		position: relative;
-		padding: var.$size-3
-				 var.$size-0 
-				 var.$size-3 
-				 var.$size-7;
+		padding: 8px
+				 0px 
+				 8px 
+				 32px;
 		cursor: pointer;
 		white-space: pre-wrap;
-		line-height: var.$leading-3;
+		line-height: var(--leading-3);
 		
 		& .suggestion-hotkey {
 			background-color: var(--color-primary-0);
@@ -66,7 +66,7 @@
 	.prompt-results &-flair {
 		left: 0px;
 		transform: scale(0.8);
-		padding-left: var.$size-3;
+		padding-left: 8px;
 	}
 	.prompt-results &-prefix {
 		color: var(--color-accent);

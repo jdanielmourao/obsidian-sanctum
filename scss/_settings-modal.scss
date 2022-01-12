@@ -12,7 +12,7 @@
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	box-shadow: var.$elevation-1;
+	box-shadow: var(--elevation-1);
 }
 
 .modal-container .modal.mod-community-theme:not(.is-mobile .modal.mod-community-theme) {
@@ -27,8 +27,8 @@
 
 .modal.mod-settings .vertical-tab-content-container { // main content, besides left panel
 	border-left: 0px solid var(--background-primary);
-	padding-bottom: var.$size-0;
-	padding-right: var.$size-1; // space between scroll bar and end of settings menu
+	padding-bottom: 0px;
+	padding-right: 2px; // space between scroll bar and end of settings menu
 	height: 80vh;
 }
 
@@ -40,31 +40,31 @@
 	width: 0;
 	height: 3px;
 	background-color: var(--color-accent);
-	animation: 1000ms var.$motion-standard-expressive var.$duration-slow-1 infinite progress-bar;
+	animation: 1000ms var(--motion-standard-expressive) var(--duration-slow-1) infinite progress-bar;
 }
 
 .modal.mod-settings .vertical-tab-header { // left panel of settings modal
-	padding: var.$size-5
-			 var.$size-0;
+	padding: 16px
+			 0px;
 	flex: 0 0 200px;
 	height: 80vh;
 	overflow: auto;
 }
 
 .modal.mod-settings {
-	box-shadow: var.$elevation-1;
+	box-shadow: var(--elevation-1);
 	height: 80vh;
 	overflow: visible;
 }
 
 .modal-content {
-	padding: var.$size-0;
+	padding: 0px;
 }
 
 .modal-bg {  // background of settings
 	position: absolute;
-	top: var.$size-0;
-	left: var.$size-0;
+	top: 0px;
+	left: 0px;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(var(--rgb-primary-0), .3);
@@ -79,12 +79,12 @@
 .horizontal-tab-nav-item,
  .vertical-tab-nav-item { // each section of the left side panel of settings
 	background-color: var(--background-primary);
-	padding: var.$size-2
-			 var.$size-2
-			 var.$size-2
-			 var.$size-6;
-	margin: var.$size-1
-			var.$size-0;
+	padding: 4px
+			 4px
+			 4px
+			 24px;
+	margin: 2px
+			0px;
 	cursor: default;
 	font-size: var(--font-scale-00);
 	border-left: 3px solid transparent;
@@ -104,10 +104,10 @@
 .setting-item { // sections of the main panel
 	display: flex;
 	align-items: center;
-	padding: var.$size-5
-			 var.$size-0
-			 var.$size-5
-			 var.$size-0;
+	padding: 16px
+			 0px
+			 16px
+			 0px;
 	border-top: 1px solid var(--color-border-1);
 
 	& .setting-item-name {
@@ -128,8 +128,8 @@
 	color: var(--text-muted);
 	text-transform: capitalize;
 	color: var(--text-normal);
-	padding: var.$size-3
-			 var.$size-5;
+	padding: 8px
+			 16px;
 	user-select: none;
 	height: 100%;
 }
@@ -143,15 +143,15 @@
 // Community Themes
 .community-theme-container {
 	& .setting-item-control button {
-		margin-left: var.$size-3;
-		margin-right: var.$size-9;
-		padding: var.$size-2
-				 var.$size-3
-				 var.$size-1;
+		margin-left: 8px;
+		margin-right: 48px;
+		padding: 4px
+				 8px
+				 2px;
 	}
 	& .theme-list .community-theme {
-		padding:var.$size-3 var.$size-3 var.$size-3 var.$size-3;
-		margin: var.$size-3 var.$size-3 var.$size-3 var.$size-3;
+		padding:8px 8px 8px 8px;
+		margin: 8px 8px 8px 8px;
 		border: 1px solid transparent;
 
 		&:hover {
@@ -191,18 +191,18 @@
 		
 			& button,
 			& button.mod-cta {
-				line-height: var.$leading-0;
+				line-height: var(--leading-0);
 				border-radius: 4px;
 				margin: 0 2px;
 			}
 
 			& button:not(.mod-cta) {
-				padding: 7px 39px 7px 15px;
+				padding: 7px 39px 7px 16px;
 				font-size: var(--font-scale-00);
 				font-weight: var(--font-regular);
 				font-family: var(--font-ui);
 				background-color: var(--color-accent);
-				color: var.$color-white;
+				color: var(--color-white);
 				text-shadow: 0 1px rgba(black, .3);
 				box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.2) inset,
 				0px 1px 0px 0px rgba(245 243 240 / 0.35) inset;
@@ -238,12 +238,12 @@
 
 .setting-hotkey.mod-active,
 .setting-hotkey.has-conflict {
-	line-height: var.$leading-7;
+	line-height: var(--leading-7);
 }
 
 
 .setting-hotkey-icon.setting-delete-hotkey {
-	line-height: var.$leading-0; //centers x
+	line-height: var(--leading-0); //centers x
 	margin-left: 4px;
 	background-color: var(--color-primary-1);
 	border: 1px solid var(--color-primary-2);
@@ -260,10 +260,10 @@
 	padding-right: 0;
 
 	& .setting-item {
-		padding: var.$size-4
-				 var.$size-0
-				 var.$size-4
-				 var.$size-0;
+		padding: 12px
+				 0px
+				 12px
+				 0px;
 		display: flex;
 		flex-direction: row;
 		align-items: baseline;
@@ -275,7 +275,7 @@
 			min-width: max-content;
 		
 			& .setting-hotkey {
-				line-height: var.$leading-3;
+				line-height: var(--leading-3);
 				background-color: var(--color-primary-0);
 				border: 1px solid var(--color-primary-2);
 				padding: 2px 8px;
@@ -298,8 +298,8 @@
 // Appearance Menu
 //folder icon next to "Manage" button
 .setting-editor-extra-setting-button.clickable-icon[aria-label="Open themes folder"] {
-	margin: var.$size-0
-			var.$size-5;
+	margin: 0px
+			16px;
 }
 
 //Sync Core Menu
@@ -312,6 +312,6 @@
 //fix for settings headings overlapping
 .vertical-tab-content {
 	h1, h2, h3, h4, h5, h6 {
-	line-height: var.$leading-0;
+	line-height: var(--leading-0);
 	}
 }

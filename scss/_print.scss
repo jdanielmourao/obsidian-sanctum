@@ -86,7 +86,7 @@
 
 	body:not(.is-mobile) .markdown-preview-view mark {
 		font-weight: var(--font-regular);
-		color: var.$color-black;
+		color: var(--color-black);
 		background: none;
 		background-color: var(--color-highlight-1);
 		font-weight: 400;

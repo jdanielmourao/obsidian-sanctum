@@ -3,7 +3,7 @@
 
 @mixin button-l {
 	border-radius: 4px;
-	padding: 7px 39px 7px 15px; //take 1px from every side for the border
+	padding: 7px 39px 7px 16px; //take 1px from every side for the border
 	font-size: var(--font-scale-00);
 	font-weight: var(--font-regular);
 	font-family: var(--font-ui);
@@ -14,10 +14,10 @@
 }
 @mixin button-m {
 	border-radius: 0px;
-	padding: var.$size-2
-			 var.$size-5
-			 var.$size-2
-			 var.$size-5;
+	padding: 4px
+			 16px
+			 4px
+			 16px;
 	font-size: var(--font-scale-00);
 	font-weight: var(--font-regular);
 	font-family: var(--font-ui);
@@ -28,10 +28,10 @@
 
 @mixin button-s { // for sort icons, etc
 	border-radius: 3px;
-	padding: var.$size-2
-			 var.$size-2
-			 var.$size-0
-			 var.$size-2;
+	padding: 4px
+			 4px
+			 0px
+			 4px;
 	font-size: var(--font-scale-00);
 	font-weight: var(--font-regular);
 	font-family: var(--font-ui);

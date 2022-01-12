@@ -15,12 +15,12 @@ div#quick-explorer .explorable:hover {
 
 .qe-popup-menu .menu-item {
 	display: flex;
-	padding-left: var.$size-5;
+	padding-left: 16px;
 }
 
 .menu-item.selected:not(.is-disabled):not(.is-label):hover {
 	border-left: 0px solid transparent;
-	padding-left: var.$size-5;
+	padding-left: 16px;
 }
 
 .theme-dark .menu-item.is-qe-file.selected:not(.is-disabled):not(.is-label):hover {
@@ -29,5 +29,5 @@ div#quick-explorer .explorable:hover {
 
 // prevent appearing on top of the traffic lights of macOS
 .menu.qe-popup-menu {
-	padding-top: var.$size-5;
+	padding-top: 16px;
 }
