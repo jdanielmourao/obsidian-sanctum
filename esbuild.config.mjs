@@ -12,8 +12,8 @@ const prod = process.argv[2] === "production";
  * npm run dev will put it in OUTDIR specified in your .env
  * npm run build will place it in the build directory in this repository.
  */
-const dir = prod ? "./build" : process.env.OUTDIR;
-const file = `${dir}/Sanctum.css`;
+const dir = prod ? "./" : process.env.OUTDIR;
+const file = `${dir}/obsidian.css`;
 
 /**
  * readFileSync reads the file data in as a string.
