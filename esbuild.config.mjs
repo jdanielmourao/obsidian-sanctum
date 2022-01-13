@@ -19,7 +19,7 @@ const file = `${dir}/Sanctum.css`;
  * readFileSync reads the file data in as a string.
  */
 const banner = readFileSync("./scss/abstracts/_version.scss", { encoding: "utf8" });
-const footer = readFileSync("./scss/extensions/_style-settings.scss", {
+const footer = readFileSync("./scss/extensions/_footer.scss", {
 	encoding: "utf8"
 });
 
