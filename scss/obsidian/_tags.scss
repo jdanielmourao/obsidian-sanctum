@@ -35,7 +35,9 @@ div > .CodeMirror-line span.cm-hashtag-end {
 }
 
 .cm-s-obsidian .cm-hashtag-begin.cm-meta {
-	display: none;
+	font-size: 0;
+	padding: 0;
+	border-width: 0;
 }
 
 .cm-s-obsidian span.cm-hashtag::before { //adds an hashtag in editing view
