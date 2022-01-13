@@ -1,0 +1,84 @@
+button.block-ref-count {
+	font-family: var(--font-sans);
+	float: right;
+	color: var(--text-faint);
+	size: 8px;
+	padding: 8px 8px 8px 8px;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	left: 20px;
+	border-radius: 50%;
+	border: 1px solid var(--color-border-1);
+	background-color: var(--color-primary-0);
+	transition: var(--duration-moderate-2) var(--motion-standard-expressive);
+
+	&:hover {
+		color: var(--text-normal);
+		background-color: var(--background-primary);
+		border: 0px inset transparent;
+		border: 1px solid;
+		border-color: var(--color-border-1);
+		border-radius: 15%;
+	}
+	&:active {
+		transform: scale(.75);
+	}
+}
+
+.highlight-animation {
+	transition: background-color var(--duration-slow-1) var(--motion-entrance-expressive);
+}
+
+[data-block-ref-id] .search-result-file-matched-text {
+	background-color: transparent;
+	color: var(--text-muted);
+}
+
+[data-block-ref-id] .search-input-container,
+[data-block-ref-id] [aria-label="Match case"],
+[data-block-ref-id] [aria-label="Explain search term"] {
+	display: none;
+}
+
+[data-block-ref-id] .nav-buttons-container .search-input-clear-button {
+	background: transparent;
+	position: relative;
+	padding: 4px 8px 0 8px;
+	margin: 0 4px 8px 4px;
+	top: unset;
+	right: unset;
+	bottom: 5px;
+}
+
+.is-mobile .block-ref-count {
+	width: unset
+}
+
+button.table-close {
+	color: transparent;
+	background-color: transparent;
+	padding: 0;
+}
+
+button.table-close::before {
+	content: "";
+	padding: 12px;
+	margin-left: 8px;
+	background-size: 24px 24px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(0, 0%, 99.6%)' viewBox='0 0 32 32'%3E%3Cpath d='M24 9.4 22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	margin-left: -2px;
+	opacity: .5;
+
+	.theme-light & {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M24 9.4 22.6 8 16 14.6 9.4 8 8 9.4l6.6 6.6L8 22.6 9.4 24l6.6-6.6 6.6 6.6 1.4-1.4-6.6-6.6L24 9.4z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
+	}
+}
+
+th.reference {
+	border-right: 0;
+}

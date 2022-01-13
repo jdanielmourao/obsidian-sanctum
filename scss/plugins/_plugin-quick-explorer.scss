@@ -1,0 +1,31 @@
+div#quick-explorer .explorable.selected,
+div#quick-explorer .explorable,
+div#quick-explorer .explorable:hover {
+	padding: 2px 4px;
+}
+
+div#quick-explorer .explorable.selected,
+div#quick-explorer .explorable:hover {
+	color: var(--text-muted);
+	border-radius: 0px;
+	background-color: transparent;
+}
+
+.qe-popup-menu .menu-item {
+	display: flex;
+	padding-left: 16px;
+}
+
+.menu-item.selected:not(.is-disabled):not(.is-label):hover {
+	border-left: 0px solid transparent;
+	padding-left: 16px;
+}
+
+.theme-dark .menu-item.is-qe-file.selected:not(.is-disabled):not(.is-label):hover {
+	background-color: var(--background-primary);
+}
+
+// prevent appearing on top of the traffic lights of macOS
+.menu.qe-popup-menu {
+	padding-top: 16px;
+}

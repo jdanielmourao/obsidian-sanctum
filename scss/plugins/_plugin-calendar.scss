@@ -1,0 +1,176 @@
+// For the icon(s), check SVG Replacement
+// corrects arrow in Fantasy Calendar
+#calendar-container.fantasy-calendar {
+	& .arrow.right svg {
+		transform: rotate(180deg);
+	}
+	& .fantasy-nav {
+		padding-left: 12px;
+	}
+	& .clickable-icon svg.gear{
+		opacity: .8;
+	}
+	& .day {
+		&:hover {
+			background-color: var(--color-primary-0);
+		}
+		&:active {
+			background-color: var(--color-hover);
+		}
+	}
+	// highlighted day
+	& .day.fantasy-day.viewing {
+		background-color: var(--color-primary-0);
+		border: none;
+		padding: 10px 8px 2px 8px;
+		&:hover {
+			background-color: var(--color-primary-0);
+		}
+		&:active {
+			background-color: var(--color-primary-2);
+		}
+	}
+	& .day.fantasy-day.active {
+		background-color: var(--color-primary-2);
+		padding: 10px 8px 2px 8px;
+		border-radius: 4px;
+
+		&:hover {
+			background-color: var(--color-primary-3);
+			transition: background-color var(--duration-slow-2) var(--motion-entrance-expressive);
+		}
+		&:active {
+			background-color: var(--color-accent);
+		}
+	}
+	& div.weeks {
+		border-radius: 0px;
+		border-right: 0px solid var(--color-border-1);
+	}
+	& .weeks > span.week-num {
+		border-radius: 0px;
+		border-bottom: 1px solid var(--color-border-2);
+		padding-bottom: 6px;
+		padding-top: 4px;
+	}
+	& .weekdays {
+		border-radius: 0px;
+		border-bottom: 1px solid var(--color-border-2);
+	}
+	& .overflow	{
+		position: absolute;
+		bottom: 0;
+		left: 0px;
+		top: 20px;
+	}
+}
+
+#calendar-container div.reset-button {
+	color: var(--text-muted);
+}
+
+#calendar-container {
+	padding: 0px
+			 0px;
+	font-size: var(--font-scale-000);
+
+	--color-background-day-empty: var(--background-secondary-alt);
+	--color-background-day-active: var(--background-primary-alt);
+	--color-background-day-hover: var(--background-primary-alt);
+
+	--color-dot: var(--text-accent);
+	--color-button: var(--interactive-accent);
+
+	--color-text-title: var(--text-normal);
+	--color-text-heading: var(--text-muted);
+	--color-text-day: var(--text-normal);
+	--color-text-today: var(--text-accent);
+	--color-text-weeknum: var(--text-muted);
+
+	--color-arrow: var(--color-primary-3);
+	--color-arrow-hover: var(--color-primary-6);
+
+	& .day,
+	& .week-num {
+		padding: 8px
+				 8px
+				 2px
+				 8px;
+		border-radius: 4px;
+	}
+	.is-mobile & .day {
+		font-size: var(--font-scale-00);
+	}
+	& .day:hover {
+		background-color: var(--color-hover);
+	& .day:active {
+		background-color: var(--color-accent);
+	}
+	}
+	& thead {
+		border-top: 1.5px solid var(--color-border-1);
+	}
+	& tr th {
+		font-size: calc(var(--font-scale-000) - 3px);
+		font-weight: var(--font-semi-bold);
+		padding-top: 12px;
+	}
+	& tr td {
+		cursor: pointer;
+		transition: var(--duration-fast-2) var(--motion-standard-expressive);
+		border: none;
+		padding: 0px;
+		width: calc(100% / 8);
+		padding: 0px; 
+		transition: none;
+	}
+	& .table {
+		border-collapse: separate;
+		table-layout: fixed;
+		width: 100%;
+	}
+	& .reset-button {
+		font-size: calc(var(--font-scale-000) - 2px);
+	}
+	& h3,
+	& span.month {
+		font-weight: var(--font-regular);
+		font-size: var(--font-scale-0);
+	}
+	& .arrow:hover > svg {
+		color: var(--color-arrow-hover);
+	}
+	& .arrow svg > path { display:none; }
+	& .arrow svg {
+		background-color: currentColor;
+		-webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='10,16 20,6 21.4,7.4 12.8,16 21.4,24.6 20,26 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+	}
+	& .arrow {
+		height: 16px;
+		width: 16px;
+		margin: 0px
+				4px;
+	}
+	& .button:hover {
+		color: var(--color-background-day-empty);
+	}
+	& .reset-button {
+		color: var(--color-primary-5);
+	}
+	& .reset-button:hover {
+		color: var(--color-primary-9);
+	}
+	& .dot-container{
+		background: transparent;
+	}
+	& .year {
+		color: var(--text-normal);
+	}
+	& .active {
+		background-color: var(--color-primary-2);
+		color: var(--text-normal);
+		&:hover {
+			background-color: var(--color-primary-3);
+		}
+	}
+}

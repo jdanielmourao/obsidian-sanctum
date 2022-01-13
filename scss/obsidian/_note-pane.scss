@@ -1,0 +1,197 @@
+// note header
+.view-header,
+.workspace-leaf.mod-active .view-header,
+.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
+	border: none;
+	background-color: var(--background-primary);
+	height: 32px;
+}
+
+// note title container
+.workspace-leaf.mod-active .view-header-title-container,
+.view-header-title-container {
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+	overflow: hidden;
+	padding-left: 8px;
+	position: relative;
+	background-color: var(--background-primary);
+}
+
+.view-header-title-container:after,
+.workspace-leaf.mod-active .view-header-title-container:after,
+.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after {
+	display:none; // gets rid of useless containers
+}
+
+.view-header-title-container div.view-header-title::-webkit-scrollbar {
+	display: none;
+}
+
+.view-header-title, // actual note titles
+.workspace-leaf.mod-active .view-header-title {
+	white-space: pre;
+	overflow: auto;
+	font-size: var(--font-scale-00);
+	font-weight: var(--font-semi-bold);
+	line-height: var(--leading-3);
+	letter-spacing: var(--tracking-0);
+	padding: 8px
+			 16px
+			 0px
+			 0px;
+	color: var(--text-normal);
+	word-wrap: normal;
+}
+
+div.view-header-icon { // dragable icon in note header
+	padding: 8px
+			 8px
+			 0px
+			 8px;
+	color: var(--text-faint);
+	cursor: grab;
+	position: relative;
+	top: 0px;	
+	& svg { // set size of Header Title Icon
+		height: 16px;
+		width: 16px;
+	}
+	body:not(.no-sanctum-icons) & svg { // Replace Draggable Icon svg
+		background-color: currentColor;
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' enable-background='new 0 0 32 32' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath d='M10 6h4v4h-4zm8 0h4v4h-4zm-8 8h4v4h-4zm8 0h4v4h-4zm-8 8h4v4h-4zm8 0h4v4h-4z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
+		
+		&:hover {
+			color: var(--color-muted);
+		}
+		&:active {
+			color: var(--color-accent);
+		}
+	}
+}
+
+:not(.is-mobile) .view-action {
+	color: var(--text-faint);
+
+	&:hover {
+		color: var(--text-muted);
+	}
+	&:active {
+		color: var(--text-normal);
+	}
+	&.mod-close-leaf:hover { //close note pane button
+		color: var(--color-red);
+	}
+}
+
+// Dim inactive panes [totally didn't borrow this from @pseudometa *cough*]
+body:not(body.plugin-sliding-panes) .workspace-leaf:not(.mod-active) .workspace-leaf-content[data-type='markdown'] {
+	opacity: .7;
+	transition: var(--motion-standard-expressive) var(--duration-moderate-1);
+}
+
+/* ────────────────────────────── Editor Width ────────────────────────────── */
+
+body:not(.is-mobile) .cm-scroller,
+body:not(.is-mobile) .markdown-preview-view { //shadow on reading and editing modes, credit @mgmeyers
+	background:
+		linear-gradient(
+			var(--background-primary) 30%,
+			rgba(250, 250, 250, 0)
+		  )
+		  center top,
+		/* Shadow */
+		radial-gradient(
+			farthest-side at 50% 0,
+			rgba(0, 0, 0, 0.15),
+			rgba(0, 0, 0, 0)
+		  )
+		  center top;
+	background-repeat: no-repeat;
+	background-size: 100% 40px, 120% 4px;
+	background-attachment: local, scroll;
+}
+
+body:not(.is-mobile) {
+	&.theme-dark .cm-scroller, 
+	&.theme-dark .markdown-preview-view {
+		background:
+		linear-gradient(
+			var(--background-primary) 30%,
+			rgba(250, 250, 250, 0)
+		  )
+		  center top,
+		/* Shadow */
+		  radial-gradient(
+			farthest-side at 50% 0,
+			rgba(0, 0, 0, 0.3),
+			rgba(0, 0, 0, 0)
+		  )
+		  center top;
+
+	background-repeat: no-repeat;
+	background-size: 100% 40px, 120% 4px;
+	background-attachment: local, scroll;
+	}
+}
+
+// Editor size
+.markdown-source-view.is-readable-line-width .CodeMirror {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+// Preview size
+.markdown-preview-view.is-readable-line-width div.markdown-preview-sizer {
+	width: var(--line-width);
+	max-width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0;
+}
+
+// Backlinks in document
+
+.embedded-backlinks {
+	& .tree-item-inner {
+		font-size: var(--font-scale-00);
+		margin-left: 0;
+	}
+	& .search-result-file-match:after {
+		position: absolute;
+		width: 100%;
+		bottom: -5px;
+		left: 0;
+		height: 1px;
+		background-color: var(--color-border-1);
+		content: '';
+	}
+	& .tree-item-icon.collapse-icon {
+		margin-right: 4px;
+		margin-left: 0px;
+	}
+	& .tree-item-self.search-result-file-title.is-clickable .tree-item-icon.collapse-icon {
+		margin-right: 4px;
+	}
+	& .nav-buttons-container {
+		display: flex;
+		justify-content: center;
+		margin-top: 16px;
+		height: 24px;
+
+		& .nav-action-button {
+			align-self: center;
+			height: 16px;
+			padding: 4px 8px 4px 8px;
+			margin: 0 .5px;
+			border-radius: 4px;
+			height: 24px;
+		}
+	}
+}
+
+/* For Line Breaks (double space at the end of a paragraph)
+.cm-line .cm-trailing-space-new-line::before {
+    content: "\21B5";
+}*/

@@ -10,6 +10,11 @@
   "devDependencies": {
     "dotenv": "^11.0.0",
     "esbuild": "^0.14.11",
-    "esbuild-sass-plugin": "^2.0.3"
+    "esbuild-sass-plugin": "^2.0.3",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0"
+  },
+  "dependencies": {
+    "postcss-nested": "^5.0.6"
   }
 }

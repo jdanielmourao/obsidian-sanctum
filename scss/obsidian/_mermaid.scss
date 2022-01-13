@@ -1,0 +1,14 @@
+.mermaid svg {
+	width: 100%;
+}
+
+.mermaid .node .label {
+	font-size: var(--font-scale-00);
+	text-align: center; // need to add specificity for this to work
+}
+
+/*
+.mermaid .node .label-container {
+	min-width: fit-content;
+}
+*/

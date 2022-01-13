@@ -1,0 +1,174 @@
+// Blockquote paragraph styling
+blockquote p {
+	display: block;
+ }
+
+.markdown-preview-view blockquote { // blockquote preview
+	border-radius: 0px;
+	border-width:	0px;
+	border-color: transparent;
+	border-left: 1px solid var(--color-accent);
+	background-color: transparent;
+	color:var(--text-normal);
+	margin-inline-start: 24px;
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+	margin-bottom: 16px;
+	margin-right: 0;
+	padding: 4px 0 4px 12px;
+	text-align: left;
+	font-family: var(--font-preview);
+	font-style: normal;
+	font-weight: var(--font-normal);
+	font-size: var(--font-scale-0);
+	line-height: var(--leading-3);
+	letter-spacing: var(--tracking-0);
+	position: relative;
+/*
+	&:after {
+		content: '\201C';
+		font-family: sans-serif;
+		position: absolute;
+		top: 0.31em;
+		left: -28px;
+		font-size: 3.75rem;
+		color: var(--color-accent);
+	}*/
+	&.paraphrase {
+		border-left: 0px solid transparent;
+
+		&:after { // when paraphrasing, wrap your quote in <blockquote class="paraphrase">
+		display: none;
+		}
+	}
+}
+
+
+.markdown-preview-view blockquote > blockquote > blockquote {
+	position: relative;
+	font-style: normal;
+	text-align: start;
+	border-left: 1px solid var(--background-primary);
+	color: var(--text-normal);
+	padding: 4px 0 4px 12px;
+	margin-left: -49px;
+	top: -4px;
+
+	&::before {
+		position: absolute;
+		content: "";
+		width: 4px;
+		height: 8px;
+		background: var(--background-primary);
+		bottom: -8px;
+		left: -2px;
+
+	}
+}
+
+cite { // for citations
+	color: var(--text-accent);
+	text-align: end;
+	display: block;
+}
+
+//"Markdown" cite
+.markdown-preview-view blockquote > blockquote {
+	font-style: italic;
+	text-align: end;
+	border: none;
+	color: var(--text-accent);
+	padding: 0 0 0 12px;
+	margin-top: -16px;
+}
+
+//Live Preview
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+	border-left: 1px solid var(--color-accent);
+}
+
+//markdown cite Live Preview
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-2 {
+	border-left: 1px solid var(--color-accent);
+
+	& .cm-blockquote-border	{
+		border: none;
+
+	}
+	& .cm-quote-2 {
+		color: var(--text-accent);
+	}
+}
+//markdown paraphrase Live Preview
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-3 {
+	border: 1px solid transparent;
+
+	& .cm-blockquote-border	{
+		border: none;
+		color: transparent;
+	}
+	& .cm-quote-3 {
+		color: var(--text-normal);
+	}
+}
+
+
+	/*
+	&:before {
+		content: '\201C';
+		font-family: sans-serif;
+		position: absolute;
+		top: 0em;
+		left: -16px;
+		font-size: 3.75rem;
+		color: var(--color-accent);
+	}*/
+
+
+//blockquote and paraphrase Live Preview
+.markdown-source-view.mod-cm6.is-live-preview .cm-html-embed.cm-embed-block blockquote:not(.paraphrase),
+.markdown-source-view.mod-cm6.is-live-preview .cm-html-embed.cm-embed-block blockquote {
+	border-radius: 0;
+	border: none;
+	border-left: 1px solid var(--color-accent);
+	padding: 0;
+	margin: 0;
+	margin-left: -4px;
+	padding-left: 16px;
+	color: var(--text-muted);
+
+	&.paraphrase {
+		border-left: 0px solid transparent;
+	}
+}
+
+	/*&:after {
+		content: '\201C';
+		font-family: sans-serif;
+		position: absolute;
+		top: 0.31em;
+		left: 0px;
+		font-size: 3.75rem;
+		color: var(--color-accent);
+	}*/
+
+
+/*
+.markdown-source-view.mod-cm6.is-live-preview .cm-html-embed.cm-embed-block .edit-block-button {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M12 15H6.11A9 9 0 0 1 10 8.86l1.79-1.2L10.69 6 8.9 7.2A11 11 0 0 0 4 16.35V23a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2Zm14 0h-5.89A9 9 0 0 1 24 8.86l1.79-1.2L24.7 6l-1.8 1.2a11 11 0 0 0-4.9 9.15V23a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
+	background-color: transparent;
+	background-repeat: no-repeat;
+	filter: opacity(.7);
+	transform: scale(.8);
+	left: -75px;
+	top: -4px;
+
+	.theme-dark & {
+		filter: invert(1) opacity(.9);
+	}
+}
+
+
+.markdown-source-view.mod-cm6.is-live-preview .cm-html-embed.cm-embed-block .edit-block-button svg {
+	color: transparent;
+}*/

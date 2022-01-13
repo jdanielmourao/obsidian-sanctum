@@ -1,0 +1,117 @@
+/* ──────────────── For the icon(s), check SVG Replacement ──────────────── */
+body .checklist-plugin-main {
+
+	.is-mobile & button {
+		width: 15%;
+	}
+	.is-mobile & ul {
+		padding-inline-start: 0px;
+	}
+	& button {
+		margin: initial;
+	}
+	& p {
+		margin: initial;
+		font-family: var(--font-ui);
+	}
+	& ul li.classic,
+	& ul li.compact {
+		display: flex;
+		align-items: center;
+		background-color: var(--background-primary);
+		border-radius: 0px;
+		cursor: pointer;
+		transition: background-color var(--duration-fast-2) var(--motion-standard-expressive);
+		padding: 0px;
+		font-size: var(--font-scale-00);
+		line-height: var(--leading-3);
+		margin-bottom: 2px;
+	}
+	& li.classic .checkbox,
+	& li.compact .checkbox {
+		width: 16px;
+		height: 16px;
+		min-width: 16px;
+		min-height: 16px;
+		border-radius: 100%;
+		padding: 2px;
+		margin-right: 8px;
+		margin-left: 0px;
+		position: relative;
+		border: 1.5px solid var(--color-primary-4);
+		border-radius: 4px;
+	}
+	& li.classic,
+	& li.compact {
+		border: 1px solid transparent;
+	}
+	& li.classic:hover,
+	& li.compact:hover {
+		background-color: var(--color-primary-0);
+		border: 1px solid var(--color-border-1);
+		border-radius: 4px;
+	}
+	& li.classic .checkbox:focus,
+	& li.compact .checkbox:focus,
+	& li.classic .checkbox:hover,
+	& li.compact .checkbox:hover {
+		outline: 0;
+		box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.1),
+		0 0 0 3px hsla(60.7, 41%, 39.2%, .35);
+		border-color: var(--color-green-5);
+	}
+	& li.classic .toggle,
+	& li.compact .toggle {
+		padding: 0px;
+		padding-left: 8px;
+	}
+	& button:hover {
+		background-color: var(--background-primary);
+	}
+	.theme-light & header .count {
+		background: var(--color-primary-2);
+		font-weight: var(--font-regular);
+	}
+	& header .count {  // Counter
+		padding: var(--todoList-countPadding);
+		background: var(--color-primary-1);
+		border-radius: 32px;
+		font-size: var(--font-scale-000);
+		font-weight: var(--font-light);
+	}
+	& header.group-header.page {
+		margin: var(--todoList-pageMargin);
+		color: var(--text-normal);
+		transition: opacity var(--duration-moderate-1) var(--motion-standard-productive);
+		cursor: pointer;
+		font-size: var(--font-scale-0);
+		font-weight: var(--font-regular);
+	}
+	& .header {
+		margin: var(--todoList-headerMargin);
+		display: flex;
+		gap: var(--todoList-headerGap);
+		align-items: center;
+	}
+	& .collapse .down {
+		transform: rotate(180deg);
+		transition: 0s;
+	}
+	& .collapse .left {
+		transform: rotate(0deg);
+		transition: 0s;
+	}
+	& .group-header.tag {
+		display: flex;
+		background-color: transparent;
+		color: var(--text-normal);
+		padding: 0px 8px 0px 8px;
+		font-size: var(--font-scale-00);
+
+		& title {
+			background-color: var(--color-accent);
+			border-radius: 40px;
+		}
+	}
+
+}

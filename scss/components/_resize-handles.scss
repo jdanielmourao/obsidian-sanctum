@@ -1,0 +1,33 @@
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+	bottom: 0px;
+	left: 0px;
+	height: 1px;
+	width: 100%;
+	cursor: row-resize;
+	margin: 0px;
+	background-color: var(--color-border-1);
+	transition: height var(--duration-moderate-1) var(--motion-entrance-productive);
+
+	&:hover {
+		height: 3px;
+	}
+	&:active {
+		background-color: var(--color-border-2);
+	}
+}
+
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle {
+	z-index: var(--layer-status-bar);
+	height: 100%;
+	width: 1px;
+	top: calc(-1 * 0px);
+	bottom: 0;
+	background-color: var(--color-border-1);
+	transition: width var(--duration-moderate-1) var(--motion-entrance-productive);
+
+	&:hover {
+		width: 3px; // it expands on hover
+	}
+}

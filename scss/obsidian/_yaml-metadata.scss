@@ -1,0 +1,159 @@
+/* ───────────────────────────── METADATA BLOCK ───────────────────────────── */
+.markdown-preview-view .frontmatter-container {
+	font-size: .75rem;
+	font-weight: var(--font-medium);
+	color: var(--text-muted);
+	background-color: transparent;
+	border: 0px;
+	border-bottom: 1px solid var(--color-border-1);
+	border-radius: 0px;
+	padding: 8px
+			 16px
+			 4px
+			 0px;
+
+	& .frontmatter-container-header{
+		font-size: .75rem;
+		border-bottom: 0px;
+		color: var(--text-faint);
+	}
+	&-header {
+		user-select: none;
+		-webkit-user-select: none;
+		cursor: pointer;
+		font-size: var(--font-scale-000);
+		text-transform: uppercase;
+		font-weight: 500;
+		display: block;
+		content: 'Metadata';
+		padding-bottom: 4px;
+		border-bottom: 1px solid var(--text-faint);
+		margin: 0px;
+		&:hover{
+			color: var(--text-normal);
+		}
+	}
+	& .frontmatter-alias {
+		text-decoration: none;
+		border-radius: 30px;
+		background-color: var(--background-primary-alt);
+		font-size: var(--font-scale-000);
+		font-weight: var(--font-medium);
+		line-height: var(--leading-4);
+		color: var(--text-muted);
+		margin-left: 0px;
+		margin-right: 2px;
+		padding: 0px
+				 8px
+				 0px
+				 8px;
+		border: 1px solid transparent;
+		white-space: nowrap;
+	}
+}
+
+// YAML
+body .markdown-preview-view pre.frontmatter.language-yaml { // big metadata and yaml container
+	background: var(--background-primary);
+	font-weight: var(--font-regular);
+	text-shadow: none;
+	border-radius: 0;
+	border-bottom: 1px solid var(--color-border-2);
+	padding: 4px 0 0 0;
+	margin-bottom: 0;
+	margin-bottom: 16px;
+}
+
+code.language-yaml.is-loaded {
+/*	display: grid;
+	grid-auto-rows: minmax(min-content, max-content);
+	grid-template-columns: 1fr 1fr;
+	place-items: center start;
+	gap: 0px 8px;*/
+	font-family: var(--font-frontmatter);
+	font-weight: var(--font-regular);
+	background-color: transparent;
+	text-shadow: none;
+	font-size: var(--font-scale-00);
+	line-height: 1.8em;
+	padding: 4px 0 2px 0px; 
+	// didn't add a transition because it makes the hover extremely buggy
+
+	body:not(.show-yaml) & {
+		height: 4px; // settings to make it "disappear"
+		width: 0;
+	}
+	body:not(.show-yaml) &:hover {
+		height: 100%; // settings to make it appear
+		width: 100%;
+	}
+	body:not(.show-yaml) &::before { // arrow, when it isn't hovered
+		content: "";
+		background-repeat: no-repeat;
+		background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(20, 1.2%, 52.4%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
+		background-size: 16px 16px;
+		background-position: 50% 50%;
+		height: 16px;
+		width: 16px;
+		position: absolute;
+		left: calc(50% - 20px);
+		top: -20px;
+		padding: 16px;
+	}
+	body:not(.show-yaml) &:hover::before {
+		display: none;
+	}
+	body.theme-dark:not(.show-yaml) &::before {
+		background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(20, 1.4%, 59.4%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
+	}
+	body.theme-dark:not(.show-yaml) &:hover::before {
+		display: none;
+	}
+	& .token {
+		font-weight: var(--font-regular);
+	}
+	& .token.selector,
+	& .token.attr-name,
+	& .token.string,
+	& .token.char,
+	& .token.builtin,
+	& .token.inserted {
+		color: var(--color-orange);
+	}
+	& .token.boolean,
+	& .token.number {
+		color: var(--color-blue);
+	}
+	& .token.punctuation {
+		display: visible; // can use this to remove colons
+	}
+	& .token:not(.token.key.atrule) {
+		color: var(--text-normal);
+		padding-left: 4px;
+	}
+	.token.key.atrule {
+		color: var(--color-accent); // this adds a bit more contrast compared to text-normal
+		font-weight: var(--font-semi-bold);
+	}
+}
+
+// Metadata Container in Edit Mode
+.cm-s-obsidian span.cm-hmd-frontmatter {
+	opacity: 1;
+	font-family: var(--font-frontmatter);
+	font-size: var(--font-scale-00);
+	line-height: var(--leading-0);
+	font-style: normal;
+}
+
+.cm-s-obsidian span.cm-atom.cm-hmd-frontmatter {
+	color: var(--color-accent); // YAML property colour
+}
+
+.cm-s-obsidian span.cm-hmd-frontmatter {
+	color: var(--color-primary-5); // Value color
+}
+
+.frontmatter-container { // disable Metadata container
+	display:none;
+}

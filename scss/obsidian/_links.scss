@@ -1,0 +1,84 @@
+// Link alias
+.cm-s-obsidian span.cm-link {
+	color: var(--text-normal);
+}
+// Link url
+.cm-s-obsidian span.cm-string.cm-url {
+	color: var(--text-faint);
+	opacity: 1;
+	font-family: var(--font-editor);
+	font-size: var(--font-scale-0);
+
+	&:hover {
+		color: var(--text-muted);
+	}
+}
+
+/* ───────────────────────────── External Links ───────────────────────────── */
+.external-link {
+	word-break: break-all;
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cpath d='M26 28H6a2.003 2.003 0 0 1-2-2V6a2.003 2.003 0 0 1 2-2h10v2H6v20h20V16h2v10a2.003 2.003 0 0 1-2 2Z'/%3E%3Cpath d='M20 2v2h6.586L18 12.586 19.414 14 28 5.414V12h2V2H20z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
+	background-size: 13px;
+	padding-right: 16px;
+	background-position-y: 5px;
+	text-decoration: none;
+
+	.theme-dark & {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(0, 0%, 99.6%)' width='32' height='32'%3E%3Cpath d='M26 28H6a2.003 2.003 0 0 1-2-2V6a2.003 2.003 0 0 1 2-2h10v2H6v20h20V16h2v10a2.003 2.003 0 0 1-2 2Z'/%3E%3Cpath d='M20 2v2h6.586L18 12.586 19.414 14 28 5.414V12h2V2H20z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
+	}
+	&:hover {
+		color: var(--text-accent);
+		text-decoration: none;
+		filter: brightness(1.2);
+	}
+	&:active {
+		color: var(--color-orange-5);
+		text-decoration-line: blink;
+	}
+}
+ 
+.cm-s-obsidian span.cm-link,
+.cm-s-obsidian span.cm-url, // regular external link
+.cm-s-obsidian span.cm-formatting-link.cm-link { // [alias](external link)
+	color: var(--text-accent);
+	text-decoration: none;
+
+	&:hover {
+		color: var(--text-accent);
+		text-decoration: none;
+		filter: brightness(1.2);
+	}
+}
+
+.markdown-source-view.mod-cm6 .cm-underline { //aliased external links in live preview
+	text-decoration: none;
+}
+
+/* ───────────────────────────── Internal Links ───────────────────────────── */
+.markdown-preview-view .internal-link {
+	text-decoration: underline solid transparent 1.5px;
+
+	&:hover {
+		color: var(--text-accent);
+		text-decoration: none;
+		filter: brightness(1.2);
+	}
+	&:active {
+		color: var(--text-accent-hover);
+		text-decoration: none;
+	}
+}
+
+.cm-s-obsidian span.cm-hmd-internal-link {
+	color: var(--text-accent);
+	text-decoration: underline solid transparent 1.5px;
+	cursor: pointer;
+}
+
+/* ──────────────────────────── Unresolved Links ──────────────────────────── */
+// Internal link to uncreated note
+.markdown-preview-view .internal-link.is-unresolved {
+	opacity: .6;
+}

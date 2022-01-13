@@ -1,0 +1,53 @@
+.center-hr .cm-s-obsidian .HyperMD-hr.CodeMirror-line span.cm-hr,
+.cm-s-obsidian .HyperMD-hr.CodeMirror-line span.cm-hr {
+	color: var(--text-muted);
+}
+
+// Horizontal line in live preview (in active line)
+.markdown-source-view {
+	//&.is-live-preview span.cm-hr::after {
+	//	content: "";
+	//	position: absolute;
+	//	background:var(--text-faint);
+	//	height: 1.5px;
+	//	width: calc(100% - 2.1rem); // makes room for "---" for ease of typing
+	//	left: 1.6rem;
+	//	top: 47%;
+	//}
+	&.is-live-preview div.cm-line { // removes that extra line in live preview
+		border: none;
+	}
+}
+
+// Preview Mode hr
+.markdown-preview-view hr {
+	border-top: 1px solid;
+	border-color: var(--background-modifier-border);
+}
+
+div.hr {
+	border-top: 1px solid;
+	border-color: var(--background-modifier-border);
+	margin: 24px 0;
+	border-width: 1px;
+	margin-block-start: 8px;
+	margin-block-end: 8px;
+}
+
+.markdown-source-view.mod-cm6 div.hr {
+	margin: 0;
+}
+
+// center hr
+.center-hr {
+	& div:not(.cm-active.cm-line)>.cm-line span.cm-hr,
+	& .cm-active.cm-line > span.cm-hr {
+		display: block;
+		text-align: center;
+		color: var(--text-normal);
+	}
+	& div>.cm-line span.cm-hr::after,
+	& div:not(.cm-active.cm-line)>.cm-line span.cm-hr::after {
+		content: none;
+	}
+}

@@ -1,0 +1,764 @@
+.is-mobile .titlebar {
+	background: var(--color-primary);
+	border-bottom: 1.5px solid var(--color-border-1);
+
+	&-text {
+		margin-top: 2px;
+		color: var(--text-faint);
+	}
+	&-button {
+		display: none;
+	}
+}
+
+.is-mobile .modal-bg {  // background of settings
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	backdrop-filter: blur(0px); //removed blur for performance
+}
+
+.workspace-drawer { //side panels
+	position: absolute;
+	top: 0;
+	display: flex;
+	overflow: hidden;
+	height: 100vh;
+	width: 100%;
+	max-width: 400pt; // width so that the border/scrollbar of note won't show when side panel is opened.
+	// this matches the pinned side panel max width
+	z-index: var(--layer-sidedock);
+
+	&.mod-left {
+		border-right: 1px solid var(--color-border-1);
+		box-shadow: var(--elevation-1);
+	}
+	&.mod-right {
+		border-left: 1px solid var(--color-border-1);
+		box-shadow: var(--elevation-1);
+	}
+}
+
+//Mobile Nav
+.is-mobile .nav-file-title-content:before {
+	transform: translateY(0px);
+}
+
+.is-mobile .nav-file-title,
+.is-mobile .nav-folder-title,
+.is-mobile .outline,
+.is-mobile .tag-container {
+	font-size: var(--font-scale-0);
+	line-height: var(--leading-1);
+}
+
+.is-mobile div.nav-files-container.node-insert-event.show-unsupported {
+	padding: 16px 0px 0 8px;
+}
+
+.workspace-drawer-active-tab-container {
+	padding-left: 16px;
+	padding-right: 16px;
+
+	div.workspace-drawer.mod-left & {
+		padding-right: 0;
+		padding-left: 0;
+		border-left: 1px solid var(--color-border-1);
+	}
+}
+
+.workspace-drawer.mod-left .workspace-drawer-tab-container {
+	margin-left: 64px;
+}
+
+.workspace-drawer.mod-left .workspace-drawer-header {
+	padding-left: 8px;
+	margin-left: 64px; //subtracts width of icons ribbon
+	border-left: 1px solid var(--color-border-1);
+	display: visible;
+
+	& .workspace-drawer-header-icon:before {
+		content: "Click the icon to unpin →";
+		font-size: var(--font-scale-00);
+		line-height: var(--leading-0);
+	}
+
+	& .workspace-drawer-header-left {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		
+		& .workspace-drawer-header-name { // vault name
+			display: none;
+		}
+		& .workspace-drawer-header-info { //file and folder counter
+			display: flex;
+			color: var(--text-muted);
+			margin: 0;
+			font-size: 16px;
+
+			& div { // number for files and folders
+				margin-top: auto;
+				margin-left: 16px;
+				display: none;
+			}
+		}
+	}
+}
+
+.workspace-drawer.mod-left:not(.workspace-drawer.is-pinned.mod-left) .workspace-drawer-header {
+	display: none; // makes it so that it only shows the unpin button when it's already pinned
+}
+
+div.workspace-drawer.is-pinned.mod-left .workspace-drawer-active-tab-header {
+	padding-top: 16px; // makes the tab header closer to the unpin icon when it's pinned.
+}
+	
+// Pinned Drawer
+.workspace-drawer.is-pinned.mod-right,
+.workspace-drawer.is-pinned.mod-left {
+	position: relative;
+	max-width: 400pt;
+}
+.workspace-drawer.is-pinned.mod-right {
+	border-left: 1px solid var(--color-border-1);
+}
+.workspace-drawer.is-pinned.mod-left {
+	border-right: 1px solid var(--color-border-1);
+}
+
+.is-mobile .workspace-drawer.mod-right .workspace-drawer-header-icon svg.pin { // hide Pin icon
+	display: inline;
+}
+
+.is-mobile .workspace-drawer-header-icon svg.filled-pin { // show UnPin icon
+	display: visible;
+}
+
+.is-mobile .workspace-drawer-header-icon  svg { // Pin Icon
+	color: var(--text-faint);
+	cursor: pointer;
+	margin-left: 8px;
+	height: 20px;
+	width: 20px;
+}
+
+.workspace-drawer-active-tab-header {
+	display: flex;
+	align-items: center;
+	margin: 16px
+			0px;
+	height: 24px;
+
+	div.workspace-drawer.mod-left & {
+		margin-bottom: 0;
+		margin-top: 0;
+		padding-bottom: 18px;
+		padding-top: 32px;
+		border-bottom: 1px solid var(--color-border-1);
+
+		& .workspace-drawer-active-tab-title {
+			font-size: var(--font-scale-2);
+			line-height: var(--leading-2);
+		}
+	}
+}
+
+.workspace-drawer.mod-right .workspace-drawer-header {
+	padding-left: 32px;
+}
+
+div.workspace-drawer-active-tab-icon svg.fullscreen { // hide "maximise"
+	display: none;
+}
+
+.workspace-drawer-active-tab-back-icon {
+	margin-right: 0px;
+
+	& svg {
+		height: 18px;
+		width: 18px;
+	}
+}
+
+.is-mobile .workspace-drawer-tab-option-item-icon {
+	transform: translateY(-2px) scale(.9);
+}
+
+.is-mobile .nav-file-title,
+.is-mobile .nav-folder-title {
+	height: 32px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.is-mobile .nav-file-title-content,
+.is-mobile .nav-folder-title-content {
+	padding: 0px
+			 4px
+			 2px
+			 4px;
+	line-height: 32px;
+	transform: translateY(-2px); // centers vertically each title's content
+	color: var(--text-normal);
+}
+
+// Input Search
+
+.is-mobile input[type='text'] {
+	display: block;
+	width: 100%;
+	padding: 8px 14px;
+	height: auto;
+	font-size: var(--font-scale-0);
+}
+
+.is-mobile .workspace-leaf-content[data-type='search'] .search-input-container input {
+	padding: 4px 16px 4px 32px;
+}
+
+.is-mobile .nav-header {
+	margin-bottom: 0px;
+	height: 32px;
+	border-bottom: 1px solid var(--color-border-1);
+}
+
+body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	flex-wrap: nowrap;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.is-mobile div.workspace-drawer.mod-left .nav-action-button svg {
+	vertical-align: 1px;
+}
+
+// correction of "change sort order" in file explorer
+.is-mobile .nav-action-button svg.up-and-down-arrows {
+	height: 16px;
+	width: 16px;
+}
+
+// Containers and Modals
+.workspace-leaf-content .view-content {
+    padding: 16px 8px;
+    overflow: auto;
+}
+
+.is-mobile .modal,
+.is-mobile .prompt,
+.is-mobile .suggestion-container {
+	max-height: calc(100vh - 48px);
+	width: calc(100% - 20px);
+	max-width: calc(100% - 20px);
+	min-width: unset;
+	position: absolute;
+	bottom: 0;
+	border-radius: 6px 6px 0 0;
+	padding: 12px 24px;
+	box-shadow: var(--elevation-2);
+	background-color: var(--background-primary);
+	border: 1px solid var(--color-primary-0);
+}
+
+.is-mobile .suggestion-hotkey {
+	display: none;
+}
+
+.is-mobile .setting-item-control {
+	margin: 16px 0 16px 0;
+}
+
+.is-mobile .community-theme-filters-container,
+.is-mobile  .hotkey-search-container {
+	padding: 0 0 20px 0;
+}
+
+.is-mobile .vertical-tab-header-group-title {
+	font-size: var(--font-scale-0);
+	font-weight: var(--font-semi-bold);
+	color: var(--text-muted);
+	text-transform: uppercase;
+	color: var(--text-normal);
+	padding: 8px 16px;
+	user-select: none;
+	height: 100%;
+}
+
+.is-mobile .modal.mod-settings .vertical-tab-header:before { //adds the "Settings" portion at the top of the mobile menu
+	content: "Settings";
+	font-weight: var(--font-semi-bold);
+	font-size: var(--font-scale-2);
+	position: sticky;
+	display: flex;
+	height: 48px;
+	margin-top: 0px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-bottom: 1px solid var(--color-border-1);
+	background: var(--background-primary);
+	left: 0;
+	top: -1px;
+	right: 0;
+	z-index: 1;
+	padding-left: 16px;
+}
+
+.is-mobile .modal .vertical-tab-nav-item:after {
+	content: " ";
+	display: block;
+	float: right;
+	height: 20px;
+	width: 20px;
+	background: center right no-repeat url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(20, 1.4%, 59.4%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='22,16 12,26 10.6,24.6 19.2,16 10.6,7.4 12,6 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
+}
+
+.theme-dark.is-mobile .modal .vertical-tab-nav-item:after {
+	background: center right no-repeat url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='icon' fill='hsl(20, 1.3%, 43.7%)' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='22,16 12,26 10.6,24.6 19.2,16 10.6,7.4 12,6 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E%0A");
+}
+
+.is-mobile .theme-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+// Ribbon
+
+.workspace-drawer.mod-left .workspace-drawer-inner {
+	padding-left: 0px;
+}
+
+.workspace-drawer-inner .side-dock-ribbon {
+	border-right: 1px solid var(--color-border-1);
+	background: var(--background-primary);
+	z-index: 3;
+	flex-direction: column;
+	width: 64px;
+	padding: 16px 0;
+	margin-right: 0px;
+}
+
+.is-mobile .side-dock-actions, .is-mobile .side-dock-settings {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	padding: 0;
+	padding-bottom: 24px;
+}
+
+.is-mobile .side-dock-ribbon .side-dock-ribbon-action {
+    padding: 8px 4px 2px 4px;
+    margin: 0 12px 4px;
+    height: 40px;
+}
+
+body:not(.is-ios).is-mobile .workspace-drawer-ribbon {
+    padding: 24px 4px;
+}
+
+.is-ios .is-pinned .side-dock-ribbon {
+	padding: 32px 0 24px 0;
+}
+
+.is-mobile .workspace-drawer-backdrop {
+	display: block;
+	position: fixed;
+	z-index: var(--layer-cover);
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	opacity: 1;
+	background-color: transparent;
+	transition: opacity var(--motion-exit-productive) var(--duration-moderate-1);
+}
+
+.no-blur .is-mobile .workspace-drawer-backdrop {
+	background-color: transparent;
+	backdrop-filter: blur(0px);
+}
+
+.is-mobile .workspace-leaf .view-header-title-container {
+	height: 32px;
+}
+
+.is-mobile .workspace-leaf .view-header-title {
+	width: 60vw;
+	font-size: var(--font-scale-00);
+	text-align: center;
+}
+
+html .is-mobile div.menu {
+	max-height: calc(100% - 100px);
+	width: calc(100% - 20px);
+	max-width: calc(100% - 20px);
+	min-width: unset;
+	position: absolute;
+	bottom: 0px;
+	border-radius: 6px 6px 0 0;
+	padding: 4px
+			 8px;
+	padding-left: 8px;
+	top: unset;
+	overflow-y: auto;
+	background-color: var(--color-primary-1);
+	box-shadow: var(--elevation-1);
+}
+
+.is-mobile .menu-item:not(.is-disabled):not(.is-label) {
+	padding: 4px
+			 0px
+			 4px
+			 0px;
+	background-color: var(--color-primary-1);
+}
+
+
+.is-mobile .modal-setting-back-button {
+	box-shadow: none;
+	border-bottom: 1px solid var(--color-border-2);
+	padding: 12px 24px;
+	height: 48px;
+	color: var(--text-normal);
+	background-color: var(--background-primary);
+}
+
+.is-mobile .modal-setting-back-button-icon {
+	transform: translateY(0px);
+}
+
+@media (min-width: 400pt) {
+	.is-mobile .modal-container .modal.mod-settings .vertical-tabs-container {
+		transform: translateZ(0);
+	}
+}
+
+.is-mobile .modal.mod-settings,
+.is_mobile .modal.mod-community-theme,
+.is_mobile .modal.mod-community-plugin,
+.is-mobile .modal-content.community-plugin {
+	width: 100vw;
+	max-width: 800px;
+	max-height: calc(100vh - 24px);
+	height: 100vh;
+}
+
+@media (min-width: 400pt) {
+	.is-mobile .modal,
+	.is-mobile .modal-container .modal.mod-settings {
+		max-width: 800px;
+		border-top-left-radius: 16px;
+		border-top-right-radius: 16px;
+		margin-bottom: -16px;
+		overflow: hidden;
+	}
+}
+
+.is-mobile .modal.mod-community-theme {
+	min-height: calc(100vh - 73px); //height minus modal distance + Settings title size
+	padding: 0px;
+}
+
+.is-mobile .modal-close-button { //modals close button
+	display: block;
+	z-index: 2;
+	top: 12px;
+	right: 8px;
+	width: 24px;
+	height: 24px;
+	background-color: var(--background-primary);
+
+	&:before {
+		content: "\D7";
+		font-weight: var(--font-light);
+		color: var(--text-muted);
+		background: none;
+	}
+}
+
+.is-mobile .modal.mod-community-plugin .modal-close-button {
+	display: none;
+}
+
+.is-mobile .community-plugin-search .setting-item-control {
+	padding-right: 20px; // is needed for the plugin search, otherwise it won't be centered in phones
+}
+.is-mobile .community-plugin-search .search-input-container {
+	width: 100%;
+}
+
+.is-mobile button { //general button formatting
+	width: 100%;
+	margin: 4px auto;
+	font-family: var(--font-ui);
+}
+
+.is-mobile .setting-item-control button {
+	padding: 8px
+			 40px
+			 8px
+			 16px;
+}
+
+.modal.mod-settings .modal-content {
+    margin-top: 0;
+    overflow: hidden;
+	padding: 0; // needs to be 0 to give space for modal titles
+}
+
+.is-mobile .setting-item-control select,
+.is-mobile .setting-item-control input,
+.is-mobile .setting-item-control button {
+	width: 100%;
+	margin: 0;
+}
+
+@media (min-width: 400pt) {
+	.is-mobile .setting-item-control select,
+	.is-mobile .setting-item-control input,
+	.is-mobile .setting-item-control button {
+		width: auto;
+	}
+}
+
+.is-mobile .setting-item:not(.mod-toggle):not(.setting-item-heading) {
+	flex-grow: 0;
+}
+
+.is-mobile .modal-button-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+	padding: 5px 10px;
+	margin-top: 0;
+}
+
+.is-mobile .modal .vertical-tab-nav-item {
+	padding: 12px 0px;
+	margin: 0;
+	border-radius: 0;
+	color: var(--text-normal);
+	border-bottom: 0px solid var(--color-border-1);
+}
+
+.is-mobile .modal.mod-settings .vertical-tab-nav-item {
+	font-size: var(--font-scale-0);
+	padding: 8px 16px;
+	border-left: none;
+}
+
+.is-mobile .modal .vertical-tab-nav-item:first-child {
+	padding-top: 16px;
+	border-top: 1px solid var(--color-border-1);
+}
+
+.is-mobile .community-plugin-info {
+	font-size: var(--font-scale-0);
+	padding: 24px 38px 24px 16px;
+}
+
+.workspace-drawer-tab-option-item {
+	display: flex;
+	align-items: center;
+	margin: 16px;
+}
+
+.workspace-drawer-tab-option-item-title,
+ .workspace-drawer-active-tab-title {
+	color: var(--text-muted);
+	flex: 1 0 0;
+	font-size: var(--font-scale-0);
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+html body.is-mobile div.nav-header .nav-buttons-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	flex-wrap: nowrap;
+	padding: 0px
+			 0px
+			 0px
+			 0px;
+}
+
+.is-mobile .cm-s-obsidian span.cm-hr::after {
+	content: none;
+}
+
+body.is-mobile .nav-action-button svg {
+	height: 16px;
+	width:  16px;
+}
+
+.workspace-drawer-tab-option-item-title,
+.workspace-drawer-active-tab-title {
+	line-height: var(--leading-1);
+}
+
+.workspace-drawer-active-tab-icon svg {
+	height: 16px;
+	width: 16px;
+	-webkit-mask-repeat: no-repeat;
+}
+
+.is-mobile .horizontal-main-container {
+	position: relative;
+	background-color: var(--color-primary-0);
+}
+
+.is-mobile .suggestion-item {
+	font-size: var(--font-scale-0);
+	padding: 8px;
+	border-radius: 0px;
+}
+
+.suggestion-hotkey {
+	padding: 0px
+			 8px;
+	margin-right: 4px;
+	float: right;
+	font-size: var(--font-scale-000);
+	font-family: var(--font-mono);
+}
+
+.is-mobile .view-actions {
+	padding: 4px
+			 8px;
+}
+
+body.is-mobile:not(.float-button) .view-action:nth-last-of-type(5),
+body.is-mobile:not(.float-button) .view-action:nth-last-of-type(4) { //floating button mode switch
+	display: flex;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	width: 48px;
+	height: 48px;
+	top: calc(100vh - 128px);
+	right: 0px;
+	color: var(--text-muted);
+	background-color: var(--color-primary-1);
+	border: 1px solid var(--color-primary-0);
+	transform: translateX(-16px);
+	border-radius: 50%;
+	box-shadow: var(--elevation-2);
+}
+
+body.is-mobile:not(.float-button).AT-multirow .view-action:nth-last-of-type(5), //floating button mode switch when
+body.is-mobile:not(.float-button).AT-multirow .view-action:nth-last-of-type(4) { //Advanced Mobile Toolbar is enabled
+	top: calc(100vh - 180px);
+}
+
+.is-mobile .view-action svg.reading-glasses { // visually center eye
+	transform: translateX(0px) scale(1.1) translateY(-.5px);
+}
+
+.is-mobile .view-action svg.pencil { //visually center pencil
+	transform: translateX(0px) scale(1.1) translateY(-1px);
+}
+
+.is-mobile .view-action {
+	padding-top: 4px;
+}
+
+.is-mobile .view-action svg {
+	height: 18px;
+	width: 18px;
+}
+
+.mobile-toolbar {
+	flex: 0 0 auto;
+	bottom: 0;
+	height: 48px;
+	width: 100%;
+	overflow-y: hidden;
+	border-top: 1px solid var(--color-border-2);
+	background-color: var(--background-primary-alt);
+}
+
+.mobile-toolbar-options-container {
+	--at-spacing: 2px; //variable for advanced mobile toolbar
+	background-color: var(--color-primary-1);
+	border: 1px solid var(--color-primary-0);
+	height: 48px;
+	display: flex;
+	overflow-x: auto;
+	overflow-y: hidden;
+	width: 100%;
+	padding: 0 10px;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.is-mobile .view-header-icon {
+	padding: 8px
+			 8px;
+}
+
+.is-mobile .view-header-icon svg {
+	height: 20px;
+	width: 20px;
+}
+
+.is-mobile .nav-action-button {
+	color: var(--text-muted);
+	cursor: pointer;
+	padding: 0px
+			 8px
+			 0px
+			 8px;
+	margin: 0px 8px;
+	border-radius: 4px;
+	transform: translateY(-2px);
+}
+
+
+.is-mobile .menu-item.selected:not(.is-disabled):not(.is-label):hover {
+	padding-left: 0;
+}
+/*
+.is-mobile .nav-folder .collapse-icon {
+	display: none;
+}*/
+
+.is-mobile .tag-container {
+	padding-left: 0;
+}
+
+.workspace-leaf-content[data-type="outline"] {
+
+	& .tree-item-icon.collapse-icon {
+		margin-right: 0px;
+	}
+	& .tree-item-inner {
+		margin-left: 2px;
+		margin-bottom: 2px;
+	}
+}
+
+.pull-action.mod-activated { // when you pull down to show prompt
+	background-color: var(--interactive-accent);
+	color: var(--text-on-accent);
+}
+.pull-down-action {
+	top: 0;
+	width: 100%;
+	min-width: 100vw;
+	padding: 32px 8px;
+	text-align: center;
+	border-bottom: 1px solid var(--color-border-2);
+	box-shadow: var(--elevation-1);
+}
