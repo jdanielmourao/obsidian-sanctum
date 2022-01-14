@@ -124,27 +124,22 @@ body:not(.is-mobile) .document-search, body:not(.is-mobile) .document-replace {
 	display: inline-flex;
 	background-color: var(--background-primary);
 	border-radius: 4px;
-	padding: 2px
-			 8px
-			 2px
-			 8px;
-	margin: 4px
-			8px
-			0px
-			0px;
+	padding: 2px 8px 2px 8px;
+	margin: 4px 8px 0px 0px;
 	border: 1px solid var(--color-border-1);
 }
 
+
+body .markdown-preview-view div.search-highlight > div.is-active,
+.cm-s-obsidian span.obsidian-search-match-highlight,
 .search-result-file-matched-text { // matched highlighted text
 	color: var(--text-normal);
-	background-color: none;
-	text-decoration: underline solid var(--color-green-3) 8px;
-	text-decoration-skip-ink: none;
-	text-underline-offset: -7px;
+	background-color: var(--color-green-3);
+	border-radius: 0;
 
 	.theme-dark & {
 		color: var(--text-normal);
-		text-decoration-color: var(--color-green-5);
+		background-color: var(--color-green-5);
 	}
 }
 
