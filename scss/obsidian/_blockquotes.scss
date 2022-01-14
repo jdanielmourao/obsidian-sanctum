@@ -66,6 +66,11 @@ blockquote p {
 	}
 }
 
+.markdown-source-view.is-live-preview .cm-quote-1 {
+		color: var(--text-normal);
+}
+
+
 cite { // for citations
 	color: var(--text-accent);
 	text-align: end;
@@ -90,6 +95,8 @@ cite { // for citations
 //markdown cite Live Preview
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-2 {
 	border-left: 1px solid var(--color-accent);
+	color: var(--color-accent);
+	font-style: italic;
 
 	& .cm-blockquote-border	{
 		border: none;
@@ -99,6 +106,11 @@ cite { // for citations
 		color: var(--text-accent);
 	}
 }
+
+.markdown-source-view.mod-cm6.is-live-preview .cm-line:not(.cm-active) .cm-quote-2 {
+	float: right;
+}
+
 //markdown paraphrase Live Preview
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-3 {
 	border: 1px solid transparent;
@@ -135,7 +147,7 @@ cite { // for citations
 	margin: 0;
 	margin-left: -4px;
 	padding-left: 16px;
-	color: var(--text-muted);
+	color: var(--text-normal);
 
 	&.paraphrase {
 		border-left: 0px solid transparent;
