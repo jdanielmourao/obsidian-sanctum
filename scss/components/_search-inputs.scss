@@ -137,11 +137,14 @@ body:not(.is-mobile) .document-search, body:not(.is-mobile) .document-replace {
 
 .search-result-file-matched-text { // matched highlighted text
 	color: var(--text-normal);
-	background-color: var(--color-green-2);
+	background-color: none;
+	text-decoration: underline solid var(--color-green-3) 8px;
+	text-decoration-skip-ink: none;
+	text-underline-offset: -7px;
 
 	.theme-dark & {
 		color: var(--text-normal);
-		background-color: var(--color-green-5);
+		text-decoration-color: var(--color-green-5);
 	}
 }
 
