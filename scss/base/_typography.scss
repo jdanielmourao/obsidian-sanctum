@@ -117,6 +117,8 @@ body {
 .markdown-preview-view h5,
 .markdown-preview-view h6 {
 	font-family: var(--font-heading-preview);
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 .cm-s-obsidian .cm-header-1,
@@ -285,8 +287,6 @@ body {
 	line-height: var(--leading-1);
 	font-weight: var(--heading-1-weight);
 	letter-spacing: var(--tracking-0);
-	margin-top: .5em;
-	margin-bottom: .5em;
 }	
 .markdown-preview-view h2,
 .cm-s-obsidian .cm-header-2,
@@ -295,8 +295,6 @@ body {
 	line-height: var(--leading-1);
 	font-weight: var(--heading-2-weight);
 	letter-spacing: var(--tracking-0);
-	margin-top: .75em;
-	margin-bottom: .75em;
 }	
 .markdown-preview-view h3,
 .cm-s-obsidian .cm-header-3,
@@ -305,8 +303,6 @@ body {
 	line-height: var(--leading-1);
 	font-weight: var(--heading-3-weight);
 	letter-spacing: var(--tracking-0);
-	margin-top: .875em;
-	margin-bottom: .875em;
 }	
 .markdown-preview-view h4,
 .cm-s-obsidian .cm-header-4,
@@ -315,8 +311,6 @@ body {
 	line-height: var(--leading-1);
 	font-weight: var(--heading-4-weight);
 	letter-spacing: var(--tracking-0);
-	margin-top: 1em;
-	margin-bottom: 1em;
 }	
 .markdown-preview-view h5,
 .cm-s-obsidian .cm-header-5,
@@ -325,8 +319,6 @@ body {
 	line-height: var(--leading-1);
 	font-weight: var(--heading-5-weight);
 	letter-spacing: var(--tracking-0);
-	margin-top: 1.125em;
-	margin-bottom: 1.125em;
 	color:var(--text-normal);
 }	
 .markdown-preview-view h6,
@@ -336,8 +328,6 @@ body {
 	line-height: var(--leading-1);
 	font-weight: var(--heading-6-weight);
 	letter-spacing: var(--tracking-1);
-	margin-top: 1.125em;
-	margin-bottom: 1.125em;
 	color:var(--text-normal);
 }
 
@@ -381,12 +371,12 @@ body {
 
 .markdown-preview-view {
 	
-	& div[data-tag-name="h1"] + div > hr { margin-top: -1.125em; }
-	& div[data-tag-name="h2"] + div > hr { margin-top: -1.375em; }
-	& div[data-tag-name="h3"] + div > hr { margin-top: -1.375em; }
-	& div[data-tag-name="h4"] + div > hr { margin-top: -1.275em; }
-	& div[data-tag-name="h5"] + div > hr { margin-top: -1.275em; }
-	& div[data-tag-name="h6"] + div > hr { margin-top: -1.13em; }
+	& div[data-tag-name="h1"] + div > hr { margin-top: calc( -1 * var(--heading-1)); margin-bottom: 0; }
+	& div[data-tag-name="h2"] + div > hr { margin-top: calc( -1 * var(--heading-2)); margin-bottom: 0;}
+	& div[data-tag-name="h3"] + div > hr { margin-top: calc( -1 * var(--heading-3)); margin-bottom: 0;}
+	& div[data-tag-name="h4"] + div > hr { margin-top: calc( -1 * var(--heading-4)); margin-bottom: 0;}
+	& div[data-tag-name="h5"] + div > hr { margin-top: calc( -1 * var(--heading-5)); margin-bottom: 0;}
+	& div[data-tag-name="h6"] + div > hr { margin-top: calc( -1 * var(--heading-6)); margin-bottom: 0;}
 }
 
 /* ──────────────────────── Typora-like heading tags ──────────────────────── */
