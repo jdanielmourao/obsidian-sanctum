@@ -197,23 +197,104 @@ settings:
 		id: color-highlight-1
 		title: Highlight 1
 		description: The color of the highlight.
-		type: variable-color
-		format: rgb
-		default: rgb(234, 183, 70)
+		type: variable-select
+		default: 214 159 40
+		options:
+			-
+				label: Green
+				value: 140 141 59
+			-
+				label: Viridian
+				value: 70 153 106
+			-
+				label: Teal
+				value: 64 150 147
+			-
+				label: Blue
+				value: 102 142 165
+			-
+				label: Lavender
+				value: 132 132 188
+			-
+				label: Pink
+				value: 235 84 108
+			-
+				label: Red
+				value: 241 81 72
+			-
+				label: Orange
+				value: 214 108 30
+			-
+				label: Yellow
+				value: 214 159 40
 	-
 		id: color-highlight-2
 		title: Highlight 2
 		description: The color of the highlight.
-		type: variable-color
-		format: rgb
-		default: rgb(69, 163, 159)
+		type: variable-select
+		default: 64 150 147
+		options:
+			-
+				label: Green
+				value: 140 141 59
+			-
+				label: Viridian
+				value: 70 153 106
+			-
+				label: Teal
+				value: 64 150 147
+			-
+				label: Blue
+				value: 102 142 165
+			-
+				label: Lavender
+				value: 132 132 188
+			-
+				label: Pink
+				value: 235 84 108
+			-
+				label: Red
+				value: 241 81 72
+			-
+				label: Orange
+				value: 214 108 30
+			-
+				label: Yellow
+				value: 214 159 40
 	-
 		id: color-highlight-3
 		title: Highlight 3
 		description: The color of the highlight.
-		type: variable-color
-		format: rgb
-		default: rgb(234, 76, 103)
+		type: variable-select
+		default: 235 84 108
+		options:
+			-
+				label: Green
+				value: 140 141 59
+			-
+				label: Viridian
+				value: 70 153 106
+			-
+				label: Teal
+				value: 64 150 147
+			-
+				label: Blue
+				value: 102 142 165
+			-
+				label: Lavender
+				value: 132 132 188
+			-
+				label: Pink
+				value: 235 84 108
+			-
+				label: Red
+				value: 241 81 72
+			-
+				label: Orange
+				value: 214 108 30
+			-
+				label: Yellow
+				value: 214 159 40
 	-
 		id: graph-colors
 		title: Graph Colors
