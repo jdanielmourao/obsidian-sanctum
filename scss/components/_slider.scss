@@ -65,10 +65,10 @@ input[type="range" i] {
 				var(--color-primary-4) 90%, 
 				var(--color-primary-4) 92%,
 				transparent 92%);
-			background-size: 49% 6px;
+			background-size: 48% 6px;
 			border-radius: 0;
 			background-repeat: repeat-x;
-			background-position-y: 0px;
+			background-position: 2px 0px;
 			height: 32px;
 	
 	&::-webkit-slider-runnable-track {
