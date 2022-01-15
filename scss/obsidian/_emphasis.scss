@@ -50,8 +50,14 @@ body:not(.active-line-hl).theme-dark.accent-active-line .CodeMirror-activeline .
 }
 
 // ───────────────────────────── text selection ───────────────────────────── */
-// for text selection, check the --text-selection custom property in _var
-
+// this css has been taken from default
+.theme-light pre[class*="language-"]::selection,
+.theme-light pre[class*="language-"] ::selection,
+.theme-light code[class*="language-"]::selection,
+.theme-light code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: var(--txt-sel);
+}
 /* ──────────────────────── Multi-Color Highlighting ──────────────────────── */
 
 /* ───────────────── Yellow Highlight (Regular highlight 1) ───────────────── */
@@ -108,8 +114,7 @@ body.is-mobile {
 body:not(.is-mobile) {
 	& .markdown-preview-view em > mark,
 	& span.cm-em.cm-highlight {
-		font-style: normal;
-		font-weight: var(--font-regular);
+		font-style: italic;
 		color: var(--text-normal);
 		background-color: transparent;
 		background: linear-gradient(120deg,
@@ -135,7 +140,7 @@ body:not(.is-mobile) {
 body.is-mobile {
 	& .markdown-preview-view em > mark,
 	& span.cm-em.cm-highlight {
-		font-style: normal;
+		font-style: italic;
 		font-weight: var(--font-regular);
 		color: var(--text-normal);
 		text-decoration: underline solid rgb(var(--color-highlight-2)) 8px;
@@ -148,9 +153,8 @@ body.is-mobile {
 body:not(.is-mobile) {
 	& .markdown-preview-view strong > mark,
 	& span.cm-strong.cm-highlight {
-		font-weight: var(--font-regular);
-		font-weight: var(--font-regular);
 		color: var(--text-normal);
+		font-weight: var(--font-bold);
 		background-color: transparent;
 		background: linear-gradient(120deg,rgb(var(--color-highlight-3)),rgb(var(--color-highlight-3)));
 		background-position: 50% 100%;
@@ -174,9 +178,8 @@ body:not(.is-mobile) {
 body.is-mobile {
 	& .markdown-preview-view strong > mark,
 	& span.cm-strong.cm-highlight {
-		font-style: normal;
-		font-weight: var(--font-regular);
 		color: var(--text-normal);
+		font-weight: var(--font-bold);
 		text-decoration: underline solid rgb(var(--color-highlight-3)) 8px;
 		text-decoration-skip-ink: none;
 		text-underline-offset: -7px;
