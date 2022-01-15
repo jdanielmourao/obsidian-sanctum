@@ -72,6 +72,11 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 	}
 }
 
+.no-titlebar-title .titlebar-text {
+	display: none;
+}
+
+
 /* ───────────────────────────────── Panels ───────────────────────────────── */
 
 /* ────────────────────────────────── Tabs ────────────────────────────────── */
