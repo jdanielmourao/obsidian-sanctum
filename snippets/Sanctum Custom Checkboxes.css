@@ -373,7 +373,7 @@ input[type=checkbox]:checked:active,input[type=checkbox]:checked:hover {
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(340, 1.9%, 30.4%)' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath fill='none' d='M0 0h32v32H0V0z'/%3E%3Cpath d='M16 2C8.3 2 2 8.3 2 16s6.3 14 14 14 14-6.3 14-14S23.7 2 16 2zm7 16.1H9v-4h14v4z'/%3E%3C/svg%3E");
 }
 
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task="-"]), //Live Preview
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:is([data-task="-"]),
 .markdown-preview-view ul li[data-task="-"].task-list-item.is-checked {
 	color: var(--text-faint);
 	text-decoration: line-through solid var(--text-faint) 2px;
