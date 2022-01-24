@@ -1,0 +1,103 @@
+body {
+	--indentation-guide-adjust: 4px;
+	--indentation-guide-adjust-preview: 3px;
+}
+
+body.theme-dark,
+body.theme-light {
+	--indentation-guide-color: var(--color-border-1);
+	--indentation-guide-active-color: var(--color-border-2);
+}
+
+
+.ig-tab {
+	display: inline-block;
+	text-decoration: inherit;
+}
+
+/* Lists */
+.ig-lists .HyperMD-list-line,
+/* Code */
+.ig-code .HyperMD-codeblock,
+/* Uncategorized */
+.ig-uncategorized .cm-line[style*="text-indent"]:not(.HyperMD-list-line) {
+	position: relative;
+}
+
+/* Lists */
+.ig-lists .HyperMD-list-line .ig-tab::before,
+/* Code */
+.ig-code .HyperMD-codeblock .ig-tab::before,
+/* Uncategorized */
+.ig-uncategorized
+	.cm-line[style*="text-indent"]:not(.HyperMD-list-line)
+	.ig-tab::before {
+	content: " ";
+	display: block;
+	width: 1px;
+	background-color: var(--indentation-guide-color);
+	font-size: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	transform: translateX(var(--indentation-guide-adjust));
+}
+
+/* Lists */
+.ig-lists
+	.HyperMD-list-line.ig-indent-group
+	.ig-tab.ig-indent-group-level::before,
+/* Code */
+.ig-code
+	.HyperMD-codeblock.ig-indent-group
+	.ig-tab.ig-indent-group-level::before,
+/* Uncategorized */
+.ig-uncategorized
+	.cm-line[style*="text-indent"].ig-indent-group:not(.HyperMD-list-line)
+	.ig-tab.ig-indent-group-level::before {
+	background-color: var(--indentation-guide-active-color);
+}
+
+/* Override the outliner plugin */
+.ig-lists.outliner-plugin-vertical-lines .cm-s-obsidian .HyperMD-list-line {
+	overflow: unset;
+}
+
+.ig-lists.outliner-plugin-vertical-lines .cm-hmd-list-indent {
+	position: unset;
+}
+
+.ig-lists.outliner-plugin-vertical-lines .cm-line .cm-hmd-list-indent::before {
+	content: none;
+}
+
+/* Preview lists */
+body.ig-lists-preview .markdown-preview-view li ul,
+body.ig-lists-preview .markdown-preview-view li ol {
+	box-shadow: calc(-1em + 1px + var(--indentation-guide-adjust-preview)) 0 0 0px
+		var(--background-primary),
+	  calc(-1em + var(--indentation-guide-adjust-preview)) 0 0 0px var(--indentation-guide-color);
+}
+
+/*Pseudo Admonition lists*/
+body.ig-lists-preview .markdown-preview-view.admonitions li.task-list-item.is-checked:is([data-task='?'], [data-task='B'],
+ [data-task='X'], [data-task='n'], [data-task='p'], [data-task='c'], [data-task='W'], [data-task='b'], [data-task='i'],
+  [data-task='I'], [data-task='!']) ul,
+body.ig-lists-preview .markdown-preview-view.admonitions li.task-list-item.is-checked:is([data-task='?'], [data-task='B'],
+[data-task='X'], [data-task='n'], [data-task='p'], [data-task='c'], [data-task='W'], [data-task='b'], [data-task='i'],
+ [data-task='I'], [data-task='!']) ol {
+	box-shadow: none;
+}
+
+.ig-lists-preview .markdown-preview-view .list-collapse-indicator {
+	margin-left: -40px;
+	margin-top: -1px;
+}
+
+.ig-lists-preview
+	.markdown-preview-view
+	.task-list-item
+	.list-collapse-indicator {
+	margin-left: -45px;
+	margin-top: -1px;
+}

@@ -1,3 +1,8 @@
+.tag-tag.el-pre {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
 /* ───────────────────────────── METADATA BLOCK ───────────────────────────── */
 .markdown-preview-view .frontmatter-container {
 	font-size: .75rem;
@@ -5,50 +10,64 @@
 	color: var(--text-muted);
 	background-color: transparent;
 	border: 0px;
-	border-bottom: 1px solid var(--color-border-1);
+	border-bottom: 0px solid var(--color-border-1);
 	border-radius: 0px;
-	padding: 8px
-			 16px
-			 4px
-			 0px;
+	padding: 8px 16px 4px 0px;
 
-	& .frontmatter-container-header{
+	& .frontmatter-section-label {
+		display: none;
+	}
+	& .frontmatter-section.mod-tags {
+		margin-bottom: 0;
+	}
+	& .frontmatter-section {
+		margin: 8px 0;
+	}
+	& .frontmatter-container-header{ //"Metadata" title
 		font-size: .75rem;
 		border-bottom: 0px;
 		color: var(--text-faint);
 	}
 	&-header {
 		user-select: none;
-		-webkit-user-select: none;
 		cursor: pointer;
 		font-size: var(--font-scale-000);
 		text-transform: uppercase;
-		font-weight: 500;
-		display: block;
-		content: 'Metadata';
-		padding-bottom: 4px;
-		border-bottom: 1px solid var(--text-faint);
+		font-weight: 400;
 		margin: 0px;
-		&:hover{
-			color: var(--text-normal);
-		}
 	}
 	& .frontmatter-alias {
-		text-decoration: none;
 		border-radius: 30px;
 		background-color: var(--background-primary-alt);
 		font-size: var(--font-scale-000);
-		font-weight: var(--font-medium);
+		font-weight: var(--font-regular);
 		line-height: var(--leading-4);
 		color: var(--text-muted);
 		margin-left: 0px;
-		margin-right: 2px;
-		padding: 0px
-				 8px
-				 0px
-				 8px;
-		border: 1px solid transparent;
-		white-space: nowrap;
+		margin-right: 4px;
+		padding: 0px 8px 0px 8px;
+		border: 1px solid var(--color-border-1);
+	}
+	& .tag {
+		border-radius: .8em;
+		padding: 2px 8px;
+		font-size: var(--font-scale-000);
+		border: 1px solid rgba(var(--color-accent-l) / .2); //light mode
+		margin-right: 8px;
+		letter-spacing: var(--tracking-2);
+
+		.theme-dark & {
+			border-color: rgba(var(--color-accent-d) / .2); //dark mode
+		}
+	
+		&:hover {
+		color: var(--color-accent);
+		font-weight: var(--font-regular);
+		background-color: rgba(var(--color-accent-d) / .3); //dark mode
+		background-color: rgba(var(--color-accent-l) / .3); //light mode
+		border-color: rgba(var(--color-accent-d) / .4); //dark mode
+		border: 1px solid rgba(var(--color-accent-l) / .4); //light mode
+		}
 	}
 }
 
@@ -58,10 +77,10 @@ body .markdown-preview-view pre.frontmatter.language-yaml { // big metadata and 
 	font-weight: var(--font-regular);
 	text-shadow: none;
 	border-radius: 0;
-	border-bottom: 1px solid var(--color-border-2);
+	border-bottom: 1px solid var(--color-border-1);
 	padding: 4px 0 0 0;
-	margin-bottom: 0;
 	margin-bottom: 16px;
+	margin-top: 4px;
 }
 
 code.language-yaml.is-loaded {
@@ -70,8 +89,8 @@ code.language-yaml.is-loaded {
 	grid-template-columns: 1fr 1fr;
 	place-items: center start;
 	gap: 0px 8px;*/
-	font-family: var(--font-frontmatter);
-	font-weight: var(--font-regular);
+	font-family: var(--font-preview);
+	font-weight: var(--font-light);
 	background-color: transparent;
 	text-shadow: none;
 	font-size: var(--font-scale-00);
@@ -80,7 +99,7 @@ code.language-yaml.is-loaded {
 	// didn't add a transition because it makes the hover extremely buggy
 	
 	& .token {
-		font-weight: var(--font-regular);
+		font-weight: var(--font-light);
 	}
 	& .token.selector,
 	& .token.attr-name,
@@ -103,7 +122,7 @@ code.language-yaml.is-loaded {
 	}
 	.token.key.atrule {
 		color: var(--color-accent); // this adds a bit more contrast compared to text-normal
-		font-weight: var(--font-semi-bold);
+		font-weight: var(--font-regular);
 	}
 }
 
@@ -125,5 +144,5 @@ code.language-yaml.is-loaded {
 }
 
 .frontmatter-container { // disable Metadata container
-	display:none;
+	display: visible;
 }

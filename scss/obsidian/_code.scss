@@ -69,7 +69,8 @@ pre[class*=language-] {
 // preview
 .markdown-preview-view code {
 	color: var(--color-pink-5);
-	padding: 0 4px;
+	padding: 0px 4px;
+	line-height: 1.5; /* this fixes the padding not doing its job thing*/
 	font-family: var(--font-mono);
 }
 
@@ -152,6 +153,7 @@ code[class*=language-pure-text],
 	color: var(--text-normal);
 	font-family: var(--font-preview);
 	font-weight: var(--font-regular);
+	font-size: var(--font-scale-0);
 	white-space: normal;
 	text-shadow: transparent 0px 1px;
 	hyphens: auto;

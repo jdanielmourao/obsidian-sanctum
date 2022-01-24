@@ -39,7 +39,7 @@ esbuild
 		},
 		logLevel: "info",
 		bundle: true,
-		minify: prod,
+		minify: false,
 		plugins: [sassPlugin()],
 		outfile: file
 	})

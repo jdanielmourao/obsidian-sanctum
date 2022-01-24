@@ -163,14 +163,18 @@
 		&.is-selected {
 			background-color: rgba(var(--rgb-primary-0), .5);
 			border-radius: 8px;
-			border: 1px solid var(--color-border-1);
+			border: 1px solid var(--color-accent);
 			color: var(--text-normal);
 
+			& button {
+				background-color: var(--color-accent);
+				color: var(--color-white);
+			}
 			& .community-theme-info {
 				color: var(--text-normal);
 
 				&::after {
-					content: "v0.6.0";
+					content: "v0.6.1";
 					font-family: var(--menu-font-family);
 					font-size: var(--font-scale-000);
 					color: var(--text-normal);

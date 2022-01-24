@@ -110,7 +110,11 @@
 
 .graph-controls-button {
 
-	&:hover {
+	&:hover:not(:is(.graph-controls-button.mod-reset, .graph-controls-button.mod-close)) {
 		color: var(--color-accent);
 	}
+}
+
+.graph-controls-button.mod-close:hover {
+	color: var(--color-red);
 }

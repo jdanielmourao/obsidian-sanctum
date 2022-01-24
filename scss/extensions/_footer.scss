@@ -83,42 +83,35 @@ settings:
 		id: color-accent-d
 		title: Dark Mode Accent Color
 		type: variable-select
-		default: 64 150 147
+		default: 104 181 177
 		options:
 			-
 				label: Green
-				value: 140 141 59
+				value: 171, 173, 85
 			-
 				label: Viridian
-				value: 70 153 106
+				value: 105, 184, 139
 			-
 				label: Teal
-				value: 64 150 147
+				value: 104 181 177
 			-
 				label: Blue
-				value: 102 142 165
+				value: 136, 173, 194
 			-
 				label: Lavender
-				value: 132 132 188
+				value: 165, 165, 206
 			-
 				label: Pink
-				value: 235 84 108
+				value: 240, 138, 156
 			-
 				label: Red
-				value: 241 81 72
+				value: 252, 134, 122
 			-
 				label: Orange
-				value: 214 108 30
+				value: 241, 145, 52
 			-
 				label: Yellow
-				value: 214 159 40
-	-
-		id: text-accent-hover
-		title: Text accent hover color
-		description: Color that displays when hovering elements that have the accent color by default (e.g. footnote numbers).
-		type: variable-color
-		format: rgb
-		default: rgb(214, 108, 30)
+				value: 214, 159, 40
 	-
 		id: color-checkbox
 		title: Checkbox Color
@@ -187,115 +180,6 @@ settings:
 				label: Yellow
 				value: rgba(214 159 40 / .3)
 	-
-		id: highlight-colors
-		title: Highlight Colors
-		description: Set the colors for highlights and highlighted text!
-		type: heading
-		level: 3
-		collapsed: true
-	-
-		id: color-highlight-1
-		title: Highlight 1
-		description: The color of the highlight.
-		type: variable-select
-		default: 214 159 40
-		options:
-			-
-				label: Green
-				value: 140 141 59
-			-
-				label: Viridian
-				value: 70 153 106
-			-
-				label: Teal
-				value: 64 150 147
-			-
-				label: Blue
-				value: 102 142 165
-			-
-				label: Lavender
-				value: 132 132 188
-			-
-				label: Pink
-				value: 235 84 108
-			-
-				label: Red
-				value: 241 81 72
-			-
-				label: Orange
-				value: 214 108 30
-			-
-				label: Yellow
-				value: 214 159 40
-	-
-		id: color-highlight-2
-		title: Highlight 2
-		description: The color of the highlight.
-		type: variable-select
-		default: 64 150 147
-		options:
-			-
-				label: Green
-				value: 140 141 59
-			-
-				label: Viridian
-				value: 70 153 106
-			-
-				label: Teal
-				value: 64 150 147
-			-
-				label: Blue
-				value: 102 142 165
-			-
-				label: Lavender
-				value: 132 132 188
-			-
-				label: Pink
-				value: 235 84 108
-			-
-				label: Red
-				value: 241 81 72
-			-
-				label: Orange
-				value: 214 108 30
-			-
-				label: Yellow
-				value: 214 159 40
-	-
-		id: color-highlight-3
-		title: Highlight 3
-		description: The color of the highlight.
-		type: variable-select
-		default: 235 84 108
-		options:
-			-
-				label: Green
-				value: 140 141 59
-			-
-				label: Viridian
-				value: 70 153 106
-			-
-				label: Teal
-				value: 64 150 147
-			-
-				label: Blue
-				value: 102 142 165
-			-
-				label: Lavender
-				value: 132 132 188
-			-
-				label: Pink
-				value: 235 84 108
-			-
-				label: Red
-				value: 241 81 72
-			-
-				label: Orange
-				value: 214 108 30
-			-
-				label: Yellow
-				value: 214 159 40
-	-
 		id: graph-colors
 		title: Graph Colors
 		type: heading
@@ -345,12 +229,12 @@ settings:
 		id: font-preview
 		title: Preview Mode Font
 		type: variable-text
-		default: "'IBM Plex Sans *', 'iA Writer Quattro', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+		default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 	-
 		id: font-editor
 		title: Edit Mode Font
 		type: variable-text
-		default: "'IBM Plex Sans *', 'iA Writer Quattro', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+		default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 	-
 		id: font-ui
 		title: UI font
@@ -360,12 +244,12 @@ settings:
 		id: font-mono
 		title: Monospace Font
 		type: variable-text
-		default: "'IBM Plex Mono *', 'iA Writer Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
+		default: "'IBM Plex Mono *', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
 	-
 		id: font-frontmatter
 		title: Frontmatter/YAML Font
 		type: variable-text
-		default: "'IBM Plex Mono *', 'iA Writer Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
+		default: "'IBM Plex Mono *', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
 	-
 		id: headings-title
 		title: Headings
@@ -376,12 +260,12 @@ settings:
 		id: font-heading-preview
 		title: Heading Font Preview Mode
 		type: variable-text
-		default: "'IBM Plex Sans *', 'iA Writer Quattro', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+		default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 	-
 		id: font-heading-editor
 		title: Heading Font Editor Mode
 		type: variable-text
-		default: "'IBM Plex Sans *', 'iA Writer Quattro', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+		default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
 	-
 		id: head-indicator
 		title: Heading Indicators
@@ -444,32 +328,32 @@ settings:
 		id: heading-1
 		title: Heading 1 Size
 		type: variable-text
-		default: 2rem
+		default: 1.75rem
 	-
 		id: heading-2
 		title: Heading 2 Size
 		type: variable-text
-		default: 1.75rem
+		default: 1.5rem
 	-
 		id: heading-3
 		title: Heading 3 Size
 		type: variable-text
-		default: 1.5rem
+		default: 1.25rem
 	-
 		id: heading-4
 		title: Heading 4 Size
 		type: variable-text
-		default: 1.25rem
+		default: 1.125rem
 	-
 		id: heading-5
 		title: Heading 5 Size
 		type: variable-text
-		default: 1.125rem
+		default: 1.875rem
 	-
 		id: heading-6
 		title: Heading 6 Size
 		type: variable-text
-		default: 1rem
+		default: .75rem
 	-
 		id: heading colours
 		title: Colors
@@ -2497,6 +2381,10 @@ settings:
 		level: 2
 		collapsed: true
 	-
+		id: tasks
+		title: Disable custom tasks and pseudo-admonitions
+		type: class-toggle
+	-
 		id: active-line-hl
 		title: Disable active line highlighting
 		description: Disables active line highlighting
@@ -2560,33 +2448,25 @@ settings:
 		level: 3
 		collapsed: true
 	-
-		id: limit-tables
-		title: Table Width
-		description: Increase table width threshold.
-		type: variable-number-slider
-		default: 100
-		min: 100
-		max: 250
-		step: 5
-		format: '%'
-	-
-		id: center-tables
-		title: Center Tables
-		description: Centers all tables in the note.
-		type: class-toggle
-		default: false
-	-
-		id: dataview-100
-		title: Full note width dataview tables
-		description: Forces dataview tables to occupy 100% of the note pane's width.
-		type: class-toggle
-		default: false
-	-
-		id: alternate-dataview
-		title: Alternate Row Colors for Dataview Tables
-		description: Alternates row colors for easier reading.
-		type: class-toggle
-		default: false
+		id: table-options
+		title: Table Options
+		description: Customize the look of your tables!
+		type: class-select
+		allowEmpty: false
+		default: default
+		options:
+			-
+				label: Default
+				value: default
+			-
+				label: Alternate row colors
+				value: alternate-row-clr
+			-
+				label: Highlight last row
+				value: table-result
+			-
+				label: Minimal table
+				value: table-minimal
 	-
 		id: sidenotes
 		title: Sidenotes
@@ -2708,6 +2588,11 @@ settings:
 		type: heading
 		level: 3
 		collapsed: true
+	-
+		id: note-title-left
+		title: Justify Note titles to the left
+		type: class-toggle
+		default: false
 	-
 		id: show-vault-name
 		title: Show Vault Name

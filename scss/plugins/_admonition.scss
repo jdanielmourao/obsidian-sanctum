@@ -4,17 +4,17 @@
 	overflow: hidden;
 	color: var(--text-normal);
 	page-break-inside: avoid;
-	background-color: var(--background-primary);
-	border-left: 2px solid rgb(var(--admonition-color));
-	border-radius: 4px;
+	background-color: rgba(var(--rgb-primary-0), 1);
+	border: 1px solid var(--admonition-color);
+	border-left: 1.5px solid rgb(var(--admonition-color));
+	border-radius: 0 4px 4px 0;
 	box-shadow: var(--elevation-1);
 }
 
 .admonition-content-copy {
-	margin-top: 8px;
+	margin-top: 16px;
 	margin-right: 4px;
-	height: 20px;
-	width: 20px;
+	transform: scale(.8);
 
 	& svg {
 		color: var(--text-faint);
@@ -47,5 +47,18 @@ details.admonition {
 	&.admonition-plugin[open] > summary > .collapser > .handle {
 		transform: rotate(270deg);
 		transition: 0s;
+	}
+	& .admonition-title {
+		padding: 4px 0;
+
+		& .admonition-title-icon {
+			margin: 0 16px;
+		}
+		& .amonition-title-markdown	{
+			font-weight: var(--font-semi-bold);
+		}
+	}
+	& .admonition-content.el-p:first-child {
+		margin-top: 0;
 	}
 }

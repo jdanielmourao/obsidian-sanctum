@@ -1,23 +1,22 @@
 :root {
 /* ────────────────────────────── Font Families ───────────────────────────── */
 
-	--font-sans: 'IBM Plex Sans *', 'iA Writer Quattro', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	--font-sans: 'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 	--font-serif: 'IBM Plex Serif', 'Georgia', Times, serif;
-	--font-mono: 'IBM Plex Mono *', 'iA Writer Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+	--font-mono: 'IBM Plex Mono *', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
 	--mermaid-font: var(--font-sans);
 
-	--font-preview: 'IBM Plex Sans *', 'iA Writer Quattro', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-	--font-editor: 'IBM Plex Sans *', 'iA Writer Quattro', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	--font-preview: 'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	--font-editor: 'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 	--font-ui: 'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-	--font-heading-editor: 'IBM Plex Sans *', 'iA Writer Quattro', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-	--font-heading-preview: 'IBM Plex Sans *', 'iA Writer Quattro', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-	--font-frontmatter: 'IBM Plex Mono *', 'iA Writer Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+	--font-heading-editor: 'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	--font-heading-preview: 'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	--font-frontmatter: 'IBM Plex Mono *', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
 	--footnote-id: 'Footnotes';
 	--marker-odd: '–\2009\2009';
 	--marker-even: '▪  ';
 
 /* ──────────────────────────────── Variables ─────────────────────────────── */
-
 
 /* ────────────────────────── Leading (line-height) ───────────────────────── */
 	--leading-0:      1em;
@@ -36,6 +35,8 @@
 	--tracking-0:   0px;
 	--tracking-1: .16px;
 	--tracking-2: .32px;
+	--tracking-3: .64px;
+	--tracking-4: .96px;
 
 /* ────────────────────────────── Layout Sizing ───────────────────────────── */
 	--size-0:    0px;
@@ -133,127 +134,127 @@
 	--color-fill-attachment: rgb(236, 193, 81);
 
 	--color-accent-l: 64 150 147;
-	--color-accent-d: 64 150 147;
+	--color-accent-d: 104 181 177;
 
 	--color-checkbox: 140 141 59;
 
 /* ────────────────────────────── Color Palette ───────────────────────────── */
 	
-	--color-green-0:	#fefefe;
-	--color-green-1:	#f2f4ea;
-	--color-green-2:	#dfe2bd;
-	--color-green-3:	#c9ca85;
-	--color-green-4:	#abad55;
-	--color-green-5:	#8c8d3b;
-	--color-green-6:	#6c6c2e;
-	--color-green-7:	#4f4f28;
-	--color-green-8:	#31311c;
-	--color-green-9:	#15150d;
-	--color-green-10:#000000;
+	--color-green-0:	rgb(254, 254, 254);
+	--color-green-1:	rgb(242, 244, 234);
+	--color-green-2:	rgb(223, 226, 189);
+	--color-green-3:	rgb(201, 202, 133);
+	--color-green-4:	rgb(171, 173, 85);
+	--color-green-5:	rgb(140, 141, 59);
+	--color-green-6:	rgb(108, 108, 46);
+	--color-green-7:	rgb(79, 79, 40);
+	--color-green-8:	rgb(49, 49, 28);
+	--color-green-9:	rgb(21, 21, 13);
+	--color-green-10:rgb(0, 0, 0);
 	--color-green: var(--color-green-5);
 
-	--color-viridian-0:	#fefefe;
-	--color-viridian-1:	#eff5f2;
-	--color-viridian-2:	#cce4d6;
-	--color-viridian-3:	#a2d1b7;
-	--color-viridian-4:	#69b88b;
-	--color-viridian-5:	#46996a;
-	--color-viridian-6:	#377552;
-	--color-viridian-7:	#30543e;
-	--color-viridian-8:	#213428;
-	--color-viridian-9:	#101612;
-	--color-viridian-10:#000000;
+	--color-viridian-0:	rgb(254, 254, 254);
+	--color-viridian-1:	rgb(239, 245, 242);
+	--color-viridian-2:	rgb(204, 228, 214);
+	--color-viridian-3:	rgb(162, 209, 183);
+	--color-viridian-4:	rgb(105, 184, 139);
+	--color-viridian-5:	rgb(70, 153, 106);
+	--color-viridian-6:	rgb(55, 117, 82);
+	--color-viridian-7:	rgb(48, 84, 62);
+	--color-viridian-8:	rgb(33, 52, 40);
+	--color-viridian-9:	rgb(16, 22, 18);
+	--color-viridian-10:rgb(0, 0, 0);
 	--color-viridian: var(--color-viridian-5);
 
-	--color-teal-0:	#fefefe;
-	--color-teal-1:	#eef5f5;
-	--color-teal-2:	#c9e4e2;
-	--color-teal-3:	#96d1cf;
-	--color-teal-4:	#68b5b1;
-	--color-teal-5:	#409693;
-	--color-teal-6:	#327370;
-	--color-teal-7:	#2c5352;
-	--color-teal-8:	#203333;
-	--color-teal-9:	#101616;
-	--color-teal-10:#000000;
+	--color-teal-0:	rgb(254, 254, 254);
+	--color-teal-1:	rgb(238, 245, 245);
+	--color-teal-2:	rgb(201, 228, 226);
+	--color-teal-3:	rgb(150, 209, 207);
+	--color-teal-4:	rgb(104, 181, 177);
+	--color-teal-5:	rgb(64, 150, 147);
+	--color-teal-6:	rgb(50, 115, 112);
+	--color-teal-7:	rgb(44, 83, 82);
+	--color-teal-8:	rgb(32, 51, 51);
+	--color-teal-9:	rgb(16, 22, 22);
+	--color-teal-10:rgb(0, 0, 0);
 	--color-teal: var(--color-teal-5);
 
-	--color-blue-0:	#fefefe;
-	--color-blue-1:	#f1f4f6;
-	--color-blue-2:	#d5e1e8;
-	--color-blue-3:	#b1cad8;
-	--color-blue-4:	#88adc2;
-	--color-blue-5:	#668ea5;
-	--color-blue-6:	#416e87;
-	--color-blue-7:	#2e5163;
-	--color-blue-8:	#22323b;
-	--color-blue-9:	#101519;
-	--color-blue-10:#000000;
+	--color-blue-0:	rgb(254, 254, 254);
+	--color-blue-1:	rgb(241, 244, 246);
+	--color-blue-2:	rgb(213, 225, 232);
+	--color-blue-3:	rgb(177, 202, 216);
+	--color-blue-4:	rgb(136, 173, 194);
+	--color-blue-5:	rgb(102, 142, 165);
+	--color-blue-6:	rgb(65, 110, 135);
+	--color-blue-7:	rgb(46, 81, 99);
+	--color-blue-8:	rgb(34, 50, 59);
+	--color-blue-9:	rgb(16, 21, 25);
+	--color-blue-10:rgb(0, 0, 0);
 	--color-blue: var(--color-blue-5);
 
-	--color-lavender-0:	#fefefe;
-	--color-lavender-1:	#f4f4f7;
-	--color-lavender-2:	#dedee9;
-	--color-lavender-3:	#c4c4db;
-	--color-lavender-4:	#a5a5ce;
-	--color-lavender-5:	#8484bc;
-	--color-lavender-6:	#6362a7;
-	--color-lavender-7:	#484684;
-	--color-lavender-8:	#2c2b53;
-	--color-lavender-9:	#131421;
-	--color-lavender-10:#000000;
+	--color-lavender-0:	rgb(254, 254, 254);
+	--color-lavender-1:	rgb(244, 244, 247);
+	--color-lavender-2:	rgb(222, 222, 233);
+	--color-lavender-3:	rgb(196, 196, 219);
+	--color-lavender-4:	rgb(165, 165, 206);
+	--color-lavender-5:	rgb(132, 132, 188);
+	--color-lavender-6:	rgb(99, 98, 167);
+	--color-lavender-7:	rgb(72, 70, 132);
+	--color-lavender-8:	rgb(44, 43, 83);
+	--color-lavender-9:	rgb(19, 20, 33);
+	--color-lavender-10:rgb(0, 0, 0);
 	--color-lavender: var(--color-lavender-5);
 
-	--color-pink-0:	#fefefe;
-	--color-pink-1:	#f9f1f2;
-	--color-pink-2:	#f5d7db;
-	--color-pink-3:	#f2b7c0;
-	--color-pink-4:	#f08a9c;
-	--color-pink-5:	#eb546c;
-	--color-pink-6:	#c23146;
-	--color-pink-7:	#951b2a;
-	--color-pink-8:	#561c1f;
-	--color-pink-9:	#240f0f;
-	--color-pink-10:#000000;
+	--color-pink-0:	rgb(254, 254, 254);
+	--color-pink-1:	rgb(249, 241, 242);
+	--color-pink-2:	rgb(245, 215, 219);
+	--color-pink-3:	rgb(242, 183, 192);
+	--color-pink-4:	rgb(240, 138, 156);
+	--color-pink-5:	rgb(235, 84, 108);
+	--color-pink-6:	rgb(194, 49, 70);
+	--color-pink-7:	rgb(149, 27, 42);
+	--color-pink-8:	rgb(86, 28, 31);
+	--color-pink-9:	rgb(36, 15, 15);
+	--color-pink-10:rgb(0, 0, 0);
 	--color-pink: var(--color-pink-5);
 
-	--color-red-0:	#fefefe;
-	--color-red-1:	#faf1ef;
-	--color-red-2:	#f9d7d3;
-	--color-red-3:	#fab6ad;
-	--color-red-4:	#fc867a;
-	--color-red-5:	#f15148;
-	--color-red-6:	#c82b29;
-	--color-red-7:	#941f1e;
-	--color-red-8:	#591a17;
-	--color-red-9:	#250e0c;
-	--color-red-10:	#000000;
+	--color-red-0:	rgb(254, 254, 254);
+	--color-red-1:	rgb(250, 241, 239);
+	--color-red-2:	rgb(249, 215, 211);
+	--color-red-3:	rgb(250, 182, 173);
+	--color-red-4:	rgb(252, 134, 122);
+	--color-red-5:	rgb(241, 81, 72);
+	--color-red-6:	rgb(200, 43, 41);
+	--color-red-7:	rgb(148, 31, 30);
+	--color-red-8:	rgb(89, 26, 23);
+	--color-red-9:	rgb(37, 14, 12);
+	--color-red-10:	rgb(0, 0, 0);
 	--color-red: var(--color-red-5);
 
-	--color-orange-0:	#fefefe;
-	--color-orange-1:	#f9f2e9;
-	--color-orange-2:	#f7daba;
-	--color-orange-3:	#f7ba79;
-	--color-orange-4:	#f19134;
-	--color-orange-5:	#d66c1e;
-	--color-orange-6:	#a25426;
-	--color-orange-7:	#734023;
-	--color-orange-8:	#44291b;
-	--color-orange-9:	#1d120d;
-	--color-orange-10:	#000000;
+	--color-orange-0:	rgb(254, 254, 254);
+	--color-orange-1:	rgb(249, 242, 233);
+	--color-orange-2:	rgb(247, 218, 186);
+	--color-orange-3:	rgb(247, 186, 121);
+	--color-orange-4:	rgb(241, 145, 52);
+	--color-orange-5:	rgb(214, 108, 30);
+	--color-orange-6:	rgb(162, 84, 38);
+	--color-orange-7:	rgb(115, 64, 35);
+	--color-orange-8:	rgb(68, 41, 27);
+	--color-orange-9:	rgb(29, 18, 13);
+	--color-orange-10:	rgb(0, 0, 0);
 	--color-orange: var(--color-orange-5);
 
-	--color-yellow-0:	#fefefd;
-	--color-yellow-1:	#f7f4dd;
-	--color-yellow-2:	#f2df8d;
-	--color-yellow-3:	#ecc151;
-	--color-yellow-4:	#d69f28;
-	--color-yellow-5:	#af8122;
-	--color-yellow-6:	#836426;
-	--color-yellow-7:	#5e4a23;
-	--color-yellow-8:	#392e1a;
-	--color-yellow-9:	#19140c;
-	--color-yellow-10:	#000000;
+	--color-yellow-0:	rgb(254, 254, 253);
+	--color-yellow-1:	rgb(247, 244, 221);
+	--color-yellow-2:	rgb(242, 223, 141);
+	--color-yellow-3:	rgb(236, 193, 81);
+	--color-yellow-4:	rgb(214, 159, 40);
+	--color-yellow-5:	rgb(175, 129, 34);
+	--color-yellow-6:	rgb(131, 100, 38);
+	--color-yellow-7:	rgb(94, 74, 35);
+	--color-yellow-8:	rgb(57, 46, 26);
+	--color-yellow-9:	rgb(25, 20, 12);
+	--color-yellow-10:	rgb(0, 0, 0);
 	--color-yellow: var(--color-yellow-3);
 
 	--txt-sel: rgba(64 150 147 / .3);
@@ -330,8 +331,8 @@
 	--text-error:		#f15148;
 	--text-error-hover:	#f15148;
 
-	--text-highlight-bg:		var(--color-highlight-1);
-	--text-highlight-bg-active: #b1cad8;
+	--text-highlight-bg:		var(--color-accent);
+	--text-highlight-bg-active: var(--color-accent);
 	--text-selection:			var(--txt-sel);
 
 	--interactive-normal:		var(--color-primary-2);
@@ -439,8 +440,8 @@
 	--text-error:		#f15148;
 	--text-error-hover:	#f15148;
 
-	--text-highlight-bg:		var(--color-highlight-1);
-	--text-highlight-bg-active: #668ea5;
+	--text-highlight-bg:		var(--color-accent);
+	--text-highlight-bg-active: var(--color-accent);
 	--text-selection:			var(--txt-sel);
 
 	--interactive-normal:		var(--color-primary-2);

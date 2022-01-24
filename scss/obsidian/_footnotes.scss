@@ -72,4 +72,10 @@
 .fn-title .markdown-preview-view .footnotes::before {
 	content: var(--footnote-id);
 	font-size: var(--heading-2);
+	font-weight: var(--heading-2-weight);
+}
+
+.fn-title-hr.theme-dark .markdown-preview-view .footnotes::before,
+.fn-title.theme-dark .markdown-preview-view .footnotes::before {
+	font-weight: var(--heading-2-weight-d);
 }

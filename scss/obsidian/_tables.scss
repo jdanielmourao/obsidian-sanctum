@@ -1,103 +1,166 @@
+/* Editing View */
+.HyperMD-table-2.HyperMD-table-row.cm-line {
+	font-family: var(--font-mono);
+	font-weight: var(--font-regular);
+}
+.HyperMD-table-2.HyperMD-table-row.cm-line:not(.HyperMD-table-row-0) {
+	color: var(--text-muted);
+}
+
 .markdown-preview-view table {
 	border-collapse: collapse;
-	margin-top: 24px;
-	margin-bottom: 24px;
-	table-layout: auto;
-	width: max-content;
-	max-width: var(--limit-tables);
-
-	.center-tables & { // centered tables
-		margin-right: auto;
-		margin-left: auto;
-	}
-}
-
-.markdown-preview-view th { // aka table header
-	padding-left: 16px;
-	text-align: left;
-	font-weight: var(--font-regular);
-	background-color: var(--color-primary-2);
-	color: var(--color-primary-9);
-	border: 1px solid var(--color-primary-3);
-	border-bottom: none;
-	border-top: none;
-	
-	.theme-dark & {
-		background-color: var(--color-primary-3);
-		border-color: var(--color-primary-4);
-	}
-}
-
-.markdown-preview-view td { // aka table data cell
-	font-size: var(--font-scale-00);
-	font-weight: var(--font-regular);
-	padding: 8px
-			 16px
-			 8px
-			 16px;
-	justify-content: left;
-	background-color: rgba(var(--rgb-primary-0),.8);
-	border: 0px;
-	border: 1px solid var(--color-primary-2);
-	border-bottom-width: 1.5;
-
-	.theme-dark & {
-		background-color: var(--color-primary-2);
-		border-color: var(--color-primary-3);
-	}
-}
-
-.markdown-preview-view th:first-child,
-.markdown-preview-view td:first-child {
-	border-left: none;
-}
-.markdown-preview-view th:last-child,
-.markdown-preview-view td:last-child {
-	border-right: none;
-}
-.markdown-preview-view tr:first-child td {
-	border-top-color: var(--color-primary-3);
-}
-.markdown-preview-view tr:last-child td {
-	border-bottom: none;
-}
-
-/* ───────────────────────────── Dataview Tables ──────────────────────────── */
-.dataview-100 table.table-view-table {
 	margin-top: 24px;
 	margin-bottom: 24px;
 	table-layout: auto;
 	width: 100%;
 }
 
+.markdown-preview-view th { // aka table header
+	font-size: var(--font-scale-00);
+	padding-left: 16px;
+	text-align: left;
+	font-weight: var(--font-regular);
+	background-color: transparent;
+	color: var(--text-normal);
+	border: 1px solid var(--color-border-1);
+	border-bottom-color: var(--color-border-2);
+	border-bottom: none;
+	border-top: none;
+}
+
+.markdown-preview-view td { // aka table data cell
+	font-size: var(--font-scale-00);
+	font-weight: var(--font-regular);
+	color: var(--text-muted);
+	padding: 8px 16px 8px 16px;
+	justify-content: left;
+	background-color: transparent;
+	border: 0px;
+	border: 1px solid var(--color-border-1);
+	border-bottom-width: 1px;
+}
+
+.markdown-preview-view th:first-child,
+.markdown-preview-view td:first-child {
+	border-left: none;
+}
+
+.markdown-preview-view th:last-child,
+.markdown-preview-view td:last-child {
+	border-right: none;
+}
+
+table.table-view-table tr:first-child td,
+.markdown-preview-view tr:first-child td {
+	border-top-color: var(--color-border-2);
+}
+
+table.table-view-table tr:last-child td,
+.markdown-preview-view tr:last-child td {
+	border-bottom: none;
+}
+
+.alternate-row-clr .markdown-source-view .cm-embed-block,
+.alternate-row-clr .markdown-preview-view {
+	& tr:nth-child(odd) {
+		background-color: rgba(var(--rgb-primary-0), .5);
+	}
+	& tr:nth-child(even) {
+		background-color: var(--background-primary);
+	}
+	& td {
+		background-color: transparent;
+	}
+	& tr:first-child th {
+		background-color: var(--background-primary);
+	}
+	& table.table-view-table .table-view-thead tr:first-child th {
+		background-color: var(--background-primary);
+	}
+}
+
+/* ───────────────────────────── Dataview Tables ──────────────────────────── */
 
 table.table-view-table > thead > tr > th {
-	font-size: var(--font-scale-0);
-	background-color: var(--color-primary-2);
-	border-width: 0px;
+	font-size: var(--font-scale-00);
+	background-color: var(--background-primary);
+
 	border-bottom: 1px solid var(--color-border-2);
 }
 
-.alternate-dataview .dataview.table-view-table {
-	& .table-view-tbody tr:nth-child(odd) {
-		background-color: var(--color-primary-0);
-	}
-	& .table-view-tbody tr:nth-child(even) {
-		background-color: var(--color-primary-1);
-	}
-	& .table-view-tbody td {
+.cm-embed-block table.table-view-table,
+.markdown-preview-view table.table-view-table {
+	border-spacing: none;
+	border-collapse: collapse;
+
+	& .table-view-thead .table-view-th {
+		font-size: var(--font-scale-00);
+		padding-left: 16px;
+		text-align: left;
+		font-weight: var(--font-regular);
 		background-color: transparent;
+		color: var(--text-normal);
+		border: 1px solid var(--color-border-1);
+		border-bottom-color: var(--color-border-2);
+		border-bottom: none;
+		border-top: none;
+
+		&:first-child {
+			border-left: none;
+		}
+		&:last-child {
+			border-right: none;
+		}
+	}
+	& .table-view-tbody tr {
+		& td {
+		font-size: var(--font-scale-00);
+		font-weight: var(--font-regular);
+		color: var(--text-muted);
+		padding: 8px 16px 8px 16px;
+		justify-content: left;
+		background-color: transparent;
+		border: 1px solid var(--color-border-1);
+		border-bottom-width: 1px;
+
+			&:first-child {
+				border-left: none;
+			}
+			&:last-child {
+				border-right: none;
+			}
+		}
+		&:first-child td {
+			border-top-color: var(--color-border-2);
+		}
+		&:last-child td {
+			border-bottom: none;
+		}
 	}
 }
 
-.alternate-dataview {
-	& .markdown-preview-view tr:nth-child(odd) {
-		background-color: var(--color-primary-0);
+
+.table-minimal .cm-embed-block table,
+.table-minimal .markdown-preview-view table {
+	& .table-view-tbody tr td,
+	& td {
+		border-top: none;
+		border-bottom: none;
 	}
-	& .markdown-preview-view tr:nth-child(even) {
-		background-color: var(--color-primary-1);
+	& .table-view-thead .table-view-th,
+	& th {
+		border-bottom: 1px solid var(--color-border-2);
 	}
-	& .markdown-preview-view td {
-		background-color: transparent;
+
+
+}
+
+.table-result .cm-embed-block table,
+.table-result .markdown-preview-view table {
+/* 	& tr:nth-last-child(2) td {
+		border-bottom-color: var(--color-accent);
+	} */
+	& tr:last-child td {
+		background-color: rgba(var(--rgb-primary-0), .5);
 	}
 }

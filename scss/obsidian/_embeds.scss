@@ -103,8 +103,18 @@
 /* ────────────────────────────── Live Preview ────────────────────────────── */
 
 .markdown-source-view.mod-cm6 .cm-embed-block {
-	border: 1px solid transparent;
+	border: 0px solid transparent;
 	border-radius: 4px;
+
+
+	& .edit-block-button {
+		padding: 4px;
+		top: 4px;
+		right: 4px;
+		background-color: var(--color-border-1);
+		color: var(--text-normal);
+		border-radius: 4px;
+	}
 
 	&:hover {
 		border-color: var(--color-border-2);

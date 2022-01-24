@@ -46,12 +46,7 @@ div.kanban-plugin__item-button-wrapper {
 div.kanban-plugin__item-title-wrapper {
 	background: var(--background-primary);
 	display: flex;
-	padding: 4px
-			 8px;
-}
-
-.kanban-plugin__item-title-wrapper:hover {
-	filter: brightness(.95);
+	padding: 4px 8px;
 }
 
 body .kanban-plugin__lane-items.is-dragging-over {
@@ -60,26 +55,26 @@ body .kanban-plugin__lane-items.is-dragging-over {
 	box-shadow: var(--elevation-1);
 }
 
-body .kanban-plugin__grow-wrap > textarea,
-body .kanban-plugin__grow-wrap:after {
-	border: 1px solid var(--color-border-1);
-	padding: 4px
-			 8px;
-	font: inherit;
-	font-size: var(--font-scale-00);
-	overflow: hidden;
-	overflow-wrap: break-word;
-	white-space: pre-wrap;
+button.kanban-plugin__new-item-button {
+	border: 1px solid transparent;
+	&:hover {
+		color: var(--text-normal);
+		border-radius: 0px;
+		background-color: var(--background-primary);
+		border-color: var(--color-border-1);
+		border-radius: 4px;
+	}
 }
 
-button.kanban-plugin__new-item-button:hover {
-	color: var(--text-on-accent);
-	background-color: var(--color-hover);
-	border-radius: 0px;
+body .kanban-plugin__grow-wrap > textarea {
+	border: 1px solid var(--color-border-1);
+	padding: 4px 8px;
+	font-size: var(--font-scale-00);
+	line-height: 2;
 }
 
 textarea.kanban-plugin__item-input:focus {
-	outline: 1px solid var(--color-blue);
+	border: 1px solid var(--color-blue);
 	padding: 0px;
 }
 
@@ -130,4 +125,52 @@ body .kanban-plugin__markdown-preview-view {
 body .kanban-plugin__markdown-preview-view > div > * {
 	overflow-x: visible;
 	overflow-wrap: break-word;
+}
+
+.kanban-plugin__lane .kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
+	height: 32px;
+	border: 2px dashed var(--color-border-1);
+	opacity: .5;
+	margin-bottom: 4px;
+	border-radius: 6px;
+	transition: border var(--duration-moderate-2) var(--motion-entrance-expressive);
+}
+
+body .kanban-plugin__date-picker  {
+	& .flatpickr-calendar {
+		box-shadow: var(--elevation-2);
+		font-size: var(--font-scale-00);
+	}
+	& .flatpickr-day {
+		--cell-size: 2rem;
+		font-size: var(--font-scale-000);
+	}
+	& .flatpickr-day.today {
+		border: 0px;
+		color: var(--text-accent);
+		font-weight: var(--font-medium);
+	}
+	& .flatpickr-months {
+		font-size: 13px;
+		padding: 8px 0px 4px;
+		align-items: center;
+
+	}
+	& span.flatpickr-weekday {
+		font-family: var(--font-monospace);
+		text-transform: uppercase;
+		font-size: var(--font-scale-000);
+		font-weight: var(--font-regular);
+		color: var(--text-faint);
+	}
+	& .flatpickr-day.flatpickr-disabled,
+	& .flatpickr-day.flatpickr-disabled:hover,
+	& .flatpickr-day.prevMonthDay,
+	& .flatpickr-day.nextMonthDay,
+	& .flatpickr-day.notAllowed,
+	& .flatpickr-day.notAllowed.prevMonthDay,
+	& .flatpickr-day.notAllowed.nextMonthDay {
+		color: var(--text-faint);
+		opacity: .5;
+	}
 }

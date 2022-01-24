@@ -42,6 +42,12 @@
 	}
 }
 
+@media (min-width: 768px) {
+	.workspace-drawer {
+		max-width: 300pt;
+	}
+}
+
 //Mobile Nav
 .is-mobile .nav-file-title-content:before {
 	transform: translateY(0px);
@@ -255,8 +261,8 @@ body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
 .is-mobile .prompt,
 .is-mobile .suggestion-container {
 	max-height: calc(100vh - 48px);
-	width: calc(100% - 20px);
-	max-width: calc(100% - 20px);
+	width: 100%;
+	max-width: 100%;
 	min-width: unset;
 	position: absolute;
 	bottom: 0;
@@ -265,6 +271,16 @@ body.is-mobile div.workspace-drawer.mod-left .nav-buttons-container {
 	box-shadow: var(--elevation-2);
 	background-color: var(--background-primary);
 	border: 1px solid var(--color-primary-0);
+}
+
+@media (min-width: 768px) { /*prompt for tablets*/
+	.is-mobile .prompt {
+		max-width:600px;
+		max-height:600px;
+		bottom:auto;
+		border-radius: 8px;
+		top:100px;
+	}
 }
 
 .is-mobile .suggestion-hotkey {
@@ -466,6 +482,10 @@ html .is-mobile div.menu {
 .is-mobile .modal.mod-community-theme {
 	min-height: calc(100vh - 73px); //height minus modal distance + Settings title size
 	padding: 0px;
+
+	& .community-theme .modal-button-container button.mod-cta {
+		margin-bottom: 4px;
+	}
 }
 
 .is-mobile .modal-close-button { //modals close button

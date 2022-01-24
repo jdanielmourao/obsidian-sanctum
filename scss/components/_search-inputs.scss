@@ -129,21 +129,26 @@ body:not(.is-mobile) .document-search, body:not(.is-mobile) .document-replace {
 	border: 1px solid var(--color-border-1);
 }
 
-
-body .markdown-preview-view div.search-highlight > div.is-active,
 .cm-s-obsidian span.obsidian-search-match-highlight,
 .search-result-file-matched-text { // matched highlighted text
-	color: var(--text-normal);
-	background-color: var(--color-green-3);
-	border-radius: 0;
-
+	background: var(--color-green-2);
 	.theme-dark & {
-		color: var(--text-normal);
-		background-color: var(--color-green-5);
+		background: var(--color-green-7);
 	}
 }
 
+.markdown-preview-view div.search-highlight div,
+.markdown-preview-view div.search-highlight div.is-active {
+	border: 2px solid var(--color-green);
+	border-radius: 4px;
+}
 
+.markdown-preview-view div.search-highlight div.is-active {
+	background-color: var(--color-green-2);
+	.theme-dark & {
+		background-color: var(--color-green-8);
+	}
+}
 
 
 .search-empty-state { // no results

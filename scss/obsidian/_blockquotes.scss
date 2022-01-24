@@ -24,16 +24,7 @@ blockquote p {
 	line-height: var(--leading-3);
 	letter-spacing: var(--tracking-0);
 	position: relative;
-/*
-	&:after {
-		content: '\201C';
-		font-family: sans-serif;
-		position: absolute;
-		top: 0.31em;
-		left: -28px;
-		font-size: 3.75rem;
-		color: var(--color-accent);
-	}*/
+
 	&.paraphrase {
 		border-left: 0px solid transparent;
 
@@ -70,19 +61,19 @@ blockquote p {
 		color: var(--text-normal);
 }
 
-
 cite { // for citations
-	color: var(--text-accent);
+	color: var(--text-normal);
+	font-style: normal;
 	text-align: end;
 	display: block;
 }
 
 //"Markdown" cite
 .markdown-preview-view blockquote > blockquote {
-	font-style: italic;
+	font-style: normal;
 	text-align: end;
 	border: none;
-	color: var(--text-accent);
+	color: var(--text-normal);
 	padding: 0 0 0 12px;
 	margin-top: -16px;
 }
@@ -95,15 +86,15 @@ cite { // for citations
 //markdown cite Live Preview
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-2 {
 	border-left: 1px solid var(--color-accent);
-	color: var(--color-accent);
-	font-style: italic;
+	color: var(--text-normal);
+	font-style: normal;
 
 	& .cm-blockquote-border	{
 		border: none;
 
 	}
 	& .cm-quote-2 {
-		color: var(--text-accent);
+		color: var(--text-normal);
 	}
 }
 
@@ -123,19 +114,6 @@ cite { // for citations
 		color: var(--text-normal);
 	}
 }
-
-
-	/*
-	&:before {
-		content: '\201C';
-		font-family: sans-serif;
-		position: absolute;
-		top: 0em;
-		left: -16px;
-		font-size: 3.75rem;
-		color: var(--color-accent);
-	}*/
-
 
 //blockquote and paraphrase Live Preview
 .markdown-source-view.mod-cm6.is-live-preview .cm-html-embed.cm-embed-block blockquote:not(.paraphrase),

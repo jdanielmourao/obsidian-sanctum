@@ -5,10 +5,7 @@ aside {
 	clear: right;
 	width: 300px;
 	z-index: 3;
-	padding: 0px
-			 8px // this is to somewhat match the main text
-			 0px
-			 16px;
+	padding: 0px 8px 0px 16px;
 	border-radius: 0px;
 	margin-bottom: 4px;
 	margin-right: -.55em;
@@ -22,30 +19,17 @@ aside {
 	border-left: 1.5px solid var(--color-accent);
 }
 
-/* credit: SlRvb, creator of the ITS Theme */
-
 .aside-left {
 	float: left;
 	position: relative;
 	width: 300px;
-	clear: left;
-	padding: 0px
-			 0px
-			 0px
-			 0px;
-	border-radius: 0px; // set to 4 for round corners
-	//border-left: 1.5px solid var(--color-primary-8);
-	margin-right: 0px;
-	margin-top: 2px;
-	margin-bottom: 0px;
-	margin-left: -20rem;
+	margin-left: -316px;
 	background-color: transparent;
 	text-decoration: unset;
-	text-align: start; // aligns left
+	text-align: left;
+	line-height: 1.5em;
 	font-size: var(--font-scale-00);
-	font-weight: unset;
-	white-space: normal;
-	word-break: break-word;
+	color: var(--text-muted);
 }
 
 .markdown-source-view.is-live-preview.is-readable-line-width .aside-left {
@@ -56,22 +40,14 @@ aside {
 	float: right;
 	position: relative;
 	width: 300px;
-	clear: right;
-	padding: 0px
-			 0px
-			 0px
-			 0px;
-	border-radius: 0px; // set to 4 for round corners
-	//border-left: 1.5px solid var(--color-primary-8);
-	margin-right: -20rem;
-	margin-top: 2px;
-	margin-bottom: 0px;
+	clear: left;
+	margin-right: -316px;
 	background-color: transparent;
 	text-decoration: unset;
-	text-align: start; /* aligns left */
+	text-align: left;
+	line-height: 1.5em;
 	font-size: var(--font-scale-00);
-	font-weight: unset;
-	text-align: start;
+	color: var(--text-muted);
 }
 
 .aside-side-accent .aside-right,
@@ -89,9 +65,7 @@ aside {
 	color: transparent;
 	float: right;
 	position: relative;
-	overflow: hidden;
-	margin: 8px;
-	margin-right: -2.25rem;
+	margin-right: -32px;
 	margin-top: 0px;
 	width: 16px;
 	height: 16px;
@@ -99,6 +73,7 @@ aside {
 	text-align: start;
 	font-weight: unset;
 	background-color: transparent;
+	
 
 	&:before {
 		display: block;
@@ -118,43 +93,32 @@ aside {
 		white-space: normal;
 		text-overflow: unset;
 		color: unset;
-		width: 350px;
 		height: unset;
 		z-index: 3;
-		padding: 16px;
-		padding-top: 8px;
-		// border-right: 1.5px solid #{var.$80};
 		border-radius: 0px;
 		font-size: var(--font-scale-00);
 		width: 300px;
-		padding: 0px
-				 0px
-				 0px
-				 0px;
-		margin-right: -20rem;
+		padding: 0px 0px 0px 0px;
+		margin-right: -316px;
+		line-height: 1.5em;
+		font-size: var(--font-scale-00);
+		color: var(--text-muted);
 	}
 }
 .aside-in {
 	float: right;
 	position: relative;
-	clear: right;
 	width: 40%; //might be a good idea to make a media query in the future
-	z-index: 3;
-	padding: 0px
-			 8px /* this is to somewhat match the main text */
-			 0px
-			 16px;
+	padding: 4px 16px;
 	border-radius: 0px;
-	margin-bottom: 4px;
-	margin-right: -.55em;
-	margin-left: 1em;
-	margin-top: 8px;
+	margin: 8px 0px 4px 4px;
 	text-decoration: none;
 	text-align: start;
-	font-weight: unset;
-	font-size: var(--font-scale-00);
 	background-color: transparent;
 	border-left: 1.5px solid var(--color-accent);
+	line-height: 1.5em;
+	font-size: var(--font-scale-00);
+	color: var(--text-muted);
 
 	.aside-in-accent & {
 		color: var(--color-accent);
@@ -176,5 +140,5 @@ aside {
 
 /* Shrink Scrollbar */
 .aside > ::-webkit-scrollbar {
-    width: 4px;
+	width: 4px;
 }

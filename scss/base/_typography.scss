@@ -49,9 +49,9 @@ body {
 	font-feature-settings: 'zero', 'ss05', 'ss02' on;
 
 	&, & input,
-	& button, //buttons
-	& textarea, //text input
-	& select { //dropdowns
+	& button, /* buttons */
+	& textarea, /* text input */
+	& select { /* dropdowns */
 		font-optical-sizing: auto;
 		font-family: var(--font-ui);
 		font-feature-settings: "zero", "ss05" on;
@@ -62,26 +62,26 @@ body {
 		font-variant-ligatures: no-common-ligatures;
 	}
 	&.theme-dark , body.theme-dark input, body.theme-dark button {
-		--font-regular: 300; //for visual balance between light and dark modes
+		--font-regular: 300; /* for visual balance between light and dark modes */
 	}
 }
 
 /* ───────────────────────────── Note Typography ──────────────────────────── */
-.markdown-preview-view { //preview
+.markdown-preview-view { /* preview */
 	font-optical-sizing: auto;
 	font-family: var(--font-preview);
 	line-height: var(--leading-4);
-	letter-spacing: var(--tracking-0);
+	letter-spacing: var(--tracking-2);
 	hyphens: auto;
 	font-variant-ligatures: common-ligatures;
 }
 
 .cm-list-1, .cm-list-2, .cm-list-3, .cm-list-4, .cm-list-5, .cm-list-6, .cm-list-7, .cm-list-8, .cm-list-9, .cm-list-10,
-.cm-line, // live preview
+.cm-line, /* live preview */
 .markdown-source-view.mod-cm6 .cm-scroller,
 .markdown-source-view,
 .cm-s-obsidian,
-.HyperMD-table-2.HyperMD-table-row.cm-line { //tables
+.HyperMD-table-2.HyperMD-table-row.cm-line {
 	font-variant-ligatures: common-ligatures;
 	font-optical-sizing: auto;
 	font-family: var(--font-editor);
@@ -89,20 +89,20 @@ body {
 	letter-spacing: var(--tracking-2);
 }
 
-.cm-s-obsidian { //edit/source mode
+.cm-s-obsidian { /* edit/source mode */
 	font-variant-ligatures: common-ligatures;
 	font-optical-sizing: auto;
 	font-family: var(--font-editor);
 	letter-spacing: var(--tracking-2);
 }
 
-.CodeMirror-sizer { // Legacy Editor
+.CodeMirror-sizer { /* Legacy Editor */
 	line-height: var(--leading-4);
 }
 /*
 .CodeMirror-wrap .CodeMirror-line,
 .CodeMirror-wrap .CodeMirror-line-like {
-	word-wrap: break-word; // same as overflow-wrap:break-word 
+	word-wrap: break-word;
 	white-space: pre-wrap;
 	word-break: break-word;
 	hyphens: auto;
@@ -133,7 +133,7 @@ body {
 .cm-s-obsidian .HyperMD-header-4,
 .cm-s-obsidian .HyperMD-header-5,
 .cm-s-obsidian .HyperMD-header-6 {
-	font-family: var(--font-heading-editor) !important; //!important is for edge cases like underline, which inherit body text font family
+	font-family: var(--font-heading-editor);
 }
 
 .theme-light {
@@ -237,22 +237,22 @@ body {
 }
 
 :root {
-	--heading-1: 2rem;
-	--heading-2: 1.75rem;
-	--heading-3: 1.5rem;
-	--heading-4: 1.25rem;
-	--heading-5: 1.125rem;
-	--heading-6: 1rem;
+	--heading-1: 1.75rem;
+	--heading-2: 1.5rem;
+	--heading-3: 1.25rem;
+	--heading-4: 1.125rem;
+	--heading-5: .875rem;
+	--heading-6: .75rem;
 
-	--heading-1-weight: 600; //semi-bold by default
+	--heading-1-weight: 600; /* semi-bold by default */
 	--heading-2-weight: 600;
-	--heading-3-weight: 500;
-	--heading-4-weight: 500;
-	--heading-5-weight: 400;
-	--heading-6-weight: 400;
+	--heading-3-weight: 600;
+	--heading-4-weight: 600;
+	--heading-5-weight: 600;
+	--heading-6-weight: 600;
 }
 
-.theme-dark { //visual balance between light and dark mode heading weights
+.theme-dark { /* visual balance between light and dark mode heading weights */
 	--heading-1-weight-d: calc(var(--heading-1-weight) - 100); 
 	--heading-2-weight-d: calc(var(--heading-2-weight) - 100);
 	--heading-3-weight-d: calc(var(--heading-3-weight) - 100);
@@ -320,6 +320,7 @@ body {
 	font-weight: var(--heading-5-weight);
 	letter-spacing: var(--tracking-0);
 	color:var(--text-normal);
+	text-transform: uppercase;
 }	
 .markdown-preview-view h6,
 .cm-s-obsidian .cm-header-6,
@@ -329,10 +330,11 @@ body {
 	font-weight: var(--heading-6-weight);
 	letter-spacing: var(--tracking-1);
 	color:var(--text-normal);
+	text-transform: uppercase;
 }
 
 
-// Legacy Editor (fixes the cursor problem)
+/* Legacy Editor (fixes the cursor problem) */
 .markdown-source-view.mod-cm5 .cm-s-obsidian .HyperMD-header {
 	padding: 0;
 	margin: 0;
@@ -340,7 +342,7 @@ body {
 
 /* ─────────────────────────── Productive Headings ────────────────────────── */
 
-.community-plugin-info .community-plugin-readme { // Plugin README headings, tables, lists and paragraphs
+.community-plugin-info .community-plugin-readme { /* Plugin README headings, tables, lists and paragraphs */
 	& table,
 	& li,
 	& p {
@@ -488,7 +490,7 @@ body.head-indicator .markdown-source-view.mod-cm6.is-live-preview .HyperMD-heade
 	transform: translateY(25%);
 }
 
-//Fix collapse indicators size in LP Headings
+/* Fix collapse indicators size in LP Headings */
 .markdown-source-view.mod-cm6 .HyperMD-header-1 > .cm-fold-indicator {font-size: var(--heading-1);}
 .markdown-source-view.mod-cm6 .HyperMD-header-2 > .cm-fold-indicator {font-size: var(--heading-2);}
 .markdown-source-view.mod-cm6 .HyperMD-header-3 > .cm-fold-indicator {font-size: var(--heading-3);}

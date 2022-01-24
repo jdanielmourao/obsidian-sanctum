@@ -9,28 +9,29 @@ div > .CodeMirror-line span.cm-hashtag-end {
 .cm-s-obsidian span.cm-hashtag,
 .tag:not(.token) {
 	display: inline-block;
-	background-color: rgba(var(--color-accent-l) / .15);
+	background-color: rgba(var(--color-accent-l) / .15); //light mode
 	color: var(--color-accent);
 	font-size: var(--font-scale-00);
-	font-weight: var(--font-medium);
+	font-weight: var(--font-regular);
 	line-height: var(--leading-0);
-	padding: 2px 8px 2px 8px;
+	padding: 2px 4px 2px 4px;
 	text-align: center;
 	text-decoration: none;
 	margin: 0px 0px;
-	border-radius: 16px;
-	border: 1px solid rgba(var(--color-accent-l) / .2);
+	border: 1px solid transparent;
+	border-radius: .4em;
+/* 	border-color: rgba(var(--color-accent-d) / .2); //dark mode
+	border: 1px solid rgba(var(--color-accent-l) / .2); //light mode */
 	transition: var(--duration-moderate-1) var(--motion-exit-productive);
 	filter: saturate(1);
 	
-	&:hover {
-		cursor: pointer;
-		color: var(--text-normal);
+	.theme-dark & {
+		background-color: rgba(var(--color-accent-d) / .15); //dark mode
 	}
 
-	.theme-dark & {
-		background-color: rgba(var(--color-accent-d) / .15);
-		border-color: rgba(var(--color-accent-d) / .2);
+	&:hover {
+		cursor: pointer;
+		border: 1px solid var(--color-accent);
 	}
 }
 
@@ -42,13 +43,4 @@ div > .CodeMirror-line span.cm-hashtag-end {
 
 .cm-s-obsidian span.cm-hashtag::before { //adds an hashtag in editing view
 	content: "#";
-}
-
-
-/* Frontmatter tag*/
-.frontmatter-container .tag:hover {
-	color: var(--background-primary);
-	font-weight: var(--font-semi-bold);
-	background-color: var(--color-accent);
-	border: 1px solid var(--color-accent);
 }
