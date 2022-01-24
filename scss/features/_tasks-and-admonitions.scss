@@ -62,7 +62,7 @@ input[type=checkbox] { /* HTML checkbox element */
 	transform: translateY(-2px); /* aligns regular checkbox in LP */
 }
 
-.markdown-source-view.mod-cm6 .HyperMD-list-line .task-list-item-checkbox[data-task=" "] {
+.markdown-source-view.mod-cm6 .HyperMD-list-line .task-list-item-checkbox[data-task=""] {
 	border-radius: 50%;
 }
 
@@ -110,7 +110,7 @@ body:not(.tasks) {
 	}
 }
 body:not(.tasks) {
-	.markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task="x"]),
+	.markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task="x"]):not([data-task=" "]),
 	.markdown-preview-view li:not([data-task="x"]) .task-list-item-checkbox:checked {
 		background-repeat: no-repeat;
 		background-size: 18px 18px;
