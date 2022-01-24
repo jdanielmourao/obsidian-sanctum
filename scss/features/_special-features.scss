@@ -7,12 +7,12 @@ body.no-animation * {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* ────────────────────────────── Link Favicons ───────────────────────────── */
 
-.markdown-preview-view object.link-favicon {
+object.link-favicon {
 	vertical-align: middle;
 }
 
