@@ -124,7 +124,7 @@ button.mod-cta {
 
 //Secondary Buttons
 
-button:not(.mod-cta):not(.mod-warning):not(.pcr-button),
+.modal button:not(.mod-cta):not(.mod-warning):not(.pcr-button),
 .modal.mod-settings .setting-item-control button:not(.mod-cta):not(.mod-warning):not(.pcr-button),
 .modal.mod-community-plugin .community-plugin-info p button:not(.mod-cta):not(.mod-warning) {
 	color: var(--text-normal);

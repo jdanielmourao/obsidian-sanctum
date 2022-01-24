@@ -12,6 +12,10 @@ body.no-animation * {
 
 /* ────────────────────────────── Link Favicons ───────────────────────────── */
 
+.markdown-preview-view object.link-favicon {
+	vertical-align: middle;
+}
+
 /* Removes Custom External Link Icons from Community Themes Readmes */
 .community-plugin-info .community-plugin-readme img.link-favicon {
 	display: none;
