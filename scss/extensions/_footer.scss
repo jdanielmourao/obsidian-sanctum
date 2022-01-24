@@ -204,6 +204,12 @@ settings:
 		format: rgb
 		default: rgb(236, 193, 81)
 	-
+		id: color-fill-unresolved
+		title: Unresolved Node Color
+		type: variable-color
+		format: rgb
+		default: rgb(241, 81, 72)
+	-
 		id: typography
 		title: Typography
 		type: heading
