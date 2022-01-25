@@ -132,7 +132,6 @@
 	--color-fill-focused: rgb(235, 84, 108);
 	--color-fill-tag: rgb(64, 150, 147);
 	--color-fill-attachment: rgb(236, 193, 81);
-	--color-fill-unresolved: rgb(241, 81, 72);
 
 	--color-accent-l: 64 150 147;
 	--color-accent-d: 104 181 177;
@@ -151,7 +150,7 @@
 	--color-green-7:	rgb(79, 79, 40);
 	--color-green-8:	rgb(49, 49, 28);
 	--color-green-9:	rgb(21, 21, 13);
-	--color-green-10:rgb(0, 0, 0);
+	--color-green-10:	rgb(0, 0, 0);
 	--color-green: var(--color-green-5);
 
 	--color-viridian-0:	rgb(254, 254, 254);
@@ -264,6 +263,80 @@
 
 
 /* ─────────────────────────── Light Theme Colours ────────────────────────── */
+.theme-light.sanctum-hearth {
+	--rgb-primary-0: 254, 254, 254;
+	--color-primary-0:	rgb(254, 254, 254);
+	--color-primary-1:	rgb(249, 242, 233);
+	--color-primary-2:	rgb(247, 218, 186);
+	--color-primary-3:	rgb(247, 186, 121);
+	--color-primary-4:	rgb(241, 145, 52);
+	--color-primary-5:	rgb(214, 108, 30);
+	--color-primary-6:	rgb(162, 84, 38);
+	--color-primary-7:	rgb(115, 64, 35);
+	--color-primary-8:	rgb(68, 41, 27);
+	--color-primary-9:	rgb(29, 18, 13);
+	--color-primary-10: rgb(0, 0, 0);
+}
+.theme-light.sanctum-moss {
+	--rgb-primary-0: 254, 254, 254;
+	--color-primary-0:	rgb(254, 254, 254);
+	--color-primary-1:	rgb(242, 244, 234);
+	--color-primary-2:	rgb(223, 226, 189);
+	--color-primary-3:	rgb(201, 202, 133);
+	--color-primary-4:	rgb(171, 173, 85);
+	--color-primary-5:	rgb(140, 141, 59);
+	--color-primary-6:	rgb(108, 108, 46);
+	--color-primary-7:	rgb(79, 79, 40);
+	--color-primary-8:	rgb(49, 49, 28);
+	--color-primary-9:	rgb(21, 21, 13);
+	--color-primary-10: rgb(0, 0, 0);
+}
+
+.theme-light.sanctum-lavender {
+	--rgb-primary-0: 254, 254, 254;
+	--color-primary-0:	rgb(254, 254, 254);
+	--color-primary-1:	rgb(244, 244, 247);
+	--color-primary-2:	rgb(222, 222, 233);
+	--color-primary-3:	rgb(196, 196, 219);
+	--color-primary-4:	rgb(165, 165, 206);
+	--color-primary-5:	rgb(132, 132, 188);
+	--color-primary-6:	rgb(99, 98, 167);
+	--color-primary-7:	rgb(72, 70, 132);
+	--color-primary-8:	rgb(44, 43, 83);
+	--color-primary-9:	rgb(19, 20, 33);
+	--color-primary-10: rgb(0, 0, 0);
+}
+
+.theme-light.sanctum-tide {
+	--rgb-primary-0: 254, 254, 254;
+	--color-primary-0:	rgb(254, 254, 254);
+	--color-primary-1:	rgb(238, 245, 245);
+	--color-primary-2:	rgb(201, 228, 226);
+	--color-primary-3:	rgb(150, 209, 207);
+	--color-primary-4:	rgb(104, 181, 177);
+	--color-primary-5:	rgb(64, 150, 147);
+	--color-primary-6:	rgb(50, 115, 112);
+	--color-primary-7:	rgb(44, 83, 82);
+	--color-primary-8:	rgb(32, 51, 51);
+	--color-primary-9:	rgb(16, 22, 22);
+	--color-primary-10: rgb(0, 0, 0);
+}
+
+.theme-light.sanctum-rose {
+	--rgb-primary-0: 254, 254, 254;
+	--color-primary-0:	rgb(254, 254, 254);
+	--color-primary-1:	rgb(249, 241, 242);
+	--color-primary-2:	rgb(245, 215, 219);
+	--color-primary-3:	rgb(242, 183, 192);
+	--color-primary-4:	rgb(240, 138, 156);
+	--color-primary-5:	rgb(235, 84, 108);
+	--color-primary-6:	rgb(194, 49, 70);
+	--color-primary-7:	rgb(149, 27, 42);
+	--color-primary-8:	rgb(86, 28, 31);
+	--color-primary-9:	rgb(36, 15, 15);
+	--color-primary-10: rgb(0, 0, 0);
+}
+
 .theme-light.sanctum-light {
 	--rgb-primary-0: 254, 254, 254;
 	--color-primary-0:	#fefefe;
@@ -293,10 +366,12 @@
 	--color-primary-9:	#151515;
 	--color-primary-10: #080808;
 }
-/*
+
+.theme-light.sanctum-rose,
+.theme-light.sanctum-tide,
 .theme-light.sanctum-hearth,
 .theme-light.sanctum-moss,
-.theme-light.sanctum-lavender,*/
+.theme-light.sanctum-lavender,
 .theme-light,
 .theme-light.sanctum-light,
 .theme-light.gruvbox {
@@ -346,87 +421,80 @@
 	--scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
 	--highlight-mix-blend-mode: darken;
 }
-/* .theme-light.gruvbox {
-	--rgb-primary-0: 249 245 215;
-	--color-primary-0:	#fbf1c7;
-	--color-primary-1:	#f9f5d7;
-	--color-primary-2:	#ebdbb2;
-	--color-primary-3:	#d5c4a1;
-	--color-primary-4:	#bdae93;
-	--color-primary-5:	#a89984;
-	--color-primary-6:	#928374;
-	--color-primary-7:	#504945;
-	--color-primary-8:	#3c3836;
-	--color-primary-9:	#282828;
-	--color-primary-10: #080808;
 
-	--background-modifier-success:		#79740e;
-	--background-modifier-error:		#cc241d;
-	--background-modifier-error-rgb:	204 36 29;
-	--background-modifier-error-hover:	#cc241d;
-
-	--text-accent-hover:#b57614;
-	--text-error:		#cc241d;
-	--text-error-hover:	#cc241d;
-
-	--interactive-success:		#8c8d3b;
-
-	--scrollbar-bg: rgba(0, 0, 0, 0.05);
-	--scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
-	--highlight-mix-blend-mode: darken;
-
-	--color-green-4:	rgb(152, 151, 26);
-	--color-green-5:	rgb(121, 116, 14);
-
-	--color-viridian-4:	rgb(104, 157, 106);
-	--color-viridian-5:	rgb(66, 123, 88);
-
-	--color-teal-4:	rgb(69, 133, 136);
-	--color-teal-5:	rgb(7, 102, 120);
-
-	--color-blue-4:	rgb(69, 133, 136);
-	--color-blue-5:	rgb(7, 102, 120);
-
-	--color-pink-4:	rgb(177, 98, 134);
-	--color-pink-5:	rgb(143, 63, 113);
-
-	--color-red-4:	rgb(204, 36, 29);
-	--color-red-5:	rgb(157, 0, 6);
-
-	--color-orange-5:	rgb(214, 93, 14);
-
-	--color-yellow-4:	rgb(215, 153, 33);
-	--color-yellow-5:	rgb(181, 118, 20);
-
-	--txt-sel: rgba(69 133 136 / .3);
-
-	--color-highlight-1: 215 153 33;
-	--color-highlight-2: 69 133 136;
-	--color-highlight-3: 177 98 134;
-
-	--color-fill-focused: rgb(177, 98, 134);
-	--color-fill-tag: rgb(69, 133, 136);
-	--color-fill-attachment: rgb(215, 153, 33);
-
-	--color-accent-l: 69 133 136;
-
-	--color-checkbox: 152 151 26;
-} */
 /* ─────────────────────────── Dark Theme Colours ─────────────────────────── */
-
-.theme-dark.gruvbox {
+.theme-dark.sanctum-fire {
 	--rgb-primary-0: 8, 8, 8;
-	--color-primary-0:	#080808;
-	--color-primary-1:	#151515;
-	--color-primary-2:	#312F30;
-	--color-primary-3:	#4f4c4d;
-	--color-primary-4:	#6b6868;
-	--color-primary-5:	#8b8888;
-	--color-primary-6:	#aaa8a6;
-	--color-primary-7:	#c9c6c4;
-	--color-primary-8:	#e2dfdc;
-	--color-primary-9:	#f5f3f0;
-	--color-primary-10: #fefefe;
+	--color-primary-0:	rgb(8, 8, 8);
+	--color-primary-1:	rgb(29, 18, 13);
+	--color-primary-2:	rgb(68, 41, 27);
+	--color-primary-3:	rgb(115, 64, 35);
+	--color-primary-4:	rgb(162, 84, 38);
+	--color-primary-5:	rgb(214, 108, 30);
+	--color-primary-6:	rgb(241, 145, 52);
+	--color-primary-7:	rgb(247, 186, 121);
+	--color-primary-8:	rgb(247, 218, 186);
+	--color-primary-9:	rgb(249, 242, 233);
+	--color-primary-10:	rgb(254, 254, 254);
+}
+.theme-dark.sanctum-forest {
+	--rgb-primary-0: 8, 8, 8;
+	--color-primary-0:	#000000;
+	--color-primary-1:	#1b1b11;
+	--color-primary-2:	#35351e;
+	--color-primary-3:	#4f4f27;
+	--color-primary-4:	#6c6c2e;
+	--color-primary-5:	#8c8d3b;
+	--color-primary-6:	#abad56;
+	--color-primary-7:	#c7cb91;
+	--color-primary-8:	#dfe2be;
+	--color-primary-9:	#f2f4eb;
+	--color-primary-10:	#fefefe;
+}
+
+.theme-dark.sanctum-violet {
+	--rgb-primary-0: 8, 8, 8;
+	--color-primary-0:	rgb(8, 8, 8);
+	--color-primary-1:	rgb(19, 20, 33);
+	--color-primary-2:	rgb(44, 43, 83);
+	--color-primary-3:	rgb(72, 70, 132);
+	--color-primary-4:	rgb(99, 98, 167);
+	--color-primary-5:	rgb(132, 132, 188);
+	--color-primary-6:	rgb(165, 165, 206);
+	--color-primary-7:	rgb(196, 196, 219);
+	--color-primary-8:	rgb(222, 222, 233);
+	--color-primary-9:	rgb(244, 244, 247);
+	--color-primary-10:	rgb(254, 254, 254);
+}
+
+.theme-dark.sanctum-sea {
+	--rgb-primary-0: 8, 8, 8;
+	--color-primary-0:	rgb(8, 8, 8);
+	--color-primary-1:	rgb(16, 22, 22);
+	--color-primary-2:	rgb(32, 51, 51);
+	--color-primary-3:	rgb(44, 83, 82);
+	--color-primary-4:	rgb(50, 115, 112);
+	--color-primary-5:	rgb(64, 150, 147);
+	--color-primary-6:	rgb(104, 181, 177);
+	--color-primary-7:	rgb(150, 209, 207);
+	--color-primary-8:	rgb(201, 228, 226);
+	--color-primary-9:	rgb(238, 245, 245);
+	--color-primary-10:	rgb(254, 254, 254);
+}
+
+.theme-dark.sanctum-pink {
+	--rgb-primary-0: 8, 8, 8;
+	--color-primary-0:	rgb(8, 8, 8);
+	--color-primary-1:	rgb(36, 15, 15);
+	--color-primary-2:	rgb(86, 28, 31);
+	--color-primary-3:	rgb(149, 27, 42);
+	--color-primary-4:	rgb(194, 49, 70);
+	--color-primary-5:	rgb(235, 84, 108);
+	--color-primary-6:	rgb(240, 138, 156);
+	--color-primary-7:	rgb(242, 183, 192);
+	--color-primary-8:	rgb(245, 215, 219);
+	--color-primary-9:	rgb(249, 241, 242);
+	--color-primary-10:	rgb(254, 254, 254);
 }
 
 .theme-dark.sanctum-true-black {
@@ -447,6 +515,21 @@
 .theme-dark.sanctum-dark {
 	--rgb-primary-0: 8, 8, 8;
 	--color-primary-0:	#080808;
+	--color-primary-1:	#1b1b1b;
+	--color-primary-2:	#363334;
+	--color-primary-3:	#4f4c4d;
+	--color-primary-4:	#6b6869;
+	--color-primary-5:	#8b8888;
+	--color-primary-6:	#aaa8a6;
+	--color-primary-7:	#c9c6c3;
+	--color-primary-8:	#e2dfdc;
+	--color-primary-9:	#f5f3f0;
+	--color-primary-10: #fefefe;
+}
+
+.theme-dark.sanctum-legacy-dark {
+	--rgb-primary-0: 8, 8, 8;
+	--color-primary-0:	#080808;
 	--color-primary-1:	#151515;
 	--color-primary-2:	#312F30;
 	--color-primary-3:	#4f4c4d;
@@ -457,7 +540,6 @@
 	--color-primary-8:	#e2dfdc;
 	--color-primary-9:	#f5f3f0;
 	--color-primary-10: #fefefe;
-	
 }
 
 .theme-dark {
@@ -477,10 +559,15 @@
 	
 }
 
+.theme-dark.sanctum-pink,
+.theme-dark.sanctum-sea,
+.theme-dark.sanctum-fire,
+.theme-dark.sanctum-forest,
+.theme-dark.sanctum-violet,
 .theme-dark,
 .theme-dark.sanctum-true-black,
 .theme-dark.sanctum-dark,
-.theme-dark.gruvbox {
+.theme-dark.sanctum-legacy-dark {
 	
 	--font-thin: 100;
 	--font-extra-light: 100;
@@ -513,7 +600,7 @@
 	--background-modifier-error-hover:			#f15148;
 	--background-modifier-cover:				var(--color-primary-2);
 
-	--text-normal:		var(--color-primary-10);
+	--text-normal:		var(--color-primary-8);
 	--text-muted:		var(--color-primary-7);
 	--text-faint:		var(--color-primary-5);
 	--text-accent:		var(--color-accent);
