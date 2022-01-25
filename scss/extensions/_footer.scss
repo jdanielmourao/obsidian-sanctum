@@ -20,6 +20,9 @@ settings:
 			-
 				label: Default
 				value: sanctum-light
+			-
+				label: Gruvbox
+				value: gruvbox
 	-
 		id: dark-mode-palette
 		title: Dark mode color scheme
@@ -34,6 +37,9 @@ settings:
 			-
 				label: True Black
 				value: sanctum-true-black
+			-
+				label: Gruvbox
+				value: gruvbox
 	-
 		id: accent-active-line
 		title: Use Accent color as Active Line Highlight

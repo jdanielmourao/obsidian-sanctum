@@ -258,13 +258,11 @@
 	--color-yellow: var(--color-yellow-3);
 
 	--txt-sel: rgba(64 150 147 / .3);
-
 }
 /* ────────────────────────────── END OF ROOT ───────────────────────────── */
 
 
 /* ─────────────────────────── Light Theme Colours ────────────────────────── */
-
 .theme-light.sanctum-light {
 	--rgb-primary-0: 254, 254, 254;
 	--color-primary-0:	#fefefe;
@@ -299,7 +297,8 @@
 .theme-light.sanctum-moss,
 .theme-light.sanctum-lavender,*/
 .theme-light,
-.theme-light.sanctum-light {
+.theme-light.sanctum-light,
+.theme-light.gruvbox {
 	--color-hover:		var(--color-primary-2);
 	--color-border-1:	var(--color-primary-2);
 	--color-border-2:	var(--color-primary-3);
@@ -346,8 +345,89 @@
 	--scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
 	--highlight-mix-blend-mode: darken;
 }
+/* .theme-light.gruvbox {
+	--rgb-primary-0: 249 245 215;
+	--color-primary-0:	#fbf1c7;
+	--color-primary-1:	#f9f5d7;
+	--color-primary-2:	#ebdbb2;
+	--color-primary-3:	#d5c4a1;
+	--color-primary-4:	#bdae93;
+	--color-primary-5:	#a89984;
+	--color-primary-6:	#928374;
+	--color-primary-7:	#504945;
+	--color-primary-8:	#3c3836;
+	--color-primary-9:	#282828;
+	--color-primary-10: #080808;
 
+	--background-modifier-success:		#79740e;
+	--background-modifier-error:		#cc241d;
+	--background-modifier-error-rgb:	204 36 29;
+	--background-modifier-error-hover:	#cc241d;
+
+	--text-accent-hover:#b57614;
+	--text-error:		#cc241d;
+	--text-error-hover:	#cc241d;
+
+	--interactive-success:		#8c8d3b;
+
+	--scrollbar-bg: rgba(0, 0, 0, 0.05);
+	--scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
+	--highlight-mix-blend-mode: darken;
+
+	--color-green-4:	rgb(152, 151, 26);
+	--color-green-5:	rgb(121, 116, 14);
+
+	--color-viridian-4:	rgb(104, 157, 106);
+	--color-viridian-5:	rgb(66, 123, 88);
+
+	--color-teal-4:	rgb(69, 133, 136);
+	--color-teal-5:	rgb(7, 102, 120);
+
+	--color-blue-4:	rgb(69, 133, 136);
+	--color-blue-5:	rgb(7, 102, 120);
+
+	--color-pink-4:	rgb(177, 98, 134);
+	--color-pink-5:	rgb(143, 63, 113);
+
+	--color-red-4:	rgb(204, 36, 29);
+	--color-red-5:	rgb(157, 0, 6);
+
+	--color-orange-5:	rgb(214, 93, 14);
+
+	--color-yellow-4:	rgb(215, 153, 33);
+	--color-yellow-5:	rgb(181, 118, 20);
+
+	--txt-sel: rgba(69 133 136 / .3);
+
+	--color-highlight-1: 215 153 33;
+	--color-highlight-2: 69 133 136;
+	--color-highlight-3: 177 98 134;
+
+	--color-fill-focused: rgb(177, 98, 134);
+	--color-fill-tag: rgb(69, 133, 136);
+	--color-fill-attachment: rgb(215, 153, 33);
+
+	--color-accent-l: 69 133 136;
+
+	--color-checkbox: 152 151 26;
+} */
 /* ─────────────────────────── Dark Theme Colours ─────────────────────────── */
+
+.theme-dark.gruvbox {
+	--rgb-primary-0: 8, 8, 8;
+	--color-primary-0:	#080808;
+	--color-primary-1:	#151515;
+	--color-primary-2:	#312F30;
+	--color-primary-3:	#4f4c4d;
+	--color-primary-4:	#6b6868;
+	--color-primary-5:	#8b8888;
+	--color-primary-6:	#aaa8a6;
+	--color-primary-7:	#c9c6c4;
+	--color-primary-8:	#e2dfdc;
+	--color-primary-9:	#f5f3f0;
+	--color-primary-10: #fefefe;
+}
+
 .theme-dark.sanctum-true-black {
 	--rgb-primary-0: 0,0,0 ;
 	--color-primary-0:	#080808;
@@ -398,7 +478,8 @@
 
 .theme-dark,
 .theme-dark.sanctum-true-black,
-.theme-dark.sanctum-dark {
+.theme-dark.sanctum-dark,
+.theme-dark.gruvbox {
 	
 	--font-thin: 100;
 	--font-extra-light: 100;
