@@ -46,6 +46,9 @@
 	.workspace-drawer {
 		max-width: 300pt;
 	}
+	.workspace-drawer.is-pinned.mod-right,
+	.workspace-drawer.is-pinned.mod-left {
+		max-width: 300pt;
 }
 
 //Mobile Nav
