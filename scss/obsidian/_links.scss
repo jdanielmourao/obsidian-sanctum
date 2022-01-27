@@ -101,6 +101,19 @@
 	background-color: rgba(240 138 156 / .5);
 }
 
+
+
+
+.alt-link .cm-s-obsidian span.cm-hmd-internal-link,
+.alt-link .markdown-preview-view .internal-link {
+	text-decoration: none;
+	color: var(--text-accent);
+	font-weight: 450;
+	text-transform: none;
+	font-size: 1rem;
+	letter-spacing: inherit;
+	border-radius: 4px;
+}
 /* ──────────────────────────── Unresolved Links ──────────────────────────── */
 // Internal link to uncreated note
 .markdown-preview-view .internal-link.is-unresolved {
