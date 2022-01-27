@@ -140,121 +140,121 @@
 
 /* ────────────────────────────── Color Palette ───────────────────────────── */
 	
-	--color-green-0:	rgb(254, 254, 254);
-	--color-green-1:	rgb(242, 244, 234);
-	--color-green-2:	rgb(223, 226, 189);
-	--color-green-3:	rgb(201, 202, 133);
-	--color-green-4:	rgb(171, 173, 85);
-	--color-green-5:	rgb(140, 141, 59);
-	--color-green-6:	rgb(108, 108, 46);
-	--color-green-7:	rgb(79, 79, 40);
-	--color-green-8:	rgb(49, 49, 28);
-	--color-green-9:	rgb(21, 21, 13);
-	--color-green-10:	rgb(0, 0, 0);
+	--color-green-0:	#fefefe;
+	--color-green-1:	#f2f4eb;
+	--color-green-2:	#dfe2be;
+	--color-green-3:	#c7cb91;
+	--color-green-4:	#abad56;
+	--color-green-5:	#8c8d3b;
+	--color-green-6:	#6c6c2e;
+	--color-green-7:	#4f4f27;
+	--color-green-8:	#35351e;
+	--color-green-9:	#1b1b11;
+	--color-green-10:	#080808;
 	--color-green: var(--color-green-5);
 
-	--color-viridian-0:	rgb(254, 254, 254);
-	--color-viridian-1:	rgb(239, 245, 242);
-	--color-viridian-2:	rgb(204, 228, 214);
-	--color-viridian-3:	rgb(162, 209, 183);
-	--color-viridian-4:	rgb(105, 184, 139);
-	--color-viridian-5:	rgb(70, 153, 106);
-	--color-viridian-6:	rgb(55, 117, 82);
-	--color-viridian-7:	rgb(48, 84, 62);
-	--color-viridian-8:	rgb(33, 52, 40);
-	--color-viridian-9:	rgb(16, 22, 18);
-	--color-viridian-10:rgb(0, 0, 0);
+	--color-viridian-0:	#fefefe;
+	--color-viridian-1:	#eff5f2;
+	--color-viridian-2:	#cee5d7;
+	--color-viridian-3:	#a2d1b7;
+	--color-viridian-4:	#6ab88c;
+	--color-viridian-5:	#46996a;
+	--color-viridian-6:	#377552;
+	--color-viridian-7:	#30543e;
+	--color-viridian-8:	#23382b;
+	--color-viridian-9:	#141d17;
+	--color-viridian-10:#080808;
 	--color-viridian: var(--color-viridian-5);
 
-	--color-teal-0:	rgb(254, 254, 254);
-	--color-teal-1:	rgb(238, 245, 245);
-	--color-teal-2:	rgb(201, 228, 226);
-	--color-teal-3:	rgb(150, 209, 207);
-	--color-teal-4:	rgb(104, 181, 177);
-	--color-teal-5:	rgb(64, 150, 147);
-	--color-teal-6:	rgb(50, 115, 112);
-	--color-teal-7:	rgb(44, 83, 82);
-	--color-teal-8:	rgb(32, 51, 51);
-	--color-teal-9:	rgb(16, 22, 22);
-	--color-teal-10:rgb(0, 0, 0);
+	--color-teal-0:	#fefefe;
+	--color-teal-1:	#eef5f5;
+	--color-teal-2:	#cbe4e3;
+	--color-teal-3:	#96d1cf;
+	--color-teal-4:	#69b5b1;
+	--color-teal-5:	#419693;
+	--color-teal-6:	#327370;
+	--color-teal-7:	#2c5352;
+	--color-teal-8:	#223737;
+	--color-teal-9:	#131c1c;
+	--color-teal-10:#080808;
 	--color-teal: var(--color-teal-5);
 
-	--color-blue-0:	rgb(254, 254, 254);
-	--color-blue-1:	rgb(241, 244, 246);
-	--color-blue-2:	rgb(213, 225, 232);
-	--color-blue-3:	rgb(177, 202, 216);
-	--color-blue-4:	rgb(136, 173, 194);
-	--color-blue-5:	rgb(102, 142, 165);
-	--color-blue-6:	rgb(65, 110, 135);
-	--color-blue-7:	rgb(46, 81, 99);
-	--color-blue-8:	rgb(34, 50, 59);
-	--color-blue-9:	rgb(16, 21, 25);
-	--color-blue-10:rgb(0, 0, 0);
+	--color-blue-0:	#fefefe;
+	--color-blue-1:	#f1f4f6;
+	--color-blue-2:	#d5e1e8;
+	--color-blue-3:	#b1cad8;
+	--color-blue-4:	#89adc2;
+	--color-blue-5:	#678ea5;
+	--color-blue-6:	#426e87;
+	--color-blue-7:	#2e5164;
+	--color-blue-8:	#243641;
+	--color-blue-9:	#141c21;
+	--color-blue-10:#080808;
 	--color-blue: var(--color-blue-5);
 
-	--color-lavender-0:	rgb(254, 254, 254);
-	--color-lavender-1:	rgb(244, 244, 247);
-	--color-lavender-2:	rgb(222, 222, 233);
-	--color-lavender-3:	rgb(196, 196, 219);
-	--color-lavender-4:	rgb(165, 165, 206);
-	--color-lavender-5:	rgb(132, 132, 188);
-	--color-lavender-6:	rgb(99, 98, 167);
-	--color-lavender-7:	rgb(72, 70, 132);
-	--color-lavender-8:	rgb(44, 43, 83);
-	--color-lavender-9:	rgb(19, 20, 33);
-	--color-lavender-10:rgb(0, 0, 0);
+	--color-lavender-0:	#fefefe;
+	--color-lavender-1:	#f4f4f7;
+	--color-lavender-2:	#dedee9;
+	--color-lavender-3:	#c4c4db;
+	--color-lavender-4:	#a5a5ce;
+	--color-lavender-5:	#8484bc;
+	--color-lavender-6:	#6362a7;
+	--color-lavender-7:	#484684;
+	--color-lavender-8:	#2c2b53;
+	--color-lavender-9:	#131421;
+	--color-lavender-10:#000000;
 	--color-lavender: var(--color-lavender-5);
 
-	--color-pink-0:	rgb(254, 254, 254);
-	--color-pink-1:	rgb(249, 241, 242);
-	--color-pink-2:	rgb(245, 215, 219);
-	--color-pink-3:	rgb(242, 183, 192);
-	--color-pink-4:	rgb(240, 138, 156);
-	--color-pink-5:	rgb(235, 84, 108);
-	--color-pink-6:	rgb(194, 49, 70);
-	--color-pink-7:	rgb(149, 27, 42);
-	--color-pink-8:	rgb(86, 28, 31);
-	--color-pink-9:	rgb(36, 15, 15);
-	--color-pink-10:rgb(0, 0, 0);
+	--color-pink-0:	#fefefe;
+	--color-pink-1:	#f9f2f3;
+	--color-pink-2:	#f5d9dc;
+	--color-pink-3:	#f2b7c0;
+	--color-pink-4:	#f08a9c;
+	--color-pink-5:	#eb546c;
+	--color-pink-6:	#ac4856;
+	--color-pink-7:	#783a41;
+	--color-pink-8:	#4d2a2d;
+	--color-pink-9:	#271718;
+	--color-pink-10:#080808;
 	--color-pink: var(--color-pink-5);
 
-	--color-red-0:	rgb(254, 254, 254);
-	--color-red-1:	rgb(250, 241, 239);
-	--color-red-2:	rgb(249, 215, 211);
-	--color-red-3:	rgb(250, 182, 173);
-	--color-red-4:	rgb(252, 134, 122);
-	--color-red-5:	rgb(241, 81, 72);
-	--color-red-6:	rgb(200, 43, 41);
-	--color-red-7:	rgb(148, 31, 30);
-	--color-red-8:	rgb(89, 26, 23);
-	--color-red-9:	rgb(37, 14, 12);
-	--color-red-10:	rgb(0, 0, 0);
+	--color-red-0:	#fefefe;
+	--color-red-1:	#faf2f0;
+	--color-red-2:	#f8d8d4;
+	--color-red-3:	#f9b6ad;
+	--color-red-4:	#fb877b;
+	--color-red-5:	#f15148;
+	--color-red-6:	#c82b29;
+	--color-red-7:	#941f1e;
+	--color-red-8:	#5e1f1a;
+	--color-red-9:	#2e1310;
+	--color-red-10:	#080808;
 	--color-red: var(--color-red-5);
 
-	--color-orange-0:	rgb(254, 254, 254);
-	--color-orange-1:	rgb(249, 242, 233);
-	--color-orange-2:	rgb(247, 218, 186);
-	--color-orange-3:	rgb(247, 186, 121);
-	--color-orange-4:	rgb(241, 145, 52);
-	--color-orange-5:	rgb(214, 108, 30);
-	--color-orange-6:	rgb(162, 84, 38);
-	--color-orange-7:	rgb(115, 64, 35);
-	--color-orange-8:	rgb(68, 41, 27);
-	--color-orange-9:	rgb(29, 18, 13);
-	--color-orange-10:	rgb(0, 0, 0);
+	--color-orange-0:	#fefefe;
+	--color-orange-1:	#f9f2ea;
+	--color-orange-2:	#f7dbbc;
+	--color-orange-3:	#f3bb84;
+	--color-orange-4:	#f19137;
+	--color-orange-5:	#d66c1e;
+	--color-orange-6:	#9b5830;
+	--color-orange-7:	#6d432a;
+	--color-orange-8:	#482e20;
+	--color-orange-9:	#241812;
+	--color-orange-10:	#000000;
 	--color-orange: var(--color-orange-5);
 
-	--color-yellow-0:	rgb(254, 254, 253);
-	--color-yellow-1:	rgb(247, 244, 221);
-	--color-yellow-2:	rgb(242, 223, 141);
-	--color-yellow-3:	rgb(236, 193, 81);
-	--color-yellow-4:	rgb(214, 159, 40);
-	--color-yellow-5:	rgb(175, 129, 34);
-	--color-yellow-6:	rgb(131, 100, 38);
-	--color-yellow-7:	rgb(94, 74, 35);
-	--color-yellow-8:	rgb(57, 46, 26);
-	--color-yellow-9:	rgb(25, 20, 12);
-	--color-yellow-10:	rgb(0, 0, 0);
+	--color-yellow-0:	#fefefe;
+	--color-yellow-1:	#f7f4df;
+	--color-yellow-2:	#f2e091;
+	--color-yellow-3:	#ecc152;
+	--color-yellow-4:	#d69f28;
+	--color-yellow-5:	#b08122;
+	--color-yellow-6:	#7d6637;
+	--color-yellow-7:	#5b4b29;
+	--color-yellow-8:	#3d321d;
+	--color-yellow-9:	#201a11;
+	--color-yellow-10:	#080808;
 	--color-yellow: var(--color-yellow-3);
 
 	--txt-sel: rgba(64 150 147 / .3);
@@ -263,79 +263,96 @@
 
 
 /* ─────────────────────────── Light Theme Colours ────────────────────────── */
-.theme-light.sanctum-hearth {
+.theme-light.sanctum-coldgrey {
 	--rgb-primary-0: 254, 254, 254;
-	--color-primary-0:	rgb(254, 254, 254);
-	--color-primary-1:	rgb(249, 242, 233);
-	--color-primary-2:	rgb(247, 218, 186);
-	--color-primary-3:	rgb(247, 186, 121);
-	--color-primary-4:	rgb(241, 145, 52);
-	--color-primary-5:	rgb(214, 108, 30);
-	--color-primary-6:	rgb(162, 84, 38);
-	--color-primary-7:	rgb(115, 64, 35);
-	--color-primary-8:	rgb(68, 41, 27);
-	--color-primary-9:	rgb(29, 18, 13);
-	--color-primary-10: rgb(0, 0, 0);
-}
-.theme-light.sanctum-moss {
-	--rgb-primary-0: 254, 254, 254;
-	--color-primary-0:	rgb(254, 254, 254);
-	--color-primary-1:	rgb(242, 244, 234);
-	--color-primary-2:	rgb(223, 226, 189);
-	--color-primary-3:	rgb(201, 202, 133);
-	--color-primary-4:	rgb(171, 173, 85);
-	--color-primary-5:	rgb(140, 141, 59);
-	--color-primary-6:	rgb(108, 108, 46);
-	--color-primary-7:	rgb(79, 79, 40);
-	--color-primary-8:	rgb(49, 49, 28);
-	--color-primary-9:	rgb(21, 21, 13);
-	--color-primary-10: rgb(0, 0, 0);
+	--color-primary-0:	#fefefe;
+	--color-primary-1:	#f1f3f7;
+	--color-primary-2:	#dce0e5;
+	--color-primary-3:	#c1c7cd;
+	--color-primary-4:	#a3a9b1;
+	--color-primary-5:	#838a92;
+	--color-primary-6:	#636a71;
+	--color-primary-7:	#474e53;
+	--color-primary-8:	#2f3538;
+	--color-primary-9:	#171b1f;
+	--color-primary-10: #080808;
 }
 
-.theme-light.sanctum-lavender {
+.theme-light.sanctum-hearth {
 	--rgb-primary-0: 254, 254, 254;
-	--color-primary-0:	rgb(254, 254, 254);
-	--color-primary-1:	rgb(244, 244, 247);
-	--color-primary-2:	rgb(222, 222, 233);
-	--color-primary-3:	rgb(196, 196, 219);
-	--color-primary-4:	rgb(165, 165, 206);
-	--color-primary-5:	rgb(132, 132, 188);
-	--color-primary-6:	rgb(99, 98, 167);
-	--color-primary-7:	rgb(72, 70, 132);
-	--color-primary-8:	rgb(44, 43, 83);
-	--color-primary-9:	rgb(19, 20, 33);
-	--color-primary-10: rgb(0, 0, 0);
+	--color-primary-0:	#fefefe;
+	--color-primary-1:	#f9f2ea;
+	--color-primary-2:	#f7dbbc;
+	--color-primary-3:	#f3bb84;
+	--color-primary-4:	#f19137;
+	--color-primary-5:	#d66c1e;
+	--color-primary-6:	#9b5830;
+	--color-primary-7:	#6d432a;
+	--color-primary-8:	#482e20;
+	--color-primary-9:	#241812;
+	--color-primary-10: #080808;
 }
+
+.theme-light.sanctum-moss {
+	--rgb-primary-0: 254, 254, 254;
+	--color-primary-0:	#fefefe;
+	--color-primary-1:	#f2f4eb;
+	--color-primary-2:	#dfe2be;
+	--color-primary-3:	#c7cb91;
+	--color-primary-4:	#abad56;
+	--color-primary-5:	#8c8d3b;
+	--color-primary-6:	#6c6c2e;
+	--color-primary-7:	#4f4f27;
+	--color-primary-8:	#35351e;
+	--color-primary-9:	#1b1b11;
+	--color-primary-10: #080808;
+}
+
+
+/* .theme-light.sanctum-lavender {
+	--rgb-primary-0: 254, 254, 254;
+	--color-primary-0:	#fefefe;
+	--color-primary-1:	#f3f3f6;
+	--color-primary-2:	#dedee9;
+	--color-primary-3:	#c5c5db;
+	--color-primary-4:	#a5a5ce;
+	--color-primary-5:	#8484bc;
+	--color-primary-6:	#6362a7;
+	--color-primary-7:	#484684;
+	--color-primary-8:	#312f5b;
+	--color-primary-9:	#19192c;
+	--color-primary-10: #080808;
+} */
 
 .theme-light.sanctum-tide {
 	--rgb-primary-0: 254, 254, 254;
-	--color-primary-0:	rgb(254, 254, 254);
-	--color-primary-1:	rgb(238, 245, 245);
-	--color-primary-2:	rgb(201, 228, 226);
-	--color-primary-3:	rgb(150, 209, 207);
-	--color-primary-4:	rgb(104, 181, 177);
-	--color-primary-5:	rgb(64, 150, 147);
-	--color-primary-6:	rgb(50, 115, 112);
-	--color-primary-7:	rgb(44, 83, 82);
-	--color-primary-8:	rgb(32, 51, 51);
-	--color-primary-9:	rgb(16, 22, 22);
-	--color-primary-10: rgb(0, 0, 0);
+	--color-primary-0:	#fefefe;
+	--color-primary-1:	#eef5f5;
+	--color-primary-2:	#cbe4e3;
+	--color-primary-3:	#96d1cf;
+	--color-primary-4:	#69b5b1;
+	--color-primary-5:	#419693;
+	--color-primary-6:	#327370;
+	--color-primary-7:	#2c5352;
+	--color-primary-8:	#223737;
+	--color-primary-9:	#131c1c;
+	--color-primary-10: #080808;
 }
 
-.theme-light.sanctum-rose {
+/* .theme-light.sanctum-rose {
 	--rgb-primary-0: 254, 254, 254;
-	--color-primary-0:	rgb(254, 254, 254);
-	--color-primary-1:	rgb(249, 241, 242);
-	--color-primary-2:	rgb(245, 215, 219);
-	--color-primary-3:	rgb(242, 183, 192);
-	--color-primary-4:	rgb(240, 138, 156);
-	--color-primary-5:	rgb(235, 84, 108);
-	--color-primary-6:	rgb(194, 49, 70);
-	--color-primary-7:	rgb(149, 27, 42);
-	--color-primary-8:	rgb(86, 28, 31);
-	--color-primary-9:	rgb(36, 15, 15);
-	--color-primary-10: rgb(0, 0, 0);
-}
+	--color-primary-0:	#fefefe;
+	--color-primary-1:	#f9f2f3;
+	--color-primary-2:	#f5d9dc;
+	--color-primary-3:	#f2b7c0;
+	--color-primary-4:	#f08a9c;
+	--color-primary-5:	#eb546c;
+	--color-primary-6:	#ac4856;
+	--color-primary-7:	#783a41;
+	--color-primary-8:	#4d2a2d;
+	--color-primary-9:	#271718;
+	--color-primary-10: #080808;
+} */
 
 .theme-light.sanctum-light {
 	--rgb-primary-0: 254, 254, 254;
@@ -367,6 +384,7 @@
 	--color-primary-10: #080808;
 }
 
+.theme-light.sanctum-coldgrey,
 .theme-light.sanctum-rose,
 .theme-light.sanctum-tide,
 .theme-light.sanctum-hearth,
@@ -397,7 +415,7 @@
 	--background-modifier-error-hover:			#f15148;
 	--background-modifier-cover:				var(--color-primary-2);
 
-	--text-normal:		var(--color-primary-10);
+	--text-normal:		var(--color-primary-8);
 	--text-muted:		var(--color-primary-7);
 	--text-faint:		var(--color-primary-5);
 	--text-accent:		var(--color-accent);
@@ -423,23 +441,40 @@
 }
 
 /* ─────────────────────────── Dark Theme Colours ─────────────────────────── */
-.theme-dark.sanctum-fire {
+
+.theme-dark.sanctum-coldgrey-d {
 	--rgb-primary-0: 8, 8, 8;
-	--color-primary-0:	rgb(8, 8, 8);
-	--color-primary-1:	rgb(29, 18, 13);
-	--color-primary-2:	rgb(68, 41, 27);
-	--color-primary-3:	rgb(115, 64, 35);
-	--color-primary-4:	rgb(162, 84, 38);
-	--color-primary-5:	rgb(214, 108, 30);
-	--color-primary-6:	rgb(241, 145, 52);
-	--color-primary-7:	rgb(247, 186, 121);
-	--color-primary-8:	rgb(247, 218, 186);
-	--color-primary-9:	rgb(249, 242, 233);
-	--color-primary-10:	rgb(254, 254, 254);
+	--color-primary-0:	#080808;
+	--color-primary-1:	#171b1f;
+	--color-primary-2:	#2f3538;
+	--color-primary-3:	#474e53;
+	--color-primary-4:	#636a71;
+	--color-primary-5:	#838a92;
+	--color-primary-6:	#a3a9b1;
+	--color-primary-7:	#c1c7cd;
+	--color-primary-8:	#dce0e5;
+	--color-primary-9:	#f1f3f7;
+	--color-primary-10:	#fefefe;
 }
+
+.theme-dark.sanctum-chocolate { /* this one differs a bit from orange, so it has a better dark mode*/
+	--rgb-primary-0: 8, 8, 8;
+	--color-primary-0:	#080808;
+	--color-primary-1:	#201a14;
+	--color-primary-2:	#403124;
+	--color-primary-3:	#614832;
+	--color-primary-4:	#86613f;
+	--color-primary-5:	#b37e4c;
+	--color-primary-6:	#db9b5e;
+	--color-primary-7:	#f3bc85;
+	--color-primary-8:	#f7dbbc;
+	--color-primary-9:	#f9f2eb;
+	--color-primary-10:	#fefefe;
+}
+
 .theme-dark.sanctum-forest {
 	--rgb-primary-0: 8, 8, 8;
-	--color-primary-0:	#000000;
+	--color-primary-0:	#080808;
 	--color-primary-1:	#1b1b11;
 	--color-primary-2:	#35351e;
 	--color-primary-3:	#4f4f27;
@@ -452,64 +487,64 @@
 	--color-primary-10:	#fefefe;
 }
 
-.theme-dark.sanctum-violet {
+/* .theme-dark.sanctum-violet {
 	--rgb-primary-0: 8, 8, 8;
-	--color-primary-0:	rgb(8, 8, 8);
-	--color-primary-1:	rgb(19, 20, 33);
-	--color-primary-2:	rgb(44, 43, 83);
-	--color-primary-3:	rgb(72, 70, 132);
-	--color-primary-4:	rgb(99, 98, 167);
-	--color-primary-5:	rgb(132, 132, 188);
-	--color-primary-6:	rgb(165, 165, 206);
-	--color-primary-7:	rgb(196, 196, 219);
-	--color-primary-8:	rgb(222, 222, 233);
-	--color-primary-9:	rgb(244, 244, 247);
-	--color-primary-10:	rgb(254, 254, 254);
-}
+	--color-primary-0:	#080808;
+	--color-primary-1:	#19192c;
+	--color-primary-2:	#312f5b;
+	--color-primary-3:	#484684;
+	--color-primary-4:	#6362a7;
+	--color-primary-5:	#8484bc;
+	--color-primary-6:	#a5a5ce;
+	--color-primary-7:	#c5c5db;
+	--color-primary-8:	#dedee9;
+	--color-primary-9:	#f3f3f6;
+	--color-primary-10:	#fefefe;
+} */
 
 .theme-dark.sanctum-sea {
 	--rgb-primary-0: 8, 8, 8;
-	--color-primary-0:	rgb(8, 8, 8);
-	--color-primary-1:	rgb(16, 22, 22);
-	--color-primary-2:	rgb(32, 51, 51);
-	--color-primary-3:	rgb(44, 83, 82);
-	--color-primary-4:	rgb(50, 115, 112);
-	--color-primary-5:	rgb(64, 150, 147);
-	--color-primary-6:	rgb(104, 181, 177);
-	--color-primary-7:	rgb(150, 209, 207);
-	--color-primary-8:	rgb(201, 228, 226);
-	--color-primary-9:	rgb(238, 245, 245);
-	--color-primary-10:	rgb(254, 254, 254);
+	--color-primary-0:	#080808;
+	--color-primary-1:	#131c1c;
+	--color-primary-2:	#223737;
+	--color-primary-3:	#2c5352;
+	--color-primary-4:	#327370;
+	--color-primary-5:	#419693;
+	--color-primary-6:	#69b5b1;
+	--color-primary-7:	#96d1cf;
+	--color-primary-8:	#cbe4e3;
+	--color-primary-9:	#eef5f5;
+	--color-primary-10:	#fefefe;
 }
 
-.theme-dark.sanctum-pink {
+/* .theme-dark.sanctum-pink {
 	--rgb-primary-0: 8, 8, 8;
-	--color-primary-0:	rgb(8, 8, 8);
-	--color-primary-1:	rgb(36, 15, 15);
-	--color-primary-2:	rgb(86, 28, 31);
-	--color-primary-3:	rgb(149, 27, 42);
-	--color-primary-4:	rgb(194, 49, 70);
-	--color-primary-5:	rgb(235, 84, 108);
-	--color-primary-6:	rgb(240, 138, 156);
-	--color-primary-7:	rgb(242, 183, 192);
-	--color-primary-8:	rgb(245, 215, 219);
-	--color-primary-9:	rgb(249, 241, 242);
-	--color-primary-10:	rgb(254, 254, 254);
-}
+	--color-primary-0:	#080808;
+	--color-primary-1:	#271718;
+	--color-primary-2:	#4d2a2d;
+	--color-primary-3:	#783a41;
+	--color-primary-4:	#ac4856;
+	--color-primary-5:	#eb546c;
+	--color-primary-6:	#f08a9c;
+	--color-primary-7:	#f2b7c0;
+	--color-primary-8:	#f5d9dc;
+	--color-primary-9:	#f9f2f3;
+	--color-primary-10:	#fefefe;
+} */
 
 .theme-dark.sanctum-true-black {
 	--rgb-primary-0: 0,0,0 ;
 	--color-primary-0:	#080808;
 	--color-primary-1:	#000000;
-	--color-primary-2:	#080808;
-	--color-primary-3:	#151515;
-	--color-primary-4:	#312F30;
-	--color-primary-5:	#4f4c4d;
-	--color-primary-6:	#6b6868;
-	--color-primary-7:	#8b8888;
-	--color-primary-8:	#aaa8a6;
-	--color-primary-9:	#c9c6c4;
-	--color-primary-10: #e2dfdc;
+	--color-primary-2:	#1b1b1b;
+	--color-primary-3:	#363334;
+	--color-primary-4:	#4f4c4d;
+	--color-primary-5:	#6b6869;
+	--color-primary-6:	#8b8888;
+	--color-primary-7:	#aaa8a6;
+	--color-primary-8:	#c9c6c3;
+	--color-primary-9:	#e2dfdc;
+	--color-primary-10: #f5f3f0;
 }
 
 .theme-dark.sanctum-dark {
@@ -559,6 +594,7 @@
 	
 }
 
+.theme-dark.sanctum-coldgrey-d,
 .theme-dark.sanctum-pink,
 .theme-dark.sanctum-sea,
 .theme-dark.sanctum-fire,
