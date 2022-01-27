@@ -397,6 +397,10 @@ body:not(.tasks) .admonitions li:is([data-task="X"], [data-task="c"], [data-task
 	margin-right: 16px;
 }
 
+body:not(.tasks) .markdown-source-view.admonitions li:is([data-task="X"], [data-task="c"], [data-task="!"]) > .task-list-item-checkbox {
+	margin-left: 16px; /* LP Admonitions plugin */
+}
+
 /* ───────────────────────── Question (?) admonition ──────────────────────── */
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task="I"], [data-task="?"]) {
 	background-color: rgba(var(--rgb-primary-0), .5);
@@ -418,6 +422,10 @@ body:not(.tasks) .admonitions li:is([data-task="I"], [data-task="?"]) > p > .tas
 	margin-right: 16px;
 }
 
+body:not(.tasks) .markdown-source-view.admonitions li:is([data-task="I"], [data-task="?"]) > .task-list-item-checkbox {
+	margin-left: 16px; /* LP Admonitions plugin */
+}
+
 /* ─────────────────────── Information (i) admonition ─────────────────────── */
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked[data-task="i"] {
 	background-color: rgba(var(--rgb-primary-0), .5);
@@ -437,6 +445,10 @@ body:not(.tasks) .admonitions li[data-task="i"] > .task-list-item-checkbox,
 body:not(.tasks) .admonitions li[data-task="i"] > p > .task-list-item-checkbox {
 	margin-left: 0px;
 	margin-right: 16px;
+}
+
+body:not(.tasks) .markdown-source-view.admonitions li[data-task="i"] > .task-list-item-checkbox {
+	margin-left: 16px; /* LP Admonitions plugin */
 }
 
 /* ───────────────────────────── Pros Admonition ──────────────────────────── */
@@ -462,6 +474,10 @@ body:not(.tasks) .admonitions li:is([data-task="W"], [data-task="p"]) > p > .tas
 	margin-right: 16px;
 }
 
+body:not(.tasks) .markdown-source-view.admonitions li:is([data-task="W"], [data-task="p"]) > .task-list-item-checkbox {
+	margin-left: 16px; /* LP Admonitions plugin */
+}
+
 /* ─────────────────────────── Note (n) Admonition ────────────────────────── */
 /* ─────────────────────────── Bookmark Admonition ────────────────────────── */
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task="n"], [data-task="b"]) {
@@ -485,6 +501,10 @@ body:not(.tasks) .admonitions li:is([data-task="n"], [data-task="b"]) > p > .tas
 
 }
 
+body:not(.tasks) .markdown-source-view.admonitions li:is([data-task="n"], [data-task="b"]) > .task-list-item-checkbox {
+	margin-left: 16px; /* LP Admonitions plugin */
+}
+
 /* ────────────────────────────────── Debug ───────────────────────────────── */
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked[data-task="B"] {
 	background-color: rgba(var(--rgb-primary-0), .5);
@@ -504,4 +524,8 @@ body:not(.tasks) .admonitions li[data-task="B"] > .task-list-item-checkbox,
 body:not(.tasks) .admonitions li[data-task="B"] > p > .task-list-item-checkbox {
 	margin-left: 0px;
 	margin-right: 16px;
+}
+
+body:not(.tasks) .markdown-source-view.admonitions li[data-task="B"] > .task-list-item-checkbox {
+	margin-left: 16px; /* LP Admonitions plugin */
 }
