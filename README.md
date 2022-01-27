@@ -10,17 +10,14 @@ You can also manually install Sanctum by:
 2. Rename the css file to `Sanctum.css`;
 3. In Obsidian, go to `Settings ➞ Appearance ➞ Themes ➞ Reload themes`, and select `Sanctum`.
 
-## Font recommendations
-
-This theme recommends the use and installation of the IBM Plex font family in your system, although it still works well with default fonts. It also supports iA Writer fonts, for those who enjoy using them in their writing, and has them by default. This is because iA Writer is much more space efficient, and won't interfere a lot with the theme's loading time. You can download IBM Plex using this [snippet](snippets/IBM_Plex_snippet.css), and enabling it in `Appearance ➞ CSS Snippets`.
-
-If you do want to have IBM Plex as the main font, or any other font for that matter, you can install the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) Plugin, and add them under `Typography`➞`Fonts`, in the Style Settings Plugin Options.
+## Disclaimer
+The following theme significantly alters Obsidian's original css, and so is prone to breaking upon new Obsidian updates, as well as being incompatible with custom css snippets. It is also in a very early stage of development, and so quick and sometimes drastic changes may be expected in the near future. Having said that, any and every piece of feedback is appreciated! More customization options will be available in the future.
 
 ## Recommended Plugins
 
-- [Smart Typography](https://github.com/mgmeyers/obsidian-smart-typography): for a better and coherent writing experience;
-- [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography): For a better typographic experience.
-- [Style Settings](https://github.com/mgmeyers/obsidian-style-settings): for customization options
+- [Smart Typography](https://github.com/mgmeyers/obsidian-smart-typography): for a better and coherent writing experience
+- [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography): For a better typographic experience
+- [Style Settings](https://github.com/mgmeyers/obsidian-style-settings): for tons of customization options
 
 ## Design Principles
 
@@ -39,7 +36,7 @@ If you do want to have IBM Plex as the main font, or any other font for that mat
   - The background colour is the same in every element, to reduce visual noise and give a more calming atmosphere;
   - Elements are related to each other using the rules of visual *gestalt*. This means that they're grouped by proximity, in a common region or as a focal point.
 
-## Showcase
+## Showcase (outdated)
 ###### Preview Mode
 ![preview-showcase](https://user-images.githubusercontent.com/91087143/136707215-fb674834-e1e0-4665-b8ba-089c869a74cc.jpg)
 
@@ -58,17 +55,13 @@ If you do want to have IBM Plex as the main font, or any other font for that mat
 <img src="https://user-images.githubusercontent.com/91087143/136707350-c28ca674-fd4b-42e3-acf4-fa71a380ebf9.gif" width="200" />
 
 ## Features
-- Variable headings - they'll change size depending on screen size;
 - Custom icons (as well as custom file icons!);
 - Sidenotes (credit @SlRvb);
 - Multi-Color Highlights (credit @Atlas);
-- Custom Checkbox / Task types;
+- Custom Checkbox / Task types, and Pseudo Admonitions;
 - Custom Codeblock language - `pure-text`, that enables you to write text for easy copying;
-- Custom Link icons;
 - Image desaturation: better for consistency, they gain normal colour when hovered (credit @kepano);
-- WYSIWYG hr elements in Edit Mode, as a compliment to Smart Typography. If the plugin is enabled, add and extra dash for it to work;
 - Active line highlighting;
-- Folded heading/list indicator (in edit and preview mode).
 
 (for a more <u>comprehensive</u> walkthrough of Sanctum's features, check out the [Theme Guide](documentation/Theme_Guide.md))
 
@@ -94,9 +87,6 @@ If you do want to have IBM Plex as the main font, or any other font for that mat
 
 ## Feedback & Contributions
 If you encounter an issue, or would like to contribute to this theme, don't hesitate to submit an issue or raise a PR. You can also message me on [Discord](https://discord.com/invite/veuWUTm) @jdaniel or on the [Obsidian Forums](https://forum.obsidian.md/u/jdanielmourao/summary).
-
-## Disclaimer
-The following theme significantly alters Obsidian's original css, and so is prone to breaking upon new Obsidian updates, as well as being incompatible with custom css snippets. It is also in a very early stage of development, and so quick and sometimes drastic changes may be expected in the near future. Having said that, any and every piece of feedback is appreciated! More customization options will be available in the future.
 
 ## Support
 If you enjoy my work and would like to support it, you may click the icons below, or the links on the right side of this repository.
