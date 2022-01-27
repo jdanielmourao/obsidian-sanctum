@@ -2,7 +2,6 @@ ul li::marker,
 ol li::marker {
 	font-weight: var(--font-regular);
 	font-size: var(--font-scale-0);
-	color: var(--text-normal);
 	font-family: var(--font-sans); // not font-preview, because otherwise it will change
 	font-variant-numeric: tabular-nums;
 }
@@ -140,7 +139,7 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
 
 // Live Preview bullet points
 .list-bullet {
-	left: 1.5px;
+	left: 4px;
 	padding-right: 4px; //fixes double markers
 }
 
@@ -150,17 +149,17 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
 .list-bullet::after {
 	color:var(--text-normal);
 	margin-right: 0px;
-	transform: translateY(-1px); }
+	transform: translateY(1px); }
 
-.markdown-source-view.mod-cm6 .cm-list-1 .list-bullet::after { content: var(--marker-odd); }
+.markdown-source-view.mod-cm6 .cm-list-1 .list-bullet::after { content: var(--marker-odd) ; left: 1px; }
 .markdown-source-view.mod-cm6 .cm-list-2 .list-bullet::after { content: var(--marker-even); }
-.markdown-source-view.mod-cm6 .cm-list-3 .list-bullet::after { content: var(--marker-odd); }
+.markdown-source-view.mod-cm6 .cm-list-3 .list-bullet::after { content: var(--marker-odd); left: 1px;}
 .markdown-source-view.mod-cm6 .cm-list-4 .list-bullet::after { content: var(--marker-even); }
-.markdown-source-view.mod-cm6 .cm-list-5 .list-bullet::after { content: var(--marker-odd); }
+.markdown-source-view.mod-cm6 .cm-list-5 .list-bullet::after { content: var(--marker-odd); left: 1px;}
 .markdown-source-view.mod-cm6 .cm-list-6 .list-bullet::after { content: var(--marker-even); }
-.markdown-source-view.mod-cm6 .cm-list-7 .list-bullet::after { content: var(--marker-odd); }
+.markdown-source-view.mod-cm6 .cm-list-7 .list-bullet::after { content: var(--marker-odd); left: 1px;}
 .markdown-source-view.mod-cm6 .cm-list-8 .list-bullet::after { content: var(--marker-even); }
-.markdown-source-view.mod-cm6 .cm-list-9 .list-bullet::after { content: var(--marker-odd); }
+.markdown-source-view.mod-cm6 .cm-list-9 .list-bullet::after { content: var(--marker-odd); left: 1px;}
 .markdown-source-view.mod-cm6 .cm-list-10 .list-bullet::after { content: var(--marker-even); }
 
 span.cm-comment .list-bullet::after { // makes bullets same colors as comments when inside them
