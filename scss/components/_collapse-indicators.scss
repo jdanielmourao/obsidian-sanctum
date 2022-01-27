@@ -83,4 +83,19 @@ span[title="Unfold line"]:hover, //end of source mode (legacy)
 	font-family: var(--font-sans);
 	font-size: 1.1rem;
 	margin-right: -2px;
+	opacity: 0.5;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.mod-cm6 .collapse-indicator,
+.markdown-preview-view .list-collapse-indicator,
+.markdown-preview-view .heading-collapse-indicator {
+	opacity: 0.5;
+	
+	&:hover {
+		opacity: 1;
+	}
 }
