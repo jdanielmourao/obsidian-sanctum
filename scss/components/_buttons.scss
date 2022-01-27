@@ -156,6 +156,16 @@ button.mod-cta {
 .modal-container.mod-confirmation .modal-button-container {
 	display: flex;
 	flex-direction: row;
+	width: auto;
+	height: auto;
+
+	.is-mobile & {
+		flex-direction: column;
+
+		& button.mod-warning:first-child {
+			margin-left: 0;
+		}
+	}
 
 	button.mod-warning:first-child {
 		order: 0;
@@ -172,4 +182,9 @@ button.mod-cta {
 	button.mod-warning	{
 		order: 0;
 	}
+}
+
+.is-mobile .modal-button-container button { /* fixes default mobile margin and padding*/
+	margin: 4px 0;
+	padding: 8px 0;
 }
