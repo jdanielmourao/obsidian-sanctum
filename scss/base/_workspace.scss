@@ -342,10 +342,6 @@ div.tree-item-inner {
 	border-radius: 6px;
 	background-color: transparent;
 	color: var(--text-normal);
-
-	.theme-dark.sanctum-true-black & {
-		color: var(--text-muted);
-	}
 }
 
 .tag-container {
@@ -650,7 +646,7 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 	color: var(--text-normal);
 }
 
-.theme-dark.sanctum-true-black:not(.no-sanctum-icons) {
+.theme-dark.sanctum-true-black {
 	& .nav-folder-title-content,
 	& .nav-file-title-content {
 		color: var(--text-muted);
@@ -658,12 +654,18 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 			color: var(--text-normal);
 		}
 	}
+	& .nav-file-title.is-active .nav-file-title-content {
+		color: var(--color-primary-3);
+		&::before {
+			color: var(--color-primary-3);
+		}
+	}
 	& .nav-file-title.is-active:hover .nav-file-title-content,
 	& .nav-file-title.is-active:hover .nav-file-title-content::before {
-	color: var(--text-muted);
+		color: var(--text-muted);
 	}
 	& .nav-folder-children .nav-file-title-content::before {
-	color: var(--text-muted);
+		color: var(--text-muted);
 	}
 	& .nav-folder-children .nav-file-title:hover .nav-file-title-content::before {
 		color: var(--text-normal);
