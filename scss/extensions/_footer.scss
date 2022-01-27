@@ -21,8 +21,17 @@ settings:
 				label: Default
 				value: sanctum-light
 			-
-				label: Gruvbox
-				value: gruvbox
+				label: Cold Grey
+				value: sanctum-coldgrey
+			-
+				label: Hearth
+				value: sanctum-hearth
+			-
+				label: Moss
+				value: sanctum-moss
+			-
+				label: Tide
+				value: sanctum-tide
 	-
 		id: dark-mode-palette
 		title: Dark mode color scheme
@@ -32,14 +41,26 @@ settings:
 		default: sanctum-dark
 		options:
 			-
-				label: Default
+				label: Dark
 				value: sanctum-dark
+			-
+				label: Legacy Dark
+				value: sanctum-legacy-dark
 			-
 				label: True Black
 				value: sanctum-true-black
 			-
-				label: Gruvbox
-				value: gruvbox
+				label: Cold Grey
+				value: sanctum-coldgrey-d
+			-
+				label: Hearth
+				value: sanctum-chocolate
+			-
+				label: Moss
+				value: sanctum-forest
+			-
+				label: Tide
+				value: sanctum-sea
 	-
 		id: accent-active-line
 		title: Use Accent color as Active Line Highlight
@@ -2525,6 +2546,18 @@ settings:
 			-
 				label: Greyscale
 				value: aside-in-grayscale
+	-
+		id: links
+		title: Links
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: alt-link
+		title: Change internal link appearance
+		description: Switches to more understated internal links.
+		type: class-toggle
+		default: false
 	-
 		id: lists
 		title: Lists
