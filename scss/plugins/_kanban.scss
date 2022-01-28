@@ -183,4 +183,11 @@ div.kanban-plugin__date-picker {
 
 div.kanban-plugin__item-prefix-button-wrapper input[type=checkbox] {
 	filter: none; /* fixes checkbox color*/
+	height: 1rem;
+	width: 1rem;
+
+	&:checked {
+		background-size: 70%;
+		background-position: center 2.5px;
+	}
 }
