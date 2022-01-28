@@ -23,10 +23,11 @@ div.kanban-plugin__lane {
 	border-radius: 4px;
 	padding: 4px;
 	box-shadow: var(--elevation-1);
-	border: 1px solid var(--color-primary-2);
+	border: 1px solid var(--color-primary-0);
 
 	.theme-dark & {
 		box-shadow: var(--elevation-2);
+		border: 1px solid var(--color-border-1);
 	}
 }
 
@@ -136,10 +137,15 @@ body .kanban-plugin__markdown-preview-view > div > * {
 	transition: border var(--duration-moderate-2) var(--motion-entrance-expressive);
 }
 
-body .kanban-plugin__date-picker  {
+div.kanban-plugin__date-picker {
 	& .flatpickr-calendar {
 		box-shadow: var(--elevation-2);
 		font-size: var(--font-scale-00);
+		border: 1px solid var(--color-primary-0);
+
+		.theme-dark & {
+			border: 1px solid var(--color-border-1);
+		}
 	}
 	& .flatpickr-day {
 		--cell-size: 2rem;
