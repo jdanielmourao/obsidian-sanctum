@@ -101,6 +101,12 @@ del,
 	text-decoration: line-through;
 
 }
+.markdown-source-view.redacted .cm-strikethrough {
+	text-decoration: none;
+	background-color: rgba(241 81 72 / .5);
+	-webkit-box-decoration-break: clone;
+	border-radius: 4px;
+}
 
 .redacted del {
 	text-decoration: none;
@@ -108,7 +114,6 @@ del,
 	color: transparent;
 	background-color: rgba(241 81 72 / .5);
 	border-radius: 4px;
-	cursor: no-drop;
 	height: 1rem;
 	width: .5rem;
 	vertical-align: -2px;
