@@ -91,6 +91,10 @@
 	background: rgba(214 159 40 / .5);
 	padding: 3px 0 1.5px 0;
 	border-radius: 0;
+	
+	.alt-link & {
+		padding: 0;
+	}
 }
 
 .cm-em.cm-highlight.cm-hmd-internal-link .cm-underline {
