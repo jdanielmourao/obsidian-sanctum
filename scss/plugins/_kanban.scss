@@ -4,34 +4,34 @@ div.kanban-plugin {
 }
 
 .view-content .kanban-plugin .tag {
-	border: 0px;
-	background-color: var(--text-accent);
-	color: var(--background-primary);
-	border-radius: 30px;
+	color: var(--color-accent);
+	font-size: var(--font-scale-00);
+	font-weight: var(--font-regular);
+	line-height: var(--leading-0);
+	padding: 2px 4px 2px 4px;
+	border-radius: .4em;
+	background-color: rgba(var(--color-accent-l) / .15);
+
+	.theme-dark & {
+		background-color: rgba(var(--color-accent-d) / .15);
+	}
 }
 
-.kanban-plugin__item-tags a.kanban-plugin__item-tag {
-	background-color: rgba(var(--interactive-accent-rgb),.1);
-	padding: 0px
-			 4px;
-	border-radius: 30px;
-	margin: 0px;
-}
 
 div.kanban-plugin__lane {
-	background: var(--background-primary);
+	background: rgba(var(--rgb-primary-0), .3);
 	border-radius: 4px;
 	padding: 4px;
 	box-shadow: var(--elevation-1);
-	border: 1px solid var(--color-primary-0);
+	border: 1px solid var(--color-primary-2);
 
 	.theme-dark & {
 		box-shadow: var(--elevation-2);
 	}
 }
 
-.theme-dark div.kanban-plugin__lane {
-	border: 1px solid var(--color-primary-1);
+.kanban-plugin__scroll-container.kanban-plugin__vertical::-webkit-scrollbar {
+	display: none; /*remove scrollbar*/
 }
 
 div.kanban-plugin__item {
@@ -39,7 +39,7 @@ div.kanban-plugin__item {
 }
 
 div.kanban-plugin__item-button-wrapper {
-	border-top: 1.5px solid var(--color-border-1);
+	border-top: 1px solid var(--color-border-1);
 	padding: 4px;
 }
 
@@ -84,7 +84,7 @@ textarea.kanban-plugin__item-input:focus {
 	align-items: center;
 	flex-shrink: 0;
 	flex-grow: 0;
-	border-bottom: 1.5px solid var(--color-border-1);
+	border-bottom: 1px solid var(--color-border-1);
 }
 
 body .kanban-plugin__drag-container > .kanban-plugin__lane-wrapper > .kanban-plugin__lane {
