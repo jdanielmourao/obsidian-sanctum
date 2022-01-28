@@ -88,7 +88,7 @@ button.mod-cta {
 }
 
 /* Sort, Selected icons*/
-.modal.mod-community-plugin .setting-item-control button.clickable-icon,
+.modal.mod-community-plugin .setting-item .setting-item-control button.clickable-icon,
 .modal.mod-community-theme .setting-item-control button.clickable-icon {
 	color: var(--text-muted);
 	@include button-s;
