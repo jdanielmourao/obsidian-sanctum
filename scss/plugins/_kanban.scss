@@ -180,3 +180,7 @@ div.kanban-plugin__date-picker {
 		opacity: .5;
 	}
 }
+
+div.kanban-plugin__item-prefix-button-wrapper input[type=checkbox] {
+	filter: none; /* fixes checkbox color*/
+}
