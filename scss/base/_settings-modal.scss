@@ -139,7 +139,7 @@
 }
 
 // Community Themes
-.community-theme-container {
+.modal-content .community-theme-container {
 	& .setting-item-control button {
 		margin-left: 8px;
 		margin-right: 48px;
@@ -203,11 +203,9 @@
 				font-size: var(--font-scale-00);
 				font-weight: var(--font-regular);
 				font-family: var(--font-ui);
-				background-color: var(--color-accent);
-				color: var(--color-white);
-				text-shadow: 0 1px rgba(black, .3);
-				box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.2) inset,
-				0px 1px 0px 0px rgba(245 243 240 / 0.35) inset;
+				background-color: var(--background-primary);
+				color: var(--text-accent);
+				border: 1px solid var(--color-accent);
 			}
 		}
 	}
