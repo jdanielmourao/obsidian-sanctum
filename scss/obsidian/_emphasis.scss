@@ -22,10 +22,11 @@ em {  /* Italic */
 
 /* ──────────────────────── Highlighting & Selection ──────────────────────── */
 /* highlight active line */
-body:not(.active-line-hl) .cm-active.cm-line,
-body:not(.active-line-hl) .CodeMirror-activeline .CodeMirror-linebackground {
+body.active-line-hl .cm-active.cm-line,
+body.active-line-hl .CodeMirror-activeline .CodeMirror-linebackground {
 	position: relative;
 	background-color: var(--color-primary-2);
+	border-radius: 2px;
 }
 
 .is-mobile .cm-active.cm-line,
@@ -39,13 +40,13 @@ body:not(.active-line-hl) .CodeMirror-activeline .CodeMirror-linebackground {
 }*/
 
 /* accent color active line highlight */
-body:not(.active-line-hl).accent-active-line .cm-active.cm-line,
-body:not(.active-line-hl).accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
+body.active-line-hl.accent-active-line .cm-active.cm-line,
+body.active-line-hl.accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
 	background-color: rgba(var(--color-accent-l)/ .3);
 }
 
-body:not(.active-line-hl).theme-dark.accent-active-line .cm-active.cm-line,
-body:not(.active-line-hl).theme-dark.accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
+body.active-line-hl.theme-dark.accent-active-line .cm-active.cm-line,
+body.active-line-hl.theme-dark.accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
 	background-color: rgba(var(--color-accent-d)/ .3);
 }
 

@@ -62,12 +62,6 @@ settings:
 				label: Tide
 				value: sanctum-sea
 	-
-		id: accent-active-line
-		title: Use Accent color as Active Line Highlight
-		description: Replaces the grey with the accent color for active line highlighting.
-		type: class-toggle
-		default: false
-	-
 		id: accent-colors
 		title: Accent Colors
 		type: heading
@@ -2418,11 +2412,6 @@ settings:
 		title: Disable custom tasks and pseudo-admonitions
 		type: class-toggle
 	-
-		id: active-line-hl
-		title: Disable active line highlighting
-		description: Disables active line highlighting
-		type: class-toggle
-	-
 		id: hr-options
 		title: <hr> ("---") Options
 		description: For Edit Mode
@@ -2446,6 +2435,23 @@ settings:
 		title: Wrap Kanban Lanes
 		description: Makes Kanban Lanes wrap in multiple rows if needed.
 		type: class-toggle
+	-
+		id: active-line-highlight
+		title: Active Line Highlighting
+		type: heading
+		level: 3
+		collapsed: true
+	-
+			id: active-line-hl
+			title: Enable active line highlighting
+			description: Disables active line highlighting
+			type: class-toggle
+	-
+			id: accent-active-line
+			title: Use Accent color as Active Line Highlight
+			description: Replaces the grey with the accent color for active line highlighting.
+			type: class-toggle
+			default: false
 	-
 		id: fn-heading
 		title: Footnotes
