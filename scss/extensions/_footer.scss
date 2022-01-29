@@ -10,196 +10,196 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: light-mode-palette
-		title: Light mode color scheme
-		description: Background color palette for light mode
-		type: class-select
-		allowEmpty: false
-		default: sanctum-light
-		options:
-			-
-				label: Default
-				value: sanctum-light
-			-
-				label: Cold Grey
-				value: sanctum-coldgrey
-			-
-				label: Hearth
-				value: sanctum-hearth
-			-
-				label: Moss
-				value: sanctum-moss
-			-
-				label: Tide
-				value: sanctum-tide
-	-
-		id: dark-mode-palette
-		title: Dark mode color scheme
-		description: Background color palette for dark mode
-		type: class-select
-		allowEmpty: false
-		default: sanctum-dark
-		options:
-			-
-				label: Dark
-				value: sanctum-dark
-			-
-				label: Legacy Dark
-				value: sanctum-legacy-dark
-			-
-				label: True Black
-				value: sanctum-true-black
-			-
-				label: Cold Grey
-				value: sanctum-coldgrey-d
-			-
-				label: Hearth
-				value: sanctum-chocolate
-			-
-				label: Moss
-				value: sanctum-forest
-			-
-				label: Tide
-				value: sanctum-sea
-	-
-		id: accent-colors
-		title: Accent Colors
-		type: heading
-		level: 3
-		collapsed: true
-	-
-		id: color-accent-l
-		title: Light Mode Accent Color
-		type: variable-select
-		default: 64 150 147
-		options:
-			-
-				label: Green
-				value: 140 141 59
-			-
-				label: Viridian
-				value: 70 153 106
-			-
-				label: Teal
-				value: 64 150 147
-			-
-				label: Blue
-				value: 102 142 165
-			-
-				label: Lavender
-				value: 132 132 188
-			-
-				label: Pink
-				value: 235 84 108
-			-
-				label: Red
-				value: 241 81 72
-			-
-				label: Orange
-				value: 214 108 30
-			-
-				label: Yellow
-				value: 214 159 40
-	-
-		id: color-accent-d
-		title: Dark Mode Accent Color
-		type: variable-select
-		default: 104 181 177
-		options:
-			-
-				label: Green
-				value: 171, 173, 85
-			-
-				label: Viridian
-				value: 105, 184, 139
-			-
-				label: Teal
-				value: 104 181 177
-			-
-				label: Blue
-				value: 136, 173, 194
-			-
-				label: Lavender
-				value: 165, 165, 206
-			-
-				label: Pink
-				value: 240, 138, 156
-			-
-				label: Red
-				value: 252, 134, 122
-			-
-				label: Orange
-				value: 241, 145, 52
-			-
-				label: Yellow
-				value: 214, 159, 40
-	-
-		id: color-checkbox
-		title: Checkbox Color
-		description: The color of the regular "- [x]" checkbox
-		type: variable-select
-		default: 140 141 59
-		options:
-			-
-				label: Green
-				value: 140 141 59
-			-
-				label: Viridian
-				value: 70 153 106
-			-
-				label: Teal
-				value: 64 150 147
-			-
-				label: Blue
-				value: 102 142 165
-			-
-				label: Lavender
-				value: 132 132 188
-			-
-				label: Pink
-				value: 235 84 108
-			-
-				label: Red
-				value: 241 81 72
-			-
-				label: Orange
-				value: 214 108 30
-			-
-				label: Yellow
-				value: 214 159 40
-	-
-		id: txt-sel
-		title: Text Selection Color
-		type: variable-select
-		default: rgba(64 150 147 / .3)
-		options:
-			-
-				label: Green
-				value: rgba(140 141 59 / .3)
-			-
-				label: Viridian
-				value: rgba(70 153 106 / .3)
-			-
-				label: Teal
-				value: rgba(64 150 147 / .3)
-			-
-				label: Blue
-				value: rgba(102 142 165 / .3)
-			-
-				label: Lavender
-				value: rgba(132 132 188 / .3)
-			-
-				label: Pink
-				value: rgba(235 84 108 / .3)
-			-
-				label: Red
-				value: rgba(241 81 72 / .3)
-			-
-				label: Orange
-				value: rgba(214 108 30 / .3)
-			-
-				label: Yellow
-				value: rgba(214 159 40 / .3)
+			id: light-mode-palette
+			title: Light mode color scheme
+			description: Background color palette for light mode
+			type: class-select
+			allowEmpty: false
+			default: sanctum-light
+			options:
+				-
+					label: Default
+					value: sanctum-light
+				-
+					label: Cold Grey
+					value: sanctum-coldgrey
+				-
+					label: Hearth
+					value: sanctum-hearth
+				-
+					label: Moss
+					value: sanctum-moss
+				-
+					label: Tide
+					value: sanctum-tide
+	-	
+			id: dark-mode-palette
+			title: Dark mode color scheme
+			description: Background color palette for dark mode
+			type: class-select
+			allowEmpty: false
+			default: sanctum-dark
+			options:
+				-
+					label: Dark
+					value: sanctum-dark
+				-
+					label: Legacy Dark
+					value: sanctum-legacy-dark
+				-
+					label: True Black
+					value: sanctum-true-black
+				-
+					label: Cold Grey
+					value: sanctum-coldgrey-d
+				-
+					label: Hearth
+					value: sanctum-chocolate
+				-
+					label: Moss
+					value: sanctum-forest
+				-
+					label: Tide
+					value: sanctum-sea
+	-	
+			id: accent-colors
+			title: Accent Colors
+			type: heading
+			level: 3
+			collapsed: true
+	-	
+				id: color-accent-l
+				title: Light Mode Accent Color
+				type: variable-select
+				default: 64 150 147
+				options:
+					-
+						label: Green
+						value: 140 141 59
+					-
+						label: Viridian
+						value: 70 153 106
+					-
+						label: Teal
+						value: 64 150 147
+					-
+						label: Blue
+						value: 102 142 165
+					-
+						label: Lavender
+						value: 132 132 188
+					-
+						label: Pink
+						value: 235 84 108
+					-
+						label: Red
+						value: 241 81 72
+					-
+						label: Orange
+						value: 214 108 30
+					-
+						label: Yellow
+						value: 214 159 40
+	-		
+				id: color-accent-d
+				title: Dark Mode Accent Color
+				type: variable-select
+				default: 104 181 177
+				options:
+					-
+						label: Green
+						value: 171, 173, 85
+					-
+						label: Viridian
+						value: 105, 184, 139
+					-
+						label: Teal
+						value: 104 181 177
+					-
+						label: Blue
+						value: 136, 173, 194
+					-
+						label: Lavender
+						value: 165, 165, 206
+					-
+						label: Pink
+						value: 240, 138, 156
+					-
+						label: Red
+						value: 252, 134, 122
+					-
+						label: Orange
+						value: 241, 145, 52
+					-
+						label: Yellow
+						value: 214, 159, 40
+	-		
+				id: color-checkbox
+				title: Checkbox Color
+				description: The color of the regular "- [x]" checkbox
+				type: variable-select
+				default: 140 141 59
+				options:
+					-
+						label: Green
+						value: 140 141 59
+					-
+						label: Viridian
+						value: 70 153 106
+					-
+						label: Teal
+						value: 64 150 147
+					-
+						label: Blue
+						value: 102 142 165
+					-
+						label: Lavender
+						value: 132 132 188
+					-
+						label: Pink
+						value: 235 84 108
+					-
+						label: Red
+						value: 241 81 72
+					-
+						label: Orange
+						value: 214 108 30
+					-
+						label: Yellow
+						value: 214 159 40
+	-		
+				id: txt-sel
+				title: Text Selection Color
+				type: variable-select
+				default: rgba(64 150 147 / .3)
+				options:
+					-
+						label: Green
+						value: rgba(140 141 59 / .3)
+					-
+						label: Viridian
+						value: rgba(70 153 106 / .3)
+					-
+						label: Teal
+						value: rgba(64 150 147 / .3)
+					-
+						label: Blue
+						value: rgba(102 142 165 / .3)
+					-
+						label: Lavender
+						value: rgba(132 132 188 / .3)
+					-
+						label: Pink
+						value: rgba(235 84 108 / .3)
+					-
+						label: Red
+						value: rgba(241 81 72 / .3)
+					-
+						label: Orange
+						value: rgba(214 108 30 / .3)
+					-
+						label: Yellow
+						value: rgba(214 159 40 / .3)
 	-
 		id: graph-colors
 		title: Graph Colors
@@ -207,29 +207,29 @@ settings:
 		level: 3
 		collapsed: true
 	-
-		id: color-fill-focused
-		title: Active Note Node Color
-		type: variable-color
-		format: rgb
-		default: rgb(235, 84, 108)
-	-
-		id: color-fill-tag
-		title: Tag Node Color
-		type: variable-color
-		format: rgb
-		default: rgb(64, 150, 147)
-	-
-		id: color-fill-attachment
-		title: Attachment Node Color
-		type: variable-color
-		format: rgb
-		default: rgb(236, 193, 81)
-	-
-		id: color-fill-unresolved
-		title: Unresolved Node Color
-		type: variable-color
-		format: rgb
-		default: rgb(241, 81, 72)
+			id: color-fill-focused
+			title: Active Note Node Color
+			type: variable-color
+			format: rgb
+			default: rgb(235, 84, 108)
+	-	
+			id: color-fill-tag
+			title: Tag Node Color
+			type: variable-color
+			format: rgb
+			default: rgb(64, 150, 147)
+	-	
+			id: color-fill-attachment
+			title: Attachment Node Color
+			type: variable-color
+			format: rgb
+			default: rgb(236, 193, 81)
+	-	
+			id: color-fill-unresolved
+			title: Unresolved Node Color
+			type: variable-color
+			format: rgb
+			default: rgb(241, 81, 72)
 	-
 		id: typography
 		title: Typography
@@ -237,2170 +237,2170 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: line-width
-		title: Preview Mode line width
-		description: The maximum number of characters per line.
-		type: variable-number-slider
-		default: 42
-		min: 30
-		max: 100
-		step: 1
-		format: 'rem'
-	-
-		id: fonts
-		title: Fonts
-		type: heading
-		level: 3
-		collapsed: true
-	-
-		id: font-preview
-		title: Preview Mode Font
-		type: variable-text
-		default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-	-
-		id: font-editor
-		title: Edit Mode Font
-		type: variable-text
-		default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-	-
-		id: font-ui
-		title: UI font
-		type: variable-text
-		default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-	-
-		id: font-mono
-		title: Monospace Font
-		type: variable-text
-		default: "'IBM Plex Mono *', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
-	-
-		id: font-frontmatter
-		title: Frontmatter/YAML Font
-		type: variable-text
-		default: "'IBM Plex Mono *', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
-	-
-		id: headings-title
-		title: Headings
-		type: heading
-		level: 3
-		collapsed: true
-	-
-		id: font-heading-preview
-		title: Heading Font Preview Mode
-		type: variable-text
-		default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-	-
-		id: font-heading-editor
-		title: Heading Font Editor Mode
-		type: variable-text
-		default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-	-
-		id: head-indicator
-		title: Heading Indicators
-		description: Disable the typora-like heading indicators in Live Preview.
-		type: class-toggle
-	-
-		id: head-indicator-active
-		title: Heading Indicators in active line only
-		description: Enables typora-like heading indicators in Live Preview, only in the active line.
-		type: class-toggle
-	-
-		id: heading weights
-		title: Weights
-		type: heading
-		level: 4
-		collapsed: true 
-	-
-		id: heading-1-weight
-		title: Heading 1 Weight
-		description: Default value - semi-bold (600)
-		type: variable-text
-		default: "600"
-	-
-		id: heading-2-weight
-		title: Heading 2 Weight
-		description: Default value - semi-bold (600)
-		type: variable-text
-		default: "600"
-	-
-		id: heading-3-weight
-		title: Heading 3 Weight
-		description: Default value - semi-bold (600)
-		type: variable-text
-		default: "500"
-	-
-		id: heading-4-weight
-		title: Heading 4 Weight
-		description: Default value - semi-bold (600)
-		type: variable-text
-		default: "500"
-	-
-		id: heading-5-weight
-		title: Heading 5 Weight
-		description: Default value - semi-bold (600)
-		type: variable-text
-		default: "400"
-	-
-		id: heading-6-weight
-		title: Heading 6 Weight
-		description: Default value - semi-bold (600)
-		type: variable-text
-		default: "400"
-	-
-		id: heading sizes
-		title: Sizes
-		type: heading
-		level: 4
-		collapsed: true
-	-
-		id: heading-1
-		title: Heading 1 Size
-		type: variable-text
-		default: 1.75rem
-	-
-		id: heading-2
-		title: Heading 2 Size
-		type: variable-text
-		default: 1.5rem
-	-
-		id: heading-3
-		title: Heading 3 Size
-		type: variable-text
-		default: 1.25rem
-	-
-		id: heading-4
-		title: Heading 4 Size
-		type: variable-text
-		default: 1.125rem
-	-
-		id: heading-5
-		title: Heading 5 Size
-		type: variable-text
-		default: 1.875rem
-	-
-		id: heading-6
-		title: Heading 6 Size
-		type: variable-text
-		default: .75rem
-	-
-		id: heading colours
-		title: Colors
-		type: heading
-		level: 4
-		collapsed: true
-	-
-		id: heading-clr
-		title: Toggle Heading Font Colors
-		type: class-toggle
-		default: false
-	-
-		id: heading-clr-bg
-		title: Toggle Heading Background Colors
-		type: class-toggle
-		default: false
-	-
-		id: heading colours
-		title: Heading Font Colors
-		type: heading
-		level: 5
-		collapsed: true
-	-
-		id: heading 1 colours
-		title: Heading 1
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-1-l
-		title: Heading 1 Light Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-1-d
-		title: Heading 1 Dark Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: Black
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(175, 129, 34)
-	-
-		id: heading 2 colours
-		title: Heading 2
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-2-l
-		title: Heading 2 Light Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-2-d
-		title: Heading 2 Dark Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: Black
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(175, 129, 34)
-	-
-		id: heading 3 colours
-		title: Heading 3
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-3-l
-		title: Heading 3 Light Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-3-d
-		title: Heading 3 Dark Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: Black
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(175, 129, 34)
-	-
-		id: heading 4 colours
-		title: Heading 4
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-4-l
-		title: Heading 4 Light Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-4-d
-		title: Heading 4 Dark Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: Black
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(175, 129, 34)
-	-
-		id: heading 5 colours
-		title: Heading 5
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-5-l
-		title: Heading 5 Light Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-5-d
-		title: Heading 5 Dark Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: Black
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(175, 129, 34)
-	-
-		id: heading 6 colours
-		title: Heading 6
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-6-l
-		title: Heading 6 Light Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-6-d
-		title: Heading 6 Dark Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: Black
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(175, 129, 34)
-	-
-		id: heading background colours
-		title: Heading Background Colors
-		type: heading
-		level: 5
-		collapsed: true
-	-
-		id: heading 1 bg colours
-		title: Heading 1
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-1-bg-l
-		title: Heading 1 Light Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(245, 243, 240)
-		options:
-			-
-				label: Background
-				value: rgb(245, 243, 240)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green 2
-				value: rgb(223, 226, 189)
-			-
-				label: Green 3
-				value: rgb(201, 202, 133)
-			-
-				label: Green 4
-				value: rgb(171, 173, 85)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian 2
-				value: rgb(204, 228, 214)
-			-
-				label: Viridian 3
-				value: rgb(162, 209, 183)
-			-
-				label: Viridian 4
-				value: rgb(105, 184, 139)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Teal 2
-				value: rgb(201, 228, 226)
-			-
-				label: Teal 3
-				value: rgb(150, 209, 207)
-			-
-				label: Teal 4
-				value: rgb(104, 181, 177)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Blue 2
-				value: rgb(213, 225, 232)
-			-
-				label: Blue 3
-				value: rgb(177, 202, 216)
-			-
-				label: Blue 4
-				value: rgb(136, 173, 194)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender 2
-				value: rgb(222, 222, 233)
-			-
-				label: Lavender 3
-				value: rgb(196, 196, 219)
-			-
-				label: Lavender 4
-				value: rgb(165, 165, 206)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Pink 2
-				value: rgb(245, 215, 219)
-			-
-				label: Pink 3
-				value: rgb(242, 183, 192)
-			-
-				label: Pink 4
-				value: rgb(240, 138, 156)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Red 2
-				value: rgb(249, 215, 211)
-			-
-				label: Red 3
-				value: rgb(250, 182, 173)
-			-
-				label: Red 4
-				value: rgb(252, 134, 122)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Orange 2
-				value: rgb(247, 218, 186)
-			-
-				label: Orange 3
-				value: rgb(247, 186, 121)
-			-
-				label: Orange 4
-				value: rgb(241, 145, 52)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow 2
-				value: rgb(242, 223, 141)
-			-
-				label: Yellow 3
-				value: rgb(236, 193, 81)
-			-
-				label: Yellow 4
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-1-bg-d
-		title: Heading 1 Dark Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(21, 21, 21)
-		options:
-			-
-				label: Background
-				value: rgb(21, 21, 21)
-			-
-				label: Black
-				value: rgb(8, 8, 8)
-			-
-				label: True Black
-				value: rgb(0, 0, 0)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Green 6
-				value: rgb(108, 108, 46)
-			-
-				label: Green 7
-				value: rgb(79, 79, 40)
-			-
-				label: Green 8
-				value: rgb(49, 49, 28)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Viridian 6
-				value: rgb(55, 117, 82)
-			-
-				label: Viridian 7
-				value: rgb(48, 84, 62)
-			-
-				label: Viridian 8
-				value: rgb(33, 52, 40)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Teal 6
-				value: rgb(50, 115, 112)
-			-
-				label: Teal 7
-				value: rgb(44, 83, 82)
-			-
-				label: Teal 8
-				value: rgb(32, 51, 51)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Blue 6
-				value: rgb(65, 110, 135)
-			-
-				label: Blue 7
-				value: rgb(46, 81, 99)
-			-
-				label: Blue 8
-				value: rgb(34, 50, 59)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Lavender 6
-				value: rgb(99, 98, 167)
-			-
-				label: Lavender 7
-				value: rgb(72, 70, 132)
-			-
-				label: Lavender 8
-				value: rgb(44, 43, 83)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Pink 6
-				value: rgb(194, 49, 70)
-			-
-				label: Pink 7
-				value: rgb(149, 27, 42)
-			-
-				label: Pink 8
-				value: rgb(86, 28, 31)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Red 6
-				value: rgb(200, 43, 41)
-			-
-				label: Red 7
-				value: rgb(148, 31, 30)
-			-
-				label: Red 8
-				value: rgb(89, 26, 23)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Orange 6
-				value: rgb(162, 84, 38)
-			-
-				label: Orange 7
-				value: rgb(115, 64, 35)
-			-
-				label: Orange 8
-				value: rgb(68, 41, 27)
-			-
-				label: Yellow/Brown 5
-				value: rgb(175, 129, 34)
-			-
-				label: Yellow/Brown 6
-				value: rgb(131, 100, 38)
-			-
-				label: Yellow/Brown 7
-				value: rgb(94, 74, 35)
-			-
-				label: Yellow/Brown 8
-				value: rgb(57, 46, 26)
-	-
-		id: heading 2 bg colours
-		title: Heading 2
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-2-bg-l
-		title: Heading 2 Light Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(245, 243, 240)
-		options:
-			-
-				label: Background
-				value: rgb(245, 243, 240)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green 2
-				value: rgb(223, 226, 189)
-			-
-				label: Green 3
-				value: rgb(201, 202, 133)
-			-
-				label: Green 4
-				value: rgb(171, 173, 85)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian 2
-				value: rgb(204, 228, 214)
-			-
-				label: Viridian 3
-				value: rgb(162, 209, 183)
-			-
-				label: Viridian 4
-				value: rgb(105, 184, 139)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Teal 2
-				value: rgb(201, 228, 226)
-			-
-				label: Teal 3
-				value: rgb(150, 209, 207)
-			-
-				label: Teal 4
-				value: rgb(104, 181, 177)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Blue 2
-				value: rgb(213, 225, 232)
-			-
-				label: Blue 3
-				value: rgb(177, 202, 216)
-			-
-				label: Blue 4
-				value: rgb(136, 173, 194)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender 2
-				value: rgb(222, 222, 233)
-			-
-				label: Lavender 3
-				value: rgb(196, 196, 219)
-			-
-				label: Lavender 4
-				value: rgb(165, 165, 206)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Pink 2
-				value: rgb(245, 215, 219)
-			-
-				label: Pink 3
-				value: rgb(242, 183, 192)
-			-
-				label: Pink 4
-				value: rgb(240, 138, 156)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Red 2
-				value: rgb(249, 215, 211)
-			-
-				label: Red 3
-				value: rgb(250, 182, 173)
-			-
-				label: Red 4
-				value: rgb(252, 134, 122)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Orange 2
-				value: rgb(247, 218, 186)
-			-
-				label: Orange 3
-				value: rgb(247, 186, 121)
-			-
-				label: Orange 4
-				value: rgb(241, 145, 52)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow 2
-				value: rgb(242, 223, 141)
-			-
-				label: Yellow 3
-				value: rgb(236, 193, 81)
-			-
-				label: Yellow 4
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-2-bg-d
-		title: Heading 2 Dark Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(21, 21, 21)
-		options:
-			-
-				label: Background
-				value: rgb(21, 21, 21)
-			-
-				label: Black
-				value: rgb(8, 8, 8)
-			-
-				label: True Black
-				value: rgb(0, 0, 0)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Green 6
-				value: rgb(108, 108, 46)
-			-
-				label: Green 7
-				value: rgb(79, 79, 40)
-			-
-				label: Green 8
-				value: rgb(49, 49, 28)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Viridian 6
-				value: rgb(55, 117, 82)
-			-
-				label: Viridian 7
-				value: rgb(48, 84, 62)
-			-
-				label: Viridian 8
-				value: rgb(33, 52, 40)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Teal 6
-				value: rgb(50, 115, 112)
-			-
-				label: Teal 7
-				value: rgb(44, 83, 82)
-			-
-				label: Teal 8
-				value: rgb(32, 51, 51)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Blue 6
-				value: rgb(65, 110, 135)
-			-
-				label: Blue 7
-				value: rgb(46, 81, 99)
-			-
-				label: Blue 8
-				value: rgb(34, 50, 59)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Lavender 6
-				value: rgb(99, 98, 167)
-			-
-				label: Lavender 7
-				value: rgb(72, 70, 132)
-			-
-				label: Lavender 8
-				value: rgb(44, 43, 83)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Pink 6
-				value: rgb(194, 49, 70)
-			-
-				label: Pink 7
-				value: rgb(149, 27, 42)
-			-
-				label: Pink 8
-				value: rgb(86, 28, 31)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Red 6
-				value: rgb(200, 43, 41)
-			-
-				label: Red 7
-				value: rgb(148, 31, 30)
-			-
-				label: Red 8
-				value: rgb(89, 26, 23)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Orange 6
-				value: rgb(162, 84, 38)
-			-
-				label: Orange 7
-				value: rgb(115, 64, 35)
-			-
-				label: Orange 8
-				value: rgb(68, 41, 27)
-			-
-				label: Yellow/Brown 5
-				value: rgb(175, 129, 34)
-			-
-				label: Yellow/Brown 6
-				value: rgb(131, 100, 38)
-			-
-				label: Yellow/Brown 7
-				value: rgb(94, 74, 35)
-			-
-				label: Yellow/Brown 8
-				value: rgb(57, 46, 26)
-	-
-		id: heading 3 bg colours
-		title: Heading 3
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-3-bg-l
-		title: Heading 3 Light Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(245, 243, 240)
-		options:
-			-
-				label: Background
-				value: rgb(245, 243, 240)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green 2
-				value: rgb(223, 226, 189)
-			-
-				label: Green 3
-				value: rgb(201, 202, 133)
-			-
-				label: Green 4
-				value: rgb(171, 173, 85)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian 2
-				value: rgb(204, 228, 214)
-			-
-				label: Viridian 3
-				value: rgb(162, 209, 183)
-			-
-				label: Viridian 4
-				value: rgb(105, 184, 139)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Teal 2
-				value: rgb(201, 228, 226)
-			-
-				label: Teal 3
-				value: rgb(150, 209, 207)
-			-
-				label: Teal 4
-				value: rgb(104, 181, 177)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Blue 2
-				value: rgb(213, 225, 232)
-			-
-				label: Blue 3
-				value: rgb(177, 202, 216)
-			-
-				label: Blue 4
-				value: rgb(136, 173, 194)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender 2
-				value: rgb(222, 222, 233)
-			-
-				label: Lavender 3
-				value: rgb(196, 196, 219)
-			-
-				label: Lavender 4
-				value: rgb(165, 165, 206)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Pink 2
-				value: rgb(245, 215, 219)
-			-
-				label: Pink 3
-				value: rgb(242, 183, 192)
-			-
-				label: Pink 4
-				value: rgb(240, 138, 156)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Red 2
-				value: rgb(249, 215, 211)
-			-
-				label: Red 3
-				value: rgb(250, 182, 173)
-			-
-				label: Red 4
-				value: rgb(252, 134, 122)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Orange 2
-				value: rgb(247, 218, 186)
-			-
-				label: Orange 3
-				value: rgb(247, 186, 121)
-			-
-				label: Orange 4
-				value: rgb(241, 145, 52)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow 2
-				value: rgb(242, 223, 141)
-			-
-				label: Yellow 3
-				value: rgb(236, 193, 81)
-			-
-				label: Yellow 4
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-3-bg-d
-		title: Heading 3 Dark Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(21, 21, 21)
-		options:
-			-
-				label: Background
-				value: rgb(21, 21, 21)
-			-
-				label: Black
-				value: rgb(8, 8, 8)
-			-
-				label: True Black
-				value: rgb(0, 0, 0)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Green 6
-				value: rgb(108, 108, 46)
-			-
-				label: Green 7
-				value: rgb(79, 79, 40)
-			-
-				label: Green 8
-				value: rgb(49, 49, 28)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Viridian 6
-				value: rgb(55, 117, 82)
-			-
-				label: Viridian 7
-				value: rgb(48, 84, 62)
-			-
-				label: Viridian 8
-				value: rgb(33, 52, 40)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Teal 6
-				value: rgb(50, 115, 112)
-			-
-				label: Teal 7
-				value: rgb(44, 83, 82)
-			-
-				label: Teal 8
-				value: rgb(32, 51, 51)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Blue 6
-				value: rgb(65, 110, 135)
-			-
-				label: Blue 7
-				value: rgb(46, 81, 99)
-			-
-				label: Blue 8
-				value: rgb(34, 50, 59)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Lavender 6
-				value: rgb(99, 98, 167)
-			-
-				label: Lavender 7
-				value: rgb(72, 70, 132)
-			-
-				label: Lavender 8
-				value: rgb(44, 43, 83)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Pink 6
-				value: rgb(194, 49, 70)
-			-
-				label: Pink 7
-				value: rgb(149, 27, 42)
-			-
-				label: Pink 8
-				value: rgb(86, 28, 31)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Red 6
-				value: rgb(200, 43, 41)
-			-
-				label: Red 7
-				value: rgb(148, 31, 30)
-			-
-				label: Red 8
-				value: rgb(89, 26, 23)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Orange 6
-				value: rgb(162, 84, 38)
-			-
-				label: Orange 7
-				value: rgb(115, 64, 35)
-			-
-				label: Orange 8
-				value: rgb(68, 41, 27)
-			-
-				label: Yellow/Brown 5
-				value: rgb(175, 129, 34)
-			-
-				label: Yellow/Brown 6
-				value: rgb(131, 100, 38)
-			-
-				label: Yellow/Brown 7
-				value: rgb(94, 74, 35)
-			-
-				label: Yellow/Brown 8
-				value: rgb(57, 46, 26)
-	-
-		id: heading 4 bg colours
-		title: Heading 4
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-4-bg-l
-		title: Heading 4 Light Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(245, 243, 240)
-		options:
-			-
-				label: Background
-				value: rgb(245, 243, 240)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green 2
-				value: rgb(223, 226, 189)
-			-
-				label: Green 3
-				value: rgb(201, 202, 133)
-			-
-				label: Green 4
-				value: rgb(171, 173, 85)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian 2
-				value: rgb(204, 228, 214)
-			-
-				label: Viridian 3
-				value: rgb(162, 209, 183)
-			-
-				label: Viridian 4
-				value: rgb(105, 184, 139)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Teal 2
-				value: rgb(201, 228, 226)
-			-
-				label: Teal 3
-				value: rgb(150, 209, 207)
-			-
-				label: Teal 4
-				value: rgb(104, 181, 177)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Blue 2
-				value: rgb(213, 225, 232)
-			-
-				label: Blue 3
-				value: rgb(177, 202, 216)
-			-
-				label: Blue 4
-				value: rgb(136, 173, 194)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender 2
-				value: rgb(222, 222, 233)
-			-
-				label: Lavender 3
-				value: rgb(196, 196, 219)
-			-
-				label: Lavender 4
-				value: rgb(165, 165, 206)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Pink 2
-				value: rgb(245, 215, 219)
-			-
-				label: Pink 3
-				value: rgb(242, 183, 192)
-			-
-				label: Pink 4
-				value: rgb(240, 138, 156)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Red 2
-				value: rgb(249, 215, 211)
-			-
-				label: Red 3
-				value: rgb(250, 182, 173)
-			-
-				label: Red 4
-				value: rgb(252, 134, 122)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Orange 2
-				value: rgb(247, 218, 186)
-			-
-				label: Orange 3
-				value: rgb(247, 186, 121)
-			-
-				label: Orange 4
-				value: rgb(241, 145, 52)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow 2
-				value: rgb(242, 223, 141)
-			-
-				label: Yellow 3
-				value: rgb(236, 193, 81)
-			-
-				label: Yellow 4
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-4-bg-d
-		title: Heading 4 Dark Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(21, 21, 21)
-		options:
-			-
-				label: Background
-				value: rgb(21, 21, 21)
-			-
-				label: Black
-				value: rgb(8, 8, 8)
-			-
-				label: True Black
-				value: rgb(0, 0, 0)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Green 6
-				value: rgb(108, 108, 46)
-			-
-				label: Green 7
-				value: rgb(79, 79, 40)
-			-
-				label: Green 8
-				value: rgb(49, 49, 28)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Viridian 6
-				value: rgb(55, 117, 82)
-			-
-				label: Viridian 7
-				value: rgb(48, 84, 62)
-			-
-				label: Viridian 8
-				value: rgb(33, 52, 40)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Teal 6
-				value: rgb(50, 115, 112)
-			-
-				label: Teal 7
-				value: rgb(44, 83, 82)
-			-
-				label: Teal 8
-				value: rgb(32, 51, 51)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Blue 6
-				value: rgb(65, 110, 135)
-			-
-				label: Blue 7
-				value: rgb(46, 81, 99)
-			-
-				label: Blue 8
-				value: rgb(34, 50, 59)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Lavender 6
-				value: rgb(99, 98, 167)
-			-
-				label: Lavender 7
-				value: rgb(72, 70, 132)
-			-
-				label: Lavender 8
-				value: rgb(44, 43, 83)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Pink 6
-				value: rgb(194, 49, 70)
-			-
-				label: Pink 7
-				value: rgb(149, 27, 42)
-			-
-				label: Pink 8
-				value: rgb(86, 28, 31)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Red 6
-				value: rgb(200, 43, 41)
-			-
-				label: Red 7
-				value: rgb(148, 31, 30)
-			-
-				label: Red 8
-				value: rgb(89, 26, 23)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Orange 6
-				value: rgb(162, 84, 38)
-			-
-				label: Orange 7
-				value: rgb(115, 64, 35)
-			-
-				label: Orange 8
-				value: rgb(68, 41, 27)
-			-
-				label: Yellow/Brown 5
-				value: rgb(175, 129, 34)
-			-
-				label: Yellow/Brown 6
-				value: rgb(131, 100, 38)
-			-
-				label: Yellow/Brown 7
-				value: rgb(94, 74, 35)
-			-
-				label: Yellow/Brown 8
-				value: rgb(57, 46, 26)
-	-
-		id: heading 5 bg colours
-		title: Heading 5
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-5-bg-l
-		title: Heading 5 Light Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(245, 243, 240)
-		options:
-			-
-				label: Background
-				value: rgb(245, 243, 240)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green 2
-				value: rgb(223, 226, 189)
-			-
-				label: Green 3
-				value: rgb(201, 202, 133)
-			-
-				label: Green 4
-				value: rgb(171, 173, 85)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian 2
-				value: rgb(204, 228, 214)
-			-
-				label: Viridian 3
-				value: rgb(162, 209, 183)
-			-
-				label: Viridian 4
-				value: rgb(105, 184, 139)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Teal 2
-				value: rgb(201, 228, 226)
-			-
-				label: Teal 3
-				value: rgb(150, 209, 207)
-			-
-				label: Teal 4
-				value: rgb(104, 181, 177)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Blue 2
-				value: rgb(213, 225, 232)
-			-
-				label: Blue 3
-				value: rgb(177, 202, 216)
-			-
-				label: Blue 4
-				value: rgb(136, 173, 194)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender 2
-				value: rgb(222, 222, 233)
-			-
-				label: Lavender 3
-				value: rgb(196, 196, 219)
-			-
-				label: Lavender 4
-				value: rgb(165, 165, 206)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Pink 2
-				value: rgb(245, 215, 219)
-			-
-				label: Pink 3
-				value: rgb(242, 183, 192)
-			-
-				label: Pink 4
-				value: rgb(240, 138, 156)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Red 2
-				value: rgb(249, 215, 211)
-			-
-				label: Red 3
-				value: rgb(250, 182, 173)
-			-
-				label: Red 4
-				value: rgb(252, 134, 122)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Orange 2
-				value: rgb(247, 218, 186)
-			-
-				label: Orange 3
-				value: rgb(247, 186, 121)
-			-
-				label: Orange 4
-				value: rgb(241, 145, 52)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow 2
-				value: rgb(242, 223, 141)
-			-
-				label: Yellow 3
-				value: rgb(236, 193, 81)
-			-
-				label: Yellow 4
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-5-bg-d
-		title: Heading 5 Dark Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(21, 21, 21)
-		options:
-			-
-				label: Background
-				value: rgb(21, 21, 21)
-			-
-				label: Black
-				value: rgb(8, 8, 8)
-			-
-				label: True Black
-				value: rgb(0, 0, 0)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Green 6
-				value: rgb(108, 108, 46)
-			-
-				label: Green 7
-				value: rgb(79, 79, 40)
-			-
-				label: Green 8
-				value: rgb(49, 49, 28)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Viridian 6
-				value: rgb(55, 117, 82)
-			-
-				label: Viridian 7
-				value: rgb(48, 84, 62)
-			-
-				label: Viridian 8
-				value: rgb(33, 52, 40)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Teal 6
-				value: rgb(50, 115, 112)
-			-
-				label: Teal 7
-				value: rgb(44, 83, 82)
-			-
-				label: Teal 8
-				value: rgb(32, 51, 51)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Blue 6
-				value: rgb(65, 110, 135)
-			-
-				label: Blue 7
-				value: rgb(46, 81, 99)
-			-
-				label: Blue 8
-				value: rgb(34, 50, 59)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Lavender 6
-				value: rgb(99, 98, 167)
-			-
-				label: Lavender 7
-				value: rgb(72, 70, 132)
-			-
-				label: Lavender 8
-				value: rgb(44, 43, 83)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Pink 6
-				value: rgb(194, 49, 70)
-			-
-				label: Pink 7
-				value: rgb(149, 27, 42)
-			-
-				label: Pink 8
-				value: rgb(86, 28, 31)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Red 6
-				value: rgb(200, 43, 41)
-			-
-				label: Red 7
-				value: rgb(148, 31, 30)
-			-
-				label: Red 8
-				value: rgb(89, 26, 23)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Orange 6
-				value: rgb(162, 84, 38)
-			-
-				label: Orange 7
-				value: rgb(115, 64, 35)
-			-
-				label: Orange 8
-				value: rgb(68, 41, 27)
-			-
-				label: Yellow/Brown 5
-				value: rgb(175, 129, 34)
-			-
-				label: Yellow/Brown 6
-				value: rgb(131, 100, 38)
-			-
-				label: Yellow/Brown 7
-				value: rgb(94, 74, 35)
-			-
-				label: Yellow/Brown 8
-				value: rgb(57, 46, 26)
-	-
-		id: heading 6 bg colours
-		title: Heading 6
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-6-bg-l
-		title: Heading 6 Light Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(245, 243, 240)
-		options:
-			-
-				label: Background
-				value: rgb(245, 243, 240)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green 2
-				value: rgb(223, 226, 189)
-			-
-				label: Green 3
-				value: rgb(201, 202, 133)
-			-
-				label: Green 4
-				value: rgb(171, 173, 85)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian 2
-				value: rgb(204, 228, 214)
-			-
-				label: Viridian 3
-				value: rgb(162, 209, 183)
-			-
-				label: Viridian 4
-				value: rgb(105, 184, 139)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Teal 2
-				value: rgb(201, 228, 226)
-			-
-				label: Teal 3
-				value: rgb(150, 209, 207)
-			-
-				label: Teal 4
-				value: rgb(104, 181, 177)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Blue 2
-				value: rgb(213, 225, 232)
-			-
-				label: Blue 3
-				value: rgb(177, 202, 216)
-			-
-				label: Blue 4
-				value: rgb(136, 173, 194)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender 2
-				value: rgb(222, 222, 233)
-			-
-				label: Lavender 3
-				value: rgb(196, 196, 219)
-			-
-				label: Lavender 4
-				value: rgb(165, 165, 206)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Pink 2
-				value: rgb(245, 215, 219)
-			-
-				label: Pink 3
-				value: rgb(242, 183, 192)
-			-
-				label: Pink 4
-				value: rgb(240, 138, 156)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Red 2
-				value: rgb(249, 215, 211)
-			-
-				label: Red 3
-				value: rgb(250, 182, 173)
-			-
-				label: Red 4
-				value: rgb(252, 134, 122)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Orange 2
-				value: rgb(247, 218, 186)
-			-
-				label: Orange 3
-				value: rgb(247, 186, 121)
-			-
-				label: Orange 4
-				value: rgb(241, 145, 52)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow 2
-				value: rgb(242, 223, 141)
-			-
-				label: Yellow 3
-				value: rgb(236, 193, 81)
-			-
-				label: Yellow 4
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-6-bg-d
-		title: Heading 6 Dark Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(21, 21, 21)
-		options:
-			-
-				label: Background
-				value: rgb(21, 21, 21)
-			-
-				label: Black
-				value: rgb(8, 8, 8)
-			-
-				label: True Black
-				value: rgb(0, 0, 0)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Green 6
-				value: rgb(108, 108, 46)
-			-
-				label: Green 7
-				value: rgb(79, 79, 40)
-			-
-				label: Green 8
-				value: rgb(49, 49, 28)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Viridian 6
-				value: rgb(55, 117, 82)
-			-
-				label: Viridian 7
-				value: rgb(48, 84, 62)
-			-
-				label: Viridian 8
-				value: rgb(33, 52, 40)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Teal 6
-				value: rgb(50, 115, 112)
-			-
-				label: Teal 7
-				value: rgb(44, 83, 82)
-			-
-				label: Teal 8
-				value: rgb(32, 51, 51)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Blue 6
-				value: rgb(65, 110, 135)
-			-
-				label: Blue 7
-				value: rgb(46, 81, 99)
-			-
-				label: Blue 8
-				value: rgb(34, 50, 59)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Lavender 6
-				value: rgb(99, 98, 167)
-			-
-				label: Lavender 7
-				value: rgb(72, 70, 132)
-			-
-				label: Lavender 8
-				value: rgb(44, 43, 83)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Pink 6
-				value: rgb(194, 49, 70)
-			-
-				label: Pink 7
-				value: rgb(149, 27, 42)
-			-
-				label: Pink 8
-				value: rgb(86, 28, 31)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Red 6
-				value: rgb(200, 43, 41)
-			-
-				label: Red 7
-				value: rgb(148, 31, 30)
-			-
-				label: Red 8
-				value: rgb(89, 26, 23)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Orange 6
-				value: rgb(162, 84, 38)
-			-
-				label: Orange 7
-				value: rgb(115, 64, 35)
-			-
-				label: Orange 8
-				value: rgb(68, 41, 27)
-			-
-				label: Yellow/Brown 5
-				value: rgb(175, 129, 34)
-			-
-				label: Yellow/Brown 6
-				value: rgb(131, 100, 38)
-			-
-				label: Yellow/Brown 7
-				value: rgb(94, 74, 35)
-			-
-				label: Yellow/Brown 8
-				value: rgb(57, 46, 26)
+			id: line-width
+			title: Preview Mode line width
+			description: The maximum number of characters per line.
+			type: variable-number-slider
+			default: 42
+			min: 30
+			max: 100
+			step: 1
+			format: 'rem'
+	-	
+			id: fonts
+			title: Fonts
+			type: heading
+			level: 3
+			collapsed: true
+	-	
+				id: font-preview
+				title: Preview Mode Font
+				type: variable-text
+				default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-		
+				id: font-editor
+				title: Edit Mode Font
+				type: variable-text
+				default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-		
+				id: font-ui
+				title: UI font
+				type: variable-text
+				default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-		
+				id: font-mono
+				title: Monospace Font
+				type: variable-text
+				default: "'IBM Plex Mono *', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
+	-		
+				id: font-frontmatter
+				title: Frontmatter/YAML Font
+				type: variable-text
+				default: "'IBM Plex Mono *', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
+	-	
+			id: headings-title
+			title: Headings
+			type: heading
+			level: 3
+			collapsed: true
+	-	
+				id: font-heading-preview
+				title: Heading Font Preview Mode
+				type: variable-text
+				default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-		
+				id: font-heading-editor
+				title: Heading Font Editor Mode
+				type: variable-text
+				default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-		
+				id: head-indicator
+				title: Heading Indicators
+				description: Disable the typora-like heading indicators in Live Preview.
+				type: class-toggle
+	-		
+				id: head-indicator-active
+				title: Heading Indicators in active line only
+				description: Enables typora-like heading indicators in Live Preview, only in the active line.
+				type: class-toggle
+	-		
+				id: heading weights
+				title: Weights
+				type: heading
+				level: 4
+				collapsed: true 
+	-		
+					id: heading-1-weight
+					title: Heading 1 Weight
+					description: Default value - semi-bold (600)
+					type: variable-text
+					default: "600"
+	-			
+					id: heading-2-weight
+					title: Heading 2 Weight
+					description: Default value - semi-bold (600)
+					type: variable-text
+					default: "600"
+	-			
+					id: heading-3-weight
+					title: Heading 3 Weight
+					description: Default value - semi-bold (600)
+					type: variable-text
+					default: "500"
+	-			
+					id: heading-4-weight
+					title: Heading 4 Weight
+					description: Default value - semi-bold (600)
+					type: variable-text
+					default: "500"
+	-			
+					id: heading-5-weight
+					title: Heading 5 Weight
+					description: Default value - semi-bold (600)
+					type: variable-text
+					default: "400"
+	-			
+					id: heading-6-weight
+					title: Heading 6 Weight
+					description: Default value - semi-bold (600)
+					type: variable-text
+					default: "400"
+	-		
+				id: heading sizes
+				title: Sizes
+				type: heading
+				level: 4
+				collapsed: true
+	-		
+					id: heading-1
+					title: Heading 1 Size
+					type: variable-text
+					default: 1.75rem
+	-			
+					id: heading-2
+					title: Heading 2 Size
+					type: variable-text
+					default: 1.5rem
+	-			
+					id: heading-3
+					title: Heading 3 Size
+					type: variable-text
+					default: 1.25rem
+	-			
+					id: heading-4
+					title: Heading 4 Size
+					type: variable-text
+					default: 1.125rem
+	-			
+					id: heading-5
+					title: Heading 5 Size
+					type: variable-text
+					default: 1.875rem
+	-			
+					id: heading-6
+					title: Heading 6 Size
+					type: variable-text
+					default: .75rem
+	-		
+				id: heading colours
+				title: Colors
+				type: heading
+				level: 4
+				collapsed: true
+	-		
+				id: heading-clr
+				title: Toggle Heading Font Colors
+				type: class-toggle
+				default: false
+	-		
+				id: heading-clr-bg
+				title: Toggle Heading Background Colors
+				type: class-toggle
+				default: false
+	-		
+				id: heading colours
+				title: Heading Font Colors
+				type: heading
+				level: 5
+				collapsed: true
+	-		
+					id: heading 1 colours
+					title: Heading 1
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-1-l
+						title: Heading 1 Light Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-1-d
+						title: Heading 1 Dark Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: Black
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(175, 129, 34)
+	-			
+					id: heading 2 colours
+					title: Heading 2
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-2-l
+						title: Heading 2 Light Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-2-d
+						title: Heading 2 Dark Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: Black
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(175, 129, 34)
+	-			
+					id: heading 3 colours
+					title: Heading 3
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-3-l
+						title: Heading 3 Light Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-3-d
+						title: Heading 3 Dark Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: Black
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(175, 129, 34)
+	-			
+					id: heading 4 colours
+					title: Heading 4
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-4-l
+						title: Heading 4 Light Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-4-d
+						title: Heading 4 Dark Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: Black
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(175, 129, 34)
+	-			
+					id: heading 5 colours
+					title: Heading 5
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-5-l
+						title: Heading 5 Light Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-5-d
+						title: Heading 5 Dark Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: Black
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(175, 129, 34)
+	-			
+					id: heading 6 colours
+					title: Heading 6
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-6-l
+						title: Heading 6 Light Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-6-d
+						title: Heading 6 Dark Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: Black
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(175, 129, 34)
+	-		
+				id: heading background colours
+				title: Heading Background Colors
+				type: heading
+				level: 5
+				collapsed: true
+	-		
+					id: heading 1 bg colours
+					title: Heading 1
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-1-bg-l
+						title: Heading 1 Light Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(245, 243, 240)
+						options:
+							-
+								label: Background
+								value: rgb(245, 243, 240)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green 2
+								value: rgb(223, 226, 189)
+							-
+								label: Green 3
+								value: rgb(201, 202, 133)
+							-
+								label: Green 4
+								value: rgb(171, 173, 85)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian 2
+								value: rgb(204, 228, 214)
+							-
+								label: Viridian 3
+								value: rgb(162, 209, 183)
+							-
+								label: Viridian 4
+								value: rgb(105, 184, 139)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Teal 2
+								value: rgb(201, 228, 226)
+							-
+								label: Teal 3
+								value: rgb(150, 209, 207)
+							-
+								label: Teal 4
+								value: rgb(104, 181, 177)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Blue 2
+								value: rgb(213, 225, 232)
+							-
+								label: Blue 3
+								value: rgb(177, 202, 216)
+							-
+								label: Blue 4
+								value: rgb(136, 173, 194)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender 2
+								value: rgb(222, 222, 233)
+							-
+								label: Lavender 3
+								value: rgb(196, 196, 219)
+							-
+								label: Lavender 4
+								value: rgb(165, 165, 206)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Pink 2
+								value: rgb(245, 215, 219)
+							-
+								label: Pink 3
+								value: rgb(242, 183, 192)
+							-
+								label: Pink 4
+								value: rgb(240, 138, 156)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Red 2
+								value: rgb(249, 215, 211)
+							-
+								label: Red 3
+								value: rgb(250, 182, 173)
+							-
+								label: Red 4
+								value: rgb(252, 134, 122)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Orange 2
+								value: rgb(247, 218, 186)
+							-
+								label: Orange 3
+								value: rgb(247, 186, 121)
+							-
+								label: Orange 4
+								value: rgb(241, 145, 52)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow 2
+								value: rgb(242, 223, 141)
+							-
+								label: Yellow 3
+								value: rgb(236, 193, 81)
+							-
+								label: Yellow 4
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-1-bg-d
+						title: Heading 1 Dark Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(21, 21, 21)
+						options:
+							-
+								label: Background
+								value: rgb(21, 21, 21)
+							-
+								label: Black
+								value: rgb(8, 8, 8)
+							-
+								label: True Black
+								value: rgb(0, 0, 0)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Green 6
+								value: rgb(108, 108, 46)
+							-
+								label: Green 7
+								value: rgb(79, 79, 40)
+							-
+								label: Green 8
+								value: rgb(49, 49, 28)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Viridian 6
+								value: rgb(55, 117, 82)
+							-
+								label: Viridian 7
+								value: rgb(48, 84, 62)
+							-
+								label: Viridian 8
+								value: rgb(33, 52, 40)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Teal 6
+								value: rgb(50, 115, 112)
+							-
+								label: Teal 7
+								value: rgb(44, 83, 82)
+							-
+								label: Teal 8
+								value: rgb(32, 51, 51)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Blue 6
+								value: rgb(65, 110, 135)
+							-
+								label: Blue 7
+								value: rgb(46, 81, 99)
+							-
+								label: Blue 8
+								value: rgb(34, 50, 59)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Lavender 6
+								value: rgb(99, 98, 167)
+							-
+								label: Lavender 7
+								value: rgb(72, 70, 132)
+							-
+								label: Lavender 8
+								value: rgb(44, 43, 83)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Pink 6
+								value: rgb(194, 49, 70)
+							-
+								label: Pink 7
+								value: rgb(149, 27, 42)
+							-
+								label: Pink 8
+								value: rgb(86, 28, 31)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Red 6
+								value: rgb(200, 43, 41)
+							-
+								label: Red 7
+								value: rgb(148, 31, 30)
+							-
+								label: Red 8
+								value: rgb(89, 26, 23)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Orange 6
+								value: rgb(162, 84, 38)
+							-
+								label: Orange 7
+								value: rgb(115, 64, 35)
+							-
+								label: Orange 8
+								value: rgb(68, 41, 27)
+							-
+								label: Yellow/Brown 5
+								value: rgb(175, 129, 34)
+							-
+								label: Yellow/Brown 6
+								value: rgb(131, 100, 38)
+							-
+								label: Yellow/Brown 7
+								value: rgb(94, 74, 35)
+							-
+								label: Yellow/Brown 8
+								value: rgb(57, 46, 26)
+	-			
+					id: heading 2 bg colours
+					title: Heading 2
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-2-bg-l
+						title: Heading 2 Light Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(245, 243, 240)
+						options:
+							-
+								label: Background
+								value: rgb(245, 243, 240)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green 2
+								value: rgb(223, 226, 189)
+							-
+								label: Green 3
+								value: rgb(201, 202, 133)
+							-
+								label: Green 4
+								value: rgb(171, 173, 85)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian 2
+								value: rgb(204, 228, 214)
+							-
+								label: Viridian 3
+								value: rgb(162, 209, 183)
+							-
+								label: Viridian 4
+								value: rgb(105, 184, 139)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Teal 2
+								value: rgb(201, 228, 226)
+							-
+								label: Teal 3
+								value: rgb(150, 209, 207)
+							-
+								label: Teal 4
+								value: rgb(104, 181, 177)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Blue 2
+								value: rgb(213, 225, 232)
+							-
+								label: Blue 3
+								value: rgb(177, 202, 216)
+							-
+								label: Blue 4
+								value: rgb(136, 173, 194)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender 2
+								value: rgb(222, 222, 233)
+							-
+								label: Lavender 3
+								value: rgb(196, 196, 219)
+							-
+								label: Lavender 4
+								value: rgb(165, 165, 206)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Pink 2
+								value: rgb(245, 215, 219)
+							-
+								label: Pink 3
+								value: rgb(242, 183, 192)
+							-
+								label: Pink 4
+								value: rgb(240, 138, 156)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Red 2
+								value: rgb(249, 215, 211)
+							-
+								label: Red 3
+								value: rgb(250, 182, 173)
+							-
+								label: Red 4
+								value: rgb(252, 134, 122)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Orange 2
+								value: rgb(247, 218, 186)
+							-
+								label: Orange 3
+								value: rgb(247, 186, 121)
+							-
+								label: Orange 4
+								value: rgb(241, 145, 52)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow 2
+								value: rgb(242, 223, 141)
+							-
+								label: Yellow 3
+								value: rgb(236, 193, 81)
+							-
+								label: Yellow 4
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-2-bg-d
+						title: Heading 2 Dark Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(21, 21, 21)
+						options:
+							-
+								label: Background
+								value: rgb(21, 21, 21)
+							-
+								label: Black
+								value: rgb(8, 8, 8)
+							-
+								label: True Black
+								value: rgb(0, 0, 0)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Green 6
+								value: rgb(108, 108, 46)
+							-
+								label: Green 7
+								value: rgb(79, 79, 40)
+							-
+								label: Green 8
+								value: rgb(49, 49, 28)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Viridian 6
+								value: rgb(55, 117, 82)
+							-
+								label: Viridian 7
+								value: rgb(48, 84, 62)
+							-
+								label: Viridian 8
+								value: rgb(33, 52, 40)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Teal 6
+								value: rgb(50, 115, 112)
+							-
+								label: Teal 7
+								value: rgb(44, 83, 82)
+							-
+								label: Teal 8
+								value: rgb(32, 51, 51)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Blue 6
+								value: rgb(65, 110, 135)
+							-
+								label: Blue 7
+								value: rgb(46, 81, 99)
+							-
+								label: Blue 8
+								value: rgb(34, 50, 59)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Lavender 6
+								value: rgb(99, 98, 167)
+							-
+								label: Lavender 7
+								value: rgb(72, 70, 132)
+							-
+								label: Lavender 8
+								value: rgb(44, 43, 83)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Pink 6
+								value: rgb(194, 49, 70)
+							-
+								label: Pink 7
+								value: rgb(149, 27, 42)
+							-
+								label: Pink 8
+								value: rgb(86, 28, 31)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Red 6
+								value: rgb(200, 43, 41)
+							-
+								label: Red 7
+								value: rgb(148, 31, 30)
+							-
+								label: Red 8
+								value: rgb(89, 26, 23)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Orange 6
+								value: rgb(162, 84, 38)
+							-
+								label: Orange 7
+								value: rgb(115, 64, 35)
+							-
+								label: Orange 8
+								value: rgb(68, 41, 27)
+							-
+								label: Yellow/Brown 5
+								value: rgb(175, 129, 34)
+							-
+								label: Yellow/Brown 6
+								value: rgb(131, 100, 38)
+							-
+								label: Yellow/Brown 7
+								value: rgb(94, 74, 35)
+							-
+								label: Yellow/Brown 8
+								value: rgb(57, 46, 26)
+	-			
+					id: heading 3 bg colours
+					title: Heading 3
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-3-bg-l
+						title: Heading 3 Light Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(245, 243, 240)
+						options:
+							-
+								label: Background
+								value: rgb(245, 243, 240)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green 2
+								value: rgb(223, 226, 189)
+							-
+								label: Green 3
+								value: rgb(201, 202, 133)
+							-
+								label: Green 4
+								value: rgb(171, 173, 85)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian 2
+								value: rgb(204, 228, 214)
+							-
+								label: Viridian 3
+								value: rgb(162, 209, 183)
+							-
+								label: Viridian 4
+								value: rgb(105, 184, 139)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Teal 2
+								value: rgb(201, 228, 226)
+							-
+								label: Teal 3
+								value: rgb(150, 209, 207)
+							-
+								label: Teal 4
+								value: rgb(104, 181, 177)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Blue 2
+								value: rgb(213, 225, 232)
+							-
+								label: Blue 3
+								value: rgb(177, 202, 216)
+							-
+								label: Blue 4
+								value: rgb(136, 173, 194)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender 2
+								value: rgb(222, 222, 233)
+							-
+								label: Lavender 3
+								value: rgb(196, 196, 219)
+							-
+								label: Lavender 4
+								value: rgb(165, 165, 206)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Pink 2
+								value: rgb(245, 215, 219)
+							-
+								label: Pink 3
+								value: rgb(242, 183, 192)
+							-
+								label: Pink 4
+								value: rgb(240, 138, 156)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Red 2
+								value: rgb(249, 215, 211)
+							-
+								label: Red 3
+								value: rgb(250, 182, 173)
+							-
+								label: Red 4
+								value: rgb(252, 134, 122)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Orange 2
+								value: rgb(247, 218, 186)
+							-
+								label: Orange 3
+								value: rgb(247, 186, 121)
+							-
+								label: Orange 4
+								value: rgb(241, 145, 52)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow 2
+								value: rgb(242, 223, 141)
+							-
+								label: Yellow 3
+								value: rgb(236, 193, 81)
+							-
+								label: Yellow 4
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-3-bg-d
+						title: Heading 3 Dark Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(21, 21, 21)
+						options:
+							-
+								label: Background
+								value: rgb(21, 21, 21)
+							-
+								label: Black
+								value: rgb(8, 8, 8)
+							-
+								label: True Black
+								value: rgb(0, 0, 0)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Green 6
+								value: rgb(108, 108, 46)
+							-
+								label: Green 7
+								value: rgb(79, 79, 40)
+							-
+								label: Green 8
+								value: rgb(49, 49, 28)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Viridian 6
+								value: rgb(55, 117, 82)
+							-
+								label: Viridian 7
+								value: rgb(48, 84, 62)
+							-
+								label: Viridian 8
+								value: rgb(33, 52, 40)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Teal 6
+								value: rgb(50, 115, 112)
+							-
+								label: Teal 7
+								value: rgb(44, 83, 82)
+							-
+								label: Teal 8
+								value: rgb(32, 51, 51)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Blue 6
+								value: rgb(65, 110, 135)
+							-
+								label: Blue 7
+								value: rgb(46, 81, 99)
+							-
+								label: Blue 8
+								value: rgb(34, 50, 59)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Lavender 6
+								value: rgb(99, 98, 167)
+							-
+								label: Lavender 7
+								value: rgb(72, 70, 132)
+							-
+								label: Lavender 8
+								value: rgb(44, 43, 83)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Pink 6
+								value: rgb(194, 49, 70)
+							-
+								label: Pink 7
+								value: rgb(149, 27, 42)
+							-
+								label: Pink 8
+								value: rgb(86, 28, 31)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Red 6
+								value: rgb(200, 43, 41)
+							-
+								label: Red 7
+								value: rgb(148, 31, 30)
+							-
+								label: Red 8
+								value: rgb(89, 26, 23)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Orange 6
+								value: rgb(162, 84, 38)
+							-
+								label: Orange 7
+								value: rgb(115, 64, 35)
+							-
+								label: Orange 8
+								value: rgb(68, 41, 27)
+							-
+								label: Yellow/Brown 5
+								value: rgb(175, 129, 34)
+							-
+								label: Yellow/Brown 6
+								value: rgb(131, 100, 38)
+							-
+								label: Yellow/Brown 7
+								value: rgb(94, 74, 35)
+							-
+								label: Yellow/Brown 8
+								value: rgb(57, 46, 26)
+	-			
+					id: heading 4 bg colours
+					title: Heading 4
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-4-bg-l
+						title: Heading 4 Light Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(245, 243, 240)
+						options:
+							-
+								label: Background
+								value: rgb(245, 243, 240)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green 2
+								value: rgb(223, 226, 189)
+							-
+								label: Green 3
+								value: rgb(201, 202, 133)
+							-
+								label: Green 4
+								value: rgb(171, 173, 85)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian 2
+								value: rgb(204, 228, 214)
+							-
+								label: Viridian 3
+								value: rgb(162, 209, 183)
+							-
+								label: Viridian 4
+								value: rgb(105, 184, 139)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Teal 2
+								value: rgb(201, 228, 226)
+							-
+								label: Teal 3
+								value: rgb(150, 209, 207)
+							-
+								label: Teal 4
+								value: rgb(104, 181, 177)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Blue 2
+								value: rgb(213, 225, 232)
+							-
+								label: Blue 3
+								value: rgb(177, 202, 216)
+							-
+								label: Blue 4
+								value: rgb(136, 173, 194)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender 2
+								value: rgb(222, 222, 233)
+							-
+								label: Lavender 3
+								value: rgb(196, 196, 219)
+							-
+								label: Lavender 4
+								value: rgb(165, 165, 206)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Pink 2
+								value: rgb(245, 215, 219)
+							-
+								label: Pink 3
+								value: rgb(242, 183, 192)
+							-
+								label: Pink 4
+								value: rgb(240, 138, 156)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Red 2
+								value: rgb(249, 215, 211)
+							-
+								label: Red 3
+								value: rgb(250, 182, 173)
+							-
+								label: Red 4
+								value: rgb(252, 134, 122)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Orange 2
+								value: rgb(247, 218, 186)
+							-
+								label: Orange 3
+								value: rgb(247, 186, 121)
+							-
+								label: Orange 4
+								value: rgb(241, 145, 52)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow 2
+								value: rgb(242, 223, 141)
+							-
+								label: Yellow 3
+								value: rgb(236, 193, 81)
+							-
+								label: Yellow 4
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-4-bg-d
+						title: Heading 4 Dark Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(21, 21, 21)
+						options:
+							-
+								label: Background
+								value: rgb(21, 21, 21)
+							-
+								label: Black
+								value: rgb(8, 8, 8)
+							-
+								label: True Black
+								value: rgb(0, 0, 0)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Green 6
+								value: rgb(108, 108, 46)
+							-
+								label: Green 7
+								value: rgb(79, 79, 40)
+							-
+								label: Green 8
+								value: rgb(49, 49, 28)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Viridian 6
+								value: rgb(55, 117, 82)
+							-
+								label: Viridian 7
+								value: rgb(48, 84, 62)
+							-
+								label: Viridian 8
+								value: rgb(33, 52, 40)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Teal 6
+								value: rgb(50, 115, 112)
+							-
+								label: Teal 7
+								value: rgb(44, 83, 82)
+							-
+								label: Teal 8
+								value: rgb(32, 51, 51)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Blue 6
+								value: rgb(65, 110, 135)
+							-
+								label: Blue 7
+								value: rgb(46, 81, 99)
+							-
+								label: Blue 8
+								value: rgb(34, 50, 59)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Lavender 6
+								value: rgb(99, 98, 167)
+							-
+								label: Lavender 7
+								value: rgb(72, 70, 132)
+							-
+								label: Lavender 8
+								value: rgb(44, 43, 83)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Pink 6
+								value: rgb(194, 49, 70)
+							-
+								label: Pink 7
+								value: rgb(149, 27, 42)
+							-
+								label: Pink 8
+								value: rgb(86, 28, 31)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Red 6
+								value: rgb(200, 43, 41)
+							-
+								label: Red 7
+								value: rgb(148, 31, 30)
+							-
+								label: Red 8
+								value: rgb(89, 26, 23)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Orange 6
+								value: rgb(162, 84, 38)
+							-
+								label: Orange 7
+								value: rgb(115, 64, 35)
+							-
+								label: Orange 8
+								value: rgb(68, 41, 27)
+							-
+								label: Yellow/Brown 5
+								value: rgb(175, 129, 34)
+							-
+								label: Yellow/Brown 6
+								value: rgb(131, 100, 38)
+							-
+								label: Yellow/Brown 7
+								value: rgb(94, 74, 35)
+							-
+								label: Yellow/Brown 8
+								value: rgb(57, 46, 26)
+	-			
+					id: heading 5 bg colours
+					title: Heading 5
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-5-bg-l
+						title: Heading 5 Light Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(245, 243, 240)
+						options:
+							-
+								label: Background
+								value: rgb(245, 243, 240)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green 2
+								value: rgb(223, 226, 189)
+							-
+								label: Green 3
+								value: rgb(201, 202, 133)
+							-
+								label: Green 4
+								value: rgb(171, 173, 85)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian 2
+								value: rgb(204, 228, 214)
+							-
+								label: Viridian 3
+								value: rgb(162, 209, 183)
+							-
+								label: Viridian 4
+								value: rgb(105, 184, 139)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Teal 2
+								value: rgb(201, 228, 226)
+							-
+								label: Teal 3
+								value: rgb(150, 209, 207)
+							-
+								label: Teal 4
+								value: rgb(104, 181, 177)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Blue 2
+								value: rgb(213, 225, 232)
+							-
+								label: Blue 3
+								value: rgb(177, 202, 216)
+							-
+								label: Blue 4
+								value: rgb(136, 173, 194)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender 2
+								value: rgb(222, 222, 233)
+							-
+								label: Lavender 3
+								value: rgb(196, 196, 219)
+							-
+								label: Lavender 4
+								value: rgb(165, 165, 206)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Pink 2
+								value: rgb(245, 215, 219)
+							-
+								label: Pink 3
+								value: rgb(242, 183, 192)
+							-
+								label: Pink 4
+								value: rgb(240, 138, 156)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Red 2
+								value: rgb(249, 215, 211)
+							-
+								label: Red 3
+								value: rgb(250, 182, 173)
+							-
+								label: Red 4
+								value: rgb(252, 134, 122)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Orange 2
+								value: rgb(247, 218, 186)
+							-
+								label: Orange 3
+								value: rgb(247, 186, 121)
+							-
+								label: Orange 4
+								value: rgb(241, 145, 52)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow 2
+								value: rgb(242, 223, 141)
+							-
+								label: Yellow 3
+								value: rgb(236, 193, 81)
+							-
+								label: Yellow 4
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-5-bg-d
+						title: Heading 5 Dark Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(21, 21, 21)
+						options:
+							-
+								label: Background
+								value: rgb(21, 21, 21)
+							-
+								label: Black
+								value: rgb(8, 8, 8)
+							-
+								label: True Black
+								value: rgb(0, 0, 0)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Green 6
+								value: rgb(108, 108, 46)
+							-
+								label: Green 7
+								value: rgb(79, 79, 40)
+							-
+								label: Green 8
+								value: rgb(49, 49, 28)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Viridian 6
+								value: rgb(55, 117, 82)
+							-
+								label: Viridian 7
+								value: rgb(48, 84, 62)
+							-
+								label: Viridian 8
+								value: rgb(33, 52, 40)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Teal 6
+								value: rgb(50, 115, 112)
+							-
+								label: Teal 7
+								value: rgb(44, 83, 82)
+							-
+								label: Teal 8
+								value: rgb(32, 51, 51)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Blue 6
+								value: rgb(65, 110, 135)
+							-
+								label: Blue 7
+								value: rgb(46, 81, 99)
+							-
+								label: Blue 8
+								value: rgb(34, 50, 59)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Lavender 6
+								value: rgb(99, 98, 167)
+							-
+								label: Lavender 7
+								value: rgb(72, 70, 132)
+							-
+								label: Lavender 8
+								value: rgb(44, 43, 83)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Pink 6
+								value: rgb(194, 49, 70)
+							-
+								label: Pink 7
+								value: rgb(149, 27, 42)
+							-
+								label: Pink 8
+								value: rgb(86, 28, 31)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Red 6
+								value: rgb(200, 43, 41)
+							-
+								label: Red 7
+								value: rgb(148, 31, 30)
+							-
+								label: Red 8
+								value: rgb(89, 26, 23)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Orange 6
+								value: rgb(162, 84, 38)
+							-
+								label: Orange 7
+								value: rgb(115, 64, 35)
+							-
+								label: Orange 8
+								value: rgb(68, 41, 27)
+							-
+								label: Yellow/Brown 5
+								value: rgb(175, 129, 34)
+							-
+								label: Yellow/Brown 6
+								value: rgb(131, 100, 38)
+							-
+								label: Yellow/Brown 7
+								value: rgb(94, 74, 35)
+							-
+								label: Yellow/Brown 8
+								value: rgb(57, 46, 26)
+	-			
+					id: heading 6 bg colours
+					title: Heading 6
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-6-bg-l
+						title: Heading 6 Light Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(245, 243, 240)
+						options:
+							-
+								label: Background
+								value: rgb(245, 243, 240)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green 2
+								value: rgb(223, 226, 189)
+							-
+								label: Green 3
+								value: rgb(201, 202, 133)
+							-
+								label: Green 4
+								value: rgb(171, 173, 85)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian 2
+								value: rgb(204, 228, 214)
+							-
+								label: Viridian 3
+								value: rgb(162, 209, 183)
+							-
+								label: Viridian 4
+								value: rgb(105, 184, 139)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Teal 2
+								value: rgb(201, 228, 226)
+							-
+								label: Teal 3
+								value: rgb(150, 209, 207)
+							-
+								label: Teal 4
+								value: rgb(104, 181, 177)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Blue 2
+								value: rgb(213, 225, 232)
+							-
+								label: Blue 3
+								value: rgb(177, 202, 216)
+							-
+								label: Blue 4
+								value: rgb(136, 173, 194)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender 2
+								value: rgb(222, 222, 233)
+							-
+								label: Lavender 3
+								value: rgb(196, 196, 219)
+							-
+								label: Lavender 4
+								value: rgb(165, 165, 206)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Pink 2
+								value: rgb(245, 215, 219)
+							-
+								label: Pink 3
+								value: rgb(242, 183, 192)
+							-
+								label: Pink 4
+								value: rgb(240, 138, 156)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Red 2
+								value: rgb(249, 215, 211)
+							-
+								label: Red 3
+								value: rgb(250, 182, 173)
+							-
+								label: Red 4
+								value: rgb(252, 134, 122)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Orange 2
+								value: rgb(247, 218, 186)
+							-
+								label: Orange 3
+								value: rgb(247, 186, 121)
+							-
+								label: Orange 4
+								value: rgb(241, 145, 52)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow 2
+								value: rgb(242, 223, 141)
+							-
+								label: Yellow 3
+								value: rgb(236, 193, 81)
+							-
+								label: Yellow 4
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-6-bg-d
+						title: Heading 6 Dark Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(21, 21, 21)
+						options:
+							-
+								label: Background
+								value: rgb(21, 21, 21)
+							-
+								label: Black
+								value: rgb(8, 8, 8)
+							-
+								label: True Black
+								value: rgb(0, 0, 0)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Green 6
+								value: rgb(108, 108, 46)
+							-
+								label: Green 7
+								value: rgb(79, 79, 40)
+							-
+								label: Green 8
+								value: rgb(49, 49, 28)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Viridian 6
+								value: rgb(55, 117, 82)
+							-
+								label: Viridian 7
+								value: rgb(48, 84, 62)
+							-
+								label: Viridian 8
+								value: rgb(33, 52, 40)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Teal 6
+								value: rgb(50, 115, 112)
+							-
+								label: Teal 7
+								value: rgb(44, 83, 82)
+							-
+								label: Teal 8
+								value: rgb(32, 51, 51)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Blue 6
+								value: rgb(65, 110, 135)
+							-
+								label: Blue 7
+								value: rgb(46, 81, 99)
+							-
+								label: Blue 8
+								value: rgb(34, 50, 59)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Lavender 6
+								value: rgb(99, 98, 167)
+							-
+								label: Lavender 7
+								value: rgb(72, 70, 132)
+							-
+								label: Lavender 8
+								value: rgb(44, 43, 83)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Pink 6
+								value: rgb(194, 49, 70)
+							-
+								label: Pink 7
+								value: rgb(149, 27, 42)
+							-
+								label: Pink 8
+								value: rgb(86, 28, 31)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Red 6
+								value: rgb(200, 43, 41)
+							-
+								label: Red 7
+								value: rgb(148, 31, 30)
+							-
+								label: Red 8
+								value: rgb(89, 26, 23)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Orange 6
+								value: rgb(162, 84, 38)
+							-
+								label: Orange 7
+								value: rgb(115, 64, 35)
+							-
+								label: Orange 8
+								value: rgb(68, 41, 27)
+							-
+								label: Yellow/Brown 5
+								value: rgb(175, 129, 34)
+							-
+								label: Yellow/Brown 6
+								value: rgb(131, 100, 38)
+							-
+								label: Yellow/Brown 7
+								value: rgb(94, 74, 35)
+							-
+								label: Yellow/Brown 8
+								value: rgb(57, 46, 26)
 	-
 		id: features
 		title: Features
@@ -2408,50 +2408,50 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: tasks
-		title: Disable custom tasks and pseudo-admonitions
-		type: class-toggle
-	-
-		id: hr-options
-		title: <hr> ("---") Options
-		description: For Edit Mode
-		type: class-select
-		allowEmpty: false
-		default: default
-		options:
-			-
-				label: Disable WYSIWYG hr
-				value: default
-			-
-				label: Center hr (no WYSIWYG)
-				value: center-hr
-	-
-		id: edit-mode-tasks
-		title: Edit Mode Tasks
-		description: Makes filled tasks green and empty ones red, in Edit Mode.
-		type: class-toggle
-	-
-		id: kanban-wrap
-		title: Wrap Kanban Lanes
-		description: Makes Kanban Lanes wrap in multiple rows if needed.
-		type: class-toggle
-	-
-		id: active-line-highlight
-		title: Active Line Highlighting
-		type: heading
-		level: 3
-		collapsed: true
-	-
-			id: active-line-hl
-			title: Enable active line highlighting
-			description: Disables active line highlighting
+			id: tasks
+			title: Disable custom tasks and pseudo-admonitions
 			type: class-toggle
 	-
-			id: accent-active-line
-			title: Use Accent color as Active Line Highlight
-			description: Replaces the grey with the accent color for active line highlighting.
+			id: hr-options
+			title: <hr> ("---") Options
+			description: For Edit Mode
+			type: class-select
+			allowEmpty: false
+			default: default
+			options:
+				-
+					label: Disable WYSIWYG hr
+					value: default
+				-
+					label: Center hr (no WYSIWYG)
+					value: center-hr
+	-
+			id: edit-mode-tasks
+			title: Edit Mode Tasks
+			description: Makes filled tasks green and empty ones red, in Edit Mode.
 			type: class-toggle
-			default: false
+	-
+			id: kanban-wrap
+			title: Wrap Kanban Lanes
+			description: Makes Kanban Lanes wrap in multiple rows if needed.
+			type: class-toggle
+	-
+			id: active-line-highlight
+			title: Active Line Highlighting
+			type: heading
+			level: 3
+			collapsed: true
+	-
+				id: active-line-hl
+				title: Enable active line highlighting
+				description: Disables active line highlighting
+				type: class-toggle
+	-
+				id: accent-active-line
+				title: Use Accent color as Active Line Highlight
+				description: Replaces the grey with the accent color for active line highlighting.
+				type: class-toggle
+				default: false
 	-
 		id: fn-heading
 		title: Footnotes
@@ -2459,27 +2459,27 @@ settings:
 		level: 3
 		collapsed: true
 	-
-		id: fn-title-options
-		title: Footnote Title
-		description: Places a lvl.2 heading before the Footnotes.
-		type: class-select
-		allowEmpty: false
-		default: default
-		options:
-			-
-				label: Default
-				value: default
-			-
-				label: Simple lvl 2 Heading
-				value: fn-title
-			-
-				label: Lvl 2 Heading with hr
-				value: fn-title-hr
+			id: fn-title-options
+			title: Footnote Title
+			description: Places a lvl.2 heading before the Footnotes.
+			type: class-select
+			allowEmpty: false
+			default: default
+			options:
+				-
+					label: Default
+					value: default
+				-
+					label: Simple lvl 2 Heading
+					value: fn-title
+				-
+					label: Lvl 2 Heading with hr
+					value: fn-title-hr
 	-
-		id: footnote-id
-		title: Footnotes heading
-		type: variable-text
-		default: "'Footnotes'"
+			id: footnote-id
+			title: Footnotes heading
+			type: variable-text
+			default: "'Footnotes'"
 	-
 		id: tables
 		title: Tables
@@ -2487,25 +2487,25 @@ settings:
 		level: 3
 		collapsed: true
 	-
-		id: table-options
-		title: Table Options
-		description: Customize the look of your tables!
-		type: class-select
-		allowEmpty: false
-		default: default
-		options:
-			-
-				label: Default
-				value: default
-			-
-				label: Alternate row colors
-				value: alternate-row-clr
-			-
-				label: Highlight last row
-				value: table-result
-			-
-				label: Minimal table
-				value: table-minimal
+			id: table-options
+			title: Table Options
+			description: Customize the look of your tables!
+			type: class-select
+			allowEmpty: false
+			default: default
+			options:
+				-
+					label: Default
+					value: default
+				-
+					label: Alternate row colors
+					value: alternate-row-clr
+				-
+					label: Highlight last row
+					value: table-result
+				-
+					label: Minimal table
+					value: table-minimal
 	-
 		id: sidenotes
 		title: Sidenotes
@@ -2513,45 +2513,45 @@ settings:
 		level: 3
 		collapsed: true
 	-
-		id: aside-side-options
-		title: Sidenote Options
-		description: Left and right sidenote colors
-		type: class-select
-		allowEmpty: false
-		default: default
-		options:
-			-
-				label: Default
-				value: default
-			-
-				label: Accent
-				value: aside-side-accent
-			-
-				label: Right Accent
-				value: aside-right-accent
-			-
-				label: Left Accent
-				value: aside-left-accent
+			id: aside-side-options
+			title: Sidenote Options
+			description: Left and right sidenote colors
+			type: class-select
+			allowEmpty: false
+			default: default
+			options:
+				-
+					label: Default
+					value: default
+				-
+					label: Accent
+					value: aside-side-accent
+				-
+					label: Right Accent
+					value: aside-right-accent
+				-
+					label: Left Accent
+					value: aside-left-accent
 	-
-		id: aside-in-options
-		title: Inner Sidenote Options
-		description: Inner sidenote colors 
-		type: class-select
-		allowEmpty: false
-		default: default
-		options:
-			-
-				label: Default
-				value: default
-			-
-				label: Accent
-				value: aside-in-accent
-			-
-				label: No border
-				value: aside-in-no-b
-			-
-				label: Greyscale
-				value: aside-in-grayscale
+			id: aside-in-options
+			title: Inner Sidenote Options
+			description: Inner sidenote colors 
+			type: class-select
+			allowEmpty: false
+			default: default
+			options:
+				-
+					label: Default
+					value: default
+				-
+					label: Accent
+					value: aside-in-accent
+				-
+					label: No border
+					value: aside-in-no-b
+				-
+					label: Greyscale
+					value: aside-in-grayscale
 	-
 		id: links
 		title: Links
@@ -2559,11 +2559,11 @@ settings:
 		level: 3
 		collapsed: true
 	-
-		id: alt-link
-		title: Change internal link appearance
-		description: Switches to more understated internal links.
-		type: class-toggle
-		default: false
+			id: alt-link
+			title: Change internal link appearance
+			description: Switches to more understated internal links.
+			type: class-toggle
+			default: false
 	-
 		id: lists
 		title: Lists
@@ -2571,177 +2571,165 @@ settings:
 		level: 3
 		collapsed: true
 	-
-		id: marker-odd
-		title: Odd numbered list marker content
-		description: –\2009\2009 by default, \2009 is unicode for small space
-		type: variable-text
-		default: "'–  '"
+			id: marker-odd
+			title: Odd numbered list marker content
+			description: –\2009\2009 by default, \2009 is unicode for small space
+			type: variable-text
+			default: "'–  '"
 	-
-		id: marker-even
-		title: Even numbered list marker content
-		type: variable-text
-		default: "'▪  '"
+			id: marker-even
+			title: Even numbered list marker content
+			type: variable-text
+			default: "'▪  '"
 	-
-		id: relationship-lines
-		title: Enable Relationship Lines in Reading View [OFF by default]
-		description: Toggle relationship lines in Reading View lists.
-		type: class-toggle
-		default: false
-	-
-		id: relationship-lines-lp
-		title: Disable Relationship Lines in Editing View [ON by default]
-		description: Disable relationship lines in Editing View (Live Preview) lists.
-		type: class-toggle
-		default: false
-	-
-		id: elements-title
-		title: Elements
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: no-titlebar-title
-		title: Hide Titlebar center text
-		description: This setting hides the center text of the titlebar.
-		type: class-toggle
-		default: false
-	-
-		id: show-yaml
-		title: Show YAML
-		description: Disables YAML reveal on hover and simply shows it as a code block.
-		type: class-toggle
-		default: false
-	-
-		id: topside-status-bar
-		title: Status Bar on top
-		description: This setting moves the status bar to the top. To click on icons aim for the border.
-		type: class-toggle
-		default: false
-	-
-		id: size-tab-header
-		title: Tab Header Icon side padding
-		description: Changes tab header icons side padding.
-		type: variable-number-slider
-		default: 16
-		min: 4
-		max: 20
-		step: 4
-		format: 'px'
-	-
-		id: compact-outline
-		title: Compact Outline
-		description: Hides excess text in the outline pane so every title is 1 row tall.
-		type: class-toggle
-		default: false
-	-
-		id: file-explorer
-		title: File Explorer
-		type: heading
-		level: 3
-		collapsed: true
-	-
-		id: note-title-left
-		title: Justify Note titles to the left
-		type: class-toggle
-		default: false
-	-
-		id: show-vault-name
-		title: Show Vault Name
-		type: class-toggle
-		default: false
-	-
-		id: left-nav-arrows
-		title: Left Nav Arrows
-		description: Moves nav arrows to the left, like default obsidian.
-		type: class-toggle
-		default: false
-	-
-		id: fx-rl
-		title: File Explorer Relationship Lines [Temporarily Disabled]
-		description: Adds hierarchy lines in File explorer.
-		type: class-toggle
-		default: false
-	-
-		id: no-file-icons
-		title: No File Icons
-		description: Removes file icons from file explorer.
-		type: class-toggle
-		default: false
-	-
-		id: no-folder-icons
-		title: No Folder Icons
-		description: Removes file icons from file explorer.
-		type: class-toggle
-		default: false
-	-
-		id: show-full-titles
-		title: Show full titles
-		description: Turns off trimming of folder and file titles.
-		type: class-toggle
-		default: false
-	-
-		id: modals-title
-		title: Modals
-		type: heading
-		level: 3
-		collapsed: true
-	-
-		id: settings
-		title: Settings modal width
-		type: variable-number-slider
-		default: 40
-		min: 30
-		max: 90
-		step: 10
-		format: 'vw'
-	-
-		id: community-theme
-		title: Community Themes modal width
-		type: variable-number-slider
-		default: 40
-		min: 30
-		max: 90
-		step: 10
-		format: 'vw'
-	-
-		id: community-plugin
-		title: Community Plugins modal width
-		type: variable-number-slider
-		default: 40
-		min: 30
-		max: 90
-		step: 10
-		format: 'vw'
-	-
-		id: scrollbars-title
-		title: Scrollbars
-		type: heading
-		level: 3
-		collapsed: true
-	-
-		id: no-scrl-search
-		title: No Scrollbar in Global Search
-		description: Disables Scrollbars when displaying Global Search Results.
-		type: class-toggle
-		default: false
-	-
-		id: no-scrl-note
-		title: No Scrollbar in Notes
-		description: Disables Scrollbars in Notes.
-		type: class-toggle
-		default: false
-	-
-		id: no-scrl-fx
-		title: No Scrollbar in File Explorer
-		description: Disables Scrollbars in File Explorer.
-		type: class-toggle
-		default: false
-	-
-		id: no-scrl-modal
-		title: No Scrollbar in Modal
-		description: Disables Scrollbars in settings menus.
-		type: class-toggle
-		default: false
+			id: elements-title
+			title: Elements
+			type: heading
+			level: 2
+			collapsed: true
+	-	
+			id: no-titlebar-title
+			title: Hide Titlebar center text
+			description: This setting hides the center text of the titlebar.
+			type: class-toggle
+			default: false
+	-	
+			id: show-yaml
+			title: Show YAML
+			description: Disables YAML reveal on hover and simply shows it as a code block.
+			type: class-toggle
+			default: false
+	-	
+			id: topside-status-bar
+			title: Status Bar on top
+			description: This setting moves the status bar to the top. To click on icons aim for the border.
+			type: class-toggle
+			default: false
+	-	
+			id: size-tab-header
+			title: Tab Header Icon side padding
+			description: Changes tab header icons side padding.
+			type: variable-number-slider
+			default: 16
+			min: 4
+			max: 20
+			step: 4
+			format: 'px'
+	-	
+			id: compact-outline
+			title: Compact Outline
+			description: Hides excess text in the outline pane so every title is 1 row tall.
+			type: class-toggle
+			default: false
+	-	
+			id: file-explorer
+			title: File Explorer
+			type: heading
+			level: 3
+			collapsed: true
+	-	
+				id: note-title-left
+				title: Justify Note titles to the left
+				type: class-toggle
+				default: false
+	-		
+				id: show-vault-name
+				title: Show Vault Name
+				type: class-toggle
+				default: false
+	-		
+				id: left-nav-arrows
+				title: Left Nav Arrows
+				description: Moves nav arrows to the left, like default obsidian.
+				type: class-toggle
+				default: false
+	-		
+				id: fx-rl
+				title: File Explorer Relationship Lines [Temporarily Disabled]
+				description: Adds hierarchy lines in File explorer.
+				type: class-toggle
+				default: false
+	-		
+				id: no-file-icons
+				title: No File Icons
+				description: Removes file icons from file explorer.
+				type: class-toggle
+				default: false
+	-		
+				id: no-folder-icons
+				title: No Folder Icons
+				description: Removes file icons from file explorer.
+				type: class-toggle
+				default: false
+	-		
+				id: show-full-titles
+				title: Show full titles
+				description: Turns off trimming of folder and file titles.
+				type: class-toggle
+				default: false
+	-	
+			id: modals-title
+			title: Modals
+			type: heading
+			level: 3
+			collapsed: true
+	-	
+				id: settings
+				title: Settings modal width
+				type: variable-number-slider
+				default: 40
+				min: 30
+				max: 90
+				step: 10
+				format: 'vw'
+	-		
+				id: community-theme
+				title: Community Themes modal width
+				type: variable-number-slider
+				default: 40
+				min: 30
+				max: 90
+				step: 10
+				format: 'vw'
+	-		
+				id: community-plugin
+				title: Community Plugins modal width
+				type: variable-number-slider
+				default: 40
+				min: 30
+				max: 90
+				step: 10
+				format: 'vw'
+	-	
+			id: scrollbars-title
+			title: Scrollbars
+			type: heading
+			level: 3
+			collapsed: true
+	-	
+				id: no-scrl-search
+				title: No Scrollbar in Global Search
+				description: Disables Scrollbars when displaying Global Search Results.
+				type: class-toggle
+				default: false
+	-		
+				id: no-scrl-note
+				title: No Scrollbar in Notes
+				description: Disables Scrollbars in Notes.
+				type: class-toggle
+				default: false
+	-		
+				id: no-scrl-fx
+				title: No Scrollbar in File Explorer
+				description: Disables Scrollbars in File Explorer.
+				type: class-toggle
+				default: false
+	-		
+				id: no-scrl-modal
+				title: No Scrollbar in Modal
+				description: Disables Scrollbars in settings menus.
+				type: class-toggle
+				default: false
 	-
 		id: mobile
 		title: Mobile
@@ -2749,11 +2737,11 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: float-button
-		title: Disable floating button
-		description: This setting disables the floating Editing/Reading view button, making it go back to the top.
-		type: class-toggle
-		default: false
+			id: float-button
+			title: Disable floating button
+			description: This setting disables the floating Editing/Reading view button, making it go back to the top.
+			type: class-toggle
+			default: false
 	-
 		id: advanced-options
 		title: Advanced Options
@@ -2761,23 +2749,23 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: no-blur
-		title: No background blur
-		description: This setting disables background blur on modals.
-		type: class-toggle
-		default: false
-	-
-		id: no-animation
-		title: Disable animations
-		description: This setting disables animations and transitions.
-		type: class-toggle
-		default: false
-	-
-		id: no-sanctum-icons
-		title: Default icons
-		description: Use default icons instead of the Sanctum set.
-		type: class-toggle
-		default: false
+			id: no-blur
+			title: No background blur
+			description: This setting disables background blur on modals.
+			type: class-toggle
+			default: false
+	-	
+			id: no-animation
+			title: Disable animations
+			description: This setting disables animations and transitions.
+			type: class-toggle
+			default: false
+	-	
+			id: no-sanctum-icons
+			title: Default icons
+			description: Use default icons instead of the Sanctum set.
+			type: class-toggle
+			default: false
 
 
 */
