@@ -1,6 +1,7 @@
+.cm-cursorLayer .cm-cursor,
 .CodeMirror-cursor {
-	border:none;
-	border-right: 2px solid var(--color-accent);
+	border-color: var(--text-accent);
+	border-width: 2px;
 }
 
 .cm-focused .cm-cursor-primary.cm-fat-cursor, //vim cursor
@@ -10,5 +11,6 @@
 }
 
 .CodeMirror div.CodeMirror-secondarycursor {
-	border-left: 2px solid var(--color-accent);
+	border-color: var(--text-accent);
+	border-width: 2px;
 }
