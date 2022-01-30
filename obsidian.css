@@ -1,6 +1,6 @@
 /* ─────────────────────────────────────────────────────────────────────────
 Sanctum for Obsidian.md
-Version 0.6.2
+Version 0.6.1
 created by @jdanielmourao (Github)
 
 Sponsor my work:
@@ -204,6 +204,7 @@ SOFTWARE.
   --color-fill-focused: rgb(235, 84, 108);
   --color-fill-tag: rgb(64, 150, 147);
   --color-fill-attachment: rgb(236, 193, 81);
+  --color-fill-unresolved: rgb(241, 81, 72);
   --color-accent-l: 64 150 147;
   --color-accent-d: 104 181 177;
   --color-checkbox: 140 141 59;
@@ -3430,7 +3431,7 @@ body:not(.no-sanctum-icons) div.view-header-icon svg:active {
 :not(.is-mobile) .view-action.mod-close-leaf:hover {
   color: var(--color-red);
 }
-body:not(body.plugin-sliding-panes) .workspace-leaf:not(.mod-active) .workspace-leaf-content[data-type=markdown] {
+body:not(body.plugin-sliding-panes).dim-panes .workspace-leaf:not(.mod-active) .workspace-leaf-content[data-type=markdown] {
   opacity: 0.7;
   transition: var(--motion-standard-expressive) var(--duration-moderate-1);
 }
@@ -10622,6 +10623,11 @@ settings:
 		type: heading
 		level: 2
 		collapsed: true
+	-
+			id: dim-panes
+			title: Fade inactive panes
+			description: Fades every pane other than the active one, for better focus
+			type: class-toggle
 	-
 			id: tasks
 			title: Disable custom tasks and pseudo-admonitions
