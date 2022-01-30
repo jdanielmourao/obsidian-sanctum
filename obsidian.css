@@ -1,6 +1,6 @@
 /* ─────────────────────────────────────────────────────────────────────────
 Sanctum for Obsidian.md
-Version 0.6.1
+Version 0.6.2
 created by @jdanielmourao (Github)
 
 Sponsor my work:
@@ -207,115 +207,205 @@ SOFTWARE.
   --color-accent-l: 64 150 147;
   --color-accent-d: 104 181 177;
   --color-checkbox: 140 141 59;
-  --color-green-0: rgb(254, 254, 254);
-  --color-green-1: rgb(242, 244, 234);
-  --color-green-2: rgb(223, 226, 189);
-  --color-green-3: rgb(201, 202, 133);
-  --color-green-4: rgb(171, 173, 85);
-  --color-green-5: rgb(140, 141, 59);
-  --color-green-6: rgb(108, 108, 46);
-  --color-green-7: rgb(79, 79, 40);
-  --color-green-8: rgb(49, 49, 28);
-  --color-green-9: rgb(21, 21, 13);
-  --color-green-10:rgb(0, 0, 0);
+  --color-green-0: #fefefe;
+  --color-green-1: #f2f4eb;
+  --color-green-2: #dfe2be;
+  --color-green-3: #c7cb91;
+  --color-green-4: #abad56;
+  --color-green-5: #8c8d3b;
+  --color-green-6: #6c6c2e;
+  --color-green-7: #4f4f27;
+  --color-green-8: #35351e;
+  --color-green-9: #1b1b11;
+  --color-green-10: #080808;
   --color-green: var(--color-green-5);
-  --color-viridian-0: rgb(254, 254, 254);
-  --color-viridian-1: rgb(239, 245, 242);
-  --color-viridian-2: rgb(204, 228, 214);
-  --color-viridian-3: rgb(162, 209, 183);
-  --color-viridian-4: rgb(105, 184, 139);
-  --color-viridian-5: rgb(70, 153, 106);
-  --color-viridian-6: rgb(55, 117, 82);
-  --color-viridian-7: rgb(48, 84, 62);
-  --color-viridian-8: rgb(33, 52, 40);
-  --color-viridian-9: rgb(16, 22, 18);
-  --color-viridian-10:rgb(0, 0, 0);
+  --color-viridian-0: #fefefe;
+  --color-viridian-1: #eff5f2;
+  --color-viridian-2: #cee5d7;
+  --color-viridian-3: #a2d1b7;
+  --color-viridian-4: #6ab88c;
+  --color-viridian-5: #46996a;
+  --color-viridian-6: #377552;
+  --color-viridian-7: #30543e;
+  --color-viridian-8: #23382b;
+  --color-viridian-9: #141d17;
+  --color-viridian-10:#080808;
   --color-viridian: var(--color-viridian-5);
-  --color-teal-0: rgb(254, 254, 254);
-  --color-teal-1: rgb(238, 245, 245);
-  --color-teal-2: rgb(201, 228, 226);
-  --color-teal-3: rgb(150, 209, 207);
-  --color-teal-4: rgb(104, 181, 177);
-  --color-teal-5: rgb(64, 150, 147);
-  --color-teal-6: rgb(50, 115, 112);
-  --color-teal-7: rgb(44, 83, 82);
-  --color-teal-8: rgb(32, 51, 51);
-  --color-teal-9: rgb(16, 22, 22);
-  --color-teal-10:rgb(0, 0, 0);
+  --color-teal-0: #fefefe;
+  --color-teal-1: #eef5f5;
+  --color-teal-2: #cbe4e3;
+  --color-teal-3: #96d1cf;
+  --color-teal-4: #69b5b1;
+  --color-teal-5: #419693;
+  --color-teal-6: #327370;
+  --color-teal-7: #2c5352;
+  --color-teal-8: #223737;
+  --color-teal-9: #131c1c;
+  --color-teal-10:#080808;
   --color-teal: var(--color-teal-5);
-  --color-blue-0: rgb(254, 254, 254);
-  --color-blue-1: rgb(241, 244, 246);
-  --color-blue-2: rgb(213, 225, 232);
-  --color-blue-3: rgb(177, 202, 216);
-  --color-blue-4: rgb(136, 173, 194);
-  --color-blue-5: rgb(102, 142, 165);
-  --color-blue-6: rgb(65, 110, 135);
-  --color-blue-7: rgb(46, 81, 99);
-  --color-blue-8: rgb(34, 50, 59);
-  --color-blue-9: rgb(16, 21, 25);
-  --color-blue-10:rgb(0, 0, 0);
+  --color-blue-0: #fefefe;
+  --color-blue-1: #f1f4f6;
+  --color-blue-2: #d5e1e8;
+  --color-blue-3: #b1cad8;
+  --color-blue-4: #89adc2;
+  --color-blue-5: #678ea5;
+  --color-blue-6: #426e87;
+  --color-blue-7: #2e5164;
+  --color-blue-8: #243641;
+  --color-blue-9: #141c21;
+  --color-blue-10:#080808;
   --color-blue: var(--color-blue-5);
-  --color-lavender-0: rgb(254, 254, 254);
-  --color-lavender-1: rgb(244, 244, 247);
-  --color-lavender-2: rgb(222, 222, 233);
-  --color-lavender-3: rgb(196, 196, 219);
-  --color-lavender-4: rgb(165, 165, 206);
-  --color-lavender-5: rgb(132, 132, 188);
-  --color-lavender-6: rgb(99, 98, 167);
-  --color-lavender-7: rgb(72, 70, 132);
-  --color-lavender-8: rgb(44, 43, 83);
-  --color-lavender-9: rgb(19, 20, 33);
-  --color-lavender-10:rgb(0, 0, 0);
+  --color-lavender-0: #fefefe;
+  --color-lavender-1: #f4f4f7;
+  --color-lavender-2: #dedee9;
+  --color-lavender-3: #c4c4db;
+  --color-lavender-4: #a5a5ce;
+  --color-lavender-5: #8484bc;
+  --color-lavender-6: #6362a7;
+  --color-lavender-7: #484684;
+  --color-lavender-8: #2c2b53;
+  --color-lavender-9: #131421;
+  --color-lavender-10:#000000;
   --color-lavender: var(--color-lavender-5);
-  --color-pink-0: rgb(254, 254, 254);
-  --color-pink-1: rgb(249, 241, 242);
-  --color-pink-2: rgb(245, 215, 219);
-  --color-pink-3: rgb(242, 183, 192);
-  --color-pink-4: rgb(240, 138, 156);
-  --color-pink-5: rgb(235, 84, 108);
-  --color-pink-6: rgb(194, 49, 70);
-  --color-pink-7: rgb(149, 27, 42);
-  --color-pink-8: rgb(86, 28, 31);
-  --color-pink-9: rgb(36, 15, 15);
-  --color-pink-10:rgb(0, 0, 0);
+  --color-pink-0: #fefefe;
+  --color-pink-1: #f9f2f3;
+  --color-pink-2: #f5d9dc;
+  --color-pink-3: #f2b7c0;
+  --color-pink-4: #f08a9c;
+  --color-pink-5: #eb546c;
+  --color-pink-6: #ac4856;
+  --color-pink-7: #783a41;
+  --color-pink-8: #4d2a2d;
+  --color-pink-9: #271718;
+  --color-pink-10:#080808;
   --color-pink: var(--color-pink-5);
-  --color-red-0: rgb(254, 254, 254);
-  --color-red-1: rgb(250, 241, 239);
-  --color-red-2: rgb(249, 215, 211);
-  --color-red-3: rgb(250, 182, 173);
-  --color-red-4: rgb(252, 134, 122);
-  --color-red-5: rgb(241, 81, 72);
-  --color-red-6: rgb(200, 43, 41);
-  --color-red-7: rgb(148, 31, 30);
-  --color-red-8: rgb(89, 26, 23);
-  --color-red-9: rgb(37, 14, 12);
-  --color-red-10: rgb(0, 0, 0);
+  --color-red-0: #fefefe;
+  --color-red-1: #faf2f0;
+  --color-red-2: #f8d8d4;
+  --color-red-3: #f9b6ad;
+  --color-red-4: #fb877b;
+  --color-red-5: #f15148;
+  --color-red-6: #c82b29;
+  --color-red-7: #941f1e;
+  --color-red-8: #5e1f1a;
+  --color-red-9: #2e1310;
+  --color-red-10: #080808;
   --color-red: var(--color-red-5);
-  --color-orange-0: rgb(254, 254, 254);
-  --color-orange-1: rgb(249, 242, 233);
-  --color-orange-2: rgb(247, 218, 186);
-  --color-orange-3: rgb(247, 186, 121);
-  --color-orange-4: rgb(241, 145, 52);
-  --color-orange-5: rgb(214, 108, 30);
-  --color-orange-6: rgb(162, 84, 38);
-  --color-orange-7: rgb(115, 64, 35);
-  --color-orange-8: rgb(68, 41, 27);
-  --color-orange-9: rgb(29, 18, 13);
-  --color-orange-10: rgb(0, 0, 0);
+  --color-orange-0: #fefefe;
+  --color-orange-1: #f9f2ea;
+  --color-orange-2: #f7dbbc;
+  --color-orange-3: #f3bb84;
+  --color-orange-4: #f19137;
+  --color-orange-5: #d66c1e;
+  --color-orange-6: #9b5830;
+  --color-orange-7: #6d432a;
+  --color-orange-8: #482e20;
+  --color-orange-9: #241812;
+  --color-orange-10: #000000;
   --color-orange: var(--color-orange-5);
-  --color-yellow-0: rgb(254, 254, 253);
-  --color-yellow-1: rgb(247, 244, 221);
-  --color-yellow-2: rgb(242, 223, 141);
-  --color-yellow-3: rgb(236, 193, 81);
-  --color-yellow-4: rgb(214, 159, 40);
-  --color-yellow-5: rgb(175, 129, 34);
-  --color-yellow-6: rgb(131, 100, 38);
-  --color-yellow-7: rgb(94, 74, 35);
-  --color-yellow-8: rgb(57, 46, 26);
-  --color-yellow-9: rgb(25, 20, 12);
-  --color-yellow-10: rgb(0, 0, 0);
+  --color-yellow-0: #fefefe;
+  --color-yellow-1: #f7f4df;
+  --color-yellow-2: #f2e091;
+  --color-yellow-3: #ecc152;
+  --color-yellow-4: #d69f28;
+  --color-yellow-5: #b08122;
+  --color-yellow-6: #7d6637;
+  --color-yellow-7: #5b4b29;
+  --color-yellow-8: #3d321d;
+  --color-yellow-9: #201a11;
+  --color-yellow-10: #080808;
   --color-yellow: var(--color-yellow-3);
   --txt-sel: rgba(64 150 147 / .3);
+}
+:root {
+  --base-h-l: 30;
+  --base-s-l: 1%;
+  --base-l-l: 100%;
+}
+.theme-light.custom-l {
+  --rgb-primary-10:
+    8,
+    8,
+    8;
+  --color-primary-0: #fefefe;
+  --color-primary-1: hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 4.9%));
+  --color-primary-2: hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 12.5%));
+  --color-primary-3: hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 22.2%));
+  --color-primary-4: hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 34.1%));
+  --color-primary-5: hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 46.1%));
+  --color-primary-6: hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 58.6%));
+  --color-primary-7: hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 69.6%));
+  --color-primary-8: hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 81.2%));
+  --color-primary-9: hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 91.8%));
+  --color-primary-10: #080808;
+}
+.theme-light.sanctum-coldgrey {
+  --rgb-primary-0:
+    254,
+    254,
+    254;
+  --color-primary-0: #fefefe;
+  --color-primary-1: #f1f3f7;
+  --color-primary-2: #dce0e5;
+  --color-primary-3: #c1c7cd;
+  --color-primary-4: #a3a9b1;
+  --color-primary-5: #838a92;
+  --color-primary-6: #636a71;
+  --color-primary-7: #474e53;
+  --color-primary-8: #2f3538;
+  --color-primary-9: #171b1f;
+  --color-primary-10: #080808;
+}
+.theme-light.sanctum-hearth {
+  --rgb-primary-0:
+    254,
+    254,
+    254;
+  --color-primary-0: #fefefe;
+  --color-primary-1: #f9f2ea;
+  --color-primary-2: #f7dbbc;
+  --color-primary-3: #f3bb84;
+  --color-primary-4: #f19137;
+  --color-primary-5: #d66c1e;
+  --color-primary-6: #9b5830;
+  --color-primary-7: #6d432a;
+  --color-primary-8: #482e20;
+  --color-primary-9: #241812;
+  --color-primary-10: #080808;
+}
+.theme-light.sanctum-moss {
+  --rgb-primary-0:
+    254,
+    254,
+    254;
+  --color-primary-0: #fefefe;
+  --color-primary-1: #f2f4eb;
+  --color-primary-2: #dfe2be;
+  --color-primary-3: #c7cb91;
+  --color-primary-4: #abad56;
+  --color-primary-5: #8c8d3b;
+  --color-primary-6: #6c6c2e;
+  --color-primary-7: #4f4f27;
+  --color-primary-8: #35351e;
+  --color-primary-9: #1b1b11;
+  --color-primary-10: #080808;
+}
+.theme-light.sanctum-tide {
+  --rgb-primary-0:
+    254,
+    254,
+    254;
+  --color-primary-0: #fefefe;
+  --color-primary-1: #eef5f5;
+  --color-primary-2: #cbe4e3;
+  --color-primary-3: #96d1cf;
+  --color-primary-4: #69b5b1;
+  --color-primary-5: #419693;
+  --color-primary-6: #327370;
+  --color-primary-7: #2c5352;
+  --color-primary-8: #223737;
+  --color-primary-9: #131c1c;
+  --color-primary-10: #080808;
 }
 .theme-light.sanctum-light {
   --rgb-primary-0:
@@ -355,6 +445,11 @@ SOFTWARE.
   --color-primary-9: #151515;
   --color-primary-10: #080808;
 }
+.theme-light.custom-l,
+.theme-light.sanctum-coldgrey,
+.theme-light.sanctum-tide,
+.theme-light.sanctum-hearth,
+.theme-light.sanctum-moss,
 .theme-light,
 .theme-light.sanctum-light,
 .theme-light.gruvbox {
@@ -378,7 +473,7 @@ SOFTWARE.
     39;
   --background-modifier-error-hover: #f15148;
   --background-modifier-cover: var(--color-primary-2);
-  --text-normal: var(--color-primary-10);
+  --text-normal: var(--color-primary-8);
   --text-muted: var(--color-primary-7);
   --text-faint: var(--color-primary-5);
   --text-accent: var(--color-accent);
@@ -399,21 +494,98 @@ SOFTWARE.
   --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
   --highlight-mix-blend-mode: darken;
 }
-.theme-dark.gruvbox {
+:root {
+  --base-h-d: 30;
+  --base-s-d: 1%;
+  --base-l-d: 10%;
+}
+.theme-dark.custom-d {
+  --rgb-primary-0:
+    8,
+    8,
+    8;
+  --rgb-primary-10:
+    254,
+    254,
+    254;
+  --color-primary-0: #080808;
+  --color-primary-1: hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 0.6%));
+  --color-primary-2: hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 10.6%));
+  --color-primary-3: hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 20.4%));
+  --color-primary-4: hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 31.4%));
+  --color-primary-5: hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 43.9%));
+  --color-primary-6: hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 55.9%));
+  --color-primary-7: hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 67.6%));
+  --color-primary-8: hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 77.5%));
+  --color-primary-9: hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 85.1%));
+  --color-primary-10: #fefefe;
+}
+.theme-dark.sanctum-coldgrey-d {
   --rgb-primary-0:
     8,
     8,
     8;
   --color-primary-0: #080808;
-  --color-primary-1: #151515;
-  --color-primary-2: #312F30;
-  --color-primary-3: #4f4c4d;
-  --color-primary-4: #6b6868;
-  --color-primary-5: #8b8888;
-  --color-primary-6: #aaa8a6;
-  --color-primary-7: #c9c6c4;
-  --color-primary-8: #e2dfdc;
-  --color-primary-9: #f5f3f0;
+  --color-primary-1: #171b1f;
+  --color-primary-2: #2f3538;
+  --color-primary-3: #474e53;
+  --color-primary-4: #636a71;
+  --color-primary-5: #838a92;
+  --color-primary-6: #a3a9b1;
+  --color-primary-7: #c1c7cd;
+  --color-primary-8: #dce0e5;
+  --color-primary-9: #f1f3f7;
+  --color-primary-10: #fefefe;
+}
+.theme-dark.sanctum-chocolate {
+  --rgb-primary-0:
+    8,
+    8,
+    8;
+  --color-primary-0: #080808;
+  --color-primary-1: #201a14;
+  --color-primary-2: #403124;
+  --color-primary-3: #614832;
+  --color-primary-4: #86613f;
+  --color-primary-5: #b37e4c;
+  --color-primary-6: #db9b5e;
+  --color-primary-7: #f3bc85;
+  --color-primary-8: #f7dbbc;
+  --color-primary-9: #f9f2eb;
+  --color-primary-10: #fefefe;
+}
+.theme-dark.sanctum-forest {
+  --rgb-primary-0:
+    8,
+    8,
+    8;
+  --color-primary-0: #080808;
+  --color-primary-1: #1b1b11;
+  --color-primary-2: #35351e;
+  --color-primary-3: #4f4f27;
+  --color-primary-4: #6c6c2e;
+  --color-primary-5: #8c8d3b;
+  --color-primary-6: #abad56;
+  --color-primary-7: #c7cb91;
+  --color-primary-8: #dfe2be;
+  --color-primary-9: #f2f4eb;
+  --color-primary-10: #fefefe;
+}
+.theme-dark.sanctum-sea {
+  --rgb-primary-0:
+    8,
+    8,
+    8;
+  --color-primary-0: #080808;
+  --color-primary-1: #131c1c;
+  --color-primary-2: #223737;
+  --color-primary-3: #2c5352;
+  --color-primary-4: #327370;
+  --color-primary-5: #419693;
+  --color-primary-6: #69b5b1;
+  --color-primary-7: #96d1cf;
+  --color-primary-8: #cbe4e3;
+  --color-primary-9: #eef5f5;
   --color-primary-10: #fefefe;
 }
 .theme-dark.sanctum-true-black {
@@ -421,17 +593,34 @@ SOFTWARE.
     0,0,0 ;
   --color-primary-0: #080808;
   --color-primary-1: #000000;
-  --color-primary-2: #080808;
-  --color-primary-3: #151515;
-  --color-primary-4: #312F30;
-  --color-primary-5: #4f4c4d;
-  --color-primary-6: #6b6868;
-  --color-primary-7: #8b8888;
-  --color-primary-8: #aaa8a6;
-  --color-primary-9: #c9c6c4;
-  --color-primary-10: #e2dfdc;
+  --color-primary-2: #1b1b1b;
+  --color-primary-3: #363334;
+  --color-primary-4: #4f4c4d;
+  --color-primary-5: #6b6869;
+  --color-primary-6: #8b8888;
+  --color-primary-7: #aaa8a6;
+  --color-primary-8: #c9c6c3;
+  --color-primary-9: #e2dfdc;
+  --color-primary-10: #f5f3f0;
 }
 .theme-dark.sanctum-dark {
+  --rgb-primary-0:
+    8,
+    8,
+    8;
+  --color-primary-0: #080808;
+  --color-primary-1: #1b1b1b;
+  --color-primary-2: #363334;
+  --color-primary-3: #4f4c4d;
+  --color-primary-4: #6b6869;
+  --color-primary-5: #8b8888;
+  --color-primary-6: #aaa8a6;
+  --color-primary-7: #c9c6c3;
+  --color-primary-8: #e2dfdc;
+  --color-primary-9: #f5f3f0;
+  --color-primary-10: #fefefe;
+}
+.theme-dark.sanctum-legacy-dark {
   --rgb-primary-0:
     8,
     8,
@@ -458,21 +647,26 @@ SOFTWARE.
     254,
     254;
   --color-primary-0: #080808;
-  --color-primary-1: #151515;
-  --color-primary-2: #312F30;
+  --color-primary-1: #1b1b1b;
+  --color-primary-2: #363334;
   --color-primary-3: #4f4c4d;
-  --color-primary-4: #6b6868;
+  --color-primary-4: #6b6869;
   --color-primary-5: #8b8888;
   --color-primary-6: #aaa8a6;
-  --color-primary-7: #c9c6c4;
+  --color-primary-7: #c9c6c3;
   --color-primary-8: #e2dfdc;
   --color-primary-9: #f5f3f0;
   --color-primary-10: #fefefe;
 }
+.theme-dark.custom-d,
+.theme-dark.sanctum-coldgrey-d,
+.theme-dark.sanctum-sea,
+.theme-dark.sanctum-fire,
+.theme-dark.sanctum-forest,
 .theme-dark,
 .theme-dark.sanctum-true-black,
 .theme-dark.sanctum-dark,
-.theme-dark.gruvbox {
+.theme-dark.sanctum-legacy-dark {
   --font-thin: 100;
   --font-extra-light: 100;
   --font-light: 200;
@@ -500,7 +694,7 @@ SOFTWARE.
     39;
   --background-modifier-error-hover: #f15148;
   --background-modifier-cover: var(--color-primary-2);
-  --text-normal: var(--color-primary-10);
+  --text-normal: var(--color-primary-8);
   --text-muted: var(--color-primary-7);
   --text-faint: var(--color-primary-5);
   --text-accent: var(--color-accent);
@@ -1063,37 +1257,37 @@ body.head-indicator .mod-cm6.is-live-preview .HyperMD-header::before {
   display: inline-block;
   font-family: var(--font-mono);
   color: var(--color-accent);
-  right: 4px;
+  right: 2px;
 }
 body.head-indicator .mod-cm6.is-live-preview .HyperMD-header-1::before {
   content: "H1";
-  font-size: var(--h1);
-  bottom: calc(var(--heading-1) / 4);
+  font-size: 0.7rem;
+  bottom: calc(var(--heading-1) / 3.5);
 }
 body.head-indicator .mod-cm6.is-live-preview .HyperMD-header-2::before {
   content: "H2";
-  font-size: var(--h2);
-  bottom: calc(var(--heading-2) / 4);
+  font-size: 0.7rem;
+  bottom: calc(var(--heading-2) / 3.5);
 }
 body.head-indicator .mod-cm6.is-live-preview .HyperMD-header-3::before {
   content: "H3";
-  font-size: var(--h3);
-  bottom: calc(var(--heading-3) / 4);
+  font-size: 0.7rem;
+  bottom: calc(var(--heading-3) / 3.5);
 }
 body.head-indicator .mod-cm6.is-live-preview .HyperMD-header-4::before {
   content: "H4";
-  font-size: var(--h4);
-  bottom: calc(var(--heading-4) / 4);
+  font-size: 0.7rem;
+  bottom: calc(var(--heading-4) / 3.5);
 }
 body.head-indicator .mod-cm6.is-live-preview .HyperMD-header-5::before {
   content: "H5";
-  font-size: var(--h5);
-  bottom: calc(var(--heading-5) / 4);
+  font-size: 0.7rem;
+  bottom: calc(var(--heading-5) / 3.5);
 }
 body.head-indicator .mod-cm6.is-live-preview .HyperMD-header-6::before {
   content: "H6";
-  font-size: var(--h6);
-  bottom: calc(var(--heading-6) / 4);
+  font-size: 0.7rem;
+  bottom: calc(var(--heading-6) / 3.5);
 }
 body.head-indicator .markdown-source-view.mod-cm6.is-live-preview .HyperMD-header .cm-fold-indicator .collapse-indicator {
   transform: translateY(25%);
@@ -1326,7 +1520,7 @@ body:not(.is-mobile) .empty-state-action-list::after {
   padding-top: 8px;
   padding-left: 12px;
   white-space: pre-wrap;
-  content: "Sanctum v0.6.1 \a Designed by @jdanielmourao 2021-2022 \a Font: IBM Plex Sans & Mono";
+  content: "Sanctum v0.6.2 \a Designed by @jdanielmourao 2021-2022 \a Font: IBM Plex Sans & Mono";
   font-size: var(--font-scale-000);
   font-family: var(--font-monospace);
   font-weight: var(--font-light);
@@ -1393,6 +1587,10 @@ body:not(.is-mobile) .empty-state-action-list::after {
 }
 @media (min-width: 768px) {
   .workspace-drawer {
+    max-width: 300pt;
+  }
+  .workspace-drawer.is-pinned.mod-right,
+  .workspace-drawer.is-pinned.mod-left {
     max-width: 300pt;
   }
 }
@@ -1997,6 +2195,7 @@ body.is-mobile:not(.float-button).AT-multirow .view-action:nth-last-of-type(4) {
   border-radius: 6px;
   overflow: hidden;
   padding: 16px 16px 8px;
+  border: 1px solid var(--color-primary-0);
 }
 body:not(.is-mobile) .modal-close-button {
   right: 12px;
@@ -2160,39 +2359,39 @@ textarea.sync-history-content {
   background-color: var(--background-primary);
   padding: 5px 24px;
 }
-.community-theme-container .setting-item-control button {
+.modal-content .community-theme-container .setting-item-control button {
   margin-left: 8px;
   margin-right: 48px;
   padding: 4px 8px 2px;
 }
-.community-theme-container .theme-list .community-theme {
+.modal-content .community-theme-container .theme-list .community-theme {
   padding: 8px 8px 8px 8px;
   margin: 8px 8px 8px 8px;
   border: 1px solid transparent;
 }
-.community-theme-container .theme-list .community-theme:hover {
+.modal-content .community-theme-container .theme-list .community-theme:hover {
   background-color: var(--color-hover);
   border: 1px solid var(--color-primary-3);
   border-radius: 8px;
 }
-.community-theme-container .theme-list .community-theme .community-theme-screenshot.mod-unavailable {
+.modal-content .community-theme-container .theme-list .community-theme .community-theme-screenshot.mod-unavailable {
   color: var(--text-muted);
 }
-.community-theme-container .theme-list .community-theme.is-selected {
+.modal-content .community-theme-container .theme-list .community-theme.is-selected {
   background-color: rgba(var(--rgb-primary-0), 0.5);
   border-radius: 8px;
   border: 1px solid var(--color-accent);
   color: var(--text-normal);
 }
-.community-theme-container .theme-list .community-theme.is-selected button {
+.modal-content .community-theme-container .theme-list .community-theme.is-selected button {
   background-color: var(--color-accent);
   color: var(--color-white);
 }
-.community-theme-container .theme-list .community-theme.is-selected .community-theme-info {
+.modal-content .community-theme-container .theme-list .community-theme.is-selected .community-theme-info {
   color: var(--text-normal);
 }
-.community-theme-container .theme-list .community-theme.is-selected .community-theme-info::after {
-  content: "v0.6.1";
+.modal-content .community-theme-container .theme-list .community-theme.is-selected .community-theme-info::after {
+  content: "v0.6.2";
   font-family: var(--menu-font-family);
   font-size: var(--font-scale-000);
   color: var(--text-normal);
@@ -2205,21 +2404,20 @@ textarea.sync-history-content {
   border: 1px solid var(--color-border-1);
   border-radius: 8px;
 }
-.community-theme-container .theme-list .community-theme .modal-button-container button,
-.community-theme-container .theme-list .community-theme .modal-button-container button.mod-cta {
+.modal-content .community-theme-container .theme-list .community-theme .modal-button-container button,
+.modal-content .community-theme-container .theme-list .community-theme .modal-button-container button.mod-cta {
   line-height: var(--leading-0);
   border-radius: 4px;
   margin: 0 2px;
 }
-.community-theme-container .theme-list .community-theme .modal-button-container button:not(.mod-cta) {
+.modal-content .community-theme-container .theme-list .community-theme .modal-button-container button:not(.mod-cta) {
   padding: 7px 39px 7px 16px;
   font-size: var(--font-scale-00);
   font-weight: var(--font-regular);
   font-family: var(--font-ui);
-  background-color: var(--color-accent);
-  color: var(--color-white);
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px -1px 0px 0px rgba(8, 8, 8, 0.2) inset, 0px 1px 0px 0px rgba(245, 243, 240, 0.35) inset;
+  background-color: var(--background-primary);
+  color: var(--text-accent);
+  border: 1px solid var(--color-accent);
 }
 .community-theme-remove-button.clickable-icon.u-muted {
   background-color: transparent;
@@ -2536,9 +2734,6 @@ div.tree-item-inner {
   background-color: transparent;
   color: var(--text-normal);
 }
-.theme-dark.sanctum-true-black .tree-item-flair {
-  color: var(--text-muted);
-}
 .tag-container {
   font-size: var(--font-scale-00);
   padding: 16px 16px 16px 16px;
@@ -2697,7 +2892,7 @@ body:not(.no-sanctum-icons) .nav-action-button svg {
   text-overflow: ellipsis;
 }
 .nav-files-container {
-  padding: 16px 0px 0px 16px;
+  padding: 16px 2px 0px 16px;
   background-color: var(--background-primary);
 }
 .nav-folder-title-content,
@@ -2722,7 +2917,7 @@ body:not(.no-sanctum-icons) .nav-action-button svg {
 .nav-vault-title,
 .nav-folder-title.has-folder-note {
   height: 25px;
-  padding: 0px 16px 0px 0px;
+  padding: 0px 8px 0px 0px;
   width: unset;
   font-size: var(--font-scale-00);
   color: var(--text-muted);
@@ -2767,22 +2962,28 @@ body:not(.no-sanctum-icons) .nav-action-button svg {
 body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-child:hover::before {
   color: var(--text-normal);
 }
-.theme-dark.sanctum-true-black:not(.no-sanctum-icons) .nav-folder-title-content,
-.theme-dark.sanctum-true-black:not(.no-sanctum-icons) .nav-file-title-content {
+.theme-dark.sanctum-true-black .nav-folder-title-content,
+.theme-dark.sanctum-true-black .nav-file-title-content {
   color: var(--text-muted);
 }
-.theme-dark.sanctum-true-black:not(.no-sanctum-icons) .nav-folder-title-content:hover,
-.theme-dark.sanctum-true-black:not(.no-sanctum-icons) .nav-file-title-content:hover {
+.theme-dark.sanctum-true-black .nav-folder-title-content:hover,
+.theme-dark.sanctum-true-black .nav-file-title-content:hover {
   color: var(--text-normal);
 }
-.theme-dark.sanctum-true-black:not(.no-sanctum-icons) .nav-file-title.is-active:hover .nav-file-title-content,
-.theme-dark.sanctum-true-black:not(.no-sanctum-icons) .nav-file-title.is-active:hover .nav-file-title-content::before {
+.theme-dark.sanctum-true-black .nav-file-title.is-active .nav-file-title-content {
+  color: var(--color-primary-3);
+}
+.theme-dark.sanctum-true-black .nav-file-title.is-active .nav-file-title-content::before {
+  color: var(--color-primary-3);
+}
+.theme-dark.sanctum-true-black .nav-file-title.is-active:hover .nav-file-title-content,
+.theme-dark.sanctum-true-black .nav-file-title.is-active:hover .nav-file-title-content::before {
   color: var(--text-muted);
 }
-.theme-dark.sanctum-true-black:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content::before {
+.theme-dark.sanctum-true-black .nav-folder-children .nav-file-title-content::before {
   color: var(--text-muted);
 }
-.theme-dark.sanctum-true-black:not(.no-sanctum-icons) .nav-folder-children .nav-file-title:hover .nav-file-title-content::before {
+.theme-dark.sanctum-true-black .nav-folder-children .nav-file-title:hover .nav-file-title-content::before {
   color: var(--text-normal);
 }
 .nav-folder-title {
@@ -2803,7 +3004,6 @@ body.is-mobile .nav-file .nav-file-title.is-active .nav-file-title-content {
 }
 .nav-file .nav-file-title.is-active .nav-file-title-content::before {
   color: var(--color-primary-0);
-  border: none;
 }
 body.is-mobile .nav-file .nav-file-title.is-active .nav-file-title-content::before {
   color: var(--background-primary);
@@ -2812,7 +3012,7 @@ body.is-mobile .nav-file .nav-file-title.is-active .nav-file-title-content::befo
 .drag-ghost,
 .workspace-drop-overlay:before {
   border: none;
-  border-radius: 12px;
+  border-radius: 4px;
   background-color: var(--color-hover);
   color: var(--text-normal);
 }
@@ -3275,7 +3475,7 @@ body:not(body.plugin-sliding-panes) .workspace-leaf:not(.mod-active) .workspace-
 .embedded-backlinks .nav-buttons-container .nav-action-button {
   align-self: center;
   height: 16px;
-  padding: 4px 8px 4px 8px;
+  padding: 2px 8px 4px 8px;
   margin: 0 0.5px;
   border-radius: 4px;
   height: 24px;
@@ -3329,21 +3529,22 @@ em {
   font-style: italic;
   font-weight: var(--font-light);
 }
-body:not(.active-line-hl) .cm-active.cm-line,
-body:not(.active-line-hl) .CodeMirror-activeline .CodeMirror-linebackground {
+body.active-line-hl .cm-active.cm-line,
+body.active-line-hl .CodeMirror-activeline .CodeMirror-linebackground {
   position: relative;
   background-color: var(--color-primary-2);
+  border-radius: 2px;
 }
 .is-mobile .cm-active.cm-line,
 .is-mobile .CodeMirror-activeline .CodeMirror-linebackground {
   position: unset;
 }
-body:not(.active-line-hl).accent-active-line .cm-active.cm-line,
-body:not(.active-line-hl).accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
+body.active-line-hl.accent-active-line .cm-active.cm-line,
+body.active-line-hl.accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
   background-color: rgba(var(--color-accent-l)/0.3);
 }
-body:not(.active-line-hl).theme-dark.accent-active-line .cm-active.cm-line,
-body:not(.active-line-hl).theme-dark.accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
+body.active-line-hl.theme-dark.accent-active-line .cm-active.cm-line,
+body.active-line-hl.theme-dark.accent-active-line .CodeMirror-activeline .CodeMirror-linebackground {
   background-color: rgba(var(--color-accent-d)/0.3);
 }
 .theme-light pre[class*=language-]::selection,
@@ -3383,13 +3584,18 @@ del,
 .cm-strikethrough {
   text-decoration: line-through;
 }
+.markdown-source-view.redacted .cm-strikethrough {
+  text-decoration: none;
+  background-color: rgba(241, 81, 72, 0.5);
+  -webkit-box-decoration-break: clone;
+  border-radius: 4px;
+}
 .redacted del {
   text-decoration: none;
   display: inline-block;
   color: transparent;
   background-color: rgba(241, 81, 72, 0.5);
   border-radius: 4px;
-  cursor: no-drop;
   height: 1rem;
   width: 0.5rem;
   vertical-align: -2px;
@@ -3431,15 +3637,18 @@ strong em {
   text-decoration: underline solid var(--color-red-5);
   text-decoration-thickness: 2px;
 }
-.cm-lineNumbers .cm-gutterElement {
+.cm-lineNumbers .cm-gutterElement:not(.cm-active) {
+  opacity: 0.3;
+}
+.cm-lineNumbers .cm-gutterElement.cm-active {
   font-size: var(--font-scale-000);
   color: var(--text-faint);
+  opacity: 1;
 }
 ul li::marker,
 ol li::marker {
   font-weight: var(--font-regular);
   font-size: var(--font-scale-0);
-  color: var(--text-normal);
   font-family: var(--font-sans);
   font-variant-numeric: tabular-nums;
 }
@@ -3554,7 +3763,7 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
   color: var(--text-muted);
 }
 .list-bullet {
-  left: 1.5px;
+  left: 4px;
   padding-right: 4px;
 }
 .markdown-source-view.mod-cm6 .list-bullet::after {
@@ -3563,34 +3772,39 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
 .list-bullet::after {
   color: var(--text-normal);
   margin-right: 0px;
-  transform: translateY(-1px);
+  transform: translateY(1px);
 }
 .markdown-source-view.mod-cm6 .cm-list-1 .list-bullet::after {
   content: var(--marker-odd);
+  left: 1px;
 }
 .markdown-source-view.mod-cm6 .cm-list-2 .list-bullet::after {
   content: var(--marker-even);
 }
 .markdown-source-view.mod-cm6 .cm-list-3 .list-bullet::after {
   content: var(--marker-odd);
+  left: 1px;
 }
 .markdown-source-view.mod-cm6 .cm-list-4 .list-bullet::after {
   content: var(--marker-even);
 }
 .markdown-source-view.mod-cm6 .cm-list-5 .list-bullet::after {
   content: var(--marker-odd);
+  left: 1px;
 }
 .markdown-source-view.mod-cm6 .cm-list-6 .list-bullet::after {
   content: var(--marker-even);
 }
 .markdown-source-view.mod-cm6 .cm-list-7 .list-bullet::after {
   content: var(--marker-odd);
+  left: 1px;
 }
 .markdown-source-view.mod-cm6 .cm-list-8 .list-bullet::after {
   content: var(--marker-even);
 }
 .markdown-source-view.mod-cm6 .cm-list-9 .list-bullet::after {
   content: var(--marker-odd);
+  left: 1px;
 }
 .markdown-source-view.mod-cm6 .cm-list-10 .list-bullet::after {
   content: var(--marker-even);
@@ -3747,11 +3961,24 @@ div > .CodeMirror-line span.cm-hashtag-end {
   padding: 3px 0 1.5px 0;
   border-radius: 0;
 }
+.alt-link .cm-highlight.cm-hmd-internal-link .cm-underline {
+  padding: 0;
+}
 .cm-em.cm-highlight.cm-hmd-internal-link .cm-underline {
   background-color: rgba(104, 181, 177, 0.5);
 }
 .cm-highlight.cm-hmd-internal-link.cm-strong .cm-underline {
   background-color: rgba(240, 138, 156, 0.5);
+}
+.alt-link .cm-s-obsidian span.cm-hmd-internal-link,
+.alt-link .markdown-preview-view .internal-link {
+  text-decoration: none;
+  color: var(--text-accent);
+  font-weight: 450;
+  text-transform: none;
+  font-size: inherit;
+  letter-spacing: inherit;
+  border-radius: 4px;
 }
 .markdown-preview-view .internal-link.is-unresolved {
   opacity: 0.6;
@@ -4561,9 +4788,10 @@ code.language-yaml.is-loaded .token.key.atrule {
 .frontmatter-container {
   display: visible;
 }
+.cm-cursorLayer .cm-cursor,
 .CodeMirror-cursor {
-  border: none;
-  border-right: 2px solid var(--color-accent);
+  border-color: var(--text-accent);
+  border-width: 2px;
 }
 .cm-focused .cm-cursor-primary.cm-fat-cursor,
 .cm-fat-cursor .CodeMirror-cursor {
@@ -4571,7 +4799,8 @@ code.language-yaml.is-loaded .token.key.atrule {
   color: var(--color-accent);
 }
 .CodeMirror div.CodeMirror-secondarycursor {
-  border-left: 2px solid var(--color-accent);
+  border-color: var(--text-accent);
+  border-width: 2px;
 }
 kbd:not(.suggestion-hotkey) {
   font-family: var(--font-mono);
@@ -4649,8 +4878,8 @@ button.mod-cta:active {
   background-color: rgba(var(--color-accent-d)/1);
   box-shadow: 0px -1px 0px 0px rgba(8, 8, 8, 0.2) inset, 0px 1px 3px 1px rgba(8, 8, 8, 0.3) inset;
 }
-.modal.mod-community-plugin .setting-item-control button.clickable-icon,
-.modal.mod-community-theme .setting-item-control button.clickable-icon {
+.modal.mod-community-plugin .setting-item .setting-item-control button.clickable-icon,
+.modal.mod-community-theme .setting-item .setting-item-control button.clickable-icon {
   color: var(--text-muted);
   border-radius: 3px;
   padding: 4px 4px 0px 4px;
@@ -4663,21 +4892,21 @@ button.mod-cta:active {
   box-shadow: 0px -1px 0px 0px rgba(8, 8, 8, 0.1) inset, 0 2px 5px 1px rgba(0, 0, 0, 0.1);
   background-color: var(--color-primary-2);
 }
-.modal.mod-community-plugin .setting-item-control button.clickable-icon:hover,
-.modal.mod-community-theme .setting-item-control button.clickable-icon:hover {
+.modal.mod-community-plugin .setting-item .setting-item-control button.clickable-icon:hover,
+.modal.mod-community-theme .setting-item .setting-item-control button.clickable-icon:hover {
   opacity: 0.9;
 }
-.modal.mod-community-plugin .setting-item-control button.clickable-icon:active,
-.modal.mod-community-theme .setting-item-control button.clickable-icon:active {
+.modal.mod-community-plugin .setting-item .setting-item-control button.clickable-icon:active,
+.modal.mod-community-theme .setting-item .setting-item-control button.clickable-icon:active {
   box-shadow: 0px 1px 3px 1px rgba(8, 8, 8, 0.2) inset;
 }
-.theme-dark .modal.mod-community-plugin .setting-item-control button.clickable-icon,
-.theme-dark .modal.mod-community-theme .setting-item-control button.clickable-icon {
+.theme-dark .modal.mod-community-plugin .setting-item .setting-item-control button.clickable-icon,
+.theme-dark .modal.mod-community-theme .setting-item .setting-item-control button.clickable-icon {
   box-shadow: 0px -1px 0px 0px rgba(8, 8, 8, 0.5) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--color-primary-2);
 }
-.theme-dark .modal.mod-community-plugin .setting-item-control button.clickable-icon:active,
-.theme-dark .modal.mod-community-theme .setting-item-control button.clickable-icon:active {
+.theme-dark .modal.mod-community-plugin .setting-item .setting-item-control button.clickable-icon:active,
+.theme-dark .modal.mod-community-theme .setting-item .setting-item-control button.clickable-icon:active {
   box-shadow: 0px 1px 3px 1px rgba(8, 8, 8, 0.5) inset;
 }
 .modal.mod-publish button:not(.mod-cta):not(.mod-warning) {
@@ -4727,6 +4956,14 @@ button.mod-cta:active {
 .modal-container.mod-confirmation .modal-button-container {
   display: flex;
   flex-direction: row;
+  width: auto;
+  height: auto;
+}
+.is-mobile .modal-container.mod-confirmation .modal-button-container {
+  flex-direction: column;
+}
+.is-mobile .modal-container.mod-confirmation .modal-button-container button.mod-warning:first-child {
+  margin-left: 0;
 }
 .modal-container.mod-confirmation .modal-button-container button.mod-warning:first-child {
   order: 0;
@@ -4735,7 +4972,6 @@ button.mod-cta:active {
   background-color: var(--background-primary);
   color: var(--color-red);
   text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
-  box-shadow: none;
   background: none;
   border: 1px solid var(--color-red);
   border-radius: 4px;
@@ -4746,6 +4982,10 @@ button.mod-cta:active {
 }
 .modal-container.mod-confirmation .modal-button-container button.mod-warning {
   order: 0;
+}
+.is-mobile .modal-button-container button {
+  margin: 4px 0;
+  padding: 8px 0;
 }
 .markdown-source-view.mod-cm6 .cm-foldPlaceholder {
   color: var(--text-normal);
@@ -4815,6 +5055,20 @@ span[title="Unfold line"]:hover,
   font-family: var(--font-sans);
   font-size: 1.1rem;
   margin-right: -2px;
+  opacity: 0.5;
+}
+.mod-cm6 .collapse-indicator:hover {
+  opacity: 1;
+}
+.mod-cm6 .collapse-indicator,
+.markdown-preview-view .list-collapse-indicator,
+.markdown-preview-view .heading-collapse-indicator {
+  opacity: 0.5;
+}
+.mod-cm6 .collapse-indicator:hover,
+.markdown-preview-view .list-collapse-indicator:hover,
+.markdown-preview-view .heading-collapse-indicator:hover {
+  opacity: 1;
 }
 select.dropdown {
   appearance: none;
@@ -5448,6 +5702,7 @@ body:not(.tasks) .markdown-preview-view li:is([data-task=B], [data-task=X], [dat
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task=x]):not([data-task=" "]),
 body:not(.tasks) .markdown-preview-view li:not([data-task=x]) > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li:not([data-task=x]) > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li:not([data-task=x]) > .task-list-item-checkbox:checked {
   background-repeat: no-repeat;
   background-size: 18px 18px;
@@ -5456,122 +5711,146 @@ body:not(.tasks) li:not([data-task=x]) > .task-list-item-checkbox:checked {
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=n],
 body:not(.tasks) .markdown-preview-view li[data-task=n] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task=n] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task=n] > .task-list-item-checkbox:checked {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M28.586 13.314 30 11.9 20 2l-1.314 1.415 1.186 1.186L8.38 14.322l-1.716-1.715L5.25 14l5.657 5.677L2 28.583 3.41 30l8.911-8.909L18 26.748l1.393-1.414-1.716-1.716 9.724-11.49Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 body:not(.tasks).theme-dark .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=n],
 body:not(.tasks).theme-dark .markdown-preview-view li[data-task=n] > .task-list-item-checkbox:checked,
+body:not(.tasks).theme-dark .markdown-preview-view li[data-task=n] > p > .task-list-item-checkbox:checked,
 body:not(.tasks).theme-dark li[data-task=n] > .task-list-item-checkbox:checked {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(254, 254, 254)' viewBox='0 0 32 32'%3E%3Cpath d='M28.586 13.314 30 11.9 20 2l-1.314 1.415 1.186 1.186L8.38 14.322l-1.716-1.715L5.25 14l5.657 5.677L2 28.583 3.41 30l8.911-8.909L18 26.748l1.393-1.414-1.716-1.716 9.724-11.49Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=\2b50],
 body:not(.tasks) .markdown-preview-view li[data-task=\2b50] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task=\2b50] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task=\2b50] > .task-list-item-checkbox:checked {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(41, 68.5%, 49.8%)' viewBox='0 0 32 32'%3E%3Cpath d='m16 2-4.55 9.22-10.17 1.47 7.36 7.18L6.9 30l9.1-4.78L25.1 30l-1.74-10.13 7.36-7.17-10.17-1.48Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(214, 159, 40)' viewBox='0 0 32 32'%3E%3Cpath d='m16 2-4.55 9.22-10.17 1.47 7.36 7.18L6.9 30l9.1-4.78L25.1 30l-1.74-10.13 7.36-7.17-10.17-1.48Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=a],
 body:not(.tasks) .markdown-preview-view li[data-task=a] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task=a] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task=a] > .task-list-item-checkbox:checked {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(41, 68.5%, 49.8%)' viewBox='0 0 32 32'%3E%3Cpath d='M28.707 19.293 26 16.586V13a10.014 10.014 0 0 0-9-9.95V1h-2v2.05A10.014 10.014 0 0 0 6 13v3.586l-2.707 2.707A1 1 0 0 0 3 20v3a1 1 0 0 0 1 1h7v1a5 5 0 0 0 10 0v-1h7a1 1 0 0 0 1-1v-3a1 1 0 0 0-.293-.707ZM19 25a3 3 0 0 1-6 0v-1h6Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(214, 159, 40)' viewBox='0 0 32 32'%3E%3Cpath d='M28.707 19.293 26 16.586V13a10.014 10.014 0 0 0-9-9.95V1h-2v2.05A10.014 10.014 0 0 0 6 13v3.586l-2.707 2.707A1 1 0 0 0 3 20v3a1 1 0 0 0 1 1h7v1a5 5 0 0 0 10 0v-1h7a1 1 0 0 0 1-1v-3a1 1 0 0 0-.293-.707ZM19 25a3 3 0 0 1-6 0v-1h6Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=p],
 body:not(.tasks) .markdown-preview-view li[data-task=p] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task=p] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task=p] > .task-list-item-checkbox:checked {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(60.7, 41%, 39.2%)' viewBox='0 0 32 32'%3E%3Cpath d='M2 16h5v14H2zM23 30H9V15.197l3.042-4.563.845-5.917A2.01 2.01 0 0 1 14.867 3H15a3.003 3.003 0 0 1 3 3v6h8a4.005 4.005 0 0 1 4 4v7a7.008 7.008 0 0 1-7 7Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(140, 141, 59)' viewBox='0 0 32 32'%3E%3Cpath d='M2 16h5v14H2zM23 30H9V15.197l3.042-4.563.845-5.917A2.01 2.01 0 0 1 14.867 3H15a3.003 3.003 0 0 1 3 3v6h8a4.005 4.005 0 0 1 4 4v7a7.008 7.008 0 0 1-7 7Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=c],
 body:not(.tasks) .markdown-preview-view li[data-task=c] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task=c] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task=c] > .task-list-item-checkbox:checked {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(3.2, 85.8%, 61.4%)' viewBox='0 0 32 32'%3E%3Cpath d='M2 2h5v14H2zM23 2H9v14.803l3.042 4.563.845 5.917A2.01 2.01 0 0 0 14.867 29H15a3.003 3.003 0 0 0 3-3v-6h8a4.005 4.005 0 0 0 4-4V9a7.008 7.008 0 0 0-7-7Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(241, 81, 72)' viewBox='0 0 32 32'%3E%3Cpath d='M2 2h5v14H2zM23 2H9v14.803l3.042 4.563.845 5.917A2.01 2.01 0 0 0 14.867 29H15a3.003 3.003 0 0 0 3-3v-6h8a4.005 4.005 0 0 0 4-4V9a7.008 7.008 0 0 0-7-7Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=W],
 body:not(.tasks) .markdown-preview-view li[data-task=W] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task=W] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task=W] > .task-list-item-checkbox:checked {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(41, 68.5%, 49.8%)' viewBox='0 0 32 32'%3E%3Cpath d='M26 7h-2V6a2.002 2.002 0 0 0-2-2H10a2.002 2.002 0 0 0-2 2v1H6a2.002 2.002 0 0 0-2 2v3a4.005 4.005 0 0 0 4 4h.322A8.169 8.169 0 0 0 15 21.934V26h-5v2h12v-2h-5v-4.069A7.966 7.966 0 0 0 23.74 16H24a4.005 4.005 0 0 0 4-4V9a2.002 2.002 0 0 0-2-2ZM8 14a2.002 2.002 0 0 1-2-2V9h2Zm18-2a2.002 2.002 0 0 1-2 2V9h2Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(214, 159, 40)' viewBox='0 0 32 32'%3E%3Cpath d='M26 7h-2V6a2.002 2.002 0 0 0-2-2H10a2.002 2.002 0 0 0-2 2v1H6a2.002 2.002 0 0 0-2 2v3a4.005 4.005 0 0 0 4 4h.322A8.169 8.169 0 0 0 15 21.934V26h-5v2h12v-2h-5v-4.069A7.966 7.966 0 0 0 23.74 16H24a4.005 4.005 0 0 0 4-4V9a2.002 2.002 0 0 0-2-2ZM8 14a2.002 2.002 0 0 1-2-2V9h2Zm18-2a2.002 2.002 0 0 1-2 2V9h2Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=\2764],
 body:not(.tasks) .markdown-preview-view li[data-task=\2764] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task=\2764] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task=\2764] > .task-list-item-checkbox:checked {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(3.2, 85.8%, 61.4%)' enable-background='new 0 0 32 32' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath d='M22.5 4c-2 0-3.9.8-5.3 2.2L16 7.4l-1.1-1.1c-2.9-3-7.7-3-10.6-.1l-.1.1c-3 3-3 7.8 0 10.8L16 29l11.8-11.9c3-3 3-7.8 0-10.8C26.4 4.8 24.5 4 22.5 4z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(241, 81, 72)' enable-background='new 0 0 32 32' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath d='M22.5 4c-2 0-3.9.8-5.3 2.2L16 7.4l-1.1-1.1c-2.9-3-7.7-3-10.6-.1l-.1.1c-3 3-3 7.8 0 10.8L16 29l11.8-11.9c3-3 3-7.8 0-10.8C26.4 4.8 24.5 4 22.5 4z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
   background-size: 16px 16px;
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=s],
 body:not(.tasks) .markdown-preview-view li[data-task=s] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task=s] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task=s] > .task-list-item-checkbox:checked {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(41, 68.5%, 49.8%)' enable-background='new 0 0 32 32' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath fill='none' d='M0 0h32v32H0V0z'/%3E%3Cpath d='M29 13h-2c-.1-1.6-.8-3.1-2-4.1V5c0-.6-.4-1-1-1-.2 0-.4.1-.6.2L19.7 7H15c-5.5 0-9.5 3.2-9.9 8H5c-.6 0-1-.4-1-1v-2H2v2c0 1.7 1.3 3 3 3h.1c.3 2.7 1.7 5 3.9 6.6V27c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-2h3v2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-3.4c1.5-.7 2.5-2 2.8-3.6H29c.6 0 1-.4 1-1v-5c0-.6-.4-1-1-1zm-11 7v1h-2v-1h-2v-2h3.5c.3 0 .5-.2.5-.5s-.2-.5-.5-.5h-1c-1.2 0-2.3-.8-2.5-2-.2-1.3.6-2.6 2-2.9V11h2v1h2v2h-3.5c-.3 0-.5.3-.5.6s.2.5.5.5h1c1.2 0 2.3.8 2.5 2 .2 1.3-.6 2.6-2 2.9z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(214, 159, 40)' enable-background='new 0 0 32 32' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath fill='none' d='M0 0h32v32H0V0z'/%3E%3Cpath d='M29 13h-2c-.1-1.6-.8-3.1-2-4.1V5c0-.6-.4-1-1-1-.2 0-.4.1-.6.2L19.7 7H15c-5.5 0-9.5 3.2-9.9 8H5c-.6 0-1-.4-1-1v-2H2v2c0 1.7 1.3 3 3 3h.1c.3 2.7 1.7 5 3.9 6.6V27c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-2h3v2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-3.4c1.5-.7 2.5-2 2.8-3.6H29c.6 0 1-.4 1-1v-5c0-.6-.4-1-1-1zm-11 7v1h-2v-1h-2v-2h3.5c.3 0 .5-.2.5-.5s-.2-.5-.5-.5h-1c-1.2 0-2.3-.8-2.5-2-.2-1.3.6-2.6 2-2.9V11h2v1h2v2h-3.5c-.3 0-.5.3-.5.6s.2.5.5.5h1c1.2 0 2.3.8 2.5 2 .2 1.3-.6 2.6-2 2.9z'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=S],
 body:not(.tasks) .markdown-preview-view li[data-task=S] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task=S] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task=S] > .task-list-item-checkbox:checked {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(41, 68.5%, 49.8%)' enable-background='new 0 0 32 32' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath fill='none' d='M0 0h32v32H0V0z'/%3E%3Cpath d='M29 13h-2c-.1-1.6-.8-3.1-2-4.1V5c0-.6-.4-1-1-1-.2 0-.4.1-.6.2L19.7 7H15c-5.5 0-9.5 3.2-9.9 8H5c-.6 0-1-.4-1-1v-2H2v2c0 1.7 1.3 3 3 3h.1c.3 2.7 1.7 5 3.9 6.6V27c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-2h3v2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-3.4c1.5-.7 2.5-2 2.8-3.6H29c.6 0 1-.4 1-1v-5c0-.6-.4-1-1-1zm-9 0h-7v-2h7v2z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(214, 159, 40)' enable-background='new 0 0 32 32' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath fill='none' d='M0 0h32v32H0V0z'/%3E%3Cpath d='M29 13h-2c-.1-1.6-.8-3.1-2-4.1V5c0-.6-.4-1-1-1-.2 0-.4.1-.6.2L19.7 7H15c-5.5 0-9.5 3.2-9.9 8H5c-.6 0-1-.4-1-1v-2H2v2c0 1.7 1.3 3 3 3h.1c.3 2.7 1.7 5 3.9 6.6V27c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-2h3v2c0 .6.4 1 1 1h4c.6 0 1-.4 1-1v-3.4c1.5-.7 2.5-2 2.8-3.6H29c.6 0 1-.4 1-1v-5c0-.6-.4-1-1-1zm-9 0h-7v-2h7v2z'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=b],
 body:not(.tasks) .markdown-preview-view li[data-task=b] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task=b] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task=b] > .task-list-item-checkbox:checked {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(3.2, 85.8%, 61.4%)' viewBox='0 0 32 32'%3E%3Cpath d='M24 2H8a2 2 0 0 0-2 2v26l10-5.054L26 30V4a2 2 0 0 0-2-2Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(241, 81, 72)' viewBox='0 0 32 32'%3E%3Cpath d='M24 2H8a2 2 0 0 0-2 2v26l10-5.054L26 30V4a2 2 0 0 0-2-2Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=I],
 body:not(.tasks) .markdown-preview-view li[data-task=I] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task=I] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task=I] > .task-list-item-checkbox:checked {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(41, 68.5%, 49.8%)' enable-background='new 0 0 32 32' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath d='M11 22h10v4H11v-4zm2 4h6v4h-6v-4zm8-4c0-.9.5-1.5 1.5-2.4 2.3-1.8 3.6-4.7 3.5-7.6 0-5.5-4.5-10-10-10S6 6.5 6 12c-.1 2.9 1.1 5.8 3.5 7.6 1 .9 1.5 1.5 1.5 2.4'/%3E%3Cpath fill='none' d='M0 0h32v32H0V0z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(214, 159, 40)' enable-background='new 0 0 32 32' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath d='M11 22h10v4H11v-4zm2 4h6v4h-6v-4zm8-4c0-.9.5-1.5 1.5-2.4 2.3-1.8 3.6-4.7 3.5-7.6 0-5.5-4.5-10-10-10S6 6.5 6 12c-.1 2.9 1.1 5.8 3.5 7.6 1 .9 1.5 1.5 1.5 2.4'/%3E%3Cpath fill='none' d='M0 0h32v32H0V0z'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=X],
 body:not(.tasks) .markdown-preview-view li[data-task=X] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task=X] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task=X] > .task-list-item-checkbox:checked {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(3.2, 85.8%, 61.4%)' width='32' height='32' enable-background='new 0 0 32 32' xml:space='preserve'%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3Cpath d='M16 2C8.3 2 2 8.3 2 16s6.3 14 14 14 14-6.3 14-14S23.7 2 16 2zm5.4 21L16 17.6 10.6 23 9 21.4l5.4-5.4L9 10.6 10.6 9l5.4 5.4L21.4 9l1.6 1.6-5.4 5.4 5.4 5.4-1.6 1.6z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(241, 81, 72)' width='32' height='32' enable-background='new 0 0 32 32' xml:space='preserve'%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3Cpath d='M16 2C8.3 2 2 8.3 2 16s6.3 14 14 14 14-6.3 14-14S23.7 2 16 2zm5.4 21L16 17.6 10.6 23 9 21.4l5.4-5.4L9 10.6 10.6 9l5.4 5.4L21.4 9l1.6 1.6-5.4 5.4 5.4 5.4-1.6 1.6z'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=B],
 body:not(.tasks) .markdown-preview-view li[data-task=B] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task=B] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task=B] > .task-list-item-checkbox:checked {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(350.5, 79.1%, 62.5%)' enable-background='new 0 0 32 32' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3Cpath d='m16 11 8-2.1c-.9-1.7-2.3-3-4-3.9V2h-2v2.2c-1.3-.3-2.7-.3-4 0V2h-2v3c-1.7.9-3.1 2.2-4 3.9l8 2.1z'/%3E%3Cpath d='m29.8 20 .3-2-5.1-.8v-4.4l5.1-1.4-.5-1.9-4.8 1.3-7.8 2V17h-2v-4.2l-7.7-2.1-4.8-1.2-.5 1.9 5 1.4v4.4l-5.2.8.3 2 4.9-.8c0 1.2.3 2.4.8 3.6l-4.5 4.5 1.4 1.4 4.2-4.2c3.1 3.9 8.7 4.6 12.6 1.6.6-.5 1.1-1 1.6-1.6l4.2 4.2 1.4-1.4-4.5-4.5c.5-1.1.8-2.3.8-3.6l4.8.8z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(235, 84, 108)' enable-background='new 0 0 32 32' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3Cpath d='m16 11 8-2.1c-.9-1.7-2.3-3-4-3.9V2h-2v2.2c-1.3-.3-2.7-.3-4 0V2h-2v3c-1.7.9-3.1 2.2-4 3.9l8 2.1z'/%3E%3Cpath d='m29.8 20 .3-2-5.1-.8v-4.4l5.1-1.4-.5-1.9-4.8 1.3-7.8 2V17h-2v-4.2l-7.7-2.1-4.8-1.2-.5 1.9 5 1.4v4.4l-5.2.8.3 2 4.9-.8c0 1.2.3 2.4.8 3.6l-4.5 4.5 1.4 1.4 4.2-4.2c3.1 3.9 8.7 4.6 12.6 1.6.6-.5 1.1-1 1.6-1.6l4.2 4.2 1.4-1.4-4.5-4.5c.5-1.1.8-2.3.8-3.6l4.8.8z'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="<"],
 body:not(.tasks) .markdown-preview-view li[data-task="<"] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task="<"] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task="<"] > .task-list-item-checkbox:checked {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(8, 8, 8)' viewBox='0 0 32 32'%3E%3Cpath d='M26 4h-4V2h-2v2h-8V2h-2v2H6a2.002 2.002 0 0 0-2 2v20a2.002 2.002 0 0 0 2 2h20a2.002 2.002 0 0 0 2-2V6a2.002 2.002 0 0 0-2-2ZM6 6h4v2h2V6h8v2h2V6h4v4H6Zm0 6h5v6H6Zm13 14h-6v-6h6Zm0-8h-6v-6h6Zm2 8v-6h5l.001 6Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 body:not(.tasks).theme-dark .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="<"],
 body:not(.tasks).theme-dark .markdown-preview-view li[data-task="<"] > .task-list-item-checkbox:checked,
+body:not(.tasks).theme-dark .markdown-preview-view li[data-task="<"] > p > .task-list-item-checkbox:checked,
 body:not(.tasks).theme-dark li[data-task="<"] > .task-list-item-checkbox:checked {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(254, 254, 254)' viewBox='0 0 32 32'%3E%3Cpath d='M26 4h-4V2h-2v2h-8V2h-2v2H6a2.002 2.002 0 0 0-2 2v20a2.002 2.002 0 0 0 2 2h20a2.002 2.002 0 0 0 2-2V6a2.002 2.002 0 0 0-2-2ZM6 6h4v2h2V6h8v2h2V6h4v4H6Zm0 6h5v6H6Zm13 14h-6v-6h6Zm0-8h-6v-6h6Zm2 8v-6h5l.001 6Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=l],
 body:not(.tasks) .markdown-preview-view li[data-task=l] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task=l] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task=l] > .task-list-item-checkbox:checked {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon' fill='hsl(3.2, 85.8%, 61.4%)' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none%7D%3C/style%3E%3C/defs%3E%3Cpath d='M16 2A11.013 11.013 0 0 0 5 13a10.889 10.889 0 0 0 2.216 6.6s.3.395.349.452L16 30l8.439-9.953c.044-.053.345-.447.345-.447l.001-.003A10.885 10.885 0 0 0 27 13 11.013 11.013 0 0 0 16 2Zm0 15a4 4 0 1 1 4-4 4.005 4.005 0 0 1-4 4Z'/%3E%3Ccircle id='_Inner-Path_' cx='16' cy='13' r='4' class='cls-1' data-name='&lt;Inner-Path&gt;'/%3E%3Cpath id='_Transparent_Rectangle_' d='M0 0h32v32H0z' class='cls-1' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=i],
 body:not(.tasks) .markdown-preview-view li[data-task=i] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task=i] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task=i] > .task-list-item-checkbox:checked {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon' fill='hsl(201.9, 25.9%, 52.4%)' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none%7D%3C/style%3E%3C/defs%3E%3Cpath id='inner-path' d='M16 8a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 16 8Zm4 13.875h-2.875v-8H13v2.25h1.875v5.75H12v2.25h8Z' class='cls-1'/%3E%3Cpath d='M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2Zm0 6a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 16 8Zm4 16.125h-8v-2.25h2.875v-5.75H13v-2.25h4.125v8H20Z'/%3E%3Cpath id='_Transparent_Rectangle_' d='M0 0h32v32H0z' class='cls-1' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="?"],
 body:not(.tasks) .markdown-preview-view li[data-task="?"] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task="?"] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task="?"] > .task-list-item-checkbox:checked {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon' fill='hsl(41, 68.5%, 49.8%)' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none%7D%3C/style%3E%3C/defs%3E%3Cpath d='M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2Zm0 23a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 16 25Zm1.142-7.754v2.501h-2.25V15h2.125a2.376 2.376 0 0 0 0-4.753h-1.5a2.378 2.378 0 0 0-2.375 2.375v.638h-2.25v-.638A4.628 4.628 0 0 1 15.517 8h1.5a4.624 4.624 0 0 1 .125 9.246Z'/%3E%3Cpath id='inner-path' d='M16 25a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 16 25Zm1.142-7.754v2.501h-2.25V15h2.125a2.376 2.376 0 0 0 0-4.753h-1.5a2.378 2.378 0 0 0-2.375 2.375v.638h-2.25v-.638A4.628 4.628 0 0 1 15.517 8h1.5a4.624 4.624 0 0 1 .125 9.246Z' class='cls-1'/%3E%3Cpath id='_Transparent_Rectangle_' d='M0 0h32v32H0z' class='cls-1' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon' fill='rgb(214, 159, 40)' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none%7D%3C/style%3E%3C/defs%3E%3Cpath d='M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2Zm0 23a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 16 25Zm1.142-7.754v2.501h-2.25V15h2.125a2.376 2.376 0 0 0 0-4.753h-1.5a2.378 2.378 0 0 0-2.375 2.375v.638h-2.25v-.638A4.628 4.628 0 0 1 15.517 8h1.5a4.624 4.624 0 0 1 .125 9.246Z'/%3E%3Cpath id='inner-path' d='M16 25a1.5 1.5 0 1 1 1.5-1.5A1.5 1.5 0 0 1 16 25Zm1.142-7.754v2.501h-2.25V15h2.125a2.376 2.376 0 0 0 0-4.753h-1.5a2.378 2.378 0 0 0-2.375 2.375v.638h-2.25v-.638A4.628 4.628 0 0 1 15.517 8h1.5a4.624 4.624 0 0 1 .125 9.246Z' class='cls-1'/%3E%3Cpath id='_Transparent_Rectangle_' d='M0 0h32v32H0z' class='cls-1' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=">"],
 body:not(.tasks) .markdown-preview-view li[data-task=">"] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task=">"] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task=">"] > .task-list-item-checkbox:checked {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(8, 8, 8)' viewBox='0 0 32 32'%3E%3Cpath d='m27.45 15.11-22-11a1 1 0 0 0-1.08.12 1 1 0 0 0-.33 1L6.69 15H18v2H6.69L4 26.74A1 1 0 0 0 5 28a1 1 0 0 0 .45-.11l22-11a1 1 0 0 0 0-1.78Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 body:not(.tasks).theme-dark .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task=">"],
 body:not(.tasks).theme-dark .markdown-preview-view li[data-task=">"] > .task-list-item-checkbox:checked,
+body:not(.tasks).theme-dark .markdown-preview-view li[data-task=">"] > p > .task-list-item-checkbox:checked,
 body:not(.tasks).theme-dark li[data-task=">"] > .task-list-item-checkbox:checked {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(254, 254, 254)' viewBox='0 0 32 32'%3E%3Cpath d='m27.45 15.11-22-11a1 1 0 0 0-1.08.12 1 1 0 0 0-.33 1L6.69 15H18v2H6.69L4 26.74A1 1 0 0 0 5 28a1 1 0 0 0 .45-.11l22-11a1 1 0 0 0 0-1.78Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="!"],
 body:not(.tasks) .markdown-preview-view li[data-task="!"] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task="!"] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task="!"] > .task-list-item-checkbox:checked {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon' x='0' y='0' fill='hsl(3.2, 85.8%, 61.4%)' enable-background='new 0 0 32 32' version='1.1' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cstyle%3E.st0%7Bfill:none%7D%3C/style%3E%3Cpath id='inner-path' d='M16 26c-.8 0-1.5-.7-1.5-1.5S15.2 23 16 23s1.5.7 1.5 1.5S16.8 26 16 26zm-1.1-5h2.2v-9h-2.2v9z' class='st0'/%3E%3Cpath d='M16 6.2 4.6 28h22.7L16 6.2zM14.9 12h2.2v9h-2.2v-9zM16 26c-.8 0-1.5-.7-1.5-1.5S15.2 23 16 23s1.5.7 1.5 1.5S16.8 26 16 26z'/%3E%3Cpath d='M29 30H3c-.6 0-1-.4-1-1 0-.2 0-.3.1-.5l13-25c.3-.5.9-.6 1.4-.4.2.1.3.2.4.4l13 25c.3.5.1 1.1-.4 1.3-.2.2-.3.2-.5.2zM4.7 28h22.7L16 6.2 4.7 28z'/%3E%3Cpath id='_Transparent_Rectangle_' d='M0 0h32v32H0z' class='st0'/%3E%3Cpath d='M-2.9 15.3h26.4v2.9H-2.9z' transform='rotate(-62.979 10.321 16.712)'/%3E%3Cpath d='M8.3 15.6h26.4v2.9H8.3z' transform='rotate(-117.021 21.471 17.086)'/%3E%3Cpath d='M3.9 26.2h24.4v2.9H3.9z' transform='matrix(-.9999 -.01155 .01155 -.9999 31.881 55.41)'/%3E%3C/svg%3E");
 }
 body:not(.tasks) .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="-"],
 body:not(.tasks) .markdown-preview-view li[data-task="-"] > .task-list-item-checkbox:checked,
+body:not(.tasks) .markdown-preview-view li[data-task="-"] > p > .task-list-item-checkbox:checked,
 body:not(.tasks) li[data-task="-"] > .task-list-item-checkbox:checked {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon' fill='rgb(8, 8, 8)' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cstyle%3E.st0%7Bfill:none;%7D%3C/style%3E%3Cpath id='inner-path' d='M9,10.6L10.6,9L23,21.4L21.4,23L9,10.6z' class='st0'/%3E%3Cpath d='M6.1,6.1C0.6,11.5,0.6,20.3,6,25.8c0,0,0.1,0.1,0.1,0.1c5.4,5.5,14.2,5.5,19.7,0.1c0,0,0.1-0.1,0.1-0.1	c5.5-5.4,5.5-14.2,0.1-19.7c0,0-0.1-0.1-0.1-0.1C20.5,0.6,11.7,0.6,6.2,6C6.2,6,6.1,6.1,6.1,6.1z M24.8,17.1l-17.6,0v-2.2l17.6,0	V17.1z'/%3E%3Cpath id='_Transparent_Rectangle_' d='M0,0h32v32H0V0z' class='st0'/%3E%3C/svg%3E");
 }
 body:not(.tasks).theme-dark .markdown-source-view.mod-cm6 .task-list-item-checkbox[data-task="-"],
 body:not(.tasks).theme-dark .markdown-preview-view li[data-task="-"] > .task-list-item-checkbox:checked,
+body:not(.tasks).theme-dark .markdown-preview-view li[data-task="-"] > p > .task-list-item-checkbox:checked,
 body:not(.tasks).theme-dark li[data-task="-"] > .task-list-item-checkbox:checked {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon' fill='rgb(254, 254, 254)' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cstyle%3E.st0%7Bfill:none;%7D%3C/style%3E%3Cpath id='inner-path' d='M9,10.6L10.6,9L23,21.4L21.4,23L9,10.6z' class='st0'/%3E%3Cpath d='M6.1,6.1C0.6,11.5,0.6,20.3,6,25.8c0,0,0.1,0.1,0.1,0.1c5.4,5.5,14.2,5.5,19.7,0.1c0,0,0.1-0.1,0.1-0.1	c5.5-5.4,5.5-14.2,0.1-19.7c0,0-0.1-0.1-0.1-0.1C20.5,0.6,11.7,0.6,6.2,6C6.2,6,6.1,6.1,6.1,6.1z M24.8,17.1l-17.6,0v-2.2l17.6,0	V17.1z'/%3E%3Cpath id='_Transparent_Rectangle_' d='M0,0h32v32H0V0z' class='st0'/%3E%3C/svg%3E");
 }
@@ -5610,12 +5889,13 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=X], 
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=X], [data-task=c], [data-task="!"]) > :is(ul, ol) {
   padding-left: 48px;
 }
-body:not(.tasks) .admonitions .admonition-content li.task-list-item.is-checked:is([data-task=X], [data-task=c], [data-task="!"]) .task-list-item-checkbox {
-  margin-left: 24px;
-}
-body:not(.tasks) .admonitions li:is([data-task=X], [data-task=c], [data-task="!"]) > .task-list-item-checkbox {
+body:not(.tasks) .admonitions li:is([data-task=X], [data-task=c], [data-task="!"]) > .task-list-item-checkbox,
+body:not(.tasks) .admonitions li:is([data-task=X], [data-task=c], [data-task="!"]) > p > .task-list-item-checkbox {
   margin-left: 0px;
   margin-right: 16px;
+}
+body:not(.tasks) .markdown-source-view.admonitions li:is([data-task=X], [data-task=c], [data-task="!"]) > .task-list-item-checkbox {
+  margin-left: 16px;
 }
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=I], [data-task="?"]) {
   background-color: rgba(var(--rgb-primary-0), 0.5);
@@ -5629,12 +5909,13 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=I], 
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=I], [data-task="?"]) > :is(ul, ol) {
   padding-left: 48px;
 }
-body:not(.tasks) .admonitions .admonition-content li.task-list-item.is-checked:is([data-task=I], [data-task="?"]) .task-list-item-checkbox {
-  margin-left: 24px;
-}
-body:not(.tasks) .admonitions li:is([data-task=I], [data-task="?"]) > .task-list-item-checkbox {
+body:not(.tasks) .admonitions li:is([data-task=I], [data-task="?"]) > .task-list-item-checkbox,
+body:not(.tasks) .admonitions li:is([data-task=I], [data-task="?"]) > p > .task-list-item-checkbox {
   margin-left: 0px;
   margin-right: 16px;
+}
+body:not(.tasks) .markdown-source-view.admonitions li:is([data-task=I], [data-task="?"]) > .task-list-item-checkbox {
+  margin-left: 16px;
 }
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked[data-task=i] {
   background-color: rgba(var(--rgb-primary-0), 0.5);
@@ -5648,12 +5929,13 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked[data-task=i] {
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked[data-task=i] > :is(ul, ol) {
   padding-left: 48px;
 }
-body:not(.tasks) .admonitions .admonition-content li.task-list-item.is-checked[data-task=i] .task-list-item-checkbox {
-  margin-left: 24px;
-}
-body:not(.tasks) .admonitions li[data-task=i] > .task-list-item-checkbox {
+body:not(.tasks) .admonitions li[data-task=i] > .task-list-item-checkbox,
+body:not(.tasks) .admonitions li[data-task=i] > p > .task-list-item-checkbox {
   margin-left: 0px;
   margin-right: 16px;
+}
+body:not(.tasks) .markdown-source-view.admonitions li[data-task=i] > .task-list-item-checkbox {
+  margin-left: 16px;
 }
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=W], [data-task=p]) {
   background-color: rgba(var(--rgb-primary-0), 0.5);
@@ -5667,12 +5949,13 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=W], 
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=W], [data-task=p]) > :is(ul, ol) {
   padding-left: 48px;
 }
-body:not(.tasks) .admonitions .admonition-content li.task-list-item.is-checked:is([data-task=W], [data-task=p]) .task-list-item-checkbox {
-  margin-left: 24px;
-}
-body:not(.tasks) .admonitions li:is([data-task=W], [data-task=p]) > .task-list-item-checkbox {
+body:not(.tasks) .admonitions li:is([data-task=W], [data-task=p]) > .task-list-item-checkbox,
+body:not(.tasks) .admonitions li:is([data-task=W], [data-task=p]) > p > .task-list-item-checkbox {
   margin-left: 0px;
   margin-right: 16px;
+}
+body:not(.tasks) .markdown-source-view.admonitions li:is([data-task=W], [data-task=p]) > .task-list-item-checkbox {
+  margin-left: 16px;
 }
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=n], [data-task=b]) {
   background-color: rgba(var(--rgb-primary-0), 0.5);
@@ -5686,12 +5969,13 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=n], 
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task=n], [data-task=b]) > :is(ul, ol) {
   padding-left: 48px;
 }
-body:not(.tasks) .admonitions .admonition-content li.task-list-item.is-checked:is([data-task=n], [data-task=b]) .task-list-item-checkbox {
-  margin-left: 24px;
-}
-body:not(.tasks) .admonitions li:is([data-task=n], [data-task=b]) > .task-list-item-checkbox {
+body:not(.tasks) .admonitions li:is([data-task=n], [data-task=b]) > .task-list-item-checkbox,
+body:not(.tasks) .admonitions li:is([data-task=n], [data-task=b]) > p > .task-list-item-checkbox {
   margin-left: 0px;
   margin-right: 16px;
+}
+body:not(.tasks) .markdown-source-view.admonitions li:is([data-task=n], [data-task=b]) > .task-list-item-checkbox {
+  margin-left: 16px;
 }
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked[data-task=B] {
   background-color: rgba(var(--rgb-primary-0), 0.5);
@@ -5705,12 +5989,13 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked[data-task=B] {
 body:not(.tasks) .admonitions ul li.task-list-item.is-checked[data-task=B] > :is(ul, ol) {
   padding-left: 48px;
 }
-body:not(.tasks) .admonitions .admonition-content li.task-list-item.is-checked[data-task=B] .task-list-item-checkbox {
-  margin-left: 24px;
-}
-body:not(.tasks) .admonitions li[data-task=B] > .task-list-item-checkbox {
+body:not(.tasks) .admonitions li[data-task=B] > .task-list-item-checkbox,
+body:not(.tasks) .admonitions li[data-task=B] > p > .task-list-item-checkbox {
   margin-left: 0px;
   margin-right: 16px;
+}
+body:not(.tasks) .markdown-source-view.admonitions li[data-task=B] > .task-list-item-checkbox {
+  margin-left: 16px;
 }
 body.no-animation * {
   transition: none !important;
@@ -7241,35 +7526,36 @@ div.kanban-plugin {
   background-color: var(--background-primary);
 }
 .view-content .kanban-plugin .tag {
-  border: 0px;
-  background-color: var(--text-accent);
-  color: var(--background-primary);
-  border-radius: 30px;
+  color: var(--color-accent);
+  font-size: var(--font-scale-00);
+  font-weight: var(--font-regular);
+  line-height: var(--leading-0);
+  padding: 2px 4px 2px 4px;
+  border-radius: 0.4em;
+  background-color: rgba(var(--color-accent-l)/0.15);
 }
-.kanban-plugin__item-tags a.kanban-plugin__item-tag {
-  background-color: rgba(var(--interactive-accent-rgb), 0.1);
-  padding: 0px 4px;
-  border-radius: 30px;
-  margin: 0px;
+.theme-dark .view-content .kanban-plugin .tag {
+  background-color: rgba(var(--color-accent-d)/0.15);
 }
 div.kanban-plugin__lane {
-  background: var(--background-primary);
+  background: rgba(var(--rgb-primary-0), 0.3);
   border-radius: 4px;
-  padding: 4px;
+  padding: 0px;
   box-shadow: var(--elevation-1);
   border: 1px solid var(--color-primary-0);
 }
 .theme-dark div.kanban-plugin__lane {
   box-shadow: var(--elevation-2);
+  border: 1px solid var(--color-border-1);
 }
-.theme-dark div.kanban-plugin__lane {
-  border: 1px solid var(--color-primary-1);
+.kanban-plugin__scroll-container.kanban-plugin__vertical::-webkit-scrollbar {
+  display: none;
 }
 div.kanban-plugin__item {
   border: 1px solid var(--color-border-1);
 }
 div.kanban-plugin__item-button-wrapper {
-  border-top: 1.5px solid var(--color-border-1);
+  border-top: 1px solid var(--color-border-1);
   padding: 4px;
 }
 div.kanban-plugin__item-title-wrapper {
@@ -7308,7 +7594,7 @@ textarea.kanban-plugin__item-input:focus {
   align-items: center;
   flex-shrink: 0;
   flex-grow: 0;
-  border-bottom: 1.5px solid var(--color-border-1);
+  border-bottom: 1px solid var(--color-border-1);
 }
 body .kanban-plugin__drag-container > .kanban-plugin__lane-wrapper > .kanban-plugin__lane {
   box-shadow: var(--elevation-2);
@@ -7352,40 +7638,53 @@ body .kanban-plugin__markdown-preview-view > div > * {
   border-radius: 6px;
   transition: border var(--duration-moderate-2) var(--motion-entrance-expressive);
 }
-body .kanban-plugin__date-picker .flatpickr-calendar {
+div.kanban-plugin__date-picker .flatpickr-calendar {
   box-shadow: var(--elevation-2);
   font-size: var(--font-scale-00);
+  border: 1px solid var(--color-primary-0);
 }
-body .kanban-plugin__date-picker .flatpickr-day {
+.theme-dark div.kanban-plugin__date-picker .flatpickr-calendar {
+  border: 1px solid var(--color-border-1);
+}
+div.kanban-plugin__date-picker .flatpickr-day {
   --cell-size: 2rem;
   font-size: var(--font-scale-000);
 }
-body .kanban-plugin__date-picker .flatpickr-day.today {
+div.kanban-plugin__date-picker .flatpickr-day.today {
   border: 0px;
   color: var(--text-accent);
   font-weight: var(--font-medium);
 }
-body .kanban-plugin__date-picker .flatpickr-months {
+div.kanban-plugin__date-picker .flatpickr-months {
   font-size: 13px;
   padding: 8px 0px 4px;
   align-items: center;
 }
-body .kanban-plugin__date-picker span.flatpickr-weekday {
+div.kanban-plugin__date-picker span.flatpickr-weekday {
   font-family: var(--font-monospace);
   text-transform: uppercase;
   font-size: var(--font-scale-000);
   font-weight: var(--font-regular);
   color: var(--text-faint);
 }
-body .kanban-plugin__date-picker .flatpickr-day.flatpickr-disabled,
-body .kanban-plugin__date-picker .flatpickr-day.flatpickr-disabled:hover,
-body .kanban-plugin__date-picker .flatpickr-day.prevMonthDay,
-body .kanban-plugin__date-picker .flatpickr-day.nextMonthDay,
-body .kanban-plugin__date-picker .flatpickr-day.notAllowed,
-body .kanban-plugin__date-picker .flatpickr-day.notAllowed.prevMonthDay,
-body .kanban-plugin__date-picker .flatpickr-day.notAllowed.nextMonthDay {
+div.kanban-plugin__date-picker .flatpickr-day.flatpickr-disabled,
+div.kanban-plugin__date-picker .flatpickr-day.flatpickr-disabled:hover,
+div.kanban-plugin__date-picker .flatpickr-day.prevMonthDay,
+div.kanban-plugin__date-picker .flatpickr-day.nextMonthDay,
+div.kanban-plugin__date-picker .flatpickr-day.notAllowed,
+div.kanban-plugin__date-picker .flatpickr-day.notAllowed.prevMonthDay,
+div.kanban-plugin__date-picker .flatpickr-day.notAllowed.nextMonthDay {
   color: var(--text-faint);
   opacity: 0.5;
+}
+div.kanban-plugin__item-prefix-button-wrapper input[type=checkbox] {
+  filter: none;
+  height: 1rem;
+  width: 1rem;
+}
+div.kanban-plugin__item-prefix-button-wrapper input[type=checkbox]:checked {
+  background-size: 70%;
+  background-position: center 2.5px;
 }
 div#quick-explorer .explorable.selected,
 div#quick-explorer .explorable,
@@ -7555,7 +7854,7 @@ div#wordsprint button {
   color: var(--color-pink);
 }
 .graph-view.color-fill-unresolved {
-  color: var(--background-modifier-error);
+  color: var(--color-fill-unresolved);
   opacity: 1;
 }
 .graph-view.color-circle {
@@ -7855,181 +8154,267 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: light-mode-palette
-		title: Light mode color scheme
-		description: Background color palette for light mode
-		type: class-select
-		allowEmpty: false
-		default: sanctum-light
-		options:
-			-
-				label: Default
-				value: sanctum-light
-			-
-				label: Gruvbox
-				value: gruvbox
+			id: color-schemes
+			title: Color Schemes
+			type: heading
+			level: 3
+			collapsed: false
 	-
-		id: dark-mode-palette
-		title: Dark mode color scheme
-		description: Background color palette for dark mode
-		type: class-select
-		allowEmpty: false
-		default: sanctum-dark
-		options:
-			-
-				label: Default
-				value: sanctum-dark
-			-
-				label: True Black
-				value: sanctum-true-black
-			-
-				label: Gruvbox
-				value: gruvbox
+				id: light-mode-palette
+				title: Light mode color scheme
+				description: Background color palette for light mode
+				type: class-select
+				allowEmpty: false
+				default: sanctum-light
+				options:
+					-
+						label: Default
+						value: sanctum-light
+					-
+						label: Cold Grey
+						value: sanctum-coldgrey
+					-
+						label: Hearth
+						value: sanctum-hearth
+					-
+						label: Moss
+						value: sanctum-moss
+					-
+						label: Tide
+						value: sanctum-tide
+					-
+						label: Custom
+						value: custom-l
 	-
-		id: accent-active-line
-		title: Use Accent color as Active Line Highlight
-		description: Replaces the grey with the accent color for active line highlighting.
-		type: class-toggle
-		default: false
+			id: dark-mode-palette
+			title: Dark mode color scheme
+			description: Background color palette for dark mode
+			type: class-select
+			allowEmpty: false
+			default: sanctum-dark
+			options:
+				-
+					label: Default
+					value: sanctum-dark
+				-
+					label: Legacy Dark
+					value: sanctum-legacy-dark
+				-
+					label: True Black
+					value: sanctum-true-black
+				-
+					label: Cold Grey
+					value: sanctum-coldgrey-d
+				-
+					label: Hearth
+					value: sanctum-chocolate
+				-
+					label: Moss
+					value: sanctum-forest
+				-
+					label: Tide
+					value: sanctum-sea
+				-
+					label: Custom
+					value: custom-d
 	-
-		id: accent-colors
-		title: Accent Colors
-		type: heading
-		level: 3
-		collapsed: true
-	-
-		id: color-accent-l
-		title: Light Mode Accent Color
-		type: variable-select
-		default: 64 150 147
-		options:
-			-
-				label: Green
-				value: 140 141 59
-			-
-				label: Viridian
-				value: 70 153 106
-			-
-				label: Teal
-				value: 64 150 147
-			-
-				label: Blue
-				value: 102 142 165
-			-
-				label: Lavender
-				value: 132 132 188
-			-
-				label: Pink
-				value: 235 84 108
-			-
-				label: Red
-				value: 241 81 72
-			-
-				label: Orange
-				value: 214 108 30
-			-
-				label: Yellow
-				value: 214 159 40
-	-
-		id: color-accent-d
-		title: Dark Mode Accent Color
-		type: variable-select
-		default: 104 181 177
-		options:
-			-
-				label: Green
-				value: 171, 173, 85
-			-
-				label: Viridian
-				value: 105, 184, 139
-			-
-				label: Teal
-				value: 104 181 177
-			-
-				label: Blue
-				value: 136, 173, 194
-			-
-				label: Lavender
-				value: 165, 165, 206
-			-
-				label: Pink
-				value: 240, 138, 156
-			-
-				label: Red
-				value: 252, 134, 122
-			-
-				label: Orange
-				value: 241, 145, 52
-			-
-				label: Yellow
-				value: 214, 159, 40
-	-
-		id: color-checkbox
-		title: Checkbox Color
-		description: The color of the regular "- [x]" checkbox
-		type: variable-select
-		default: 140 141 59
-		options:
-			-
-				label: Green
-				value: 140 141 59
-			-
-				label: Viridian
-				value: 70 153 106
-			-
-				label: Teal
-				value: 64 150 147
-			-
-				label: Blue
-				value: 102 142 165
-			-
-				label: Lavender
-				value: 132 132 188
-			-
-				label: Pink
-				value: 235 84 108
-			-
-				label: Red
-				value: 241 81 72
-			-
-				label: Orange
-				value: 214 108 30
-			-
-				label: Yellow
-				value: 214 159 40
-	-
-		id: txt-sel
-		title: Text Selection Color
-		type: variable-select
-		default: rgba(64 150 147 / .3)
-		options:
-			-
-				label: Green
-				value: rgba(140 141 59 / .3)
-			-
-				label: Viridian
-				value: rgba(70 153 106 / .3)
-			-
-				label: Teal
-				value: rgba(64 150 147 / .3)
-			-
-				label: Blue
-				value: rgba(102 142 165 / .3)
-			-
-				label: Lavender
-				value: rgba(132 132 188 / .3)
-			-
-				label: Pink
-				value: rgba(235 84 108 / .3)
-			-
-				label: Red
-				value: rgba(241 81 72 / .3)
-			-
-				label: Orange
-				value: rgba(214 108 30 / .3)
-			-
-				label: Yellow
-				value: rgba(214 159 40 / .3)
+				id: custom-colors
+				title: Custom Colors
+				description: ⚠️ Don't change brightness values if you wish to keep the theme's contrast ratios closer to the original palette
+				type: heading
+				level: 4
+				collapsed: true
+	-	
+					id: base-h-l
+					title: Light Mode Hue
+					type: variable-number-slider
+					default: 30
+					min: 0
+					max: 360
+					step: 1
+	-	
+					id: base-s-l
+					title: Light Mode Saturation
+					type: variable-number-slider
+					default: 1
+					min: 0
+					max: 100
+					step: 1
+					format: '%'
+	-	
+					id: base-l-l
+					title: Light Mode Brightness
+					type: variable-number-slider
+					default: 100
+					min: 0
+					max: 100
+					step: 1
+					format: '%'
+	-	
+					id: base-h-d
+					title: Dark Mode Hue
+					type: variable-number-slider
+					default: 30
+					min: 0
+					max: 360
+					step: 1
+	-	
+					id: base-s-d
+					title: Dark Mode Saturation
+					type: variable-number-slider
+					default: 1
+					min: 0
+					max: 100
+					step: 1
+					format: '%'
+	-	
+					id: base-l-d
+					title: Dark Mode Brightness
+					type: variable-number-slider
+					default: 10
+					min: 0
+					max: 100
+					step: 1
+					format: '%'
+	-	
+			id: accent-colors
+			title: Accent Colors
+			type: heading
+			level: 3
+			collapsed: true
+	-	
+				id: color-accent-l
+				title: Light Mode Accent Color
+				type: variable-select
+				default: 64 150 147
+				options:
+					-
+						label: Green
+						value: 140 141 59
+					-
+						label: Viridian
+						value: 70 153 106
+					-
+						label: Teal
+						value: 64 150 147
+					-
+						label: Blue
+						value: 102 142 165
+					-
+						label: Lavender
+						value: 132 132 188
+					-
+						label: Pink
+						value: 235 84 108
+					-
+						label: Red
+						value: 241 81 72
+					-
+						label: Orange
+						value: 214 108 30
+					-
+						label: Yellow
+						value: 214 159 40
+	-		
+				id: color-accent-d
+				title: Dark Mode Accent Color
+				type: variable-select
+				default: 104 181 177
+				options:
+					-
+						label: Green
+						value: 171, 173, 85
+					-
+						label: Viridian
+						value: 105, 184, 139
+					-
+						label: Teal
+						value: 104 181 177
+					-
+						label: Blue
+						value: 136, 173, 194
+					-
+						label: Lavender
+						value: 165, 165, 206
+					-
+						label: Pink
+						value: 240, 138, 156
+					-
+						label: Red
+						value: 252, 134, 122
+					-
+						label: Orange
+						value: 241, 145, 52
+					-
+						label: Yellow
+						value: 214, 159, 40
+	-		
+				id: color-checkbox
+				title: Checkbox Color
+				description: The color of the regular "- [x]" checkbox
+				type: variable-select
+				default: 140 141 59
+				options:
+					-
+						label: Green
+						value: 140 141 59
+					-
+						label: Viridian
+						value: 70 153 106
+					-
+						label: Teal
+						value: 64 150 147
+					-
+						label: Blue
+						value: 102 142 165
+					-
+						label: Lavender
+						value: 132 132 188
+					-
+						label: Pink
+						value: 235 84 108
+					-
+						label: Red
+						value: 241 81 72
+					-
+						label: Orange
+						value: 214 108 30
+					-
+						label: Yellow
+						value: 214 159 40
+	-		
+				id: txt-sel
+				title: Text Selection Color
+				type: variable-select
+				default: rgba(64 150 147 / .3)
+				options:
+					-
+						label: Green
+						value: rgba(140 141 59 / .3)
+					-
+						label: Viridian
+						value: rgba(70 153 106 / .3)
+					-
+						label: Teal
+						value: rgba(64 150 147 / .3)
+					-
+						label: Blue
+						value: rgba(102 142 165 / .3)
+					-
+						label: Lavender
+						value: rgba(132 132 188 / .3)
+					-
+						label: Pink
+						value: rgba(235 84 108 / .3)
+					-
+						label: Red
+						value: rgba(241 81 72 / .3)
+					-
+						label: Orange
+						value: rgba(214 108 30 / .3)
+					-
+						label: Yellow
+						value: rgba(214 159 40 / .3)
 	-
 		id: graph-colors
 		title: Graph Colors
@@ -8037,23 +8422,29 @@ settings:
 		level: 3
 		collapsed: true
 	-
-		id: color-fill-focused
-		title: Active Note Node Color
-		type: variable-color
-		format: rgb
-		default: rgb(235, 84, 108)
-	-
-		id: color-fill-tag
-		title: Tag Node Color
-		type: variable-color
-		format: rgb
-		default: rgb(64, 150, 147)
-	-
-		id: color-fill-attachment
-		title: Attachment Node Color
-		type: variable-color
-		format: rgb
-		default: rgb(236, 193, 81)
+			id: color-fill-focused
+			title: Active Note Node Color
+			type: variable-color
+			format: rgb
+			default: rgb(235, 84, 108)
+	-	
+			id: color-fill-tag
+			title: Tag Node Color
+			type: variable-color
+			format: rgb
+			default: rgb(64, 150, 147)
+	-	
+			id: color-fill-attachment
+			title: Attachment Node Color
+			type: variable-color
+			format: rgb
+			default: rgb(236, 193, 81)
+	-	
+			id: color-fill-unresolved
+			title: Unresolved Node Color
+			type: variable-color
+			format: rgb
+			default: rgb(241, 81, 72)
 	-
 		id: typography
 		title: Typography
@@ -8061,2170 +8452,2170 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: line-width
-		title: Preview Mode line width
-		description: The maximum number of characters per line.
-		type: variable-number-slider
-		default: 42
-		min: 30
-		max: 100
-		step: 1
-		format: 'rem'
-	-
-		id: fonts
-		title: Fonts
-		type: heading
-		level: 3
-		collapsed: true
-	-
-		id: font-preview
-		title: Preview Mode Font
-		type: variable-text
-		default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-	-
-		id: font-editor
-		title: Edit Mode Font
-		type: variable-text
-		default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-	-
-		id: font-ui
-		title: UI font
-		type: variable-text
-		default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-	-
-		id: font-mono
-		title: Monospace Font
-		type: variable-text
-		default: "'IBM Plex Mono *', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
-	-
-		id: font-frontmatter
-		title: Frontmatter/YAML Font
-		type: variable-text
-		default: "'IBM Plex Mono *', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
-	-
-		id: headings-title
-		title: Headings
-		type: heading
-		level: 3
-		collapsed: true
-	-
-		id: font-heading-preview
-		title: Heading Font Preview Mode
-		type: variable-text
-		default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-	-
-		id: font-heading-editor
-		title: Heading Font Editor Mode
-		type: variable-text
-		default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-	-
-		id: head-indicator
-		title: Heading Indicators
-		description: Disable the typora-like heading indicators in Live Preview.
-		type: class-toggle
-	-
-		id: head-indicator-active
-		title: Heading Indicators in active line only
-		description: Enables typora-like heading indicators in Live Preview, only in the active line.
-		type: class-toggle
-	-
-		id: heading weights
-		title: Weights
-		type: heading
-		level: 4
-		collapsed: true 
-	-
-		id: heading-1-weight
-		title: Heading 1 Weight
-		description: Default value - semi-bold (600)
-		type: variable-text
-		default: "600"
-	-
-		id: heading-2-weight
-		title: Heading 2 Weight
-		description: Default value - semi-bold (600)
-		type: variable-text
-		default: "600"
-	-
-		id: heading-3-weight
-		title: Heading 3 Weight
-		description: Default value - semi-bold (600)
-		type: variable-text
-		default: "500"
-	-
-		id: heading-4-weight
-		title: Heading 4 Weight
-		description: Default value - semi-bold (600)
-		type: variable-text
-		default: "500"
-	-
-		id: heading-5-weight
-		title: Heading 5 Weight
-		description: Default value - semi-bold (600)
-		type: variable-text
-		default: "400"
-	-
-		id: heading-6-weight
-		title: Heading 6 Weight
-		description: Default value - semi-bold (600)
-		type: variable-text
-		default: "400"
-	-
-		id: heading sizes
-		title: Sizes
-		type: heading
-		level: 4
-		collapsed: true
-	-
-		id: heading-1
-		title: Heading 1 Size
-		type: variable-text
-		default: 1.75rem
-	-
-		id: heading-2
-		title: Heading 2 Size
-		type: variable-text
-		default: 1.5rem
-	-
-		id: heading-3
-		title: Heading 3 Size
-		type: variable-text
-		default: 1.25rem
-	-
-		id: heading-4
-		title: Heading 4 Size
-		type: variable-text
-		default: 1.125rem
-	-
-		id: heading-5
-		title: Heading 5 Size
-		type: variable-text
-		default: 1.875rem
-	-
-		id: heading-6
-		title: Heading 6 Size
-		type: variable-text
-		default: .75rem
-	-
-		id: heading colours
-		title: Colors
-		type: heading
-		level: 4
-		collapsed: true
-	-
-		id: heading-clr
-		title: Toggle Heading Font Colors
-		type: class-toggle
-		default: false
-	-
-		id: heading-clr-bg
-		title: Toggle Heading Background Colors
-		type: class-toggle
-		default: false
-	-
-		id: heading colours
-		title: Heading Font Colors
-		type: heading
-		level: 5
-		collapsed: true
-	-
-		id: heading 1 colours
-		title: Heading 1
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-1-l
-		title: Heading 1 Light Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-1-d
-		title: Heading 1 Dark Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: Black
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(175, 129, 34)
-	-
-		id: heading 2 colours
-		title: Heading 2
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-2-l
-		title: Heading 2 Light Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-2-d
-		title: Heading 2 Dark Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: Black
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(175, 129, 34)
-	-
-		id: heading 3 colours
-		title: Heading 3
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-3-l
-		title: Heading 3 Light Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-3-d
-		title: Heading 3 Dark Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: Black
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(175, 129, 34)
-	-
-		id: heading 4 colours
-		title: Heading 4
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-4-l
-		title: Heading 4 Light Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-4-d
-		title: Heading 4 Dark Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: Black
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(175, 129, 34)
-	-
-		id: heading 5 colours
-		title: Heading 5
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-5-l
-		title: Heading 5 Light Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-5-d
-		title: Heading 5 Dark Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: Black
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(175, 129, 34)
-	-
-		id: heading 6 colours
-		title: Heading 6
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-6-l
-		title: Heading 6 Light Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-6-d
-		title: Heading 6 Dark Mode
-		type: variable-select
-		default: rgb(254, 254, 254)
-		options:
-			-
-				label: Normal Text
-				value: rgb(254, 254, 254)
-			-
-				label: Black
-				value: rgb(254, 254, 254)
-			-
-				label: Green
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian
-				value: rgb(70, 153, 106)
-			-
-				label: Teal
-				value: rgb(64, 150, 147)
-			-
-				label: Blue
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender
-				value: rgb(132, 132, 188)
-			-
-				label: Pink
-				value: rgb(235, 84, 108)
-			-
-				label: Red
-				value: rgb(241, 81, 72)
-			-
-				label: Orange
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow
-				value: rgb(175, 129, 34)
-	-
-		id: heading background colours
-		title: Heading Background Colors
-		type: heading
-		level: 5
-		collapsed: true
-	-
-		id: heading 1 bg colours
-		title: Heading 1
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-1-bg-l
-		title: Heading 1 Light Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(245, 243, 240)
-		options:
-			-
-				label: Background
-				value: rgb(245, 243, 240)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green 2
-				value: rgb(223, 226, 189)
-			-
-				label: Green 3
-				value: rgb(201, 202, 133)
-			-
-				label: Green 4
-				value: rgb(171, 173, 85)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian 2
-				value: rgb(204, 228, 214)
-			-
-				label: Viridian 3
-				value: rgb(162, 209, 183)
-			-
-				label: Viridian 4
-				value: rgb(105, 184, 139)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Teal 2
-				value: rgb(201, 228, 226)
-			-
-				label: Teal 3
-				value: rgb(150, 209, 207)
-			-
-				label: Teal 4
-				value: rgb(104, 181, 177)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Blue 2
-				value: rgb(213, 225, 232)
-			-
-				label: Blue 3
-				value: rgb(177, 202, 216)
-			-
-				label: Blue 4
-				value: rgb(136, 173, 194)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender 2
-				value: rgb(222, 222, 233)
-			-
-				label: Lavender 3
-				value: rgb(196, 196, 219)
-			-
-				label: Lavender 4
-				value: rgb(165, 165, 206)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Pink 2
-				value: rgb(245, 215, 219)
-			-
-				label: Pink 3
-				value: rgb(242, 183, 192)
-			-
-				label: Pink 4
-				value: rgb(240, 138, 156)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Red 2
-				value: rgb(249, 215, 211)
-			-
-				label: Red 3
-				value: rgb(250, 182, 173)
-			-
-				label: Red 4
-				value: rgb(252, 134, 122)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Orange 2
-				value: rgb(247, 218, 186)
-			-
-				label: Orange 3
-				value: rgb(247, 186, 121)
-			-
-				label: Orange 4
-				value: rgb(241, 145, 52)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow 2
-				value: rgb(242, 223, 141)
-			-
-				label: Yellow 3
-				value: rgb(236, 193, 81)
-			-
-				label: Yellow 4
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-1-bg-d
-		title: Heading 1 Dark Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(21, 21, 21)
-		options:
-			-
-				label: Background
-				value: rgb(21, 21, 21)
-			-
-				label: Black
-				value: rgb(8, 8, 8)
-			-
-				label: True Black
-				value: rgb(0, 0, 0)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Green 6
-				value: rgb(108, 108, 46)
-			-
-				label: Green 7
-				value: rgb(79, 79, 40)
-			-
-				label: Green 8
-				value: rgb(49, 49, 28)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Viridian 6
-				value: rgb(55, 117, 82)
-			-
-				label: Viridian 7
-				value: rgb(48, 84, 62)
-			-
-				label: Viridian 8
-				value: rgb(33, 52, 40)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Teal 6
-				value: rgb(50, 115, 112)
-			-
-				label: Teal 7
-				value: rgb(44, 83, 82)
-			-
-				label: Teal 8
-				value: rgb(32, 51, 51)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Blue 6
-				value: rgb(65, 110, 135)
-			-
-				label: Blue 7
-				value: rgb(46, 81, 99)
-			-
-				label: Blue 8
-				value: rgb(34, 50, 59)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Lavender 6
-				value: rgb(99, 98, 167)
-			-
-				label: Lavender 7
-				value: rgb(72, 70, 132)
-			-
-				label: Lavender 8
-				value: rgb(44, 43, 83)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Pink 6
-				value: rgb(194, 49, 70)
-			-
-				label: Pink 7
-				value: rgb(149, 27, 42)
-			-
-				label: Pink 8
-				value: rgb(86, 28, 31)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Red 6
-				value: rgb(200, 43, 41)
-			-
-				label: Red 7
-				value: rgb(148, 31, 30)
-			-
-				label: Red 8
-				value: rgb(89, 26, 23)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Orange 6
-				value: rgb(162, 84, 38)
-			-
-				label: Orange 7
-				value: rgb(115, 64, 35)
-			-
-				label: Orange 8
-				value: rgb(68, 41, 27)
-			-
-				label: Yellow/Brown 5
-				value: rgb(175, 129, 34)
-			-
-				label: Yellow/Brown 6
-				value: rgb(131, 100, 38)
-			-
-				label: Yellow/Brown 7
-				value: rgb(94, 74, 35)
-			-
-				label: Yellow/Brown 8
-				value: rgb(57, 46, 26)
-	-
-		id: heading 2 bg colours
-		title: Heading 2
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-2-bg-l
-		title: Heading 2 Light Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(245, 243, 240)
-		options:
-			-
-				label: Background
-				value: rgb(245, 243, 240)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green 2
-				value: rgb(223, 226, 189)
-			-
-				label: Green 3
-				value: rgb(201, 202, 133)
-			-
-				label: Green 4
-				value: rgb(171, 173, 85)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian 2
-				value: rgb(204, 228, 214)
-			-
-				label: Viridian 3
-				value: rgb(162, 209, 183)
-			-
-				label: Viridian 4
-				value: rgb(105, 184, 139)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Teal 2
-				value: rgb(201, 228, 226)
-			-
-				label: Teal 3
-				value: rgb(150, 209, 207)
-			-
-				label: Teal 4
-				value: rgb(104, 181, 177)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Blue 2
-				value: rgb(213, 225, 232)
-			-
-				label: Blue 3
-				value: rgb(177, 202, 216)
-			-
-				label: Blue 4
-				value: rgb(136, 173, 194)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender 2
-				value: rgb(222, 222, 233)
-			-
-				label: Lavender 3
-				value: rgb(196, 196, 219)
-			-
-				label: Lavender 4
-				value: rgb(165, 165, 206)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Pink 2
-				value: rgb(245, 215, 219)
-			-
-				label: Pink 3
-				value: rgb(242, 183, 192)
-			-
-				label: Pink 4
-				value: rgb(240, 138, 156)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Red 2
-				value: rgb(249, 215, 211)
-			-
-				label: Red 3
-				value: rgb(250, 182, 173)
-			-
-				label: Red 4
-				value: rgb(252, 134, 122)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Orange 2
-				value: rgb(247, 218, 186)
-			-
-				label: Orange 3
-				value: rgb(247, 186, 121)
-			-
-				label: Orange 4
-				value: rgb(241, 145, 52)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow 2
-				value: rgb(242, 223, 141)
-			-
-				label: Yellow 3
-				value: rgb(236, 193, 81)
-			-
-				label: Yellow 4
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-2-bg-d
-		title: Heading 2 Dark Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(21, 21, 21)
-		options:
-			-
-				label: Background
-				value: rgb(21, 21, 21)
-			-
-				label: Black
-				value: rgb(8, 8, 8)
-			-
-				label: True Black
-				value: rgb(0, 0, 0)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Green 6
-				value: rgb(108, 108, 46)
-			-
-				label: Green 7
-				value: rgb(79, 79, 40)
-			-
-				label: Green 8
-				value: rgb(49, 49, 28)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Viridian 6
-				value: rgb(55, 117, 82)
-			-
-				label: Viridian 7
-				value: rgb(48, 84, 62)
-			-
-				label: Viridian 8
-				value: rgb(33, 52, 40)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Teal 6
-				value: rgb(50, 115, 112)
-			-
-				label: Teal 7
-				value: rgb(44, 83, 82)
-			-
-				label: Teal 8
-				value: rgb(32, 51, 51)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Blue 6
-				value: rgb(65, 110, 135)
-			-
-				label: Blue 7
-				value: rgb(46, 81, 99)
-			-
-				label: Blue 8
-				value: rgb(34, 50, 59)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Lavender 6
-				value: rgb(99, 98, 167)
-			-
-				label: Lavender 7
-				value: rgb(72, 70, 132)
-			-
-				label: Lavender 8
-				value: rgb(44, 43, 83)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Pink 6
-				value: rgb(194, 49, 70)
-			-
-				label: Pink 7
-				value: rgb(149, 27, 42)
-			-
-				label: Pink 8
-				value: rgb(86, 28, 31)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Red 6
-				value: rgb(200, 43, 41)
-			-
-				label: Red 7
-				value: rgb(148, 31, 30)
-			-
-				label: Red 8
-				value: rgb(89, 26, 23)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Orange 6
-				value: rgb(162, 84, 38)
-			-
-				label: Orange 7
-				value: rgb(115, 64, 35)
-			-
-				label: Orange 8
-				value: rgb(68, 41, 27)
-			-
-				label: Yellow/Brown 5
-				value: rgb(175, 129, 34)
-			-
-				label: Yellow/Brown 6
-				value: rgb(131, 100, 38)
-			-
-				label: Yellow/Brown 7
-				value: rgb(94, 74, 35)
-			-
-				label: Yellow/Brown 8
-				value: rgb(57, 46, 26)
-	-
-		id: heading 3 bg colours
-		title: Heading 3
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-3-bg-l
-		title: Heading 3 Light Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(245, 243, 240)
-		options:
-			-
-				label: Background
-				value: rgb(245, 243, 240)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green 2
-				value: rgb(223, 226, 189)
-			-
-				label: Green 3
-				value: rgb(201, 202, 133)
-			-
-				label: Green 4
-				value: rgb(171, 173, 85)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian 2
-				value: rgb(204, 228, 214)
-			-
-				label: Viridian 3
-				value: rgb(162, 209, 183)
-			-
-				label: Viridian 4
-				value: rgb(105, 184, 139)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Teal 2
-				value: rgb(201, 228, 226)
-			-
-				label: Teal 3
-				value: rgb(150, 209, 207)
-			-
-				label: Teal 4
-				value: rgb(104, 181, 177)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Blue 2
-				value: rgb(213, 225, 232)
-			-
-				label: Blue 3
-				value: rgb(177, 202, 216)
-			-
-				label: Blue 4
-				value: rgb(136, 173, 194)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender 2
-				value: rgb(222, 222, 233)
-			-
-				label: Lavender 3
-				value: rgb(196, 196, 219)
-			-
-				label: Lavender 4
-				value: rgb(165, 165, 206)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Pink 2
-				value: rgb(245, 215, 219)
-			-
-				label: Pink 3
-				value: rgb(242, 183, 192)
-			-
-				label: Pink 4
-				value: rgb(240, 138, 156)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Red 2
-				value: rgb(249, 215, 211)
-			-
-				label: Red 3
-				value: rgb(250, 182, 173)
-			-
-				label: Red 4
-				value: rgb(252, 134, 122)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Orange 2
-				value: rgb(247, 218, 186)
-			-
-				label: Orange 3
-				value: rgb(247, 186, 121)
-			-
-				label: Orange 4
-				value: rgb(241, 145, 52)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow 2
-				value: rgb(242, 223, 141)
-			-
-				label: Yellow 3
-				value: rgb(236, 193, 81)
-			-
-				label: Yellow 4
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-3-bg-d
-		title: Heading 3 Dark Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(21, 21, 21)
-		options:
-			-
-				label: Background
-				value: rgb(21, 21, 21)
-			-
-				label: Black
-				value: rgb(8, 8, 8)
-			-
-				label: True Black
-				value: rgb(0, 0, 0)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Green 6
-				value: rgb(108, 108, 46)
-			-
-				label: Green 7
-				value: rgb(79, 79, 40)
-			-
-				label: Green 8
-				value: rgb(49, 49, 28)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Viridian 6
-				value: rgb(55, 117, 82)
-			-
-				label: Viridian 7
-				value: rgb(48, 84, 62)
-			-
-				label: Viridian 8
-				value: rgb(33, 52, 40)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Teal 6
-				value: rgb(50, 115, 112)
-			-
-				label: Teal 7
-				value: rgb(44, 83, 82)
-			-
-				label: Teal 8
-				value: rgb(32, 51, 51)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Blue 6
-				value: rgb(65, 110, 135)
-			-
-				label: Blue 7
-				value: rgb(46, 81, 99)
-			-
-				label: Blue 8
-				value: rgb(34, 50, 59)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Lavender 6
-				value: rgb(99, 98, 167)
-			-
-				label: Lavender 7
-				value: rgb(72, 70, 132)
-			-
-				label: Lavender 8
-				value: rgb(44, 43, 83)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Pink 6
-				value: rgb(194, 49, 70)
-			-
-				label: Pink 7
-				value: rgb(149, 27, 42)
-			-
-				label: Pink 8
-				value: rgb(86, 28, 31)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Red 6
-				value: rgb(200, 43, 41)
-			-
-				label: Red 7
-				value: rgb(148, 31, 30)
-			-
-				label: Red 8
-				value: rgb(89, 26, 23)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Orange 6
-				value: rgb(162, 84, 38)
-			-
-				label: Orange 7
-				value: rgb(115, 64, 35)
-			-
-				label: Orange 8
-				value: rgb(68, 41, 27)
-			-
-				label: Yellow/Brown 5
-				value: rgb(175, 129, 34)
-			-
-				label: Yellow/Brown 6
-				value: rgb(131, 100, 38)
-			-
-				label: Yellow/Brown 7
-				value: rgb(94, 74, 35)
-			-
-				label: Yellow/Brown 8
-				value: rgb(57, 46, 26)
-	-
-		id: heading 4 bg colours
-		title: Heading 4
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-4-bg-l
-		title: Heading 4 Light Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(245, 243, 240)
-		options:
-			-
-				label: Background
-				value: rgb(245, 243, 240)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green 2
-				value: rgb(223, 226, 189)
-			-
-				label: Green 3
-				value: rgb(201, 202, 133)
-			-
-				label: Green 4
-				value: rgb(171, 173, 85)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian 2
-				value: rgb(204, 228, 214)
-			-
-				label: Viridian 3
-				value: rgb(162, 209, 183)
-			-
-				label: Viridian 4
-				value: rgb(105, 184, 139)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Teal 2
-				value: rgb(201, 228, 226)
-			-
-				label: Teal 3
-				value: rgb(150, 209, 207)
-			-
-				label: Teal 4
-				value: rgb(104, 181, 177)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Blue 2
-				value: rgb(213, 225, 232)
-			-
-				label: Blue 3
-				value: rgb(177, 202, 216)
-			-
-				label: Blue 4
-				value: rgb(136, 173, 194)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender 2
-				value: rgb(222, 222, 233)
-			-
-				label: Lavender 3
-				value: rgb(196, 196, 219)
-			-
-				label: Lavender 4
-				value: rgb(165, 165, 206)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Pink 2
-				value: rgb(245, 215, 219)
-			-
-				label: Pink 3
-				value: rgb(242, 183, 192)
-			-
-				label: Pink 4
-				value: rgb(240, 138, 156)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Red 2
-				value: rgb(249, 215, 211)
-			-
-				label: Red 3
-				value: rgb(250, 182, 173)
-			-
-				label: Red 4
-				value: rgb(252, 134, 122)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Orange 2
-				value: rgb(247, 218, 186)
-			-
-				label: Orange 3
-				value: rgb(247, 186, 121)
-			-
-				label: Orange 4
-				value: rgb(241, 145, 52)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow 2
-				value: rgb(242, 223, 141)
-			-
-				label: Yellow 3
-				value: rgb(236, 193, 81)
-			-
-				label: Yellow 4
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-4-bg-d
-		title: Heading 4 Dark Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(21, 21, 21)
-		options:
-			-
-				label: Background
-				value: rgb(21, 21, 21)
-			-
-				label: Black
-				value: rgb(8, 8, 8)
-			-
-				label: True Black
-				value: rgb(0, 0, 0)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Green 6
-				value: rgb(108, 108, 46)
-			-
-				label: Green 7
-				value: rgb(79, 79, 40)
-			-
-				label: Green 8
-				value: rgb(49, 49, 28)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Viridian 6
-				value: rgb(55, 117, 82)
-			-
-				label: Viridian 7
-				value: rgb(48, 84, 62)
-			-
-				label: Viridian 8
-				value: rgb(33, 52, 40)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Teal 6
-				value: rgb(50, 115, 112)
-			-
-				label: Teal 7
-				value: rgb(44, 83, 82)
-			-
-				label: Teal 8
-				value: rgb(32, 51, 51)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Blue 6
-				value: rgb(65, 110, 135)
-			-
-				label: Blue 7
-				value: rgb(46, 81, 99)
-			-
-				label: Blue 8
-				value: rgb(34, 50, 59)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Lavender 6
-				value: rgb(99, 98, 167)
-			-
-				label: Lavender 7
-				value: rgb(72, 70, 132)
-			-
-				label: Lavender 8
-				value: rgb(44, 43, 83)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Pink 6
-				value: rgb(194, 49, 70)
-			-
-				label: Pink 7
-				value: rgb(149, 27, 42)
-			-
-				label: Pink 8
-				value: rgb(86, 28, 31)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Red 6
-				value: rgb(200, 43, 41)
-			-
-				label: Red 7
-				value: rgb(148, 31, 30)
-			-
-				label: Red 8
-				value: rgb(89, 26, 23)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Orange 6
-				value: rgb(162, 84, 38)
-			-
-				label: Orange 7
-				value: rgb(115, 64, 35)
-			-
-				label: Orange 8
-				value: rgb(68, 41, 27)
-			-
-				label: Yellow/Brown 5
-				value: rgb(175, 129, 34)
-			-
-				label: Yellow/Brown 6
-				value: rgb(131, 100, 38)
-			-
-				label: Yellow/Brown 7
-				value: rgb(94, 74, 35)
-			-
-				label: Yellow/Brown 8
-				value: rgb(57, 46, 26)
-	-
-		id: heading 5 bg colours
-		title: Heading 5
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-5-bg-l
-		title: Heading 5 Light Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(245, 243, 240)
-		options:
-			-
-				label: Background
-				value: rgb(245, 243, 240)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green 2
-				value: rgb(223, 226, 189)
-			-
-				label: Green 3
-				value: rgb(201, 202, 133)
-			-
-				label: Green 4
-				value: rgb(171, 173, 85)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian 2
-				value: rgb(204, 228, 214)
-			-
-				label: Viridian 3
-				value: rgb(162, 209, 183)
-			-
-				label: Viridian 4
-				value: rgb(105, 184, 139)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Teal 2
-				value: rgb(201, 228, 226)
-			-
-				label: Teal 3
-				value: rgb(150, 209, 207)
-			-
-				label: Teal 4
-				value: rgb(104, 181, 177)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Blue 2
-				value: rgb(213, 225, 232)
-			-
-				label: Blue 3
-				value: rgb(177, 202, 216)
-			-
-				label: Blue 4
-				value: rgb(136, 173, 194)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender 2
-				value: rgb(222, 222, 233)
-			-
-				label: Lavender 3
-				value: rgb(196, 196, 219)
-			-
-				label: Lavender 4
-				value: rgb(165, 165, 206)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Pink 2
-				value: rgb(245, 215, 219)
-			-
-				label: Pink 3
-				value: rgb(242, 183, 192)
-			-
-				label: Pink 4
-				value: rgb(240, 138, 156)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Red 2
-				value: rgb(249, 215, 211)
-			-
-				label: Red 3
-				value: rgb(250, 182, 173)
-			-
-				label: Red 4
-				value: rgb(252, 134, 122)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Orange 2
-				value: rgb(247, 218, 186)
-			-
-				label: Orange 3
-				value: rgb(247, 186, 121)
-			-
-				label: Orange 4
-				value: rgb(241, 145, 52)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow 2
-				value: rgb(242, 223, 141)
-			-
-				label: Yellow 3
-				value: rgb(236, 193, 81)
-			-
-				label: Yellow 4
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-5-bg-d
-		title: Heading 5 Dark Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(21, 21, 21)
-		options:
-			-
-				label: Background
-				value: rgb(21, 21, 21)
-			-
-				label: Black
-				value: rgb(8, 8, 8)
-			-
-				label: True Black
-				value: rgb(0, 0, 0)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Green 6
-				value: rgb(108, 108, 46)
-			-
-				label: Green 7
-				value: rgb(79, 79, 40)
-			-
-				label: Green 8
-				value: rgb(49, 49, 28)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Viridian 6
-				value: rgb(55, 117, 82)
-			-
-				label: Viridian 7
-				value: rgb(48, 84, 62)
-			-
-				label: Viridian 8
-				value: rgb(33, 52, 40)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Teal 6
-				value: rgb(50, 115, 112)
-			-
-				label: Teal 7
-				value: rgb(44, 83, 82)
-			-
-				label: Teal 8
-				value: rgb(32, 51, 51)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Blue 6
-				value: rgb(65, 110, 135)
-			-
-				label: Blue 7
-				value: rgb(46, 81, 99)
-			-
-				label: Blue 8
-				value: rgb(34, 50, 59)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Lavender 6
-				value: rgb(99, 98, 167)
-			-
-				label: Lavender 7
-				value: rgb(72, 70, 132)
-			-
-				label: Lavender 8
-				value: rgb(44, 43, 83)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Pink 6
-				value: rgb(194, 49, 70)
-			-
-				label: Pink 7
-				value: rgb(149, 27, 42)
-			-
-				label: Pink 8
-				value: rgb(86, 28, 31)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Red 6
-				value: rgb(200, 43, 41)
-			-
-				label: Red 7
-				value: rgb(148, 31, 30)
-			-
-				label: Red 8
-				value: rgb(89, 26, 23)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Orange 6
-				value: rgb(162, 84, 38)
-			-
-				label: Orange 7
-				value: rgb(115, 64, 35)
-			-
-				label: Orange 8
-				value: rgb(68, 41, 27)
-			-
-				label: Yellow/Brown 5
-				value: rgb(175, 129, 34)
-			-
-				label: Yellow/Brown 6
-				value: rgb(131, 100, 38)
-			-
-				label: Yellow/Brown 7
-				value: rgb(94, 74, 35)
-			-
-				label: Yellow/Brown 8
-				value: rgb(57, 46, 26)
-	-
-		id: heading 6 bg colours
-		title: Heading 6
-		type: heading
-		level: 6
-		collapsed: true
-	-
-		id: color-heading-6-bg-l
-		title: Heading 6 Light Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(245, 243, 240)
-		options:
-			-
-				label: Background
-				value: rgb(245, 243, 240)
-			-
-				label: White
-				value: rgb(254, 254, 254)
-			-
-				label: Green 2
-				value: rgb(223, 226, 189)
-			-
-				label: Green 3
-				value: rgb(201, 202, 133)
-			-
-				label: Green 4
-				value: rgb(171, 173, 85)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Viridian 2
-				value: rgb(204, 228, 214)
-			-
-				label: Viridian 3
-				value: rgb(162, 209, 183)
-			-
-				label: Viridian 4
-				value: rgb(105, 184, 139)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Teal 2
-				value: rgb(201, 228, 226)
-			-
-				label: Teal 3
-				value: rgb(150, 209, 207)
-			-
-				label: Teal 4
-				value: rgb(104, 181, 177)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Blue 2
-				value: rgb(213, 225, 232)
-			-
-				label: Blue 3
-				value: rgb(177, 202, 216)
-			-
-				label: Blue 4
-				value: rgb(136, 173, 194)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Lavender 2
-				value: rgb(222, 222, 233)
-			-
-				label: Lavender 3
-				value: rgb(196, 196, 219)
-			-
-				label: Lavender 4
-				value: rgb(165, 165, 206)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Pink 2
-				value: rgb(245, 215, 219)
-			-
-				label: Pink 3
-				value: rgb(242, 183, 192)
-			-
-				label: Pink 4
-				value: rgb(240, 138, 156)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Red 2
-				value: rgb(249, 215, 211)
-			-
-				label: Red 3
-				value: rgb(250, 182, 173)
-			-
-				label: Red 4
-				value: rgb(252, 134, 122)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Orange 2
-				value: rgb(247, 218, 186)
-			-
-				label: Orange 3
-				value: rgb(247, 186, 121)
-			-
-				label: Orange 4
-				value: rgb(241, 145, 52)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Yellow 2
-				value: rgb(242, 223, 141)
-			-
-				label: Yellow 3
-				value: rgb(236, 193, 81)
-			-
-				label: Yellow 4
-				value: rgb(214, 159, 40)
-	-
-		id: color-heading-6-bg-d
-		title: Heading 6 Dark Mode
-		description: The higher the number, the lower the brightness
-		type: variable-select
-		default: rgb(21, 21, 21)
-		options:
-			-
-				label: Background
-				value: rgb(21, 21, 21)
-			-
-				label: Black
-				value: rgb(8, 8, 8)
-			-
-				label: True Black
-				value: rgb(0, 0, 0)
-			-
-				label: Green 5
-				value: rgb(140, 141, 59)
-			-
-				label: Green 6
-				value: rgb(108, 108, 46)
-			-
-				label: Green 7
-				value: rgb(79, 79, 40)
-			-
-				label: Green 8
-				value: rgb(49, 49, 28)
-			-
-				label: Viridian 5
-				value: rgb(70, 153, 106)
-			-
-				label: Viridian 6
-				value: rgb(55, 117, 82)
-			-
-				label: Viridian 7
-				value: rgb(48, 84, 62)
-			-
-				label: Viridian 8
-				value: rgb(33, 52, 40)
-			-
-				label: Teal 5
-				value: rgb(64, 150, 147)
-			-
-				label: Teal 6
-				value: rgb(50, 115, 112)
-			-
-				label: Teal 7
-				value: rgb(44, 83, 82)
-			-
-				label: Teal 8
-				value: rgb(32, 51, 51)
-			-
-				label: Blue 5
-				value: rgb(102, 142, 165)
-			-
-				label: Blue 6
-				value: rgb(65, 110, 135)
-			-
-				label: Blue 7
-				value: rgb(46, 81, 99)
-			-
-				label: Blue 8
-				value: rgb(34, 50, 59)
-			-
-				label: Lavender 5
-				value: rgb(132, 132, 188)
-			-
-				label: Lavender 6
-				value: rgb(99, 98, 167)
-			-
-				label: Lavender 7
-				value: rgb(72, 70, 132)
-			-
-				label: Lavender 8
-				value: rgb(44, 43, 83)
-			-
-				label: Pink 5
-				value: rgb(235, 84, 108)
-			-
-				label: Pink 6
-				value: rgb(194, 49, 70)
-			-
-				label: Pink 7
-				value: rgb(149, 27, 42)
-			-
-				label: Pink 8
-				value: rgb(86, 28, 31)
-			-
-				label: Red 5
-				value: rgb(241, 81, 72)
-			-
-				label: Red 6
-				value: rgb(200, 43, 41)
-			-
-				label: Red 7
-				value: rgb(148, 31, 30)
-			-
-				label: Red 8
-				value: rgb(89, 26, 23)
-			-
-				label: Orange 5
-				value: rgb(214, 108, 30)
-			-
-				label: Orange 6
-				value: rgb(162, 84, 38)
-			-
-				label: Orange 7
-				value: rgb(115, 64, 35)
-			-
-				label: Orange 8
-				value: rgb(68, 41, 27)
-			-
-				label: Yellow/Brown 5
-				value: rgb(175, 129, 34)
-			-
-				label: Yellow/Brown 6
-				value: rgb(131, 100, 38)
-			-
-				label: Yellow/Brown 7
-				value: rgb(94, 74, 35)
-			-
-				label: Yellow/Brown 8
-				value: rgb(57, 46, 26)
+			id: line-width
+			title: Preview Mode line width
+			description: The maximum number of characters per line.
+			type: variable-number-slider
+			default: 42
+			min: 30
+			max: 100
+			step: 1
+			format: 'rem'
+	-	
+			id: fonts
+			title: Fonts
+			type: heading
+			level: 3
+			collapsed: true
+	-	
+				id: font-preview
+				title: Preview Mode Font
+				type: variable-text
+				default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-		
+				id: font-editor
+				title: Edit Mode Font
+				type: variable-text
+				default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-		
+				id: font-ui
+				title: UI font
+				type: variable-text
+				default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-		
+				id: font-mono
+				title: Monospace Font
+				type: variable-text
+				default: "'IBM Plex Mono *', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
+	-		
+				id: font-frontmatter
+				title: Frontmatter/YAML Font
+				type: variable-text
+				default: "'IBM Plex Mono *', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
+	-	
+			id: headings-title
+			title: Headings
+			type: heading
+			level: 3
+			collapsed: true
+	-	
+				id: font-heading-preview
+				title: Heading Font Preview Mode
+				type: variable-text
+				default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-		
+				id: font-heading-editor
+				title: Heading Font Editor Mode
+				type: variable-text
+				default: "'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+	-		
+				id: head-indicator
+				title: Heading Indicators
+				description: Disable the typora-like heading indicators in Live Preview.
+				type: class-toggle
+	-		
+				id: head-indicator-active
+				title: Heading Indicators in active line only
+				description: Enables typora-like heading indicators in Live Preview, only in the active line.
+				type: class-toggle
+	-		
+				id: heading weights
+				title: Weights
+				type: heading
+				level: 4
+				collapsed: true 
+	-		
+					id: heading-1-weight
+					title: Heading 1 Weight
+					description: Default value - semi-bold (600)
+					type: variable-text
+					default: "600"
+	-			
+					id: heading-2-weight
+					title: Heading 2 Weight
+					description: Default value - semi-bold (600)
+					type: variable-text
+					default: "600"
+	-			
+					id: heading-3-weight
+					title: Heading 3 Weight
+					description: Default value - semi-bold (600)
+					type: variable-text
+					default: "500"
+	-			
+					id: heading-4-weight
+					title: Heading 4 Weight
+					description: Default value - semi-bold (600)
+					type: variable-text
+					default: "500"
+	-			
+					id: heading-5-weight
+					title: Heading 5 Weight
+					description: Default value - semi-bold (600)
+					type: variable-text
+					default: "400"
+	-			
+					id: heading-6-weight
+					title: Heading 6 Weight
+					description: Default value - semi-bold (600)
+					type: variable-text
+					default: "400"
+	-		
+				id: heading sizes
+				title: Sizes
+				type: heading
+				level: 4
+				collapsed: true
+	-		
+					id: heading-1
+					title: Heading 1 Size
+					type: variable-text
+					default: 1.75rem
+	-			
+					id: heading-2
+					title: Heading 2 Size
+					type: variable-text
+					default: 1.5rem
+	-			
+					id: heading-3
+					title: Heading 3 Size
+					type: variable-text
+					default: 1.25rem
+	-			
+					id: heading-4
+					title: Heading 4 Size
+					type: variable-text
+					default: 1.125rem
+	-			
+					id: heading-5
+					title: Heading 5 Size
+					type: variable-text
+					default: 1.875rem
+	-			
+					id: heading-6
+					title: Heading 6 Size
+					type: variable-text
+					default: .75rem
+	-		
+				id: heading colours
+				title: Colors
+				type: heading
+				level: 4
+				collapsed: true
+	-		
+				id: heading-clr
+				title: Toggle Heading Font Colors
+				type: class-toggle
+				default: false
+	-		
+				id: heading-clr-bg
+				title: Toggle Heading Background Colors
+				type: class-toggle
+				default: false
+	-		
+				id: heading colours
+				title: Heading Font Colors
+				type: heading
+				level: 5
+				collapsed: true
+	-		
+					id: heading 1 colours
+					title: Heading 1
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-1-l
+						title: Heading 1 Light Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-1-d
+						title: Heading 1 Dark Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: Black
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(175, 129, 34)
+	-			
+					id: heading 2 colours
+					title: Heading 2
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-2-l
+						title: Heading 2 Light Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-2-d
+						title: Heading 2 Dark Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: Black
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(175, 129, 34)
+	-			
+					id: heading 3 colours
+					title: Heading 3
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-3-l
+						title: Heading 3 Light Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-3-d
+						title: Heading 3 Dark Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: Black
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(175, 129, 34)
+	-			
+					id: heading 4 colours
+					title: Heading 4
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-4-l
+						title: Heading 4 Light Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-4-d
+						title: Heading 4 Dark Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: Black
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(175, 129, 34)
+	-			
+					id: heading 5 colours
+					title: Heading 5
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-5-l
+						title: Heading 5 Light Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-5-d
+						title: Heading 5 Dark Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: Black
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(175, 129, 34)
+	-			
+					id: heading 6 colours
+					title: Heading 6
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-6-l
+						title: Heading 6 Light Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-6-d
+						title: Heading 6 Dark Mode
+						type: variable-select
+						default: rgb(254, 254, 254)
+						options:
+							-
+								label: Normal Text
+								value: rgb(254, 254, 254)
+							-
+								label: Black
+								value: rgb(254, 254, 254)
+							-
+								label: Green
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian
+								value: rgb(70, 153, 106)
+							-
+								label: Teal
+								value: rgb(64, 150, 147)
+							-
+								label: Blue
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender
+								value: rgb(132, 132, 188)
+							-
+								label: Pink
+								value: rgb(235, 84, 108)
+							-
+								label: Red
+								value: rgb(241, 81, 72)
+							-
+								label: Orange
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow
+								value: rgb(175, 129, 34)
+	-		
+				id: heading background colours
+				title: Heading Background Colors
+				type: heading
+				level: 5
+				collapsed: true
+	-		
+					id: heading 1 bg colours
+					title: Heading 1
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-1-bg-l
+						title: Heading 1 Light Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(245, 243, 240)
+						options:
+							-
+								label: Background
+								value: rgb(245, 243, 240)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green 2
+								value: rgb(223, 226, 189)
+							-
+								label: Green 3
+								value: rgb(201, 202, 133)
+							-
+								label: Green 4
+								value: rgb(171, 173, 85)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian 2
+								value: rgb(204, 228, 214)
+							-
+								label: Viridian 3
+								value: rgb(162, 209, 183)
+							-
+								label: Viridian 4
+								value: rgb(105, 184, 139)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Teal 2
+								value: rgb(201, 228, 226)
+							-
+								label: Teal 3
+								value: rgb(150, 209, 207)
+							-
+								label: Teal 4
+								value: rgb(104, 181, 177)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Blue 2
+								value: rgb(213, 225, 232)
+							-
+								label: Blue 3
+								value: rgb(177, 202, 216)
+							-
+								label: Blue 4
+								value: rgb(136, 173, 194)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender 2
+								value: rgb(222, 222, 233)
+							-
+								label: Lavender 3
+								value: rgb(196, 196, 219)
+							-
+								label: Lavender 4
+								value: rgb(165, 165, 206)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Pink 2
+								value: rgb(245, 215, 219)
+							-
+								label: Pink 3
+								value: rgb(242, 183, 192)
+							-
+								label: Pink 4
+								value: rgb(240, 138, 156)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Red 2
+								value: rgb(249, 215, 211)
+							-
+								label: Red 3
+								value: rgb(250, 182, 173)
+							-
+								label: Red 4
+								value: rgb(252, 134, 122)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Orange 2
+								value: rgb(247, 218, 186)
+							-
+								label: Orange 3
+								value: rgb(247, 186, 121)
+							-
+								label: Orange 4
+								value: rgb(241, 145, 52)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow 2
+								value: rgb(242, 223, 141)
+							-
+								label: Yellow 3
+								value: rgb(236, 193, 81)
+							-
+								label: Yellow 4
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-1-bg-d
+						title: Heading 1 Dark Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(21, 21, 21)
+						options:
+							-
+								label: Background
+								value: rgb(21, 21, 21)
+							-
+								label: Black
+								value: rgb(8, 8, 8)
+							-
+								label: True Black
+								value: rgb(0, 0, 0)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Green 6
+								value: rgb(108, 108, 46)
+							-
+								label: Green 7
+								value: rgb(79, 79, 40)
+							-
+								label: Green 8
+								value: rgb(49, 49, 28)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Viridian 6
+								value: rgb(55, 117, 82)
+							-
+								label: Viridian 7
+								value: rgb(48, 84, 62)
+							-
+								label: Viridian 8
+								value: rgb(33, 52, 40)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Teal 6
+								value: rgb(50, 115, 112)
+							-
+								label: Teal 7
+								value: rgb(44, 83, 82)
+							-
+								label: Teal 8
+								value: rgb(32, 51, 51)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Blue 6
+								value: rgb(65, 110, 135)
+							-
+								label: Blue 7
+								value: rgb(46, 81, 99)
+							-
+								label: Blue 8
+								value: rgb(34, 50, 59)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Lavender 6
+								value: rgb(99, 98, 167)
+							-
+								label: Lavender 7
+								value: rgb(72, 70, 132)
+							-
+								label: Lavender 8
+								value: rgb(44, 43, 83)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Pink 6
+								value: rgb(194, 49, 70)
+							-
+								label: Pink 7
+								value: rgb(149, 27, 42)
+							-
+								label: Pink 8
+								value: rgb(86, 28, 31)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Red 6
+								value: rgb(200, 43, 41)
+							-
+								label: Red 7
+								value: rgb(148, 31, 30)
+							-
+								label: Red 8
+								value: rgb(89, 26, 23)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Orange 6
+								value: rgb(162, 84, 38)
+							-
+								label: Orange 7
+								value: rgb(115, 64, 35)
+							-
+								label: Orange 8
+								value: rgb(68, 41, 27)
+							-
+								label: Yellow/Brown 5
+								value: rgb(175, 129, 34)
+							-
+								label: Yellow/Brown 6
+								value: rgb(131, 100, 38)
+							-
+								label: Yellow/Brown 7
+								value: rgb(94, 74, 35)
+							-
+								label: Yellow/Brown 8
+								value: rgb(57, 46, 26)
+	-			
+					id: heading 2 bg colours
+					title: Heading 2
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-2-bg-l
+						title: Heading 2 Light Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(245, 243, 240)
+						options:
+							-
+								label: Background
+								value: rgb(245, 243, 240)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green 2
+								value: rgb(223, 226, 189)
+							-
+								label: Green 3
+								value: rgb(201, 202, 133)
+							-
+								label: Green 4
+								value: rgb(171, 173, 85)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian 2
+								value: rgb(204, 228, 214)
+							-
+								label: Viridian 3
+								value: rgb(162, 209, 183)
+							-
+								label: Viridian 4
+								value: rgb(105, 184, 139)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Teal 2
+								value: rgb(201, 228, 226)
+							-
+								label: Teal 3
+								value: rgb(150, 209, 207)
+							-
+								label: Teal 4
+								value: rgb(104, 181, 177)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Blue 2
+								value: rgb(213, 225, 232)
+							-
+								label: Blue 3
+								value: rgb(177, 202, 216)
+							-
+								label: Blue 4
+								value: rgb(136, 173, 194)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender 2
+								value: rgb(222, 222, 233)
+							-
+								label: Lavender 3
+								value: rgb(196, 196, 219)
+							-
+								label: Lavender 4
+								value: rgb(165, 165, 206)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Pink 2
+								value: rgb(245, 215, 219)
+							-
+								label: Pink 3
+								value: rgb(242, 183, 192)
+							-
+								label: Pink 4
+								value: rgb(240, 138, 156)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Red 2
+								value: rgb(249, 215, 211)
+							-
+								label: Red 3
+								value: rgb(250, 182, 173)
+							-
+								label: Red 4
+								value: rgb(252, 134, 122)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Orange 2
+								value: rgb(247, 218, 186)
+							-
+								label: Orange 3
+								value: rgb(247, 186, 121)
+							-
+								label: Orange 4
+								value: rgb(241, 145, 52)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow 2
+								value: rgb(242, 223, 141)
+							-
+								label: Yellow 3
+								value: rgb(236, 193, 81)
+							-
+								label: Yellow 4
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-2-bg-d
+						title: Heading 2 Dark Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(21, 21, 21)
+						options:
+							-
+								label: Background
+								value: rgb(21, 21, 21)
+							-
+								label: Black
+								value: rgb(8, 8, 8)
+							-
+								label: True Black
+								value: rgb(0, 0, 0)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Green 6
+								value: rgb(108, 108, 46)
+							-
+								label: Green 7
+								value: rgb(79, 79, 40)
+							-
+								label: Green 8
+								value: rgb(49, 49, 28)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Viridian 6
+								value: rgb(55, 117, 82)
+							-
+								label: Viridian 7
+								value: rgb(48, 84, 62)
+							-
+								label: Viridian 8
+								value: rgb(33, 52, 40)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Teal 6
+								value: rgb(50, 115, 112)
+							-
+								label: Teal 7
+								value: rgb(44, 83, 82)
+							-
+								label: Teal 8
+								value: rgb(32, 51, 51)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Blue 6
+								value: rgb(65, 110, 135)
+							-
+								label: Blue 7
+								value: rgb(46, 81, 99)
+							-
+								label: Blue 8
+								value: rgb(34, 50, 59)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Lavender 6
+								value: rgb(99, 98, 167)
+							-
+								label: Lavender 7
+								value: rgb(72, 70, 132)
+							-
+								label: Lavender 8
+								value: rgb(44, 43, 83)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Pink 6
+								value: rgb(194, 49, 70)
+							-
+								label: Pink 7
+								value: rgb(149, 27, 42)
+							-
+								label: Pink 8
+								value: rgb(86, 28, 31)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Red 6
+								value: rgb(200, 43, 41)
+							-
+								label: Red 7
+								value: rgb(148, 31, 30)
+							-
+								label: Red 8
+								value: rgb(89, 26, 23)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Orange 6
+								value: rgb(162, 84, 38)
+							-
+								label: Orange 7
+								value: rgb(115, 64, 35)
+							-
+								label: Orange 8
+								value: rgb(68, 41, 27)
+							-
+								label: Yellow/Brown 5
+								value: rgb(175, 129, 34)
+							-
+								label: Yellow/Brown 6
+								value: rgb(131, 100, 38)
+							-
+								label: Yellow/Brown 7
+								value: rgb(94, 74, 35)
+							-
+								label: Yellow/Brown 8
+								value: rgb(57, 46, 26)
+	-			
+					id: heading 3 bg colours
+					title: Heading 3
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-3-bg-l
+						title: Heading 3 Light Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(245, 243, 240)
+						options:
+							-
+								label: Background
+								value: rgb(245, 243, 240)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green 2
+								value: rgb(223, 226, 189)
+							-
+								label: Green 3
+								value: rgb(201, 202, 133)
+							-
+								label: Green 4
+								value: rgb(171, 173, 85)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian 2
+								value: rgb(204, 228, 214)
+							-
+								label: Viridian 3
+								value: rgb(162, 209, 183)
+							-
+								label: Viridian 4
+								value: rgb(105, 184, 139)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Teal 2
+								value: rgb(201, 228, 226)
+							-
+								label: Teal 3
+								value: rgb(150, 209, 207)
+							-
+								label: Teal 4
+								value: rgb(104, 181, 177)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Blue 2
+								value: rgb(213, 225, 232)
+							-
+								label: Blue 3
+								value: rgb(177, 202, 216)
+							-
+								label: Blue 4
+								value: rgb(136, 173, 194)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender 2
+								value: rgb(222, 222, 233)
+							-
+								label: Lavender 3
+								value: rgb(196, 196, 219)
+							-
+								label: Lavender 4
+								value: rgb(165, 165, 206)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Pink 2
+								value: rgb(245, 215, 219)
+							-
+								label: Pink 3
+								value: rgb(242, 183, 192)
+							-
+								label: Pink 4
+								value: rgb(240, 138, 156)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Red 2
+								value: rgb(249, 215, 211)
+							-
+								label: Red 3
+								value: rgb(250, 182, 173)
+							-
+								label: Red 4
+								value: rgb(252, 134, 122)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Orange 2
+								value: rgb(247, 218, 186)
+							-
+								label: Orange 3
+								value: rgb(247, 186, 121)
+							-
+								label: Orange 4
+								value: rgb(241, 145, 52)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow 2
+								value: rgb(242, 223, 141)
+							-
+								label: Yellow 3
+								value: rgb(236, 193, 81)
+							-
+								label: Yellow 4
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-3-bg-d
+						title: Heading 3 Dark Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(21, 21, 21)
+						options:
+							-
+								label: Background
+								value: rgb(21, 21, 21)
+							-
+								label: Black
+								value: rgb(8, 8, 8)
+							-
+								label: True Black
+								value: rgb(0, 0, 0)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Green 6
+								value: rgb(108, 108, 46)
+							-
+								label: Green 7
+								value: rgb(79, 79, 40)
+							-
+								label: Green 8
+								value: rgb(49, 49, 28)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Viridian 6
+								value: rgb(55, 117, 82)
+							-
+								label: Viridian 7
+								value: rgb(48, 84, 62)
+							-
+								label: Viridian 8
+								value: rgb(33, 52, 40)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Teal 6
+								value: rgb(50, 115, 112)
+							-
+								label: Teal 7
+								value: rgb(44, 83, 82)
+							-
+								label: Teal 8
+								value: rgb(32, 51, 51)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Blue 6
+								value: rgb(65, 110, 135)
+							-
+								label: Blue 7
+								value: rgb(46, 81, 99)
+							-
+								label: Blue 8
+								value: rgb(34, 50, 59)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Lavender 6
+								value: rgb(99, 98, 167)
+							-
+								label: Lavender 7
+								value: rgb(72, 70, 132)
+							-
+								label: Lavender 8
+								value: rgb(44, 43, 83)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Pink 6
+								value: rgb(194, 49, 70)
+							-
+								label: Pink 7
+								value: rgb(149, 27, 42)
+							-
+								label: Pink 8
+								value: rgb(86, 28, 31)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Red 6
+								value: rgb(200, 43, 41)
+							-
+								label: Red 7
+								value: rgb(148, 31, 30)
+							-
+								label: Red 8
+								value: rgb(89, 26, 23)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Orange 6
+								value: rgb(162, 84, 38)
+							-
+								label: Orange 7
+								value: rgb(115, 64, 35)
+							-
+								label: Orange 8
+								value: rgb(68, 41, 27)
+							-
+								label: Yellow/Brown 5
+								value: rgb(175, 129, 34)
+							-
+								label: Yellow/Brown 6
+								value: rgb(131, 100, 38)
+							-
+								label: Yellow/Brown 7
+								value: rgb(94, 74, 35)
+							-
+								label: Yellow/Brown 8
+								value: rgb(57, 46, 26)
+	-			
+					id: heading 4 bg colours
+					title: Heading 4
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-4-bg-l
+						title: Heading 4 Light Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(245, 243, 240)
+						options:
+							-
+								label: Background
+								value: rgb(245, 243, 240)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green 2
+								value: rgb(223, 226, 189)
+							-
+								label: Green 3
+								value: rgb(201, 202, 133)
+							-
+								label: Green 4
+								value: rgb(171, 173, 85)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian 2
+								value: rgb(204, 228, 214)
+							-
+								label: Viridian 3
+								value: rgb(162, 209, 183)
+							-
+								label: Viridian 4
+								value: rgb(105, 184, 139)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Teal 2
+								value: rgb(201, 228, 226)
+							-
+								label: Teal 3
+								value: rgb(150, 209, 207)
+							-
+								label: Teal 4
+								value: rgb(104, 181, 177)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Blue 2
+								value: rgb(213, 225, 232)
+							-
+								label: Blue 3
+								value: rgb(177, 202, 216)
+							-
+								label: Blue 4
+								value: rgb(136, 173, 194)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender 2
+								value: rgb(222, 222, 233)
+							-
+								label: Lavender 3
+								value: rgb(196, 196, 219)
+							-
+								label: Lavender 4
+								value: rgb(165, 165, 206)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Pink 2
+								value: rgb(245, 215, 219)
+							-
+								label: Pink 3
+								value: rgb(242, 183, 192)
+							-
+								label: Pink 4
+								value: rgb(240, 138, 156)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Red 2
+								value: rgb(249, 215, 211)
+							-
+								label: Red 3
+								value: rgb(250, 182, 173)
+							-
+								label: Red 4
+								value: rgb(252, 134, 122)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Orange 2
+								value: rgb(247, 218, 186)
+							-
+								label: Orange 3
+								value: rgb(247, 186, 121)
+							-
+								label: Orange 4
+								value: rgb(241, 145, 52)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow 2
+								value: rgb(242, 223, 141)
+							-
+								label: Yellow 3
+								value: rgb(236, 193, 81)
+							-
+								label: Yellow 4
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-4-bg-d
+						title: Heading 4 Dark Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(21, 21, 21)
+						options:
+							-
+								label: Background
+								value: rgb(21, 21, 21)
+							-
+								label: Black
+								value: rgb(8, 8, 8)
+							-
+								label: True Black
+								value: rgb(0, 0, 0)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Green 6
+								value: rgb(108, 108, 46)
+							-
+								label: Green 7
+								value: rgb(79, 79, 40)
+							-
+								label: Green 8
+								value: rgb(49, 49, 28)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Viridian 6
+								value: rgb(55, 117, 82)
+							-
+								label: Viridian 7
+								value: rgb(48, 84, 62)
+							-
+								label: Viridian 8
+								value: rgb(33, 52, 40)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Teal 6
+								value: rgb(50, 115, 112)
+							-
+								label: Teal 7
+								value: rgb(44, 83, 82)
+							-
+								label: Teal 8
+								value: rgb(32, 51, 51)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Blue 6
+								value: rgb(65, 110, 135)
+							-
+								label: Blue 7
+								value: rgb(46, 81, 99)
+							-
+								label: Blue 8
+								value: rgb(34, 50, 59)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Lavender 6
+								value: rgb(99, 98, 167)
+							-
+								label: Lavender 7
+								value: rgb(72, 70, 132)
+							-
+								label: Lavender 8
+								value: rgb(44, 43, 83)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Pink 6
+								value: rgb(194, 49, 70)
+							-
+								label: Pink 7
+								value: rgb(149, 27, 42)
+							-
+								label: Pink 8
+								value: rgb(86, 28, 31)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Red 6
+								value: rgb(200, 43, 41)
+							-
+								label: Red 7
+								value: rgb(148, 31, 30)
+							-
+								label: Red 8
+								value: rgb(89, 26, 23)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Orange 6
+								value: rgb(162, 84, 38)
+							-
+								label: Orange 7
+								value: rgb(115, 64, 35)
+							-
+								label: Orange 8
+								value: rgb(68, 41, 27)
+							-
+								label: Yellow/Brown 5
+								value: rgb(175, 129, 34)
+							-
+								label: Yellow/Brown 6
+								value: rgb(131, 100, 38)
+							-
+								label: Yellow/Brown 7
+								value: rgb(94, 74, 35)
+							-
+								label: Yellow/Brown 8
+								value: rgb(57, 46, 26)
+	-			
+					id: heading 5 bg colours
+					title: Heading 5
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-5-bg-l
+						title: Heading 5 Light Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(245, 243, 240)
+						options:
+							-
+								label: Background
+								value: rgb(245, 243, 240)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green 2
+								value: rgb(223, 226, 189)
+							-
+								label: Green 3
+								value: rgb(201, 202, 133)
+							-
+								label: Green 4
+								value: rgb(171, 173, 85)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian 2
+								value: rgb(204, 228, 214)
+							-
+								label: Viridian 3
+								value: rgb(162, 209, 183)
+							-
+								label: Viridian 4
+								value: rgb(105, 184, 139)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Teal 2
+								value: rgb(201, 228, 226)
+							-
+								label: Teal 3
+								value: rgb(150, 209, 207)
+							-
+								label: Teal 4
+								value: rgb(104, 181, 177)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Blue 2
+								value: rgb(213, 225, 232)
+							-
+								label: Blue 3
+								value: rgb(177, 202, 216)
+							-
+								label: Blue 4
+								value: rgb(136, 173, 194)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender 2
+								value: rgb(222, 222, 233)
+							-
+								label: Lavender 3
+								value: rgb(196, 196, 219)
+							-
+								label: Lavender 4
+								value: rgb(165, 165, 206)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Pink 2
+								value: rgb(245, 215, 219)
+							-
+								label: Pink 3
+								value: rgb(242, 183, 192)
+							-
+								label: Pink 4
+								value: rgb(240, 138, 156)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Red 2
+								value: rgb(249, 215, 211)
+							-
+								label: Red 3
+								value: rgb(250, 182, 173)
+							-
+								label: Red 4
+								value: rgb(252, 134, 122)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Orange 2
+								value: rgb(247, 218, 186)
+							-
+								label: Orange 3
+								value: rgb(247, 186, 121)
+							-
+								label: Orange 4
+								value: rgb(241, 145, 52)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow 2
+								value: rgb(242, 223, 141)
+							-
+								label: Yellow 3
+								value: rgb(236, 193, 81)
+							-
+								label: Yellow 4
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-5-bg-d
+						title: Heading 5 Dark Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(21, 21, 21)
+						options:
+							-
+								label: Background
+								value: rgb(21, 21, 21)
+							-
+								label: Black
+								value: rgb(8, 8, 8)
+							-
+								label: True Black
+								value: rgb(0, 0, 0)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Green 6
+								value: rgb(108, 108, 46)
+							-
+								label: Green 7
+								value: rgb(79, 79, 40)
+							-
+								label: Green 8
+								value: rgb(49, 49, 28)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Viridian 6
+								value: rgb(55, 117, 82)
+							-
+								label: Viridian 7
+								value: rgb(48, 84, 62)
+							-
+								label: Viridian 8
+								value: rgb(33, 52, 40)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Teal 6
+								value: rgb(50, 115, 112)
+							-
+								label: Teal 7
+								value: rgb(44, 83, 82)
+							-
+								label: Teal 8
+								value: rgb(32, 51, 51)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Blue 6
+								value: rgb(65, 110, 135)
+							-
+								label: Blue 7
+								value: rgb(46, 81, 99)
+							-
+								label: Blue 8
+								value: rgb(34, 50, 59)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Lavender 6
+								value: rgb(99, 98, 167)
+							-
+								label: Lavender 7
+								value: rgb(72, 70, 132)
+							-
+								label: Lavender 8
+								value: rgb(44, 43, 83)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Pink 6
+								value: rgb(194, 49, 70)
+							-
+								label: Pink 7
+								value: rgb(149, 27, 42)
+							-
+								label: Pink 8
+								value: rgb(86, 28, 31)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Red 6
+								value: rgb(200, 43, 41)
+							-
+								label: Red 7
+								value: rgb(148, 31, 30)
+							-
+								label: Red 8
+								value: rgb(89, 26, 23)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Orange 6
+								value: rgb(162, 84, 38)
+							-
+								label: Orange 7
+								value: rgb(115, 64, 35)
+							-
+								label: Orange 8
+								value: rgb(68, 41, 27)
+							-
+								label: Yellow/Brown 5
+								value: rgb(175, 129, 34)
+							-
+								label: Yellow/Brown 6
+								value: rgb(131, 100, 38)
+							-
+								label: Yellow/Brown 7
+								value: rgb(94, 74, 35)
+							-
+								label: Yellow/Brown 8
+								value: rgb(57, 46, 26)
+	-			
+					id: heading 6 bg colours
+					title: Heading 6
+					type: heading
+					level: 6
+					collapsed: true
+	-			
+						id: color-heading-6-bg-l
+						title: Heading 6 Light Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(245, 243, 240)
+						options:
+							-
+								label: Background
+								value: rgb(245, 243, 240)
+							-
+								label: White
+								value: rgb(254, 254, 254)
+							-
+								label: Green 2
+								value: rgb(223, 226, 189)
+							-
+								label: Green 3
+								value: rgb(201, 202, 133)
+							-
+								label: Green 4
+								value: rgb(171, 173, 85)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Viridian 2
+								value: rgb(204, 228, 214)
+							-
+								label: Viridian 3
+								value: rgb(162, 209, 183)
+							-
+								label: Viridian 4
+								value: rgb(105, 184, 139)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Teal 2
+								value: rgb(201, 228, 226)
+							-
+								label: Teal 3
+								value: rgb(150, 209, 207)
+							-
+								label: Teal 4
+								value: rgb(104, 181, 177)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Blue 2
+								value: rgb(213, 225, 232)
+							-
+								label: Blue 3
+								value: rgb(177, 202, 216)
+							-
+								label: Blue 4
+								value: rgb(136, 173, 194)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Lavender 2
+								value: rgb(222, 222, 233)
+							-
+								label: Lavender 3
+								value: rgb(196, 196, 219)
+							-
+								label: Lavender 4
+								value: rgb(165, 165, 206)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Pink 2
+								value: rgb(245, 215, 219)
+							-
+								label: Pink 3
+								value: rgb(242, 183, 192)
+							-
+								label: Pink 4
+								value: rgb(240, 138, 156)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Red 2
+								value: rgb(249, 215, 211)
+							-
+								label: Red 3
+								value: rgb(250, 182, 173)
+							-
+								label: Red 4
+								value: rgb(252, 134, 122)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Orange 2
+								value: rgb(247, 218, 186)
+							-
+								label: Orange 3
+								value: rgb(247, 186, 121)
+							-
+								label: Orange 4
+								value: rgb(241, 145, 52)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Yellow 2
+								value: rgb(242, 223, 141)
+							-
+								label: Yellow 3
+								value: rgb(236, 193, 81)
+							-
+								label: Yellow 4
+								value: rgb(214, 159, 40)
+	-				
+						id: color-heading-6-bg-d
+						title: Heading 6 Dark Mode
+						description: The higher the number, the lower the brightness
+						type: variable-select
+						default: rgb(21, 21, 21)
+						options:
+							-
+								label: Background
+								value: rgb(21, 21, 21)
+							-
+								label: Black
+								value: rgb(8, 8, 8)
+							-
+								label: True Black
+								value: rgb(0, 0, 0)
+							-
+								label: Green 5
+								value: rgb(140, 141, 59)
+							-
+								label: Green 6
+								value: rgb(108, 108, 46)
+							-
+								label: Green 7
+								value: rgb(79, 79, 40)
+							-
+								label: Green 8
+								value: rgb(49, 49, 28)
+							-
+								label: Viridian 5
+								value: rgb(70, 153, 106)
+							-
+								label: Viridian 6
+								value: rgb(55, 117, 82)
+							-
+								label: Viridian 7
+								value: rgb(48, 84, 62)
+							-
+								label: Viridian 8
+								value: rgb(33, 52, 40)
+							-
+								label: Teal 5
+								value: rgb(64, 150, 147)
+							-
+								label: Teal 6
+								value: rgb(50, 115, 112)
+							-
+								label: Teal 7
+								value: rgb(44, 83, 82)
+							-
+								label: Teal 8
+								value: rgb(32, 51, 51)
+							-
+								label: Blue 5
+								value: rgb(102, 142, 165)
+							-
+								label: Blue 6
+								value: rgb(65, 110, 135)
+							-
+								label: Blue 7
+								value: rgb(46, 81, 99)
+							-
+								label: Blue 8
+								value: rgb(34, 50, 59)
+							-
+								label: Lavender 5
+								value: rgb(132, 132, 188)
+							-
+								label: Lavender 6
+								value: rgb(99, 98, 167)
+							-
+								label: Lavender 7
+								value: rgb(72, 70, 132)
+							-
+								label: Lavender 8
+								value: rgb(44, 43, 83)
+							-
+								label: Pink 5
+								value: rgb(235, 84, 108)
+							-
+								label: Pink 6
+								value: rgb(194, 49, 70)
+							-
+								label: Pink 7
+								value: rgb(149, 27, 42)
+							-
+								label: Pink 8
+								value: rgb(86, 28, 31)
+							-
+								label: Red 5
+								value: rgb(241, 81, 72)
+							-
+								label: Red 6
+								value: rgb(200, 43, 41)
+							-
+								label: Red 7
+								value: rgb(148, 31, 30)
+							-
+								label: Red 8
+								value: rgb(89, 26, 23)
+							-
+								label: Orange 5
+								value: rgb(214, 108, 30)
+							-
+								label: Orange 6
+								value: rgb(162, 84, 38)
+							-
+								label: Orange 7
+								value: rgb(115, 64, 35)
+							-
+								label: Orange 8
+								value: rgb(68, 41, 27)
+							-
+								label: Yellow/Brown 5
+								value: rgb(175, 129, 34)
+							-
+								label: Yellow/Brown 6
+								value: rgb(131, 100, 38)
+							-
+								label: Yellow/Brown 7
+								value: rgb(94, 74, 35)
+							-
+								label: Yellow/Brown 8
+								value: rgb(57, 46, 26)
 	-
 		id: features
 		title: Features
@@ -10232,38 +10623,50 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: tasks
-		title: Disable custom tasks and pseudo-admonitions
-		type: class-toggle
+			id: tasks
+			title: Disable custom tasks and pseudo-admonitions
+			type: class-toggle
 	-
-		id: active-line-hl
-		title: Disable active line highlighting
-		description: Disables active line highlighting
-		type: class-toggle
+			id: hr-options
+			title: <hr> ("---") Options
+			description: For Edit Mode
+			type: class-select
+			allowEmpty: false
+			default: default
+			options:
+				-
+					label: Disable WYSIWYG hr
+					value: default
+				-
+					label: Center hr (no WYSIWYG)
+					value: center-hr
 	-
-		id: hr-options
-		title: <hr> ("---") Options
-		description: For Edit Mode
-		type: class-select
-		allowEmpty: false
-		default: default
-		options:
-			-
-				label: Disable WYSIWYG hr
-				value: default
-			-
-				label: Center hr (no WYSIWYG)
-				value: center-hr
+			id: edit-mode-tasks
+			title: Edit Mode Tasks
+			description: Makes filled tasks green and empty ones red, in Edit Mode.
+			type: class-toggle
 	-
-		id: edit-mode-tasks
-		title: Edit Mode Tasks
-		description: Makes filled tasks green and empty ones red, in Edit Mode.
-		type: class-toggle
+			id: kanban-wrap
+			title: Wrap Kanban Lanes
+			description: Makes Kanban Lanes wrap in multiple rows if needed.
+			type: class-toggle
 	-
-		id: kanban-wrap
-		title: Wrap Kanban Lanes
-		description: Makes Kanban Lanes wrap in multiple rows if needed.
-		type: class-toggle
+			id: active-line-highlight
+			title: Active Line Highlighting
+			type: heading
+			level: 3
+			collapsed: true
+	-
+				id: active-line-hl
+				title: Enable active line highlighting
+				description: Disables active line highlighting
+				type: class-toggle
+	-
+				id: accent-active-line
+				title: Use Accent color as Active Line Highlight
+				description: Replaces the grey with the accent color for active line highlighting.
+				type: class-toggle
+				default: false
 	-
 		id: fn-heading
 		title: Footnotes
@@ -10271,27 +10674,27 @@ settings:
 		level: 3
 		collapsed: true
 	-
-		id: fn-title-options
-		title: Footnote Title
-		description: Places a lvl.2 heading before the Footnotes.
-		type: class-select
-		allowEmpty: false
-		default: default
-		options:
-			-
-				label: Default
-				value: default
-			-
-				label: Simple lvl 2 Heading
-				value: fn-title
-			-
-				label: Lvl 2 Heading with hr
-				value: fn-title-hr
+			id: fn-title-options
+			title: Footnote Title
+			description: Places a lvl.2 heading before the Footnotes.
+			type: class-select
+			allowEmpty: false
+			default: default
+			options:
+				-
+					label: Default
+					value: default
+				-
+					label: Simple lvl 2 Heading
+					value: fn-title
+				-
+					label: Lvl 2 Heading with hr
+					value: fn-title-hr
 	-
-		id: footnote-id
-		title: Footnotes heading
-		type: variable-text
-		default: "'Footnotes'"
+			id: footnote-id
+			title: Footnotes heading
+			type: variable-text
+			default: "'Footnotes'"
 	-
 		id: tables
 		title: Tables
@@ -10299,25 +10702,25 @@ settings:
 		level: 3
 		collapsed: true
 	-
-		id: table-options
-		title: Table Options
-		description: Customize the look of your tables!
-		type: class-select
-		allowEmpty: false
-		default: default
-		options:
-			-
-				label: Default
-				value: default
-			-
-				label: Alternate row colors
-				value: alternate-row-clr
-			-
-				label: Highlight last row
-				value: table-result
-			-
-				label: Minimal table
-				value: table-minimal
+			id: table-options
+			title: Table Options
+			description: Customize the look of your tables!
+			type: class-select
+			allowEmpty: false
+			default: default
+			options:
+				-
+					label: Default
+					value: default
+				-
+					label: Alternate row colors
+					value: alternate-row-clr
+				-
+					label: Highlight last row
+					value: table-result
+				-
+					label: Minimal table
+					value: table-minimal
 	-
 		id: sidenotes
 		title: Sidenotes
@@ -10325,45 +10728,57 @@ settings:
 		level: 3
 		collapsed: true
 	-
-		id: aside-side-options
-		title: Sidenote Options
-		description: Left and right sidenote colors
-		type: class-select
-		allowEmpty: false
-		default: default
-		options:
-			-
-				label: Default
-				value: default
-			-
-				label: Accent
-				value: aside-side-accent
-			-
-				label: Right Accent
-				value: aside-right-accent
-			-
-				label: Left Accent
-				value: aside-left-accent
+			id: aside-side-options
+			title: Sidenote Options
+			description: Left and right sidenote colors
+			type: class-select
+			allowEmpty: false
+			default: default
+			options:
+				-
+					label: Default
+					value: default
+				-
+					label: Accent
+					value: aside-side-accent
+				-
+					label: Right Accent
+					value: aside-right-accent
+				-
+					label: Left Accent
+					value: aside-left-accent
 	-
-		id: aside-in-options
-		title: Inner Sidenote Options
-		description: Inner sidenote colors 
-		type: class-select
-		allowEmpty: false
-		default: default
-		options:
-			-
-				label: Default
-				value: default
-			-
-				label: Accent
-				value: aside-in-accent
-			-
-				label: No border
-				value: aside-in-no-b
-			-
-				label: Greyscale
-				value: aside-in-grayscale
+			id: aside-in-options
+			title: Inner Sidenote Options
+			description: Inner sidenote colors 
+			type: class-select
+			allowEmpty: false
+			default: default
+			options:
+				-
+					label: Default
+					value: default
+				-
+					label: Accent
+					value: aside-in-accent
+				-
+					label: No border
+					value: aside-in-no-b
+				-
+					label: Greyscale
+					value: aside-in-grayscale
+	-
+		id: links
+		title: Links
+		type: heading
+		level: 3
+		collapsed: true
+	-
+			id: alt-link
+			title: Change internal link appearance
+			description: Switches to more understated internal links.
+			type: class-toggle
+			default: false
 	-
 		id: lists
 		title: Lists
@@ -10371,177 +10786,165 @@ settings:
 		level: 3
 		collapsed: true
 	-
-		id: marker-odd
-		title: Odd numbered list marker content
-		description: –\2009\2009 by default, \2009 is unicode for small space
-		type: variable-text
-		default: "'–  '"
+			id: marker-odd
+			title: Odd numbered list marker content
+			description: –\2009\2009 by default, \2009 is unicode for small space
+			type: variable-text
+			default: "'–  '"
 	-
-		id: marker-even
-		title: Even numbered list marker content
-		type: variable-text
-		default: "'▪  '"
+			id: marker-even
+			title: Even numbered list marker content
+			type: variable-text
+			default: "'▪  '"
 	-
-		id: relationship-lines
-		title: Enable Relationship Lines in Reading View [OFF by default]
-		description: Toggle relationship lines in Reading View lists.
-		type: class-toggle
-		default: false
-	-
-		id: relationship-lines-lp
-		title: Disable Relationship Lines in Editing View [ON by default]
-		description: Disable relationship lines in Editing View (Live Preview) lists.
-		type: class-toggle
-		default: false
-	-
-		id: elements-title
-		title: Elements
-		type: heading
-		level: 2
-		collapsed: true
-	-
-		id: no-titlebar-title
-		title: Hide Titlebar center text
-		description: This setting hides the center text of the titlebar.
-		type: class-toggle
-		default: false
-	-
-		id: show-yaml
-		title: Show YAML
-		description: Disables YAML reveal on hover and simply shows it as a code block.
-		type: class-toggle
-		default: false
-	-
-		id: topside-status-bar
-		title: Status Bar on top
-		description: This setting moves the status bar to the top. To click on icons aim for the border.
-		type: class-toggle
-		default: false
-	-
-		id: size-tab-header
-		title: Tab Header Icon side padding
-		description: Changes tab header icons side padding.
-		type: variable-number-slider
-		default: 16
-		min: 4
-		max: 20
-		step: 4
-		format: 'px'
-	-
-		id: compact-outline
-		title: Compact Outline
-		description: Hides excess text in the outline pane so every title is 1 row tall.
-		type: class-toggle
-		default: false
-	-
-		id: file-explorer
-		title: File Explorer
-		type: heading
-		level: 3
-		collapsed: true
-	-
-		id: note-title-left
-		title: Justify Note titles to the left
-		type: class-toggle
-		default: false
-	-
-		id: show-vault-name
-		title: Show Vault Name
-		type: class-toggle
-		default: false
-	-
-		id: left-nav-arrows
-		title: Left Nav Arrows
-		description: Moves nav arrows to the left, like default obsidian.
-		type: class-toggle
-		default: false
-	-
-		id: fx-rl
-		title: File Explorer Relationship Lines [Temporarily Disabled]
-		description: Adds hierarchy lines in File explorer.
-		type: class-toggle
-		default: false
-	-
-		id: no-file-icons
-		title: No File Icons
-		description: Removes file icons from file explorer.
-		type: class-toggle
-		default: false
-	-
-		id: no-folder-icons
-		title: No Folder Icons
-		description: Removes file icons from file explorer.
-		type: class-toggle
-		default: false
-	-
-		id: show-full-titles
-		title: Show full titles
-		description: Turns off trimming of folder and file titles.
-		type: class-toggle
-		default: false
-	-
-		id: modals-title
-		title: Modals
-		type: heading
-		level: 3
-		collapsed: true
-	-
-		id: settings
-		title: Settings modal width
-		type: variable-number-slider
-		default: 40
-		min: 30
-		max: 90
-		step: 10
-		format: 'vw'
-	-
-		id: community-theme
-		title: Community Themes modal width
-		type: variable-number-slider
-		default: 40
-		min: 30
-		max: 90
-		step: 10
-		format: 'vw'
-	-
-		id: community-plugin
-		title: Community Plugins modal width
-		type: variable-number-slider
-		default: 40
-		min: 30
-		max: 90
-		step: 10
-		format: 'vw'
-	-
-		id: scrollbars-title
-		title: Scrollbars
-		type: heading
-		level: 3
-		collapsed: true
-	-
-		id: no-scrl-search
-		title: No Scrollbar in Global Search
-		description: Disables Scrollbars when displaying Global Search Results.
-		type: class-toggle
-		default: false
-	-
-		id: no-scrl-note
-		title: No Scrollbar in Notes
-		description: Disables Scrollbars in Notes.
-		type: class-toggle
-		default: false
-	-
-		id: no-scrl-fx
-		title: No Scrollbar in File Explorer
-		description: Disables Scrollbars in File Explorer.
-		type: class-toggle
-		default: false
-	-
-		id: no-scrl-modal
-		title: No Scrollbar in Modal
-		description: Disables Scrollbars in settings menus.
-		type: class-toggle
-		default: false
+			id: elements-title
+			title: Elements
+			type: heading
+			level: 2
+			collapsed: true
+	-	
+			id: no-titlebar-title
+			title: Hide Titlebar center text
+			description: This setting hides the center text of the titlebar.
+			type: class-toggle
+			default: false
+	-	
+			id: show-yaml
+			title: Show YAML
+			description: Disables YAML reveal on hover and simply shows it as a code block.
+			type: class-toggle
+			default: false
+	-	
+			id: topside-status-bar
+			title: Status Bar on top
+			description: This setting moves the status bar to the top. To click on icons aim for the border.
+			type: class-toggle
+			default: false
+	-	
+			id: size-tab-header
+			title: Tab Header Icon side padding
+			description: Changes tab header icons side padding.
+			type: variable-number-slider
+			default: 16
+			min: 4
+			max: 20
+			step: 4
+			format: 'px'
+	-	
+			id: compact-outline
+			title: Compact Outline
+			description: Hides excess text in the outline pane so every title is 1 row tall.
+			type: class-toggle
+			default: false
+	-	
+			id: file-explorer
+			title: File Explorer
+			type: heading
+			level: 3
+			collapsed: true
+	-	
+				id: note-title-left
+				title: Justify Note titles to the left
+				type: class-toggle
+				default: false
+	-		
+				id: show-vault-name
+				title: Show Vault Name
+				type: class-toggle
+				default: false
+	-		
+				id: left-nav-arrows
+				title: Left Nav Arrows
+				description: Moves nav arrows to the left, like default obsidian.
+				type: class-toggle
+				default: false
+	-		
+				id: fx-rl
+				title: File Explorer Relationship Lines [Temporarily Disabled]
+				description: Adds hierarchy lines in File explorer.
+				type: class-toggle
+				default: false
+	-		
+				id: no-file-icons
+				title: No File Icons
+				description: Removes file icons from file explorer.
+				type: class-toggle
+				default: false
+	-		
+				id: no-folder-icons
+				title: No Folder Icons
+				description: Removes file icons from file explorer.
+				type: class-toggle
+				default: false
+	-		
+				id: show-full-titles
+				title: Show full titles
+				description: Turns off trimming of folder and file titles.
+				type: class-toggle
+				default: false
+	-	
+			id: modals-title
+			title: Modals
+			type: heading
+			level: 3
+			collapsed: true
+	-	
+				id: settings
+				title: Settings modal width
+				type: variable-number-slider
+				default: 40
+				min: 30
+				max: 90
+				step: 10
+				format: 'vw'
+	-		
+				id: community-theme
+				title: Community Themes modal width
+				type: variable-number-slider
+				default: 40
+				min: 30
+				max: 90
+				step: 10
+				format: 'vw'
+	-		
+				id: community-plugin
+				title: Community Plugins modal width
+				type: variable-number-slider
+				default: 40
+				min: 30
+				max: 90
+				step: 10
+				format: 'vw'
+	-	
+			id: scrollbars-title
+			title: Scrollbars
+			type: heading
+			level: 3
+			collapsed: true
+	-	
+				id: no-scrl-search
+				title: No Scrollbar in Global Search
+				description: Disables Scrollbars when displaying Global Search Results.
+				type: class-toggle
+				default: false
+	-		
+				id: no-scrl-note
+				title: No Scrollbar in Notes
+				description: Disables Scrollbars in Notes.
+				type: class-toggle
+				default: false
+	-		
+				id: no-scrl-fx
+				title: No Scrollbar in File Explorer
+				description: Disables Scrollbars in File Explorer.
+				type: class-toggle
+				default: false
+	-		
+				id: no-scrl-modal
+				title: No Scrollbar in Modal
+				description: Disables Scrollbars in settings menus.
+				type: class-toggle
+				default: false
 	-
 		id: mobile
 		title: Mobile
@@ -10549,11 +10952,11 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: float-button
-		title: Disable floating button
-		description: This setting disables the floating Editing/Reading view button, making it go back to the top.
-		type: class-toggle
-		default: false
+			id: float-button
+			title: Disable floating button
+			description: This setting disables the floating Editing/Reading view button, making it go back to the top.
+			type: class-toggle
+			default: false
 	-
 		id: advanced-options
 		title: Advanced Options
@@ -10561,23 +10964,23 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id: no-blur
-		title: No background blur
-		description: This setting disables background blur on modals.
-		type: class-toggle
-		default: false
-	-
-		id: no-animation
-		title: Disable animations
-		description: This setting disables animations and transitions.
-		type: class-toggle
-		default: false
-	-
-		id: no-sanctum-icons
-		title: Default icons
-		description: Use default icons instead of the Sanctum set.
-		type: class-toggle
-		default: false
+			id: no-blur
+			title: No background blur
+			description: This setting disables background blur on modals.
+			type: class-toggle
+			default: false
+	-	
+			id: no-animation
+			title: Disable animations
+			description: This setting disables animations and transitions.
+			type: class-toggle
+			default: false
+	-	
+			id: no-sanctum-icons
+			title: Default icons
+			description: Use default icons instead of the Sanctum set.
+			type: class-toggle
+			default: false
 
 
 */
