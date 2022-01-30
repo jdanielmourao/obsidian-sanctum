@@ -263,6 +263,27 @@
 
 
 /* ─────────────────────────── Light Theme Colours ────────────────────────── */
+:root {
+	--base-h-l: 30;
+	--base-s-l: 1%;
+	--base-l-l: 100%;
+}
+
+.theme-light.custom-l {
+	--rgb-primary-10: 8, 8, 8;
+	--color-primary-0:	#fefefe;
+	--color-primary-1:	hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 4.9%));
+	--color-primary-2:	hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 12.5%));
+	--color-primary-3:	hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 22.2%));
+	--color-primary-4:	hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 34.1%));
+	--color-primary-5:	hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 46.1%));
+	--color-primary-6:	hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 58.6%));
+	--color-primary-7:	hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 69.6%));
+	--color-primary-8:	hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 81.2%));
+	--color-primary-9:	hsl(var(--base-h-l), var(--base-s-l), calc(var(--base-l-l) - 91.8%));
+	--color-primary-10: #080808;
+}
+
 .theme-light.sanctum-coldgrey {
 	--rgb-primary-0: 254, 254, 254;
 	--color-primary-0:	#fefefe;
@@ -308,22 +329,6 @@
 	--color-primary-10: #080808;
 }
 
-
-/* .theme-light.sanctum-lavender {
-	--rgb-primary-0: 254, 254, 254;
-	--color-primary-0:	#fefefe;
-	--color-primary-1:	#f3f3f6;
-	--color-primary-2:	#dedee9;
-	--color-primary-3:	#c5c5db;
-	--color-primary-4:	#a5a5ce;
-	--color-primary-5:	#8484bc;
-	--color-primary-6:	#6362a7;
-	--color-primary-7:	#484684;
-	--color-primary-8:	#312f5b;
-	--color-primary-9:	#19192c;
-	--color-primary-10: #080808;
-} */
-
 .theme-light.sanctum-tide {
 	--rgb-primary-0: 254, 254, 254;
 	--color-primary-0:	#fefefe;
@@ -338,21 +343,6 @@
 	--color-primary-9:	#131c1c;
 	--color-primary-10: #080808;
 }
-
-/* .theme-light.sanctum-rose {
-	--rgb-primary-0: 254, 254, 254;
-	--color-primary-0:	#fefefe;
-	--color-primary-1:	#f9f2f3;
-	--color-primary-2:	#f5d9dc;
-	--color-primary-3:	#f2b7c0;
-	--color-primary-4:	#f08a9c;
-	--color-primary-5:	#eb546c;
-	--color-primary-6:	#ac4856;
-	--color-primary-7:	#783a41;
-	--color-primary-8:	#4d2a2d;
-	--color-primary-9:	#271718;
-	--color-primary-10: #080808;
-} */
 
 .theme-light.sanctum-light {
 	--rgb-primary-0: 254, 254, 254;
@@ -384,12 +374,11 @@
 	--color-primary-10: #080808;
 }
 
+.theme-light.custom-l,
 .theme-light.sanctum-coldgrey,
-.theme-light.sanctum-rose,
 .theme-light.sanctum-tide,
 .theme-light.sanctum-hearth,
 .theme-light.sanctum-moss,
-.theme-light.sanctum-lavender,
 .theme-light,
 .theme-light.sanctum-light,
 .theme-light.gruvbox {
@@ -441,6 +430,27 @@
 }
 
 /* ─────────────────────────── Dark Theme Colours ─────────────────────────── */
+:root {
+	--base-h-d: 30;
+	--base-s-d: 1%;
+	--base-l-d: 10%;
+}
+
+.theme-dark.custom-d {
+	--rgb-primary-0: 8, 8, 8;
+	--rgb-primary-10: 254, 254, 254;
+	--color-primary-0:	#080808;
+	--color-primary-1:	hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 0.6%));
+	--color-primary-2:	hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 10.6%));
+	--color-primary-3:	hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 20.4%));
+	--color-primary-4:	hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 31.4%));
+	--color-primary-5:	hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 43.9%));
+	--color-primary-6:	hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 55.9%));
+	--color-primary-7:	hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 67.6%));
+	--color-primary-8:	hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 77.5%));
+	--color-primary-9:	hsl(var(--base-h-d), var(--base-s-d), calc(var(--base-l-d) + 85.1%));
+	--color-primary-10: #fefefe;
+}
 
 .theme-dark.sanctum-coldgrey-d {
 	--rgb-primary-0: 8, 8, 8;
@@ -487,21 +497,6 @@
 	--color-primary-10:	#fefefe;
 }
 
-/* .theme-dark.sanctum-violet {
-	--rgb-primary-0: 8, 8, 8;
-	--color-primary-0:	#080808;
-	--color-primary-1:	#19192c;
-	--color-primary-2:	#312f5b;
-	--color-primary-3:	#484684;
-	--color-primary-4:	#6362a7;
-	--color-primary-5:	#8484bc;
-	--color-primary-6:	#a5a5ce;
-	--color-primary-7:	#c5c5db;
-	--color-primary-8:	#dedee9;
-	--color-primary-9:	#f3f3f6;
-	--color-primary-10:	#fefefe;
-} */
-
 .theme-dark.sanctum-sea {
 	--rgb-primary-0: 8, 8, 8;
 	--color-primary-0:	#080808;
@@ -516,21 +511,6 @@
 	--color-primary-9:	#eef5f5;
 	--color-primary-10:	#fefefe;
 }
-
-/* .theme-dark.sanctum-pink {
-	--rgb-primary-0: 8, 8, 8;
-	--color-primary-0:	#080808;
-	--color-primary-1:	#271718;
-	--color-primary-2:	#4d2a2d;
-	--color-primary-3:	#783a41;
-	--color-primary-4:	#ac4856;
-	--color-primary-5:	#eb546c;
-	--color-primary-6:	#f08a9c;
-	--color-primary-7:	#f2b7c0;
-	--color-primary-8:	#f5d9dc;
-	--color-primary-9:	#f9f2f3;
-	--color-primary-10:	#fefefe;
-} */
 
 .theme-dark.sanctum-true-black {
 	--rgb-primary-0: 0,0,0 ;
@@ -581,25 +561,23 @@
 	--rgb-primary-0: 8, 8, 8;
 	--rgb-primary-10: 254, 254, 254;
 	--color-primary-0:	#080808;
-	--color-primary-1:	#151515;
-	--color-primary-2:	#312F30;
+	--color-primary-1:	#1b1b1b;
+	--color-primary-2:	#363334;
 	--color-primary-3:	#4f4c4d;
-	--color-primary-4:	#6b6868;
+	--color-primary-4:	#6b6869;
 	--color-primary-5:	#8b8888;
 	--color-primary-6:	#aaa8a6;
-	--color-primary-7:	#c9c6c4;
+	--color-primary-7:	#c9c6c3;
 	--color-primary-8:	#e2dfdc;
 	--color-primary-9:	#f5f3f0;
 	--color-primary-10: #fefefe;
-	
 }
 
+.theme-dark.custom-d,
 .theme-dark.sanctum-coldgrey-d,
-.theme-dark.sanctum-pink,
 .theme-dark.sanctum-sea,
 .theme-dark.sanctum-fire,
 .theme-dark.sanctum-forest,
-.theme-dark.sanctum-violet,
 .theme-dark,
 .theme-dark.sanctum-true-black,
 .theme-dark.sanctum-dark,

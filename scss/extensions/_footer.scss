@@ -10,29 +10,38 @@ settings:
 		level: 2
 		collapsed: true
 	-
-			id: light-mode-palette
-			title: Light mode color scheme
-			description: Background color palette for light mode
-			type: class-select
-			allowEmpty: false
-			default: sanctum-light
-			options:
-				-
-					label: Default
-					value: sanctum-light
-				-
-					label: Cold Grey
-					value: sanctum-coldgrey
-				-
-					label: Hearth
-					value: sanctum-hearth
-				-
-					label: Moss
-					value: sanctum-moss
-				-
-					label: Tide
-					value: sanctum-tide
-	-	
+			id: color-schemes
+			title: Color Schemes
+			type: heading
+			level: 3
+			collapsed: false
+	-
+				id: light-mode-palette
+				title: Light mode color scheme
+				description: Background color palette for light mode
+				type: class-select
+				allowEmpty: false
+				default: sanctum-light
+				options:
+					-
+						label: Default
+						value: sanctum-light
+					-
+						label: Cold Grey
+						value: sanctum-coldgrey
+					-
+						label: Hearth
+						value: sanctum-hearth
+					-
+						label: Moss
+						value: sanctum-moss
+					-
+						label: Tide
+						value: sanctum-tide
+					-
+						label: Custom
+						value: custom-l
+	-
 			id: dark-mode-palette
 			title: Dark mode color scheme
 			description: Background color palette for dark mode
@@ -41,7 +50,7 @@ settings:
 			default: sanctum-dark
 			options:
 				-
-					label: Dark
+					label: Default
 					value: sanctum-dark
 				-
 					label: Legacy Dark
@@ -61,6 +70,68 @@ settings:
 				-
 					label: Tide
 					value: sanctum-sea
+				-
+					label: Custom
+					value: custom-d
+	-
+				id: custom-colors
+				title: Custom Colors
+				description: ⚠️ Don't change brightness values if you wish to keep the theme's contrast ratios closer to the original palette
+				type: heading
+				level: 4
+				collapsed: true
+	-	
+					id: base-h-l
+					title: Light Mode Hue
+					type: variable-number-slider
+					default: 30
+					min: 0
+					max: 360
+					step: 1
+	-	
+					id: base-s-l
+					title: Light Mode Saturation
+					type: variable-number-slider
+					default: 1
+					min: 0
+					max: 100
+					step: 1
+					format: '%'
+	-	
+					id: base-l-l
+					title: Light Mode Brightness
+					type: variable-number-slider
+					default: 100
+					min: 0
+					max: 100
+					step: 1
+					format: '%'
+	-	
+					id: base-h-d
+					title: Dark Mode Hue
+					type: variable-number-slider
+					default: 30
+					min: 0
+					max: 360
+					step: 1
+	-	
+					id: base-s-d
+					title: Dark Mode Saturation
+					type: variable-number-slider
+					default: 1
+					min: 0
+					max: 100
+					step: 1
+					format: '%'
+	-	
+					id: base-l-d
+					title: Dark Mode Brightness
+					type: variable-number-slider
+					default: 10
+					min: 0
+					max: 100
+					step: 1
+					format: '%'
 	-	
 			id: accent-colors
 			title: Accent Colors
