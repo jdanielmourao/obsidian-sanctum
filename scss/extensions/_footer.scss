@@ -2479,6 +2479,11 @@ settings:
 		level: 2
 		collapsed: true
 	-
+			id: dim-panes
+			title: Fade inactive panes
+			description: Fades every pane other than the active one, for better focus
+			type: class-toggle
+	-
 			id: tasks
 			title: Disable custom tasks and pseudo-admonitions
 			type: class-toggle
