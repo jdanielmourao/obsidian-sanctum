@@ -398,48 +398,48 @@ body {
 
 
 .head-indicator-active .mod-cm6.is-live-preview {
-	.HyperMD-header-1.cm-active.cm-line > span:nth-child(2)::before {
+	.HyperMD-header-1.cm-active.cm-line .cm-header.cm-header-1:last-child:after {
 		content: "H1";
 		display: inline-block;
 		color: var(--color-accent);
 		font-size: var(--h1);
 		font-family: var(--font-editor);
-		padding-right: 4px;
+		padding-left: 4px;
 	}
-	.HyperMD-header-2.cm-active.cm-line > span:nth-child(2)::before {
+	.HyperMD-header-2.cm-active.cm-line .cm-header.cm-header-2:last-child:after {
 		content: "H2";
 		color: var(--color-accent);
 		font-size: var(--h2);
 		font-family: var(--font-editor);
-		padding-right: 4px;
+		padding-left: 4px;
 	}
-	.HyperMD-header-3.cm-active.cm-line > span:nth-child(2)::before {
+	.HyperMD-header-3.cm-active.cm-line .cm-header.cm-header-3:last-child:after {
 		content: "H3";
 		color: var(--color-accent);
 		font-size: var(--h3);
 		font-family: var(--font-editor);
-		padding-right: 4px;
+		padding-left: 4px;
 	}
-	.HyperMD-header-4.cm-active.cm-line > span:nth-child(2)::before {
+	.HyperMD-header-4.cm-active.cm-line .cm-header.cm-header-4:last-child:after {
 		content: "H4";
 		color: var(--color-accent);
 		font-size: var(--h4);
 		font-family: var(--font-editor);
-		padding-right: 4px;
+		padding-left: 4px;
 	}
-	.HyperMD-header-5.cm-active.cm-line > span:nth-child(2)::before {
+	.HyperMD-header-5.cm-active.cm-line .cm-header.cm-header-5:last-child:after {
 		content: "H5";
 		color: var(--color-accent);
 		font-size: var(--h5);
 		font-family: var(--font-editor);
-		padding-right: 4px;
+		padding-left: 4px;
 	}
-	.HyperMD-header-6.cm-active.cm-line > span:nth-child(2)::before {
+	.HyperMD-header-6.cm-active.cm-line .cm-header.cm-header-6:last-child:after {
 		content: "H6";
 		color: var(--color-accent);
 		font-size: var(--h6);
 		font-family: var(--font-editor);
-		padding-right: 4px;
+		padding-left: 4px;
 	}
 }
 
@@ -447,42 +447,36 @@ body {
 
 
 body.head-indicator .mod-cm6.is-live-preview {
-	& .HyperMD-header::before {
+	& .HyperMD-header::after {
 		position: relative;
 		display: inline-block;
 		font-family: var(--font-mono);
 		color: var(--color-accent);
-		right: 2px;
+		padding-left: 4px;
 	}
-	& .HyperMD-header-1::before {
+	& .HyperMD-header-1::after {
 		content: "H1";
 		font-size: .7rem;
-		bottom: calc(var(--heading-1) / 3.5);
 	}
-	& .HyperMD-header-2::before {
+	& .HyperMD-header-2::after {
 		content: "H2";
 		font-size: .7rem;
-		bottom: calc(var(--heading-2) / 3.5);
 	}
-	& .HyperMD-header-3::before {
+	& .HyperMD-header-3::after {
 		content: "H3";
 		font-size: .7rem;
-		bottom: calc(var(--heading-3) / 3.5);
 	}
-	& .HyperMD-header-4::before {
+	& .HyperMD-header-4::after {
 		content: "H4";
 		font-size: .7rem;
-		bottom: calc(var(--heading-4) / 3.5);
 	}
-	& .HyperMD-header-5::before {
+	& .HyperMD-header-5::after {
 		content: "H5";
 		font-size: .7rem;
-		bottom: calc(var(--heading-5) / 3.5);
 	}
-	& .HyperMD-header-6::before {
+	& .HyperMD-header-6::after {
 		content: "H6";
 		font-size: .7rem;
-		bottom: calc(var(--heading-6) / 3.5);
 	}
 }
 
