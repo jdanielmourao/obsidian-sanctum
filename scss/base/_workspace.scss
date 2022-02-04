@@ -625,10 +625,10 @@ body:not(.no-sanctum-icons)
 
 .nav-file-title.is-active .nav-file-title-content {
 	color: var(--background-primary);
-	line-height: 23px; //fixes vertical centering
+	line-height: 1.5; //fixes vertical centering
 
 	.is-mobile & {
-		line-height: 2.7;
+		line-height: 1.5;
 	}
 
 	&:focus {
