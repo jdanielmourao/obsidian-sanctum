@@ -91,6 +91,9 @@
 		padding-right: 8px;
 	}
 }
+body.mod-linux .graph-controls {
+	background-color: rgba(var(--rgb-primary-0), 1);
+}
 
 .graph-color-button-container button.mod-cta {
 	width: 100%;
