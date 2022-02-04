@@ -156,6 +156,7 @@ button.mod-cta {
 .modal-container.mod-confirmation .modal-button-container {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	width: auto;
 	height: auto;
 
@@ -166,8 +167,10 @@ button.mod-cta {
 			margin-left: 0;
 		}
 	}
-
-	button.mod-warning:first-child {
+	& .mod-warning:nth-last-child(2) {
+		margin-left: auto;
+	}
+	& button.mod-warning:nth-last-child(3) {
 		order: 0;
 		margin-right: auto;
 		margin-left: 12px;
@@ -177,9 +180,6 @@ button.mod-cta {
 		background: none;
 		border: 1px solid var(--color-red);
 		@include button-l;
-	}
-	button.mod-warning	{
-		order: 0;
 	}
 }
 
