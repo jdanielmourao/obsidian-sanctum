@@ -44,7 +44,7 @@
 
 @media (min-width: 768px) {
 	.workspace-drawer {
-		max-width: 300pt;
+		width: 300pt;
 	}
 	.workspace-drawer.is-pinned.mod-right,
 	.workspace-drawer.is-pinned.mod-left {
@@ -85,17 +85,19 @@
 }
 
 .workspace-drawer.mod-left .workspace-drawer-header {
-	padding-left: 8px;
-	margin-left: 64px; //subtracts width of icons ribbon
 	border-left: 1px solid var(--color-border-1);
 	display: visible;
+	height: unset;
+	padding: 0;
 
-	& .workspace-drawer-header-icon:before {
-		content: "Click the icon to unpin →";
-		font-size: var(--font-scale-00);
-		line-height: var(--leading-0);
+	&-icon {
+		margin: 0;
+		padding: 4px 8px;
+		& svg {
+			height: 16px;
+			width: 16px;
+		}
 	}
-
 	& .workspace-drawer-header-left {
 		display: flex;
 		flex-direction: row;
@@ -119,20 +121,11 @@
 	}
 }
 
-.workspace-drawer.mod-left:not(.workspace-drawer.is-pinned.mod-left) .workspace-drawer-header {
+/* .workspace-drawer.mod-left:not(.workspace-drawer.is-pinned.mod-left) .workspace-drawer-header {
 	display: none; // makes it so that it only shows the unpin button when it's already pinned
-}
+} */
 
-div.workspace-drawer.is-pinned.mod-left .workspace-drawer-active-tab-header {
-	padding-top: 16px; // makes the tab header closer to the unpin icon when it's pinned.
-}
-	
 // Pinned Drawer
-.workspace-drawer.is-pinned.mod-right,
-.workspace-drawer.is-pinned.mod-left {
-	position: relative;
-	max-width: 400pt;
-}
 .workspace-drawer.is-pinned.mod-right {
 	border-left: 1px solid var(--color-border-1);
 }
@@ -167,7 +160,7 @@ div.workspace-drawer.is-pinned.mod-left .workspace-drawer-active-tab-header {
 		margin-bottom: 0;
 		margin-top: 0;
 		padding-bottom: 18px;
-		padding-top: 32px;
+		padding-top: 16px;
 		border-bottom: 1px solid var(--color-border-1);
 
 		& .workspace-drawer-active-tab-title {
@@ -207,12 +200,8 @@ div.workspace-drawer-active-tab-icon svg.fullscreen { // hide "maximise"
 
 .is-mobile .nav-file-title-content,
 .is-mobile .nav-folder-title-content {
-	padding: 0px
-			 4px
-			 2px
-			 4px;
-	line-height: 32px;
-	transform: translateY(-2px); // centers vertically each title's content
+	padding: 4px 0px 0px 4px;
+	width: 100%;
 	color: var(--text-normal);
 }
 
