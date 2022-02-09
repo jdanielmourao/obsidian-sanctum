@@ -136,9 +136,31 @@ table.table-view-table > thead > tr > th {
 		&:last-child td {
 			border-bottom: none;
 		}
+		& .dataview.dataview-ul li::marker {
+ 			content: none;
+			font-size: 14px;
+		}
+		& a.internal-link {
+			text-decoration: none;
+			color: var(--text-accent);
+			font-weight: 450;
+			text-transform: uppercase;
+			font-size: .8em;
+			letter-spacing: .125em;
+			border-radius: 4px;
+
+			.alt-link & {
+				text-decoration: none;
+				color: var(--text-accent);
+				font-weight: 450;
+				text-transform: none;
+				font-size: inherit;
+				letter-spacing: inherit;
+				border-radius: 4px;
+			}
+		}
 	}
 }
-
 
 .table-minimal .cm-embed-block table,
 .table-minimal .markdown-preview-view table {
@@ -163,4 +185,12 @@ table.table-view-table > thead > tr > th {
 	& tr:last-child td {
 		background-color: rgba(var(--rgb-primary-0), .5);
 	}
+}
+
+body .table-view-table > thead > tr > th {
+	white-space: pre;
+}
+.table-view-table > tbody > tr > td {
+	word-wrap: normal;
+	word-break: normal;
 }
