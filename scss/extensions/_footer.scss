@@ -375,6 +375,11 @@ settings:
 				description: Enables typora-like heading indicators in Live Preview, only in the active line.
 				type: class-toggle
 	-		
+				id: no-uppercase
+				title: Disable Uppercase in lvl 5 & 6 Headings
+				description: Enables typora-like heading indicators in Live Preview, only in the active line.
+				type: class-toggle
+	-		
 				id: heading weights
 				title: Weights
 				type: heading
@@ -2479,13 +2484,14 @@ settings:
 		level: 2
 		collapsed: true
 	-
+			id: img-grid
+			title: Minimal's Image Grid by @kepano
+			description: Must have the Contextual Typography plugin v2.2.1+ installed
+			type: class-toggle
+	-
 			id: dim-panes
 			title: Fade inactive panes
 			description: Fades every pane other than the active one, for better focus
-			type: class-toggle
-	-
-			id: tasks
-			title: Disable custom tasks and pseudo-admonitions
 			type: class-toggle
 	-
 			id: hr-options
@@ -2502,16 +2508,30 @@ settings:
 					label: Center hr (no WYSIWYG)
 					value: center-hr
 	-
-			id: edit-mode-tasks
-			title: Edit Mode Tasks
-			description: Makes filled tasks green and empty ones red, in Edit Mode.
-			type: class-toggle
-	-
 			id: kanban-wrap
 			title: Wrap Kanban Lanes
 			description: Makes Kanban Lanes wrap in multiple rows if needed.
 			type: class-toggle
 	-
+			id: checkbox-title
+			title: Checkboxes
+			type: heading
+			level: 3
+			collapsed: true
+	-	
+				id: edit-mode-tasks
+				title: Edit Mode Tasks
+				description: Makes filled tasks green and empty ones red, in Edit Mode.
+				type: class-toggle
+	-		
+				id: tasks
+				title: Disable custom tasks and pseudo-admonitions
+				type: class-toggle
+	-		
+				id: square-checkbox
+				title: Enable Square Checkboxes
+				type: class-toggle
+	-	
 			id: active-line-highlight
 			title: Active Line Highlighting
 			type: heading
