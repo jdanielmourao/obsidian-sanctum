@@ -35,6 +35,29 @@ div > .CodeMirror-line span.cm-hashtag-end {
 	}
 }
 
+.cm-s-obsidian span.cm-hashtag {
+	padding: 2px 0px 2px 4px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+
+	&:hover {
+		border-color: transparent;
+	}
+}
+
+span.cm-hashtag.cm-hashtag-end {
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0;
+	border-top-right-radius: .4em;
+	border-bottom-right-radius: .4em;
+	padding-left: 0;
+	padding-right: 8px;
+
+	&::before {
+		display: none;
+	}
+}
+
 .cm-s-obsidian .cm-hashtag-begin.cm-meta {
 	font-size: 0;
 	padding: 0;
