@@ -285,12 +285,12 @@
 	--color-primary-10: #080808;
 }
 
-.theme-light .markdown-preview-view.cold-grey,
+/* .theme-light .markdown-preview-view.cold-grey,
 .theme-light .markdown-source-view.cold-grey {
 	background-color: #f1f3f7;
 }
 .theme-light .markdown-preview-view.coldgrey,
-.theme-light .markdown-source-view.coldgrey,
+.theme-light .markdown-source-view.coldgrey, */
 .theme-light.sanctum-coldgrey {
 	--rgb-primary-0: 254, 254, 254;
 	--color-primary-0:	#fefefe;
@@ -306,12 +306,12 @@
 	--color-primary-10: #080808;
 }
 
-.theme-light .markdown-preview-view.hearth,
+/* .theme-light .markdown-preview-view.hearth,
 .theme-light .markdown-source-view.hearth {
 	background-color: #f9f2ea;
 }
 .theme-light .markdown-preview-view.hearth,
-.theme-light .markdown-source-view.hearth,
+.theme-light .markdown-source-view.hearth, */
 .theme-light.sanctum-hearth {
 	--rgb-primary-0: 254, 254, 254;
 	--color-primary-0:	#fefefe;
@@ -326,13 +326,13 @@
 	--color-primary-9:	#241812;
 	--color-primary-10: #080808;
 }
-
+/* 
 .theme-light .markdown-preview-view.moss,
 .theme-light .markdown-source-view.moss {
 	background-color: #f2f4eb;
 }
 .theme-light .markdown-preview-view.moss,
-.theme-light .markdown-source-view.moss,
+.theme-light .markdown-source-view.moss, */
 .theme-light.sanctum-moss {
 	--rgb-primary-0: 254, 254, 254;
 	--color-primary-0:	#fefefe;
@@ -348,12 +348,12 @@
 	--color-primary-10: #080808;
 }
 
-.theme-light .markdown-preview-view.tide,
+/* .theme-light .markdown-preview-view.tide,
 .theme-light .markdown-source-view.tide {
 	background-color: #eef5f5;
 }
 .theme-light .markdown-preview-view.tide,
-.theme-light .markdown-source-view.tide,
+.theme-light .markdown-source-view.tide, */
 .theme-light.sanctum-tide {
 	--rgb-primary-0: 254, 254, 254;
 	--color-primary-0:	#fefefe;
@@ -399,7 +399,7 @@
 	--color-primary-10: #080808;
 }
 
-.theme-light .markdown-preview-view.coldgrey,
+/* .theme-light .markdown-preview-view.coldgrey,
 .theme-light .markdown-source-view.coldgrey,
 .theme-light .markdown-preview-view.tide,
 .theme-light .markdown-source-view.tide,
@@ -408,15 +408,14 @@
 .theme-light .markdown-preview-view.hearth,
 .theme-light .markdown-source-view.hearth,
 .theme-light .markdown-preview-view.coldgrey,
-.theme-light .markdown-source-view.coldgrey,
+.theme-light .markdown-source-view.coldgrey, */
 .theme-light.custom-l,
 .theme-light.sanctum-coldgrey,
 .theme-light.sanctum-tide,
 .theme-light.sanctum-hearth,
 .theme-light.sanctum-moss,
 .theme-light,
-.theme-light.sanctum-light,
-.theme-light.gruvbox {
+.theme-light.sanctum-light {
 	--color-hover:		var(--color-primary-2);
 	--color-border-1:	var(--color-primary-2);
 	--color-border-2:	var(--color-primary-3);
@@ -487,12 +486,12 @@
 	--color-primary-10: #fefefe;
 }
 
-.theme-dark .markdown-preview-view.cold-grey,
+/* .theme-dark .markdown-preview-view.cold-grey,
 .theme-dark .markdown-source-view.cold-grey {
 	background-color: #171b1f;
 }
 .theme-dark .markdown-preview-view.coldgrey,
-.theme-dark .markdown-source-view.coldgrey,
+.theme-dark .markdown-source-view.coldgrey, */
 .theme-dark.sanctum-coldgrey-d {
 	--rgb-primary-0: 8, 8, 8;
 	--color-primary-0:	#080808;
@@ -508,12 +507,12 @@
 	--color-primary-10:	#fefefe;
 }
 
-.theme-dark .markdown-preview-view.hearth,
+/* .theme-dark .markdown-preview-view.hearth,
 .theme-dark .markdown-source-view.hearth {
 	background-color: #201a14;
 }
 .theme-dark .markdown-preview-view.hearth,
-.theme-dark .markdown-source-view.hearth,
+.theme-dark .markdown-source-view.hearth, */
 .theme-dark.sanctum-chocolate { /* this one differs a bit from orange, so it has a better dark mode*/
 	--rgb-primary-0: 8, 8, 8;
 	--color-primary-0:	#080808;
@@ -529,12 +528,12 @@
 	--color-primary-10:	#fefefe;
 }
 
-.theme-dark .markdown-preview-view.moss,
+/* .theme-dark .markdown-preview-view.moss,
 .theme-dark .markdown-source-view.moss {
 	background-color: #1b1b11;
 }
 .theme-dark .markdown-preview-view.moss,
-.theme-dark .markdown-source-view.moss,
+.theme-dark .markdown-source-view.moss, */
 .theme-dark.sanctum-forest {
 	--rgb-primary-0: 8, 8, 8;
 	--color-primary-0:	#080808;
@@ -550,12 +549,12 @@
 	--color-primary-10:	#fefefe;
 }
 
-.theme-dark .markdown-preview-view.tide,
+/* .theme-dark .markdown-preview-view.tide,
 .theme-dark .markdown-source-view.tide {
 	background-color: #131c1c;
 }
 .theme-dark .markdown-preview-view.tide,
-.theme-dark .markdown-source-view.tide,
+.theme-dark .markdown-source-view.tide, */
 .theme-dark.sanctum-sea {
 	--rgb-primary-0: 8, 8, 8;
 	--color-primary-0:	#080808;
@@ -571,6 +570,12 @@
 	--color-primary-10:	#fefefe;
 }
 
+/* .theme-dark .markdown-preview-view.true-black,
+.theme-dark .markdown-source-view.true-black {
+	background-color: #000000;
+}
+.theme-dark .markdown-preview-view.true-black,
+.theme-dark .markdown-source-view.true-black, */
 .theme-dark.sanctum-true-black {
 	--rgb-primary-0: 0,0,0 ;
 	--color-primary-0:	#080808;
@@ -631,7 +636,8 @@
 	--color-primary-9:	#f5f3f0;
 	--color-primary-10: #fefefe;
 }
-
+/* .theme-dark .markdown-preview-view.true-black,
+.theme-dark .markdown-source-view.true-black,
 .theme-dark .markdown-preview-view.tide,
 .theme-dark .markdown-source-view.tide,
 .theme-dark .markdown-preview-view.moss,
@@ -639,7 +645,7 @@
 .theme-dark .markdown-preview-view.hearth,
 .theme-dark .markdown-source-view.hearth,
 .theme-dark .markdown-preview-view.coldgrey,
-.theme-dark .markdown-source-view.coldgrey,
+.theme-dark .markdown-source-view.coldgrey, */
 .theme-dark.custom-d,
 .theme-dark.sanctum-coldgrey-d,
 .theme-dark.sanctum-sea,
