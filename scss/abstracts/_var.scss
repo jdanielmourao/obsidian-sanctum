@@ -285,6 +285,12 @@
 	--color-primary-10: #080808;
 }
 
+.theme-light .markdown-preview-view.cold-grey,
+.theme-light .markdown-source-view.cold-grey {
+	background-color: #f1f3f7;
+}
+.theme-light .markdown-preview-view.coldgrey,
+.theme-light .markdown-source-view.coldgrey,
 .theme-light.sanctum-coldgrey {
 	--rgb-primary-0: 254, 254, 254;
 	--color-primary-0:	#fefefe;
@@ -300,6 +306,12 @@
 	--color-primary-10: #080808;
 }
 
+.theme-light .markdown-preview-view.hearth,
+.theme-light .markdown-source-view.hearth {
+	background-color: #f9f2ea;
+}
+.theme-light .markdown-preview-view.hearth,
+.theme-light .markdown-source-view.hearth,
 .theme-light.sanctum-hearth {
 	--rgb-primary-0: 254, 254, 254;
 	--color-primary-0:	#fefefe;
@@ -315,6 +327,12 @@
 	--color-primary-10: #080808;
 }
 
+.theme-light .markdown-preview-view.moss,
+.theme-light .markdown-source-view.moss {
+	background-color: #f2f4eb;
+}
+.theme-light .markdown-preview-view.moss,
+.theme-light .markdown-source-view.moss,
 .theme-light.sanctum-moss {
 	--rgb-primary-0: 254, 254, 254;
 	--color-primary-0:	#fefefe;
@@ -330,6 +348,12 @@
 	--color-primary-10: #080808;
 }
 
+.theme-light .markdown-preview-view.tide,
+.theme-light .markdown-source-view.tide {
+	background-color: #eef5f5;
+}
+.theme-light .markdown-preview-view.tide,
+.theme-light .markdown-source-view.tide,
 .theme-light.sanctum-tide {
 	--rgb-primary-0: 254, 254, 254;
 	--color-primary-0:	#fefefe;
@@ -375,6 +399,16 @@
 	--color-primary-10: #080808;
 }
 
+.theme-light .markdown-preview-view.coldgrey,
+.theme-light .markdown-source-view.coldgrey,
+.theme-light .markdown-preview-view.tide,
+.theme-light .markdown-source-view.tide,
+.theme-light .markdown-preview-view.moss,
+.theme-light .markdown-source-view.moss,
+.theme-light .markdown-preview-view.hearth,
+.theme-light .markdown-source-view.hearth,
+.theme-light .markdown-preview-view.coldgrey,
+.theme-light .markdown-source-view.coldgrey,
 .theme-light.custom-l,
 .theme-light.sanctum-coldgrey,
 .theme-light.sanctum-tide,
@@ -453,6 +487,12 @@
 	--color-primary-10: #fefefe;
 }
 
+.theme-dark .markdown-preview-view.cold-grey,
+.theme-dark .markdown-source-view.cold-grey {
+	background-color: #171b1f;
+}
+.theme-dark .markdown-preview-view.coldgrey,
+.theme-dark .markdown-source-view.coldgrey,
 .theme-dark.sanctum-coldgrey-d {
 	--rgb-primary-0: 8, 8, 8;
 	--color-primary-0:	#080808;
@@ -468,6 +508,12 @@
 	--color-primary-10:	#fefefe;
 }
 
+.theme-dark .markdown-preview-view.hearth,
+.theme-dark .markdown-source-view.hearth {
+	background-color: #201a14;
+}
+.theme-dark .markdown-preview-view.hearth,
+.theme-dark .markdown-source-view.hearth,
 .theme-dark.sanctum-chocolate { /* this one differs a bit from orange, so it has a better dark mode*/
 	--rgb-primary-0: 8, 8, 8;
 	--color-primary-0:	#080808;
@@ -483,6 +529,12 @@
 	--color-primary-10:	#fefefe;
 }
 
+.theme-dark .markdown-preview-view.moss,
+.theme-dark .markdown-source-view.moss {
+	background-color: #1b1b11;
+}
+.theme-dark .markdown-preview-view.moss,
+.theme-dark .markdown-source-view.moss,
 .theme-dark.sanctum-forest {
 	--rgb-primary-0: 8, 8, 8;
 	--color-primary-0:	#080808;
@@ -498,6 +550,12 @@
 	--color-primary-10:	#fefefe;
 }
 
+.theme-dark .markdown-preview-view.tide,
+.theme-dark .markdown-source-view.tide {
+	background-color: #131c1c;
+}
+.theme-dark .markdown-preview-view.tide,
+.theme-dark .markdown-source-view.tide,
 .theme-dark.sanctum-sea {
 	--rgb-primary-0: 8, 8, 8;
 	--color-primary-0:	#080808;
@@ -574,6 +632,14 @@
 	--color-primary-10: #fefefe;
 }
 
+.theme-dark .markdown-preview-view.tide,
+.theme-dark .markdown-source-view.tide,
+.theme-dark .markdown-preview-view.moss,
+.theme-dark .markdown-source-view.moss,
+.theme-dark .markdown-preview-view.hearth,
+.theme-dark .markdown-source-view.hearth,
+.theme-dark .markdown-preview-view.coldgrey,
+.theme-dark .markdown-source-view.coldgrey,
 .theme-dark.custom-d,
 .theme-dark.sanctum-coldgrey-d,
 .theme-dark.sanctum-sea,
@@ -639,3 +705,137 @@
 	--scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
 	--highlight-mix-blend-mode: lighten;
 }
+
+/*
+
+- Global Settings
+	- GLobal Filter
+	- Angular or Round Shapes
+	- Animations
+- Cursor
+- UI Elements
+	- Title Bar
+	- Settings Button
+	- Ribbons
+	- Tooltips
+	- Notices (Notifications)
+	- Header Bar
+	- Status Bar
+	- Scrollbar
+- Sidebar
+	- Files in the Sidebar
+	- Tab Headers
+	- Hidden sidebars tabs
+	- Resize Handles
+- Vault Launch Progress Bar
+- Components
+	- Buttons
+	- Warnings
+	- Toggles
+	- Input & Textarea
+	- Dropdown
+	- Slider
+	- Search & Replace (cmd + F)
+	- Search Matches
+	- Context Menus
+	- Close Buttons
+- Prompts
+	- Command Palette
+	- QuickSwitcher
+	- Editor Suggestions
+- Modals & Settings
+	- Modals in general
+	- Confirmation Modal
+	- Settings Menu
+ 		- Login Menu
+ 		- Community plugin list
+ 		- Core plugin
+ 		- Hotkey search
+	- Plugin Browser
+		- Plugin Search Results (left side)
+		- Plugin Info / Readme (right side)
+	- Theme Browser
+		- GitHub Info for this Theme
+		- Remaining Community Theme Browser
+- Editor
+	- Active / Inactive Note
+	- Trailing Whitespace
+	- Empty State
+	- Editor Properties
+	- Active Line Highlight
+	- Embeds
+		- iframes
+		- Embedded Notes
+		- Embedded Search Queries
+		- Clean Embeds
+	- YAML Header
+ 		- YAML Frontmatter
+ 		- Metadata Block
+	- Gutter
+		- Collapse Indicators
+		- Line Numbers
+	- Progress bars (<progress>)
+	- Images
+	- Mermaid
+	- PDFs
+	- Spellcheck
+	- Max View
+ 		- Line Length & Tables
+ 		- Images
+ 		- PDFs
+ 		- Mermaid
+- Markup
+	- Headings
+	- Blockquotes
+	- Citation Syntax
+	- Pseudo-Admonitions
+	- Tables
+	- Code
+		- Inline Code
+		- Code Blocks
+	- Syntax Highlighting
+	- Bullet List
+	- Bullet Point Relationship Lines
+	- Links
+ 		- Unresolved links
+ 		- fold external URLs (CM6 Source Mode)
+	- Tags
+		- Annotation Tags
+	- Comments & HTML Tags
+	- Tasks
+	- Checkboxes
+	- Highlights & Selection
+ 		- Highlights
+ 		- Selection (Selected Text)
+	- Multi-Color Highlighting
+	- Pseudo-Spoiler-Tag
+	- Strikethroughs
+	- Pandoc Citations
+	- Footnotes
+ 		- Footnote Indicator in Gutter
+	- Horizontal line (hr)
+- CSS Classes
+- Mobile
+	- Typography
+	- Header
+- Core Plugins
+	- Editor Status (CM6)
+	- File Explorer
+		- Relationship Lines
+		- Folder Icons & Note Icons
+	- Panes
+ 		- Core Panes in general
+		- Outline
+		- Backlinks & Outgoing
+		- Search Pane
+ 		- Search suggestion container
+		- Tag Pane
+		- Starred
+	- Popover (Page Preview)
+	- File Recovery
+	- Graph View
+- Community Plugins
+
+- Style Setting Options
+- Compatibility Info for the Obsidian Hub
+*/
