@@ -104,39 +104,6 @@ li {
 	padding-top: 0; // avoids weird disalignment with line numbers
 }
 
-/* ──────────────────────────────── Outliner ──────────────────────────────── */
-
-// Some Outliner Edit Mode Corrections 
-.outliner-plugin-bls .cm-s-obsidian span span.cm-formatting-list-ul:before {
-	margin-top: 0px;
-}
-.outliner-plugin-bls .cm-s-obsidian span.cm-formatting-list{
-	letter-spacing: 0px;
-}
-
-body.outliner-plugin-bls .cm-line .cm-hmd-list-indent::before {
-	content: "";
-	display: block;
-	position: absolute;
-	background-image: linear-gradient( to right, var(--text-faint) 1px, transparent 1px );
-	background-size: 2.9ch 1px;
-	background-position-x: 3px;
-	width: 100%;
-	left: 0;
-	top: -1.6em;
-	padding-bottom: 999em;
-}
-
-body.outliner-plugin-bls .cm-s-obsidian:not(.is-live-preview) .cm-formatting-list-ul:before,
-body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before {
-	content: "–  ";
-	font-size: 100%;
-	position: absolute;
-	margin-top: -1px;
-	margin-left: -4px;
-	color: var(--text-muted);
-}
-
 // Live Preview bullet points
 .list-bullet {
 	left: 4px;
