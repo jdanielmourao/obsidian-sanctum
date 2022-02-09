@@ -952,7 +952,7 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 
 /* ───────────────────────────────── KANBAN ───────────────────────────────── */
 // To be reviewed
-
+/* 
 .kanban .task-list-item-checkbox {
 	margin-left: 24px;
 	margin-right: 0;
@@ -1063,7 +1063,7 @@ ol.kanban ol li:nth-child(even) {
 .kanban ul ul li:hover,ul ul li.kanban:hover,
 .kanban ol ol li:hover,ol.kanban ol li:hover {
 	background: var(--color-hover)
-}*/
+}
 
 .kanban .list-collapse-indicator,
 .list-collapse-indicator.kanban {
@@ -1125,7 +1125,7 @@ ol.kanban .task-list-item .list-collapse-indicator {
 	margin: 0;
 	margin-bottom: 10px;
 }
-
+ */
 /* ─────────────────────────────── Status Bar ─────────────────────────────── */
 .status-bar {
 	background-color: var(--background-primary);
