@@ -168,13 +168,13 @@
 
 			& button {
 				background-color: var(--color-accent);
-				color: var(--color-white);
+				color: var(--color-black);
 			}
 			& .community-theme-info {
 				color: var(--text-normal);
 
 				&::after {
-					content: "v0.6.2";
+					content: "v0.6.3";
 					font-family: var(--menu-font-family);
 					font-size: var(--font-scale-000);
 					color: var(--text-normal);
