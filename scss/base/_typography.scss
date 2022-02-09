@@ -333,6 +333,16 @@ body {
 	text-transform: uppercase;
 }
 
+.no-uppercase .markdown-preview-view h5,
+.no-uppercase .cm-s-obsidian .cm-header-5,
+.no-uppercase cm-s-obsidian .HyperMD-header-5 {
+	text-transform: none;
+}
+.no-uppercase .markdown-preview-view h6,
+.no-uppercase .cm-s-obsidian .cm-header-6,
+.no-uppercase .cm-s-obsidian .HyperMD-header-6 {
+	text-transform: none;
+}
 
 /* Legacy Editor (fixes the cursor problem) */
 .markdown-source-view.mod-cm5 .cm-s-obsidian .HyperMD-header {
