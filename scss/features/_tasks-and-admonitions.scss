@@ -1,3 +1,11 @@
+body {
+	--checkbox-radius: 50%;
+}
+
+body.square-checkbox {
+	--checkbox-radius: 2px;
+}
+
 /* Disable loose lists for tasks */
 ol.contains-task-list p,
 ul.contains-task-list p {
@@ -17,7 +25,7 @@ input[type=checkbox] { /* HTML checkbox element */
 	filter: none;
 	cursor: pointer;
 	background-color: var(--background-primary);
-	border-radius: 50%;
+	border-radius: var(--checkbox-radius);
 	padding: 0;
 	border: 1.5px solid var(--color-primary-4);
 	transition: background-color var(--duration-moderate-2) var(--motion-entrance-expressive);
@@ -63,7 +71,7 @@ input[type=checkbox] { /* HTML checkbox element */
 }
 
 .markdown-source-view.mod-cm6 .HyperMD-list-line .task-list-item-checkbox[data-task=""] {
-	border-radius: 50%;
+	border-radius: var(--checkbox-radius);
 }
 
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task]:not([data-task="x"]) { /* removes general LP line-through in tasks */
