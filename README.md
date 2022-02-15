@@ -28,7 +28,7 @@ The following theme significantly alters Obsidian's original css, and so is pron
 
 **Consistent**
   - Every element is styled according to a predetermined grid, scale, animations (based on IBM's Carbon Design System) and colours - this conveys consistency throughout the theme;
-  - The theme was created with the intention of using only one workhorse font, used everywhere, but styled differently. Thus the theme comes with only 1 font family - iA Writer's font family, specifically iA Writer Mono V and iA Writer Quattro V. This font family not only provides the user with an enjoyable experience, but it also comes in variable files, meaning they're smaller in size, and shouldn't affect the theme's performance. It is expected that this font family will be compiled into a single file in the future, which will only make the theme lighter in size, as well as more versatile when it comes to text styling.
+  - The theme was created with the intention of using only one workhorse font family, used everywhere, but styled differently. Thus the theme comes with only 1 font family - IBM Plex
   - Offer a similar enjoyable experience, independently of screen size or device.
 
 **Clean**
