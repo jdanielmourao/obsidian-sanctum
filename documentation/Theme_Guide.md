@@ -37,6 +37,17 @@
 - [l] Location
 - [x] Task
 - [ ] Task
+- [X] Task
+- [I] Idea
+- [p] Thumbs up
+- [c] Thumbs down   
+- [S] Piggy bank
+- [s] Money
+- [a] Bell
+- [b] Bookmark
+- [n] Pin
+- [B] Bug
+- [W] Reward
 ```
 
 <p align=center><img src="https://user-images.githubusercontent.com/91087143/139735135-9bb582f5-d657-4017-b162-d11e6ee674b8.png" alt="Custom Checkboxes" width=35%></p>
