@@ -11,6 +11,7 @@
 
 	&:hover {
 		background-color: var(--color-border-1);
+		padding: 1.5px;
 	}
 	&:active {
 		background-color: var(--color-border-2);
@@ -27,6 +28,8 @@
 	bottom: 0;
 	background-color: var(--background-primary);
 	transition: background-color var(--duration-moderate-1) var(--motion-entrance-productive);
+	border: 0;
+	padding: 1.5px;
 
 	&:hover {
 		background-color: var(--color-border-1);
