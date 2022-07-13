@@ -2,7 +2,7 @@ ul li::marker,
 ol li::marker {
 	font-weight: var(--font-regular);
 	font-size: var(--font-scale-0);
-	font-family: var(--font-sans); // not font-preview, because otherwise it will change
+	font-family: var(--font-text-theme); // not font-preview, because otherwise it will change
 	font-variant-numeric: tabular-nums;
 }
 
@@ -69,7 +69,7 @@ ol ul, // making sure that even if you indent an ul inside an ol, it will displa
 ul ol ul,
 ol ol ul,
 ol ul ol ul,
-ol ul ul ul,
+ol ul ul ul,	
 ul ol ul ul ul {
 	list-style-type: var(--marker-odd); // "\2009" stands for thin space
 	margin: 0px;
@@ -81,6 +81,7 @@ ul ul,
 ul ul ul ul,
 ul ul ul ul ul ul,
 ul ul ul ul ul ul ul ul,
+ul ul ul ul ul ul ul ul ul ul,
 ol ul ul,
 ol ol ul ul,
 ul ol ul ul,
@@ -90,6 +91,7 @@ ul ol ol ul ul {
 	padding: 0px;
 	padding-left: 1.5rem;
 }
+
 
 ol {
 	padding-inline-start: 1.5em;
@@ -111,26 +113,38 @@ li {
 }
 
 .markdown-source-view.mod-cm6 .list-bullet::after {
-	font-family: var(--font-sans);
+	font-family: var(--font-text-theme);
 }
 .list-bullet::after {
 	color:var(--text-normal);
 	margin-right: 0px;
 	transform: translateY(1px); }
 
-.markdown-source-view.mod-cm6 .cm-list-1 .list-bullet::after { content: var(--marker-odd) ; left: 1px; }
-.markdown-source-view.mod-cm6 .cm-list-2 .list-bullet::after { content: var(--marker-even); }
-.markdown-source-view.mod-cm6 .cm-list-3 .list-bullet::after { content: var(--marker-odd); left: 1px;}
-.markdown-source-view.mod-cm6 .cm-list-4 .list-bullet::after { content: var(--marker-even); }
-.markdown-source-view.mod-cm6 .cm-list-5 .list-bullet::after { content: var(--marker-odd); left: 1px;}
-.markdown-source-view.mod-cm6 .cm-list-6 .list-bullet::after { content: var(--marker-even); }
-.markdown-source-view.mod-cm6 .cm-list-7 .list-bullet::after { content: var(--marker-odd); left: 1px;}
-.markdown-source-view.mod-cm6 .cm-list-8 .list-bullet::after { content: var(--marker-even); }
-.markdown-source-view.mod-cm6 .cm-list-9 .list-bullet::after { content: var(--marker-odd); left: 1px;}
-.markdown-source-view.mod-cm6 .cm-list-10 .list-bullet::after { content: var(--marker-even); }
+.markdown-source-view.mod-cm6 {
+	& div.HyperMD-list-line.HyperMD-list-line-1.cm-line .list-bullet::after { content: var(--marker-odd) ;}
+	& div.HyperMD-list-line.HyperMD-list-line-2.cm-line .list-bullet::after { content: var(--marker-even);}
+	& div.HyperMD-list-line.HyperMD-list-line-3.cm-line .list-bullet::after { content: var(--marker-odd); }
+	& div.HyperMD-list-line.HyperMD-list-line-4.cm-line .list-bullet::after { content: var(--marker-even); }
+	& div.HyperMD-list-line.HyperMD-list-line-5.cm-line .list-bullet::after { content: var(--marker-odd); }
+	& div.HyperMD-list-line.HyperMD-list-line-6.cm-line .list-bullet::after { content: var(--marker-even); }
+	& div.HyperMD-list-line.HyperMD-list-line-7.cm-line .list-bullet::after { content: var(--marker-odd); }
+	& div.HyperMD-list-line.HyperMD-list-line-8.cm-line .list-bullet::after { content: var(--marker-even);}
+	& div.HyperMD-list-line.HyperMD-list-line-9.cm-line .list-bullet::after { content: var(--marker-odd); }
+	& div.HyperMD-list-line.HyperMD-list-line-10.cm-line .list-bullet::after { content: var(--marker-even); }
+}
+
+
 
 span.cm-comment .list-bullet::after { // makes bullets same colors as comments when inside them
 	color: var(--text-faint);
+}
+
+.markdown-source-view.mod-cm6 .cm-list-2 .list-bullet,
+.markdown-source-view.mod-cm6 .cm-list-4 .list-bullet,
+.markdown-source-view.mod-cm6 .cm-list-6 .list-bullet,
+.markdown-source-view.mod-cm6 .cm-list-8 .list-bullet,
+.markdown-source-view.mod-cm6 .cm-list-10 .list-bullet {
+	left: 1px;
 }
 
 .markdown-source-view.mod-cm6 .cm-list-1 .list-bullet,

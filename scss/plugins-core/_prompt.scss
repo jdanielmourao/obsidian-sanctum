@@ -54,9 +54,6 @@
 			border-color: var(--color-border-2);
 		}
 	}
-	&-item:hover {
-		background-color: var(--color-hover);
-	}
 	&-item.is-selected {
 		background-color: var(--color-hover);
 		border-radius: 4px;

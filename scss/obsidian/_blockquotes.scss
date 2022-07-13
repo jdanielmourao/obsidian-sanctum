@@ -98,12 +98,12 @@ cite { // for citations
 	}
 }
 
-.markdown-source-view.mod-cm6.is-live-preview .cm-line:not(.cm-active) .cm-quote-2 {
+.markdown-source-view.mod-cm6.is-live-preview .cm-line:not(.cm-active):not(.HyperMD-callout) .cm-quote-2:not(.cm-hmd-callout) {
 	float: right;
 }
 
 //markdown paraphrase Live Preview
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-3 {
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-3:not(.HyperMD-callout) {
 	border: 1px solid transparent;
 
 	& .cm-blockquote-border	{
@@ -113,6 +113,10 @@ cite { // for citations
 	& .cm-quote-3 {
 		color: var(--text-normal);
 	}
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-3 {
+	border-left: 1px solid var(--color-accent);
 }
 
 //blockquote and paraphrase Live Preview

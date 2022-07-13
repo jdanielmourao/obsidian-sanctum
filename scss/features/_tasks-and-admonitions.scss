@@ -12,7 +12,7 @@ ul.contains-task-list p {
 	margin: 0;
 }
 
-
+label input[type=checkbox],
 table input[type=checkbox],
 .cm-html-embed input[type=checkbox] { /* makes it so html checkboxes show up in Editing view*/
 	width: 16px;
@@ -20,6 +20,8 @@ table input[type=checkbox],
 	vertical-align: -5px;
 }
 
+
+label input[type=checkbox],
 input[type=checkbox] { /* HTML checkbox element */
 	appearance: none;
 	filter: none;

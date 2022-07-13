@@ -1,4 +1,5 @@
-.markdown-preview-view div.callout {
+.markdown-preview-view div.callout,
+.markdown-source-view.mod-cm6.is-live-preview div.callout {
 	background-color: rgb(var(--rgb-primary-0), .3);
 	border-left: 1.5px solid rgb(var(--callout-color), 0.5);
 	border-radius: 0 4px 4px 0px;
@@ -13,5 +14,13 @@
 		&-inner {
 			font-weight: var(--font-bold);
 		}
+	}
+}
+
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-callout {
+	& .cm-blockquote-border	{
+		border: none;
+		color: transparent;
 	}
 }
