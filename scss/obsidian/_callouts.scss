@@ -1,0 +1,17 @@
+.markdown-preview-view div.callout {
+	background-color: rgb(var(--rgb-primary-0), .3);
+	border-left: 1.5px solid rgb(var(--callout-color), 0.5);
+	border-radius: 0 4px 4px 0px;
+
+	.callout-title {
+		padding: 8px;
+		gap: 8px;
+		/* background-color: rgb(var(--callout-color),0.1); */
+		background-color: transparent;
+		border-bottom: 1px solid rgb(var(--callout-color), .5);
+
+		&-inner {
+			font-weight: var(--font-bold);
+		}
+	}
+}

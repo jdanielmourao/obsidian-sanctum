@@ -57,13 +57,3 @@ span.cm-hashtag.cm-hashtag-end {
 		display: none;
 	}
 }
-
-.cm-s-obsidian .cm-hashtag-begin.cm-meta {
-	font-size: 0;
-	padding: 0;
-	border-width: 0;
-}
-
-.cm-s-obsidian span.cm-hashtag::before { //adds an hashtag in editing view
-	content: "#";
-}

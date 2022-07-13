@@ -53,7 +53,7 @@ body {
 	& textarea, /* text input */
 	& select { /* dropdowns */
 		font-optical-sizing: auto;
-		font-family: var(--font-ui);
+		font-family: var(--font-interface);
 		font-feature-settings: "zero", "ss05" on;
 		font-weight:  var(--font-regular);
 		font-size: var(--font-scale-00);
@@ -69,7 +69,7 @@ body {
 /* ───────────────────────────── Note Typography ──────────────────────────── */
 .markdown-preview-view { /* preview */
 	font-optical-sizing: auto;
-	font-family: var(--font-preview);
+	font-family: var(--font-text);
 	line-height: var(--leading-4);
 	letter-spacing: var(--tracking-2);
 	hyphens: auto;
@@ -84,7 +84,7 @@ body {
 .HyperMD-table-2.HyperMD-table-row.cm-line {
 	font-variant-ligatures: common-ligatures;
 	font-optical-sizing: auto;
-	font-family: var(--font-editor);
+	font-family: var(--font-text);
 	line-height: var(--leading-4);
 	letter-spacing: var(--tracking-2);
 }
@@ -92,7 +92,7 @@ body {
 .cm-s-obsidian { /* edit/source mode */
 	font-variant-ligatures: common-ligatures;
 	font-optical-sizing: auto;
-	font-family: var(--font-editor);
+	font-family: var(--font-text);
 	letter-spacing: var(--tracking-2);
 }
 
@@ -116,7 +116,7 @@ body {
 .markdown-preview-view h4,
 .markdown-preview-view h5,
 .markdown-preview-view h6 {
-	font-family: var(--font-heading-preview);
+	font-family: var(--font-text);
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
@@ -133,7 +133,7 @@ body {
 .cm-s-obsidian .HyperMD-header-4,
 .cm-s-obsidian .HyperMD-header-5,
 .cm-s-obsidian .HyperMD-header-6 {
-	font-family: var(--font-heading-editor);
+	font-family: var(--font-text);
 }
 
 .theme-light {
@@ -413,42 +413,42 @@ body {
 		display: inline-block;
 		color: var(--color-accent);
 		font-size: var(--h1);
-		font-family: var(--font-editor);
+		font-family: var(--font-text);
 		padding-left: 4px;
 	}
 	.HyperMD-header-2.cm-active.cm-line .cm-header.cm-header-2:last-child:after {
 		content: "H2";
 		color: var(--color-accent);
 		font-size: var(--h2);
-		font-family: var(--font-editor);
+		font-family: var(--font-text);
 		padding-left: 4px;
 	}
 	.HyperMD-header-3.cm-active.cm-line .cm-header.cm-header-3:last-child:after {
 		content: "H3";
 		color: var(--color-accent);
 		font-size: var(--h3);
-		font-family: var(--font-editor);
+		font-family: var(--font-text);
 		padding-left: 4px;
 	}
 	.HyperMD-header-4.cm-active.cm-line .cm-header.cm-header-4:last-child:after {
 		content: "H4";
 		color: var(--color-accent);
 		font-size: var(--h4);
-		font-family: var(--font-editor);
+		font-family: var(--font-text);
 		padding-left: 4px;
 	}
 	.HyperMD-header-5.cm-active.cm-line .cm-header.cm-header-5:last-child:after {
 		content: "H5";
 		color: var(--color-accent);
 		font-size: var(--h5);
-		font-family: var(--font-editor);
+		font-family: var(--font-text);
 		padding-left: 4px;
 	}
 	.HyperMD-header-6.cm-active.cm-line .cm-header.cm-header-6:last-child:after {
 		content: "H6";
 		color: var(--color-accent);
 		font-size: var(--h6);
-		font-family: var(--font-editor);
+		font-family: var(--font-text);
 		padding-left: 4px;
 	}
 }

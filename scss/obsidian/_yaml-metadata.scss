@@ -89,7 +89,7 @@ code.language-yaml.is-loaded {
 	grid-template-columns: 1fr 1fr;
 	place-items: center start;
 	gap: 0px 8px;*/
-	font-family: var(--font-preview);
+	font-family: var(--font-text-theme);
 	font-weight: var(--font-light);
 	background-color: transparent;
 	text-shadow: none;
@@ -129,7 +129,7 @@ code.language-yaml.is-loaded {
 // Metadata Container in Edit Mode
 .cm-s-obsidian span.cm-hmd-frontmatter {
 	opacity: 1;
-	font-family: var(--font-frontmatter);
+	font-family: var(--font-monospace-theme);
 	font-size: var(--font-scale-00);
 	line-height: var(--leading-0);
 	font-style: normal;

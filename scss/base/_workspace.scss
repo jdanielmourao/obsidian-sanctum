@@ -392,6 +392,10 @@ div.tree-item-inner {
 	display: flex;
 	flex-direction: column;
 	position: relative;
+
+	& .workspace-leaf.mod-active {
+		border-color: transparent;
+	}
 }
 
 // size of every tab header icon

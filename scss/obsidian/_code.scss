@@ -151,7 +151,7 @@ code[class*=language-pure-text],
 .markdown-preview-view div.el-pre:not(pre.frontmatter.language-yaml) pre[class*=language-pure-text] .language-pure-text.is-loaded {
 	font-variant-ligatures: common-ligatures;
 	color: var(--text-normal);
-	font-family: var(--font-preview);
+	font-family: var(--font-text-theme);
 	font-weight: var(--font-regular);
 	font-size: var(--font-scale-0);
 	white-space: normal;

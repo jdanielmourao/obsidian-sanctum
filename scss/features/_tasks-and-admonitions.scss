@@ -131,9 +131,9 @@ body:not(.tasks) {
 	.markdown-preview-view li:not([data-task="x"]) > p > .task-list-item-checkbox:checked,
 	li:not([data-task="x"]) > .task-list-item-checkbox:checked  { /*admonitions compatibility*/
 		background-repeat: no-repeat;
-		background-size: 18px 18px;
-		background-position: center;
-		border-radius: 0;
+		background-size: 65%;
+		background-position: center 2.5px;
+		border-radius: 50%;
 	}
 }
 /* ────────────────────────────────── Note ────────────────────────────────── */

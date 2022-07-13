@@ -54,6 +54,7 @@
 	background-color: transparent; /* no background in highlights in Editing View*/
 }
 
+.callout-content .internal-link,
 .cm-s-obsidian span.cm-hmd-internal-link,
 .markdown-preview-view .internal-link {
 	text-decoration: none;
@@ -87,6 +88,7 @@
 
 
 /* Highlight fix */
+.markdown-rendered mark,
 .cm-highlight.cm-hmd-internal-link .cm-underline {
 	background: rgba(214 159 40 / .5);
 	padding: 3px 0 1.5px 0;
@@ -97,12 +99,16 @@
 	}
 }
 
+.markdown-rendered em mark,
 .cm-em.cm-highlight.cm-hmd-internal-link .cm-underline {
 	background-color: rgba(104 181 177 / .5);
+	font-style: normal;
 }
 
+.markdown-rendered strong mark,
 .cm-highlight.cm-hmd-internal-link.cm-strong .cm-underline {
 	background-color: rgba(240 138 156 / .5);
+	font-weight: var(--font-regular);
 }
 
 .alt-link .cm-s-obsidian span.cm-hmd-internal-link,

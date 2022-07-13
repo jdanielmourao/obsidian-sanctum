@@ -67,7 +67,7 @@ SOFTWARE.
     Courier,
     monospace;
   --mermaid-font: var(--font-sans);
-  --font-preview:
+  --font-text-theme:
     "IBM Plex Sans *",
     "Helvetica Neue",
     "Inter",
@@ -75,7 +75,7 @@ SOFTWARE.
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-  --font-editor:
+  --font-text-theme:
     "IBM Plex Sans *",
     "Helvetica Neue",
     "Inter",
@@ -83,7 +83,7 @@ SOFTWARE.
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-  --font-ui:
+  --font-interface-theme:
     "IBM Plex Sans *",
     "Helvetica Neue",
     "Inter",
@@ -91,7 +91,7 @@ SOFTWARE.
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-  --font-heading-editor:
+  --font-text-theme:
     "IBM Plex Sans *",
     "Helvetica Neue",
     "Inter",
@@ -99,7 +99,7 @@ SOFTWARE.
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-  --font-heading-preview:
+  --font-text-theme:
     "IBM Plex Sans *",
     "Helvetica Neue",
     "Inter",
@@ -107,7 +107,7 @@ SOFTWARE.
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-  --font-frontmatter:
+  --font-monospace-theme:
     "IBM Plex Mono *",
     "Menlo",
     "DejaVu Sans Mono",
@@ -829,7 +829,7 @@ body button,
 body textarea,
 body select {
   font-optical-sizing: auto;
-  font-family: var(--font-ui);
+  font-family: var(--font-interface-theme);
   font-feature-settings: "zero", "ss05" on;
   font-weight: var(--font-regular);
   font-size: var(--font-scale-00);
@@ -844,7 +844,7 @@ body body.theme-dark button {
 }
 .markdown-preview-view {
   font-optical-sizing: auto;
-  font-family: var(--font-preview);
+  font-family: var(--font-text-theme);
   line-height: var(--leading-4);
   letter-spacing: var(--tracking-2);
   hyphens: auto;
@@ -867,14 +867,14 @@ body body.theme-dark button {
 .HyperMD-table-2.HyperMD-table-row.cm-line {
   font-variant-ligatures: common-ligatures;
   font-optical-sizing: auto;
-  font-family: var(--font-editor);
+  font-family: var(--font-text-theme);
   line-height: var(--leading-4);
   letter-spacing: var(--tracking-2);
 }
 .cm-s-obsidian {
   font-variant-ligatures: common-ligatures;
   font-optical-sizing: auto;
-  font-family: var(--font-editor);
+  font-family: var(--font-text-theme);
   letter-spacing: var(--tracking-2);
 }
 .CodeMirror-sizer {
@@ -886,7 +886,7 @@ body body.theme-dark button {
 .markdown-preview-view h4,
 .markdown-preview-view h5,
 .markdown-preview-view h6 {
-  font-family: var(--font-heading-preview);
+  font-family: var(--font-text-theme);
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -902,7 +902,7 @@ body body.theme-dark button {
 .cm-s-obsidian .HyperMD-header-4,
 .cm-s-obsidian .HyperMD-header-5,
 .cm-s-obsidian .HyperMD-header-6 {
-  font-family: var(--font-heading-editor);
+  font-family: var(--font-text-theme);
 }
 .theme-light {
   --color-heading-1: var(--color-heading-1-l);
@@ -1224,42 +1224,42 @@ body body.theme-dark button {
   display: inline-block;
   color: var(--color-accent);
   font-size: var(--h1);
-  font-family: var(--font-editor);
+  font-family: var(--font-text-theme);
   padding-left: 4px;
 }
 .head-indicator-active .mod-cm6.is-live-preview .HyperMD-header-2.cm-active.cm-line .cm-header.cm-header-2:last-child:after {
   content: "H2";
   color: var(--color-accent);
   font-size: var(--h2);
-  font-family: var(--font-editor);
+  font-family: var(--font-text-theme);
   padding-left: 4px;
 }
 .head-indicator-active .mod-cm6.is-live-preview .HyperMD-header-3.cm-active.cm-line .cm-header.cm-header-3:last-child:after {
   content: "H3";
   color: var(--color-accent);
   font-size: var(--h3);
-  font-family: var(--font-editor);
+  font-family: var(--font-text-theme);
   padding-left: 4px;
 }
 .head-indicator-active .mod-cm6.is-live-preview .HyperMD-header-4.cm-active.cm-line .cm-header.cm-header-4:last-child:after {
   content: "H4";
   color: var(--color-accent);
   font-size: var(--h4);
-  font-family: var(--font-editor);
+  font-family: var(--font-text-theme);
   padding-left: 4px;
 }
 .head-indicator-active .mod-cm6.is-live-preview .HyperMD-header-5.cm-active.cm-line .cm-header.cm-header-5:last-child:after {
   content: "H5";
   color: var(--color-accent);
   font-size: var(--h5);
-  font-family: var(--font-editor);
+  font-family: var(--font-text-theme);
   padding-left: 4px;
 }
 .head-indicator-active .mod-cm6.is-live-preview .HyperMD-header-6.cm-active.cm-line .cm-header.cm-header-6:last-child:after {
   content: "H6";
   color: var(--color-accent);
   font-size: var(--h6);
-  font-family: var(--font-editor);
+  font-family: var(--font-text-theme);
   padding-left: 4px;
 }
 body.head-indicator .mod-cm6.is-live-preview .HyperMD-header::after {
@@ -1526,7 +1526,7 @@ body:not(.is-mobile) .empty-state-action-list::after {
   white-space: pre-wrap;
   content: "Sanctum v0.6.3 \a Designed by @jdanielmourao 2021-2022 \a Font: IBM Plex Sans & Mono";
   font-size: var(--font-scale-000);
-  font-family: var(--font-monospace);
+  font-family: var(--font-monospace-theme);
   font-weight: var(--font-light);
 }
 .empty-state-action {
@@ -1977,7 +1977,7 @@ html .is-mobile div.menu {
 .is-mobile button {
   width: 100%;
   margin: 4px auto;
-  font-family: var(--font-ui);
+  font-family: var(--font-interface-theme);
 }
 .is-mobile .setting-item-control button {
   padding: 8px 40px 8px 16px;
@@ -2409,7 +2409,7 @@ textarea.sync-history-content {
   padding: 7px 39px 7px 16px;
   font-size: var(--font-scale-00);
   font-weight: var(--font-regular);
-  font-family: var(--font-ui);
+  font-family: var(--font-interface-theme);
   background-color: var(--background-primary);
   color: var(--text-accent);
   border: 1px solid var(--color-accent);
@@ -3422,7 +3422,7 @@ body.active-line-hl.theme-dark.accent-active-line .CodeMirror-activeline .CodeMi
 }
 .markdown-preview-view em > mark,
 .cm-s-obsidian span.cm-em.cm-highlight {
-  font-family: var(--font-preview);
+  font-family: var(--font-text-theme);
   font-style: normal;
   background-color: rgba(104, 181, 177, 0.5);
 }
@@ -3471,7 +3471,7 @@ strong em,
 .cm-em.cm-strong:not(.cm-formatting),
 ins {
   font-style: normal;
-  font-family: var(--font-editor);
+  font-family: var(--font-text-theme);
   font-weight: var(--font-regular);
   text-decoration: none;
   background-color: rgba(140, 141, 59, 0.5);
@@ -3481,7 +3481,7 @@ ins {
 }
 ins,
 strong em {
-  font-family: var(--font-preview);
+  font-family: var(--font-text-theme);
 }
 .CodeMirror .cm-spell-error {
   background-image: none;
@@ -3843,7 +3843,7 @@ blockquote p {
   margin-right: 0;
   padding: 4px 0 4px 12px;
   text-align: left;
-  font-family: var(--font-preview);
+  font-family: var(--font-text-theme);
   font-style: normal;
   font-weight: var(--font-normal);
   font-size: var(--font-scale-0);
@@ -4054,7 +4054,7 @@ code[class*=language-pure-text],
 .markdown-preview-view div.el-pre:not(pre.frontmatter.language-yaml) pre[class*=language-pure-text] .language-pure-text.is-loaded {
   font-variant-ligatures: common-ligatures;
   color: var(--text-normal);
-  font-family: var(--font-preview);
+  font-family: var(--font-text-theme);
   font-weight: var(--font-regular);
   font-size: var(--font-scale-0);
   white-space: normal;
@@ -4613,7 +4613,7 @@ body .markdown-preview-view pre.frontmatter.language-yaml {
   margin-top: 4px;
 }
 code.language-yaml.is-loaded {
-  font-family: var(--font-preview);
+  font-family: var(--font-text-theme);
   font-weight: var(--font-light);
   background-color: transparent;
   text-shadow: none;
@@ -4649,7 +4649,7 @@ code.language-yaml.is-loaded .token.key.atrule {
 }
 .cm-s-obsidian span.cm-hmd-frontmatter {
   opacity: 1;
-  font-family: var(--font-frontmatter);
+  font-family: var(--font-monospace-theme);
   font-size: var(--font-scale-00);
   line-height: var(--leading-0);
   font-style: normal;
@@ -4702,7 +4702,7 @@ button.mod-warning {
   padding: 8px 40px 8px 16px;
   font-size: var(--font-scale-00);
   font-weight: var(--font-regular);
-  font-family: var(--font-ui);
+  font-family: var(--font-interface-theme);
 }
 button.mod-warning:hover {
   opacity: 0.9;
@@ -4726,7 +4726,7 @@ button.mod-cta {
   padding: 8px 40px 8px 16px;
   font-size: var(--font-scale-00);
   font-weight: var(--font-regular);
-  font-family: var(--font-ui);
+  font-family: var(--font-interface-theme);
   line-height: var(--leading-2);
   background-color: var(--color-accent);
   border: 1px solid var(--color-accent);
@@ -4760,7 +4760,7 @@ button.mod-cta:active {
   padding: 4px 4px 0px 4px;
   font-size: var(--font-scale-00);
   font-weight: var(--font-regular);
-  font-family: var(--font-ui);
+  font-family: var(--font-interface-theme);
   padding: 2px 4px;
   line-height: 0.9;
   border: 1px solid var(--color-primary-3);
@@ -4790,7 +4790,7 @@ button.mod-cta:active {
   padding: 8px 40px 8px 16px;
   font-size: var(--font-scale-00);
   font-weight: var(--font-regular);
-  font-family: var(--font-ui);
+  font-family: var(--font-interface-theme);
   background-color: var(--color-hover);
 }
 .modal button:not(.mod-cta):not(.mod-warning):not(.pcr-button),
@@ -4801,7 +4801,7 @@ button.mod-cta:active {
   padding: 8px 40px 8px 16px;
   font-size: var(--font-scale-00);
   font-weight: var(--font-regular);
-  font-family: var(--font-ui);
+  font-family: var(--font-interface-theme);
   line-height: var(--leading-2);
   border: 1px solid var(--color-primary-3);
   box-shadow: 0px -1px 0px 0px rgba(8, 8, 8, 0.1) inset, 0 2px 5px 1px rgba(0, 0, 0, 0.1);
@@ -4857,7 +4857,7 @@ button.mod-cta:active {
   padding: 8px 40px 8px 16px;
   font-size: var(--font-scale-00);
   font-weight: var(--font-regular);
-  font-family: var(--font-ui);
+  font-family: var(--font-interface-theme);
 }
 .is-mobile .modal-button-container button {
   margin: 4px 0;
@@ -4948,7 +4948,7 @@ span[title="Unfold line"]:hover,
 }
 select.dropdown {
   appearance: none;
-  font-family: var(--font-ui);
+  font-family: var(--font-interface-theme);
   font-size: var(--font-scale-00);
   color: var(--text-normal);
   line-height: var(--leading-2);
@@ -5184,7 +5184,7 @@ input[type=password],
 input[type=number] {
   background: var(--color-primary-0);
   color: var(--text-normal);
-  font-family: var(--font-ui);
+  font-family: var(--font-interface-theme);
   padding: 8px 16px;
   font-size: var(--font-scale-00);
   border-radius: 0px;
@@ -7543,7 +7543,7 @@ body .checklist-plugin-main button {
 }
 body .checklist-plugin-main p {
   margin: initial;
-  font-family: var(--font-ui);
+  font-family: var(--font-interface-theme);
 }
 body .checklist-plugin-main ul li.classic,
 body .checklist-plugin-main ul li.compact {
@@ -7794,7 +7794,7 @@ body .kanban-plugin__drag-container > .kanban-plugin__item-wrapper > .kanban-plu
   font-size: var(--font-scale-00);
 }
 body .kanban-plugin__markdown-preview-view {
-  font-family: var(--font-preview);
+  font-family: var(--font-text-theme);
   font-size: var(--font-scale-00);
   line-height: 1.5em;
   padding: unset;
@@ -7842,7 +7842,7 @@ div.kanban-plugin__date-picker .flatpickr-months {
   align-items: center;
 }
 div.kanban-plugin__date-picker span.flatpickr-weekday {
-  font-family: var(--font-monospace);
+  font-family: var(--font-monospace-theme);
   text-transform: uppercase;
   font-size: var(--font-scale-000);
   font-weight: var(--font-regular);
@@ -8032,7 +8032,7 @@ body div#wordsprint .danger {
   background-color: var(--color-red);
 }
 div#wordsprint button {
-  font-family: var(--font-ui);
+  font-family: var(--font-interface-theme);
 }
 .graph-view.color-fill {
   color: var(--color-primary-5);

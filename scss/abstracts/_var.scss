@@ -1,17 +1,17 @@
+
+body {
+	--font-monospace-theme: 'IBM Plex Mono *', monospace;
+	--font-text-theme: 'IBM Plex Sans *', sans-serif;
+	--font-interface-theme: 'IBM Plex Sans *', sans-serif;
+}
+
 :root {
 /* ────────────────────────────── Font Families ───────────────────────────── */
 
-	--font-sans: 'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-	--font-serif: 'IBM Plex Serif', 'Georgia', Times, serif;
-	--font-mono: 'IBM Plex Mono *', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+	--font-sans: 'IBM Plex Sans *', sans-serif;
+	--font-serif: 'IBM Plex Serif', serif;
 	--mermaid-font: var(--font-sans);
 
-	--font-preview: 'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-	--font-editor: 'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-	--font-ui: 'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-	--font-heading-editor: 'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-	--font-heading-preview: 'IBM Plex Sans *', 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-	--font-frontmatter: 'IBM Plex Mono *', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
 	--footnote-id: 'Footnotes';
 	--marker-odd: '–\2009\2009';
 	--marker-even: '▪  ';

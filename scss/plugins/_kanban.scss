@@ -109,7 +109,7 @@ body .kanban-plugin__drag-container > .kanban-plugin__item-wrapper > .kanban-plu
 }
 
 body .kanban-plugin__markdown-preview-view {
-	font-family: var(--font-preview);
+	font-family: var(--font-text-theme);
 	font-size: var(--font-scale-00);
 	line-height: 1.5em;
 	padding: unset;
@@ -163,7 +163,7 @@ div.kanban-plugin__date-picker {
 
 	}
 	& span.flatpickr-weekday {
-		font-family: var(--font-monospace);
+		font-family: var(--font-monospace-theme);
 		text-transform: uppercase;
 		font-size: var(--font-scale-000);
 		font-weight: var(--font-regular);
