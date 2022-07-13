@@ -1,12 +1,13 @@
 * { 
 	&::-webkit-scrollbar-thumb {
 		visibility: visible;
-		border: 4px solid var(--background-primary);
+		border: 3px solid var(--background-primary);
 		border-radius: 32px; // roundedness of scrollbar
 		background-color: var(--color-primary-2); // color of scrollbar (part that moves)
+		--scrollbar-thumb-bg: var(--color-primary-2);
 	}
 	&::-webkit-scrollbar-thumb:hover {
-		border-width: 3px;
+		border-width: 1px;
 		transition: var(--duration-moderate-1) var(--motion-entrance-expressive);
 	}
 	&::-webkit-scrollbar {

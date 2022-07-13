@@ -646,7 +646,8 @@ body:not(.no-sanctum-icons)
 	border:none;
 }
 
-.workspace-leaf.mod-active .nav-folder.has-focus { /*gives space for .nav-folder-has-focus > .nav-folder-title border*/
+.workspace-leaf.mod-active .nav-file.has-focus,
+.workspace-leaf.mod-active .nav-folder.has-focus { /*gives space for focus border*/
 	margin-right: 2px;
 }
 
