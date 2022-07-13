@@ -18,7 +18,7 @@ html body.plugin-sliding-panes-stacking .workspace>.mod-root>.workspace-leaf {
 
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-actions {
 	& .view-action {
-		opacity: 0;
+		opacity: 1;
 		transition: var(--duration-slow-1) var(--motion-entrance-productive);
 	}
 	&:hover .view-action {

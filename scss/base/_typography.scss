@@ -454,7 +454,9 @@ body {
 }
 
 
-
+body.head-indicator.head-indicator-active .markdown-source-view.mod-cm6.is-live-preview .HyperMD-header.cm-line::after {
+	content: none;
+}
 
 body.head-indicator .mod-cm6.is-live-preview {
 	& .HyperMD-header::after {
@@ -466,27 +468,27 @@ body.head-indicator .mod-cm6.is-live-preview {
 	}
 	& .HyperMD-header-1::after {
 		content: "H1";
-		font-size: .7rem;
+		font-size: var(--h1);
 	}
 	& .HyperMD-header-2::after {
 		content: "H2";
-		font-size: .7rem;
+		font-size: var(--h2);
 	}
 	& .HyperMD-header-3::after {
 		content: "H3";
-		font-size: .7rem;
+		font-size: var(--h3);
 	}
 	& .HyperMD-header-4::after {
 		content: "H4";
-		font-size: .7rem;
+		font-size: var(--h4);
 	}
 	& .HyperMD-header-5::after {
 		content: "H5";
-		font-size: .7rem;
+		font-size: var(--h5);
 	}
 	& .HyperMD-header-6::after {
 		content: "H6";
-		font-size: .7rem;
+		font-size: var(--h6);
 	}
 }
 
