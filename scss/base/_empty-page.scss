@@ -1,4 +1,7 @@
 .empty-state {
+	&-close-button {
+		display: none;
+	}
 	&-title {
 		display: flex;
 		flex-direction: column;
@@ -40,9 +43,9 @@
 			padding-top: 8px;
 			padding-left: 12px;
 			white-space: pre-wrap;
-			content: "Sanctum v0.6.3 \A Designed by @jdanielmourao 2021-2022 \A Font: IBM Plex Sans & Mono";
+			content: "Sanctum for Obsidian v0.15.6\A Designed by @jdanielmourao 2021-2022 \A Font: IBM Plex Sans & Mono";
 			font-size: var(--font-scale-000);
-			font-family: var(--font-monospace-theme);
+			font-family: var(--font-monospace);
 			font-weight: var(--font-light);
 		}
 	}
@@ -64,6 +67,9 @@
 			border-radius: 8px;
 			font-size: var(--font-scale-00);
 			border: 1px solid var(--color-border-1);
+		}
+		&.mod-close {
+			display: none;
 		}
 	}
 	&-action:hover {
