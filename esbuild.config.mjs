@@ -13,7 +13,7 @@ const prod = process.argv[2] === "production";
  * npm run build will place it in the build directory in this repository.
  */
 const dir = prod ? "./" : process.env.OUTDIR;
-const file = `${dir}/Sanctum.css`;
+const file = `${dir}/build/Sanctum.css`;
 
 /**
  * readFileSync reads the file data in as a string.
