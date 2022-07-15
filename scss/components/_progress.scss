@@ -10,6 +10,12 @@
 	border-radius: 0;
 	vertical-align: -0.2rem;
 
+	&:after {
+		content: "";
+		display: block;
+		font-size: var(--font-scale-000);
+	}
+
 	&[value]::-webkit-progress-bar { //background
 		background-color: var(--color-primary-2);
 		border-radius: 0px;
@@ -24,6 +30,7 @@
 	&[value^='3']::-webkit-progress-value {
 		background-color: var(--color-red-5);
 	}
+
 	&[value^='4']::-webkit-progress-value,
 	&[value^='5']::-webkit-progress-value,
 	&[value^='6']::-webkit-progress-value {
@@ -35,6 +42,106 @@
 		background-color: var(--color-green-5);
 	}
 	&[value^='10']::-webkit-progress-value {
+		background-color: var(--color-accent);
+	}
+
+	&[value^='0'] {
+		&:after {
+			content: "0%";
+		}
+	}
+
+	&[value^='1'] {
+		&:after {
+			content: "10%";
+			padding-left: 10%;
+		}
+	}
+	&[value^='2'] {
+		&:after {
+			content: "20%";
+			padding-left: 20%;
+		}
+	}
+	&[value^='3'] {
+		&:after {
+			content: "30%";
+			padding-left: 30%;
+		}
+	}
+	&[value^='4'] {
+		&:after {
+			content: "40%";
+			padding-left: 40%;
+		}
+	}
+	&[value^='5'] {
+		&:after {
+			content: "50%";
+			padding-left: 50%;
+		}
+	}
+	&[value^='6'] {
+		&:after {
+			content: "60%";
+			padding-left: 60%;
+		}
+	}
+	&[value^='7'] {
+		&:after {
+			content: "70%";
+			padding-left: 70%;
+		}
+	}
+	&[value^='8'] {
+		&:after {
+			content: "80%";
+			padding-left: 80%;
+		}
+	}
+	&[value^='9'] {
+		&:after {
+			content: "90%";
+			padding-left: 87%;
+		}
+	}
+	&[value^='10'] {
+		&:after {
+			content: "100%";
+			padding-left: 85.5%;
+		}
+	}
+}
+
+
+.markdown-source-view.is-live-preview meter,
+.markdown-preview-view meter {
+	display: inline-block;
+	width: 240px;
+	
+	&::-webkit-meter-bar {
+		appearance: none;
+		background-color: var(--color-primary-2);
+		box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
+		border-radius: 0px;
+		border: none;
+		height: 4px;
+	}
+	&::-webkit-meter-optimum-value,
+	&::-webkit-meter-suboptimum-value,
+	&::-webkit-meter-even-less-good-value {
+	border-radius: 0px;
+	}
+	&::-webkit-meter-even-less-good-value  {
+		background-color: var(--color-red-5);
+	}
+	&::-webkit-meter-suboptimum-value {
+		background-color: var(--color-orange-5);
+	}
+	&::-webkit-meter-optimum-value {
+		background-color: var(--color-green-5)
+	}
+	&::-webkit-meter-maximum-value {
 		background-color: var(--color-accent);
 	}
 }

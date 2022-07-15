@@ -67,7 +67,6 @@
 
 	&:hover {
 		text-decoration: none;
-		color: var(--text-accent);
 		background-color: rgba(var(--color-accent-l) / .2);
 		transition: background var(--duration-moderate-2) var(--motion-entrance-productive);
 	
@@ -90,7 +89,6 @@
 /* Highlight fix */
 .markdown-rendered mark,
 .cm-highlight.cm-hmd-internal-link .cm-underline {
-	background: rgba(214 159 40 / .5);
 	padding: 3px 0 1.5px 0;
 	border-radius: 0;
 	
@@ -99,16 +97,18 @@
 	}
 }
 
-.markdown-rendered em mark,
-.cm-em.cm-highlight.cm-hmd-internal-link .cm-underline {
-	background-color: rgba(104 181 177 / .5);
-	font-style: normal;
-}
 
-.markdown-rendered strong mark,
-.cm-highlight.cm-hmd-internal-link.cm-strong .cm-underline {
-	background-color: rgba(240 138 156 / .5);
-	font-weight: var(--font-regular);
+.alt-link .markdown-preview-view mark a.internal-link,
+.alt-link .markdown-source-view.mod-cm6 .cm-highlight .cm-underline,
+.markdown-preview-view mark a.internal-link,
+.markdown-source-view.mod-cm6 .cm-highlight .cm-underline {
+	color: var(--color-black);
+	font-weight: 450;
+
+	&:hover {
+	text-decoration: underline solid var(--color-accent) 2px;
+	background-color: transparent;
+	}
 }
 
 .alt-link .cm-s-obsidian span.cm-hmd-internal-link,

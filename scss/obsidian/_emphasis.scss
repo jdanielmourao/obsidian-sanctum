@@ -17,14 +17,14 @@ body {
 strong { /* Bold */
 	font-style: normal;
 	font-weight: var(--font-bold);
-	color: var(--color-bold);
+	//color: var(--color-bold);
 }
 /* ───────────────────────────────── Italic ───────────────────────────────── */
 .cm-em,
 em {  /* Italic */
 	font-style: oblique;
 	font-weight: var(--font-regular);
-	color: var(--color-italic);
+	//color: var(--color-italic);
 }
 
 /* ──────────────────────── Highlighting & Selection ──────────────────────── */
@@ -76,31 +76,54 @@ body.active-line-hl.theme-dark.accent-active-line .CodeMirror-activeline .CodeMi
 	vertical-align: middle;
 }
 
+.markdown-rendered mark,
 .markdown-preview-view mark,
 .cm-s-obsidian span.cm-highlight {
-		font-weight: var(--font-regular);
-		background-color: rgba(214 159 40 / .5);
+	font-weight: var(--font-regular);
+	background-color: transparent;
+	background: linear-gradient(120deg,var(--color-yellow-3),var(--color-yellow-3));
+	background-position: center 65%;
+	background-repeat: no-repeat;
+	background-size: 100% 1.2rem;
+	-webkit-box-decoration-break: clone;
 
-	&:hover {
-		filter: saturate(1.5);
+	.theme-dark & {
+		color: var(--background-primary);
+		font-weight: var(--font-medium);
 	}
 }
 
 /* ──────────────────────────── Cyan Highlight 2 ──────────────────────────── */
 
+.markdown-rendered em > mark,
 .markdown-preview-view em > mark,
-.cm-s-obsidian span.cm-em.cm-highlight {
-		font-family: var(--font-text-theme);
-		font-style: normal;
-		background-color: rgba(104 181 177 / .5);
+.markdown-source-view.mod-cm6 span.cm-highlight.cm-em {
+	font-family: var(--font-text);
+	font-style: normal;
+	background-color: transparent;
+	background: linear-gradient(120deg,var(--color-teal-4),var(--color-teal-4));
+	background-position: center 65%;
+	background-repeat: no-repeat;
+	background-size: 100% 1.2rem;
+	-webkit-box-decoration-break: clone;
+
+	.theme-dark & {
+		font-weight: var(--font-medium);
+	}
 }
 
 /* ─────────────────────────── Magenta Highlight 3 ────────────────────────── */
 
+.markdown-rendered strong > mark,
 .markdown-preview-view strong > mark,
 .cm-s-obsidian span.cm-strong.cm-highlight {
-		font-weight: var(--font-regular);
-		background-color: rgba(240 138 156 / .5);
+	font-style: normal;
+	background-color: transparent;
+	background: linear-gradient(120deg,var(--color-pink-4),var(--color-pink-4));
+	background-position: center 65%;
+	background-repeat: no-repeat;
+	background-size: 100% 1.2rem;
+	-webkit-box-decoration-break: clone;
 }
 
 /* ────────────────────────────── Strikethrough ───────────────────────────── */
