@@ -6,18 +6,25 @@
 	border-radius: 4px;
 }
 
+body {
+	--color-bold: var(--color-bold-custom), var(--text-normal);
+	--color-italic: var(--color-italic-custom), var(--text-normal);
+}
+
 /* ────────────────────────────────── Bold ────────────────────────────────── */
 .cm-s-obsidian .cm-strong,
 .markdown-preview-section strong,
 strong { /* Bold */
 	font-style: normal;
 	font-weight: var(--font-bold);
+	color: var(--color-bold);
 }
 /* ───────────────────────────────── Italic ───────────────────────────────── */
 .cm-em,
 em {  /* Italic */
-	font-style: italic;
-	font-weight: var(--font-light);
+	font-style: oblique;
+	font-weight: var(--font-regular);
+	color: var(--color-italic);
 }
 
 /* ──────────────────────── Highlighting & Selection ──────────────────────── */

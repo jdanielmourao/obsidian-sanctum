@@ -19,11 +19,15 @@ li::marker {
 	& ul li {
 		line-height: var(--leading-4); //adds white space to lists, and makes it match task lists
 		margin: 4px 0;
+		padding-left: 4px;
 	}
 	
 	& .list-collapse-indicator { // generic ul and task list
 		margin-left: -2.5rem;
 		color: var(--text-faint);
+	}
+	& ul .list-collapse-indicator {
+		padding-left: 4px;
 	}
 	& ol li .list-collapse-indicator { // ol under 10
 		margin-left: -3rem;
@@ -164,6 +168,5 @@ span.cm-comment .list-bullet::after { // makes bullets same colors as comments w
 	top: 0;
 	right: 0;
 	height: 100%;
-	cursor: var(--cursor);
 	padding-right: 8px;
 }

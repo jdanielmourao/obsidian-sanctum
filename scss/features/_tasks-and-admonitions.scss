@@ -127,17 +127,19 @@ body:not(.tasks) {
 		pointer-events: none;
 	}
 }
+
 body:not(.tasks) {
 	.markdown-source-view.mod-cm6 .task-list-item-checkbox:not([data-task="x"]):not([data-task=" "]),
-	.markdown-preview-view li:not([data-task="x"]) > .task-list-item-checkbox:checked,
-	.markdown-preview-view li:not([data-task="x"]) > p > .task-list-item-checkbox:checked,
-	li:not([data-task="x"]) > .task-list-item-checkbox:checked  { /*admonitions compatibility*/
+	.markdown-preview-view li:not(li[data-task="x"]) > .task-list-item-checkbox:checked,
+	.markdown-preview-view li:not(li[data-task="x"]) > p > .task-list-item-checkbox:checked,
+	li:not(li[data-task="x"]) > .task-list-item-checkbox:checked { /*admonitions compatibility*/
 		background-repeat: no-repeat;
-		background-size: 65%;
-		background-position: center 2.5px;
-		border-radius: 50%;
+		background-size: 18px;
+		background-position: center center;
+		border-radius: 0%;
 	}
 }
+
 /* ────────────────────────────────── Note ────────────────────────────────── */
 
 body:not(.tasks) {
@@ -398,6 +400,10 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task="X"]
 
 	& > :is(ul, ol) {
 		padding-left: 48px;
+
+		&::before {
+			left: 8px;
+		}
 	}
 }
 
@@ -423,6 +429,10 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task="I"]
 
 	& > :is(ul, ol) {
 		padding-left: 48px;
+
+		&::before {
+			left: 8px;
+		}
 	}
 }
 
@@ -448,6 +458,10 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked[data-task="i"] {
 
 	& > :is(ul, ol) {
 		padding-left: 48px;
+
+		&::before {
+			left: 8px;
+		}
 	}
 }
 
@@ -475,6 +489,10 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task="W"]
 
 	& > :is(ul, ol) {
 		padding-left: 48px;
+
+		&::before {
+			left: 8px;
+		}
 	}
 }
 
@@ -501,6 +519,10 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked:is([data-task="n"]
 
 	& > :is(ul, ol) {
 		padding-left: 48px;
+
+		&::before {
+			left: 8px;
+		}
 	}
 }
 
@@ -527,6 +549,10 @@ body:not(.tasks) .admonitions ul li.task-list-item.is-checked[data-task="B"] {
 
 	& > :is(ul, ol) {
 		padding-left: 48px;
+
+		&::before {
+			left: 8px;
+		}
 	}
 }
 
