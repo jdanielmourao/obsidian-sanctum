@@ -5706,16 +5706,16 @@ input[type=range i]:before {
   content: "min";
   display: block;
   font-size: var(--font-scale-000);
-  margin: auto;
   padding-right: 8px;
+  padding-top: 0.5px;
 }
 input[type=range i]:after {
   pointer-events: none;
   content: "max";
   display: block;
   font-size: var(--font-scale-000);
-  margin: auto;
   padding-left: 8px;
+  padding-top: 0.5px;
 }
 .graph-controls input[type=range]::-webkit-slider-runnable-track {
   margin-top: 0px;
@@ -5745,7 +5745,7 @@ input[type=range i]:after {
   width: 20px;
   height: 20px;
   margin: 0;
-  inset: 2px 0 0 -1px;
+  inset: 2px 0 0 -0.5px;
   border-radius: 50%;
   transition:
     transform var(--duration-fast-1) var(--motion-standard-expressive),
@@ -5762,7 +5762,7 @@ input[type=range i]:after {
   background: linear-gradient(0deg, var(--color-grey-1) 0%, var(--color-grey-3) 100%);
 }
 .checkbox-container.is-enabled:after {
-  transform: translateX(1.65rem);
+  transform: translateX(1.875em);
   width: 20px;
   transition: transform var(--duration-fast-1) var(--motion-standard-expressive);
 }

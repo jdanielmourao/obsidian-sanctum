@@ -49,8 +49,8 @@ input[type="range" i] {
 		content: "min";
 		display: block;
 		font-size: var(--font-scale-000);
-		margin: auto;
 		padding-right: 8px;
+		padding-top: 0.5px;
 	}
 
 	&:after {
@@ -58,8 +58,8 @@ input[type="range" i] {
 		content: "max";
 		display: block;
 		font-size: var(--font-scale-000);
-		margin: auto;
 		padding-left: 8px;
+		padding-top: 0.5px;
 	}
 }
 

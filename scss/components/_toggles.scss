@@ -21,7 +21,7 @@
 	width: 20px;
 	height: 20px;
 	margin: 0;
-	inset: 2px 0 0 -1px;
+	inset: 2px 0 0 -0.5px;
 	border-radius: 50%;
 	transition: transform var(--duration-fast-1) var(--motion-standard-expressive),
 				left var(--duration-fast-1) var(--motion-standard-expressive),
@@ -43,7 +43,7 @@
 }
 
 .checkbox-container.is-enabled:after {
-	transform: translateX(1.65rem); // distance travelled
+	transform: translateX(1.875em); // distance travelled
 	width: 20px;
 	transition: transform var(--duration-fast-1) var(--motion-standard-expressive)
 
