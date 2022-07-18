@@ -143,248 +143,217 @@
 }
 
 // Community Themes
-.modal-content .community-theme-container {
 
+body.is-mobile .theme-list .community-theme { /* Mobile */
+	padding:8px 8px 8px 8px;
+	margin: 8px 8px 8px 8px;
+	border: 1px solid transparent;
 
-	body:not(.is-mobile) & .theme-list { /* Desktop */
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 0rem 0rem;
+	&:hover {
+		background-color: var(--color-hover);
+		border: 1px solid var(--color-primary-3);
+		border-radius: 8px;
+	}
+	& .community-theme-screenshot.mod-unavailable {
+		color: var(--text-muted);
+	}
+	&.is-selected {
+		background-color: rgba(var(--rgb-primary-0), .5);
+		border-radius: 8px;
+		border: 1px solid var(--color-accent);
+		color: var(--text-normal);
 
-		& .community-theme { 
-			align-self: stretch;
-			justify-self: center;
-			max-width: 100%;
-			width: 100%;
-			background-color: var(--color-primary-1);
-			padding: 16px;
+		& button {
+			background-color: var(--color-accent);
+			color: var(--color-black);
+		}
+		& .community-theme-info {
+			color: var(--text-normal);
+		}
+	}
+	& .modal-button-container {
+	
+		& button,
+		& button.mod-cta {
+			line-height: var(--leading-0);
 			border-radius: 4px;
-			border: 2px solid transparent;
+			margin: 0 2px;
+		}
 
-			& .community-theme-title {
-				text-align: left;
-				font-size: var(--font-settings);
-				color: var(--text-normal);
-			}
-			& .u-center-text {
-				text-align: left;
-				font-size: var(--font-scale-000);
-				color: var(--text-normal);
-			}
-			&-info {
-				line-height: 1;
-				flex-grow: 0;
-				padding: 0 0 10px 0;
-				align-items: flex-end;
-				justify-content: flex-start;
-				flex-wrap: wrap;
-			}
-			&-screenshot {
-				max-width: 100%;
-			}
-
-			& .community-theme-info+div {
-				background-color: transparent;
-				display: flex;
-				align-items: center;
-				padding: 0;
-				flex-grow: 1;
-				border-radius: 16px;
-			}
-
-			&.is-selected {
-				grid-column: 1/4;
-				grid-row: 1;
-				max-width: 100%;
-				display: grid;
-				grid-template-columns: 1.5fr 2fr;
-				padding: 20px 20px;
-				border-radius: var(--radius-xl);
-				border-color: transparent;
-
-				& .community-theme-title {
-					grid-column: 1/3;
-					grid-row: 1/2;
-					text-align: left;
-					font-size: 2em;
-					font-weight: 500;
-					margin: 0;
-					line-height: 2rem;
-				}
-
-				& .community-theme-info {
-					display: grid;
-					grid-template-columns: repeat(2,1fr);
-					grid-template-rows: 30px 50px 440px;
-					margin: 0 40px 0 0;
-
-					&::after {
-						grid-column: 1/3;
-						grid-row: 3/4;
-						padding-top: 24px;
-						align-self: flex-start;
-						justify-self: flex-start;
-						content: var(--version);
-						color: var(--text-normal);
-						font-size: var(--font-scale-0);
-						line-height: var(--leading-4);
-						width: 100%;
-						position: relative;
-						white-space: pre-wrap;
-						text-align: left;
-						border: none;
-					}
-
-					& .clickable-icon {
-						width: 100%;
-						background-color: var(--background-primary);
-						border: 1px solid var(--color-border-2);
-						color: var(--text-normal);
-						cursor: pointer;
-						display: block;
-						text-align: center;
-						grid-column: 1/3;
-						padding: 6px 0;
-						margin: 20px 0 0;
-						height: 32px;
-						border-radius: 4px;
-
-						&::after {
-							content: "Learn more";
-							padding-left: 8px;
-						&:hover {
-							color: var(--color-accent);
-						}
-					}
-
-					& .community-theme-downloads {
-						text-align: right;
-						color: var(--text-normal);
-
-						& .community-plugin-downloads-text {
-							margin-left: 4px;
-							position: relative;
-							top: -1px;
-						}
-					}
-				}
-
-				& .community-theme-remove-button {
-					bottom: 20px;
-					left: 0;
-					right: auto;
-					top: auto;
-					color: var(--text-faint);
-					display: flex;
-					align-items: center;
-				
-					&:after {
-						content: 'Delete theme';
-						padding-left: 5px;
-					}
-
-					&:hover {
-						color: var(--color-red-5);
-					}
-				}
-				
-				& .modal-button-container {
-					grid-column: 2;
-					grid-row: 1/2;
-					margin-top: 0;
-					margin-left: auto;
-					margin-right: 0;
-
-					& button:not(.mod-cta) {
-						display: none;
-					}
-
-					& button {
-						margin: 0;
-						width: 160px;
-						height: 36px;
-						cursor: pointer;
-						border: none;
-						box-shadow: inset 0 0 0 1px rgb(0 0 0 / 10%);
-					}
-				}
-			}
+		& button:not(.mod-cta) {
+			padding: 7px 39px 7px 16px;
+			font-size: var(--font-scale-00);
+			font-weight: var(--font-regular);
+			font-family: var(--font-interface-theme);
+			background-color: var(--background-primary);
+			color: var(--text-accent);
+			border: 1px solid var(--color-accent);
 		}
 	}
 }
 
 
 
-body.is-mobile & .theme-list .community-theme { /* Mobile */
-		padding:8px 8px 8px 8px;
-		margin: 8px 8px 8px 8px;
-		border: 1px solid transparent;
 
-		&:hover {
-			background-color: var(--color-hover);
-			border: 1px solid var(--color-primary-3);
-			border-radius: 8px;
+body:not(.is-mobile) .theme-list { /* Desktop */
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0rem 0rem;
+
+	& .community-theme {
+		align-self: stretch;
+		justify-self: center;
+		max-width: 100%;
+		width: 100%;
+		background-color: var(--color-primary-1);
+		padding: 16px;
+		border-radius: 4px;
+		border: 2px solid transparent;
+
+		& .community-theme-title {
+			text-align: left;
+			font-size: var(--font-settings);
+			color: var(--text-normal);
 		}
-		& .community-theme-screenshot.mod-unavailable {
-			color: var(--text-muted);
+		& .u-center-text {
+			text-align: left;
+			font-size: var(--font-scale-000);
+			color: var(--text-normal);
+		}
+		&-info {
+			line-height: 1;
+			flex-grow: 0;
+			padding: 0 0 10px 0;
+			align-items: flex-end;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+		}
+		&-screenshot {
+			max-width: 100%;
+		}
+		& .community-theme-info+div {
+			background-color: transparent;
+			display: flex;
+			align-items: center;
+			padding: 0;
+			flex-grow: 1;
+			border-radius: 16px;
 		}
 		&.is-selected {
-			background-color: rgba(var(--rgb-primary-0), .5);
-			border-radius: 8px;
-			border: 1px solid var(--color-accent);
-			color: var(--text-normal);
+			grid-column: 1/4;
+			grid-row: 1;
+			max-width: 100%;
+			display: grid;
+			grid-template-columns: 1.5fr 2fr;
+			padding: 20px 20px;
+			border-radius: var(--radius-xl);
+			border-color: transparent;
 
-			& button {
-				background-color: var(--color-accent);
-				color: var(--color-black);
+			& .community-theme-title {
+				grid-column: 1/3;
+				grid-row: 1/2;
+				text-align: left;
+				font-size: 2em;
+				font-weight: 500;
+				margin: 0;
+				line-height: 2rem;
 			}
 			& .community-theme-info {
-				color: var(--text-normal);
-			}
-		}
-		& .modal-button-container {
-		
-			& button,
-			& button.mod-cta {
-				line-height: var(--leading-0);
-				border-radius: 4px;
-				margin: 0 2px;
-			}
+				display: grid;
+				grid-template-columns: repeat(2,1fr);
+				grid-template-rows: 30px 50px 440px;
+				margin: 0 40px 0 0;
 
-			& button:not(.mod-cta) {
-				padding: 7px 39px 7px 16px;
-				font-size: var(--font-scale-00);
-				font-weight: var(--font-regular);
-				font-family: var(--font-interface-theme);
-				background-color: var(--background-primary);
-				color: var(--text-accent);
-				border: 1px solid var(--color-accent);
+				&::after {
+					grid-column: 1/3;
+					grid-row: 3/4;
+					padding-top: 24px;
+					align-self: flex-start;
+					justify-self: flex-start;
+					content: var(--version);
+					color: var(--text-normal);
+					font-size: var(--font-scale-0);
+					line-height: var(--leading-4);
+					width: 100%;
+					position: relative;
+					white-space: pre-wrap;
+					text-align: left;
+					border: none;
+				}
+				& .clickable-icon {
+					width: 100%;
+					background-color: var(--background-primary);
+					border: 1px solid var(--color-border-2);
+					color: var(--text-normal);
+					cursor: pointer;
+					display: block;
+					text-align: center;
+					grid-column: 1/3;
+					padding: 6px 0;
+					margin: 20px 0 0;
+					height: 32px;
+					border-radius: 4px;
+
+					&::after {
+						content: "Learn more";
+						padding-left: 8px;
+					}
+					&:hover {
+						color: var(--color-accent);
+					}
+				}
+				& .community-theme-downloads {
+					text-align: right;
+					color: var(--text-normal);
+
+					& .community-plugin-downloads-text {
+						margin-left: 4px;
+						position: relative;
+						top: -1px;
+					}
+				}
+			}
+			& .community-theme-remove-button {
+				bottom: 20px;
+				left: 0;
+				right: auto;
+				top: auto;
+				color: var(--text-faint);
+				display: flex;
+				align-items: center;
+			
+				&:after {
+					content: 'Delete theme';
+					padding-left: 5px;
+				}
+				&:hover {
+					color: var(--color-red-5);
+				}
+			}
+			& .modal-button-container {
+				grid-column: 2;
+				grid-row: 1/2;
+				margin-top: 0;
+				margin-left: auto;
+				margin-right: 0;
+
+				& button:not(.mod-cta) {
+					display: none;
+				}
+				& button {
+					margin: 0;
+					width: 160px;
+					height: 36px;
+					cursor: pointer;
+					border: none;
+					box-shadow: inset 0 0 0 1px rgb(0 0 0 / 10%);
+				}
 			}
 		}
 	}
 }
 
 
-
-
-
-
-
-
-
-body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-remove-button {
-	bottom: 20px;
-	left: 0;
-	right: auto;
-	top: auto;
-	color: var(--text-faint);
-	display: flex;
-	align-items: center;
-}
-
-.community-theme-remove-button.clickable-icon.u-muted { // theme delete button
-	background-color: transparent;
-}
 
 // Theme Image Enlarge
 .modal.mod-image-lightbox {
