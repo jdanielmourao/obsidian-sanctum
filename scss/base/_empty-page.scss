@@ -43,7 +43,7 @@
 			padding-top: 8px;
 			padding-left: 12px;
 			white-space: pre-wrap;
-			content: "Sanctum for Obsidian v0.15.6\A Designed by @jdanielmourao 2021-2022 \A Font: IBM Plex Sans & Mono";
+			content: var(--version-empty-page);
 			font-size: var(--font-scale-000);
 			font-family: var(--font-monospace);
 			font-weight: var(--font-light);

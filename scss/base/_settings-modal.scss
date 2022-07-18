@@ -164,10 +164,12 @@
 			& .community-theme-title {
 				text-align: left;
 				font-size: var(--font-settings);
+				color: var(--text-normal);
 			}
 			& .u-center-text {
 				text-align: left;
-				font-size: var(--font-adaptive-small);
+				font-size: var(--font-scale-000);
+				color: var(--text-normal);
 			}
 			&-info {
 				line-height: 1;
@@ -222,7 +224,7 @@
 						padding-top: 24px;
 						align-self: flex-start;
 						justify-self: flex-start;
-						content: "You are currently using Sanctum for Obsidian v0.15.6 \a \a It is highly recommended to install the Style Settings and Contextual Typography plugins.\a If you run into any issues, try updating to the latest version of the theme. If the issue isn't resolved, you can file a report on github (link in the button above). \a \a Support my work:\a ko-fi.com/jdanielmourao \a paypal.me/jdanielmourao";
+						content: var(--version);
 						color: var(--text-normal);
 						font-size: var(--font-scale-0);
 						line-height: var(--leading-4);
@@ -242,7 +244,7 @@
 						display: block;
 						text-align: center;
 						grid-column: 1/3;
-						padding: 7px 0;
+						padding: 6px 0;
 						margin: 20px 0 0;
 						height: 32px;
 						border-radius: 4px;
@@ -250,8 +252,6 @@
 						&::after {
 							content: "Learn more";
 							padding-left: 8px;
-						}
-
 						&:hover {
 							color: var(--color-accent);
 						}
@@ -259,6 +259,7 @@
 
 					& .community-theme-downloads {
 						text-align: right;
+						color: var(--text-normal);
 
 						& .community-plugin-downloads-text {
 							margin-left: 4px;
@@ -310,11 +311,11 @@
 			}
 		}
 	}
-	
+}
 
 
 
-	body.is-mobile & .theme-list .community-theme { /* Mobile */
+body.is-mobile & .theme-list .community-theme { /* Mobile */
 		padding:8px 8px 8px 8px;
 		margin: 8px 8px 8px 8px;
 		border: 1px solid transparent;
@@ -372,13 +373,13 @@
 
 
 body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-remove-button {
-    bottom: 20px;
-    left: 0;
-    right: auto;
-    top: auto;
-    color: var(--text-faint);
-    display: flex;
-    align-items: center;
+	bottom: 20px;
+	left: 0;
+	right: auto;
+	top: auto;
+	color: var(--text-faint);
+	display: flex;
+	align-items: center;
 }
 
 .community-theme-remove-button.clickable-icon.u-muted { // theme delete button

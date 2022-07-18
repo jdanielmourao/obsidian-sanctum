@@ -1,26 +1,74 @@
-* { 
-	&::-webkit-scrollbar-thumb {
+:root {
+	--scrollbar-size: 16px;
+	--scrollbar-thumb-border-hover: calc(var(--scrollbar-size) / 4);
+	--scrollbar-thumb-border-size: calc(var(--scrollbar-thumb-border-hover) + 2px);
+	--scrollbar-button-size: calc(var(--scrollbar-size) - 2px);
+}
+
+::-webkit-scrollbar {
+	visibility: visible;
+	width: var(--scrollbar-size) !important; // width of vertical scrollbars
+	height: var(--scrollbar-size) !important; // height of horizontal scrollbars
+	border-radius: 0; // roundedness of scrollbar area
+	background-color: transparent; // color of scrollbar area
+	background-clip: border-box;
+
+	&-thumb {
 		visibility: visible;
-		border: 3px solid var(--background-primary);
+		border: var(--scrollbar-thumb-border-size) solid var(--background-primary);
 		border-radius: 32px; // roundedness of scrollbar
 		background-color: var(--color-primary-2); // color of scrollbar (part that moves)
 		--scrollbar-thumb-bg: var(--color-primary-2);
+		
+		&:hover {
+			border-width: var(--scrollbar-thumb-border-hover);
+			transition: var(--duration-moderate-1) var(--motion-entrance-expressive);
+		}
+		&:active {
+			background-color: var(--color-primary-3);
+		}
 	}
-	&::-webkit-scrollbar-thumb:hover {
-		border-width: 1px;
-		transition: var(--duration-moderate-1) var(--motion-entrance-expressive);
+	&-track-piece {
+		background-color: var(--background-primary);
 	}
-	&::-webkit-scrollbar {
-		visibility: visible;
-		width: 12px; // width of vertical scrollbars
-		height: 12px; // height of horizontal scrollbars
-		border-radius: 0; // roundedness of scrollbar area
-		background-color: transparent; // color of scrollbar area
+	&-corner {
+		background-color: transparent;
 	}
-	&::-webkit-scrollbar-thumb:active {
-		background-color: var(--color-primary-3);
+	.scrol-buttons &-button:single-button {
+		background-color: var(--background-primary);
+		display: block;
+		background-size: var(--scrollbar-button-size);
+		background-repeat: no-repeat;
+		background-position: center center;
 	}
 }
+
+.scrol-buttons ::-webkit-scrollbar-button:single-button:vertical:decrement {
+	height: var(--scrollbar-button-size);
+	width: var(--scrollbar-button-size);
+	background-position: center center;
+}
+
+.theme-light.scrol-buttons ::-webkit-scrollbar-button:single-button:vertical:decrement {
+	background-image: url("data:image/svg+xml,%3Csvg fill='rgba(8, 8, 8, .3)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='m16 10 10 10-1.4 1.4-8.6-8.6-8.6 8.6L6 20z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
+}
+.theme-dark.scrol-buttons ::-webkit-scrollbar-button:single-button:vertical:decrement {
+	background-image: url("data:image/svg+xml,%3Csvg fill='rgb(254, 254, 254, .3)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='m16 10 10 10-1.4 1.4-8.6-8.6-8.6 8.6L6 20z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
+}
+
+.scrol-buttons ::-webkit-scrollbar-button:single-button:vertical:increment {
+	height: var(--scrollbar-button-size);
+	width: var(--scrollbar-button-size);
+	background-position: center center;
+}
+
+.theme-light.scrol-buttons ::-webkit-scrollbar-button:single-button:vertical:increment {
+	background-image: url("data:image/svg+xml,%3Csvg fill='rgba(8, 8, 8, .3)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath d='M16 22 6 12l1.4-1.4 8.6 8.6 8.6-8.6L26 12z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
+}
+.theme-dark.scrol-buttons ::-webkit-scrollbar-button:single-button:vertical:increment {
+	background-image: url("data:image/svg+xml,%3Csvg fill='rgba(254, 254, 254, .3)' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath d='M16 22 6 12l1.4-1.4 8.6 8.6 8.6-8.6L26 12z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
+}
+
 
 code {
 	&::-webkit-scrollbar-thumb {
@@ -33,14 +81,14 @@ code {
 }
 
 // hide all scrollbars except the editor's
-::-webkit-scrollbar {
+:not(.workspace-split.mod-right-split .workspace-tabs .workspace-leaf .workspace-leaf-content[data-type=outline]::-webkit-scrollbar) ::-webkit-scrollbar {
 	display: none;
 }
 
 // global search results scroll & modal settings
 .modal.mod-settings .vertical-tabs-container .vertical-tab-content-container ::-webkit-scrollbar,
 .workspace-leaf-content .search-result-container.mod-global-search::-webkit-scrollbar {
-    display: inherit;
+	display: inherit;
 }
 
 // Note scroll
@@ -70,5 +118,10 @@ code {
 
 // File Explorer
 .no-scrl-fx .workspace-tabs .nav-files-container::-webkit-scrollbar {
+	display: none;
+}
+
+//Outline
+.no-scrl-out .workspace-split.mod-right-split .workspace-tabs .workspace-leaf .workspace-leaf-content[data-type=outline] ::-webkit-scrollbar {
 	display: none;
 }

@@ -83,23 +83,21 @@ cite { // for citations
 	border-left: 1px solid var(--color-accent);
 }
 
+
 //markdown cite Live Preview
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-2 {
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote-2:not(.HyperMD-callout) {
 	border-left: 1px solid var(--color-accent);
 	color: var(--text-normal);
 	font-style: normal;
+	float: none;
 
 	& .cm-blockquote-border	{
 		border: none;
-
 	}
+	
 	& .cm-quote-2 {
 		color: var(--text-normal);
 	}
-}
-
-.markdown-source-view.mod-cm6.is-live-preview .cm-line:not(.cm-active):not(.HyperMD-callout) .cm-quote-2:not(.cm-hmd-callout) {
-	float: right;
 }
 
 //markdown paraphrase Live Preview

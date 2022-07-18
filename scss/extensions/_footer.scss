@@ -2779,29 +2779,57 @@ settings:
 			level: 3
 			collapsed: true
 	-	
-				id: no-scrl-search
-				title: No Scrollbar in Global Search
-				description: Disables Scrollbars when displaying Global Search Results.
+				id: scrol-buttons
+				title: Toggle Scrollbar buttons
+				description: Enables Arrow buttons in vertical scrollbars
 				type: class-toggle
 				default: false
+	-	
+				id: scrollbar-size
+				title: Scrollbar Size
+				description: Changes scrollbar width/height
+				type: variable-number-slider
+				default: 16
+				min: 14
+				max: 20
+				step: 2
+				format: 'px'
 	-		
-				id: no-scrl-note
-				title: No Scrollbar in Notes
-				description: Disables Scrollbars in Notes.
-				type: class-toggle
-				default: false
+				id: scrollbars-title-more
+				title: Disable Scrollbars
+				type: heading
+				level: 4
+				collapsed: true
+	-	
+					id: no-scrl-search
+					title: Global Search scrollbar
+					description: Disables Scrollbars when displaying Global Search Results.
+					type: class-toggle
+					default: false
 	-		
-				id: no-scrl-fx
-				title: No Scrollbar in File Explorer
-				description: Disables Scrollbars in File Explorer.
-				type: class-toggle
-				default: false
+					id: no-scrl-note
+					title: Notes scrollbars
+					description: Disables Scrollbars in Notes.
+					type: class-toggle
+					default: false
 	-		
-				id: no-scrl-modal
-				title: No Scrollbar in Modal
-				description: Disables Scrollbars in settings menus.
-				type: class-toggle
-				default: false
+					id: no-scrl-fx
+					title: File Explorer scrollbar
+					description: Disables Scrollbars in File Explorer.
+					type: class-toggle
+					default: false
+	-		
+					id: no-scrl-modal
+					title: Modal scrollbar
+					description: Disables Scrollbars in settings menus.
+					type: class-toggle
+					default: false
+	-		
+					id: no-scrl-out
+					title: Outline Pane scrollbar
+					description: Disables Scrollbars in the Outline Pane.
+					type: class-toggle
+					default: false
 	-
 		id: mobile
 		title: Mobile
