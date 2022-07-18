@@ -51,7 +51,7 @@ body {
 }
 :root {
   --version: "You are currently using Sanctum for Obsidian v0.15.7 \a\aIt is highly recommended to install the Style Settings and Contextual Typography plugins.\aIf you run into any issues, try updating to the latest version of the theme. If the issue isn't resolved, you can file a report on github (link in the button above). \a\aSupport my work:\ako-fi.com/jdanielmourao \apaypal.me/jdanielmourao";
-  --version-empty-page: "Sanctum for Obsidian v0.15.6\a Designed by @jdanielmourao 2021-2022 \a Font: IBM Plex Sans & Mono";
+  --version-empty-page: "Sanctum for Obsidian v0.15.7\a Designed by @jdanielmourao 2021-2022 \a Font: IBM Plex Sans & Mono";
   --font-sans: "IBM Plex Sans *", sans-serif;
   --font-serif: "IBM Plex Serif", serif;
   --mermaid-font: var(--font-sans);
