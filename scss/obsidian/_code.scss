@@ -47,7 +47,7 @@ code[class*=language-],
 pre[class*=language-],
 code[class*=language-],
 pre[class*=language-] {
-	background-color: var(--color-primary-0);
+	background-color: rgb(var(--rgb-primary-0), 0.7);
 }
 
 .cm-s-obsidian span.cm-inline-code,
@@ -101,7 +101,7 @@ pre[class*=language-] {
 .markdown-source-view .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line,
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
 .cm-s-obsidian div.HyperMD-codeblock-end-bg {
-	background-color: var(--color-primary-0);
+	background-color: rgb(var(--rgb-primary-0), 0.7);
 }
 
 /* ────────────────────────────── Code Comments ───────────────────────────── */
