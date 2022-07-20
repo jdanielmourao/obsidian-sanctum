@@ -4,9 +4,6 @@ about: File a but report and help to improve Sanctum
 title: "[BUG]"
 labels: bug/issue
 assignees: jdanielmourao
-
----
-
 body:
   - type: textarea
 	id: bug-description
