@@ -1,6 +1,6 @@
 name: Bug report
 description: File a but report and help to improve Sanctum
-title: "[BUG]"
+title: "Bug:"
 labels: bug/issue
 assignees: jdanielmourao
 body:
