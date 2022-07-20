@@ -68,6 +68,12 @@ body.active-line-hl.theme-dark.accent-active-line .CodeMirror-activeline .CodeMi
 }
 /* ──────────────────────── Multi-Color Highlighting ──────────────────────── */
 
+:root {
+	--highlight-1: var(--color-yellow-3);
+	--highlight-2: var(--color-teal-4);
+	--highlight-3: var(--color-pink-4);
+}
+
 /* ───────────────── Yellow Highlight (Regular highlight 1) ───────────────── */
 .markdown-preview-view mark {
 	overflow: hidden;
@@ -81,7 +87,7 @@ body.active-line-hl.theme-dark.accent-active-line .CodeMirror-activeline .CodeMi
 .cm-s-obsidian span.cm-highlight {
 	font-weight: var(--font-regular);
 	background-color: transparent;
-	background: linear-gradient(120deg,var(--color-yellow-3),var(--color-yellow-3));
+	background: linear-gradient(120deg,var(--highlight-1),var(--highlight-1));
 	background-position: center 65%;
 	background-repeat: no-repeat;
 	background-size: 100% 1.2rem;
@@ -101,7 +107,7 @@ body.active-line-hl.theme-dark.accent-active-line .CodeMirror-activeline .CodeMi
 	font-family: var(--font-text);
 	font-style: normal;
 	background-color: transparent;
-	background: linear-gradient(120deg,var(--color-teal-4),var(--color-teal-4));
+	background: linear-gradient(120deg,var(--highlight-2),var(--highlight-2));
 	background-position: center 65%;
 	background-repeat: no-repeat;
 	background-size: 100% 1.2rem;
@@ -119,7 +125,7 @@ body.active-line-hl.theme-dark.accent-active-line .CodeMirror-activeline .CodeMi
 .cm-s-obsidian span.cm-strong.cm-highlight {
 	font-style: normal;
 	background-color: transparent;
-	background: linear-gradient(120deg,var(--color-pink-4),var(--color-pink-4));
+	background: linear-gradient(120deg,var(--highlight-3),var(--highlight-3));
 	background-position: center 65%;
 	background-repeat: no-repeat;
 	background-size: 100% 1.2rem;

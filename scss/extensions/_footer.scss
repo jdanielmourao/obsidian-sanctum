@@ -271,6 +271,111 @@ settings:
 					-
 						label: Yellow
 						value: rgba(214 159 40 / .3)
+	-	
+			id: highlight-colors
+			title: Highlight Colors
+			type: heading
+			level: 3
+			collapsed: true
+	-	
+				id: highlight-1
+				title: Highlight 1
+				type: variable-select
+				default: rgb(236, 193, 81)
+				options:
+					-
+						label: Green
+						value: rgb(171, 173, 85)
+					-
+						label: Viridian
+						value: rgb(105, 184, 139)
+					-
+						label: Teal
+						value: rgb(104, 181, 177)
+					-
+						label: Blue
+						value: rgb(136, 173, 194)
+					-
+						label: Lavender
+						value: rgb(165, 165, 206)
+					-
+						label: Pink
+						value: rgb(240, 138, 156)
+					-
+						label: Red
+						value: rgb(252, 134, 122)
+					-
+						label: Orange
+						value: rgb(241, 145, 52)
+					-
+						label: Yellow
+						value: rgb(236, 193, 81)
+	-	
+				id: highlight-2
+				title: Highlight 2 (italic + highlight)
+				type: variable-select
+				default: rgb(104, 181, 177)
+				options:
+					-
+						label: Green
+						value: rgb(171, 173, 85)
+					-
+						label: Viridian
+						value: rgb(105, 184, 139)
+					-
+						label: Teal
+						value: rgb(104, 181, 177)
+					-
+						label: Blue
+						value: rgb(136, 173, 194)
+					-
+						label: Lavender
+						value: rgb(165, 165, 206)
+					-
+						label: Pink
+						value: rgb(240, 138, 156)
+					-
+						label: Red
+						value: rgb(252, 134, 122)
+					-
+						label: Orange
+						value: rgb(241, 145, 52)
+					-
+						label: Yellow
+						value: rgb(236, 193, 81)
+	-	
+				id: highlight-3
+				title: Highlight 3 (bold + highlight)
+				type: variable-select
+				default: rgb(240, 138, 156)
+				options:
+					-
+						label: Green
+						value: rgb(171, 173, 85)
+					-
+						label: Viridian
+						value: rgb(105, 184, 139)
+					-
+						label: Teal
+						value: rgb(104, 181, 177)
+					-
+						label: Blue
+						value: rgb(136, 173, 194)
+					-
+						label: Lavender
+						value: rgb(165, 165, 206)
+					-
+						label: Pink
+						value: rgb(240, 138, 156)
+					-
+						label: Red
+						value: rgb(252, 134, 122)
+					-
+						label: Orange
+						value: rgb(241, 145, 52)
+					-
+						label: Yellow
+						value: rgb(236, 193, 81)
 	-
 		id: graph-colors
 		title: Graph Colors
