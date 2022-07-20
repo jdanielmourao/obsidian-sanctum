@@ -1,4 +1,3 @@
----
 name: Bug report
 about: File a but report and help to improve Sanctum
 title: "[BUG]"
