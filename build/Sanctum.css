@@ -4132,7 +4132,7 @@ code[class*=language-],
 pre[class*=language-],
 code[class*=language-],
 pre[class*=language-] {
-  background-color: var(--color-primary-0);
+  background-color: rgb(var(--rgb-primary-0), 0.7);
 }
 .cm-s-obsidian span.cm-inline-code,
 .markdown-preview-view span.cm-inline-code {
@@ -4143,7 +4143,7 @@ pre[class*=language-] {
   padding: 8px 40px 8px 16px;
   white-space: wrap;
   width: 100%;
-  border: 1px solid var(--color-primary-2);
+  border: 1px solid var(--color-border-2);
 }
 .markdown-preview-view code {
   color: var(--color-pink-5);
@@ -4152,7 +4152,7 @@ pre[class*=language-] {
   font-family: var(--font-mono);
 }
 .markdown-preview-view p code {
-  border: 1px solid var(--color-primary-2);
+  border: 1px solid var(--color-border-2);
 }
 .cm-s-obsidian .cm-math,
 .cm-s-obsidian .HyperMD-codeblock,
@@ -4165,7 +4165,7 @@ pre[class*=language-] {
 .markdown-source-view .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line,
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg,
 .cm-s-obsidian div.HyperMD-codeblock-end-bg {
-  background-color: var(--color-primary-0);
+  background-color: rgb(var(--rgb-primary-0), 0.7);
 }
 .cm-s-obsidian .HyperMD-codeblock span.cm-comment,
 .markdown-preview-view code .token.comment {
