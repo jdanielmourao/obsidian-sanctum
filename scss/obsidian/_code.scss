@@ -63,7 +63,7 @@ pre[class*=language-] {
 			 16px;
 	white-space: wrap;
 	width: 100%;
-	border: 1px solid var(--color-primary-2); //color block borders
+	border: 1px solid var(--color-border-2); //color block borders
 }
 
 // preview
@@ -75,7 +75,7 @@ pre[class*=language-] {
 }
 
 .markdown-preview-view p code { // makes it only applies to inline code (the p is the filter)
-	border: 1px solid var(--color-primary-2); //inline code borders
+	border: 1px solid var(--color-border-2); //inline code borders
 }
 
 // edit
