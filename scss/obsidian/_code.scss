@@ -16,7 +16,7 @@
 .theme-light code[class*=language-],
 .theme-light pre[class*=language-] {
 	font-variant-ligatures: no-common-ligatures;
-	font-family: var(--font-mono);
+	font-family: var(--font-monospace);
 	font-weight: var(--font-medium);
 	font-size: var(--font-scale-00);
 	line-height: var(--leading-2);
@@ -27,7 +27,7 @@
 //latex
 .cm-s-obsidian .cm-math {
 	font-variant-ligatures: no-common-ligatures;
-	font-family: var(--font-mono);
+	font-family: var(--font-monospace);
 	font-weight: var(--font-medium);
 	letter-spacing: var(--tracking-2);
 }
@@ -71,7 +71,7 @@ pre[class*=language-] {
 	color: var(--color-pink-5);
 	padding: 0px 4px;
 	line-height: 1.5; /* this fixes the padding not doing its job thing*/
-	font-family: var(--font-mono);
+	font-family: var(--font-monospace);
 }
 
 .markdown-preview-view p code { // makes it only applies to inline code (the p is the filter)
