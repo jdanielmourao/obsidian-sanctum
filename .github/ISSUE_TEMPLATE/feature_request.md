@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea for Sanctum
 title: "[IDEA/REQUEST]"
-labels: feature request
+labels: bug/issue, feature request
 assignees: jdanielmourao
 
 ---
