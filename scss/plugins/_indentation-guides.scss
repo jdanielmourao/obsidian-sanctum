@@ -25,3 +25,11 @@
 	margin-top: -1px;
 }
 
+/*Indentation Guides in Callouts*/
+.markdown-rendered.show-indentation-guide.cm-callout li > ul::before, .markdown-rendered.show-indentation-guide li > ol::before {
+	left: -.75rem;
+}
+
+.markdown-source-view.mod-cm6 .cm-quote .cm-indent {
+	padding-left: 3px;
+}
