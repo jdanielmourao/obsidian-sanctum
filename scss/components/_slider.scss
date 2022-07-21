@@ -61,6 +61,12 @@ input[type="range" i] {
 		padding-left: 8px;
 		padding-top: 0.5px;
 	}
+
+	&:focus:not(:active)::-webkit-slider-thumb {
+		outline: 2px solid var(--color-accent);
+		outline-offset: 4px;
+		transition-duration: var(--duration-fast-1);
+	}
 }
 
 .graph-controls input[type="range"] {

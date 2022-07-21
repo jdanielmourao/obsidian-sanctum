@@ -10,6 +10,10 @@
 	background-color: var(--color-primary-3);
 	box-shadow: inset 0 1px 1px rgba(0 0 0 / .15);
 	margin-right: 4px;
+
+	&:focus-within {
+		box-shadow: none; //removed native formatting
+	}
 }
 
 .checkbox-container:after { //circle
@@ -42,6 +46,11 @@
 	}
 }
 
+.checkbox-container:not(.is-enabled):focus-within::after {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 4px;
+}
+
 .checkbox-container.is-enabled:after {
 	transform: translateX(1.875em); // distance travelled
 	width: 20px;
@@ -51,4 +60,9 @@
 
 .checkbox-container.is-enabled {
 	background-color: var(--color-accent);
+
+	&:focus-within {
+		outline: 2px solid var(--color-accent);
+		outline-offset: 4px;
+	}
 }

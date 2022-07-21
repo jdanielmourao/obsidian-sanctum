@@ -4,7 +4,7 @@ select.dropdown {
 	font-size: var(--font-scale-00);
 	color: var(--text-normal);
 	line-height: var(--leading-2);
-	padding: 4px 24px 4px 16px;
+	padding: 4px 24px 3px 16px;
 	max-width: 100%;
 	box-sizing: border-box;
 	margin: 0px;
@@ -25,10 +25,9 @@ select.dropdown {
 	&:hover {
 		background-color: var(--color-primary-3);
 	}
-	&:focus {
+	&:focus:not(:active) {
+		outline: 1.5px solid var(--color-accent);
 		border-color: transparent;
-		outline: 1px solid var(--color-blue-5);
-		background-color: var(--color-primary-2);
 	}
 }
 
