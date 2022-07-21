@@ -2757,7 +2757,7 @@ settings:
 			id: marker-even
 			title: Even numbered list marker content
 			type: variable-text
-			default: "'▪  '"
+			default: "'▪\2009\2009'"
 	-
 			id: elements-title
 			title: Elements
