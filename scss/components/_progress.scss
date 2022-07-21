@@ -1,5 +1,7 @@
 .markdown-source-view.is-live-preview progress,
 .markdown-preview-view progress {
+
+	&[value] {
 	-webkit-writing-mode: horizontal-tb;
 	writing-mode: horizontal-tb;
 	appearance: none;
@@ -8,12 +10,14 @@
 	height: .25em;
 	width: 15em;
 	border-radius: 0;
-	vertical-align: -0.2rem;
+	vertical-align: .75rem;
 
-	&:after {
-		content: "";
-		display: block;
-		font-size: var(--font-scale-000);
+		&:after {
+			content: "";
+			display: block;
+			font-size: var(--font-scale-000);
+			line-height: var(--leading-3);
+		}
 	}
 
 	&[value]::-webkit-progress-bar { //background
@@ -54,6 +58,36 @@
 		&:after {
 			content: attr(value) "/" attr(max);
 			float: right;
+		}
+	}
+	&:not([value]) {
+		appearance: none;
+		box-sizing: border-box;
+		display: inline-block;
+		height: .25em;
+		width: 15em;
+		border-radius: 0;
+		transform: translateY(-150%);
+
+		&:indeterminate {
+			animation: clr-progress-looper 1s infinite linear;
+			background: var(--color-primary-2);
+
+			&::-webkit-progress-bar {
+				background-color: var(--color-accent);
+				width: 24px;
+			}
+		}
+		@keyframes clr-progress-looper {
+			0% {
+				padding-left: 0;
+			}
+			50% {
+				padding-left: 7.5em;
+			}
+			100% {
+				padding-left: (calc(15em - 24px));
+			}
 		}
 	}
 }
