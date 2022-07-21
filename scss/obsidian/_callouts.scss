@@ -6,7 +6,7 @@ div.callout:not(.admonition).drop-shadow { //needed to overwrite app's css
 .markdown-preview-view div.callout,
 .markdown-source-view.mod-cm6.is-live-preview div.callout {
 	background-color: rgb(var(--rgb-primary-0), .7);
-	border-left: 2px solid rgb(var(--callout-color), 0.5);
+	border-left: 2px solid rgb(var(--callout-color), 1);
 	border-radius: 0 4px 4px 0px;
 
 	& .callout-title {
@@ -14,7 +14,7 @@ div.callout:not(.admonition).drop-shadow { //needed to overwrite app's css
 		gap: 8px;
 		/* background-color: rgb(var(--callout-color),0.1); */
 		background-color: transparent;
-		border-bottom: 1px solid rgb(var(--callout-color), .5);
+		border-bottom: 1px solid rgb(var(--callout-color), 1);
 
 		&-inner {
 			font-weight: var(--font-bold);
