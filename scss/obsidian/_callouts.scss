@@ -1,4 +1,5 @@
-div.callout:not(.admonition).drop-shadow {
+div.callout:not(.admonition),
+div.callout:not(.admonition).drop-shadow { //needed to overwrite app's css
 	box-shadow: var(--elevation-1);
 }
 
@@ -18,6 +19,11 @@ div.callout:not(.admonition).drop-shadow {
 		&-inner {
 			font-weight: var(--font-bold);
 		}
+	}
+
+	& .callout-content {
+		border-right: none;
+		border-bottom: none;
 	}
 }
 
