@@ -2,7 +2,7 @@ ul li::marker,
 ol li::marker {
 	font-weight: var(--font-regular);
 	font-size: var(--font-scale-0);
-	font-family: var(--font-text-theme); // not font-preview, because otherwise it will change
+	font-family: var(--font-monospace-theme); // forces ios to render text glyph instead of emoji
 	font-variant-numeric: tabular-nums;
 }
 
@@ -117,7 +117,7 @@ li {
 }
 
 .markdown-source-view.mod-cm6 .list-bullet::after {
-	font-family: var(--font-text-theme);
+	font-family: var(--font-monospace-theme);
 }
 .list-bullet::after {
 	color:var(--text-normal);
