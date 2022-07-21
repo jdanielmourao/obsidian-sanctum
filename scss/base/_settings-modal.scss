@@ -240,6 +240,11 @@ body:not(.is-mobile) .theme-list { /* Desktop */
 			flex-grow: 1;
 			border-radius: 16px;
 		}
+		& .community-theme-remove-button {
+			&:hover {
+				color: var(--color-red-5);
+			}
+		}
 		&.is-selected {
 			grid-column: 1/4;
 			grid-row: 1;
