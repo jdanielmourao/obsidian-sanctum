@@ -23,14 +23,14 @@ li::marker {
 	}
 	
 	& .list-collapse-indicator { // generic ul and task list
-		margin-left: -2.5rem;
+		margin-left: -2.65rem;
 		color: var(--text-faint);
 	}
 	& ul .list-collapse-indicator {
 		padding-left: 4px;
 	}
 	& ol li .list-collapse-indicator { // ol under 10
-		margin-left: -3rem;
+		margin-left: -2.875rem;
 	}
 	& ol li:nth-child(n+10) ol ol li:nth-child(n+10) .list-collapse-indicator, // ol over 10
 	& ol li:nth-child(n+10) .list-collapse-indicator {
