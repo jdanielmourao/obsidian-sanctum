@@ -8,7 +8,12 @@ Panel Collapsing Buttons
 Status Bar
 */
 
-
+.has-focus {
+	&:focus {
+		outline: var(--color-accent) solid 1px;
+		outline-offset: 0px;
+	}
+}
 /* ──────────────────────────────── Title Bar ─────────────────────────────── */
 body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 	top: 0;
@@ -117,7 +122,7 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 		background-color: transparent;
 		transition: background-color 0s; // reduces hover animation time
 		border-bottom: 0px solid transparent;
-		border-radius: 4px;
+		border-radius: 0px;
 	}
 	// color of icons besides active
 	& .workspace-tab-header:not(.workspace-tab-header.is-active) {
@@ -144,7 +149,7 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 // Tab Header Active
 .workspace-tab-header.is-active {
 	color: var(--text-normal);
-	border-radius: 4px;
+	border-radius: 0px;
 }
 
 /* ─────────────────────────────── Nav Header ─────────────────────────────── */
@@ -177,7 +182,7 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 		margin: 0px;
 		margin-top: 4px;
 		height: 24px;
-		border-radius: 4px;
+		border-radius: 0px;
 
 		&:hover {
 			color: var(--color-accent);
@@ -554,7 +559,7 @@ body:not(.no-sanctum-icons)
 }
 
 .workspace-leaf-content[data-type=outline] .tree-item-inner {
-	padding: 2px 0;
+	padding: 2px 0 2px 4px;
 }
 
 .compact-outline .workspace-leaf-content[data-type=outline] .tree-item-inner:not(:hover):not(:focus) {
@@ -567,13 +572,14 @@ body:not(.no-sanctum-icons)
 
 // File Explorer padding
 .nav-files-container {
-	padding: 16px 2px 0px 16px;
+	padding: 16px 4px 0px 16px;
 	background-color: var(--background-primary);
+	display: flex;
+	flex-direction: column;
 }
 
 .nav-folder-title-content,
 .nav-file-title-content {
-	line-height: var(--leading-2);
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -581,24 +587,35 @@ body:not(.no-sanctum-icons)
 	padding: 2px 4px 2px 4px;
 	width: 100%;
 	border:none;
+	line-height: 20px;
 }
 
 .nav-folder,
 .nav-file {
 	padding: 0px 0px 0px 0px;
-	margin-left: 0px;
-	margin-right: 0px;
+	margin: 2px 0 2px 0;
+	border: none;
 }
 
 .nav-file-title,
 .nav-folder-title,
 .nav-vault-title,
 .nav-folder-title.has-folder-note {
-	height: 25px; // can't be 24px because when using IBM Plex gs, etc get cropped
-	padding: 0px 8px 0px 0px;
+	height: 24px;
+	padding: 0px 2px 0px 0px;
 	width: unset;
 	font-size: var(--font-scale-00);
 	color: var(--text-muted);
+	border: none;
+}
+
+.nav-folder-title {
+
+	padding-right: 16px;
+	& .collapse-icon,
+	& .nav-folder-title-content {
+		border-radius: 0;
+	}
 }
 
 .nav-file-title > .nav-file-tag {
@@ -622,21 +639,27 @@ body:not(.no-sanctum-icons)
 	background-color: var(--color-primary-2);
 }
 
-.nav-file div.nav-file-title:hover,
+.nav-file div.nav-file-title:not(.is-active):hover,
 .nav-folder div.nav-folder-title:hover {
 	background-color: var(--color-hover);
 }
 
 .nav-file-title.is-active .nav-file-title-content {
-	color: var(--background-primary);
-	line-height: 1.5; //fixes vertical centering
+	color: var(--text-normal);
 
 	.is-mobile & {
 		line-height: 1.5;
 	}
-
 	&:focus {
 		background-color: transparent;
+	}
+}
+
+.nav-file .nav-file-title.is-active { //active file background
+	background-color: var(--color-border-1);
+
+	&:hover {
+		background-color: var(--color-border-2);
 	}
 }
 
@@ -648,7 +671,18 @@ body:not(.no-sanctum-icons)
 
 .workspace-leaf.mod-active .nav-file.has-focus,
 .workspace-leaf.mod-active .nav-folder.has-focus { /*gives space for focus border*/
-	margin-right: 2px;
+	border: none;
+}
+
+.workspace-leaf.mod-active .nav-file.has-focus,
+.workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title {
+	outline: var(--color-accent) solid 1px;
+	outline-offset: 0px;
+	border: none;
+
+	&:focus {
+		border: none;
+	}
 }
 
 body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-child:hover::before {
@@ -689,11 +723,9 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 
 // File selected
 .nav-file .nav-file-title.is-active {
-	background-color: var(--color-primary-8);
-	color: var(--background-primary);
+	color: var(--text-normal);
 	border:none;
-	font-weight: 400;
-	border-radius: 4px;
+	border-radius: 2px;
 
 	body.is-mobile & {
 		background-color: var(--color-primary-8);
@@ -704,7 +736,6 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 	}
 
 	& .nav-file-title-content::before {
-		color: var(--color-primary-0);
 
 		body.is-mobile & {
 			color: var(--background-primary);
@@ -717,7 +748,7 @@ body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-c
 .drag-ghost,
 .workspace-drop-overlay:before {
 	border:none;
-	border-radius: 4px;
+	border-radius: 2px;
 	background-color: var(--color-hover);
 	color: var(--text-normal);
 }
