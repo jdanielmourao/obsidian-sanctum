@@ -9,7 +9,6 @@ input[type="range" i] {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	flex: 1 1 auto;
 
 	&::-webkit-slider-container {
 		height: 100%;
@@ -19,7 +18,7 @@ input[type="range" i] {
 	}
 	&::-webkit-slider-runnable-track {
 		height: 2px;
-		width: 100%;
+		width: 256px;
 		background-color: var(--color-primary-3);
 		border-radius: 8px;
 	}
