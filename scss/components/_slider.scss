@@ -7,6 +7,13 @@ input[type="range" i] {
 	width: 256px; /*128px*/
 	border-radius: 0;
 	
+	&:focus:not(:active) {
+		outline: 2px solid var(--color-accent);
+		outline-offset: 4px;
+		transition-duration: var(--duration-fast-1);
+		border-radius: 2px;
+	}
+
 	&::-webkit-slider-runnable-track {
 		border-bottom: 1px solid var(--color-primary-1);
 		height: 4px;
@@ -35,13 +42,13 @@ input[type="range" i] {
 				0 0 0 1px rgba(0, 0, 0, 0.1),
 				0 2px 3px 0px rgba(8 8 8 / .1),
 				0 1px 0 0 rgba(254 254 254 / 1) inset;
-
-		&:hover {
-			width: 20px;
-			height: 20px;
-			top: -8px;
-			transition: var(--duration-fast-1);
-		}
+	}
+	
+	&:hover::-webkit-slider-thumb {
+		width: 20px;
+		height: 20px;
+		top: -8px;
+		transition: var(--duration-fast-1);
 	}
 
 	&:before {
@@ -60,12 +67,6 @@ input[type="range" i] {
 		font-size: var(--font-scale-000);
 		padding-left: 8px;
 		padding-top: 0.5px;
-	}
-
-	&:focus:not(:active)::-webkit-slider-thumb {
-		outline: 2px solid var(--color-accent);
-		outline-offset: 4px;
-		transition-duration: var(--duration-fast-1);
 	}
 }
 
