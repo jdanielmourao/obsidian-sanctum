@@ -13,6 +13,7 @@
 
 	&:focus-within {
 		box-shadow: none; //removed native formatting
+		outline: 2px solid var(--color-accent);
 	}
 }
 
@@ -27,9 +28,7 @@
 	margin: 0;
 	inset: 2px 0 0 -0.5px;
 	border-radius: 50%;
-	transition: transform var(--duration-fast-1) var(--motion-standard-expressive),
-				left var(--duration-fast-1) var(--motion-standard-expressive),
-				-webkit-transform var(--duration-fast-1) var(--motion-standard-expressive);
+	transition: transform var(--duration-fast-1) var(--motion-standard-expressive);
 	background: linear-gradient(0deg, 
 				var(--color-grey-1) 0%, 
 				var(--color-grey-2) 100%
@@ -46,16 +45,10 @@
 	}
 }
 
-.checkbox-container:not(.is-enabled):focus-within::after {
-	outline: 2px solid var(--color-accent);
-	outline-offset: 4px;
-}
-
 .checkbox-container.is-enabled:after {
 	transform: translateX(1.875em); // distance travelled
 	width: 20px;
 	transition: transform var(--duration-fast-1) var(--motion-standard-expressive)
-
 }
 
 .checkbox-container.is-enabled {
@@ -63,6 +56,6 @@
 
 	&:focus-within {
 		outline: 2px solid var(--color-accent);
-		outline-offset: 4px;
+		outline-offset: 1px;
 	}
 }
