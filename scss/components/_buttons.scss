@@ -1,5 +1,5 @@
 @mixin button-l {
-	border-radius: 4px;
+	border-radius: 2px;
 	padding: 8px 40px 8px 16px; //take 1px from every side for the border
 	font-size: var(--font-scale-00);
 	font-weight: var(--font-regular);
@@ -28,7 +28,7 @@ button.mod-warning {
 	background-color: var(--color-red-5);
 	color: var(--color-white);
 	border: 1px solid var(--color-red);
-	box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.2) inset,
+	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.2) inset,
 				0 1px 3px 1px rgba(0 0 0 / .1);
 	@include button-l;
 
@@ -45,12 +45,12 @@ button.mod-warning {
 		border-color: var(--color-red-6);
 		&:active {
 			border-color: var(--color-primary-0);
-			box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.5) inset,
+			box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.5) inset,
 						0px 1px 3px 1px rgba(8 8 8 / 0.5) inset;
 		}
 		&:focus:not(:active) {
 			outline: 2px solid var(--color-red-6);
-			outline-offset: 4px;
+			outline-offset: 2px;
 		}
 	}
 
@@ -79,10 +79,10 @@ button.mod-cta {
 		border-color: var(--color-primary-0);
 	}
 	.theme-dark & {
-		font-weight: var(--font-semi-bold);
+		color: var(--color-white);
 		background-color: rgba(var(--color-accent-d) / 1);
 		border: 1px solid var(--color-primary-0);
-		box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.3) inset,
+		box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.3) inset,
 					0 1px 3px 1px rgba(0 0 0 / .1);
 
 		&:hover {
@@ -91,12 +91,12 @@ button.mod-cta {
 		&:active {
 			background-color: rgba(var(--color-accent-d) / 1);
 			box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.2) inset,
-			0px 1px 3px 1px rgba(8 8 8 / 0.3) inset;
+						0px 1px 3px 1px rgba(8 8 8 / 0.3) inset;
 		}
 	}
 	&:focus:not(:active) {
 		outline: 2px solid var(--color-accent);
-		outline-offset: 4px;
+		outline-offset: 1px;
 	}
 }
 
@@ -121,7 +121,7 @@ button.mod-cta {
 
 	&:focus:not(:active) {
 		outline: 1.5px solid var(--color-accent);
-		outline-offset: 4px;
+		outline-offset: 1px;
 	}
 
 	.theme-dark & {
@@ -150,7 +150,7 @@ button.mod-cta {
 	@include button-l;
 	line-height: var(--leading-2);
 	border: 1px solid var(--color-primary-3);
-	box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.1) inset,
+	box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.1) inset,
 				0 2px 5px 1px rgba(0 0 0 /.1);
 	background-color: var(--color-primary-1);
 	margin-left: 16px;
@@ -163,11 +163,11 @@ button.mod-cta {
 	}
 	&:focus:not(:active) {
 		outline: 2px solid var(--color-accent);
-		outline-offset: 4px;
+		outline-offset: 1px;
 	}
 	.theme-dark & {
 		background-color: var(--color-primary-2);
-		box-shadow: 0px -1px 0px 0px rgba(8 8 8 / 0.5) inset,
+		box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.4) inset,
 					0 1px 3px 1px rgba(0 0 0 / .1);
 		border: 1px solid var(--color-primary-2);
 
