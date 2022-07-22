@@ -6,67 +6,78 @@ input[type="range" i] {
 	cursor: default;
 	width: 256px; /*128px*/
 	border-radius: 0;
-	
-	&:focus:not(:active) {
-		outline: 2px solid var(--color-accent);
-		outline-offset: 4px;
-		transition-duration: var(--duration-fast-1);
-		border-radius: 2px;
-	}
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex: 1 1 auto;
 
+	&::-webkit-slider-container {
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
 	&::-webkit-slider-runnable-track {
-		border-bottom: 1px solid var(--color-primary-1);
-		height: 4px;
-		width: 128px;
+		height: 2px;
+		width: 100%;
 		background-color: var(--color-primary-3);
-		box-shadow: inset 0 1px 1px rgba(0 0 0 / .15);
 		border-radius: 8px;
-
-		.theme-dark & {
-			box-shadow: 0px 1px 1px 0px rgba(8 8 8 / 0.3) inset,
-			0px 1px 1px 0px rgba(8 8 8 / 0.3);
-		}
 	}
+
 	&::-webkit-slider-thumb {
+		position: relative;
 		-webkit-appearance: none;
-		width: 16px;
-		height: 16px;
+		top: -5px;
+		height: 14px;
+		width: 14px;
 		border-radius: 50%;
-		top: -6px;
 		cursor: grabbing;
 		transition: var(--duration-slow-1) var(--motion-standard-expressive);
-		background: linear-gradient(0deg, 
-		var(--color-grey-1) 0%, 
-		var(--color-grey-2) 100%);
-		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
-				0 0 0 1px rgba(0, 0, 0, 0.1),
-				0 2px 3px 0px rgba(8 8 8 / .1),
-				0 1px 0 0 rgba(254 254 254 / 1) inset;
-	}
+		background: var(--text-normal);
 	
-	&:hover::-webkit-slider-thumb {
-		width: 20px;
-		height: 20px;
-		top: -8px;
-		transition: var(--duration-fast-1);
+		&:hover {
+			transition: var(--duration-fast-1);
+			transform: scale(1.4286); //makes it 20px
+		}
+		&:active {
+			background: var(--color-accent);
+			box-shadow: none;
+			transition: background	0ms;
+
+		}
+	}
+	&:focus::-webkit-slider-thumb:not(:active) {
+		background-color: var(--color-accent);
+		box-shadow: inset 0 0 0 1px var(--color-accent),inset 0 0 0 3px var(--background-primary);
+		transition: background-color 0ms;
+	}
+
+	&:focus::-webkit-slider-thumb:not(:active):not(:hover) {
+		background-color: var(--color-accent);
+		box-shadow: none;
+		outline: 2px solid var(--color-accent);
+		outline-offset: 2px;
+		transition: background-color 0ms;
+	}
+
+	&:focus:not(:active) {
+		outline: none;
 	}
 
 	&:before {
 		pointer-events: none;
-		content: "min";
+		content: attr(min);
 		display: block;
 		font-size: var(--font-scale-000);
 		padding-right: 8px;
-		padding-top: 0.5px;
 	}
 
 	&:after {
 		pointer-events: none;
-		content: "max";
+		content: attr(max);
 		display: block;
 		font-size: var(--font-scale-000);
 		padding-left: 8px;
-		padding-top: 0.5px;
 	}
 }
 
