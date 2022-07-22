@@ -17,7 +17,7 @@
 	}
 }
 
-.checkbox-container:after { //circle
+.checkbox-container::after { //circle
 	pointer-events: none;
 	content: "";
 	display: block;
@@ -45,7 +45,7 @@
 	}
 }
 
-.checkbox-container.is-enabled:after {
+.checkbox-container.is-enabled::after {
 	transform: translateX(1.875em); // distance travelled
 	width: 20px;
 	transition: transform var(--duration-fast-1) var(--motion-standard-expressive)
