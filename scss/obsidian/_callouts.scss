@@ -297,3 +297,13 @@ div.callout[data-callout='savings'] {
 	}
 }
 
+div.callout[data-callout='error'] {
+	--callout-color: 241, 81, 72;;
+	
+	& .callout-icon {
+		background-color: currentColor;
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eerror%3C/title%3E%3Cg id='Icon-2' data-name='Icon'%3E%3Cpath d='M2,16H2A14,14,0,1,0,16,2,14,14,0,0,0,2,16Zm23.15,7.75L8.25,6.85a12,12,0,0,1,16.9,16.9ZM8.24,25.16A12,12,0,0,1,6.84,8.27L23.73,25.16a12,12,0,0,1-15.49,0Z' transform='translate(0)'/%3E%3C/g%3E%3Cg id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;'%3E%3Crect class='cls-1' width='32' height='32'/%3E%3C/g%3E%3C/svg%3E");
+	}
+}
+
+
