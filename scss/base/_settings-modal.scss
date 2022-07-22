@@ -108,6 +108,9 @@
 			 0px;
 	border-top: 1px solid var(--color-border-1);
 
+	&:first-child {
+		padding-top: 4px;
+	}
 	& .setting-item-name {
 		font-size: var(--font-scale-0);
 	}

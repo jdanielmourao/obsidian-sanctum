@@ -183,3 +183,7 @@ body:not(.is-mobile) .document-search, body:not(.is-mobile) .document-replace {
 .workspace-leaf-content .search-result-container.mod-global-search {
 	padding: 16px;
 }
+
+.plugin-list-plugins .setting-item-control .search-input-container {
+	margin-right: 2px;
+}

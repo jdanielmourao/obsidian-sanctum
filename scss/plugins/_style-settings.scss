@@ -2,22 +2,29 @@
 	padding: 16px;
 }
 
-.style-settings-heading[data-level="0"] + .style-settings-container,
-.style-settings-heading[data-level="1"] + .style-settings-container,
-.style-settings-heading[data-level="2"] + .style-settings-container,
-.style-settings-heading[data-level="3"] + .style-settings-container,
-.style-settings-heading[data-level="4"] + .style-settings-container,
-.style-settings-heading[data-level="5"] + .style-settings-container,
-.style-settings-heading[data-level="6"] + .style-settings-container,
-.style-settings-heading[data-level="7"] + .style-settings-container,
-.style-settings-heading[data-level="8"] + .style-settings-container {
-	padding-left: 24px;
+.setting-item.style-settings-heading[data-level="0"] + .style-settings-container,
+.setting-item.style-settings-heading[data-level="1"] + .style-settings-container,
+.setting-item.style-settings-heading[data-level="2"] + .style-settings-container,
+.setting-item.style-settings-heading[data-level="3"] + .style-settings-container,
+.setting-item.style-settings-heading[data-level="4"] + .style-settings-container,
+.setting-item.style-settings-heading[data-level="5"] + .style-settings-container,
+.setting-item.style-settings-heading[data-level="6"] + .style-settings-container,
+.setting-item.style-settings-heading[data-level="7"] + .style-settings-container,
+.setting-item.style-settings-heading[data-level="8"] + .style-settings-container {
+	padding-left: 32px;
 }
 
+.setting-item.style-settings-heading {
+	padding: 12px;
+}
 
+.setting-item.style-settings-heading:first-child {
+	margin-top: 16px;
+}
 
-.style-settings-heading[data-level="0"] {
-	margin-bottom: 26px;
+.setting-item.style-settings-heading[data-level="0"] {
+	padding-top: 4px;
+	margin-bottom: 8px;
 	border-top: none;
 	border-bottom-color: var(--text-faint);
 }
