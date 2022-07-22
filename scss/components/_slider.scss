@@ -53,7 +53,7 @@ input[type="range" i] {
 	}
 
 	&:focus::-webkit-slider-thumb:not(:active):not(:hover) {
-		background-color: var(--color-accent);
+		background-color: var(--text-normal);
 		box-shadow: none;
 		outline: 2px solid var(--color-accent);
 		outline-offset: 2px;
