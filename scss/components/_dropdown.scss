@@ -29,6 +29,9 @@ select.dropdown {
 		outline: 1.5px solid var(--color-accent);
 		border-color: transparent;
 	}
+	&:focus-visible {
+		outline: none;
+	}
 }
 
 select.dropdown option {
