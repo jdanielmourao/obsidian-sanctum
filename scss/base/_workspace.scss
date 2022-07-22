@@ -676,13 +676,17 @@ body:not(.no-sanctum-icons)
 
 .workspace-leaf.mod-active .nav-file.has-focus,
 .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title {
-	outline: var(--color-accent) solid 1px;
+	outline: 1px solid var(--color-accent);
 	outline-offset: 0px;
 	border: none;
 
 	&:focus {
 		border: none;
 	}
+}
+
+.workspace-leaf.mod-active .nav-file.has-focus:active {
+	outline: none;
 }
 
 body:not(.no-sanctum-icons) .nav-folder-children .nav-file-title-content:first-child:hover::before {
