@@ -68,6 +68,11 @@
 	background-color: rgba(var(--rgb-primary-0), .3);
 	backdrop-filter: blur(5px); // blurs the background
 
+	.theme-light & {
+		background-color: var(--color-primary-3);
+		opacity: .5;
+	}
+
 	.no-blur & {  // option to remove blur from background of settings
 		background-color: rgba(var(--rgb-primary-0), .6);
 		backdrop-filter: blur(0px);
