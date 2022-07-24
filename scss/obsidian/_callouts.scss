@@ -5,6 +5,7 @@ div.callout:not(.admonition).drop-shadow { //needed to overwrite app's css
 
 .markdown-preview-view div.callout,
 .markdown-source-view.mod-cm6.is-live-preview div.callout {
+	position: relative;
 	background-color: rgb(var(--rgb-primary-0), .7);
 	border-left: 2px solid rgb(var(--callout-color), 1);
 	border-radius: 0 4px 4px 0px;
@@ -14,7 +15,7 @@ div.callout:not(.admonition).drop-shadow { //needed to overwrite app's css
 		gap: 8px;
 		/* background-color: rgb(var(--callout-color),0.1); */
 		background-color: transparent;
-		border-bottom: 1px solid rgb(var(--callout-color), 1);
+		border-bottom: 0px solid rgb(var(--callout-color), 1);
 
 		&-inner {
 			font-weight: var(--font-bold);
@@ -22,11 +23,18 @@ div.callout:not(.admonition).drop-shadow { //needed to overwrite app's css
 	}
 
 	& .callout-content {
+		padding: 4px 16px;
 		border-right: none;
 		border-bottom: none;
+
+		& p {
+			margin-block-start: 4px;
+			margin-block-end: 12px;
+		}
 	}
 }
 
+body:not(.no-sanctum-icons) .callout.is-collapsible .callout-fold svg.ChevronDown,
 body:not(.no-sanctum-icons) .callout.is-collapsible .callout-fold svg.chevron-down {
 	& > path {
 		display: none;
@@ -35,7 +43,7 @@ body:not(.no-sanctum-icons) .callout.is-collapsible .callout-fold svg.chevron-do
 	background-color: currentColor;
 		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='m16 10 10 10-1.4 1.4-8.6-8.6-8.6 8.6L6 20z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
 }
-
+body:not(.no-sanctum-icons) .callout.is-collapsed .callout-fold svg.ChevronDown,
 body:not(.no-sanctum-icons) .callout.is-collapsed .callout-fold svg.chevron-down {
 	& > path {
 		display: none;
@@ -63,7 +71,7 @@ div.callout[data-callout='note'] {
 
 	& .callout-icon {
 	background-color: currentColor;
-	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Epin%3C/title%3E%3Cpath d='M28.59,13.31,30,11.9,20,2,18.69,3.42,19.87,4.6,8.38,14.32,6.66,12.61,5.25,14l5.66,5.68L2,28.58,3.41,30l8.91-8.91L18,26.75l1.39-1.42-1.71-1.71L27.4,12.13ZM16.26,22.2,9.8,15.74,21.29,6,26,10.71Z' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M28.828 3.172a4.094 4.094 0 0 0-5.656 0L4.05 22.292A6.954 6.954 0 0 0 2 27.242V30h2.756a6.952 6.952 0 0 0 4.95-2.05L28.828 8.829a3.999 3.999 0 0 0 0-5.657ZM10.91 18.26l2.829 2.829-2.122 2.121-2.828-2.828Zm-2.619 8.276A4.966 4.966 0 0 1 4.756 28H4v-.759a4.967 4.967 0 0 1 1.464-3.535l1.91-1.91 2.829 2.828ZM27.415 7.414l-12.261 12.26-2.829-2.828 12.262-12.26a2.047 2.047 0 0 1 2.828 0 2 2 0 0 1 0 2.828Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 	}
 }
 
@@ -277,7 +285,6 @@ div.callout[data-callout='notification'] {
 	}
 }
 
-
 div.callout[data-callout='event'] {
 	--callout-color: 132, 132, 188;
 
@@ -306,4 +313,62 @@ div.callout[data-callout='error'] {
 	}
 }
 
+div.callout[data-callout='code'] {
+	--callout-color: 132, 132, 188;
+	
+	& .callout-icon {
+		background-color: currentColor;
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='m31 16-7 7-1.41-1.41L28.17 16l-5.58-5.59L24 9l7 7zM1 16l7-7 1.41 1.41L3.83 16l5.58 5.59L8 23l-7-7zm11.419 9.484L17.639 6l1.932.518L14.35 26z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;' transform='rotate(-90 16 16)'/%3E%3C/svg%3E");
+	}
+	
+	& :is(pre, span.cm-inline-code) {
+		background-color: transparent;
+		border: none;
+		padding: 0;
+	}
+}
 
+.clr-title-callout div.callout[data-callout] {
+	& .callout-title {
+		background-color: rgba(var(--callout-color), .3);
+		border-top-right-radius: 4px;
+	}
+}
+
+body:not(.no-sanctum-icons) .admonition .admonition-content-copy,
+body:not(.no-sanctum-icons) div.callout[data-callout] .admonition-content-copy,
+body:not(.no-sanctum-icons) .admonition:hover .admonition-content-copy,
+body:not(.no-sanctum-icons) div.callout[data-callout]:hover .admonition-content-copy,
+body:not(.no-sanctum-icons) .admonition-content-copy:hover {
+	opacity: 1;
+	& svg.copy {
+		& > path {
+			display: none;
+		}
+		background-color: currentColor;
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Ecopy%3C/title%3E%3Cpath d='M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z' transform='translate(0)'/%3E%3Cpath d='M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+	}
+
+	& > svg {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+body:not(.no-sanctum-icons) .admonition .admonition-content-copy,
+body:not(.no-sanctum-icons) div.callout[data-callout] .admonition-content-copy {
+	opacity: 0;
+	position: absolute;
+	color: var(--text-faint);
+	cursor: pointer;
+	opacity: 0;
+	right: 8px;
+	top: 36px;
+	transition: .3s opacity ease-in;
+}
+
+body:not(.no-sanctum-icons) .admonition:hover .admonition-content-copy,
+body:not(.no-sanctum-icons) div.callout[data-callout]:hover .admonition-content-copy,
+body:not(.no-sanctum-icons) .admonition-content-copy:hover {
+	opacity: 1;
+}

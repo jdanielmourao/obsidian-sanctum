@@ -50,6 +50,10 @@ pre[class*=language-] {
 	background-color: rgb(var(--rgb-primary-0), 0.7);
 }
 
+div.callout :is(pre, span.cm-inline-code) {
+	border: 1px solid var(--color-border-1);
+}
+
 .cm-s-obsidian span.cm-inline-code,
 .markdown-preview-view span.cm-inline-code {
 	font-size: var(--font-scale-00);
@@ -117,14 +121,11 @@ body:not(.is-mobile) button.copy-code-button {
 	content: "";
 	-webkit-mask-image:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z'/%3E%3Cpath d='M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 	-webkit-mask-repeat: no-repeat;
-	transform: scale(1.65);
-	background-repeat: no-repeat;
-	color: currentColor;
+	height: 16px;
+	width: 16px;
+	margin: 10px 11px;
+	padding: 8px;
 	background-color: var(--text-faint);
-	font-size: 0px;
-	position: absolute;
-	top: 10px;
-	right: 10px;
 	transition: transform var(--duration-fast-1) var(--motion-standard-expressive);
 
 	&:hover {

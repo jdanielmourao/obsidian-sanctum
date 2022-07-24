@@ -2594,6 +2594,17 @@ settings:
 			description: Makes Kanban Lanes wrap in multiple rows if needed.
 			type: class-toggle
 	-
+			id: callout-title
+			title: Callouts
+			type: heading
+			level: 3
+			collapsed: true
+	-	
+				id: clr-title-callout
+				title: Full color headers in Callouts
+				description: Fills callout headers with their respective callout color.
+				type: class-toggle
+	-	
 			id: checkbox-title
 			title: Checkboxes
 			type: heading
