@@ -2965,23 +2965,58 @@ settings:
 		level: 2
 		collapsed: true
 	-
-			id: no-blur
-			title: No background blur
-			description: This setting disables background blur on modals.
-			type: class-toggle
-			default: false
-	-	
-			id: no-animation
-			title: Disable animations
-			description: This setting disables animations and transitions.
-			type: class-toggle
-			default: false
-	-	
-			id: no-sanctum-icons
-			title: Default icons
-			description: Use default icons instead of the Sanctum set.
-			type: class-toggle
-			default: false
+		id: no-blur
+		title: No background blur
+		description: This setting disables background blur on modals.
+		type: class-toggle
+		default: false
+	-
+		id: no-animation
+		title: Disable animations
+		description: This setting disables animations and transitions.
+		type: class-toggle
+		default: false
+	-
+		id: no-sanctum-icons
+		title: Default icons
+		description: Use default icons instead of the Sanctum set.
+		type: class-toggle
+		default: false
+	-
+		id: support
+		title: ❤️ Support Sanctum's Development
+		type: heading
+		description: If you enjoy using Sanctum, he's how you can help with its development.
+		level: 1
+		collapsed: false
+	-
+			id: support-star
+			title: Star the Project on GitHub
+			type: heading
+			description: https://github.com/jdanielmourao/obsidian-sanctum
+			level: 2
+			collapsed: true
+	-
+			id: support-changes
+			title: Follow the latest changes
+			type: heading
+			description: https://github.com/users/jdanielmourao/projects/1
+			level: 2
+			collapsed: true
+	-
+			id: support-issue
+			title: Submit an issue GitHub
+			type: heading
+			description: https://github.com/jdanielmourao/obsidian-sanctum/issues
+			level: 2
+			collapsed: true
+	-
+			id: support-finances
+			title: If you're able and willing, you can buy me a coffee
+			type: heading
+			description: https://ko-fi.com/jdanielmourao
+			level: 2
+			collapsed: true
 */
 
 /* @settings
