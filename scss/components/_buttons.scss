@@ -24,6 +24,10 @@
 	font-family: var(--font-interface);
 }
 
+:focus:not(:focus-visible) { 
+	outline: none 
+}
+
 button.mod-warning {
 	background-color: var(--color-red-5);
 	color: var(--color-white);
@@ -48,13 +52,12 @@ button.mod-warning {
 			box-shadow: 0px -2px 0px 0px rgba(8 8 8 / 0.5) inset,
 						0px 1px 3px 1px rgba(8 8 8 / 0.5) inset;
 		}
-		&:focus:not(:active) {
+		&:focus-visible {
 			outline: 2px solid var(--color-red-6);
 			outline-offset: 2px;
 		}
 	}
-
-	&:focus:not(:active) {
+	&:focus-visible {
 		outline: 2px solid var(--color-red);
 		outline-offset: 4px;
 	}
@@ -94,7 +97,7 @@ button.mod-cta {
 						0px 1px 3px 1px rgba(8 8 8 / 0.3) inset;
 		}
 	}
-	&:focus:not(:active) {
+	&:focus-visible {
 		outline: 2px solid var(--color-accent);
 		outline-offset: 1px;
 	}
@@ -119,7 +122,7 @@ button.mod-cta {
 		box-shadow: 0px 1px 3px 1px rgba(8 8 8 / 0.2) inset;
 	}
 
-	&:focus:not(:active) {
+	&:focus-visible {
 		outline: 1.5px solid var(--color-accent);
 		outline-offset: 1px;
 	}
@@ -161,7 +164,7 @@ button.mod-cta {
 	&:active {
 		box-shadow: 0px 1px 3px 1px rgba(8 8 8 / 0.2) inset;
 	}
-	&:focus:not(:active) {
+	&:focus-visible {
 		outline: 2px solid var(--color-accent);
 		outline-offset: 1px;
 	}

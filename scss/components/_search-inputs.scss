@@ -26,7 +26,7 @@ input[type='number'] {
 	&:active {
 		background-color: var(--color-primary-0);
 	}
-	&:focus:not(:active) {
+	&:focus-visible {
 		border-color: transparent;
 		border-bottom: 1px solid var(--color-accent);
 		outline: none;
@@ -212,7 +212,7 @@ textarea {
 	&:active {
 		background-color: var(--color-primary-0);
 	}
-	&:focus:not(:active) {
+	&:focus-visible {
 		border-color: transparent;
 		border-bottom: 1px solid var(--color-accent);
 		outline: none;

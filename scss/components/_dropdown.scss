@@ -25,12 +25,13 @@ select.dropdown {
 	&:hover {
 		background-color: var(--color-primary-3);
 	}
-	&:focus:not(:active) {
-		outline: 1.5px solid var(--color-accent);
-		border-color: transparent;
+	&:focus {
+		outline: none;
+		box-shadow: none;
 	}
 	&:focus-visible {
-		outline: none;
+		outline: 1.5px solid var(--color-accent);
+		border-color: transparent;
 	}
 }
 
