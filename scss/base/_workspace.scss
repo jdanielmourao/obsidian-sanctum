@@ -9,7 +9,7 @@ Status Bar
 */
 
 .has-focus {
-	&:focus {
+	&:focus-visible {
 		outline: var(--color-accent) solid 1px;
 		outline-offset: 0px;
 	}
