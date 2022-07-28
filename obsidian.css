@@ -8639,17 +8639,6 @@ body .checklist-plugin-main .group-header.tag title {
   background-color: var(--color-accent);
   border-radius: 40px;
 }
-:is(.tlfFileInfoTable, .tlfFileInfoTable100) .tlfFileInfoTextArea,
-:is(.tlfFileInfoTable, .tlfFileInfoTable100) .tlfFileInfoValue,
-:is(.tlfFileInfoTable, .tlfFileInfoTable100) .tlfFileInfoValueNumber,
-:is(.tlfFileInfoTable, .tlfFileInfoTable100) .tlfFileInfoLabel,
-:is(.tlfFileInfoTable, .tlfFileInfoTable100) .tlfFileInfoButton {
-  font-size: 1em;
-}
-.tlfFileInfoTable,
-.tlfFileInfoTable100 {
-  border-spacing: 4px;
-}
 .markdown-rendered.show-indentation-guide li > ul::before,
 .markdown-rendered.show-indentation-guide li > ol::before {
   content: "\200b";
