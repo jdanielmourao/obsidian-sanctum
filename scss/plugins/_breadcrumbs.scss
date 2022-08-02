@@ -1,1 +1,49 @@
 //For the icon(s), check SVG Replacement
+
+.workspace-leaf-content .view-content div.BC-Matrix {
+	padding: 0;
+
+	.BC-matrix-hier {
+		border: none;
+		margin: 0;
+
+		div.BC-Matrix-square {
+			border-width: 0;
+			padding-top: 16px;
+
+			.BC-Matrix-headers {
+				border-bottom: 1px solid var(--color-border-2);
+				
+				.BC-Matrix-header {
+					font-size: var(--font-scale-0);
+					margin: 0;
+					padding: 0 4px;
+
+					&:nth-child(2) {
+						font-size: 12px;
+					}
+				}
+				&:not(:last-of-type) {
+					border-bottom: none;
+				}
+			}
+
+			& ol {
+				& li {
+					&::marker {
+						font-size: var(--font-scale-000);
+					}
+					div.internal-link {
+						text-transform: none;
+						line-height: 1.5em;
+						cursor: pointer;
+
+						&:hover {
+							background: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
