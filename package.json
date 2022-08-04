@@ -15,6 +15,7 @@
     "postcss-cli": "^9.1.0"
   },
   "dependencies": {
+    "hsluv-sass": "^2.0.1",
     "postcss-nested": "^5.0.6"
   }
 }
