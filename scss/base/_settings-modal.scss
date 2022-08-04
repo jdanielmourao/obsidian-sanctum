@@ -454,6 +454,11 @@ body:not(.is-mobile) .theme-list { /* Desktop */
 	}
 }
 
+.modal .clickable-icon.mod-error {
+	background: transparent;
+	color: var(--color-red);
+}
+
 // Appearance Menu
 //folder icon next to "Manage" button
 .setting-editor-extra-setting-button.clickable-icon[aria-label="Open themes folder"] {
