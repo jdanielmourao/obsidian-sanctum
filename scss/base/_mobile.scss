@@ -509,6 +509,20 @@ html .is-mobile div.menu {
 	width: 100%;
 }
 
+body.is-mobile .document-search,
+body.is-mobile .document-replace {
+	max-width: var(--line-width);
+	min-width: fit-content;
+	height: fit-content;
+	margin: 0 auto;
+	padding: 0 4px;
+	background-color: var(--background-primary);
+}
+
+body.is-mobile .document-search-container {
+	background: transparent;
+}
+
 .is-mobile button { //general button formatting
 	width: 100%;
 	margin: 4px auto;
