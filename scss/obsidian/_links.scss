@@ -103,7 +103,7 @@
 .markdown-preview-view mark a.internal-link,
 .markdown-source-view.mod-cm6 .cm-highlight .cm-underline {
 	color: var(--color-black);
-	font-weight: 450;
+	font-weight: 400;
 
 	&:hover {
 	text-decoration: underline solid var(--color-accent) 2px;
@@ -111,11 +111,13 @@
 	}
 }
 
+
+.alt-link .callout-content .internal-link,
 .alt-link .cm-s-obsidian span.cm-hmd-internal-link,
 .alt-link .markdown-preview-view .internal-link {
 	text-decoration: none;
 	color: var(--text-accent);
-	font-weight: 450;
+	font-weight: 400;
 	text-transform: none;
 	font-size: inherit;
 	letter-spacing: inherit;
