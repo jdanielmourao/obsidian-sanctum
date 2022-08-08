@@ -85,7 +85,7 @@ body:
       options:
         - label: Windows
         - label: macOS
-        - label: Linus
+        - label: Linux
         - label: Android
         - label: iOS
   - type: checkboxes
