@@ -328,8 +328,8 @@ div.callout[data-callout='code'] {
 	}
 }
 
-.clr-title-callout div.callout[data-callout] {
-	& .callout-title {
+.clr-title-callout {
+	& :is(.markdown-source-view.mod-cm6, .markdown-preview-view) div.callout[data-callout] .callout-title {
 		background-color: rgba(var(--callout-color), .3);
 		border-top-right-radius: 4px;
 	}
