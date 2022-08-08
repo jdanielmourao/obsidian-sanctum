@@ -1,5 +1,5 @@
 /* ─────────────────────────────────────────────────────────────────────────
-Sanctum for Obsidian v0.15.8
+Sanctum for Obsidian v0.15.9
 created by @jdanielmourao (Github)
 
 Sponsor my work:
@@ -50,8 +50,8 @@ body {
   --font-interface-theme: "IBM Plex Sans *", sans-serif;
 }
 :root {
-  --version: "You are currently using Sanctum for Obsidian v0.15.8 \a\aIt is highly recommended to install the Style Settings and Contextual Typography plugins.\aIf you run into any issues, try updating to the latest version of the theme. If the issue isn't resolved, you can file a report on github (link in the button above). \a\aSupport my work:\ako-fi.com/jdanielmourao \apaypal.me/jdanielmourao";
-  --version-empty-page: "Sanctum for Obsidian v0.15.8\a Designed by @jdanielmourao 2021-2022 \a Font: IBM Plex Sans & Mono";
+  --version: "You are currently using Sanctum for Obsidian v0.15.9 \a\aIt is highly recommended to install the Style Settings and Contextual Typography plugins.\aIf you run into any issues, try updating to the latest version of the theme. If the issue isn't resolved, you can file a report on github (link in the button above). \a\aSupport my work:\ako-fi.com/jdanielmourao \apaypal.me/jdanielmourao";
+  --version-empty-page: "Sanctum for Obsidian v0.15.9\a Designed with Intention 2021-2022 \a Font: IBM Plex Sans & Mono";
   --font-sans: "IBM Plex Sans *", sans-serif;
   --font-serif: "IBM Plex Serif", serif;
   --mermaid-font: var(--font-sans);
@@ -1924,6 +1924,18 @@ html .is-mobile div.menu {
 .is-mobile .community-plugin-search .search-input-container {
   width: 100%;
 }
+body.is-mobile .document-search,
+body.is-mobile .document-replace {
+  max-width: var(--line-width);
+  min-width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  padding: 0 4px;
+  background-color: var(--background-primary);
+}
+body.is-mobile .document-search-container {
+  background: transparent;
+}
 .is-mobile button {
   width: 100%;
   margin: 4px auto;
@@ -2195,7 +2207,7 @@ textarea.sync-history-content {
 .modal.mod-community-plugin:not(.is-mobile .modal.mod-community-plugin),
 .modal.mod-settings:not(.is-mobile .modal.mod-settings) {
   width: 40vw;
-  min-width: 800px;
+  min-width: 60vh;
   height: 80vh;
   min-height: 80vh;
   max-height: 80vh;
@@ -2578,6 +2590,10 @@ body:not(.is-mobile) .theme-list .community-theme.is-selected .modal-button-cont
   color: var(--text-muted);
   padding: 2px 8px 0px 8px;
   line-height: 1.5;
+}
+.modal .clickable-icon.mod-error {
+  background: transparent;
+  color: var(--color-red);
 }
 .setting-editor-extra-setting-button.clickable-icon[aria-label="Open themes folder"] {
   margin: 0px 16px;
@@ -4001,7 +4017,7 @@ span.cm-hashtag.cm-hashtag-end::before {
 .markdown-preview-view mark a.internal-link,
 .markdown-source-view.mod-cm6 .cm-highlight .cm-underline {
   color: var(--color-black);
-  font-weight: 450;
+  font-weight: 400;
 }
 .alt-link .markdown-preview-view mark a.internal-link:hover,
 .alt-link .markdown-source-view.mod-cm6 .cm-highlight .cm-underline:hover,
@@ -4010,11 +4026,12 @@ span.cm-hashtag.cm-hashtag-end::before {
   text-decoration: underline solid var(--color-accent) 2px;
   background-color: transparent;
 }
+.alt-link .callout-content .internal-link,
 .alt-link .cm-s-obsidian span.cm-hmd-internal-link,
 .alt-link .markdown-preview-view .internal-link {
   text-decoration: none;
   color: var(--text-accent);
-  font-weight: 450;
+  font-weight: 400;
   text-transform: none;
   font-size: inherit;
   letter-spacing: inherit;
@@ -4501,7 +4518,7 @@ div.callout[data-callout=code] :is(pre, span.cm-inline-code) {
   border: none;
   padding: 0;
 }
-.clr-title-callout div.callout[data-callout] .callout-title {
+.clr-title-callout :is(.markdown-source-view.mod-cm6, .markdown-preview-view) div.callout[data-callout] .callout-title {
   background-color: rgba(var(--callout-color), 0.3);
   border-top-right-radius: 4px;
 }
@@ -8346,6 +8363,45 @@ button.table-close:hover::before {
 }
 th.reference {
   border-right: 0;
+}
+.workspace-leaf-content .view-content div.BC-Matrix {
+  padding: 0;
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier {
+  border: none;
+  margin: 0;
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier div.BC-Matrix-square {
+  border-width: 0;
+  padding-top: 16px;
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier div.BC-Matrix-square .BC-Matrix-headers {
+  border-bottom: 1px solid var(--color-border-2);
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier div.BC-Matrix-square .BC-Matrix-headers .BC-Matrix-header {
+  font-size: var(--font-scale-0);
+  margin: 0;
+  padding: 0 4px;
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier div.BC-Matrix-square .BC-Matrix-headers .BC-Matrix-header:nth-child(2) {
+  font-size: 12px;
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier div.BC-Matrix-square .BC-Matrix-headers:not(:last-of-type) {
+  border-bottom: none;
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier div.BC-Matrix-square ol li::marker {
+  font-size: var(--font-scale-000);
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier div.BC-Matrix-square ol li div.internal-link {
+  text-transform: none;
+  line-height: 1.5em;
+  cursor: pointer;
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier div.BC-Matrix-square ol li div.internal-link:hover {
+  background: none;
+}
+div.BC-trail {
+  border: none;
 }
 #calendar-container.fantasy-calendar .arrow.right svg {
   transform: rotate(180deg);

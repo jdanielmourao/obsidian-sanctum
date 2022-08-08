@@ -1924,6 +1924,18 @@ html .is-mobile div.menu {
 .is-mobile .community-plugin-search .search-input-container {
   width: 100%;
 }
+body.is-mobile .document-search,
+body.is-mobile .document-replace {
+  max-width: var(--line-width);
+  min-width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  padding: 0 4px;
+  background-color: var(--background-primary);
+}
+body.is-mobile .document-search-container {
+  background: transparent;
+}
 .is-mobile button {
   width: 100%;
   margin: 4px auto;
@@ -2195,7 +2207,7 @@ textarea.sync-history-content {
 .modal.mod-community-plugin:not(.is-mobile .modal.mod-community-plugin),
 .modal.mod-settings:not(.is-mobile .modal.mod-settings) {
   width: 40vw;
-  min-width: 800px;
+  min-width: 60vh;
   height: 80vh;
   min-height: 80vh;
   max-height: 80vh;
@@ -2579,6 +2591,10 @@ body:not(.is-mobile) .theme-list .community-theme.is-selected .modal-button-cont
   padding: 2px 8px 0px 8px;
   line-height: 1.5;
 }
+.modal .clickable-icon.mod-error {
+  background: transparent;
+  color: var(--color-red);
+}
 .setting-editor-extra-setting-button.clickable-icon[aria-label="Open themes folder"] {
   margin: 0px 16px;
 }
@@ -2594,7 +2610,7 @@ body:not(.is-mobile) .theme-list .community-theme.is-selected .modal-button-cont
 .vertical-tab-content h6 {
   line-height: var(--leading-0);
 }
-.has-focus:focus {
+.has-focus:focus-visible {
   outline: var(--color-accent) solid 1px;
   outline-offset: 0px;
 }
@@ -3838,9 +3854,6 @@ span.cm-comment .list-bullet::after {
   height: 100%;
   padding-right: 8px;
 }
-.markdown-source-view.mod-cm6 .HyperMD-task-line .cm-list-1 {
-  padding-left: 8px;
-}
 .markdown-preview-view ul li.task-list-item .task-list-item-checkbox {
   margin-right: 8px;
 }
@@ -4004,7 +4017,7 @@ span.cm-hashtag.cm-hashtag-end::before {
 .markdown-preview-view mark a.internal-link,
 .markdown-source-view.mod-cm6 .cm-highlight .cm-underline {
   color: var(--color-black);
-  font-weight: 450;
+  font-weight: 400;
 }
 .alt-link .markdown-preview-view mark a.internal-link:hover,
 .alt-link .markdown-source-view.mod-cm6 .cm-highlight .cm-underline:hover,
@@ -4013,11 +4026,12 @@ span.cm-hashtag.cm-hashtag-end::before {
   text-decoration: underline solid var(--color-accent) 2px;
   background-color: transparent;
 }
+.alt-link .callout-content .internal-link,
 .alt-link .cm-s-obsidian span.cm-hmd-internal-link,
 .alt-link .markdown-preview-view .internal-link {
   text-decoration: none;
   color: var(--text-accent);
-  font-weight: 450;
+  font-weight: 400;
   text-transform: none;
   font-size: inherit;
   letter-spacing: inherit;
@@ -4282,9 +4296,9 @@ div.callout[data-callout=question],
 div.callout[data-callout=help],
 div.callout[data-callout=faq] {
   --callout-color:
-    140,
-    141,
-    59;
+    214,
+    159,
+    40;
 }
 div.callout[data-callout=cue] .callout-icon,
 div.callout[data-callout=question] .callout-icon,
@@ -4504,7 +4518,7 @@ div.callout[data-callout=code] :is(pre, span.cm-inline-code) {
   border: none;
   padding: 0;
 }
-.clr-title-callout div.callout[data-callout] .callout-title {
+.clr-title-callout :is(.markdown-source-view.mod-cm6, .markdown-preview-view) div.callout[data-callout] .callout-title {
   background-color: rgba(var(--callout-color), 0.3);
   border-top-right-radius: 4px;
 }
@@ -5364,6 +5378,9 @@ audio::-webkit-media-controls-panel {
 audio::-webkit-media-controls input[pseudo=-internal-media-controls-overflow-button i]:enabled:hover::-internal-media-controls-button-hover-background {
   background-color: transparent;
 }
+:focus:not(:focus-visible) {
+  outline: none;
+}
 button.mod-warning {
   background-color: var(--color-red-5);
   color: var(--color-white);
@@ -5391,11 +5408,11 @@ button.mod-warning:active {
   border-color: var(--color-primary-0);
   box-shadow: 0px -2px 0px 0px rgba(8, 8, 8, 0.5) inset, 0px 1px 3px 1px rgba(8, 8, 8, 0.5) inset;
 }
-.theme-dark button.mod-warning:focus:not(:active) {
+.theme-dark button.mod-warning:focus-visible {
   outline: 2px solid var(--color-red-6);
   outline-offset: 2px;
 }
-button.mod-warning:focus:not(:active) {
+button.mod-warning:focus-visible {
   outline: 2px solid var(--color-red);
   outline-offset: 4px;
 }
@@ -5432,7 +5449,7 @@ button.mod-cta:active {
   background-color: rgba(var(--color-accent-d)/1);
   box-shadow: 0px -1px 0px 0px rgba(8, 8, 8, 0.2) inset, 0px 1px 3px 1px rgba(8, 8, 8, 0.3) inset;
 }
-button.mod-cta:focus:not(:active) {
+button.mod-cta:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 1px;
 }
@@ -5458,8 +5475,8 @@ button.mod-cta:focus:not(:active) {
 .modal.mod-community-theme .setting-item .setting-item-control button.clickable-icon:active {
   box-shadow: 0px 1px 3px 1px rgba(8, 8, 8, 0.2) inset;
 }
-.modal.mod-community-plugin .setting-item .setting-item-control button.clickable-icon:focus:not(:active),
-.modal.mod-community-theme .setting-item .setting-item-control button.clickable-icon:focus:not(:active) {
+.modal.mod-community-plugin .setting-item .setting-item-control button.clickable-icon:focus-visible,
+.modal.mod-community-theme .setting-item .setting-item-control button.clickable-icon:focus-visible {
   outline: 1.5px solid var(--color-accent);
   outline-offset: 1px;
 }
@@ -5506,9 +5523,9 @@ button.mod-cta:focus:not(:active) {
 .modal.mod-community-plugin .community-plugin-info p button:not(.mod-cta):not(.mod-warning):active {
   box-shadow: 0px 1px 3px 1px rgba(8, 8, 8, 0.2) inset;
 }
-.modal button:not(.mod-cta):not(.mod-warning):not(.pcr-button):focus:not(:active),
-.modal.mod-settings .setting-item-control button:not(.mod-cta):not(.mod-warning):not(.pcr-button):focus:not(:active),
-.modal.mod-community-plugin .community-plugin-info p button:not(.mod-cta):not(.mod-warning):focus:not(:active) {
+.modal button:not(.mod-cta):not(.mod-warning):not(.pcr-button):focus-visible,
+.modal.mod-settings .setting-item-control button:not(.mod-cta):not(.mod-warning):not(.pcr-button):focus-visible,
+.modal.mod-community-plugin .community-plugin-info p button:not(.mod-cta):not(.mod-warning):focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 1px;
 }
@@ -5673,12 +5690,13 @@ select.dropdown {
 select.dropdown:hover {
   background-color: var(--color-primary-3);
 }
-select.dropdown:focus:not(:active) {
-  outline: 1.5px solid var(--color-accent);
-  border-color: transparent;
+select.dropdown:focus {
+  outline: none;
+  box-shadow: none;
 }
 select.dropdown:focus-visible {
-  outline: none;
+  outline: 1.5px solid var(--color-accent);
+  border-color: transparent;
 }
 select.dropdown option {
   appearance: none;
@@ -6051,11 +6069,11 @@ input[type=password]:active,
 input[type=number]:active {
   background-color: var(--color-primary-0);
 }
-input[type=text]:focus:not(:active),
-input[type=search]:focus:not(:active),
-input[type=email]:focus:not(:active),
-input[type=password]:focus:not(:active),
-input[type=number]:focus:not(:active) {
+input[type=text]:focus-visible,
+input[type=search]:focus-visible,
+input[type=email]:focus-visible,
+input[type=password]:focus-visible,
+input[type=number]:focus-visible {
   border-color: transparent;
   border-bottom: 1px solid var(--color-accent);
   outline: none;
@@ -6203,7 +6221,7 @@ textarea:hover {
 textarea:active {
   background-color: var(--color-primary-0);
 }
-textarea:focus:not(:active) {
+textarea:focus-visible {
   border-color: transparent;
   border-bottom: 1px solid var(--color-accent);
   outline: none;
@@ -6253,19 +6271,19 @@ input[type=range i]::-webkit-slider-thumb:active {
   box-shadow: none;
   transition: background 0ms;
 }
-input[type=range i]:focus::-webkit-slider-thumb:not(:active) {
+input[type=range i]:focus-visible::-webkit-slider-thumb:not(:active) {
   background-color: var(--color-accent);
   box-shadow: inset 0 0 0 1px var(--color-accent), inset 0 0 0 3px var(--background-primary);
   transition: background-color 0ms;
 }
-input[type=range i]:focus::-webkit-slider-thumb:not(:active):not(:hover) {
+input[type=range i]:focus-visible::-webkit-slider-thumb:not(:active):not(:hover) {
   background-color: var(--text-normal);
   box-shadow: none;
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
   transition: background-color 0ms;
 }
-input[type=range i]:focus:not(:active) {
+input[type=range i]:focus {
   outline: none;
 }
 input[type=range i]:before {
@@ -6299,7 +6317,7 @@ input[type=range i]:after {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
   margin-right: 6px;
 }
-.checkbox-container:focus-within {
+.checkbox-container:not(.is-enabled):focus-within {
   box-shadow: none;
   outline: 2px solid var(--color-accent);
 }
@@ -6308,7 +6326,7 @@ input[type=range i]:after {
 }
 .checkbox-container.is-enabled:focus-within {
   outline: 2px solid var(--color-accent);
-  outline-offset: 1px;
+  outline-offset: 2px;
 }
 .checkbox-container::after {
   background-color: var(--color-grey-1);
@@ -8346,6 +8364,45 @@ button.table-close:hover::before {
 th.reference {
   border-right: 0;
 }
+.workspace-leaf-content .view-content div.BC-Matrix {
+  padding: 0;
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier {
+  border: none;
+  margin: 0;
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier div.BC-Matrix-square {
+  border-width: 0;
+  padding-top: 16px;
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier div.BC-Matrix-square .BC-Matrix-headers {
+  border-bottom: 1px solid var(--color-border-2);
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier div.BC-Matrix-square .BC-Matrix-headers .BC-Matrix-header {
+  font-size: var(--font-scale-0);
+  margin: 0;
+  padding: 0 4px;
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier div.BC-Matrix-square .BC-Matrix-headers .BC-Matrix-header:nth-child(2) {
+  font-size: 12px;
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier div.BC-Matrix-square .BC-Matrix-headers:not(:last-of-type) {
+  border-bottom: none;
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier div.BC-Matrix-square ol li::marker {
+  font-size: var(--font-scale-000);
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier div.BC-Matrix-square ol li div.internal-link {
+  text-transform: none;
+  line-height: 1.5em;
+  cursor: pointer;
+}
+.workspace-leaf-content .view-content div.BC-Matrix .BC-matrix-hier div.BC-Matrix-square ol li div.internal-link:hover {
+  background: none;
+}
+div.BC-trail {
+  border: none;
+}
 #calendar-container.fantasy-calendar .arrow.right svg {
   transform: rotate(180deg);
 }
@@ -8513,6 +8570,17 @@ th.reference {
 .modal-content .buttons .btn-next,
 .modal-content .buttons .btn-previous {
   margin-top: 16px;
+}
+:root {
+  --chart-color-1: #f15148;
+  --chart-color-2: #d66c1e;
+  --chart-color-3: #d69f28;
+  --chart-color-4: #8c8d3b;
+  --chart-color-5: #46996a;
+  --chart-color-6: #419693;
+  --chart-color-7: #678ea5;
+  --chart-color-8: #8484bc;
+  --chart-color-9: #eb546c;
 }
 .is-mobile body .checklist-plugin-main button {
   width: 15%;
@@ -8883,14 +8951,14 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
   opacity: 1;
 }
 body.theme-light {
-  --arrows-up: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(49, 47, 48)' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='icon' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Echevron--sort%3C/title%3E%3Cpolygon points='16,4 23,11 21.6,12.4 16,6.8 10.4,12.4 9,11 '/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
-  --arrows-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(49, 47, 48)' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='icon' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Echevron--sort%3C/title%3E%3Cpolygon points='16,28 9,21 10.4,19.6 16,25.2 21.6,19.6 23,21 '/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
-  --arrows-up-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(49, 47, 48)' id='icon' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Echevron--sort%3C/title%3E%3Cpolygon points='16 28 9 21 10.41 19.59 16 25.17 21.59 19.59 23 21 16 28'/%3E%3Cpolygon points='16 4 23 11 21.59 12.41 16 6.83 10.41 12.41 9 11 16 4'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+  --arrows-up: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgba(49, 47, 48, .7)' id='icon' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='16 4 6 14 7.41 15.41 15 7.83 15 28 17 28 17 7.83 24.59 15.41 26 14 16 4'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+  --arrows-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgba(49, 47, 48, .7)' id='icon' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='24.59 16.59 17 24.17 17 4 15 4 15 24.17 7.41 16.59 6 18 16 28 26 18 24.59 16.59'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+  --arrows-up-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgba(49, 47, 48, .7)' id='icon' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Echevron--sort%3C/title%3E%3Cpolygon points='16 28 9 21 10.41 19.59 16 25.17 21.59 19.59 23 21 16 28'/%3E%3Cpolygon points='16 4 23 11 21.59 12.41 16 6.83 10.41 12.41 9 11 16 4'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 body.theme-dark {
-  --arrows-up: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(226, 223, 220)' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='icon' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Echevron--sort%3C/title%3E%3Cpolygon points='16,4 23,11 21.6,12.4 16,6.8 10.4,12.4 9,11 '/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
-  --arrows-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(226, 223, 220)' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='icon' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Ctitle%3Echevron--sort%3C/title%3E%3Cpolygon points='16,28 9,21 10.4,19.6 16,25.2 21.6,19.6 23,21 '/%3E%3Crect id='_Transparent_Rectangle_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
-  --arrows-up-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(226, 223, 220)' id='icon' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Echevron--sort%3C/title%3E%3Cpolygon points='16 28 9 21 10.41 19.59 16 25.17 21.59 19.59 23 21 16 28'/%3E%3Cpolygon points='16 4 23 11 21.59 12.41 16 6.83 10.41 12.41 9 11 16 4'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+  --arrows-up: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgba(226, 223, 220, .7)' id='icon' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='16 4 6 14 7.41 15.41 15 7.83 15 28 17 28 17 7.83 24.59 15.41 26 14 16 4'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+  --arrows-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgba(226, 223, 220, .7)' id='icon' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpolygon points='24.59 16.59 17 24.17 17 4 15 4 15 24.17 7.41 16.59 6 18 16 28 26 18 24.59 16.59'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
+  --arrows-up-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgba(226, 223, 220, .7)' id='icon' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Echevron--sort%3C/title%3E%3Cpolygon points='16 28 9 21 10.41 19.59 16 25.17 21.59 19.59 23 21 16 28'/%3E%3Cpolygon points='16 4 23 11 21.59 12.41 16 6.83 10.41 12.41 9 11 16 4'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
 body .markdown-preview-view th,
 body .table-view-table > thead > tr > th,
@@ -8901,12 +8969,6 @@ body .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-t
   background-size: 20px 20px;
   padding-right: 24px;
   cursor: pointer;
-}
-body th[sortable-style=sortable-asc] {
-  background-image: var(--arrows-up) !important;
-}
-body th[sortable-style=sortable-desc] {
-  background-image: var(--arrows-down) !important;
 }
 .workspace-leaf-content[data-type=style-settings] .view-content {
   padding: 16px;
@@ -8946,6 +9008,52 @@ body th[sortable-style=sortable-desc] {
 }
 .style-settings-collapse-indicator:hover {
   opacity: 0.7;
+}
+.style-settings-heading[data-id=support] {
+  margin-top: 8;
+  margin-bottom: 0;
+  pointer-events: none;
+  cursor: text;
+  border-top: 1px solid var(--color-border-1);
+  pointer-events: none;
+}
+.setting-item.style-settings-heading[data-id=support-star] .setting-item-description,
+.setting-item.style-settings-heading[data-id=support-changes] .setting-item-description,
+.setting-item.style-settings-heading[data-id=support-issue] .setting-item-description,
+.setting-item.style-settings-heading[data-id=support-finances] .setting-item-description {
+  color: var(--color-accent);
+  cursor: text;
+  user-select: all;
+}
+.setting-item.style-settings-heading[data-id=support-star],
+.setting-item.style-settings-heading[data-id=support-changes],
+.setting-item.style-settings-heading[data-id=support-issue],
+.setting-item.style-settings-heading[data-id=support-finances] {
+  cursor: default;
+}
+.setting-item.style-settings-heading[data-id=support-star]:not(.is-collapsed),
+.setting-item.style-settings-heading[data-id=support-star]:is(.is-collapsed),
+.setting-item.style-settings-heading[data-id=support-changes]:not(.is-collapsed),
+.setting-item.style-settings-heading[data-id=support-changes]:is(.is-collapsed),
+.setting-item.style-settings-heading[data-id=support-issue]:not(.is-collapsed),
+.setting-item.style-settings-heading[data-id=support-issue]:is(.is-collapsed),
+.setting-item.style-settings-heading[data-id=support-finances]:not(.is-collapsed),
+.setting-item.style-settings-heading[data-id=support-finances]:is(.is-collapsed) {
+  margin: 0;
+}
+.setting-item.style-settings-heading[data-id=support-star] + .style-settings-container,
+.setting-item.style-settings-heading[data-id=support-changes] + .style-settings-container,
+.setting-item.style-settings-heading[data-id=support-issue] + .style-settings-container,
+.setting-item.style-settings-heading[data-id=support-finances] + .style-settings-container {
+  display: none;
+}
+.setting-item.style-settings-heading[data-id=support-star] .style-settings-collapse-indicator,
+.setting-item.style-settings-heading[data-id=support-changes] .style-settings-collapse-indicator,
+.setting-item.style-settings-heading[data-id=support-issue] .style-settings-collapse-indicator,
+.setting-item.style-settings-heading[data-id=support-finances] .style-settings-collapse-indicator,
+.style-settings-heading[data-id=support] .style-settings-container,
+.style-settings-heading[data-id=support] .style-settings-collapse-indicator {
+  display: none;
 }
 div#wordsprint div.status.pending {
   background-color: var(--color-primary-1);
@@ -12289,23 +12397,58 @@ settings:
 		level: 2
 		collapsed: true
 	-
-			id: no-blur
-			title: No background blur
-			description: This setting disables background blur on modals.
-			type: class-toggle
-			default: false
-	-	
-			id: no-animation
-			title: Disable animations
-			description: This setting disables animations and transitions.
-			type: class-toggle
-			default: false
-	-	
-			id: no-sanctum-icons
-			title: Default icons
-			description: Use default icons instead of the Sanctum set.
-			type: class-toggle
-			default: false
+		id: no-blur
+		title: No background blur
+		description: This setting disables background blur on modals.
+		type: class-toggle
+		default: false
+	-
+		id: no-animation
+		title: Disable animations
+		description: This setting disables animations and transitions.
+		type: class-toggle
+		default: false
+	-
+		id: no-sanctum-icons
+		title: Default icons
+		description: Use default icons instead of the Sanctum set.
+		type: class-toggle
+		default: false
+	-
+		id: support
+		title: ❤️ Support Sanctum's Development
+		type: heading
+		description: If you enjoy using Sanctum, he's how you can help with its development.
+		level: 1
+		collapsed: false
+	-
+			id: support-star
+			title: Star the Project on GitHub
+			type: heading
+			description: https://github.com/jdanielmourao/obsidian-sanctum
+			level: 2
+			collapsed: true
+	-
+			id: support-changes
+			title: Follow the latest changes
+			type: heading
+			description: https://github.com/users/jdanielmourao/projects/1
+			level: 2
+			collapsed: true
+	-
+			id: support-issue
+			title: Submit an issue GitHub
+			type: heading
+			description: https://github.com/jdanielmourao/obsidian-sanctum/issues
+			level: 2
+			collapsed: true
+	-
+			id: support-finances
+			title: If you're able and willing, you can buy me a coffee
+			type: heading
+			description: https://ko-fi.com/jdanielmourao
+			level: 2
+			collapsed: true
 */
 
 /* @settings
