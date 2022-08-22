@@ -15,3 +15,5 @@ node_modules
 .DS_Store
 
 .Untitled-1.md
+
+.env
