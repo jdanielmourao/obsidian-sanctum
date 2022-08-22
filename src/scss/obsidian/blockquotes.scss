@@ -1,0 +1,36 @@
+.theme-dark {
+	--blockquote-border-color: hsl(187.4, 22.4%, 50%);
+}
+.theme-light {
+	--blockquote-border-color: hsl(199.5, 38.8%, 40.4%);
+}
+
+body {
+	--blockquote-border-thickness: 0px;
+	--blockquote-size: 1rem;
+	--blockquote-font-style: inherit;
+	--blockquote-color: inherit;
+	--blockquote-background-color: inherit;
+}
+
+.markdown-rendered blockquote {
+	font-size: var(--blockquote-size);
+	color: var(--blockquote-color);
+	font-style: var(--blockquote-font-style);
+	background-color: var(--blockquote-background-color);
+	border-left: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+	padding: 0 0 0 var(--size-7);
+	margin-inline-start: 0;
+	margin-inline-end: 0;
+}
+
+.cm-s-obsidian span.cm-quote {
+	color: var(--blockquote-color);
+}
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+	font-style: var(--blockquote-style);
+	border: 0 solid var(--blockquote-border-color);
+	border-left-width: var(--blockquote-border-thickness);
+	background-color: var(--blockquote-background-color);
+}

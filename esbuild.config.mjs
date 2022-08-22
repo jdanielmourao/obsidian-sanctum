@@ -1,7 +1,13 @@
+/**
+ * Thank you to @valentine195 for not only setting my first esbuild config,
+ * but also taking the time to explain each step.
+ */
+
 import esbuild from "esbuild";
-import { sassPlugin } from "esbuild-sass-plugin";
 import process from "process";
 import { config } from "dotenv";
+import { sassPlugin } from "esbuild-sass-plugin";
+import time from "esbuild-plugin-time";
 import { readFileSync } from "fs";
 
 config();
@@ -13,34 +19,38 @@ const prod = process.argv[2] === "production";
  * npm run build will place it in the build directory in this repository.
  */
 const dir = prod ? "./" : process.env.OUTDIR;
-const file = `${dir}/Sanctum.css`;
 
-/**
- * readFileSync reads the file data in as a string.
- */
-const banner = readFileSync("./scss/abstracts/_version.scss", { encoding: "utf8" });
-const footer = readFileSync("./scss/extensions/_footer.scss", {
-	encoding: "utf8"
-});
+/** Paths for final file */
+const fileProd = `${dir}/theme.css`;
+const fileDev = `${dir}/SanctumDev.css`
+
+/** readFileSync reads the file data in as a string. */
+const license = readFileSync("./src/css/license.css", "utf8");
+const styleSettings = readFileSync("./src/css/style-settings.css", "utf8");
+const hub = readFileSync("./src/css/plugin-compatibility.css", "utf8");
 
 esbuild
 	.build({
 		/** Entry point should be where everything is imported into. */
-		entryPoints: ["scss/base.scss"],
-		/** npm run dev will watch for file changes and rebuild instantly. */
-		watch: !prod,
+		entryPoints: ["src/scss/index.scss"],
+		
 		/** Banner places the content at the beginning of the bundled file. */
 		banner: {
-			css: banner
+			css: license
 		},
 		/** Footer places the content at the end of the bundled file. */
 		footer: {
-			css: footer
+			css: styleSettings + hub
 		},
+		/** npm run dev will watch for file changes and rebuild instantly. */
+		watch: !prod,
 		logLevel: "info",
 		bundle: true,
 		minify: false,
-		plugins: [sassPlugin()],
-		outfile: file
+		outfile: prod ? fileProd : fileDev,
+		plugins: [
+			sassPlugin(),
+			time()
+		]
 	})
 	.catch(() => process.exit(1));

@@ -1,0 +1,59 @@
+/*	Gutters
+—————————————————————————————————————————————————————————*/
+
+.markdown-source-view.mod-cm6 .cm-gutters {
+	padding-right: 0;
+
+	& .cm-lineNumbers .cm-gutterElement {
+		min-width: 24px;
+	}
+
+	& .cm-lineNumbers .cm-gutterElement:not(.cm-active) {
+		padding-right: 24px;
+		opacity: .5;
+	}
+	& .cm-lineNumbers .cm-gutterElement.cm-active {
+		padding-right: 24px;
+		color: var(--text-muted);
+		border-radius: var(--radius-s) 0 0 var(--radius-s);
+	}
+}
+
+/*	Active Line Highlighting
+—————————————————————————————————————————————————————————*/
+
+body {
+	--active-line-accent: transparent;
+}
+
+.markdown-source-view.mod-cm6 .cm-active:not(.HyperMD-codeblock) {
+	background-color: var(--active-line-accent);
+	border-radius: 0 var(--radius-s) var(--radius-s) 0;
+}
+
+/* Prevent active line highlighting from touching the ribbon*/
+body:not(.is-mobile) :is(
+	.markdown-source-view.mod-cm6 .cm-scroller,
+	.markdown-reading-view .markdown-preview-view) {
+	padding-left: var(--size-8);
+}
+
+
+/*	Emphasis
+—————————————————————————————————————————————————————————*/
+body {
+/* Bold */
+	--bold-weight: var(--font-semibold);
+	--bold-color: inherit;
+
+/* Italic */
+	--italic-color: inherit;
+}
+
+
+/*	Emphasis
+—————————————————————————————————————————————————————————*/
+body {
+	--hr-color: var(--background-modifier-border);
+	--hr-thickness: 1.5px;
+}

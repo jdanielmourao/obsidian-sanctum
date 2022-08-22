@@ -1,0 +1,295 @@
+body {
+	--list-indent: 1.5em;
+	--list-spacing: 0.075em;
+	--list-marker-color: var(--text-faint);
+	--list-marker-color-hover: var(--text-muted);
+	--list-marker-color-collapsed: var(--interactive);
+	--list-bullet-border: none;
+	--list-bullet-radius: 0;
+	--list-bullet-size: 4px;
+	--list-bullet-transform: translateY(1px);
+}
+
+body {
+	--list-bullet-width-em-dash: 10px;
+	--list-bullet-height-em-dash: 1.5px;
+
+	--list-bullet-width-hyphen: 5px;
+	--list-bullet-height-hyphen: 1.5px;
+
+	--list-bullet-width-bullet-operator: 1px;
+	--list-bullet-height-bullet-operator: 1px;
+
+	--list-bullet-size-ring: 3px;
+
+	--list-bullet-width-triangle: 0px;
+	--list-bullet-height-triangle: 0px;
+
+	--list-bullet-border-triangle: 3px;
+	--list-bullet-width-triangle: 6px;
+
+	--checklist-done-decoration: line-through;
+	--checklist-done-color: var(--text-faint);
+	--checklist-done-strike-color: var(--text-faint);
+}
+
+/*	Task Lists
+—————————————————————————————————————————————————————————*/
+ul > li.task-list-item[data-task="x"],
+ul > li.task-list-item[data-task="X"] {
+	text-decoration-color: var(--checklist-done-strike-color);
+}
+
+/*	Unordered List Markers
+—————————————————————————————————————————————————————————*/
+:is(body, .default-marker-odd) ul > li .list-bullet:after,//lvl1
+:is(body, .default-marker-odd) ol > li > ul > li .list-bullet:after,
+:is(body, .default-marker-odd) ul > li > ul > li> ul > li .list-bullet:after,//lvl3
+:is(body, .default-marker-odd) ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,//lvl5
+:is(body, .default-marker-odd) ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,//lvl7
+:is(body, .default-marker-odd) ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after { //lvl9 
+	--list-bullet-radius: 0;
+
+	border: none;
+	background-color: var(--list-marker-color);
+	width: var(--list-bullet-width-em-dash);
+	height: var(--list-bullet-height-em-dash);
+	transform: var(--list-bullet-transform);
+}
+
+:is(body, .default-marker-even) ul > li > ul > li .list-bullet::after,//lvl2
+:is(body, .default-marker-even) ol > li > ul > li > ul > li .list-bullet::after,
+:is(body, .default-marker-even) ul > li > ul > li > ul > li > ul > li .list-bullet::after,//lvl4
+:is(body, .default-marker-even) ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after,//lvl6
+:is(body, .default-marker-even) ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after,//lvl8
+:is(body, .default-marker-even) ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after { //lvl 10
+	--list-bullet-radius: 0;
+
+	border: none;
+	background-color: var(--list-marker-color);
+	width: var(--list-bullet-size);
+	height: var(--list-bullet-size);
+	transform: var(--list-bullet-transform);
+}
+
+/*	Ordered List Markers
+—————————————————————————————————————————————————————————*/
+ol,
+ol ol ol,
+ol ol ol ol ol,
+ol ol ol ol ol ol ol,
+ol ol ol ol ol ol ol ol ol {
+	list-style-type: decimal;
+}
+
+ol ol,
+ol ol ol ol,
+ol ol ol ol ol ol,
+ol ol ol ol ol ol ol ol,
+ol ol ol ol ol ol ol ol ol ol {
+	list-style-type: lower-alpha;
+}
+
+/*	Live Preview Unordered List Marker
+—————————————————————————————————————————————————————————*/
+
+.markdown-source-view.mod-cm6 .list-bullet:after {
+	--list-bullet-radius: 50%;
+
+	border-radius: var(--list-bullet-radius);
+	width: var(--list-bullet-size);
+	height: var(--list-bullet-size);
+	border: var(--list-bullet-border);
+}
+
+
+/*	Style Settings Options
+—————————————————————————————————————————————————————————*/
+
+/*	Style Settings Options
+—————————————————————————————————————————————————————————*/
+
+.step-list-0 ol {
+	list-style-type: none;
+}
+.step-list-0 ol {
+	counter-reset: decimal;
+}
+.step-list-0 ol > li::before {
+	content: "Step " counters(decimal, ".") ": ";
+	counter-increment: decimal;
+	color: var(--text-faint);
+	margin-left: -1.1em;
+}
+
+.step-list-1 ol {
+	list-style-type: none;
+}
+.step-list-1 ol {
+	counter-reset: decimal;
+}
+.step-list-1 ol > li::before {
+	content: counters(decimal, ".") ". ";
+	counter-increment: decimal;
+	color: var(--text-faint);
+	margin-left: -1.1em;
+}
+
+
+/*	Hyphen
+—————————————————————————————————————————————————————————*/
+.alternate-marker-odd-1 ul > li .list-bullet:after,
+.alternate-marker-odd-1 ol > li > ul > li .list-bullet:after,
+.alternate-marker-odd-1 ul > li > ul > li> ul > li .list-bullet:after,
+.alternate-marker-odd-1 ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,
+.alternate-marker-odd-1 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,
+.alternate-marker-odd-1 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,
+.alternate-marker-even-2 ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-2 ol > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-2 ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-2 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-2 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-2 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after {
+	--list-bullet-radius: 0;
+
+	width: var(--list-bullet-width-hyphen);
+	height: var(--list-bullet-height-hyphen);
+}
+
+/*	Bullet Operator
+—————————————————————————————————————————————————————————*/
+.alternate-marker-odd-2 ul > li .list-bullet:after,
+.alternate-marker-odd-2 ol > li > ul > li .list-bullet:after,
+.alternate-marker-odd-2 ul > li > ul > li> ul > li .list-bullet:after,
+.alternate-marker-odd-2 ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,
+.alternate-marker-odd-2 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,
+.alternate-marker-odd-2 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,
+.alternate-marker-even-3 ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-3 ol > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-3 ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-3 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-3 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-3 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after { 
+	--list-bullet-radius: 0;
+	--list-bullet-width: 2px;
+	--list-bullet-height: 2px;
+
+	width: var(--list-bullet-width);
+	height: var(--list-bullet-height);
+}
+
+/*	Square Bullet
+—————————————————————————————————————————————————————————*/
+.alternate-marker-odd-3 ul > li .list-bullet:after,
+.alternate-marker-odd-3 ol > li > ul > li .list-bullet:after,
+.alternate-marker-odd-3 ul > li > ul > li> ul > li .list-bullet:after,
+.alternate-marker-odd-3 ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,
+.alternate-marker-odd-3 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,
+.alternate-marker-odd-3 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after {
+
+	width: var(--list-bullet-size);
+	height: var(--list-bullet-size);
+}
+
+/*	Bullet
+—————————————————————————————————————————————————————————*/
+.alternate-marker-odd-4 ul > li .list-bullet:after,
+.alternate-marker-odd-4 ol > li > ul > li .list-bullet:after,
+.alternate-marker-odd-4 ul > li > ul > li> ul > li .list-bullet:after,
+.alternate-marker-odd-4 ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,
+.alternate-marker-odd-4 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,
+.alternate-marker-odd-4 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,
+.alternate-marker-even-4 ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-4 ol > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-4 ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-4 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-4 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-4 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after {
+	--list-bullet-radius: 50%;
+
+	width: var(--list-bullet-size);
+	height: var(--list-bullet-size);
+}
+
+/*	Ring
+—————————————————————————————————————————————————————————*/
+.alternate-marker-odd-5 ul > li .list-bullet:after,
+.alternate-marker-odd-5 ol > li > ul > li .list-bullet:after,
+.alternate-marker-odd-5 ul > li > ul > li> ul > li .list-bullet:after,
+.alternate-marker-odd-5 ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,
+.alternate-marker-odd-5 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,
+.alternate-marker-odd-5 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,
+.alternate-marker-even-5 ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-5 ol > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-5 ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-5 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-5 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-5 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after {
+	--list-bullet-radius: 50%;
+
+	width: var(--list-bullet-size-ring);
+	height: var(--list-bullet-size-ring);
+	border: 1.5px solid var(--list-marker-color);
+	background-color: transparent;
+}
+
+/*	Triangle
+—————————————————————————————————————————————————————————*/
+.alternate-marker-odd-6 ul > li .list-bullet:after,
+.alternate-marker-odd-6 ol > li > ul > li .list-bullet:after,
+.alternate-marker-odd-6 ul > li > ul > li> ul > li .list-bullet:after,
+.alternate-marker-odd-6 ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,
+.alternate-marker-odd-6 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,
+.alternate-marker-odd-6 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet:after,
+.alternate-marker-even-6 ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-6 ol > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-6 ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-6 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-6 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-6 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after {
+	--list-bullet-radius: 0;
+
+	width: var(--list-bullet-width-triangle);
+	height: var(--list-bullet-height-triangle);
+	border-top: var(--list-bullet-border-triangle) solid transparent;
+	border-left: var(--list-bullet-width-triangle) solid var(--list-marker-color);
+	border-bottom: var(--list-bullet-border-triangle) solid transparent;
+	background-color: transparent;
+	transform: translateX(2px);
+}
+
+
+/*	Even Markers
+—————————————————————————————————————————————————————————*/
+
+/*	Em-Dash
+—————————————————————————————————————————————————————————*/
+.alternate-marker-even-1 ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-1 ol > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-1 ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-1 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-1 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after,
+.alternate-marker-even-1 ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li .list-bullet::after {
+	--list-bullet-radius: 0;
+
+	background-color: var(--list-marker-color);
+	width: var(--list-bullet-width-em-dash);
+	height: var(--list-bullet-height-em-dash);
+}
+
+
+:is(body, .default-marker-even, .alternate-marker-even-1, .alternate-marker-even-2, .alternate-marker-even-3, .alternate-marker-even-4, .alternate-marker-even-5, .alternate-marker-even-6) ul > li > ul > li.is-collapsed .list-bullet:after,
+:is(body, .default-marker-even, .alternate-marker-even-1, .alternate-marker-even-2, .alternate-marker-even-3, .alternate-marker-even-4, .alternate-marker-even-5, .alternate-marker-even-6) ol > li > ul > li > ul > li.is-collapsed .list-bullet:after,
+:is(body, .default-marker-even, .alternate-marker-even-1, .alternate-marker-even-2, .alternate-marker-even-3, .alternate-marker-even-4, .alternate-marker-even-5, .alternate-marker-even-6) ul > li > ul > li > ul > li > ul > li.is-collapsed .list-bullet:after,
+:is(body, .default-marker-even, .alternate-marker-even-1, .alternate-marker-even-2, .alternate-marker-even-3, .alternate-marker-even-4, .alternate-marker-even-5, .alternate-marker-even-6) ul > li > ul > li > ul > li > ul > li > ul > li > ul > li.is-collapsed .list-bullet:after,
+:is(body, .default-marker-even, .alternate-marker-even-1, .alternate-marker-even-2, .alternate-marker-even-3, .alternate-marker-even-4, .alternate-marker-even-5, .alternate-marker-even-6) ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li.is-collapsed .list-bullet:after,
+:is(body, .default-marker-even, .alternate-marker-even-1, .alternate-marker-even-2, .alternate-marker-even-3, .alternate-marker-even-4, .alternate-marker-even-5, .alternate-marker-even-6) ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li.is-collapsed .list-bullet:after,
+:is(body, .default-marker-odd, .alternate-marker-odd-1, .alternate-marker-odd-2, .alternate-marker-odd-3, .alternate-marker-odd-4, .alternate-marker-odd-5, .alternate-marker-odd-6) ul > li.is-collapsed .list-bullet:after,
+:is(body, .default-marker-odd, .alternate-marker-odd-1, .alternate-marker-odd-2, .alternate-marker-odd-3, .alternate-marker-odd-4, .alternate-marker-odd-5, .alternate-marker-odd-6) ol > li > ul > li.is-collapsed .list-bullet:after,
+:is(body, .default-marker-odd, .alternate-marker-odd-1, .alternate-marker-odd-2, .alternate-marker-odd-3, .alternate-marker-odd-4, .alternate-marker-odd-5, .alternate-marker-odd-6) ul > li > ul > li> ul > li.is-collapsed .list-bullet:after,
+:is(body, .default-marker-odd, .alternate-marker-odd-1, .alternate-marker-odd-2, .alternate-marker-odd-3, .alternate-marker-odd-4, .alternate-marker-odd-5, .alternate-marker-odd-6) ul > li > ul > li > ul > li > ul > li > ul > li.is-collapsed .list-bullet:after,
+:is(body, .default-marker-odd, .alternate-marker-odd-1, .alternate-marker-odd-2, .alternate-marker-odd-3, .alternate-marker-odd-4, .alternate-marker-odd-5, .alternate-marker-odd-6) ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li.is-collapsed .list-bullet:after,
+:is(body, .default-marker-odd, .alternate-marker-odd-1, .alternate-marker-odd-2, .alternate-marker-odd-3, .alternate-marker-odd-4, .alternate-marker-odd-5, .alternate-marker-odd-6) ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li.is-collapsed .list-bullet:after {
+	background-color: var(--list-marker-color-collapsed);
+	box-shadow: 0 0 0 4px rgba(var(--color-accent-rgb), .2);
+}

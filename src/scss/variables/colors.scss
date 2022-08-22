@@ -1,0 +1,265 @@
+/*	Sanctum's Color Palette
+/*	Every shade is planned according to specific contrast ratios, and
+/*	based on Le Corbusier's Architectural Polychromy. Every color-50,
+/*	for example, when greyscaled, should look the same.
+—————————————————————————————————————————————————————————*/
+
+:root {
+	--white:	253, 254, 254;
+	--gray-10:	244, 244, 240;
+	--gray-20:	226, 224, 220;
+	--gray-30:	199, 197, 194;
+	--gray-40:	169, 168, 165;
+	--gray-50:	142, 140, 139;
+	--gray-60:	112, 110, 109;
+	--gray-70:	84, 81, 81;
+	--gray-80:	58, 56, 56;
+	--gray-90:	38, 38, 37;
+	--gray-100: 22, 22, 22;
+	--black:	0, 0, 0;
+
+	--cyan-10: hsl(90, 15.4%, 94.9%);
+	--cyan-20: hsl(98.2, 15.9%, 86.5%);
+	--cyan-30: hsl(155, 18.7%, 74.9%);
+	--cyan-40: hsl(182.2, 26.2%, 59.6%);
+	--cyan-50: hsl(187.4, 22.4%, 50%);
+	--cyan-60: hsl(199.5, 38.8%, 40.4%);
+	--cyan-70: hsl(202.8, 57.6%, 29.6%);
+	--cyan-80: hsl(200.9, 100%, 18%);
+	--cyan-90: hsl(206.1, 100%, 13.5%);
+	--cyan-100:hsl(214.8, 100%, 9.8%);
+	--cyan: var(--cyan-50);
+
+	--red-10: hsl(12.6, 100%, 96.3%);
+	--red-20: hsl(12.9, 100%, 90%);
+	--red-30: hsl(12, 100%, 81.4%);
+	--red-40: hsl(11.7, 94.7%, 70.4%);
+	--red-50: hsl(11.2, 88.7%, 58.4%);
+	--red-60: hsl(9.6, 66.2%, 46.5%);
+	--red-70: hsl(358, 63.4%, 37.5%);
+	--red-80: hsl(342.1, 82.5%, 24.7%);
+	--red-90: hsl(346.4, 100%, 16.5%);
+	--red-100:hsl(357.8, 100%, 10.6%);
+	--red: var(--red-60);
+
+	--orange-10: hsl(28.7, 85.2%, 94.7%);
+	--orange-20: hsl(27.8, 79.4%, 86.7%);
+	--orange-30: hsl(30.2, 98.6%, 72%);
+	--orange-40: hsl(24.4, 90.8%, 61.8%);
+	--orange-50: hsl(18.3, 75%, 54.5%);
+	--orange-60: hsl(12.8, 60.5%, 45.7%);
+	--orange-70: hsl(358, 63.4%, 37.5%);
+	--orange-80: hsl(342.1, 82.5%, 24.7%);
+	--orange-90: hsl(346.4, 100%, 16.5%);
+	--orange-100:hsl(357.8, 100%, 10.6%);
+	--orange: var(--orange-40);
+
+	--yellow-10: hsl(44.3, 95.5%, 91.4%);
+	--yellow-20: hsl(41.1, 88.1%, 80.2%);
+	--yellow-30: hsl(40.2, 87.2%, 63.1%);
+	--yellow-40: hsl(41.6, 70.4%, 49%);
+	--yellow-50: hsl(42.7, 100%, 36.1%);
+	--yellow-60: hsl(39.5, 100%, 29.8%);
+	--yellow-70: hsl(35, 100%, 23.5%);
+	--yellow-80: hsl(28.4, 100%, 18.2%);
+	--yellow-90: hsl(19.4, 100%, 13.9%);
+	--yellow-100:hsl(3.5, 100%, 10.2%);
+	--yellow: var(--yellow-30);
+
+	--green-10: hsl(77.6, 48.6%, 93.1%);
+	--green-20: hsl(76.6, 48.5%, 81%);
+	--green-30: hsl(83.5, 44%, 67.1%);
+	--green-40: hsl(96.9, 31.8%, 56.9%);
+	--green-50: hsl(114.6, 22.4%, 49%);
+	--green-60: hsl(139, 32.3%, 36.5%);
+	--green-70: hsl(144.9, 52.8%, 24.1%);
+	--green-80: hsl(148.2, 100%, 12.9%);
+	--green-90: hsl(134.7, 100%, 8.8%);
+	--green-100:hsl(120, 100%, 5.3%);
+	--green: var(--green-50);
+
+	--viridian-10: hsl(96, 18.5%, 94.7%);
+	--viridian-20: hsl(100, 21.1%, 86.1%);
+	--viridian-30: hsl(111.8, 17.5%, 75.3%);
+	--viridian-40: hsl(144.3, 19%, 61.8%);
+	--viridian-50: hsl(151.5, 24.9%, 48%);
+	--viridian-60: hsl(161, 34.8%, 35.5%);
+	--viridian-70: hsl(165.7, 52.1%, 23.7%);
+	--viridian-80: hsl(168, 100%, 12.7%);
+	--viridian-90: hsl(163.6, 100%, 8.6%);
+	--viridian-100:hsl(156.9, 100%, 5.1%);
+	--viridian: var(--viridian-50);
+
+	--blue-10: hsl(195, 16.7%, 95.3%);
+	--blue-20: hsl(190.9, 16.4%, 86.9%);
+	--blue-30: hsl(190.4, 18.7%, 75.9%);
+	--blue-40: hsl(203.1, 36.3%, 64.9%);
+	--blue-50: hsl(208.1, 34.2%, 55.9%);
+	--blue-60: hsl(217.1, 31.4%, 47.5%);
+	--blue-70: hsl(215.9, 45.1%, 35.7%);
+	--blue-80: hsl(216.3, 59.4%, 25.1%);
+	--blue-90: hsl(215, 83.7%, 16.9%);
+	--blue-100:hsl(221, 100%, 11.8%);
+	--blue: var(--blue-60);
+
+	--pink-10: hsl(352.5, 100%, 96.9%);
+	--pink-20: hsl(355.6, 100%, 92%);
+	--pink-30: hsl(352.8, 94.9%, 84.5%);
+	--pink-40: hsl(351.4, 86.2%, 74.5%);
+	--pink-50: hsl(348.5, 79.3%, 63.9%);
+	--pink-60: hsl(343.4, 62.8%, 49.6%);
+	--pink-70: hsl(339.4, 71.6%, 35.9%);
+	--pink-80: hsl(342.1, 82.5%, 24.7%);
+	--pink-90: hsl(346.4, 100%, 16.5%);
+	--pink-100:hsl(357.8, 100%, 10.6%);
+	--pink: var(--pink-50);
+
+	--pistachio-10: hsl(69.2, 37.1%, 93.1%);
+	--pistachio-20: hsl(67.1, 37.8%, 82.4%);
+	--pistachio-30: hsl(64.8, 36.9%, 67.1%);
+	--pistachio-40: hsl(63.5, 42.6%, 47.8%);
+	--pistachio-50: hsl(63, 70.9%, 33.7%);
+	--pistachio-60: hsl(62.1, 100%, 22.7%);
+	--pistachio-70: hsl(61.4, 100%, 16.7%);
+	--pistachio-80: hsl(60, 100%, 11.6%);
+	--pistachio-90: hsl(58.5, 100%, 7.8%);
+	--pistachio-100:hsl(52.8, 100%, 4.9%);
+	--pistachio: var(--pistachio-50);
+
+	--lavender-10: hsl(264deg, 63%, 97%);
+	--lavender-20: hsl(264deg, 64%, 91%);
+	--lavender-30: hsl(264deg, 61%, 84%);
+	--lavender-40: hsl(266deg, 58%, 75%);
+	--lavender-50: hsl(268deg, 57%, 66%);
+	--lavender-60: hsl(270deg, 55%, 56%);
+	--lavender-70: hsl(271deg, 57%, 43%);
+	--lavender-80: hsl(275deg, 89%, 29%);
+	--lavender-90: hsl(273deg, 100%, 21%);
+	--lavender-100: hsl(266deg, 100%, 15%);
+	--lavender: var(--lavender-50);
+}
+
+/*
+
+	--cyan-10: #f2f4f0;
+	--cyan-20: #dbe2d7;
+	--cyan-30: #b3cbc1;
+	--cyan-40: #7db1b3;
+	--cyan-50: #63959c;
+	--cyan-60: #3f758f;
+	--cyan-70: #205677;
+	--cyan-80: #003c5c;
+	--cyan-90: #002745;
+	--cyan-100:#001532;
+	--cyan: var(--cyan-50);
+
+	--red-10: #fff0ec;
+	--red-20: #ffd7cc;
+	--red-30: #ffb3a0;
+	--red-40: #fb886c;
+	--red-50: #f35a37;
+	--red-60: #c54128;
+	--red-70: #9c2327;
+	--red-80: #730b2a;
+	--red-90: #540013;
+	--red-100:#360002;
+	--red: var(--red-60);
+
+	--orange-10: #fdf1e6;
+	--orange-20: #f8dbc2;
+	--orange-30: #feb871;
+	--orange-40: #f68d45;
+	--orange-50: #e26934;
+	--orange-60: #bb4c2e;
+	--orange-70: #9c2327;
+	--orange-80: #730b2a;
+	--orange-90: #540013;
+	--orange-100:#360002;
+	--orange: var(--orange-40);
+
+	--yellow-10: #fef3d4;
+	--yellow-20: #f9dda0;
+	--yellow-30: #f3bd4f;
+	--yellow-40: #d59f25;
+	--yellow-50: #b88300;
+	--yellow-60: #986400;
+	--yellow-70: #784600;
+	--yellow-80: #5d2c00;
+	--yellow-90: #471700;
+	--yellow-100:#340300;
+	--yellow: var(--yellow-30);
+
+	--green-10: #f1f6e5;
+	--green-20: #d9e6b7;
+	--green-30: #b3d086;
+	--green-40: #89b46e;
+	--green-50: #669961;
+	--green-60: #3f7b52;
+	--green-70: #1d5e38;
+	--green-80: #00421f;
+	--green-90: #002d0b;
+	--green-100:#001b00;
+	--green: var(--green-50);
+
+	--viridian-10: #f1f4ef;
+	--viridian-20: #d9e3d4;
+	--viridian-30: #b8cbb5;
+	--viridian-40: #8bb09a;
+	--viridian-50: #5c997c;
+	--viridian-60: #3b7a66;
+	--viridian-70: #1d5c4d;
+	--viridian-80: #004134;
+	--viridian-90: #002c20;
+	--viridian-100:#001a10;
+	--viridian: var(--viridian-50);
+
+	--blue-10: #f1f4f5;
+	--blue-20: #d8e1e3;
+	--blue-30: #b6c9cd;
+	--blue-40: #85adc6;
+	--blue-50: #6891b5;
+	--blue-60: #53709f;
+	--blue-70: #325384;
+	--blue-80: #1a3866;
+	--blue-90: #07254f;
+	--blue-100:#00133c;
+	--blue: var(--blue-60);
+
+	--pink-10: #ffeff1;
+	--pink-20: #ffd6d9;
+	--pink-30: #fdb2bb;
+	--pink-40: #f68696;
+	--pink-50: #ec5a76;
+	--pink-60: #ce2f5b;
+	--pink-70: #9d1a47;
+	--pink-80: #730b2a;
+	--pink-90: #540013;
+	--pink-100:#360002;
+	--pink: var(--pink-50);
+
+	--pistachio-10: #f2f4e7;
+	--pistachio-20: #dfe3c1;
+	--pistachio-30: #c5ca8c;
+	--pistachio-40: #a8ae46;
+	--pistachio-50: #8d9319;
+	--pistachio-60: #707400;
+	--pistachio-70: #535500;
+	--pistachio-80: #3b3b00;
+	--pistachio-90: #282700;
+	--pistachio-100:#191600;
+	--pistachio: var(--pistachio-50);
+
+	--lavender-10: #f6f3fc;
+	--lavender-20: #e5d9f7;
+	--lavender-30: #d1bdef;
+	--lavender-40: #ba9ae4;
+	--lavender-50: #a577da;
+	--lavender-60: #8f51cd;
+	--lavender-70: #702fac;
+	--lavender-80: #55088c;
+	--lavender-90: #3b006b;
+	--lavender-100: #21004d;
+	--lavender: var(--lavender-50);
+}
+
+*/

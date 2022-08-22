@@ -1,21 +1,22 @@
 {
   "name": "obsidian-sanctum",
   "version": "1.0.0",
-  "description": "A minimalist theme with the aim of creating a serene space of retreat, for thought and uninterrupted work.",
+  "description": "A minimalist theme for creating a serene space of retreat, for thought and uninterrupted work.",
   "main": "index.js",
   "scripts": {
-    "dev": "node ./esbuild.config.mjs",
-    "build": "node ./esbuild.config.mjs production"
+	"dev": "node ./esbuild.config.mjs",
+	"build": "node ./esbuild.config.mjs production",
+	"version": "node version-bump.mjs && git add manifest.json versions.json"
   },
-  "devDependencies": {
-    "dotenv": "^11.0.0",
-    "esbuild": "^0.14.11",
-    "esbuild-sass-plugin": "^2.0.3",
-    "postcss": "^8.4.5",
-    "postcss-cli": "^9.1.0"
-  },
+  "keywords": [
+    "obsidianmd"
+  ],
+  "author": "jdanielmourao",
+  "license": "MIT",
   "dependencies": {
-    "hsluv-sass": "^2.0.1",
-    "postcss-nested": "^5.0.6"
+    "dotenv": "^16.0.1",
+    "esbuild": "^0.15.1",
+    "esbuild-plugin-time": "^1.0.0",
+    "esbuild-sass-plugin": "^2.3.2"
   }
 }

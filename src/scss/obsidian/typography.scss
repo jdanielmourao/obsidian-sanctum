@@ -1,0 +1,228 @@
+body {
+/*	Font Settings
+—————————————————————————————————————————————————————————*/
+font-feature-settings: 'ss05', 'ss02' on; // 'zero'
+-webkit-font-smoothing: subpixel-antialiased;
+// text-rendering: geometricPrecision;
+// font-optical-sizing: auto;
+
+
+
+--line-height-normal: 1.5;
+
+/*	Editor font
+—————————————————————————————————————————————————————————*/
+.markdown-source-view.mod-cm6 .cm-scroller {
+	font-family: var(--font-editor);
+}
+
+
+/*	Headings
+—————————————————————————————————————————————————————————*/
+--h1-size: 2em;
+--h2-size: 1.75em;
+--h3-size: 1.5em;
+--h4-size: 1.25em;
+--h5-size: 1.125em;
+--h6-size: 1em;
+
+--h1-color: inherit; //default values
+--h2-color: inherit;
+--h3-color: inherit;
+--h4-color: inherit;
+--h5-color: inherit;
+--h6-color: inherit;
+
+--h1-line-height: 1.2; //default values
+--h2-line-height: 1.2;
+--h3-line-height: 1.3;
+--h4-line-height: 1.4;
+--h5-line-height: var(--line-height-normal);
+--h6-line-height: var(--line-height-normal);
+
+--h1-style: normal; //default values
+--h2-style: normal;
+--h3-style: normal;
+--h4-style: normal;
+--h5-style: normal;
+--h6-style: normal;
+
+--h1-variant: normal; //default values, relative to font-variant shorthand
+--h2-variant: normal;
+--h3-variant: normal;
+--h4-variant: normal;
+--h5-variant: normal;
+--h6-variant: normal;
+
+--h1-weight: 600;
+--h2-weight: 600;
+--h3-weight: 600;
+--h4-weight: 600;
+--h5-weight: 600;
+--h6-weight: 600;
+
+}
+
+body {
+	--h1-font: var(--font-text);
+	--h2-font: var(--font-text);
+	--h3-font: var(--font-text);
+	--h4-font: var(--font-text);
+	--h5-font: var(--font-text);
+	--h6-font: var(--font-text);
+}
+
+h1,
+.markdown-rendered h1,
+.HyperMD-header-1,
+.HyperMD-list-line .cm-header-1 {
+	border: none;
+	font-family: var(--h1-font);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*	Heading Line Dividers
+—————————————————————————————————————————————————————————*/
+
+.h1-line h1,
+.h1-line .markdown-rendered h1 {
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.h2-line h2,
+.h2-line .markdown-rendered h2 {
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.h3-line h3,
+.h3-line .markdown-rendered h3 {
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.h4-line h4,
+.h4-line .markdown-rendered h4 {
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.h5-line h5,
+.h5-line .markdown-rendered h5 {
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.h6-line h6,
+.h6-line .markdown-rendered h6 {
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+
+
+/*	Heading Outline Counters
+—————————————————————————————————————————————————————————*/
+body {
+	--heading-counter: " ";
+}
+
+/*	H1 is Lvl0
+—————————————————————————————————————————————————————————*/
+.heading-counter-0 .el-h1 {
+	counter-increment: h1-counter;
+	counter-reset: h1-counter;
+	counter-set: h1-counter;
+}
+.heading-counter-0 .el-h1 h1:before {
+	content: var(--heading-counter) counter(h1-counter) ". ";
+}
+.heading-counter-0 .el-h2 {
+	counter-increment: h2-counter;
+	counter-reset: h3-counter;
+	counter-set: h1-counter;
+}
+.heading-counter-0 .el-h2 h2:before {
+	content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) ". ";
+}
+.heading-counter-0 .el-h3 {
+	counter-increment: h3-counter;
+	counter-reset: h4-counter;
+	counter-set: h1-counter;
+}
+.heading-counter-0 .el-h3 h3:before {
+	content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) ". ";
+}
+.heading-counter-0 .el-h4 {
+	counter-increment: h4-counter;
+	counter-reset: h5-counter;
+	counter-set: h1-counter;
+}
+.heading-counter-0 .el-h4 h4:before {
+	content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) ". ";
+}
+.heading-counter-0 .el-h5 {
+	counter-increment: h5-counter;
+	counter-reset: h6-counter;
+	counter-set: h1-counter;
+}
+.heading-counter-0 .el-h5 h5:before {
+	content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) ". ";
+}
+.heading-counter-0 .el-h6 {
+	counter-increment: h6-counter;
+	counter-set: h1-counter;
+}
+.heading-counter-0 .el-h6 h6:before {
+	content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) "." counter(h6-counter) ". ";
+}
+
+/*	H1 is Lvl1
+—————————————————————————————————————————————————————————*/
+.heading-counter-1 .el-h1 {
+	counter-increment: h1-counter;
+	counter-reset: h1-counter;
+}
+.heading-counter-1 .el-h1 h1:before {
+	content: var(--heading-counter) counter(h1-counter) ". ";
+}
+.heading-counter-1 .el-h2 {
+	counter-increment: h2-counter;
+	counter-reset: h3-counter;
+}
+.heading-counter-1 .el-h2 h2:before {
+	content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) ". ";
+}
+.heading-counter-1 .el-h3 {
+	counter-increment: h3-counter;
+	counter-reset: h4-counter;
+}
+.heading-counter-1 .el-h3 h3:before {
+	content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) ". ";
+}
+.heading-counter-1 .el-h4 {
+	counter-increment: h4-counter;
+	counter-reset: h5-counter;
+}
+.heading-counter-1 .el-h4 h4:before {
+	content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) ". ";
+}
+.heading-counter-1 .el-h5 {
+	counter-increment: h5-counter;
+	counter-reset: h6-counter;
+}
+.heading-counter-1 .el-h5 h5:before {
+	content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) ". ";
+}
+.heading-counter-1 .el-h6 {
+	counter-increment: h6-counter;
+}
+.heading-counter-1 .el-h6 h6:before {
+	content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) "." counter(h6-counter) ". ";
+}

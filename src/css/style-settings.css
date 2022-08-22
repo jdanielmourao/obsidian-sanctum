@@ -1,0 +1,1142 @@
+/* @settings
+
+name: Sanctum
+id: sanctum
+settings:
+	-
+		id: light-mode-contrast-mode
+		title: Light mode contrast mode
+		type: class-select
+		allowEmpty: false
+		default: 'sanctum-default-light'
+		options:
+			-
+				label: Default
+				value: 'sanctum-default-light'
+			-
+				label: Contrast
+				value: 'sanctum-contrast-light'
+			-
+				label: White
+				value: 'sanctum-white'
+	-
+		id: dark-mode-contrast-mode
+		title: Dark mode contrast mode
+		type: class-select
+		allowEmpty: false
+		default: 'sanctum-default-dark'
+		options:
+			-
+				label: Default
+				value: 'sanctum-default-dark'
+			-
+				label: Contrast
+				value: 'sanctum-contrast-dark'
+			-
+				label: True Black
+				value: 'sanctum-black'
+	-
+				id: color-accent-rgb
+				title: Accent color
+				type: variable-themed-color
+				format: rgb-values
+				default-light: 'rgb(246, 141, 69)'
+				default-dark: 'rgb(102, 153, 97)'
+	-
+		id: font-editor-theme
+		title: Editor font
+		type: variable-text
+		default: '??'
+	-
+		id: active-line-highlighting
+		title: Active line highlighting
+		type: heading
+		level: 1
+		collapsed: true
+	-
+			id: active-line-accent
+			title: Active Line Highlighting
+			type: variable-select
+			default: 'transparent'
+			options:
+					-
+						label: 'No highlighting'
+						value: 'transparent'
+					-
+						label: 'Subtle highlight'
+						value: 'var(--background-hover)'
+					-
+						label: 'Accent color highlight'
+						value: 'rgba(var(--color-accent-rgb), .3)'
+	-
+		id: asides
+		title: Asides
+		type: heading
+		level: 1
+		collapsed: true
+	-
+				id: aside-counter
+				title: Toggle aside counter [Beta]
+				type: class-toggle
+	-
+				id: aside-background
+				title: Aside background color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: aside-background-hover
+				title: Aside background hover color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+		id: blockquotes
+		title: Blockquotes
+		type: heading
+		level: 1
+		collapsed: true
+	-
+				id: blockquote-border-color
+				title: Blockquote border color
+				type: variable-themed-color
+				format: hex
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: blockquote-border-thickness
+				title: Blockquote border thickness (px)
+				type: variable-number
+				default: 0
+				format: 'px'
+	-
+				id: blockquote-size
+				title: Blockquote text size (rem)
+				type: variable-number
+				default: 1
+				format: 'rem'
+	-
+				id: blockquote-font-style
+				title: Blockquote font style
+				type: variable-select
+				default: 'normal'
+				options:
+					- 'normal'
+					- 'italic'
+					- 'oblique'
+	-
+		id: callouts
+		title: Callouts
+		type: heading
+		level: 1
+		collapsed: true
+	-
+				id: callout-border-width
+				title: Callout left border width (px)
+				type: variable-number
+				default: 0
+				format: 'px'
+	-
+				id: callout-border-opacity
+				title: Callout border color opacity (%)
+				type: variable-number
+				default: 50
+				format: '%'
+	-
+				id: callout-outline
+				title: Callout border
+				description: Adds a subtle border around callouts
+				type: class-toggle
+	-
+		id: code-blocks
+		title: Code Blocks
+		type: heading
+		level: 1
+		collapsed: true
+	-
+				id: code-lines
+				title: Toggle code block line numbers
+				description: Adds line numbers to code blocks
+				type: class-toggle
+	-
+				id: code-label
+				title: Toggle code block labels
+				description: Adds programming language labels to code blocks
+				type: class-toggle
+	-
+				id: code-border
+				title: Code borders
+				description: Adds a subtle border around code blocks
+				type: class-toggle
+	-
+				id: syntax-highlighting
+				title: Syntax Highlighting color scheme
+				description: This will only affect code block text colors.
+				type: class-select
+				allowEmpty: false
+				default: '#'
+				options:
+					-
+						label: 'Default'
+						value: '#'
+					-
+						label: 'Nord'
+						value: 'nord'
+					-
+						label: 'Dracula'
+						value: 'dracula'
+					-
+						label: 'One Dark/Light'
+						value: 'one-dark'
+					-
+						label: 'Solarized'
+						value: 'solarized'
+					-
+						label: 'Gruvbox'
+						value: 'gruvbox'
+					-
+						label: 'Material'
+						value: 'material'
+	-
+		id: embeds
+		title: Embeds / Transclusions
+		type: heading
+		level: 1
+		collapsed: true
+	-
+				id: clean-embeds
+				title: Clean embeds
+				description: It is recommended to have every setting below set to default while clean embeds is toggled on.
+				type: class-toggle
+	-
+				id: embed-background
+				title: Embed background color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: embed-border-color
+				title: Embed border color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: embed-border-width
+				title: Embed left border width (px)
+				type: variable-number
+				default: 1
+				format: 'px'
+	-
+		id: emphasis
+		title: Emphasis
+		type: heading
+		level: 1
+		collapsed: true
+	-
+				id: highlight
+				title: Highlight background color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: bold-color
+				title: Bold text color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: italic-color
+				title: Italic text color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+		id: headings
+		title: Headings
+		type: heading
+		level: 1
+		collapsed: true
+	-
+				id: heading-outline
+				title: Heading outline
+				description: Select the heading outline method you prefer. This will only affect Reading View. This feature is reliant on the Contextual Typography plugin.
+				type: class-select
+				allowEmpty: false
+				default: '#'
+				options:
+					-
+						label: 'Default'
+						value: '#'
+					-
+						label: 'H1 is Lvl 0'
+						value: 'heading-counter-0'
+					-
+						label: 'H1 is lvl 1'
+						value: 'heading-counter-1'
+	-
+				id: headings-1
+				title: Level 1 headings
+				type: heading
+				level: 2
+				collapsed: true
+	-	
+						id: h1-font
+						title: H1 font
+						type: variable-text
+						default: 'Inter, sans-serif'
+	-	
+						id: h1-color
+						title: H1 color
+						description: For reverting back to default text color, click "Cancel" inside the color picker, and then click the "Restore default" button next to it.
+						type: variable-color
+						opacity: false
+						format: hsl
+						default: 'hsl(24.4, 90.8%, 61.8%)'
+	-
+						id: h1-line
+						title: H1 divider line
+						type: class-toggle
+	-
+						id: h1-size
+						title: H1 size (em)
+						type: variable-number
+						default: 2
+						format: 'em'
+	-
+						id: h1-weight
+						title: H1 weight
+						description: Available weights depend on the font itself.
+						type: variable-select
+						default: '600'
+						options:
+							- '100'
+							- '200'
+							- '300'
+							- '400'
+							- '500'
+							- '600'
+							- '700'
+							- '800'
+							- '900'
+	-
+						id: h1-variant
+						title: H1 font variant
+						description: Available font variants depend on the font itself.
+						type: variable-select
+						default: 'normal'
+						options:
+							- 'normal'
+							- 'small-caps'
+							- 'all-small-caps'
+							- 'petite-caps'
+							- 'all-petite-caps'
+							- 'titling-caps'
+	-
+						id: h1-style
+						title: H1 font style
+						description: Available font styles depend on the font itself.
+						type: variable-select
+						default: 'normal'
+						options:
+							- 'normal'
+							- 'italic'
+							- 'oblique'
+	-
+				id: headings-2
+				title: Level 2 headings
+				type: heading
+				level: 2
+				collapsed: true
+	-	
+						id: h2-font
+						title: H2 font
+						type: variable-text
+						default: 'Inter, sans-serif'
+	-	
+						id: h2-color
+						title: H2 color
+						description: For reverting back to default text color, click "Cancel" inside the color picker, and then click the "Restore default" button next to it.
+						type: variable-color
+						opacity: false
+						format: hsl
+						default: 'hsl(40.2, 87.2%, 63.1%)'
+	-
+						id: h2-line
+						title: H2 divider line
+						type: class-toggle
+	-
+						id: h2-size
+						title: H2 size (em)
+						type: variable-number
+						default: 1.75
+						format: 'em'
+	-
+						id: h2-weight
+						title: H2 weight
+						description: Available weights depend on the font itself.
+						type: variable-select
+						default: '600'
+						options:
+							- '100'
+							- '200'
+							- '300'
+							- '400'
+							- '500'
+							- '600'
+							- '700'
+							- '800'
+							- '900'
+	-
+						id: h2-variant
+						title: H2 font variant
+						description: Available font variants depend on the font itself.
+						type: variable-select
+						default: 'normal'
+						options:
+							- 'normal'
+							- 'small-caps'
+							- 'all-small-caps'
+							- 'petite-caps'
+							- 'all-petite-caps'
+							- 'titling-caps'
+	-
+						id: h2-style
+						title: H2 font style
+						description: Available font styles depend on the font itself.
+						type: variable-select
+						default: 'normal'
+						options:
+							- 'normal'
+							- 'italic'
+							- 'oblique'
+	-
+				id: headings-3
+				title: Level 3 headings
+				type: heading
+				level: 2
+				collapsed: true
+	-	
+						id: h3-font
+						title: H3 font
+						type: variable-text
+						default: 'Inter, sans-serif'
+	-	
+						id: h3-color
+						title: H3 color
+						description: For reverting back to default text color, click "Cancel" inside the color picker, and then click the "Restore default" button next to it.
+						type: variable-color
+						opacity: false
+						format: hsl
+						default: 'hsl(63, 70.9%, 33.7%)'
+	-
+						id: h3-line
+						title: H3 divider line
+						type: class-toggle
+	-
+						id: h3-size
+						title: H3 size (em)
+						type: variable-number
+						default: 1.5
+						format: 'em'
+	-
+						id: h3-weight
+						title: H3 weight
+						description: Available weights depend on the font itself.
+						type: variable-select
+						default: '600'
+						options:
+							- '100'
+							- '200'
+							- '300'
+							- '400'
+							- '500'
+							- '600'
+							- '700'
+							- '800'
+							- '900'
+	-
+						id: h3-variant
+						title: H3 font variant
+						description: Available font variants depend on the font itself.
+						type: variable-select
+						default: 'normal'
+						options:
+							- 'normal'
+							- 'small-caps'
+							- 'all-small-caps'
+							- 'petite-caps'
+							- 'all-petite-caps'
+							- 'titling-caps'
+	-
+						id: h3-style
+						title: H3 font style
+						description: Available font styles depend on the font itself.
+						type: variable-select
+						default: 'normal'
+						options:
+							- 'normal'
+							- 'italic'
+							- 'oblique'
+	-
+				id: headings-4
+				title: Level 4 headings
+				type: heading
+				level: 2
+				collapsed: true
+	-	
+						id: h4-font
+						title: H4 font
+						type: variable-text
+						default: 'Inter, sans-serif'
+	-	
+						id: h4-color
+						title: H4 color
+						description: For reverting back to default text color, click "Cancel" inside the color picker, and then click the "Restore default" button next to it.
+						type: variable-color
+						opacity: false
+						format: hsl
+						default: 'hsl(151.5, 24.9%, 48%)'
+	-
+						id: h4-line
+						title: H4 divider line
+						type: class-toggle
+	-
+						id: h4-size
+						title: H4 size (em)
+						type: variable-number
+						default: 1.25
+						format: 'em'
+	-
+						id: h4-weight
+						title: H4 weight
+						description: Available weights depend on the font itself.
+						type: variable-select
+						default: '600'
+						options:
+							- '100'
+							- '200'
+							- '300'
+							- '400'
+							- '500'
+							- '600'
+							- '700'
+							- '800'
+							- '900'
+	-
+						id: h4-variant
+						title: H4 font variant
+						description: Available font variants depend on the font itself.
+						type: variable-select
+						default: 'normal'
+						options:
+							- 'normal'
+							- 'small-caps'
+							- 'all-small-caps'
+							- 'petite-caps'
+							- 'all-petite-caps'
+							- 'titling-caps'
+	-
+						id: h4-style
+						title: H4 font style
+						description: Available font styles depend on the font itself.
+						type: variable-select
+						default: 'normal'
+						options:
+							- 'normal'
+							- 'italic'
+							- 'oblique'
+	-
+				id: headings-5
+				title: Level 5 headings
+				type: heading
+				level: 2
+				collapsed: true
+	-	
+						id: h5-font
+						title: H5 font
+						type: variable-text
+						default: 'Inter, sans-serif'
+	-	
+						id: h5-color
+						title: H5 color
+						description: For reverting back to default text color, click "Cancel" inside the color picker, and then click the "Restore default" button next to it.
+						type: variable-color
+						opacity: false
+						format: hsl
+						default: 'hsl(217.1, 31.4%, 47.5%)'
+	-
+						id: h5-line
+						title: H5 divider line
+						type: class-toggle
+	-
+						id: h5-size
+						title: H5 size (em)
+						type: variable-number
+						default: 1.125
+						format: 'em'
+	-
+						id: h5-weight
+						title: H5 weight
+						description: Available weights depend on the font itself.
+						type: variable-select
+						default: '600'
+						options:
+							- '100'
+							- '200'
+							- '300'
+							- '400'
+							- '500'
+							- '600'
+							- '700'
+							- '800'
+							- '900'
+	-
+						id: h5-variant
+						title: H5 font variant
+						description: Available font variants depend on the font itself.
+						type: variable-select
+						default: 'normal'
+						options:
+							- 'normal'
+							- 'small-caps'
+							- 'all-small-caps'
+							- 'petite-caps'
+							- 'all-petite-caps'
+							- 'titling-caps'
+	-
+						id: h5-style
+						title: H5 font style
+						description: Available font styles depend on the font itself.
+						type: variable-select
+						default: 'normal'
+						options:
+							- 'normal'
+							- 'italic'
+							- 'oblique'
+	-
+				id: headings-6
+				title: Level 6 headings
+				type: heading
+				level: 2
+				collapsed: true
+	-	
+						id: h6-font
+						title: H6 font
+						type: variable-text
+						default: 'Inter, sans-serif'
+	-	
+						id: h6-color
+						title: H6 color
+						description: For reverting back to default text color, click "Cancel" inside the color picker, and then click the "Restore default" button next to it.
+						type: variable-color
+						opacity: false
+						format: hsl
+						default: 'hsl(268deg, 57%, 66%)'
+	-
+						id: h6-line
+						title: H6 divider line
+						type: class-toggle
+	-
+						id: h6-size
+						title: H6 size (em)
+						type: variable-number
+						default: 1
+						format: 'em'
+	-
+						id: h6-weight
+						title: H6 weight
+						description: Available weights depend on the font itself.
+						type: variable-select
+						default: '600'
+						options:
+							- '100'
+							- '200'
+							- '300'
+							- '400'
+							- '500'
+							- '600'
+							- '700'
+							- '800'
+							- '900'
+	-
+						id: h6-variant
+						title: H6 font variant
+						description: Available font variants depend on the font itself.
+						type: variable-select
+						default: 'normal'
+						options:
+							- 'normal'
+							- 'small-caps'
+							- 'all-small-caps'
+							- 'petite-caps'
+							- 'all-petite-caps'
+							- 'titling-caps'
+	-
+						id: h6-style
+						title: H6 font style
+						description: Available font styles depend on the font itself.
+						type: variable-select
+						default: 'normal'
+						options:
+							- 'normal'
+							- 'italic'
+							- 'oblique'
+	-
+		id: indentation-guides
+		title: Indentation guides
+		type: heading
+		level: 1
+		collapsed: true
+	-
+				id: indentation-guide-active
+				title: Indentation guide active color
+				type: variable-select
+				default: 'rgba(var(--mono-rgb-100), 0.3)'
+				options:
+					-
+						label: Default
+						value: 'rgba(var(--mono-rgb-100), 0.3)'
+					-
+						label: Accent color
+						value: 'var(--interactive)'
+	-
+		id: links
+		title: Links
+		type: heading
+		level: 1
+		collapsed: true
+	-
+			id: internal-links
+			title: Internal links
+			type: heading
+			level: 2
+			collapsed: false
+	-
+					id: link-color
+					title: Internal link color
+					type: variable-themed-color
+					format: rgb
+					opacity: false
+					default-light: 'rgb(var(--interactive-accent-rgb))'
+					default-dark: 'rgb(var(--interactive-accent-rgb))'
+	-
+					id: link-color-hover
+					title: Internal link color (hover)
+					type: variable-themed-color
+					format: rgb
+					opacity: false
+					default-light: 'rgb(var(--interactive-accent-rgb))'
+					default-dark: 'rgb(var(--interactive-accent-rgb))'
+	-
+					id: link-decoration
+					title: Internal link decoration
+					type: variable-select
+					default: 'underline'
+					options:
+						-
+							label: Underline
+							value: 'underline'
+						-
+							label: None
+							value: 'none'
+	-
+					id: link-decoration-hover
+					title: Internal link decoration (hover)
+					type: variable-select
+					default: 'underline'
+					options:
+						-
+							label: Underline
+							value: 'underline'
+						-
+							label: None
+							value: 'none'
+	-
+				id: link-style
+				title: Internal link style
+				type: variable-select
+				default: 'normal'
+				options:
+					- 'normal'
+					- 'italic'
+	-
+			id: external-links
+			title: External links
+			type: heading
+			level: 2
+			collapsed: false
+	-
+					id: link-external-color
+					title: External link color
+					type: variable-themed-color
+					format: rgb
+					opacity: false
+					default-light: 'rgb(var(--interactive-accent-rgb))'
+					default-dark: 'rgb(var(--interactive-accent-rgb))'
+	-
+					id: link-external-color-hover
+					title: External link color (hover)
+					type: variable-themed-color
+					format: rgb
+					opacity: false
+					default-light: 'rgb(var(--interactive-accent-rgb))'
+					default-dark: 'rgb(var(--interactive-accent-rgb))'
+	-
+					id: link-external-decoration
+					title: External link decoration
+					type: variable-select
+					default: 'underline'
+					options:
+						-
+							label: Underline
+							value: 'underline'
+						-
+							label: None
+							value: 'none'
+	-
+					id: link-external-decoration-hover
+					title: External link decoration (hover)
+					type: variable-select
+					default: 'underline'
+					options:
+						-
+							label: Underline
+							value: 'underline'
+						-
+							label: None
+							value: 'none'
+	-
+				id: link-external-style
+				title: External link style
+				type: variable-select
+				default: 'normal'
+				options:
+					- 'normal'
+					- 'italic'
+	-
+		id: lists
+		title: Lists & Tasks
+		type: heading
+		level: 1
+		collapsed: true
+	-
+				id: checkbox-color-rgb
+				title: Checkbox color
+				type: variable-color
+				opacity: false
+				format: rgb-values
+				default: 'rgb(102, 153, 97)'
+	-
+				id: checkbox-radius
+				title: Checkbox shape
+				type: variable-select
+				allowEmpty: false
+				default: '16px'
+				options:
+					-
+						label: circle
+						value: '16px'
+					-
+						label: square
+						value: '2px'
+	-
+				id: checklist-done-decoration
+				title: Strike completed tasks
+				type: variable-select
+				default: 'line-through'
+				options:
+					-
+						label: Strike
+						value: 'line-through'
+					-
+						label: No strike
+						value: 'none'
+	-
+				id: checklist-done-color
+				title: Completed task text color
+				type: variable-select
+				default: 'var(--text-faint)'
+				options:
+					-
+						label: Default
+						value: 'var(--text-faint)'
+					-
+						label: Normal text
+						value: 'var(--text-normal)'
+	-
+				id: checklist-done-strike-color
+				title: Completed task text color
+				type: variable-select
+				default: 'var(--text-faint)'
+				options:
+					-
+						label: Default
+						value: 'var(--text-faint)'
+					-
+						label: Normal text
+						value: 'var(--text-normal)'
+					-
+						label: Red
+						value: 'var(--red)'
+	-
+				id: list-indent
+				title: Nested list indentation (em)
+				type: variable-number
+				default: 1.5
+				format: 'em'
+	-
+				id: list-spacing
+				title: List item spacing (em)
+				type: variable-number
+				default: 0.075
+				format: 'em'
+	-
+				id: odd-marker
+				title: Odd numbered list marker style
+				type: class-select
+				allowEmpty: false
+				default: 'default-marker-odd'
+				options:
+					-
+						label: em-dash
+						value: 'default-marker-odd'
+					-
+						label: hyphen
+						value: 'alternate-marker-odd-1'
+					-
+						label: bullet operator
+						value: 'alternate-marker-odd-2'
+					-
+						label: square bullet
+						value: 'alternate-marker-odd-3'
+					-
+						label: bullet
+						value: 'alternate-marker-odd-4'
+					-
+						label: ring
+						value: 'alternate-marker-odd-5'
+					-
+						label: triangule
+						value: 'alternate-marker-odd-6'
+	-
+				id: even-marker
+				title: Odd numbered list marker style
+				type: class-select
+				allowEmpty: false
+				default: 'default-marker-even'
+				options:
+					-
+						label: em-dash
+						value: 'alternate-marker-even-1'
+					-
+						label: hyphen
+						value: 'alternate-marker-even-2'
+					-
+						label: bullet operator
+						value: 'alternate-marker-even-3'
+					-
+						label: square bullet
+						value: 'default-marker-even'
+					-
+						label: bullet
+						value: 'alternate-marker-even-4'
+					-
+						label: ring
+						value: 'alternate-marker-even-5'
+					-
+						label: triangule
+						value: 'alternate-marker-even-6'
+	-
+				id: step-list
+				title: Ordered list marker style
+				description: This feature will only affect Reading View.
+				type: class-select
+				allowEmpty: false
+				default: '#'
+				options:
+					-
+						label: 'Default'
+						value: '#'
+					-
+						label: 'Step list'
+						value: 'step-list-0'
+					-
+						label: 'Outlined List'
+						value: 'step-list-1'
+	-
+		id: tables
+		title: Tables
+		type: heading
+		level: 1
+		collapsed: true
+	-
+				id: table-cell-border
+				title: Cell borders
+				type: class-toggle
+	-
+				id: table-row-border
+				title: Row lines
+				type: class-toggle
+	-
+				id: table-column-border
+				title: Column lines
+				type: class-toggle
+	-
+				id: table-alternate-row
+				title: Striped rows
+				type: class-toggle
+	-
+				id: table-alternate-column
+				title: Striped columns
+				type: class-toggle
+	-
+				id: table-hover-row
+				title: Disable active row highlighting
+				type: class-toggle
+	-
+				id: table-hover-highlight-color
+				title: Active row highlight color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-dark: 'rgba(var(--interactive-accent-rgb), 0.15)'
+				default-light: 'rgba(var(--interactive-accent-rgb), 0.15)'
+	-
+				id: table-single-rows
+				title: Disable row text wrap
+				type: class-toggle
+	-
+				id: table-sticky-headers
+				title: Sticky headers
+				type: class-toggle
+	-
+				id: table-sticky-height
+				title: Sticky header table max height (px)
+				type: variable-number
+				default: 600
+				format: 'px'
+	-
+				id: table-tabular-figures
+				title: Tabular figures
+				type: class-toggle
+	-
+				id: table-nums
+				title: Row numbers
+				type: class-toggle
+	-
+		id: tags
+		title: Tags
+		type: heading
+		level: 1
+		collapsed: true
+	-
+				id: tag-radius
+				title: Tag Shape
+				type: variable-select
+				default: '2em'
+				allowEmpty: false
+				options:
+					-
+						label: 'Pill'
+						value: '2em'
+					-
+						label: 'Rounded'
+						value: '4px'
+					-
+						label: 'Square'
+						value: '0em'
+	-
+				id: tag-border-width
+				title: Tag border
+				type: variable-select
+				default: '0px'
+				allowEmpty: false
+				options:
+					-
+						label: 'None'
+						value: '0px'
+					-
+						label: 'Thin'
+						value: '1px'
+					-
+						label: 'Thick'
+						value: '2px'
+	-
+				id: tag-color
+				title: Tag text color
+				type: variable-themed-color
+				format: rgb
+				opacity: false
+				default-light: 'rgb(var(--interactive-accent-rgb))'
+				default-dark: 'rgb(var(--interactive-accent-rgb))'
+	-
+				id: tag-color-hover
+				title: Tag text color (hover)*
+				type: variable-themed-color
+				format: rgb
+				opacity: false
+				default-light: 'rgb(var(--interactive-accent-rgb))'
+				default-dark: 'rgb(var(--interactive-accent-rgb))'
+	-
+				id: tag-background
+				title: Tag background color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: 'rgba(var(--interactive-accent-rgb), 0.15)'
+				default-dark: 'rgba(var(--interactive-accent-rgb), 0.15)'
+	-
+				id: tag-background-hover
+				title: Tag background color (hover)
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: 'rgba(var(--interactive-accent-rgb), 0.25)'
+				default-dark: 'rgba(var(--interactive-accent-rgb), 0.25)'
+	-
+				id: tag-decoration
+				title: Tag text decoration
+				type: variable-select
+				default: 'none'
+				allowEmpty: false
+				options:
+					-
+						label: 'None'
+						value: 'none'
+					-
+						label: 'Thin underline'
+						value: 'underline 1px'
+					-
+						label: 'Thick underline'
+						value: 'underline 2px'
+	-
+				id: tag-decoration-hover
+				title: Tag text decoration (hover)
+				type: variable-select
+				default: 'none'
+				allowEmpty: false
+				options:
+					-
+						label: 'None'
+						value: 'none'
+					-
+						label: 'Thin underline'
+						value: 'underline 1px'
+					-
+						label: 'Thick underline'
+						value: 'underline 2px'
+*/

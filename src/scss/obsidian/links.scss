@@ -1,0 +1,39 @@
+body {
+--link-color: var(--interactive);
+--link-color-hover: var(--interactive);
+--link-decoration: underline;
+--link-decoration-hover: underline;
+--link-external-color: var(--text-accent);
+--link-external-color-hover: var(--text-accent-hover);
+--link-external-decoration: underline;
+--link-external-decoration-hover: underline;
+--link-external-filter: none;
+--link-unresolved-color: var(--text-accent);
+--link-unresolved-opacity: 0.6;
+--link-unresolved-filter: none;
+--link-unresolved-decoration-style: unset;
+--link-unresolved-decoration-color: rgba(var(--interactive-accent-rgb), 0.6);
+
+--link-style: normal;
+--link-text-transform: none;
+--link-external-style: normal;
+}
+
+.markdown-rendered .internal-link.is-unresolved:hover,
+.markdown-source-view.mod-cm6 .is-unresolved:hover {
+	color: var(--link-color-hover);
+}
+
+
+.markdown-rendered .internal-link,
+.markdown-source-view .cm-hmd-internal-link {
+	font-style: var(--link-style);
+	text-transform: var(--link-text-transform);
+}
+
+
+.markdown-rendered .external-link,
+.markdown-source-view .cm-link,
+.markdown-source-view .cm-url .cm-underline {
+	font-style: var(--link-external-style);
+}

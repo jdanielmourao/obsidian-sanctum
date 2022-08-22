@@ -1,0 +1,54 @@
+/*	Folding Icons Preview
+—————————————————————————————————————————————————————————*/
+
+// ^ Note to self
+// ! Only makes sense to align in Editing View, since they align with the gutters
+// ! In Preview,most are aligned by default, and lists are slightly to the right
+// ! since they get a slight indent
+
+
+
+/*	Folding Icons Editing View
+—————————————————————————————————————————————————————————*/
+
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+	right: -4px;
+}
+
+.markdown-source-view.mod-cm6 .cm-line:not(.cm-active):not(.HyperMD-task-line):not(.HyperMD-header):not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
+	padding-right: 14px;
+}
+
+
+.markdown-source-view.mod-cm6 .cm-line.cm-active:not(.HyperMD-list-line) .cm-fold-indicator .collapse-indicator {
+	right: 0px;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.cm-active.HyperMD-list-line-1 .cm-fold-indicator .collapse-indicator {
+	right: 2px;
+}
+
+
+/* 1st line of lists */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-list-line-1:not(.cm-active):not(.HyperMD-task-line) .cm-fold-indicator .collapse-indicator {
+	right: -8px;
+}
+
+/* lists */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-list-line:not(.HyperMD-task-line):not(.cm-active):not(.HyperMD-list-line-1) div.cm-fold-indicator .collapse-indicator {
+	right: -14px;
+}
+
+/* task lists */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-task-line:not(.HyperMD-list-line-1):not(.cm-active) .cm-fold-indicator .collapse-indicator {
+	right: -2px;
+}
+
+/* 1st line of task list*/
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-task-line.HyperMD-list-line-1 .cm-fold-indicator .collapse-indicator {
+	right: 4px;
+}
+
+
+
+

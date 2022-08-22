@@ -1,0 +1,16 @@
+/*	List Indentation Guides
+—————————————————————————————————————————————————————————*/
+.theme-light,
+.theme-dark {
+	--indentation-guide: rgba(var(--mono-rgb-100), .15);
+	--indentation-guide-active: rgba(var(--mono-rgb-100), 0.3);
+}
+
+.markdown-rendered.show-indentation-guide li > ul::before,
+.markdown-rendered.show-indentation-guide li > ol::before {
+	left: -13px;
+	top: 0;
+	bottom: 0;
+	border-right: 1px solid var(--indentation-guide);
+}
+

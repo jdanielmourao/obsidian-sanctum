@@ -1,0 +1,41 @@
+body {
+	--checkbox-color-rgb: 102, 153, 97;
+	--checkbox-radius: 16px;
+	--checkbox-checked-color-hover: rgba(var(--checkbox-color-rgb), .9);
+
+	--checkbox-size: 16px;
+	--checkbox-color: rgb(var(--checkbox-color-rgb));
+	--checkbox-color-hover: rgba(var(--checkbox-color-rgb), .5);
+	--checkbox-border-color: var(--text-faint);
+	--checkbox-border-color-hover: rgb(var(--checkbox-color-rgb));
+}
+
+input[type='checkbox'] {
+	border-radius: var(--checkbox-radius);
+	border: 1.35px solid var(--checkbox-border-color);
+	padding: 0;
+	margin: 0 6px 0 0;
+	width: var(--checkbox-size);
+	height: var(--checkbox-size);
+	transition: box-shadow var(--duration-moderate-2) var(--motion-entrance-expressive);
+
+	&:hover {
+		box-shadow: 0 0 0 3px rgba(var(--checkbox-color-rgb), .2);
+	}
+
+	&:checked {
+		border-color: transparent;
+		background-color: var(--checkbox-color);
+		background-position: 53.125% 62.5%; // ~8.5px 10px (full or half pxs are better than smaller units
+		background-size: 68,75%; //~11px otherwise they move positions depending on viewport size
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(36, 20%, 95.1%)' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
+	
+		&:hover {
+			background-color: var(--checkbox-checked-color-hover);
+		}
+	}
+}
+
+.markdown-preview-view .task-list-item-checkbox {
+	top: 2px; //aligns vertically with text
+}

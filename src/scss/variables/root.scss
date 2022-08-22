@@ -1,0 +1,101 @@
+body {
+
+	--font-editor-theme: ??;
+	--font-editor: var(--font-editor-theme), var(--font-text);
+
+	--font-text-theme: Inter,sans-serif;
+	--font-monospace-theme: Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
+	--font-interface-theme: Inter,sans-serif;
+	
+	--version: "You are currently using Sanctum for Obsidian v0.16 \a \a It is highly recommended to install the Style Settings and Contextual Typography plugins.\a If you run into any issues, try updating to the latest version of the theme. If the issue isn't resolved, you can file a report on github (link in the button above). \a \a Support my work:\a ko-fi.com/jdanielmourao \a paypal.me/jdanielmourao";
+	--version-empty-page: "Sanctum for Obsidian v0.16\A Designed with Intention 2021-2022 \A Font: IBM Plex Sans & Mono";
+}
+
+:root {
+
+/*	Leading (line-height)
+—————————————————————————————————————————————————————————*/
+	--leading-0:	1em;
+	--leading-1:	1.125em;
+	--leading-2:	1.25em;
+	--leading-3:	1.375em;
+	--leading-4:	1.5em;
+	--leading-5:	1.625em;
+	--leading-6:	1.75em;
+	--leading-7:	1.875em;
+	--leading-8:	2.25em;
+	--leading-9:	2.5em;
+	--leading-10:	2.75em;
+
+/*	Tracking (letter-spacing)
+—————————————————————————————————————————————————————————*/
+	--tracking-0:	0px;
+	--tracking-1:	.16px;
+	--tracking-2:	.32px;
+	--tracking-3:	.64px;
+	--tracking-4:	.96px;
+
+/*	Layout Sizing
+—————————————————————————————————————————————————————————*/
+	--size-0:	0px;
+	--size-1:	2px;
+	--size-2:	4px;
+	--size-3:	8px;
+	--size-4:	12px;
+	--size-5:	16px;
+	--size-6:	24px;
+	--size-7:	32px;
+	--size-8:	40px;
+	--size-9:	48px;
+	--size-10:	64px;
+	--size-11:	80px;
+	--size-12:	96px;
+	--size-13:	160px;
+
+/*	Elevation
+—————————————————————————————————————————————————————————*/
+--elevation-1:  0 2px 6px 0 rgba(0,0,0,.2);
+--elevation-2: 0 2px 6px 0 rgba(0,0,0,.3);
+
+
+
+
+
+/*	Animations/Transitions
+—————————————————————————————————————————————————————————*/
+--motion-entrance-productive:	cubic-bezier(0, 0, 0.38, 0.9);
+--motion-entrance-expressive:	cubic-bezier(0, 0, 0.3, 1);
+--motion-standard-productive:	cubic-bezier(0.2, 0, 0.38, 0.9);
+--motion-standard-expressive:	cubic-bezier(0.4, 0.14, 0.3, 1);
+--motion-exit-productive:		cubic-bezier(0.2, 0, 1, 0.9);
+--motion-exit-expressive:		cubic-bezier(0.4, 0.14, 1, 1);
+
+/*	Duration
+—————————————————————————————————————————————————————————*/
+--duration-fast-1:		70ms;
+--duration-fast-2:		110ms;
+--duration-moderate-1:	150ms;
+--duration-moderate-2:	240ms;
+--duration-slow-1:		400ms;
+--duration-slow-2:		700ms;
+
+/*	Typographic Modular Scale
+—————————————————————————————————————————————————————————*/
+--font-scale-000: .75rem;
+--font-scale-00: .875rem;
+--font-scale-0:     1rem;
+--font-scale-1: 1.125rem;
+--font-scale-2:  1.25rem;
+--font-scale-3:   1.5rem;
+--font-scale-4:  1.75rem;
+--font-scale-5:     2rem;
+--font-scale-6:  2.25rem;
+--font-scale-7: 2.625rem;
+--font-scale-8:     3rem;
+--font-scale-9: 3.375rem;
+--font-scale-10: 3.75rem;
+
+
+/*	End of ROOT
+—————————————————————————————————————————————————————————*/
+}

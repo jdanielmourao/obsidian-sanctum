@@ -1,0 +1,103 @@
+body {
+	--aside-background: transparent;
+	--aside-background-hover: var(--background-modifier-hover);
+}
+
+.callout[data-callout~=aside] {
+	--callout-color: 0, 0, 0;
+	--callout-icon: none;
+	background-color: var(--aside-background);
+	position: relative;
+	float: right;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	max-width: 20vw;
+	padding-top: 4px;
+	margin-left: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	font-size: 80%;
+	line-height: 1.6;
+
+	.callout-title {
+		display: none;
+	}
+	.callout-content > p {
+		margin-top: 0;
+	}
+}
+
+.callout[data-callout-metadata~=right] {
+	float: right;
+	clear: right;
+	margin-right: -1em;
+	margin-left: 1em;
+}
+
+.callout[data-callout-metadata~=left] {
+	float: left;
+	clear: left;
+	margin-right: 1em;
+	margin-left: -1em;
+	border-left: none;
+}
+
+.callout[data-callout-metadata~=right-margin] {
+	float: right;
+	clear: right;
+	margin-right: calc(-20vw - 1em);
+}
+
+.callout[data-callout-metadata~=left-margin] {
+	float: left;
+	clear: left;
+	margin-right: 0;
+	margin-left: calc(-20vw - 1em);
+	border-left: none;
+}
+
+@media (max-width: 1024px) {
+	.callout[data-callout-metadata~=right-margin] {
+		margin-right: -1em;
+		margin-left: 1em;
+	}
+	.callout[data-callout-metadata~=left-margin] {
+		margin-right: 1em;
+		margin-left: -1em;
+	}
+}
+
+/*	Aside counter
+—————————————————————————————————————————————————————————*/
+
+.markdown-rendered {
+	counter-reset: sidenote-counter;
+}
+.el-div[data-callout~=aside] {
+	counter-increment: sidenote-counter;
+
+	&:hover > .callout[data-callout~=aside]{
+		background-color: var(--aside-background-hover);
+	}
+}
+/* Counter before the sidenote in the margin. */
+.aside-counter .callout[data-callout~=aside] .callout-content::before {
+	content: counter(sidenote-counter)".";
+	position: relative;
+	float: left;
+	padding-right: 4px;
+	vertical-align: baseline;
+	font-size: 100%;
+	font-weight: bold;
+}
+/* Counter in the main body. */
+.aside-counter .el-div[data-callout~=aside]::after {
+	content: counter(sidenote-counter);
+	vertical-align: super;
+	font-size: 80%;
+	font-weight: bold;
+}
+
+
+

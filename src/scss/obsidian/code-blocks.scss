@@ -1,0 +1,268 @@
+/*	Code Outline
+—————————————————————————————————————————————————————————*/
+.code-border .markdown-rendered pre,
+.code-border .markdown-rendered p > code { // targets inline code
+	outline: 1px solid var(--border-subtle-0); // outline doesn't affect spacing
+}
+
+/*	Code Background
+—————————————————————————————————————————————————————————*/
+
+.theme-light {
+	--code-background: var(--layer-hover-2);
+
+
+	& .markdown-rendered pre code {
+		background-color: transparent;
+	}
+}
+
+.markdown-rendered code:not(pre code) { // inline code
+	--code-normal: var(--pink);
+}
+
+/*	Copy Button (in code blocks)
+—————————————————————————————————————————————————————————*/
+@keyframes outdent {
+	from {
+		margin-right: -26px;
+		clip-path: polygon(0 0, 24px 0, 24px 36px, 0 36px);
+	}
+	to {
+		margin-right: 4px;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+}
+
+.markdown-rendered button.copy-code-button {
+	margin: 4px;
+	margin-right: -26px;
+	padding-top: 8px;
+	line-height: 1.35; //centers copy buttons on single line code blocks
+	will-change: margin-right, clip-path;
+	clip-path: polygon(0 0, 24px 0, 24px 36px, 0 36px);
+
+
+
+	&:hover {
+		background-color: var(--background-secondary);
+		// color: var(--text-muted);
+		// font-size: var(--font-ui-smaller);
+		animation: outdent var(--duration-moderate-2);
+		// letter-spacing: initial;
+		margin-right: 4px;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+
+	&:active {
+		transform: scale(.95);
+		transition: scale var(--duration-moderate-2) var(--motion-expressive-standard);
+	}
+
+	&::before {
+		content: "\200B";
+		display: inline-block;
+		width: 14px;
+		height: 14px;
+		padding-right: 4px;
+		background-color: var(--text-muted);
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z'/%3E%3Cpath d='M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
+		-webkit-mask-repeat: no-repeat;
+		mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z'/%3E%3Cpath d='M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
+		mask-repeat: no-repeat;
+		vertical-align: -1px;
+	}
+}
+
+.markdown-source-view.mod-cm6 .code-block-flair:hover, // codeblock
+.markdown-source-view.mod-cm6 .edit-block-button:hover { //callouts
+	background-color: var(--background-hover);
+}
+
+
+/*	Syntax Highlighting
+—————————————————————————————————————————————————————————*/
+.theme-light {
+	--code-normal: var(--text-muted);
+	--code-comment: var(--text-faint);
+	--code-punctuation: var(--text-muted);
+	--code-tag: var(--red);
+	--code-value: var(--lavender);
+	--code-string: var(--green);
+	--code-property: var(--cyan);
+	--code-function: var(--orange);
+	--code-keyword: var(--pink);
+	--code-important: var(--lavender);
+}
+
+
+.theme-dark {
+	--code-normal: var(--text-muted);
+	--code-comment: var(--text-faint);
+	--code-punctuation: var(--text-muted);
+	--code-tag: var(--red-50);
+	--code-value: var(--lavender);
+	--code-string: var(--green-40);
+	--code-property: var(--cyan);
+	--code-function: var(--orange-30);
+	--code-keyword: var(--pink);
+	--code-important: var(--lavender);
+}
+
+// :not(.nord):not(.dracula):not(.one-dark):not(.solarized):not(.gruvbox):not(.material) pre,
+// :not(.nord):not(.dracula):not(.one-dark):not(.solarized):not(.gruvbox):not(.material) .HyperMD-codeblock {
+
+// 	.token.comment,
+// 	.cm-comment,
+// 	.token.prolog,
+// 	.token.doctype-meta,
+// 	.token.doctype,
+// 	.cm-meta {
+// 		color: var(--text-faint);
+// 	}
+	
+// 	.token.property-access,
+// 	.token.property,
+// 	.cm-property,
+// 	.cm-bracket.cm-tag,	
+// 	.cm-hr,
+// 	.token.punctuation,
+// 	.token.entity {
+// 		color: var(--text-muted);
+// 	}
+	
+// 	.token.bold,
+// 	.cm-strong {
+// 		font-weight: var(--font-bold);
+// 	}
+	
+// 	.token.comment,
+// 	.cm-comment,
+// 	.token.italic,
+// 	.cm-em {
+// 		font-style: italic;
+// 	}
+	
+	
+// 	.token.deleted,
+// 	.cm-negative {
+// 		color: var(--red-50);
+// 	}
+	
+// 	.token.string,
+// 	.token.attr-value,
+// 	.token.url,
+// 	.token.char,
+// 	.cm-string,
+// 	.token.inserted,
+// 	.cm-positive {
+// 		color: var(--green-40);
+// 	}
+	
+	
+// 	.token.builtin.class-name,
+// 	.token.color,
+// 	.token.important,
+// 	.token.keyword,
+// 	.cm-keyword,
+// 	.token.id,
+// 	.cm-builtin {
+// 		color: var(--lavender);
+// 	}
+	
+// 	.token.attr-name,
+// 	.cm-attribute,
+// 	.token.builtin,
+// 	.cm-type,
+// 	.token.namespace,
+// 	.token.function,
+// 	.token.atrule,
+// 	.token.variable,
+// 	.token.constant,
+// 	.token.class-name,
+// 	.token.parameter,
+// 	.cm-def,
+// 	.cm-variable {
+// 		color: var(--orange);
+// 	}
+	
+// 	.token.symbol,
+// 	.token.regex,
+// 	.cm-string-2,
+// 	.token.number,
+// 	.cm-number,
+// 	.token.boolean,
+// 	.token.cdata,
+// 	.cm-atom {
+// 		color: var(--yellow-20);
+// 	}
+	
+	
+// 	.token.tag,
+// 	.token.selector,
+// 	.cm-tag,
+// 	.token.operator,
+// 	.cm-operator,
+// 	.cm-variable-2,
+// 	.cm-variable-3 {
+// 		color: var(--cyan);
+// 	}
+
+// }
+
+// .theme-light:not(.nord):not(.dracula):not(.one-dark):not(.solarized):not(.gruvbox):not(.material) pre,
+// .theme-light:not(.nord):not(.dracula):not(.one-dark):not(.solarized):not(.gruvbox):not(.material) .HyperMD-codeblock {
+	
+// 	.token.deleted,
+// 	.cm-negative {
+// 		color: var(--red);
+// 	}
+	
+// 	.token.string,
+// 	.token.attr-value,
+// 	.token.url,
+// 	.token.char,
+// 	.cm-string,
+// 	.token.inserted,
+// 	.cm-positive {
+// 		color: var(--green);
+// 	}
+		
+// 	.token.attr-name,
+// 	.cm-attribute,
+// 	.token.builtin,
+// 	.cm-type,
+// 	.token.namespace,
+// 	.token.function,
+// 	.token.atrule,
+// 	.token.variable,
+// 	.token.constant,
+// 	.token.class-name,
+// 	.cm-def,
+// 	.cm-variable {
+// 		color: var(--orange);
+// 	}
+	
+// 	.token.symbol,
+// 	.token.regex,
+// 	.cm-string-2,
+// 	.token.number,
+// 	.cm-number,
+// 	.token.boolean,
+// 	.token.cdata,
+// 	.cm-atom {
+// 		color: var(--yellow);
+// 	}
+	
+	
+// 	.token.tag,
+// 	.token.selector,
+// 	.cm-tag,
+// 	.token.operator,
+// 	.cm-operator,
+// 	.cm-variable-2,
+// 	.cm-variable-3 {
+// 		color: var(--cyan);
+// 	}
+
+// }

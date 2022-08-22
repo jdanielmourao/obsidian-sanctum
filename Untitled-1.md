@@ -1,0 +1,221 @@
+- color schemes
+- components
+	- checkbox ✅
+	- audio
+	- buttons
+	- dropdowns
+	- inputs
+	- progress
+	- slider
+	- toggles
+	- color picker ✅
+- features
+	- active-line ✅
+	- borders
+	- cards
+	- checklist-icons
+	- colorful-headings ✅
+	- custom-icons
+	- file-nav-relationship-lines
+	- focus-mode
+	- full-width-media
+	- image-filters
+	- iamge-grid
+	- image-zoom
+	- labeled-nav
+	- layout-control
+	- line-width
+	- link-underline
+	- scroll-indicator
+	- sidebar-notes
+	- sidenotes / asides ✅
+	- tab-styles
+	- trim-file-names
+	- underline-headings
+- mobile
+	- ios
+	- mobile
+	- toolbar
+- obsidian
+	- blockquotes ✅
+	- callouts ✅
+	- code-blocks ✅
+	- dragging ✅
+	- editor ✅
+	- embeds-transclusions ✅
+	- emphasis ✅
+	- file-nav
+	- folding ✅
+	- fonts ✅
+	- footnotes ✅ +/-
+	- frontmatter
+	- icons
+	- indentation-guides ✅
+	- links ✅
+	- lists ✅
+	- menus
+	- modals
+	- preview-backlinks
+	- preview-embedded-search
+	- preview
+	- ribbon
+	- scrollbars ✅
+	- search-replace
+	- settings
+	- status-bar
+	- syntax ✅
+	- tables ✅
+	- tags ✅
+	- tag-pane
+	- title-bar
+	- window-frame
+	- workspace
+		- empty state
+		- resize handles
+- plugins-core
+	- backlinks-outlinks
+	- graph
+	- outline
+	- page-preview
+	- prompt
+	- publish
+	- search
+	- sync
+- plugins
+- variables
+	- adaptive-font-size
+	- dynamic-color
+	- root
+	- theme
+- index.scss
+	- variables > obsidian > components > features > mobile > plugins-core > plugins > color-schemes
+
+
+
+
+# Style Settings
+
+- Color Scheme
+	- Light mode color scheme
+	- Light mode background contrast (all white, default, contrast, high contrast)
+	- Dark mode color scheme
+	- Dark mode background contrast (default, contrast, true black)
+	- Accent color hue
+	- Accent color saturation
+
+- Blockquotes ✅
+	- border-color ✅
+	- border-width ✅
+	- font size ✅
+	- font style ✅
+- Callouts ✅
+	- border width ✅
+	- border color opacity ✅
+	- outline ✅
+- Code Blocks
+	- line numbers ✅
+	- programming language labels ✅
+	- border ✅
+	- syntax highlighting color schemes ✅
+- Cursor
+	- Accented cursor
+- Embeds / Transclusions
+	- clean embeds
+- Graph
+	- node color
+	- active node color
+	- tag node color
+	- attachment node color
+	- unresolved node color
+- Headings ✅
+		- Heading Outline format ✅
+		- H font ✅
+		- H font size ✅
+		- H font weight ✅
+		- H text color ✅
+		- H font variant ✅
+		- H font style ✅
+		- H divider line ✅
+- Icons
+	- icon opacity (inactive secondary icons)
+	- icon color
+	- icon color hover
+	- icon color active
+	- Custom icons
+- Images
+	- image opacity in dark mode
+	- disable image zoom
+	- Maximize media
+- Indentation Guides ✅
+	- active color ✅
+- Links✅
+	- link color ✅
+	- link color hover ✅
+	- Underline internal links ✅
+	- Underline external links ✅
+	- Link font styles ✅
+- Lists & Tasks ✅
+	- checkbox color ✅
+	- checkbox shape ✅
+	- strike completed tasks ✅
+	- completed tasks strike color ✅
+	- list item spacing ✅
+	- nested list identation ✅
+	- unordered marker style ✅
+	- ordered list style ✅
+	- Turn lists into Cards
+- Sidebars
+	- tab style
+	- disable sidebar relationship lines
+	- mobile left sidebar width (for pinned sidebar)
+	- mobile right sidebar width (for pinned sidebar)
+	- Trim file names
+- Tables✅
+	- row lines ✅
+	- column lines ✅
+	- cell borders ✅
+	- striped rows ✅
+	- striped columns ✅
+	- tabular figures ✅
+	- row numbers ✅
+	- disable line wrap ✅
+	- highlight active row ✅
+	- active row background color ✅
+	- sticky headers ✅
+	- stikcy header table max height ✅
+- Tags ✅
+	- tag shape ✅
+	- tag border width ✅
+	- tag text color ✅
+	- tag text color ✅
+	- tag background color ✅
+	- tag background color hover ✅
+	- tag text decoration ✅
+	- tag text decoration hover ✅
+- Typography
+	- Normal text color
+	- Selected text background
+	- Highlighted text background ✅
+	- Muted text color
+	- Faint text color
+	- Italic text color ✅
+	- Italic text weight
+	- Bold text color ✅
+	- Bold text weight
+	- Paragraph spacing
+	- Normal line length (number of characters per line)
+	- Wide line length (number of characters per line for wide elements)
+	- Maximum line length % (percentage of space inside a pane that a line can fill)
+	- Editor font ✅
+- Title bar
+	- Title alignment
+	- Always show grabber icon
+	- Title bar height
+	- Title font size
+	- Title font weight
+	- Title text color active
+	- Title text color inactive
+- Plugins
+	- Dataview
+		- Trim dataview columns (disables word wrapping in table cells, and trims long text)
+		- Dataview maximum column width
