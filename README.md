@@ -1,9 +1,9 @@
 ![sanctum-readme-title](https://user-images.githubusercontent.com/91087143/136701698-2464f5d0-30d5-4ee5-9261-4cca96448192.png)
 
-Sanctum’s a minimalist theme with the aim of creating a serene space of retreat, for thought and uninterrupted work.
+Sanctum’s a minimalist theme for creating a serene space of retreat, for thought and uninterrupted work.
 
 ## Installation
-**Sanctum is now available in Community Themes!** In obsidian, go to `Settings ➞ Appearance ➞ Manage`, and look for `Sanctum`.
+Inside obsidian, go to `Settings ➞ Appearance ➞ Manage`, and look for `Sanctum`.
 
 You can also manually install Sanctum by:
 1. Downloading the CSS file and moving it into the folder `.obsidian/themes/` located in your vault folder;
@@ -11,12 +11,12 @@ You can also manually install Sanctum by:
 3. In Obsidian, go to `Settings ➞ Appearance ➞ Themes ➞ Reload themes`, and select `Sanctum`.
 
 ## Disclaimer
-The following theme significantly alters Obsidian's original css, and so is prone to breaking upon new Obsidian updates, as well as being incompatible with custom css snippets. It is also in a very early stage of development, and so quick and sometimes drastic changes may be expected in the near future. Having said that, any and every piece of feedback is appreciated! More customization options will be available in the future.
+The following theme significantly alters Obsidian's original css, and so is prone to breaking upon new Obsidian updates, as well as being incompatible with custom css snippets, which might require specific adjustments.
 
 ## Recommended Plugins
 
 - [Smart Typography](https://github.com/mgmeyers/obsidian-smart-typography): for a better and coherent writing experience
-- [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography): For a better typographic experience
+- [Contextual Typography](https://github.com/mgmeyers/obsidian-contextual-typography): For a better typographic experience, and access to some of the theme's features
 - [Style Settings](https://github.com/mgmeyers/obsidian-style-settings): for tons of customization options
 
 ## Design Principles
