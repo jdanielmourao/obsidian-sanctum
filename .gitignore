@@ -16,4 +16,6 @@ node_modules
 
 .Untitled-1.md
 
+# Exclude .env file
 .env
+.ENV
