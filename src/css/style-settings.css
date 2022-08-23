@@ -151,7 +151,7 @@ settings:
 				id: callout-border-opacity
 				title: Callout border color opacity (%)
 				type: variable-number
-				default: 50
+				default: 30
 				format: '%'
 	-
 		id: code-blocks
