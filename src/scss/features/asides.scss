@@ -61,10 +61,12 @@ body {
 	.callout[data-callout-metadata~=right-margin] {
 		margin-right: -1em;
 		margin-left: 1em;
+		clear: both;
 	}
 	.callout[data-callout-metadata~=left-margin] {
 		margin-right: 1em;
 		margin-left: -1em;
+		clear: both;
 	}
 }
 
