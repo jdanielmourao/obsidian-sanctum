@@ -886,7 +886,7 @@ settings:
 						value: 'var(--text-normal)'
 	-
 				id: checklist-done-strike-color
-				title: Completed task text color
+				title: Completed task text strike color
 				type: variable-select
 				default: 'var(--text-faint)'
 				options:
