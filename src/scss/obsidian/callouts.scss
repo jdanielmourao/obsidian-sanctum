@@ -18,6 +18,15 @@ body {
 	&-title-inner {
 		padding-left: 2px;
 	}
+
+	& .callout-icon {
+		align-self: baseline;
+
+		svg {
+			height: var(--icon-s);
+			width: var(--icon-s);
+		}
+	}
 }
 
 /*	Callout Colors

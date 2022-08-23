@@ -4,3 +4,14 @@ body svg * {
 	rx: 1.5px;
 	ry: 1.5px;
 }
+
+body {
+	--icon-xs: 14px;
+	--icon-s: 16px;
+	--icon-m: 18px;
+	--icon-l: 18px;
+	--icon-xs-stroke-width: 2px;
+	--icon-s-stroke-width: 2px;
+	--icon-m-stroke-width: 1.75px;
+	--icon-l-stroke-width: 1.75px;
+}
