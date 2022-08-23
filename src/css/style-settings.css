@@ -1087,7 +1087,7 @@ settings:
 				default-dark: 'rgb(var(--interactive-accent-rgb))'
 	-
 				id: tag-color-hover
-				title: Tag text color (hover)*
+				title: Tag text color (hover)
 				type: variable-themed-color
 				format: rgb
 				opacity: false
