@@ -4,12 +4,12 @@ body {
 	--tag-color-hover: var(--text-accent);
 	--tag-decoration: none;
 	--tag-decoration-hover: none;
-	--tag-background: rgba(var(--interactive-accent-rgb), 0.15);
-	--tag-background-hover: rgba(var(--interactive-accent-rgb), 0.25);
-	--tag-border-color: rgba(var(--interactive-accent-rgb), 0.15);
-	--tag-border-color-hover: rgba(var(--interactive-accent-rgb), 0.25);
+	--tag-background: rgba(var(--color-accent-rgb), 0.15);
+	--tag-background-hover: rgba(var(--color-accent-rgb), 0.25);
+	--tag-border-color: rgba(var(--color-accent-rgb), 0.15);
+	--tag-border-color-hover: rgba(var(--color-accent-rgb), 0.25);
 	--tag-border-width: 0px;
-	--tag-padding-x: 0.5em;
-	--tag-padding-y: 0.15em;
+	--tag-padding-x: 0.65em;
+	--tag-padding-y: 0.25em;
 	--tag-radius: 2em;
 }
