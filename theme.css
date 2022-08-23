@@ -484,7 +484,7 @@ body {
 }
 body {
   --blockquote-border-thickness: 0px;
-  --blockquote-size: 1rem;
+  --blockquote-size: .9rem;
   --blockquote-font-style: inherit;
   --blockquote-color: inherit;
   --blockquote-background-color: inherit;
@@ -498,6 +498,7 @@ body {
   padding: 0 0 0 var(--size-7);
   margin-inline-start: 0;
   margin-inline-end: 0;
+  quotes: "\201c" "\201d" "\2018" "\2019";
 }
 .cm-s-obsidian span.cm-quote {
   color: var(--blockquote-color);
@@ -510,7 +511,7 @@ body {
 }
 body {
   --callout-radius: var(--radius-s);
-  --callout-border-opacity: 50%;
+  --callout-border-opacity: 30%;
   --callout-border-width: 0px;
   --callout-padding: var(--size-4-4) var(--size-4-3) var(--size-4-3) var(--size-4-6);
   --callout-radius: var(--radius-s);
@@ -520,15 +521,18 @@ body {
   --callout-content-padding: 0;
 }
 .callout {
-  border-left: var(--callout-border-width) solid rgba(var(--callout-color), var(--callout-border-opacity));
+  border: var(--callout-border-width) solid rgba(var(--callout-color), var(--callout-border-opacity));
   background-color: rgba(var(--callout-color), 0.2);
-  mix-blend-mode: unset;
 }
 .callout-title-inner {
   padding-left: 2px;
 }
-.callout-outline .callout {
-  outline: 1px solid rgba(var(--callout-color), 0.4);
+.callout .callout-icon {
+  align-self: baseline;
+}
+.callout .callout-icon svg {
+  height: var(--icon-s);
+  width: var(--icon-s);
 }
 .callout[data-callout=note] {
   --callout-color:
@@ -787,20 +791,30 @@ body.clean-embeds .markdown-rendered .markdown-embed .markdown-rendered {
 .markdown-source-view.mod-cm6 .cm-line.HyperMD-list-line-1:not(.cm-active):not(.HyperMD-task-line) .cm-fold-indicator .collapse-indicator {
   right: -8px;
 }
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-list-line:not(.HyperMD-task-line):not(.cm-active):not(.HyperMD-list-line-1) div.cm-fold-indicator .collapse-indicator {
-  right: -14px;
-}
 .markdown-source-view.mod-cm6 .cm-line.HyperMD-task-line:not(.HyperMD-list-line-1):not(.cm-active) .cm-fold-indicator .collapse-indicator {
-  right: -2px;
+  right: 0px;
 }
 .markdown-source-view.mod-cm6 .cm-line.HyperMD-task-line.HyperMD-list-line-1 .cm-fold-indicator .collapse-indicator {
   right: 4px;
+}
+.markdown-rendered .list-collapse-indicator {
+  margin-left: -40px;
 }
 body svg * {
   stroke-linecap: square;
   stroke-linejoin: miter;
   rx: 1.5px;
   ry: 1.5px;
+}
+body {
+  --icon-xs: 14px;
+  --icon-s: 16px;
+  --icon-m: 18px;
+  --icon-l: 18px;
+  --icon-xs-stroke-width: 2px;
+  --icon-s-stroke-width: 2px;
+  --icon-m-stroke-width: 1.75px;
+  --icon-l-stroke-width: 1.75px;
 }
 .theme-light,
 .theme-dark {
@@ -1229,13 +1243,13 @@ body {
   --tag-color-hover: var(--text-accent);
   --tag-decoration: none;
   --tag-decoration-hover: none;
-  --tag-background: rgba(var(--interactive-accent-rgb), 0.15);
-  --tag-background-hover: rgba(var(--interactive-accent-rgb), 0.25);
-  --tag-border-color: rgba(var(--interactive-accent-rgb), 0.15);
-  --tag-border-color-hover: rgba(var(--interactive-accent-rgb), 0.25);
+  --tag-background: rgba(var(--color-accent-rgb), 0.15);
+  --tag-background-hover: rgba(var(--color-accent-rgb), 0.25);
+  --tag-border-color: rgba(var(--color-accent-rgb), 0.15);
+  --tag-border-color-hover: rgba(var(--color-accent-rgb), 0.25);
   --tag-border-width: 0px;
-  --tag-padding-x: 0.5em;
-  --tag-padding-y: 0.15em;
+  --tag-padding-x: 0.65em;
+  --tag-padding-y: 0.25em;
   --tag-radius: 2em;
 }
 body {
@@ -1330,7 +1344,8 @@ body {
   counter-set: h1-counter;
 }
 .heading-counter-0 .el-h1 h1:before {
-  content: var(--heading-counter) counter(h1-counter) ". ";
+  content: var(--heading-counter) counter(h1-counter) "";
+  padding-right: 0.5em;
 }
 .heading-counter-0 .el-h2 {
   counter-increment: h2-counter;
@@ -1338,7 +1353,8 @@ body {
   counter-set: h1-counter;
 }
 .heading-counter-0 .el-h2 h2:before {
-  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) ". ";
+  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "";
+  padding-right: 0.5em;
 }
 .heading-counter-0 .el-h3 {
   counter-increment: h3-counter;
@@ -1346,7 +1362,8 @@ body {
   counter-set: h1-counter;
 }
 .heading-counter-0 .el-h3 h3:before {
-  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) ". ";
+  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "";
+  padding-right: 0.5em;
 }
 .heading-counter-0 .el-h4 {
   counter-increment: h4-counter;
@@ -1354,7 +1371,8 @@ body {
   counter-set: h1-counter;
 }
 .heading-counter-0 .el-h4 h4:before {
-  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) ". ";
+  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "";
+  padding-right: 0.5em;
 }
 .heading-counter-0 .el-h5 {
   counter-increment: h5-counter;
@@ -1362,55 +1380,63 @@ body {
   counter-set: h1-counter;
 }
 .heading-counter-0 .el-h5 h5:before {
-  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) ". ";
+  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) "";
+  padding-right: 0.5em;
 }
 .heading-counter-0 .el-h6 {
   counter-increment: h6-counter;
   counter-set: h1-counter;
 }
 .heading-counter-0 .el-h6 h6:before {
-  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) "." counter(h6-counter) ". ";
+  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) "." counter(h6-counter) "";
+  padding-right: 0.5em;
 }
 .heading-counter-1 .el-h1 {
   counter-increment: h1-counter;
   counter-reset: h1-counter;
 }
 .heading-counter-1 .el-h1 h1:before {
-  content: var(--heading-counter) counter(h1-counter) ". ";
+  content: var(--heading-counter) counter(h1-counter) "";
+  padding-right: 0.5em;
 }
 .heading-counter-1 .el-h2 {
   counter-increment: h2-counter;
   counter-reset: h3-counter;
 }
 .heading-counter-1 .el-h2 h2:before {
-  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) ". ";
+  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "";
+  padding-right: 0.5em;
 }
 .heading-counter-1 .el-h3 {
   counter-increment: h3-counter;
   counter-reset: h4-counter;
 }
 .heading-counter-1 .el-h3 h3:before {
-  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) ". ";
+  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "";
+  padding-right: 0.5em;
 }
 .heading-counter-1 .el-h4 {
   counter-increment: h4-counter;
   counter-reset: h5-counter;
 }
 .heading-counter-1 .el-h4 h4:before {
-  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) ". ";
+  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "";
+  padding-right: 0.5em;
 }
 .heading-counter-1 .el-h5 {
   counter-increment: h5-counter;
   counter-reset: h6-counter;
 }
 .heading-counter-1 .el-h5 h5:before {
-  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) ". ";
+  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) "";
+  padding-right: 0.5em;
 }
 .heading-counter-1 .el-h6 {
   counter-increment: h6-counter;
 }
 .heading-counter-1 .el-h6 h6:before {
-  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) "." counter(h6-counter) ". ";
+  content: var(--heading-counter) counter(h1-counter) "." counter(h2-counter) "." counter(h3-counter) "." counter(h4-counter) "." counter(h5-counter) "." counter(h6-counter) "";
+  padding-right: 0.5em;
 }
 body {
   --checkbox-color-rgb:
@@ -1424,12 +1450,11 @@ body {
   --checkbox-color-hover: rgba(var(--checkbox-color-rgb), .5);
   --checkbox-border-color: var(--text-faint);
   --checkbox-border-color-hover: rgb(var(--checkbox-color-rgb));
+  --checkbox-marker-color: var(--background-primary);
 }
 input[type=checkbox] {
   border-radius: var(--checkbox-radius);
-  border: 1.35px solid var(--checkbox-border-color);
-  padding: 0;
-  margin: 0 6px 0 0;
+  border: 1.5px solid var(--checkbox-border-color);
   width: var(--checkbox-size);
   height: var(--checkbox-size);
   transition: box-shadow var(--duration-moderate-2) var(--motion-entrance-expressive);
@@ -1440,12 +1465,20 @@ input[type=checkbox]:hover {
 input[type=checkbox]:checked {
   border-color: transparent;
   background-color: var(--checkbox-color);
-  background-position: 53.125% 62.5%;
-  background-size: 68, 75%;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(36, 20%, 95.1%)' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
 }
 input[type=checkbox]:checked:hover {
   background-color: var(--checkbox-checked-color-hover);
+}
+input[type=checkbox]:checked::after {
+  top: -1px;
+  left: -1px;
+  background-color: var(--checkbox-marker-color);
+  -webkit-mask-position: 46.875% 53.125%;
+  -webkit-mask-size: 59.375%;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(36, 20%, 95.1%)' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
+}
+input[type=checkbox]:focus-visible {
+  box-shadow: 0 0 0 1px var(--background-primary), 0 0 0 3px var(--background-modifier-border-focus);
 }
 .markdown-preview-view .task-list-item-checkbox {
   top: 2px;
@@ -1562,10 +1595,12 @@ body {
   .callout[data-callout-metadata~=right-margin] {
     margin-right: -1em;
     margin-left: 1em;
+    clear: both;
   }
   .callout[data-callout-metadata~=left-margin] {
     margin-right: 1em;
     margin-left: -1em;
+    clear: both;
   }
 }
 .markdown-rendered {
@@ -1610,10 +1645,10 @@ body {
   clip-path: polygon(0 0, 4ch 0, 4ch calc(100% - 20px), 0 calc(100% - 20px));
 }
 .code-label .markdown-rendered pre[class*=language-]:not(pre.frontmatter) button.copy-code-button {
-  top: 16px;
+  top: 24px;
 }
 .code-label .markdown-rendered pre[class*=language-]:not(pre.frontmatter) {
-  padding-top: 24px;
+  padding-top: 32px;
 }
 .code-label .markdown-rendered pre[class*=language-]:not(pre.frontmatter)::before {
   content: attr(class);
@@ -3730,6 +3765,13 @@ settings:
 				default-light: '#'
 				default-dark: '#'
 	-
+				id: blockquote-color
+				title: Blockquote text color
+				type: variable-themed-color
+				format: hex
+				default-light: '#'
+				default-dark: '#'
+	-
 				id: blockquote-border-thickness
 				title: Blockquote border thickness (px)
 				type: variable-number
@@ -3739,7 +3781,7 @@ settings:
 				id: blockquote-size
 				title: Blockquote text size (rem)
 				type: variable-number
-				default: 1
+				default: .9
 				format: 'rem'
 	-
 				id: blockquote-font-style
@@ -3758,7 +3800,7 @@ settings:
 		collapsed: true
 	-
 				id: callout-border-width
-				title: Callout left border width (px)
+				title: Callout border width (px)
 				type: variable-number
 				default: 0
 				format: 'px'
@@ -3766,13 +3808,8 @@ settings:
 				id: callout-border-opacity
 				title: Callout border color opacity (%)
 				type: variable-number
-				default: 50
+				default: 30
 				format: '%'
-	-
-				id: callout-outline
-				title: Callout border
-				description: Adds a subtle border around callouts
-				type: class-toggle
 	-
 		id: code-blocks
 		title: Code Blocks
@@ -4501,7 +4538,7 @@ settings:
 						value: 'var(--text-normal)'
 	-
 				id: checklist-done-strike-color
-				title: Completed task text color
+				title: Completed task text strike color
 				type: variable-select
 				default: 'var(--text-faint)'
 				options:
@@ -4707,7 +4744,7 @@ settings:
 				default-dark: 'rgb(var(--interactive-accent-rgb))'
 	-
 				id: tag-color-hover
-				title: Tag text color (hover)*
+				title: Tag text color (hover)
 				type: variable-themed-color
 				format: rgb
 				opacity: false
