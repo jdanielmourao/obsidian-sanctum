@@ -8,13 +8,12 @@ body {
 	--checkbox-color-hover: rgba(var(--checkbox-color-rgb), .5);
 	--checkbox-border-color: var(--text-faint);
 	--checkbox-border-color-hover: rgb(var(--checkbox-color-rgb));
+	--checkbox-marker-color: var(--background-primary);
 }
 
 input[type='checkbox'] {
 	border-radius: var(--checkbox-radius);
-	border: 1.35px solid var(--checkbox-border-color);
-	padding: 0;
-	margin: 0 6px 0 0;
+	border: 1.5px solid var(--checkbox-border-color);
 	width: var(--checkbox-size);
 	height: var(--checkbox-size);
 	transition: box-shadow var(--duration-moderate-2) var(--motion-entrance-expressive);
@@ -26,14 +25,27 @@ input[type='checkbox'] {
 	&:checked {
 		border-color: transparent;
 		background-color: var(--checkbox-color);
-		background-position: 53.125% 62.5%; // ~8.5px 10px (full or half pxs are better than smaller units
-		background-size: 68,75%; //~11px otherwise they move positions depending on viewport size
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(36, 20%, 95.1%)' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
+		// background-position: 53.125% 62.5%; 
+		// background-size: 68,75%; 
 	
 		&:hover {
 			background-color: var(--checkbox-checked-color-hover);
 		}
+
+		&::after {
+			top: -1px;
+			left: -1px;
+			background-color: var(--checkbox-marker-color);
+			-webkit-mask-position: 46.875% 53.125%;	// ~7.5px 8.5px (full or half pxs are better than smaller units
+			-webkit-mask-size: 59.375%;	//~9.5px otherwise they move positions depending on viewport size
+			-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(36, 20%, 95.1%)' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
+		}
 	}
+	&:focus-visible {
+		box-shadow: 
+		0 0 0 1px var(--background-primary),
+		0 0 0 3px var(--background-modifier-border-focus);
+	  }
 }
 
 .markdown-preview-view .task-list-item-checkbox {
