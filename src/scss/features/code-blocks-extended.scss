@@ -27,11 +27,11 @@
 /* only adjusts code blocks with supported programming languages,
 /* and not the simple unlabeled "code"*/
 .code-label .markdown-rendered pre[class*="language-"]:not(pre.frontmatter) button.copy-code-button {
-	top: 16px;
+	top: 24px;
 }
 
 .code-label .markdown-rendered pre[class*="language-"]:not(pre.frontmatter) {
-	padding-top: 24px;
+	padding-top: 32px;
 	
 	&::before {
 		content: attr(class);
