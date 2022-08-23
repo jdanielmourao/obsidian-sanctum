@@ -108,6 +108,13 @@ settings:
 				default-light: '#'
 				default-dark: '#'
 	-
+				id: blockquote-color
+				title: Blockquote text color
+				type: variable-themed-color
+				format: hex
+				default-light: '#'
+				default-dark: '#'
+	-
 				id: blockquote-border-thickness
 				title: Blockquote border thickness (px)
 				type: variable-number
@@ -117,7 +124,7 @@ settings:
 				id: blockquote-size
 				title: Blockquote text size (rem)
 				type: variable-number
-				default: 1
+				default: .9
 				format: 'rem'
 	-
 				id: blockquote-font-style
