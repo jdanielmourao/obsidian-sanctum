@@ -22,6 +22,7 @@ body {
 	padding: 0 0 0 var(--size-7);
 	margin-inline-start: 0;
 	margin-inline-end: 0;
+	quotes: "\201C""\201D""\2018""\2019";
 }
 
 .cm-s-obsidian span.cm-quote {
