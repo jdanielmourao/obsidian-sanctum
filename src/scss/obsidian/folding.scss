@@ -34,14 +34,14 @@
 	right: -8px;
 }
 
-/* lists */
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-list-line:not(.HyperMD-task-line):not(.cm-active):not(.HyperMD-list-line-1) div.cm-fold-indicator .collapse-indicator {
-	right: -14px;
-}
+// /* lists */
+// .markdown-source-view.mod-cm6 .cm-line.HyperMD-list-line:not(.HyperMD-task-line):not(.cm-active):not(.HyperMD-list-line-1) div.cm-fold-indicator .collapse-indicator {
+// 	right: -14px;
+// }
 
 /* task lists */
 .markdown-source-view.mod-cm6 .cm-line.HyperMD-task-line:not(.HyperMD-list-line-1):not(.cm-active) .cm-fold-indicator .collapse-indicator {
-	right: -2px;
+	right: 0px;
 }
 
 /* 1st line of task list*/
