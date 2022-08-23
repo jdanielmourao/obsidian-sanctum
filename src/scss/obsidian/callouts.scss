@@ -12,16 +12,12 @@ body {
 }
 
 .callout {
-	border-left: var(--callout-border-width) solid rgba(var(--callout-color), var(--callout-border-opacity));
+	border: var(--callout-border-width) solid rgba(var(--callout-color), var(--callout-border-opacity));
 	background-color: rgba(var(--callout-color), .2);
 	
 	&-title-inner {
 		padding-left: 2px;
 	}
-}
-
-.callout-outline .callout {
-	outline: 1px solid rgba(var(--callout-color), .4);
 }
 
 /*	Callout Colors
