@@ -108,18 +108,23 @@ settings:
 				default-light: '#'
 				default-dark: '#'
 	-
+				id: blockquote-border-thickness
+				title: Blockquote border thickness (px)
+				type: variable-number
+				default: 0
+				format: 'px'
+	-
+				id: blockquote-marker
+				title: Toggle blockquote marker
+				description: Adds visual element to the top of blockquotes. Its is affected by the border options above. Recommended thickness is 4px.
+				type: class-toggle
+	-
 				id: blockquote-color
 				title: Blockquote text color
 				type: variable-themed-color
 				format: hex
 				default-light: '#'
 				default-dark: '#'
-	-
-				id: blockquote-border-thickness
-				title: Blockquote border thickness (px)
-				type: variable-number
-				default: 0
-				format: 'px'
 	-
 				id: blockquote-size
 				title: Blockquote text size (rem)

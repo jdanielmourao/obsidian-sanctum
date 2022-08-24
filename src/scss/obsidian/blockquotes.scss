@@ -23,7 +23,23 @@ body {
 	margin-inline-start: 0;
 	margin-inline-end: 0;
 	quotes: "\201C""\201D""\2018""\2019";
+
+
+	.blockquote-marker &:before {
+		content: "";
+		display: block;
+		margin-bottom: 4px;
+		height: var(--blockquote-border-thickness);
+		width: 2em;
+		background: var(--blockquote-border-color);
+		background-size: 16px 2px;
+	}
+
+	.blockquote-marker & {
+		border-left: none;
+	}
 }
+
 
 .cm-s-obsidian span.cm-quote {
 	color: var(--blockquote-color);
@@ -34,4 +50,12 @@ body {
 	border: 0 solid var(--blockquote-border-color);
 	border-left-width: var(--blockquote-border-thickness);
 	background-color: var(--blockquote-background-color);
+
+	.blockquote-marker & {
+		border-left: none;
+	}
+}
+
+.blockquote-marker .markdown-source-view.mod-cm6 .cm-blockquote-border {
+	border-left: none;
 }
