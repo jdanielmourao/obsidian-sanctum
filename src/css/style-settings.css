@@ -124,7 +124,7 @@ settings:
 				id: blockquote-size
 				title: Blockquote text size (rem)
 				type: variable-number
-				default: .9
+				default: 1
 				format: 'rem'
 	-
 				id: blockquote-font-style
