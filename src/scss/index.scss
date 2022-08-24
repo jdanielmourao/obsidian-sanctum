@@ -22,8 +22,10 @@
 @use 'obsidian/tags';
 @use 'obsidian/typography';
 
+@use 'components/buttons';
 @use 'components/checkbox';
 @use 'components/color-picker';
+@use 'components/inputs';
 
 @use 'features/asides';
 @use 'features/code-blocks-extended';

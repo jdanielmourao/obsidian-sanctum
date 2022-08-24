@@ -33,7 +33,7 @@
 	--layer-selected-hover-2: rgba(var(--gray-30), .5);
 
 	--field-1: rgb(var(--white));
-	--field-hover-1: rgb(var(--gray-10));
+	--field-hover-1: rgb(var(--gray-20));
 
 	--border-subtle-0: rgb(var(--gray-20)); //paired with background
 	--border-subtle-1: rgb(var(--gray-20)); //paired with layer-1
@@ -57,7 +57,7 @@
 	--icon-on-color: rgb(var(--white));
 	--icon-inverse: rgb(var(--white));
 
-	--focus: var(--blue-60);
+	--focus: var(--cyan-60);
 	--focus-inset: rgb(var(--white));
 	--focus-inverse: rgb(var(--white));
 
@@ -142,9 +142,9 @@
 	--icon-on-color: rgb(var(--white));
 	--icon-inverse: rgb(var(--gray-100));
 
-	--focus: var(--white);
+	--focus: var(--cyan-60);
 	--focus-inset: rgb(var(--gray-100));
-	--focus-inverse: rgb(var(--blue-60));
+	--focus-inverse: rgb(var(--white));
 
 	--interactive: rgb(var(--color-accent-rgb));
 	--highlight: rgba(var(--color-accent-rgb), .9);
