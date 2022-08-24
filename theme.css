@@ -301,7 +301,7 @@ body {
   --layer-selected-hover-1: rgba(var(--gray-30), .5);
   --layer-selected-hover-2: rgba(var(--gray-30), .5);
   --field-1: rgb(var(--white));
-  --field-hover-1: rgb(var(--gray-10));
+  --field-hover-1: rgb(var(--gray-20));
   --border-subtle-0: rgb(var(--gray-20));
   --border-subtle-1: rgb(var(--gray-20));
   --border-subtle-2: rgb(var(--gray-20));
@@ -318,7 +318,7 @@ body {
   --icon-secondary: rgb(var(--gray-70));
   --icon-on-color: rgb(var(--white));
   --icon-inverse: rgb(var(--white));
-  --focus: var(--blue-60);
+  --focus: var(--cyan-60);
   --focus-inset: rgb(var(--white));
   --focus-inverse: rgb(var(--white));
   --interactive: rgb(var(--color-accent-rgb));
@@ -380,9 +380,9 @@ body {
   --icon-secondary: rgb(var(--gray-30));
   --icon-on-color: rgb(var(--white));
   --icon-inverse: rgb(var(--gray-100));
-  --focus: var(--white);
+  --focus: var(--cyan-60);
   --focus-inset: rgb(var(--gray-100));
-  --focus-inverse: rgb(var(--blue-60));
+  --focus-inverse: rgb(var(--white));
   --interactive: rgb(var(--color-accent-rgb));
   --highlight: rgba(var(--color-accent-rgb), .9);
   --overlay: rgba(var(--gray-100), .7);
@@ -484,7 +484,7 @@ body {
 }
 body {
   --blockquote-border-thickness: 0px;
-  --blockquote-size: .9rem;
+  --blockquote-size: 1rem;
   --blockquote-font-style: inherit;
   --blockquote-color: inherit;
   --blockquote-background-color: inherit;
@@ -500,6 +500,18 @@ body {
   margin-inline-end: 0;
   quotes: "\201c" "\201d" "\2018" "\2019";
 }
+.blockquote-marker .markdown-rendered blockquote:before {
+  content: "";
+  display: block;
+  margin-bottom: 4px;
+  height: var(--blockquote-border-thickness);
+  width: 2em;
+  background: var(--blockquote-border-color);
+  background-size: 16px 2px;
+}
+.blockquote-marker .markdown-rendered blockquote {
+  border-left: none;
+}
 .cm-s-obsidian span.cm-quote {
   color: var(--blockquote-color);
 }
@@ -508,6 +520,12 @@ body {
   border: 0 solid var(--blockquote-border-color);
   border-left-width: var(--blockquote-border-thickness);
   background-color: var(--blockquote-background-color);
+}
+.blockquote-marker .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  border-left: none;
+}
+.blockquote-marker .markdown-source-view.mod-cm6 .cm-blockquote-border {
+  border-left: none;
 }
 body {
   --callout-radius: var(--radius-s);
@@ -797,8 +815,11 @@ body.clean-embeds .markdown-rendered .markdown-embed .markdown-rendered {
 .markdown-source-view.mod-cm6 .cm-line.HyperMD-task-line.HyperMD-list-line-1 .cm-fold-indicator .collapse-indicator {
   right: 4px;
 }
-.markdown-rendered .list-collapse-indicator {
+.markdown-rendered li:not(.task-list-item) .list-collapse-indicator {
   margin-left: -40px;
+}
+.markdown-rendered li.task-list-item .list-collapse-indicator {
+  margin-left: -42px;
 }
 body svg * {
   stroke-linecap: square;
@@ -1439,6 +1460,63 @@ body {
   padding-right: 0.5em;
 }
 body {
+  --input-height: 32px;
+  --input-radius: 4px;
+}
+.theme-light {
+  --shadow-color: 0deg 5% 59%;
+  --input-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.12),
+    0px 0.5px 0.4px hsl(var(--shadow-color) / 0.47),
+    0px 0.8px 0.7px -1px hsl(var(--shadow-color) / 0.4),
+    0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 0.32),
+    0px 4.5px 4px -3px hsl(var(--shadow-color) / 0.25),
+    0.1px 9.4px 8.4px -4.1px hsl(var(--shadow-color) / 0.18);
+  --input-shadow-hover:inset 0 0 0 1px rgba(0, 0, 0, 0.17),
+    0px 0.5px 0.5px hsl(var(--shadow-color) / 0.47),
+    0px 0.9px 0.8px -1px hsl(var(--shadow-color) / 0.4),
+    0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 0.33),
+    0px 4.5px 4.1px -3px hsl(var(--shadow-color) / 0.26),
+    0.1px 9.4px 8.5px -4px hsl(var(--shadow-color) / 0.19);
+}
+.theme-dark {
+  --shadow-color: 0deg 0% 1%;
+  --input-shadow:
+    inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
+    0px 0.5px 0.4px hsl(var(--shadow-color) / 0.47),
+    0px 0.8px 0.7px -1px hsl(var(--shadow-color) / 0.4),
+    0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 0.32),
+    0px 4.5px 4px -3px hsl(var(--shadow-color) / 0.25),
+    0.1px 9.4px 8.4px -4.1px hsl(var(--shadow-color) / 0.18);
+  --input-shadow-hover:inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
+    0px 0.5px 0.5px hsl(var(--shadow-color) / 0.47),
+    0px 0.9px 0.8px -1px hsl(var(--shadow-color) / 0.4),
+    0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 0.33),
+    0px 4.5px 4.1px -3px hsl(var(--shadow-color) / 0.26),
+    0.1px 9.4px 8.5px -4px hsl(var(--shadow-color) / 0.19);
+}
+button {
+  padding: 0 16px;
+  background-color: var(--layer-1);
+  box-shadow: var(--input-shadow);
+}
+button:hover {
+  background-color: var(--layer-hover-1);
+  box-shadow: var(--input-shadow-hover);
+}
+button:focus-visible {
+  box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
+}
+button.mod-cta {
+  background-color: rgba(var(--color-accent-rgb), 1);
+}
+button.mod-cta:hover {
+  background-color: rgba(var(--color-accent-rgb), 0.9);
+}
+button.mod-cta:focus-visible {
+  box-shadow: 0 0 0 2px var(--focus-inset), 0 0 0 4px var(--background-modifier-border-focus);
+}
+body {
   --checkbox-color-rgb:
     102,
     153,
@@ -1480,7 +1558,7 @@ input[type=checkbox]:checked::after {
 input[type=checkbox]:focus-visible {
   box-shadow: 0 0 0 1px var(--background-primary), 0 0 0 3px var(--background-modifier-border-focus);
 }
-.markdown-preview-view .task-list-item-checkbox {
+.markdown-preview-view input[type=checkbox] {
   top: 2px;
 }
 .pickr .pcr-button,
@@ -1535,6 +1613,83 @@ input[type=checkbox]:focus-visible {
 .pcr-app[data-theme=nano] .pcr-interaction .pcr-cancel {
   grid-area: cancel;
   margin: 0;
+}
+select,
+.dropdown {
+  padding: 0 32px 0 16px;
+  box-shadow: var(--input-shadow);
+  border-radius: var(--input-radius);
+  background-color: var(--layer-1);
+  background-repeat: no-repeat, repeat;
+  background-position: right 8px top 60%, 0 0;
+  background-size: 16px auto, 100%;
+}
+select:hover,
+.dropdown:hover {
+  background-color: var(--layer-hover-1);
+  box-shadow: var(--input-shadow-hover);
+}
+select:focus-visible,
+.dropdown:focus-visible {
+  box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
+}
+.theme-light .dropdown {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='icon' opacity='0.4' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+}
+.theme-dark .dropdown {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='icon' fill='white' opacity='0.4' x='0px' y='0px' viewBox='0 0 32 32' style='enable-background:new 0 0 32 32;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:none;%7D%0A%3C/style%3E%3Cpolygon points='16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 '/%3E%3Crect id='_x3C_Transparent_Rectangle_x3E_' class='st0' width='32' height='32'/%3E%3C/svg%3E");
+}
+textarea,
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=password],
+input[type=number] {
+  --input-radius: 0;
+  background: var(--background-modifier-form-field);
+  padding: 0px 16px;
+  border-radius: var(--input-radius);
+  height: var(--input-height);
+  border-bottom: 1px solid var(--border-strong-1);
+  border-bottom-color: var(--border-strong-1);
+  transition: all var(--duration-moderate-2) var(--motion-expressive-entrance);
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+textarea:hover:not(:focus):not(:focus-visible),
+input[type=text]:hover:not(:focus):not(:focus-visible),
+input[type=search]:hover:not(:focus):not(:focus-visible),
+input[type=email]:hover:not(:focus):not(:focus-visible),
+input[type=password]:hover:not(:focus):not(:focus-visible),
+input[type=number]:hover:not(:focus):not(:focus-visible) {
+  border-bottom-color: var(--background-modifier-border-focus);
+  background-color: var(--field-hover-1);
+}
+textarea:hover:not(:focus):not(:focus-visible)::placeholder,
+input[type=text]:hover:not(:focus):not(:focus-visible)::placeholder,
+input[type=search]:hover:not(:focus):not(:focus-visible)::placeholder,
+input[type=email]:hover:not(:focus):not(:focus-visible)::placeholder,
+input[type=password]:hover:not(:focus):not(:focus-visible)::placeholder,
+input[type=number]:hover:not(:focus):not(:focus-visible)::placeholder {
+  color: var(--text-muted);
+}
+textarea:focus,
+input[type=text]:focus,
+input[type=search]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=number]:focus {
+  box-shadow: none;
+  border-color: var(--background-modifier-border);
+  border-bottom-color: var(--background-modifier-border-focus);
+}
+textarea:focus:placeholder-shown,
+input[type=text]:focus:placeholder-shown,
+input[type=search]:focus:placeholder-shown,
+input[type=email]:focus:placeholder-shown,
+input[type=password]:focus:placeholder-shown,
+input[type=number]:focus:placeholder-shown {
+  box-shadow: 0 0 0 2px var(--background-primary), 0 0 0 4px var(--background-modifier-border-focus);
 }
 body {
   --aside-background: transparent;
@@ -3765,6 +3920,17 @@ settings:
 				default-light: '#'
 				default-dark: '#'
 	-
+				id: blockquote-border-thickness
+				title: Blockquote border thickness (px)
+				type: variable-number
+				default: 0
+				format: 'px'
+	-
+				id: blockquote-marker
+				title: Toggle blockquote marker
+				description: Adds visual element to the top of blockquotes. Its is affected by the border options above. Recommended thickness is 4px.
+				type: class-toggle
+	-
 				id: blockquote-color
 				title: Blockquote text color
 				type: variable-themed-color
@@ -3772,16 +3938,10 @@ settings:
 				default-light: '#'
 				default-dark: '#'
 	-
-				id: blockquote-border-thickness
-				title: Blockquote border thickness (px)
-				type: variable-number
-				default: 0
-				format: 'px'
-	-
 				id: blockquote-size
 				title: Blockquote text size (rem)
 				type: variable-number
-				default: .9
+				default: 1
 				format: 'rem'
 	-
 				id: blockquote-font-style
