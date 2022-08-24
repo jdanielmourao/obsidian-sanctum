@@ -1,7 +1,12 @@
 .pickr .pcr-button,
 .pickr .pcr-button::before,
 .pickr .pcr-button::after {
-	border-radius: 50%;
+	border-radius: 100vmax;
+	box-shadow: inset 0 0 0 1px rgba(var(--mono-rgb-100), 0.25);
+
+	&:hover {
+		box-shadow: inset 0 0 0 1px rgba(var(--mono-rgb-100), 0.25), 0 0 0 3px var(--background-modifier-hover);
+	}
 }
 
 .pcr-app .pcr-swatches > button,
