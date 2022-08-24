@@ -1564,7 +1564,13 @@ input[type=checkbox]:focus-visible {
 .pickr .pcr-button,
 .pickr .pcr-button::before,
 .pickr .pcr-button::after {
-  border-radius: 50%;
+  border-radius: 100vmax;
+  box-shadow: inset 0 0 0 1px rgba(var(--mono-rgb-100), 0.25);
+}
+.pickr .pcr-button:hover,
+.pickr .pcr-button::before:hover,
+.pickr .pcr-button::after:hover {
+  box-shadow: inset 0 0 0 1px rgba(var(--mono-rgb-100), 0.25), 0 0 0 3px var(--background-modifier-hover);
 }
 .pcr-app .pcr-swatches > button,
 .pcr-app .pcr-swatches > button::before,
@@ -1690,6 +1696,174 @@ input[type=email]:focus:placeholder-shown,
 input[type=password]:focus:placeholder-shown,
 input[type=number]:focus:placeholder-shown {
   box-shadow: 0 0 0 2px var(--background-primary), 0 0 0 4px var(--background-modifier-border-focus);
+}
+.markdown-rendered progress,
+.markdown-source-view.is-live-preview progress {
+  height: 4px;
+  width: 240px;
+  border-radius: 0;
+  vertical-align: 0;
+  overflow: visible;
+}
+.markdown-rendered progress[value]::-webkit-progress-bar,
+.markdown-source-view.is-live-preview progress[value]::-webkit-progress-bar {
+  background-color: var(--background-active);
+  box-shadow: none;
+  border-radius: 6px;
+}
+.markdown-rendered progress[value]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value]::-webkit-progress-value {
+  background-color: var(--interactive-accent);
+}
+.markdown-rendered progress[value]:before,
+.markdown-source-view.is-live-preview progress[value]:before {
+  font-size: 70%;
+  line-height: 1.1;
+  content: attr(value) "/" attr(max);
+  color: var(--text-faint);
+  float: left;
+}
+.markdown-source-view.is-live-preview progress[value^="1"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value^="2"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value^="3"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="1"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="2"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="3"]::-webkit-progress-value {
+  background-color: var(--red);
+}
+.markdown-source-view.is-live-preview progress[value^="4"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value^="5"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value^="6"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value^="7"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="4"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="5"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="6"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="7"]::-webkit-progress-value {
+  background-color: var(--orange);
+}
+.markdown-source-view.is-live-preview progress[value^="8"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value^="9"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value^="10"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="8"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="9"]::-webkit-progress-value,
+.markdown-preview-view progress[value^="10"]::-webkit-progress-value {
+  background-color: var(--green);
+}
+.markdown-source-view.is-live-preview progress:not([value]),
+.markdown-preview-view progress:not([value]) {
+  background-color: var(--background-active);
+  border-radius: 3px;
+}
+.markdown-source-view.is-live-preview progress:not([value]):indeterminate,
+.markdown-preview-view progress:not([value]):indeterminate {
+  animation: clr-progress-looper 2s infinite linear;
+}
+@keyframes clr-progress-looper {
+  0% {
+    padding-left: 0;
+  }
+  50% {
+    padding-left: 7.5em;
+  }
+  100% {
+    padding-left: 208px;
+  }
+}
+.markdown-source-view.is-live-preview progress:not([value]):indeterminate::-webkit-progress-bar,
+.markdown-preview-view progress:not([value]):indeterminate::-webkit-progress-bar {
+  background-color: var(--cyan);
+  width: 32px;
+}
+body {
+  --slider-thumb-height: 18px;
+  --slider-thumb-width: 18px;
+  --slider-thumb-y: -7px;
+  --slider-thumb-radius: 50%;
+}
+input[type=range] {
+  min-width: 200px;
+  max-width: 640px;
+  background-color: transparent;
+  height: 32px;
+  margin: 0 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  height: 3px;
+  background-color: var(--background-modifier-border);
+  border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+  top: var(--slider-thumb-y);
+  transition: all 0.1s linear;
+  box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.05), 0 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+input[type=range]::-webkit-slider-thumb:hover,
+input[type=range]::-webkit-slider-thumb:active {
+  --slider-thumb-height: 20px;
+  --slider-thumb-width: 20px;
+  --slider-thumb-y: -8px;
+}
+body:not(.is-mobile) input[type=range]:focus-visible::-webkit-slider-thumb,
+body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb {
+  border-width: 2px;
+  border-color: var(--background-modifier-border-focus);
+  box-shadow:
+    0 1px 2px 0px rgba(0, 0, 0, 0.05),
+    0 2px 3px 0px rgba(0, 0, 0, 0.2),
+    0 0 0 1px var(--focus-inset),
+    0 0 0px 3px var(--background-modifier-border-focus);
+}
+input[type=range]:before {
+  content: attr(min);
+  display: block;
+  font-size: var(--font-ui-smaller);
+  padding-right: 8px;
+}
+input[type=range]:after {
+  pointer-events: none;
+  content: attr(max);
+  display: block;
+  font-size: var(--font-ui-smaller);
+  padding-left: 8px;
+}
+body {
+  --toggle-border-width: 2px;
+  --toggle-width: 48px;
+  --toggle-radius: 100vmax;
+  --toggle-thumb-color: rgb(var(--white));
+  --toggle-thumb-radius: 20px;
+  --toggle-thumb-height: 20px;
+  --toggle-thumb-width: 20px;
+}
+.checkbox-container {
+  --shadow-color: 0deg 0% 61%;
+  --toggle-shadow:
+    inset 0px 0.5px 0.5px hsl(var(--shadow-color) / 0.57),
+    inset 0px 0.8px 0.7px -2px hsl(var(--shadow-color) / 0.43),
+    inset 0px 2.1px 1.9px -4px hsl(var(--shadow-color) / 0.29);
+  border-radius: var(--toggle-radius);
+  height: calc(var(--toggle-thumb-height) + var(--toggle-border-width) * 2);
+  width: var(--toggle-width);
+  box-shadow: var(--toggle-shadow);
+  transition:
+    box-shadow 0.15s ease-in-out,
+    outline 0.15s ease-in-out,
+    border 0.15s ease-in-out,
+    opacity 0.15s ease-in-out;
+  outline: 0 solid var(--background-modifier-border-focus);
+}
+.checkbox-container:not(.is-enabled):hover {
+  background-color: var(--border-subtle-selected-1);
+  box-shadow:
+    inset 0px 0.8px 0.7px hsl(var(--shadow-color)/0.57),
+    inset 0px 1.2px 1.1px -2px hsl(var(--shadow-color)/0.43),
+    inset 0px 3.2px 2.9px -4px hsl(var(--shadow-color)/0.29);
+}
+.theme-dark .checkbox-container {
+  --shadow-color: 0deg 0% 1%;
 }
 body {
   --aside-background: transparent;
