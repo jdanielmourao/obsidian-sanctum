@@ -1,0 +1,34 @@
+body {
+	--toggle-border-width: 2px;
+	--toggle-width: 48px;
+	--toggle-radius: 100vmax;
+	--toggle-thumb-color: rgb(var(--white));
+	--toggle-thumb-radius: 20px;
+	--toggle-thumb-height: 20px;
+	--toggle-thumb-width: 20px;
+}
+
+.checkbox-container {
+	--shadow-color: 0deg 0% 61%;
+	--toggle-shadow: inset 0px 0.5px 0.5px hsl(var(--shadow-color) / 0.57),
+					 inset 0px 0.8px 0.7px -2px hsl(var(--shadow-color) / 0.43),
+					 inset 0px 2.1px 1.9px -4px hsl(var(--shadow-color) / 0.29);
+
+	border-radius: var(--toggle-radius);
+	height: calc(var(--toggle-thumb-height) + var(--toggle-border-width) * 2);
+	width: var(--toggle-width);
+	box-shadow: var(--toggle-shadow);
+	transition: box-shadow 0.15s ease-in-out, outline 0.15s ease-in-out, border 0.15s ease-in-out, opacity 0.15s ease-in-out;
+	outline: 0 solid var(--background-modifier-border-focus);
+
+	&:not(.is-enabled):hover {
+		background-color: var(--border-subtle-selected-1);
+		box-shadow: inset 0px 0.8px 0.7px hsl(var(--shadow-color) / 0.57),
+					inset 0px 1.2px 1.1px -2px hsl(var(--shadow-color) / 0.43),
+					inset 0px 3.2px 2.9px -4px hsl(var(--shadow-color) / 0.29);
+	}
+}
+
+.theme-dark .checkbox-container {
+	--shadow-color: 0deg 0% 1%;
+}
