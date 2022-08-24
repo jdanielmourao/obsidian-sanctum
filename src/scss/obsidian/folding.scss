@@ -49,6 +49,11 @@
 	right: 4px;
 }
 
-.markdown-rendered .list-collapse-indicator {
+.markdown-rendered li:not(.task-list-item) .list-collapse-indicator {
 	margin-left: -40px;
+}
+
+
+.markdown-rendered li.task-list-item .list-collapse-indicator {
+	margin-left: -42px;
 }
