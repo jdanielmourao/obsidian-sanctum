@@ -228,13 +228,6 @@
 
 /*	General Theme Styling
 —————————————————————————————————————————————————————————*/
-.theme-light {
-	--background-modifier-message: var(--background-inverse); //notice & tooltip color
-}
-.theme-dark {
-	--background-modifier-message: var(--layer-1); //notice & tooltip color
-}
-
 .theme-light,
 .theme-dark {
 
@@ -268,6 +261,8 @@
 	--background-modifier-success-rgb: var(--color-green-rgb);
 	--background-modifier-success: var(--green);
 
+	--background-modifier-message: var(--layer-1); //notice & tooltip color
+	
 	--background-modifier-form-field: var(--field-1); //text inputs
 
 	--text-normal: var(--text-primary); //main note text
