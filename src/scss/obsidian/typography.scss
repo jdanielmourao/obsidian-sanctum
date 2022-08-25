@@ -6,6 +6,32 @@ font-feature-settings: 'ss05', 'ss02' on; // 'zero'
 // text-rendering: geometricPrecision;
 // font-optical-sizing: auto;
 
+/*	Relative font sizes
+—————————————————————————————————————————————————————————*/
+	--font-smallest: .8em;
+	--font-smaller: 0.875em;
+	--font-small: 0.933em;
+
+/*	UI Font Sizes
+—————————————————————————————————————————————————————————*/
+	--font-ui-smaller: 12px; //setting descriptions
+	--font-ui-small: 12px; //components, setting section titles, file nav, community plugins descriptions
+	--font-ui-medium: 14px; //community plugin titles, setting titles
+	--font-ui-large: 18px;
+
+// 12px
+// 14px
+// 16px
+// 18px
+// 20px
+// 24px
+// 28px
+// 32px
+// 36px
+// 42px
+// 48px
+// 54px
+// 60px
 
 
 --line-height-normal: 1.5;
@@ -19,47 +45,47 @@ font-feature-settings: 'ss05', 'ss02' on; // 'zero'
 
 /*	Headings
 —————————————————————————————————————————————————————————*/
---h1-size: 2em;
---h2-size: 1.75em;
---h3-size: 1.5em;
---h4-size: 1.25em;
---h5-size: 1.125em;
---h6-size: 1em;
+	--h1-size: 2em;
+	--h2-size: 1.75em;
+	--h3-size: 1.5em;
+	--h4-size: 1.25em;
+	--h5-size: 1.125em;
+	--h6-size: 1em;
 
---h1-color: inherit; //default values
---h2-color: inherit;
---h3-color: inherit;
---h4-color: inherit;
---h5-color: inherit;
---h6-color: inherit;
+	--h1-color: inherit; //default values
+	--h2-color: inherit;
+	--h3-color: inherit;
+	--h4-color: inherit;
+	--h5-color: inherit;
+	--h6-color: inherit;
 
---h1-line-height: 1.2; //default values
---h2-line-height: 1.2;
---h3-line-height: 1.3;
---h4-line-height: 1.4;
---h5-line-height: var(--line-height-normal);
---h6-line-height: var(--line-height-normal);
+	--h1-line-height: 1.2; //default values
+	--h2-line-height: 1.2;
+	--h3-line-height: 1.3;
+	--h4-line-height: 1.4;
+	--h5-line-height: var(--line-height-normal);
+	--h6-line-height: var(--line-height-normal);
 
---h1-style: normal; //default values
---h2-style: normal;
---h3-style: normal;
---h4-style: normal;
---h5-style: normal;
---h6-style: normal;
+	--h1-style: normal; //default values
+	--h2-style: normal;
+	--h3-style: normal;
+	--h4-style: normal;
+	--h5-style: normal;
+	--h6-style: normal;
 
---h1-variant: normal; //default values, relative to font-variant shorthand
---h2-variant: normal;
---h3-variant: normal;
---h4-variant: normal;
---h5-variant: normal;
---h6-variant: normal;
+	--h1-variant: normal; //default values, relative to font-variant shorthand
+	--h2-variant: normal;
+	--h3-variant: normal;
+	--h4-variant: normal;
+	--h5-variant: normal;
+	--h6-variant: normal;
 
---h1-weight: 600;
---h2-weight: 600;
---h3-weight: 600;
---h4-weight: 600;
---h5-weight: 600;
---h6-weight: 600;
+	--h1-weight: 600;
+	--h2-weight: 600;
+	--h3-weight: 600;
+	--h4-weight: 600;
+	--h5-weight: 600;
+	--h6-weight: 600;
 
 }
 
@@ -79,10 +105,6 @@ h1,
 	border: none;
 	font-family: var(--h1-font);
 }
-
-
-
-
 
 
 
