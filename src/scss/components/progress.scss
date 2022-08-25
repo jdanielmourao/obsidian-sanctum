@@ -31,8 +31,8 @@
 		content: attr(value)"%";
 	}
 
-	&[aria-label]:before {
-		content: attr(aria-label);
+	&[aria-description]:before {
+		content: attr(aria-description);
 	}
 }
 
