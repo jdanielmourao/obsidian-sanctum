@@ -15,6 +15,10 @@ input[type='range'] {
 	flex-direction: row;
 	align-items: center;
 
+	&:hover::-webkit-slider-runnable-track {
+		background-color: var(--border-subtle-selected-1);
+	}
+
 	&::-webkit-slider-runnable-track {
 		height: 3px;
 		background-color: var(--background-modifier-border);
@@ -33,6 +37,8 @@ input[type='range'] {
 		--slider-thumb-height: 20px;
 		--slider-thumb-width: 20px;
 		--slider-thumb-y: -8px;
+
+		border-color: var(--background-modifier-border-hover);
 	}
 	body:not(.is-mobile) &:focus-visible::-webkit-slider-thumb,
 	body:not(.is-mobile) &:focus::-webkit-slider-thumb {
@@ -49,6 +55,7 @@ input[type='range'] {
 		display: block;
 		font-size: var(--font-ui-smaller);
 		padding-right: 8px;
+		color: var(--text-muted);
 	}
 
 	&:after {
@@ -57,6 +64,7 @@ input[type='range'] {
 		display: block;
 		font-size: var(--font-ui-smaller);
 		padding-left: 8px;
+		color: var(--text-muted);
 	}
 }
 
