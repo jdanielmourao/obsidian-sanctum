@@ -20,13 +20,26 @@
 	}
 
 	&:before {
-		font-size: 70%;
+		font-size: 65%;
 		line-height: 1.1;
 		content: attr(value) "/" attr(max);
 		color: var(--text-faint);
-		float: left;
+		float: right;
 	}
 }
+
+
+.markdown-rendered progress[max='100'],
+.markdown-source-view.is-live-preview progress[max='100'] { //adds percentage when max is 100
+
+	&[value]:before {
+		content: attr(value)"%";
+	}
+}
+
+
+
+
 
 .markdown-source-view.is-live-preview progress[value^="1"]::-webkit-progress-value,
 .markdown-source-view.is-live-preview progress[value^="2"]::-webkit-progress-value,
@@ -49,10 +62,10 @@
 
 .markdown-source-view.is-live-preview progress[value^="8"]::-webkit-progress-value,
 .markdown-source-view.is-live-preview progress[value^="9"]::-webkit-progress-value,
-.markdown-source-view.is-live-preview progress[value^="10"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value^="100"]::-webkit-progress-value,
 .markdown-preview-view progress[value^="8"]::-webkit-progress-value,
 .markdown-preview-view progress[value^="9"]::-webkit-progress-value,
-.markdown-preview-view progress[value^="10"]::-webkit-progress-value {
+.markdown-preview-view progress[value^="100"]::-webkit-progress-value {
   background-color: var(--green);
 }
 
