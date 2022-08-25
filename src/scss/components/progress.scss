@@ -9,6 +9,7 @@
 
 .markdown-rendered progress[value],
 .markdown-source-view.is-live-preview progress[value] {
+	position: relative;
 
 	&::-webkit-progress-bar {
 		background-color: var(--background-active);
@@ -31,8 +32,13 @@
 		content: attr(value)"%";
 	}
 
-	&[aria-description]:before {
+	&[aria-description]:after {
 		content: attr(aria-description);
+		position: absolute;
+		font-size: 60%;
+		line-height: 1.3;
+		top: 0;
+		color: var(--text-muted);
 	}
 }
 
