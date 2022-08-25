@@ -1,6 +1,8 @@
 body {
 	--aside-background: transparent;
 	--aside-background-hover: var(--background-modifier-hover);
+	--aside-text-color: var(--text-muted);
+	--aside-border-color: var(--background-modifier-border);
 }
 
 .callout[data-callout~=aside] {
@@ -12,13 +14,19 @@ body {
 	clear: both;
 	margin: 0;
 	padding: 0;
-	max-width: 20vw;
+	max-width: 50%;
 	padding-top: 4px;
 	margin-left: 1em;
 	padding-left: 1em;
 	padding-right: 1em;
 	font-size: 80%;
 	line-height: 1.6;
+	color: var(--aside-text-color);
+	border-radius: 0;
+
+	&:hover {
+		border-radius: var(--callout-radius);
+	}
 
 	.callout-title {
 		display: none;
@@ -33,6 +41,10 @@ body {
 	clear: right;
 	margin-right: -1em;
 	margin-left: 1em;
+
+	.aside-border & {
+		border-left: 1px solid var(--aside-border-color);
+	}
 }
 
 .callout[data-callout-metadata~=left] {
@@ -41,20 +53,32 @@ body {
 	margin-right: 1em;
 	margin-left: -1em;
 	border-left: none;
+
+	.aside-border & {
+		border-right: 1px solid var(--aside-border-color);
+	}
 }
 
 .callout[data-callout-metadata~=right-margin] {
 	float: right;
 	clear: right;
-	margin-right: calc(-20vw - 1em);
+	margin-right: calc(-50% - 1em);
+
+	.aside-border & {
+		border-left: 1px solid var(--aside-border-color);
+	}
 }
 
 .callout[data-callout-metadata~=left-margin] {
 	float: left;
 	clear: left;
 	margin-right: 0;
-	margin-left: calc(-20vw - 1em);
+	margin-left: calc(-50% - 1em);
 	border-left: none;
+
+	.aside-border & {
+		border-right: 1px solid var(--aside-border-color);
+	}
 }
 
 @media (max-width: 1024px) {

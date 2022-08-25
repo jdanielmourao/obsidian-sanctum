@@ -79,6 +79,26 @@ settings:
 				title: Toggle aside counter [Beta]
 				type: class-toggle
 	-
+				id: aside-border
+				title: Toggle aside borders
+				type: class-toggle
+	-
+				id: aside-border-color
+				title: Aside border color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: aside-text-color
+				title: Aside text color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
 				id: aside-background
 				title: Aside background color
 				type: variable-themed-color
