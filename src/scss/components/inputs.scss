@@ -13,8 +13,6 @@ input[type='number'] {
 	border-bottom: 1px solid var(--border-strong-1);
 	border-bottom-color: var(--border-strong-1);
 	transition: all var(--duration-moderate-2) var(--motion-expressive-entrance);
-	margin-top: 8px;
-	margin-bottom: 4px;
 
 	&:hover:not(:focus):not(:focus-visible) {
 		border-bottom-color: var(--background-modifier-border-focus);
