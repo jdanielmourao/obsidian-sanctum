@@ -25,3 +25,49 @@
 				0px 4px 4.2px -2px hsl(var(--shadow-color) / 0.36),
 				0px 10.1px 10.6px -3px hsl(var(--shadow-color) / 0.32);
 }
+
+
+/* Triangle hack to make tooltip look like a speech bubble */
+.tooltip .tooltip-arrow {
+	position: absolute;
+	top: -5px;
+	left: 50%;
+	width: 0;
+	margin-left: -5px;
+	border-bottom: 5px solid var(--background-inverse);
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	content: " ";
+	font-size: 0;
+	line-height: 0;
+}
+.tooltip.mod-right .tooltip-arrow {
+	top: calc(50% - 5px);
+	left: -5px;
+	border-right: 5px solid var(--background-inverse);
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+}
+.tooltip.mod-left .tooltip-arrow {
+	top: calc(50% - 5px);
+	left: calc(100% + 5px);
+	border-left: 5px solid var(--background-inverse);
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+}
+.tooltip.mod-top .tooltip-arrow {
+	top: calc(100%);
+	border-top: 5px solid var(--background-inverse);
+	border-bottom: 5px solid transparent;
+}
+.tooltip.mod-error .tooltip-arrow {
+	border-bottom-color: var(--background-modifier-error);
+}
+.tooltip.mod-error.mod-right .tooltip-arrow {
+	border-right-color: var(--background-modifier-error);
+	border-bottom: 5px solid transparent;
+}
+.tooltip.mod-error.mod-left .tooltip-arrow {
+	border-left-color: var(--background-modifier-error);
+	border-bottom: 5px solid transparent;
+}
