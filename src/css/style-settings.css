@@ -115,8 +115,13 @@ settings:
 				format: 'px'
 	-
 				id: blockquote-marker
-				title: Toggle blockquote marker
-				description: Adds visual element to the top of blockquotes. Its is affected by the border options above. Recommended thickness is 4px.
+				title: Toggle blockquote short divider
+				description: Adds a visual element to the top of blockquotes. Its is affected by the border options above.
+				type: class-toggle
+	-
+				id: blockquote-border
+				title: Toggle blockquote horizontal dividers
+				description: Adds 2 horizontal rules to the top and bottom of blockquotes. This option replaces blockquote short dividers.
 				type: class-toggle
 	-
 				id: blockquote-color

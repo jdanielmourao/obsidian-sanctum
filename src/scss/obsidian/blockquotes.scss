@@ -1,16 +1,10 @@
-.theme-dark {
-	--blockquote-border-color: hsl(187.4, 22.4%, 50%);
-}
-.theme-light {
-	--blockquote-border-color: hsl(199.5, 38.8%, 40.4%);
-}
-
 body {
 	--blockquote-border-thickness: 0px;
 	--blockquote-size: 1rem;
 	--blockquote-font-style: inherit;
 	--blockquote-color: inherit;
 	--blockquote-background-color: inherit;
+	--blockquote-border-color: var(--background-modifier-border);
 }
 
 .markdown-rendered blockquote {
@@ -24,18 +18,32 @@ body {
 	margin-inline-end: 0;
 	quotes: "\201C""\201D""\2018""\2019";
 
-	.blockquote-marker &:before {
-		content: "";
-		display: block;
-		margin-bottom: 4px;
-		height: var(--blockquote-border-thickness);
-		width: 2em;
-		background: var(--blockquote-border-color);
-		background-size: 16px 2px;
-	}
-
 	.blockquote-marker & {
 		border-left: none;
+
+		&:before {
+			content: "";
+			display: block;
+			margin-bottom: 4px;
+			height: var(--blockquote-border-thickness);
+			width: 60px;
+			background: var(--blockquote-border-color);
+			background-size: 16px 2px;
+		}
+	}
+
+	.blockquote-border & {
+		padding-top: 16px;
+		padding-bottom: 16px;
+		border-top: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+		border-bottom: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+		border-left: none;
+
+		&::before {
+			content: none;
+			width: 0;
+			background: none;
+		}
 	}
 }
 
