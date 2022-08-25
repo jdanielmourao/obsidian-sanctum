@@ -20,22 +20,22 @@
 	}
 
 	&:before {
-		font-size: 65%;
-		line-height: 1.1;
+		font-size: 60%;
+		line-height: 1.3;
 		content: attr(value) "/" attr(max);
-		color: var(--text-faint);
+		color: var(--text-muted);
 		float: right;
 	}
-}
 
-
-.markdown-rendered progress[max='100'],
-.markdown-source-view.is-live-preview progress[max='100'] { //adds percentage when max is 100
-
-	&[value]:before {
+	&[max='100']:before {
 		content: attr(value)"%";
 	}
+
+	&[aria-label]:before {
+		content: attr(aria-label);
+	}
 }
+
 
 
 
