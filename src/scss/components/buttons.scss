@@ -58,7 +58,7 @@ button {
 		background-color: rgba(var(--color-accent-rgb), 1);
 
 		&:hover {
-			background-color: rgba(var(--color-accent-rgb), .9);
+			filter: brightness(.95);
 		}
 		&:focus-visible {
 			box-shadow: 0 0 0 2px var(--focus-inset),
