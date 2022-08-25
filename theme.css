@@ -388,9 +388,29 @@ body {
   --overlay: rgba(var(--gray-100), .7);
 }
 .theme-dark.sanctum-contrast-dark {
-  --background: rgb(var(--gray-100));
-  --background-secondary: rgb(var(--black));
-  --background-secondary-alt: rgb(var(--black));
+  --background: rgb(var(--gray-90));
+  --background-secondary: rgb(var(--gray-100));
+  --background-secondary-alt: rgb(var(--gray-100));
+  --layer-1: rgb(var(--gray-80));
+  --layer-2: rgb(var(--gray-70));
+  --layer-hover-1: rgba(var(--gray-70), .5);
+  --layer-hover-2: rgba(var(--gray-60), .5);
+  --layer-active-1: rgb(var(--gray-60));
+  --layer-active-2: rgb(var(--gray-50));
+  --layer-selected-1: rgb(var(--gray-70));
+  --layer-selected-2: rgb(var(--gray-60));
+  --layer-selected-hover-1: rgba(var(--gray-60), .5);
+  --layer-selected-hover-2: rgba(var(--gray-50), .5);
+  --field-1: rgb(var(--gray-80));
+  --field-hover-1: rgb(var(--gray-70));
+  --border-subtle-0: rgb(var(--gray-70));
+  --border-subtle-1: rgb(var(--gray-70));
+  --border-subtle-2: rgb(var(--gray-60));
+  --border-subtle-selected-1: rgb(var(--gray-60));
+  --border-subtle-selected-2: rgb(var(--gray-50));
+  --border-strong-1: rgb(var(--gray-50));
+  --border-strong-2: rgb(var(--gray-40));
+  --border-inverse: rgb(var(--gray-10));
 }
 .theme-dark.sanctum-black {
   --background: rgb(var(--black));
@@ -1659,8 +1679,6 @@ input[type=number] {
   border-bottom: 1px solid var(--border-strong-1);
   border-bottom-color: var(--border-strong-1);
   transition: all var(--duration-moderate-2) var(--motion-expressive-entrance);
-  margin-top: 8px;
-  margin-bottom: 4px;
 }
 textarea:hover:not(:focus):not(:focus-visible),
 input[type=text]:hover:not(:focus):not(:focus-visible),
