@@ -439,12 +439,6 @@ body {
   --text-placeholder: rgb(var(--gray-80));
   --highlight: rgba(var(--color-accent-rgb), .9);
 }
-.theme-light {
-  --background-modifier-message: var(--background-inverse);
-}
-.theme-dark {
-  --background-modifier-message: var(--layer-1);
-}
 .theme-light,
 .theme-dark {
   --color-accent-rgb:
@@ -482,6 +476,7 @@ body {
   --background-modifier-error-hover: var(--red);
   --background-modifier-success-rgb: var(--color-green-rgb);
   --background-modifier-success: var(--green);
+  --background-modifier-message: var(--layer-1);
   --background-modifier-form-field: var(--field-1);
   --text-normal: var(--text-primary);
   --text-muted: var(--text-secondary);
@@ -496,18 +491,13 @@ body {
   --radius-m: 8px;
   --radius-l: 10px;
 }
-.theme-dark {
-  --blockquote-border-color: hsl(187.4, 22.4%, 50%);
-}
-.theme-light {
-  --blockquote-border-color: hsl(199.5, 38.8%, 40.4%);
-}
 body {
   --blockquote-border-thickness: 0px;
   --blockquote-size: 1rem;
   --blockquote-font-style: inherit;
   --blockquote-color: inherit;
   --blockquote-background-color: inherit;
+  --blockquote-border-color: var(--background-modifier-border);
 }
 .markdown-rendered blockquote {
   font-size: var(--blockquote-size);
@@ -520,17 +510,29 @@ body {
   margin-inline-end: 0;
   quotes: "\201c" "\201d" "\2018" "\2019";
 }
+.blockquote-marker .markdown-rendered blockquote {
+  border-left: none;
+}
 .blockquote-marker .markdown-rendered blockquote:before {
   content: "";
   display: block;
   margin-bottom: 4px;
   height: var(--blockquote-border-thickness);
-  width: 2em;
+  width: 60px;
   background: var(--blockquote-border-color);
   background-size: 16px 2px;
 }
-.blockquote-marker .markdown-rendered blockquote {
+.blockquote-border .markdown-rendered blockquote {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+  border-bottom: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
   border-left: none;
+}
+.blockquote-border .markdown-rendered blockquote::before {
+  content: none;
+  width: 0;
+  background: none;
 }
 .cm-s-obsidian span.cm-quote {
   color: var(--blockquote-color);
@@ -1128,6 +1130,47 @@ ol ol ol ol ol ol ol ol ol ol {
   background-color: var(--list-marker-color-collapsed);
   box-shadow: 0 0 0 4px rgba(var(--color-accent-rgb), 0.2);
 }
+.theme-light .menu {
+  --shadow-color: 60deg 5% 59%;
+}
+.theme-dark .menu {
+  --shadow-color: 0deg 0% 1%;
+}
+.menu {
+  padding: 8px;
+  border: 1px solid var(--background-modifier-border-hover);
+  background-color: var(--layer-1);
+  border-radius: var(--radius-m);
+  box-shadow:
+    0px 0.5px 0.5px hsl(var(--shadow-color)/0.43),
+    0px 1.5px 1.6px -1px hsl(var(--shadow-color)/0.4),
+    0px 4px 4.2px -2px hsl(var(--shadow-color)/0.36),
+    0px 10.1px 10.6px -3px hsl(var(--shadow-color)/0.32);
+}
+.notice {
+  color: var(--text-normal);
+  padding: 0.875em 1em 0.875em 1em;
+  max-width: 288px;
+  margin-bottom: 16px;
+}
+.theme-light .notice {
+  --shadow-color: 60deg 5% 59%;
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.12),
+    0px 0.5px 0.5px hsl(var(--shadow-color)/0.43),
+    0px 1.5px 1.6px -1px hsl(var(--shadow-color)/0.4),
+    0px 4px 4.2px -2px hsl(var(--shadow-color)/0.36),
+    0px 10.1px 10.6px -3px hsl(var(--shadow-color)/0.32);
+}
+.theme-dark .notice {
+  --shadow-color: 0deg 0% 1%;
+  box-shadow:
+    inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
+    0px 0.5px 0.5px hsl(var(--shadow-color)/0.43),
+    0px 1.5px 1.6px -1px hsl(var(--shadow-color)/0.4),
+    0px 4px 4.2px -2px hsl(var(--shadow-color)/0.36),
+    0px 10.1px 10.6px -3px hsl(var(--shadow-color)/0.32);
+}
 body {
   --scrollbar-active-thumb-bg: rgba(var(--mono-rgb-100), 0.2);
   --scrollbar-bg: rgba(var(--mono-rgb-100), 0.05);
@@ -1293,9 +1336,84 @@ body {
   --tag-padding-y: 0.25em;
   --tag-radius: 2em;
 }
+.tooltip {
+  color: var(--background-primary);
+  background-color: var(--background-inverse);
+  left: 50%;
+  max-width: 288px;
+  padding: 4px 16px;
+}
+.theme-light .tooltip {
+  --shadow-color: 60deg 5% 59%;
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.12),
+    0px 0.5px 0.5px hsl(var(--shadow-color)/0.43),
+    0px 1.5px 1.6px -1px hsl(var(--shadow-color)/0.4),
+    0px 4px 4.2px -2px hsl(var(--shadow-color)/0.36),
+    0px 10.1px 10.6px -3px hsl(var(--shadow-color)/0.32);
+}
+.theme-dark .tooltip {
+  --shadow-color: 0deg 0% 1%;
+  box-shadow:
+    inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
+    0px 0.5px 0.5px hsl(var(--shadow-color)/0.43),
+    0px 1.5px 1.6px -1px hsl(var(--shadow-color)/0.4),
+    0px 4px 4.2px -2px hsl(var(--shadow-color)/0.36),
+    0px 10.1px 10.6px -3px hsl(var(--shadow-color)/0.32);
+}
+.tooltip .tooltip-arrow {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 0;
+  margin-left: -5px;
+  border-bottom: 5px solid var(--background-inverse);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+.tooltip.mod-right .tooltip-arrow {
+  top: calc(50% - 5px);
+  left: -5px;
+  border-right: 5px solid var(--background-inverse);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+.tooltip.mod-left .tooltip-arrow {
+  top: calc(50% - 5px);
+  left: calc(100% + 5px);
+  border-left: 5px solid var(--background-inverse);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+.tooltip.mod-top .tooltip-arrow {
+  top: 100%;
+  border-top: 5px solid var(--background-inverse);
+  border-bottom: 5px solid transparent;
+}
+.tooltip.mod-error .tooltip-arrow {
+  border-bottom-color: var(--background-modifier-error);
+}
+.tooltip.mod-error.mod-right .tooltip-arrow {
+  border-right-color: var(--background-modifier-error);
+  border-bottom: 5px solid transparent;
+}
+.tooltip.mod-error.mod-left .tooltip-arrow {
+  border-left-color: var(--background-modifier-error);
+  border-bottom: 5px solid transparent;
+}
 body {
   font-feature-settings: "ss05", "ss02" on;
   -webkit-font-smoothing: subpixel-antialiased;
+  --font-smallest: .8em;
+  --font-smaller: 0.875em;
+  --font-small: 0.933em;
+  --font-ui-smaller: 12px;
+  --font-ui-small: 12px;
+  --font-ui-medium: 14px;
+  --font-ui-large: 18px;
   --line-height-normal: 1.5;
   --h1-size: 2em;
   --h2-size: 1.75em;
@@ -1531,7 +1649,7 @@ button.mod-cta {
   background-color: rgba(var(--color-accent-rgb), 1);
 }
 button.mod-cta:hover {
-  background-color: rgba(var(--color-accent-rgb), 0.9);
+  filter: brightness(0.95);
 }
 button.mod-cta:focus-visible {
   box-shadow: 0 0 0 2px var(--focus-inset), 0 0 0 4px var(--background-modifier-border-focus);
@@ -1825,6 +1943,9 @@ input[type=range] {
   flex-direction: row;
   align-items: center;
 }
+input[type=range]:hover::-webkit-slider-runnable-track {
+  background-color: var(--border-subtle-selected-1);
+}
 input[type=range]::-webkit-slider-runnable-track {
   height: 3px;
   background-color: var(--background-modifier-border);
@@ -1840,6 +1961,7 @@ input[type=range]::-webkit-slider-thumb:active {
   --slider-thumb-height: 20px;
   --slider-thumb-width: 20px;
   --slider-thumb-y: -8px;
+  border-color: var(--background-modifier-border-hover);
 }
 body:not(.is-mobile) input[type=range]:focus-visible::-webkit-slider-thumb,
 body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb {
@@ -1856,6 +1978,7 @@ input[type=range]:before {
   display: block;
   font-size: var(--font-ui-smaller);
   padding-right: 8px;
+  color: var(--text-muted);
 }
 input[type=range]:after {
   pointer-events: none;
@@ -1863,6 +1986,7 @@ input[type=range]:after {
   display: block;
   font-size: var(--font-ui-smaller);
   padding-left: 8px;
+  color: var(--text-muted);
 }
 body {
   --toggle-border-width: 2px;
@@ -1897,12 +2021,17 @@ body {
     inset 0px 1.2px 1.1px -2px hsl(var(--shadow-color)/0.43),
     inset 0px 3.2px 2.9px -4px hsl(var(--shadow-color)/0.29);
 }
+.checkbox-container.is-enabled:focus-within {
+  outline-offset: 2px;
+}
 .theme-dark .checkbox-container {
   --shadow-color: 0deg 0% 1%;
 }
 body {
   --aside-background: transparent;
   --aside-background-hover: var(--background-modifier-hover);
+  --aside-text-color: var(--text-muted);
+  --aside-border-color: var(--background-modifier-border);
 }
 .callout[data-callout~=aside] {
   --callout-color:
@@ -1916,13 +2045,18 @@ body {
   clear: both;
   margin: 0;
   padding: 0;
-  max-width: 20vw;
+  max-width: 50%;
   padding-top: 4px;
   margin-left: 1em;
   padding-left: 1em;
   padding-right: 1em;
   font-size: 80%;
   line-height: 1.6;
+  color: var(--aside-text-color);
+  border-radius: 0;
+}
+.callout[data-callout~=aside]:hover {
+  border-radius: var(--callout-radius);
 }
 .callout[data-callout~=aside] .callout-title {
   display: none;
@@ -1936,6 +2070,9 @@ body {
   margin-right: -1em;
   margin-left: 1em;
 }
+.aside-border .callout[data-callout-metadata~=right] {
+  border-left: 1px solid var(--aside-border-color);
+}
 .callout[data-callout-metadata~=left] {
   float: left;
   clear: left;
@@ -1943,17 +2080,26 @@ body {
   margin-left: -1em;
   border-left: none;
 }
+.aside-border .callout[data-callout-metadata~=left] {
+  border-right: 1px solid var(--aside-border-color);
+}
 .callout[data-callout-metadata~=right-margin] {
   float: right;
   clear: right;
-  margin-right: calc(-20vw - 1em);
+  margin-right: calc(-50% - 1em);
+}
+.aside-border .callout[data-callout-metadata~=right-margin] {
+  border-left: 1px solid var(--aside-border-color);
 }
 .callout[data-callout-metadata~=left-margin] {
   float: left;
   clear: left;
   margin-right: 0;
-  margin-left: calc(-20vw - 1em);
+  margin-left: calc(-50% - 1em);
   border-left: none;
+}
+.aside-border .callout[data-callout-metadata~=left-margin] {
+  border-right: 1px solid var(--aside-border-color);
 }
 @media (max-width: 1024px) {
   .callout[data-callout-metadata~=right-margin] {
@@ -4100,6 +4246,26 @@ settings:
 				title: Toggle aside counter [Beta]
 				type: class-toggle
 	-
+				id: aside-border
+				title: Toggle aside borders
+				type: class-toggle
+	-
+				id: aside-border-color
+				title: Aside border color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: aside-text-color
+				title: Aside text color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
 				id: aside-background
 				title: Aside background color
 				type: variable-themed-color
@@ -4136,8 +4302,13 @@ settings:
 				format: 'px'
 	-
 				id: blockquote-marker
-				title: Toggle blockquote marker
-				description: Adds visual element to the top of blockquotes. Its is affected by the border options above. Recommended thickness is 4px.
+				title: Toggle blockquote short divider
+				description: Adds a visual element to the top of blockquotes. Its is affected by the border options above.
+				type: class-toggle
+	-
+				id: blockquote-border
+				title: Toggle blockquote horizontal dividers
+				description: Adds 2 horizontal rules to the top and bottom of blockquotes. This option replaces blockquote short dividers.
 				type: class-toggle
 	-
 				id: blockquote-color
