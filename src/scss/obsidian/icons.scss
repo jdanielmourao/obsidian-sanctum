@@ -1,17 +1,17 @@
 body svg * {
-	stroke-linecap: square;
-	stroke-linejoin: miter;
-	rx: 1.5px;
-	ry: 1.5px;
+	stroke-linecap: auto;
+	stroke-linejoin: auto;
+	rx: 1px;
+	ry: 1px;
 }
 
 body {
-	--icon-xs: 14px;
+	--icon-xs: 16px;
 	--icon-s: 16px;
-	--icon-m: 18px;
-	--icon-l: 18px;
-	--icon-xs-stroke-width: 2px;
-	--icon-s-stroke-width: 2px;
-	--icon-m-stroke-width: 1.75px;
-	--icon-l-stroke-width: 1.75px;
+	--icon-m: 20px;
+	--icon-l: 20px;
+	--icon-xs-stroke-width: 1px;
+	--icon-s-stroke-width: 1px;
+	--icon-m-stroke-width: 1.25px;
+	--icon-l-stroke-width: 1.25px;
 }
