@@ -17,11 +17,11 @@ body {
 	padding: 16px 12px 16px 12px;
 
 	& .callout-icon {
-		align-self: baseline;
+		// align-self: baseline;
 
 		& svg {
-			height: var(--icon-m);
-			width: var(--icon-m);
+			height: var(--icon-s);
+			width: var(--icon-s);
 		}
 	}
 	& .callout-content {
