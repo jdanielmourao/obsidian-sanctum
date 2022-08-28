@@ -1,0 +1,55 @@
+
+.callout.callout[data-callout='grid'] {
+	background: transparent;
+	border: 0;
+	margin: 0;
+	box-shadow: none;
+
+	& .callout-title {
+		display: none;
+	}
+
+	& .callout-content {
+		display: block;
+		width: 100%;
+		padding: 0;
+	}
+	& .callout-content p {
+		display: flex;
+		flex-wrap: wrap;
+		margin-block-start: 0;
+		margin-block-end: 0;
+		justify-content: center;
+		gap: 4px;
+	}
+	& .callout-content img {
+		max-height: 300px;
+	}
+	&[data-callout-metadata='100'] .callout-content img {
+		max-height: 100px;
+	}
+	&[data-callout-metadata='150'] .callout-content img {
+		max-height: 150px;
+	}
+	&[data-callout-metadata='200'] .callout-content img {
+		max-height: 200px;
+	}
+	&[data-callout-metadata='250'] .callout-content img {
+		max-height: 250px;
+	}
+	&[data-callout-metadata='300'] .callout-content img {
+		max-height: 300px;
+	}
+	&[data-callout-metadata='350'] .callout-content img {
+		max-height: 350px;
+	}
+	&[data-callout-metadata='400'] .callout-content img {
+		max-height: 400px;
+	}
+	&[data-callout-metadata='450'] .callout-content img {
+		max-height: 450px;
+	}
+	&[data-callout-metadata='500'] .callout-content img {
+		max-height: 500px;
+	}
+}

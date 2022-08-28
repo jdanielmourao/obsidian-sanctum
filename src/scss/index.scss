@@ -15,6 +15,7 @@
 @use 'obsidian/footnotes';
 @use 'obsidian/frontmatter';
 @use 'obsidian/icons';
+@use 'obsidian/images';
 @use 'obsidian/indentation-guides';
 @use 'obsidian/links';
 @use 'obsidian/lists';
@@ -37,6 +38,8 @@
 
 @use 'features/asides';
 @use 'features/code-blocks-extended';
+@use 'features/columns';
+@use 'features/grid';
 @use 'features/syntax-highlights';
 
 @use 'mobile/mobile';

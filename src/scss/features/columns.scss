@@ -1,0 +1,27 @@
+.callout[data-callout*=column] {
+	--columns: 2;
+	--callout-color: 0, 0, 0, 0;
+
+	border-width: 0;
+	padding: 0;
+
+	& .callout-content blockquote {
+		padding: 0;
+	}
+
+	& .callout-title {
+		display: none;
+	}
+	& .callout-content {
+		display: grid;
+		grid-template-columns: repeat(var(--columns), 1fr);
+		gap: 0.5em;
+		padding: 0;
+	}
+	&[data-callout-metadata~="3"] .callout-content {
+		--columns: 3;
+	}
+	&[data-callout-metadata~="4"] .callout-content {
+		--columns: 4;
+	}
+}
