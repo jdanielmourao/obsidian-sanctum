@@ -17,7 +17,7 @@ body {
 	padding: 16px 12px 16px 12px;
 
 	& .callout-icon {
-		// align-self: baseline;
+		align-self: baseline;
 
 		& svg {
 			height: var(--icon-s);
@@ -246,17 +246,12 @@ body {
 /*	Callout Icons
 —————————————————————————————————————————————————————————*/
 
-.callout:where(.is-collapsible, .is-collapsed) .callout-fold svg.lucide-chevron-down > path {
-	display: none;
-}
+
 .callout.is-collapsible .callout-fold svg.lucide-chevron-down {
-	background-color: currentColor;
-	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='m16 10 10 10-1.4 1.4-8.6-8.6-8.6 8.6L6 20z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
+	transform: scaleY(-1); //mirrors the svg
 }
 .callout.is-collapsed .callout-fold svg.lucide-chevron-down {
-	background-color: currentColor;
-	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='m16 10 10 10-1.4 1.4-8.6-8.6-8.6 8.6L6 20z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
-	transform: scale(-1); //mirrors the svg
+	transform: scaleY(1);
 }
 
 .callout-title {
