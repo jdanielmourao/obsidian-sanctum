@@ -2,7 +2,7 @@
 —————————————————————————————————————————————————————————*/
 
 
-li:not(li[data-task='x']) input[type='checkbox']:checked,
+li:not(li[data-task='x']) input[type='checkbox']:checked ,
 .markdown-source-view input[type='checkbox']:not([data-task='x']):checked {
 	background-color: transparent;
 	border-width: 0;
@@ -20,6 +20,9 @@ li:not(li[data-task='x']) input[type='checkbox']:checked,
 	}
 }
 
+.markdown-source-view.mod-cm6 input[type='checkbox'][data-task] { //corrects LP alignment
+	top: -3px;
+}
 
 /*	Star
 —————————————————————————————————————————————————————————*/
@@ -270,16 +273,11 @@ input[type='checkbox'][data-task='/'] {
 /*	Up
 —————————————————————————————————————————————————————————*/
 
-li[data-task='u'][data-task='u'] input[type='checkbox']:checked,
-.markdown-source-view input[type='checkbox'][data-task='u'][data-task='u'] {
-	background-color: var(--green);
-	border-width: 1px;
-	left: -.5px;
+li[data-task='u'] input[type='checkbox']:checked,
+input[type='checkbox'][data-task='u'] {
 
 	&::after {
-		background-color: var(--background-primary);
-		-webkit-mask-size: 81.25%;
-		-webkit-mask-position: 43.75% 46.875%;
+		background-color: var(--green);
 		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M20 8v2h6.586L18 18.586l-4.293-4.293a1 1 0 0 0-1.414 0L2 24.586 3.414 26 13 16.414l4.293 4.293a1 1 0 0 0 1.414 0L28 11.414V18h2V8Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 	}
 }
@@ -287,17 +285,12 @@ li[data-task='u'][data-task='u'] input[type='checkbox']:checked,
 /*	Down
 —————————————————————————————————————————————————————————*/
 
-li[data-task='d'][data-task='d'] input[type='checkbox']:checked,
-.markdown-source-view input[type='checkbox'][data-task='d'][data-task='d'] {
-	background-color: var(--red);
-	border-width: 1px;
-	left: -.5px;
+li[data-task='d'] input[type='checkbox']:checked,
+input[type='checkbox'][data-task='d'] {
 
 	&::after {
-		background-color: var(--background-primary);
+		background-color: var(--red);
 		transform: scaleY(-1);
-		-webkit-mask-size: 81.25%;
-		-webkit-mask-position: 43.75% 46.875%;
 		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M20 8v2h6.586L18 18.586l-4.293-4.293a1 1 0 0 0-1.414 0L2 24.586 3.414 26 13 16.414l4.293 4.293a1 1 0 0 0 1.414 0L28 11.414V18h2V8Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 	}
 }
@@ -354,8 +347,8 @@ input[type='checkbox'][data-task='M'] {
 /*	Language / Translation
 —————————————————————————————————————————————————————————*/
 
-li[data-task='L'][data-task='L'] input[type='checkbox']:checked,
-.markdown-source-view input[type='checkbox'][data-task='L'][data-task='L'] {
+li[data-task='L'] input[type='checkbox']:checked,
+input[type='checkbox'][data-task='L']{
 
 	&::after {
 		background-color: var(--green);
@@ -367,11 +360,11 @@ li[data-task='L'][data-task='L'] input[type='checkbox']:checked,
 /*	Time / Clock
 —————————————————————————————————————————————————————————*/
 
-li[data-task='t'][data-task='t'] input[type='checkbox']:checked,
-.markdown-source-view input[type='checkbox'][data-task='t'][data-task='t'] {
+li[data-task='t'] input[type='checkbox']:checked,
+input[type='checkbox'][data-task='t']{
 
 	&::after {
-		background-color: var(--cyan);
+		background-color: var(--orange);
 		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 30a14 14 0 1 1 14-14 14 14 0 0 1-14 14Zm0-26a12 12 0 1 0 12 12A12 12 0 0 0 16 4Z'/%3E%3Cpath d='M20.59 22 15 16.41V7h2v8.58l5 5.01L20.59 22z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 	}
 }
@@ -383,8 +376,8 @@ li[data-task='T'] input[type='checkbox']:checked,
 input[type='checkbox'][data-task='T'] {
 
 	&::after {
-		background-color: var(--cyan);
-		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='m20.33 21.48 2.24-2.24a2.19 2.19 0 0 1 2.34-.48l2.73 1.09a2.18 2.18 0 0 1 1.36 2v5A2.17 2.17 0 0 1 26.72 29C7.59 27.81 3.73 11.61 3 5.41A2.17 2.17 0 0 1 5.17 3H10a2.16 2.16 0 0 1 2 1.36l1.09 2.73a2.16 2.16 0 0 1-.47 2.34l-2.24 2.24s1.29 8.73 9.95 9.81Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
+		background-color: var(--green);
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cpath d='M22 4H10a2.002 2.002 0 0 0-2 2v22a2.002 2.002 0 0 0 2 2h12a2.003 2.003 0 0 0 2-2V6a2.002 2.002 0 0 0-2-2Zm0 2v2H10V6ZM10 28V10h12v18Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 	}
 }
 
@@ -396,7 +389,7 @@ input[type='checkbox'][data-task='P'] {
 
 	&::after {
 		background-color: var(--cyan);
-		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cpath d='M6 30h20v-5a7.008 7.008 0 0 0-7-7h-6a7.008 7.008 0 0 0-7 7ZM9 9a7 7 0 1 0 7-7 7 7 0 0 0-7 7Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 4a5 5 0 1 1-5 5 5 5 0 0 1 5-5m0-2a7 7 0 1 0 7 7 7 7 0 0 0-7-7Zm10 28h-2v-5a5 5 0 0 0-5-5h-6a5 5 0 0 0-5 5v5H6v-5a7 7 0 0 1 7-7h6a7 7 0 0 1 7 7Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 	}
 }
 
