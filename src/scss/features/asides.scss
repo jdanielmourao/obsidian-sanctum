@@ -8,6 +8,8 @@ body {
 .callout[data-callout~=aside] {
 	--callout-color: 0, 0, 0;
 	--callout-icon: none;
+	--move: 0;
+
 	background-color: var(--aside-background);
 	position: relative;
 	float: right;
@@ -19,10 +21,30 @@ body {
 	margin-left: 1em;
 	padding-left: 1em;
 	padding-right: 1em;
+	margin-bottom: 4px;
+	margin-top: 4px;
 	font-size: 80%;
 	line-height: 1.6;
 	color: var(--aside-text-color);
 	border-radius: 0;
+
+
+	&[data-callout-metadata~='+'] {
+		--move: calc(40% - 1em);
+	}
+	&[data-callout-metadata~='++'] {
+		--move: calc(30% - 1em);
+	}
+	&[data-callout-metadata~='+++'] {
+		--move: calc(20% - 1em);
+	}
+	&[data-callout-metadata~='++++'] {
+		--move: calc(10% - 1em);
+	}
+	&[data-callout-metadata~='+++++'] {
+		--move: -1em;
+	}
+
 
 	&:hover {
 		border-radius: var(--callout-radius);
@@ -31,15 +53,21 @@ body {
 	.callout-title {
 		display: none;
 	}
-	.callout-content > p {
-		margin-top: 0;
+	.callout-content { 
+		padding: 0 ;
+
+		& > p {
+			margin-top: 0;
+			margin-block-start: 4px;
+			margin-block-end: 8px;
+		}
 	}
 }
 
 .callout[data-callout-metadata~=right] {
 	float: right;
 	clear: right;
-	margin-right: -1em;
+	margin-right: calc(-50% + var(--move));
 	margin-left: 1em;
 
 	.aside-border & {
@@ -51,7 +79,7 @@ body {
 	float: left;
 	clear: left;
 	margin-right: 1em;
-	margin-left: -1em;
+	margin-left: calc(-50% + var(--move));
 	border-left: none;
 
 	.aside-border & {
@@ -59,40 +87,6 @@ body {
 	}
 }
 
-.callout[data-callout-metadata~=right-margin] {
-	float: right;
-	clear: right;
-	margin-right: calc(-50% - 1em);
-
-	.aside-border & {
-		border-left: 1px solid var(--aside-border-color);
-	}
-}
-
-.callout[data-callout-metadata~=left-margin] {
-	float: left;
-	clear: left;
-	margin-right: 0;
-	margin-left: calc(-50% - 1em);
-	border-left: none;
-
-	.aside-border & {
-		border-right: 1px solid var(--aside-border-color);
-	}
-}
-
-@media (max-width: 1024px) {
-	.callout[data-callout-metadata~=right-margin] {
-		margin-right: -1em;
-		margin-left: 1em;
-		clear: both;
-	}
-	.callout[data-callout-metadata~=left-margin] {
-		margin-right: 1em;
-		margin-left: -1em;
-		clear: both;
-	}
-}
 
 /*	Aside counter
 —————————————————————————————————————————————————————————*/
