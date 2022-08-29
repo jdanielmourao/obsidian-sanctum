@@ -1,6 +1,13 @@
 ## Sanctum 1.0 for Obsidian 0.16
 
-Sanctum is being completely rewritten from scratch for the release of Obsidian 0.16. This means that while some features are already included, others may be completely deprecated, and new ones developed in its place. You can expect regular changes in the foreseeable future. Many of the core features have already been added and expanded upon (e.g. custom checkboxes, image position and sizing, sidenotes, etc), but there's still a lot to do in regards to UI and icon replacement (even though that UI Components have already been completely revamped).
+### Disclaimer for Sanctum Users
+- The sidenote syntax has changed (they are now callouts. Example: `>[!aside|left]` will give a left aligned callout. If you want to make it go further left, you can add up to 5 `+` next to the `left` information (for example: `>[!aside|left +++++]` will push the sidenote to the margin, so it doesn't mess with text);
+- Images work similarly to asides, but they also get a `-` syntax, as well as sizing options (`-xs`, `-s`, `-m`, `-l`(regular size), `-xl`, `xxl`, as well as a `center`/`centre` option;
+- Custom checkboxes have been expanded: `*`,`a`,`f`,`S`,`-`,`>`,`<`,`l`,`B`,`X`,`n`,`p`,`c`,`w`,`b`,`I`,`!`,`?`,`i`,`/`,`u`,`d`,`F`,`r`,`m`,`M`,`L`,`t`,`T`,`P`. They should mostly match the one's in Primary;
+- there are TONS of new style settings options, and more to come;
+- Work on the UI is at its beginning stages. The theme has been completely rewritten from scratch (no exaggeration there), so expect regular changes in the foreseeable future!
+
+
 
 ![sanctum-readme-title](https://user-images.githubusercontent.com/91087143/136701698-2464f5d0-30d5-4ee5-9261-4cca96448192.png)
 
