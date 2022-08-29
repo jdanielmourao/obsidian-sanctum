@@ -565,6 +565,9 @@ body {
   background-color: rgba(var(--callout-color), 0.2);
   padding: 16px 12px 16px 12px;
 }
+.callout .callout-icon {
+  align-self: baseline;
+}
 .callout .callout-icon svg {
   height: var(--icon-s);
   width: var(--icon-s);
@@ -783,17 +786,11 @@ body {
   background-color: currentColor;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Equotes%3C/title%3E%3Cpath d='M12,15H6.11A9,9,0,0,1,10,8.86l1.79-1.2L10.69,6,8.9,7.2A11,11,0,0,0,4,16.35V23a2,2,0,0,0,2,2h6a2,2,0,0,0,2-2V17A2,2,0,0,0,12,15Z'/%3E%3Cpath d='M26,15H20.11A9,9,0,0,1,24,8.86l1.79-1.2L24.7,6,22.9,7.2A11,11,0,0,0,18,16.35V23a2,2,0,0,0,2,2h6a2,2,0,0,0,2-2V17A2,2,0,0,0,26,15Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E");
 }
-.callout:where(.is-collapsible, .is-collapsed) .callout-fold svg.lucide-chevron-down > path {
-  display: none;
-}
 .callout.is-collapsible .callout-fold svg.lucide-chevron-down {
-  background-color: currentColor;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='m16 10 10 10-1.4 1.4-8.6-8.6-8.6 8.6L6 20z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
+  transform: scaleY(-1);
 }
 .callout.is-collapsed .callout-fold svg.lucide-chevron-down {
-  background-color: currentColor;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='m16 10 10 10-1.4 1.4-8.6-8.6-8.6 8.6L6 20z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
-  transform: scale(-1);
+  transform: scaleY(1);
 }
 .callout-title .callout-title-inner {
   flex-grow: 1;
