@@ -1,10 +1,10 @@
-![sanctum-readme-title](https://user-images.githubusercontent.com/91087143/136701698-2464f5d0-30d5-4ee5-9261-4cca96448192.png)
-
-Sanctum’s a minimalist theme for creating a serene space of retreat, for thought and uninterrupted work.
-
 ## Sanctum 1.0 for Obsidian 0.16
 
 Sanctum is being completely rewritten from scratch for the release of Obsidian 0.16. This means that while some features are already included, others may be completely deprecated, and new ones developed in its place. You can expect regular changes in the foreseeable future. Many of the core features have already been added and expanded upon (e.g. custom checkboxes, image position and sizing, sidenotes, etc), but there's still a lot to do in regards to UI and icon replacement (even though that UI Components have already been completely revamped).
+
+![sanctum-readme-title](https://user-images.githubusercontent.com/91087143/136701698-2464f5d0-30d5-4ee5-9261-4cca96448192.png)
+
+Sanctum’s a minimalist theme for creating a serene space of retreat, for thought and uninterrupted work.
 
 
 ## Installation
