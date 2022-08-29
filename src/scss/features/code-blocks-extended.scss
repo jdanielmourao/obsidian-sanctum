@@ -47,5 +47,5 @@
 }
 
 .code-lines.code-label .markdown-rendered :not(pre.frontmatter) code[class*="language-"]:before {
-		clip-path: polygon(0 0, 4ch 0, 4ch calc(100% - 30px), 0 calc(100% - 30px));
+		clip-path: polygon(0 0, 4ch 0, 4ch calc(100% - 40px), 0 calc(100% - 40px));
 }
