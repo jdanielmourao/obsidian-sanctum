@@ -35,9 +35,13 @@ body {
 
 /*	Task Lists
 —————————————————————————————————————————————————————————*/
-ul > li.task-list-item[data-task="x"],
-ul > li.task-list-item[data-task="X"] {
+ul > li.task-list-item[data-task="x"] {
 	text-decoration-color: var(--checklist-done-strike-color);
+}
+
+ul > li.task-list-item[data-task="X"] {
+	text-decoration: unset;
+	color: unset;
 }
 
 /*	Unordered List Markers
