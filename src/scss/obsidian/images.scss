@@ -1,3 +1,8 @@
+.theme-dark .markdown-rendered img:not(:hover),
+.theme-dark .workspace-leaf-content img:not(:hover) {
+	opacity: 70%;
+}
+
 .markdown-rendered img,
 .workspace-leaf-content img {
 
