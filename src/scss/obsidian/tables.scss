@@ -77,7 +77,8 @@ body {
 			background-color: var(--background-hover);
 		}
 
-		&:hover {
+		&:nth-child(odd):hover,
+		&:nth-child(even):hover {
 			background-color: var(--table-hover-highlight-color);
 		}
 		.table-hover-row &:hover {
