@@ -2955,7 +2955,6 @@ input[type=search],
 input[type=email],
 input[type=password],
 input[type=number] {
-  --input-radius: 0;
   background: var(--background-modifier-form-field);
   padding: 0px 16px;
   border-radius: var(--input-radius);
@@ -2981,6 +2980,14 @@ input[type=password]:hover:not(:focus):not(:focus-visible)::placeholder,
 input[type=number]:hover:not(:focus):not(:focus-visible)::placeholder {
   color: var(--text-muted);
 }
+textarea:focus-visible,
+input[type=text]:focus-visible,
+input[type=search]:focus-visible,
+input[type=email]:focus-visible,
+input[type=password]:focus-visible,
+input[type=number]:focus-visible {
+  box-shadow: none;
+}
 textarea:focus,
 input[type=text]:focus,
 input[type=search]:focus,
@@ -2997,7 +3004,8 @@ input[type=search]:focus:placeholder-shown,
 input[type=email]:focus:placeholder-shown,
 input[type=password]:focus:placeholder-shown,
 input[type=number]:focus:placeholder-shown {
-  box-shadow: 0 0 0 2px var(--background-primary), 0 0 0 4px var(--background-modifier-border-focus);
+  box-shadow: 0 0 0 0px var(--background-primary), 0 0 0 2px var(--background-modifier-border-focus);
+  border: none;
 }
 input.prompt-input {
   padding: 24px;
@@ -3416,8 +3424,12 @@ input[type=checkbox][data-task=">"]::after {
 }
 li[data-task="<"] input[type=checkbox]:checked::after,
 input[type=checkbox][data-task="<"]::after {
-  background-color: var(--lavender);
+  background-color: var(--lavender-60);
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M26 4h-4V2h-2v2h-8V2h-2v2H6a2.002 2.002 0 0 0-2 2v20a2.002 2.002 0 0 0 2 2h20a2.002 2.002 0 0 0 2-2V6a2.002 2.002 0 0 0-2-2ZM6 6h4v2h2V6h8v2h2V6h4v4H6Zm0 6h5v6H6Zm13 14h-6v-6h6Zm0-8h-6v-6h6Zm2 8v-6h5l.001 6Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
+}
+.theme-dark li[data-task="<"] input[type=checkbox]:checked::after,
+.theme-dark input[type=checkbox][data-task="<"]::after {
+  background-color: var(--lavender);
 }
 li[data-task=l] input[type=checkbox]:checked::after,
 input[type=checkbox][data-task=l]::after {
@@ -5582,6 +5594,141 @@ body {
   --graph-node-tag: var(--red);
   --graph-node-attachment: var(--yellow);
 }
+body {
+  --calendar-dot: var(--yellow);
+  --calendar-dot-hover: var(--red);
+}
+.stendig #calendar-container {
+  padding: 0;
+  font-feature-settings: normal;
+}
+.stendig #calendar-container .nav {
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.stendig #calendar-container .title {
+  font-size: 1rem;
+  padding-right: 8px;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 2px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+.stendig #calendar-container .title .year {
+  color: var(--text-normal);
+  font-weight: 500;
+}
+.stendig #calendar-container .right-nav {
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  width: 100%;
+  gap: 0px;
+  align-items: flex-end;
+  padding-top: 4px;
+}
+.stendig #calendar-container .right-nav .reset-button {
+  margin: 0;
+  padding: 0;
+  font-size: 0.75em;
+  opacity: 0.25;
+}
+.stendig #calendar-container .right-nav .reset-button:hover {
+  opacity: 1;
+}
+.stendig #calendar-container .right-nav .arrow svg {
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath d='M10 16 20 6l1.4 1.4-8.6 8.6 8.6 8.6L20 26z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
+  opacity: 0.25;
+}
+.stendig #calendar-container .right-nav .arrow svg:hover {
+  opacity: 1;
+}
+.stendig #calendar-container .right-nav .arrow svg > path {
+  display: none;
+}
+.stendig #calendar-container table.calendar {
+  border-spacing: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.stendig #calendar-container table.calendar th {
+  padding: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--text-muted);
+  text-align: left;
+  color: transparent;
+}
+.stendig #calendar-container table.calendar th:not(:first-of-type) {
+  border-left: 1px solid var(--background-modifier-border);
+  border-radius: 0;
+}
+.stendig #calendar-container table.calendar th::first-letter {
+  color: var(--text-normal);
+}
+.stendig #calendar-container table.calendar td:not(:first-of-type) {
+  border-left: 1px solid var(--background-modifier-border);
+  border-radius: 0;
+}
+.stendig #calendar-container table.calendar td .day,
+.stendig #calendar-container table.calendar td .week-num {
+  text-align: left;
+  font-size: 1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.stendig #calendar-container table.calendar td .day:hover,
+.stendig #calendar-container table.calendar td .week-num:hover {
+  background-color: var(--background-hover);
+}
+.stendig #calendar-container table.calendar td .week-num {
+  opacity: 0.25;
+}
+.stendig #calendar-container .dot-container {
+  padding-left: 0.5em;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.stendig #calendar-container .dot-container svg {
+  position: absolute;
+  --color-dot: var(--calendar-dot);
+}
+.stendig #calendar-container .dot-container svg:first-child {
+  height: 4px;
+  width: 4px;
+}
+.stendig #calendar-container .dot-container svg:nth-child(2) {
+  height: 7px;
+  width: 7px;
+}
+.stendig #calendar-container .dot-container svg:nth-child(3) {
+  height: 10px;
+  width: 10px;
+}
+.stendig #calendar-container .dot-container svg:nth-child(4) {
+  height: 13px;
+  width: 13px;
+}
+.stendig #calendar-container .dot-container svg:nth-child(5) {
+  height: 16px;
+  width: 16px;
+}
+.stendig #calendar-container .day:hover .dot-container svg {
+  --color-dot: var(--calendar-dot-hover);
+}
+.stendig.calendar-flip #calendar-container .title {
+  justify-content: flex-end;
+}
 /* @settings
 
 name: Sanctum
@@ -6755,6 +6902,42 @@ settings:
 					-
 						label: 'Thick underline'
 						value: 'underline 2px'
+	-
+		id: plugins
+		title: Plugins
+		type: heading
+		level: 1
+		collapsed: true
+	-
+			id: calendar
+			title: Calendar
+			type: heading
+			level: 2
+			collapsed: true
+	-
+				id: stendig
+				title: Stendig-like layout [Beta]
+				description: Calendar layout inspired by Massimo Vignelli's famous Stendig calendars
+				type: class-toggle
+	-
+				id: calendar-flip
+				title: Flip calendar Month + Year title
+				type: class-toggle
+	-
+				id: calendar-dot
+				title: Calendar dot color
+				type: variable-themed-color
+				format: hex
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: calendar-dot-hover
+				title: Calendar dot color on hover
+				type: variable-themed-color
+				format: hex
+				default-light: '#'
+				default-dark: '#'
+	-
 */
 /*—————————————*/
 /* @plugins

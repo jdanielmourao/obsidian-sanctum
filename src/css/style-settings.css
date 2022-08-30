@@ -1192,4 +1192,19 @@ settings:
 				id: calendar-flip
 				title: Flip calendar Month + Year title
 				type: class-toggle
+	-
+				id: calendar-dot
+				title: Calendar dot color
+				type: variable-themed-color
+				format: hex
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: calendar-dot-hover
+				title: Calendar dot color on hover
+				type: variable-themed-color
+				format: hex
+				default-light: '#'
+				default-dark: '#'
+	-
 */

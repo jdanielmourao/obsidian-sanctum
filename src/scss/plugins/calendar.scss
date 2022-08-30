@@ -1,3 +1,16 @@
+body {
+	--calendar-dot: var(--yellow);
+	--calendar-dot-hover: var(--red);
+}
+
+
+
+
+
+
+/*	Stendig-like layout
+—————————————————————————————————————————————————————————*/
+
 .stendig #calendar-container {
 	padding: 0;
 	font-feature-settings: normal;
@@ -16,11 +29,16 @@
 		font-size: 1rem;
 		padding-right: 8px;
 		display: flex;
-		flex-direction: row;
+		flex-direction: row-reverse;
 		width: 100%;
-		justify-content: flex-end;
+		justify-content: flex-start;
 		gap: 2px;
 		border-bottom: 1px solid var(--background-modifier-border);
+		
+		& .year {
+			color: var(--text-normal);
+			font-weight: 500;
+		}
 	}
 	& .right-nav {
 		flex-direction: row;
@@ -112,40 +130,38 @@
 
 		& svg {
 			position: absolute;
-			opacity: 100%;
+			--color-dot: var(--calendar-dot);
 
 			&:first-child {
 				height: 4px;
 				width: 4px;
-				--color-dot: var(--lavender);
 			}
 			&:nth-child(2) {
-				height: 8px;
-				width: 8px;
-				--color-dot: var(--red);
+				height: 7px;
+				width: 7px;
 			}
 			&:nth-child(3) {
-				height: 12px;
-				width: 12px;
-				--color-dot: var(--orange);
+				height: 10px;
+				width: 10px;
 			}
 			&:nth-child(4) {
-				height: 16px;
-				width: 16px;
-				--color-dot: var(--yellow);
+				height: 13px;
+				width: 13px;
 			}
 			&:nth-child(5) {
-				height: 20px;
-				width: 20px;
-				--color-dot: var(--green);
+				height: 16px;
+				width: 16px;
 			}
 		}
+	}
+	& .day:hover .dot-container svg {
+		--color-dot: var(--calendar-dot-hover);
 	}
 }
 
 
 .stendig.calendar-flip #calendar-container {
 	& .title {
-		justify-content: flex-start;
+		justify-content: flex-end;
 	}
 }
