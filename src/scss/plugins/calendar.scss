@@ -1,0 +1,151 @@
+.stendig #calendar-container {
+	padding: 0;
+	font-feature-settings: normal;
+
+
+
+	& .nav {
+		flex-direction: column;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		align-items: center;
+		margin-bottom: 2em;
+	}
+	& .title {
+		font-size: 1rem;
+		padding-right: 8px;
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: flex-end;
+		gap: 2px;
+		border-bottom: 1px solid var(--background-modifier-border);
+	}
+	& .right-nav {
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 0;
+		width: 100%;
+		gap: 0px;
+		align-items: flex-end;
+		padding-top: 4px;
+		
+		& .reset-button {
+			margin: 0;
+			padding: 0;
+			font-size: .75em;
+			opacity: .25;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+		
+		& .arrow svg {
+			background-color: currentColor;
+			-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath d='M10 16 20 6l1.4 1.4-8.6 8.6 8.6 8.6L20 26z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
+			opacity: .25;
+			
+			&:hover {
+				opacity: 1;
+			}
+			& > path {
+				display: none;
+			}
+		}
+	
+	}
+	& table.calendar {
+		border-spacing: 0;
+		border-collapse: collapse;
+		table-layout: fixed;
+		
+		& th {
+			padding: 0;
+			font-size: 1rem;
+			font-weight: normal;
+			color: var(--text-muted);
+			text-align: left;
+			color: transparent;
+
+			&:not(:first-of-type) {
+				border-left: 1px solid var(--background-modifier-border);
+				border-radius: 0;
+			}
+
+			&::first-letter {
+				color: var(--text-normal);
+			}
+		}
+		& td {
+
+			&:not(:first-of-type) {
+				border-left: 1px solid var(--background-modifier-border);
+				border-radius: 0;
+			}
+			& .day,
+			& .week-num {
+				text-align: left;
+				font-size: 1rem;
+				padding: 0;
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+
+				&:hover {
+					background-color: var(--background-hover);
+				}
+			}
+			& .week-num {
+				opacity: .25;
+			}
+
+
+		}
+	}
+	& .dot-container {
+		padding-left: 0.5em;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+
+		& svg {
+			position: absolute;
+			opacity: 100%;
+
+			&:first-child {
+				height: 4px;
+				width: 4px;
+				--color-dot: var(--lavender);
+			}
+			&:nth-child(2) {
+				height: 8px;
+				width: 8px;
+				--color-dot: var(--red);
+			}
+			&:nth-child(3) {
+				height: 12px;
+				width: 12px;
+				--color-dot: var(--orange);
+			}
+			&:nth-child(4) {
+				height: 16px;
+				width: 16px;
+				--color-dot: var(--yellow);
+			}
+			&:nth-child(5) {
+				height: 20px;
+				width: 20px;
+				--color-dot: var(--green);
+			}
+		}
+	}
+}
+
+
+.stendig.calendar-flip #calendar-container {
+	& .title {
+		justify-content: flex-start;
+	}
+}

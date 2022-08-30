@@ -1171,4 +1171,25 @@ settings:
 					-
 						label: 'Thick underline'
 						value: 'underline 2px'
+	-
+		id: plugins
+		title: Plugins
+		type: heading
+		level: 1
+		collapsed: true
+	-
+			id: calendar
+			title: Calendar
+			type: heading
+			level: 2
+			collapsed: true
+	-
+				id: stendig
+				title: Stendig-like layout [Beta]
+				description: Calendar layout inspired by Massimo Vignelli's famous Stendig calendars
+				type: class-toggle
+	-
+				id: calendar-flip
+				title: Flip calendar Month + Year title
+				type: class-toggle
 */
