@@ -490,6 +490,9 @@ body {
   --radius-s: 4px;
   --radius-m: 8px;
   --radius-l: 10px;
+  --accent-h: 24.4;
+  --accent-s: 90.8%;
+  --accent-l: 61.8%;
 }
 body {
   --blockquote-border-thickness: 0px;
@@ -5595,8 +5598,124 @@ body {
   --graph-node-attachment: var(--yellow);
 }
 body {
-  --calendar-dot: var(--yellow);
+  --calendar-dot: var(--orange);
   --calendar-dot-hover: var(--red);
+}
+#calendar-container {
+  padding: 0;
+  font-feature-settings: normal;
+}
+#calendar-container .nav {
+  margin: 0 0 1.5em 0;
+  padding: 0;
+}
+#calendar-container .nav .title {
+  padding-left: 10px;
+  font-size: 1rem;
+  flex-grow: 4;
+  line-height: 1;
+}
+#calendar-container .nav .title .month,
+#calendar-container .nav .title .year {
+  color: var(--text-normal);
+  font-weight: normal;
+}
+#calendar-container .right-nav {
+  align-items: flex-start;
+  align-self: flex-end;
+  margin: 0;
+}
+#calendar-container .right-nav .reset-button {
+  margin: 0;
+  padding: 0;
+  font-size: 0.75em;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+#calendar-container .right-nav .reset-button:hover {
+  color: var(--text-normal);
+}
+#calendar-container .right-nav .arrow svg {
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' xml:space='preserve'%3E%3Cpath d='M10 16 20 6l1.4 1.4-8.6 8.6 8.6 8.6L20 26z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z'/%3E%3C/svg%3E");
+  opacity: 0.25;
+}
+#calendar-container .right-nav .arrow svg:hover {
+  opacity: 1;
+}
+#calendar-container .right-nav .arrow svg > path {
+  display: none;
+}
+#calendar-container table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+#calendar-container table td {
+  width: 32px;
+}
+#calendar-container table .day,
+#calendar-container table .week-num {
+  height: 32px;
+  width: 100%;
+  font-size: 0.75rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#calendar-container table th {
+  padding-bottom: 2em;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+#calendar-container .dot-container {
+  padding-top: 2px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#calendar-container .dot-container svg {
+  position: absolute;
+  --color-dot: var(--calendar-dot);
+}
+#calendar-container .dot-container svg:first-child {
+  height: 4px;
+  width: 4px;
+}
+#calendar-container .dot-container svg:nth-child(2) {
+  height: 6px;
+  width: 6px;
+}
+#calendar-container .dot-container svg:nth-child(3) {
+  height: 8px;
+  width: 8px;
+}
+#calendar-container .dot-container svg:nth-child(4) {
+  height: 10px;
+  width: 10px;
+}
+#calendar-container .dot-container svg:nth-child(5) {
+  height: 12px;
+  width: 12px;
+}
+#calendar-container .day:hover .dot-container svg {
+  --color-dot: var(--calendar-dot-hover);
+}
+.calendar-flip #calendar-container .nav {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.calendar-flip #calendar-container .title {
+  flex-grow: unset;
+  padding-right: 8px;
+}
+.stendig.calendar-flip #calendar-container .title {
+  justify-content: flex-end;
+}
+.stendig.calendar-flip #calendar-container .right-nav {
+  justify-content: flex-end;
 }
 .stendig #calendar-container {
   padding: 0;
@@ -5604,10 +5723,6 @@ body {
 }
 .stendig #calendar-container .nav {
   flex-direction: column;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  align-items: center;
   margin-bottom: 2em;
 }
 .stendig #calendar-container .title {
@@ -5620,13 +5735,9 @@ body {
   gap: 2px;
   border-bottom: 1px solid var(--background-modifier-border);
 }
-.stendig #calendar-container .title .year {
-  color: var(--text-normal);
-  font-weight: 500;
-}
 .stendig #calendar-container .right-nav {
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0;
   width: 100%;
   gap: 0px;
@@ -5653,11 +5764,6 @@ body {
 .stendig #calendar-container .right-nav .arrow svg > path {
   display: none;
 }
-.stendig #calendar-container table.calendar {
-  border-spacing: 0;
-  border-collapse: collapse;
-  table-layout: fixed;
-}
 .stendig #calendar-container table.calendar th {
   padding: 0;
   font-size: 1rem;
@@ -5665,6 +5771,7 @@ body {
   color: var(--text-muted);
   text-align: left;
   color: transparent;
+  border: none;
 }
 .stendig #calendar-container table.calendar th:not(:first-of-type) {
   border-left: 1px solid var(--background-modifier-border);
@@ -5684,7 +5791,6 @@ body {
   padding: 0;
   display: flex;
   flex-direction: row;
-  width: 100%;
 }
 .stendig #calendar-container table.calendar td .day:hover,
 .stendig #calendar-container table.calendar td .week-num:hover {
@@ -5694,40 +5800,14 @@ body {
   opacity: 0.25;
 }
 .stendig #calendar-container .dot-container {
-  padding-left: 0.5em;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-.stendig #calendar-container .dot-container svg {
-  position: absolute;
-  --color-dot: var(--calendar-dot);
-}
-.stendig #calendar-container .dot-container svg:first-child {
-  height: 4px;
-  width: 4px;
-}
-.stendig #calendar-container .dot-container svg:nth-child(2) {
-  height: 7px;
-  width: 7px;
-}
-.stendig #calendar-container .dot-container svg:nth-child(3) {
-  height: 10px;
-  width: 10px;
-}
-.stendig #calendar-container .dot-container svg:nth-child(4) {
-  height: 13px;
-  width: 13px;
-}
-.stendig #calendar-container .dot-container svg:nth-child(5) {
-  height: 16px;
-  width: 16px;
+  padding-top: 0;
 }
 .stendig #calendar-container .day:hover .dot-container svg {
   --color-dot: var(--calendar-dot-hover);
 }
-.stendig.calendar-flip #calendar-container .title {
-  justify-content: flex-end;
+.stendig #calendar-container th,
+.stendig #calendar-container td {
+  padding-left: 2px;
 }
 /* @settings
 
