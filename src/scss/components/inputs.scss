@@ -4,7 +4,6 @@ input[type='search'],
 input[type='email'],
 input[type='password'],
 input[type='number'] {
-	--input-radius: 0;
 
 	background: var(--background-modifier-form-field);
 	padding: 0px 16px;
@@ -22,14 +21,18 @@ input[type='number'] {
 			color: var(--text-muted);
 		}
 	}
+	&:focus-visible {
+		box-shadow: none;
+	}
 	&:focus {
 		box-shadow: none;
 		border-color: var(--background-modifier-border);
 		border-bottom-color: var(--background-modifier-border-focus);
 
 		&:placeholder-shown { //when starting to type, this will disappear
-			box-shadow: 0 0 0 2px var(--background-primary),
-						0 0 0 4px var(--background-modifier-border-focus);
+			box-shadow: 0 0 0 0px var(--background-primary),
+						0 0 0 2px var(--background-modifier-border-focus);
+			border: none;
 		}
 	}
 }
