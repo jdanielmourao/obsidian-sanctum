@@ -1,6 +1,12 @@
 .theme-dark .markdown-rendered img:not(:hover),
 .theme-dark .workspace-leaf-content img:not(:hover) {
 	opacity: 70%;
+	transition: opacity	var(--duration-slow-2) var(--motion-entrance-expressive);
+}
+
+.theme-dark .markdown-rendered img:hover,
+.theme-dark .workspace-leaf-content img:hover {
+	transition: opacity	var(--duration-slow-2) var(--motion-entrance-expressive);
 }
 
 .markdown-rendered img,
