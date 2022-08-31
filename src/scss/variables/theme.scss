@@ -147,7 +147,7 @@
 	--focus-inverse: rgb(var(--white));
 
 	--interactive: rgb(var(--color-accent-rgb));
-	--highlight: rgba(var(--color-accent-rgb), .9);
+	--highlight: rgba(var(--color-accent-rgb), .7);
 	--overlay: rgba(var(--gray-100), .7); //background overlay
 }
 
@@ -223,7 +223,7 @@
 	--text-secondary: rgb(var(--gray-50));
 	--text-placeholder: rgb(var(--gray-80));
 
-	--highlight: rgba(var(--color-accent-rgb), .9);
+	--highlight: rgba(var(--color-accent-rgb), .7);
 }
 
 /*	General Theme Styling

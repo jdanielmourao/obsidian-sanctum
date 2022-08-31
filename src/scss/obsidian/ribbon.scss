@@ -1,0 +1,16 @@
+body {
+	--ribbon-background: var(--background-secondary);
+	--ribbon-background-collapsed: var(--background-primary);
+	--ribbon-width: 44px;
+	--ribbon-padding: var(--size-4-2) var(--size-4-1) var(--size-4-3);
+}
+
+
+.side-dock-settings {
+	.side-dock-ribbon-action:first-child:hover {
+		color: var(--pink);
+	}
+	.side-dock-ribbon-action:nth-child(2):hover {
+		color: var(--orange);
+	}
+}

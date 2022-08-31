@@ -1,0 +1,35 @@
+body {
+	--tab-background-active: var(--background-primary);
+	--tab-text-color: var(--text-faint); //tabs in background (when in other app)
+	--tab-text-color-focused: var(--text-faint); //secondary tabs
+	--tab-text-color-focused-active: var(--text-normal);
+	--tab-font-size: var(--font-ui-small);
+	--tab-font-weight: inherit;
+	--tab-container-background: var(--background-secondary);
+	--tab-divider-color: var(--background-modifier-border);
+	--tab-outline-color: var(--divider-color);
+	--tab-outline-width: 1px;
+	--tab-curve: 0px;
+	--tab-radius: var(--radius-s);
+	--tab-radius-active: 6px 6px 0 0;
+
+
+	--titlebar-background: var(--background-secondary);
+	--titlebar-background-focused: var(--background-secondary-alt);
+	--titlebar-border-width: 0px;
+	--titlebar-border-color: var(--background-modifier-border);
+	--titlebar-text-color: var(--text-muted);
+	--titlebar-text-color-focused: var(--text-normal); // active tab color
+	--titlebar-text-color-highlighted: var(--text-accent-hover);
+	--titlebar-text-weight: var(--font-bold);
+}
+
+.workspace-tabs .view-header {
+	margin: 0;
+	padding: 0 16px;
+}
+
+
+.workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title {
+	color: var(--text-muted);
+}

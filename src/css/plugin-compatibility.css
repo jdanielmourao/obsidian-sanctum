@@ -1,9 +1,13 @@
 /*—————————————*/
 /* @plugins
 core:
+- audio-recorder
 - backlink
 - command-palette
+- daily-notes
+- editor-status
 - file-explorer
+- file-recovery
 - global-search
 - graph
 - outgoing-link
@@ -15,22 +19,9 @@ core:
 - tag-pane
 
 community:
-- block-reference-count
-- breadcrumbs
 - calendar
-- fantasy-calendar
-- plugin-changelogs
-- obsidian-charts
-- obsidian-checklist-plugin
 - dataview
-- obsidian-excalidraw-plugin
-- obsidian-gallery
-- obsidian-kanban
-- quick-explorer
-- sliding-panes-obsidian
 - obsidian-style-settings
-- templater-obsidian
-- sortables
 
 */
 

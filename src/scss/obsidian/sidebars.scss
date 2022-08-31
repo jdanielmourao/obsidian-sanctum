@@ -1,0 +1,61 @@
+body {
+	--header-height: 40px;
+	--sidebar-markdown-font-size: var(--font-small);
+	--sidebar-tab-text-display: none;
+
+	--icon-size: var(--icon-s); //secondary icons
+	--icon-stroke: var(--icon-m-stroke-width);
+	--icon-color: var(--text-faint);
+	--icon-color-hover: var(--text-muted);
+	--icon-color-active: var(--interactive);
+	--icon-color-focused: var(--text-normal);
+	--icon-opacity: 1;
+	--icon-opacity-hover: 1;
+	--icon-opacity-active: 1;
+	--clickable-icon-radius: var(--radius-s);
+}
+
+.workspace-tab-header-container {
+	padding: 0 8px;
+}
+
+.mod-left-split .workspace-tab-header-container-inner,
+.mod-right-split .workspace-tab-header-container-inner {
+	margin: 0;
+	padding: 4px 0;
+	gap: 4px;
+
+	& .workspace-tab-header.is-active {
+		background-color: transparent;
+
+		&:hover {
+			background-color: var(--background-selected-hover);
+		}
+	}
+
+	& .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+		background-color: var(--background-hover);
+	}
+}
+
+.workspace-tab-header-inner {
+	padding: 8px;
+}
+
+.sidebar-toggle-button {
+	padding: 4px 0;
+}
+
+.clickable-icon {
+	padding: 8px;
+}
+
+.nav-header {
+	padding: 8px 16px;
+}
+
+.nav-buttons-container {
+	justify-content: flex-end;
+}
+
+

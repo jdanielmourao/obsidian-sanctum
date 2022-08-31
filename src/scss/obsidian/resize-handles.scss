@@ -1,0 +1,12 @@
+body {
+	--divider-color: var(--background-modifier-border);
+	--divider-color-hover: var(--interactive-accent);
+	--divider-width: 1px;
+	--divider-width-hover: 3px;
+	--divider-vertical-height: calc(100% - var(--header-height));
+}
+
+.is-hidden-frameless .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.is-hidden-frameless .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+	height: calc(100% - var(--header-height));
+}

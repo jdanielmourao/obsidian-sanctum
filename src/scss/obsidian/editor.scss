@@ -51,13 +51,15 @@ body {
 }
 
 /* Highlight */
+.search-result-file-matched-text, //search results
 .markdown-rendered mark,
 .cm-s-obsidian span.cm-highlight {
-	padding: 1px 2px;
+	padding: 2px 4px;
 	border-radius: var(--radius-s);
 	-webkit-box-decoration-break: clone;
 	box-decoration-break: clone;
 }
+
 
 /*	Horizontal Rule
 —————————————————————————————————————————————————————————*/

@@ -297,6 +297,20 @@ settings:
 				default-light: '#'
 				default-dark: '#'
 	-
+		id: file-explorer
+		title: File Explorer
+		type: heading
+		level: 1
+		collapsed: true
+	-
+				id: hide-vault-title
+				title: Hide vault title
+				type: class-toggle
+	-
+				id: wrap-nav-titles
+				title: Wrap titles
+				type: class-toggle
+	-
 		id: headings
 		title: Headings
 		type: heading

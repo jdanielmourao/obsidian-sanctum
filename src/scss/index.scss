@@ -11,6 +11,7 @@
 @use 'obsidian/dragging';
 @use 'obsidian/editor';
 @use 'obsidian/embeds';
+@use 'obsidian/file-navigator';
 @use 'obsidian/folding';
 @use 'obsidian/footnotes';
 @use 'obsidian/frontmatter';
@@ -21,7 +22,12 @@
 @use 'obsidian/lists';
 @use 'obsidian/menus';
 @use 'obsidian/notice';
+@use 'obsidian/prompt';
+@use 'obsidian/resize-handles';
+@use 'obsidian/ribbon';
 @use 'obsidian/scrollbars';
+@use 'obsidian/sidebars';
+@use 'obsidian/tabs';
 @use 'obsidian/tables';
 @use 'obsidian/tags';
 @use 'obsidian/tooltip';

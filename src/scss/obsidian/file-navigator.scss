@@ -1,0 +1,28 @@
+body {
+	--vault-name-font-size: var(--font-ui-medium);
+	--vault-name-font-weight: var(--font-medium);
+	--vault-name-color: var(--text-normal);
+
+
+	--nav-item-size: var(--font-ui-small);
+	--nav-item-color: var(--text-muted);
+	--nav-item-color-hover: var(--text-normal);
+	--nav-item-color-active: var(--text-normal);
+	--nav-item-color-selected: var(--text-normal);
+	--nav-item-color-highlighted: var(--text-accent-hover);
+	--nav-item-background-hover: var(--background-modifier-hover);
+	--nav-item-background-active: var(--background-selected);
+	--nav-item-background-selected: hsla(var(--color-accent-hsl), 0.2);
+	--nav-item-weight: inherit;
+	--nav-item-weight-hover: inherit;
+	--nav-item-weight-active: inherit;
+	--nav-item-white-space: nowrap;
+}
+
+.hide-vault-title .nav-folder.mod-root > .nav-folder-title {
+	display: none;
+}
+
+.wrap-nav-titles {
+	--nav-item-white-space: wrap;
+}
