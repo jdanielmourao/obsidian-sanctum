@@ -912,6 +912,22 @@ body {
   --hr-color: var(--background-modifier-border);
   --hr-thickness: 1.5px;
 }
+.view-header {
+  height: 0px;
+  border-width: 0;
+}
+.view-header .view-actions {
+  position: sticky;
+  margin-top: 24px;
+}
+.sticky-view-actions .view-header {
+  height: unset;
+  border-width: 1px;
+}
+.sticky-view-actions .view-header .view-actions {
+  position: unset;
+  margin-top: unset;
+}
 body {
   --embed-background: inherit;
   --embed-border-left: var(--embed-border-width) solid var(--embed-border-color);
@@ -2075,6 +2091,7 @@ body {
 .markdown-rendered .internal-link.is-unresolved:hover,
 .markdown-source-view.mod-cm6 .is-unresolved:hover {
   color: var(--link-color-hover);
+  text-transform: var(--link-text-transform);
 }
 .markdown-rendered .internal-link,
 .markdown-source-view .cm-hmd-internal-link {
@@ -2405,7 +2422,7 @@ body {
 .mod-left-split .workspace-tab-header-container-inner,
 .mod-right-split .workspace-tab-header-container-inner {
   margin: 0;
-  padding: 4px 0;
+  padding: 4px;
   gap: 4px;
 }
 .mod-left-split .workspace-tab-header-container-inner .workspace-tab-header.is-active,
@@ -3675,21 +3692,21 @@ input[type=checkbox][data-task=P]::after {
   background-color: var(--cyan);
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 4a5 5 0 1 1-5 5 5 5 0 0 1 5-5m0-2a7 7 0 1 0 7 7 7 7 0 0 0-7-7Zm10 28h-2v-5a5 5 0 0 0-5-5h-6a5 5 0 0 0-5 5v5H6v-5a7 7 0 0 1 7-7h6a7 7 0 0 1 7 7Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
 }
-.callout.callout[data-callout=grid] {
+.callout[data-callout=grid] {
   background: transparent;
   border: 0;
   margin: 0;
   box-shadow: none;
 }
-.callout.callout[data-callout=grid] .callout-title {
+.callout[data-callout=grid] .callout-title {
   display: none;
 }
-.callout.callout[data-callout=grid] .callout-content {
+.callout[data-callout=grid] .callout-content {
   display: block;
   width: 100%;
   padding: 0;
 }
-.callout.callout[data-callout=grid] .callout-content p {
+.callout[data-callout=grid] .callout-content p {
   display: flex;
   flex-wrap: wrap;
   margin-block-start: 0;
@@ -3697,34 +3714,34 @@ input[type=checkbox][data-task=P]::after {
   justify-content: center;
   gap: 4px;
 }
-.callout.callout[data-callout=grid] .callout-content img {
+.callout[data-callout=grid] .callout-content img {
   max-height: 300px;
 }
-.callout.callout[data-callout=grid][data-callout-metadata="100"] .callout-content img {
+.callout[data-callout=grid][data-callout-metadata="100"] .callout-content img {
   max-height: 100px;
 }
-.callout.callout[data-callout=grid][data-callout-metadata="150"] .callout-content img {
+.callout[data-callout=grid][data-callout-metadata="150"] .callout-content img {
   max-height: 150px;
 }
-.callout.callout[data-callout=grid][data-callout-metadata="200"] .callout-content img {
+.callout[data-callout=grid][data-callout-metadata="200"] .callout-content img {
   max-height: 200px;
 }
-.callout.callout[data-callout=grid][data-callout-metadata="250"] .callout-content img {
+.callout[data-callout=grid][data-callout-metadata="250"] .callout-content img {
   max-height: 250px;
 }
-.callout.callout[data-callout=grid][data-callout-metadata="300"] .callout-content img {
+.callout[data-callout=grid][data-callout-metadata="300"] .callout-content img {
   max-height: 300px;
 }
-.callout.callout[data-callout=grid][data-callout-metadata="350"] .callout-content img {
+.callout[data-callout=grid][data-callout-metadata="350"] .callout-content img {
   max-height: 350px;
 }
-.callout.callout[data-callout=grid][data-callout-metadata="400"] .callout-content img {
+.callout[data-callout=grid][data-callout-metadata="400"] .callout-content img {
   max-height: 400px;
 }
-.callout.callout[data-callout=grid][data-callout-metadata="450"] .callout-content img {
+.callout[data-callout=grid][data-callout-metadata="450"] .callout-content img {
   max-height: 450px;
 }
-.callout.callout[data-callout=grid][data-callout-metadata="500"] .callout-content img {
+.callout[data-callout=grid][data-callout-metadata="500"] .callout-content img {
   max-height: 500px;
 }
 .nord.theme-light pre:not(pre.frontmatter),
@@ -6754,6 +6771,16 @@ settings:
 					- 'normal'
 					- 'italic'
 	-
+				id: link-text-transform
+				title: Internal link text transform
+				type: variable-select
+				default: 'none'
+				options:
+					- 'none'
+					- 'capitalize'
+					- 'uppercase'
+					- 'lowercase'
+	-
 			id: external-links
 			title: External links
 			type: heading
@@ -7119,6 +7146,17 @@ settings:
 					-
 						label: 'Thick underline'
 						value: 'underline 2px'
+	-
+		id: tab-title-bar
+		title: Tab title bar
+		type: heading
+		level: 1
+		collapsed: true
+	-
+				id: sticky-view-actions
+				title: Disable floating tab title bar buttons
+				description: Reveals the entirety of the tab title bar, like native obsidian.
+				type: class-toggle
 	-
 		id: plugins
 		title: Plugins

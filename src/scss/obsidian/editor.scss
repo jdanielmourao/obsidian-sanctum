@@ -67,3 +67,27 @@ body {
 	--hr-color: var(--background-modifier-border);
 	--hr-thickness: 1.5px;
 }
+
+
+
+
+.view-header {
+	height: 0px;
+	border-width: 0;
+}
+
+.view-header .view-actions {
+	position: sticky;
+	margin-top: 24px;
+}
+
+
+.sticky-view-actions .view-header {
+	height: unset;
+	border-width: 1px;
+}
+
+.sticky-view-actions .view-header .view-actions {
+	position: unset;
+	margin-top: unset;
+}

@@ -820,6 +820,16 @@ settings:
 					- 'normal'
 					- 'italic'
 	-
+				id: link-text-transform
+				title: Internal link text transform
+				type: variable-select
+				default: 'none'
+				options:
+					- 'none'
+					- 'capitalize'
+					- 'uppercase'
+					- 'lowercase'
+	-
 			id: external-links
 			title: External links
 			type: heading
@@ -1185,6 +1195,17 @@ settings:
 					-
 						label: 'Thick underline'
 						value: 'underline 2px'
+	-
+		id: tab-title-bar
+		title: Tab title bar
+		type: heading
+		level: 1
+		collapsed: true
+	-
+				id: sticky-view-actions
+				title: Disable floating tab title bar buttons
+				description: Reveals the entirety of the tab title bar, like native obsidian.
+				type: class-toggle
 	-
 		id: plugins
 		title: Plugins
