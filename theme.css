@@ -3514,19 +3514,19 @@ body {
 .callout[data-callout*=column][data-callout-metadata~="4"] .callout-content {
   --columns: 4;
 }
-li:not(li[data-task=x]) input[type=checkbox]:checked,
+li.is-checked:not(li[data-task=x]) input[type=checkbox],
 .markdown-source-view input[type=checkbox]:not([data-task=x]):checked {
   background-color: transparent;
   border-width: 0;
   pointer-events: none;
 }
-li:not(li[data-task=x]) input[type=checkbox]:checked:hover,
+li.is-checked:not(li[data-task=x]) input[type=checkbox]:hover,
 .markdown-source-view input[type=checkbox]:not([data-task=x]):checked:hover {
   box-shadow: none;
   border-color: transparent;
   pointer-events: none;
 }
-li:not(li[data-task=x]) input[type=checkbox]:checked::after,
+li.is-checked:not(li[data-task=x]) input[type=checkbox]::after,
 .markdown-source-view input[type=checkbox]:not([data-task=x]):checked::after {
   -webkit-mask-size: 110%;
   pointer-events: none;
