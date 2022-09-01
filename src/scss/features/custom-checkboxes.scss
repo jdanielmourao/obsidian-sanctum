@@ -2,7 +2,7 @@
 —————————————————————————————————————————————————————————*/
 
 
-li:not(li[data-task='x']) input[type='checkbox']:checked ,
+li.is-checked:not(li[data-task='x']) input[type='checkbox'] ,
 .markdown-source-view input[type='checkbox']:not([data-task='x']):checked {
 	background-color: transparent;
 	border-width: 0;
