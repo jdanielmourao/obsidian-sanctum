@@ -4,11 +4,9 @@
  */
 
 import esbuild from "esbuild";
-import process from "process";
 import { config } from "dotenv";
 import { sassPlugin } from "esbuild-sass-plugin";
 import time from "esbuild-plugin-time";
-import { readFileSync } from "fs";
 
 config();
 
@@ -24,33 +22,17 @@ const dir = prod ? "./" : process.env.OUTDIR;
 const fileProd = `${dir}/theme.css`;
 const fileDev = `${dir}/SanctumDev.css`
 
-/** readFileSync reads the file data in as a string. */
-const license = readFileSync("./src/css/license.css", "utf8");
-const styleSettings = readFileSync("./src/css/style-settings.css", "utf8");
-const hub = readFileSync("./src/css/plugin-compatibility.css", "utf8");
-
 esbuild
 	.build({
 		/** Entry point should be where everything is imported into. */
 		entryPoints: ["src/scss/index.scss"],
 		
-		/** Banner places the content at the beginning of the bundled file. */
-		banner: {
-			css: license
-		},
-		/** Footer places the content at the end of the bundled file. */
-		footer: {
-			css: styleSettings + hub
-		},
 		/** npm run dev will watch for file changes and rebuild instantly. */
 		watch: !prod,
 		logLevel: "info",
 		bundle: true,
 		minify: false,
 		outfile: prod ? fileProd : fileDev,
-		plugins: [
-			sassPlugin(),
-			time()
-		]
+		plugins: [sassPlugin(), time()]
 	})
 	.catch(() => process.exit(1));

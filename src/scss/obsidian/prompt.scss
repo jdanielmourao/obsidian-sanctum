@@ -1,0 +1,27 @@
+body {
+	--prompt-width: 700px;
+	--prompt-max-width: 80vw;
+	--prompt-max-height: 70vh;
+	--prompt-border-width: var(--border-width);
+	--prompt-border-color: var(--background-modifier-border);
+}
+
+input.prompt-input[type='text'] {
+	padding: 24px;
+	border-radius: 0;
+	border-bottom: 1px solid var(--border-strong-1);
+
+	&:focus:placeholder-shown {
+		box-shadow: none;
+		border-bottom: 1px solid var(--background-modifier-border-focus);
+	}
+}
+
+.prompt-results	{
+	padding-right: 1px;
+	overflow: auto;
+}
+
+.suggestion-item {
+	padding: 6px 12px;
+}

@@ -1,3 +1,5 @@
+@use 'info/license';
+
 @use 'variables/fonts';
 @use 'variables/root';
 @use 'variables/colors';
@@ -56,7 +58,8 @@
 @use 'plugins/calendar';
 
 
-
+@use 'info/style-settings';
+@use 'info/plugin-compatibility';
 
 
 
