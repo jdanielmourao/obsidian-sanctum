@@ -1,0 +1,11 @@
+body {
+	--modal-width: 90vw;
+	--modal-height: 85vh;
+	--modal-max-width: 1100px;
+	--modal-max-height: 1000px;
+	--modal-max-width-narrow: 800px;
+	--modal-border-width: var(--border-width);
+	--modal-border-color: var(--background-modifier-border);
+	--modal-radius: var(--radius-l);
+	--modal-community-sidebar-width: 280px;
+}

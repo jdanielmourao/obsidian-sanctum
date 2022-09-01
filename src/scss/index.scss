@@ -1,5 +1,3 @@
-@use 'info/license';
-
 @use 'variables/fonts';
 @use 'variables/root';
 @use 'variables/colors';
@@ -23,8 +21,8 @@
 @use 'obsidian/links';
 @use 'obsidian/lists';
 @use 'obsidian/menus';
+@use 'obsidian/modals';
 @use 'obsidian/notice';
-@use 'obsidian/prompt';
 @use 'obsidian/resize-handles';
 @use 'obsidian/ribbon';
 @use 'obsidian/scrollbars';
@@ -54,12 +52,13 @@
 @use 'mobile/mobile';
 
 @use 'plugins-core/graph';
+@use 'plugins-core/prompt';
 
 @use 'plugins/calendar';
 
 
-@use 'info/style-settings';
-@use 'info/plugin-compatibility';
+@use 'info/style-settings.scss';
+
 
 
 

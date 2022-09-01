@@ -17,7 +17,9 @@
     "dotenv": "^16.0.1",
     "esbuild": "^0.15.1",
     "esbuild-plugin-copy-file": "^0.0.2",
-    "esbuild-plugin-time": "^1.0.0",
     "esbuild-sass-plugin": "^2.3.2"
+  },
+  "devDependencies": {
+    "esbuild-plugin-time": "^1.0.0"
   }
 }

@@ -1,3 +1,48 @@
+/* ─────────────────────────────────────────────────────────────────────────
+Sanctum for Obsidian v0.16
+created by @jdanielmourao (Github)
+
+Sponsor my work:
+https://ko-fi.com/jdanielmourao
+https://paypal.me/jdanielmourao
+
+Readme:
+https://github.com/jdanielmourao/obsidian-sanctum
+
+Forum Thread:
+https://forum.obsidian.md/t/sanctum-theme/25455
+
+Description:
+A minimalist theme for creating a serene space of retreat, for thought and uninterrupted work.
+
+Disclaimer:
+This theme is designed to be used with the Style Settings plugin.
+
+——————————————————————————————————————————————————————————————————————
+
+MIT License
+
+Copyright (c) 2021-2022 José Daniel Mourão (jdanielmourao)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+───────────────────────────────────────────────────────────────────────── */
 @charset "UTF-8";
 
 /* src/scss/index.scss */
@@ -2304,6 +2349,17 @@ ol ol ol ol ol ol ol ol ol ol {
     0px 4px 4.2px -2px hsl(var(--shadow-color)/0.36),
     0px 10.1px 10.6px -3px hsl(var(--shadow-color)/0.32);
 }
+body {
+  --modal-width: 90vw;
+  --modal-height: 85vh;
+  --modal-max-width: 1100px;
+  --modal-max-height: 1000px;
+  --modal-max-width-narrow: 800px;
+  --modal-border-width: var(--border-width);
+  --modal-border-color: var(--background-modifier-border);
+  --modal-radius: var(--radius-l);
+  --modal-community-sidebar-width: 280px;
+}
 .notice {
   color: var(--text-normal);
   padding: 0.875em 1em 0.875em 1em;
@@ -2327,29 +2383,6 @@ ol ol ol ol ol ol ol ol ol ol {
     0px 1.5px 1.6px -1px hsl(var(--shadow-color)/0.4),
     0px 4px 4.2px -2px hsl(var(--shadow-color)/0.36),
     0px 10.1px 10.6px -3px hsl(var(--shadow-color)/0.32);
-}
-body {
-  --prompt-width: 700px;
-  --prompt-max-width: 80vw;
-  --prompt-max-height: 70vh;
-  --prompt-border-width: var(--border-width);
-  --prompt-border-color: var(--background-modifier-border);
-}
-input.prompt-input[type=text] {
-  padding: 24px;
-  border-radius: 0;
-  border-bottom: 1px solid var(--border-strong-1);
-}
-input.prompt-input[type=text]:focus:placeholder-shown {
-  box-shadow: none;
-  border-bottom: 1px solid var(--background-modifier-border-focus);
-}
-.prompt-results {
-  padding-right: 1px;
-  overflow: auto;
-}
-.suggestion-item {
-  padding: 6px 12px;
 }
 body {
   --divider-color: var(--background-modifier-border);
@@ -5716,6 +5749,54 @@ body {
   --graph-node-attachment: var(--yellow);
 }
 body {
+  --prompt-width: 700px;
+  --prompt-max-width: 80vw;
+  --prompt-max-height: 70vh;
+  --prompt-border-width: var(--border-width);
+  --prompt-border-color: var(--background-modifier-border);
+}
+input.prompt-input[type=text] {
+  padding: 24px;
+  border-radius: 0;
+  border-bottom: 1px solid var(--border-strong-1);
+}
+input.prompt-input[type=text]:focus:placeholder-shown {
+  box-shadow: none;
+  border-bottom: 1px solid var(--background-modifier-border-focus);
+}
+.prompt-results {
+  padding-right: 1px;
+  overflow: auto;
+}
+.suggestion-item.mod-complex .suggestion-prefix {
+  color: var(--interactive);
+}
+kbd,
+.suggestion-item.mod-complex .suggestion-hotkey {
+  background-color: var(--layer-1);
+  outline: 1px solid var(--background-modifier-border);
+}
+.prompt-instruction-command {
+  background-color: var(--layer-1);
+  font-weight: var(--semibold-weight);
+  padding: 2px 4px;
+  border-radius: var(--radius-s);
+  outline: 1px solid var(--background-modifier-border);
+}
+.theme-light .suggestion-container {
+  --shadow-color: 60deg 5% 59%;
+}
+.theme-dark .suggestion-container {
+  --shadow-color: 0deg 0% 1%;
+}
+.suggestion-container {
+  box-shadow:
+    0px 0.5px 0.5px hsl(var(--shadow-color)/0.43),
+    0px 1.5px 1.6px -1px hsl(var(--shadow-color)/0.4),
+    0px 4px 4.2px -2px hsl(var(--shadow-color)/0.36),
+    0px 10.1px 10.6px -3px hsl(var(--shadow-color)/0.32);
+}
+body {
   --calendar-dot: var(--orange);
   --calendar-dot-hover: var(--red);
 }
@@ -5927,32 +6008,8 @@ body {
 .stendig #calendar-container td {
   padding-left: 2px;
 }
-/*! @plugins
-core:
-- audio-recorder
-- backlink
-- command-palette
-- daily-notes
-- editor-status
-- file-explorer
-- file-recovery
-- global-search
-- graph
-- outgoing-link
-- outline
-- page-preview
-- starred
-- switcher
-- sync
-- tag-pane
-
-community:
-- calendar
-- dataview
-- obsidian-style-settings
-
-*/
-/*! @settings
+/*!
+/* @settings
 
 name: Sanctum
 id: sanctum
@@ -7197,48 +7254,30 @@ settings:
 				default-dark: '#'
 	-
 */
-/*! ─────────────────────────────────────────────────────────────────────────
-Sanctum for Obsidian v0.16
-created by @jdanielmourao (Github)
+/* @plugins
+core:
+- audio-recorder
+- backlink
+- command-palette
+- daily-notes
+- editor-status
+- file-explorer
+- file-recovery
+- global-search
+- graph
+- outgoing-link
+- outline
+- page-preview
+- starred
+- switcher
+- sync
+- tag-pane
 
-Sponsor my work:
-https://ko-fi.com/jdanielmourao
-https://paypal.me/jdanielmourao
+community:
+- calendar
+- dataview
+- obsidian-style-settings
 
-Readme:
-https://github.com/jdanielmourao/obsidian-sanctum
+*/
 
-Forum Thread:
-https://forum.obsidian.md/t/sanctum-theme/25455
 
-Description:
-A minimalist theme for creating a serene space of retreat, for thought and uninterrupted work.
-
-Disclaimer:
-This theme is designed to be used with the Style Settings plugin.
-
-——————————————————————————————————————————————————————————————————————
-
-MIT License
-
-Copyright (c) 2021-2022 José Daniel Mourão (jdanielmourao)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-───────────────────────────────────────────────────────────────────────── */

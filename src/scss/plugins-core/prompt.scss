@@ -1,0 +1,57 @@
+body {
+	--prompt-width: 700px;
+	--prompt-max-width: 80vw;
+	--prompt-max-height: 70vh;
+	--prompt-border-width: var(--border-width);
+	--prompt-border-color: var(--background-modifier-border);
+}
+
+input.prompt-input[type='text'] {
+	padding: 24px;
+	border-radius: 0;
+	border-bottom: 1px solid var(--border-strong-1);
+
+	&:focus:placeholder-shown {
+		box-shadow: none;
+		border-bottom: 1px solid var(--background-modifier-border-focus);
+	}
+}
+
+.prompt-results	{
+	padding-right: 1px;
+	overflow: auto;
+}
+
+.suggestion-item.mod-complex .suggestion-prefix {
+	color: var(--interactive);
+}
+
+kbd,
+.suggestion-item.mod-complex .suggestion-hotkey {
+	background-color: var(--layer-1);
+	outline: 1px solid var(--background-modifier-border);
+}
+
+.prompt-instruction-command {
+	background-color: var(--layer-1);
+	font-weight: var(--semibold-weight);
+	padding: 2px 4px;
+	border-radius: var(--radius-s);
+	outline: 1px solid var(--background-modifier-border);
+}
+
+
+.theme-light .suggestion-container {
+	--shadow-color: 60deg 5% 59%;
+}
+
+.theme-dark .suggestion-container {
+	--shadow-color: 0deg 0% 1%;
+}
+
+.suggestion-container {
+	box-shadow: 0px 0.5px 0.5px hsl(var(--shadow-color) / 0.43),
+	0px 1.5px 1.6px -1px hsl(var(--shadow-color) / 0.4),
+	0px 4px 4.2px -2px hsl(var(--shadow-color) / 0.36),
+	0px 10.1px 10.6px -3px hsl(var(--shadow-color) / 0.32);
+}
