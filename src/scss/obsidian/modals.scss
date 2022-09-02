@@ -10,18 +10,42 @@ body {
 	--modal-community-sidebar-width: 280px;
 }
 
+.modal-bg {
+	backdrop-filter: brightness(.5);
+}
+
 
 .theme-light,
 .theme-dark {
 	--background-modifier-cover: var(--background-hover);
 }
 
-body:not(.colorful-active-nav) .horizontal-tab-nav-item.is-active,
-body:not(.colorful-active-nav) .vertical-tab-nav-item.is-active {
+.colorful-active-nav .horizontal-tab-nav-item.is-active,
+.colorful-active-nav .vertical-tab-nav-item.is-active {
 	background-color: var(--background-selected);
 	color: var(--text-normal);
 
 	&:hover {
 		background-color: var(--background-selected-hover);
 	}
+}
+
+.theme-light .modal {
+	--shadow-color: 60deg 5% 59%;
+}
+
+.theme-dark .modal {
+	--shadow-color: 0deg 0% 1%;
+}
+
+.modal {
+	box-shadow: 0px 0.5px 0.5px hsl(var(--shadow-color) / 0.43),
+	0px 1.5px 1.6px -1px hsl(var(--shadow-color) / 0.4),
+	0px 4px 4.2px -2px hsl(var(--shadow-color) / 0.36),
+	0px 10.1px 10.6px -3px hsl(var(--shadow-color) / 0.32);
+}
+
+
+.view-content .style-settings-container .setting-item:not(.setting-item-heading) {
+	flex-direction: row;
 }
