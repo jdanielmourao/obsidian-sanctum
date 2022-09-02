@@ -36,27 +36,32 @@
 	.pcr-type[data-type='RGBA'] { //color format
 		grid-area: type-1;
 		margin: 0;
+		font-family: var(--font-interface);
 	}
 
 	.pcr-type[data-type='HEXA'] { //color format
 		grid-area: type-2;
 		margin: 0;
+		font-family: var(--font-interface);
 	}
 
 	.pcr-type[data-type='HSLA'] { //color format
 		grid-area: type-3;
 		margin: 0;
+		font-family: var(--font-interface);
 	}
 
 	.pcr-save { //save button
 		grid-area: save;
 		margin: 0;
 		text-transform: capitalize;
+		font-family: var(--font-interface);
 	}
 
 	.pcr-cancel {
 		grid-area: cancel;
 		margin: 0;
+		font-family: var(--font-interface);
 	}
 
 	display: grid;
