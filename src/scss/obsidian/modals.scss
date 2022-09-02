@@ -9,3 +9,19 @@ body {
 	--modal-radius: var(--radius-l);
 	--modal-community-sidebar-width: 280px;
 }
+
+
+.theme-light,
+.theme-dark {
+	--background-modifier-cover: var(--background-hover);
+}
+
+body:not(.colorful-active-nav) .horizontal-tab-nav-item.is-active,
+body:not(.colorful-active-nav) .vertical-tab-nav-item.is-active {
+	background-color: var(--background-selected);
+	color: var(--text-normal);
+
+	&:hover {
+		background-color: var(--background-selected-hover);
+	}
+}

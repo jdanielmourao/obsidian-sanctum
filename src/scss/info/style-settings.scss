@@ -1208,6 +1208,16 @@ settings:
 				description: Reveals the entirety of the tab title bar, like native obsidian.
 				type: class-toggle
 	-
+		id: tab-nav-items
+		title: Navigation Items
+		type: heading
+		level: 1
+		collapsed: true
+	-
+				id: colorful-active-nav
+				title: Colorful active nav items
+				type: class-toggle
+	-
 		id: plugins
 		title: Plugins
 		type: heading

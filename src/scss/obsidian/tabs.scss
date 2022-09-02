@@ -29,7 +29,31 @@ body {
 	padding: 0 16px;
 }
 
+.workspace-tab-header.is-active .workspace-tab-header-inner-close-button:hover {
+	--tab-text-color-focused: var(--text-muted);
+}
 
 .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title {
 	color: var(--text-muted);
+}
+
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
+	box-shadow: 
+	-0.5px 0 0.4px hsl(var(--shadow-color) / 0.47),
+	-0.8px 0 0.7px -1px hsl(var(--shadow-color) / 0.4),
+	-1.9px 0px 1.7px -2px hsl(var(--shadow-color) / 0.32),
+	-4.5px 0px 4px -3px hsl(var(--shadow-color) / 0.25),
+	-9.4px 0 8.4px -4.1px hsl(var(--shadow-color) / 0.18);
+
+	.theme-light & {
+		--shadow-color: 60deg 5% 59%;
+	}
+	
+	.theme-dark & {
+		--shadow-color: 0deg 0% 1%;
+	}
+}
+
+.mod-stacked .workspace-tab-header {
+	border-right: var(--divider-width) solid var(--divider-color);
 }
