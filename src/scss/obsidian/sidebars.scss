@@ -15,6 +15,10 @@ body {
 	--clickable-icon-radius: var(--radius-s);
 }
 
+body.theme-light.is-translucent {
+	--icon-color: var(--text-muted);
+}
+
 .workspace-tab-header-container {
 	padding: 0 8px;
 }
@@ -57,3 +61,5 @@ body {
 .nav-buttons-container {
 	justify-content: flex-end;
 }
+
+
