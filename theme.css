@@ -1034,6 +1034,9 @@ body:not(.nav-folder-indicators) .nav-folder-title {
   margin-left: -42px;
 }
 .collapse-icon svg.svg-icon {
+  transform: scale(1.4) scaleY(-1);
+}
+.is-collapsed .collapse-icon svg.svg-icon {
   transform: scale(1.4);
 }
 body svg * {
