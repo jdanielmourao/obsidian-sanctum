@@ -984,6 +984,28 @@ body {
 .wrap-nav-titles {
   --nav-item-white-space: wrap;
 }
+body:not(.nav-folder-indicators) .nav-folder.is-collapsed .nav-folder-title-content::before,
+body:not(.nav-folder-indicators) .nav-folder .nav-folder-title-content::before {
+  display: inline-block;
+  content: "";
+  margin-right: 8px;
+  vertical-align: text-bottom;
+  height: 16px;
+  width: 16px;
+  background-color: currentColor;
+}
+body:not(.nav-folder-indicators) .nav-folder.is-collapsed .nav-folder-title .nav-folder-title-content::before {
+  -webkit-mask: url("data:image/svg+xml;utf8,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Efolder%3C/title%3E%3Cpath d='M11.17,6l3.42,3.41.58.59H28V26H4V6h7.17m0-2H4A2,2,0,0,0,2,6V26a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2H16L12.59,4.59A2,2,0,0,0,11.17,4Z' transform='translate(0)'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E") no-repeat;
+}
+body:not(.nav-folder-indicators) .nav-folder .nav-folder-title .nav-folder-title-content::before {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg id='icon' xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: none; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M28,8H20.8284L17.4143,4.5859A2,2,0,0,0,16,4H4A2,2,0,0,0,2,6V26a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10A2,2,0,0,0,28,8ZM8,26V14h8v6.17l-2.59-2.58L12,19l5,5,5-5-1.41-1.41L18,20.17V14a2.0025,2.0025,0,0,0-2-2H8a2.0025,2.0025,0,0,0-2,2V26H4V6H16l4,4h8v2H22v2h6V26Z'/%3E%3Crect id='_Transparent_Rectangle_' data-name='&lt;Transparent Rectangle&gt;' class='cls-1' width='32' height='32'/%3E%3C/svg%3E") no-repeat;
+}
+body:not(.nav-folder-indicators) .nav-folder-collapse-indicator {
+  display: none;
+}
+body:not(.nav-folder-indicators) .nav-folder-title {
+  padding-left: 4px;
+}
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
   right: -4px;
 }
@@ -1012,8 +1034,7 @@ body {
   margin-left: -42px;
 }
 .collapse-icon svg.svg-icon {
-  width: 14px;
-  height: 14px;
+  transform: scale(1.4);
 }
 body svg * {
   stroke-linecap: auto;
@@ -7429,6 +7450,10 @@ settings:
 		type: heading
 		level: 1
 		collapsed: true
+	-
+				id: nav-folder-indicators
+				title: Replace folder icons with regular chevron/arrows
+				type: class-toggle
 	-
 				id: colorful-active-nav
 				title: Disable colorful active nav items
