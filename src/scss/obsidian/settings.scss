@@ -1,0 +1,18 @@
+.mod-settings .vertical-tab-content > .setting-item:nth-child(2) > .setting-item-control > input[type="color"] {
+	visibility: hidden;
+	width: 300px;
+}
+
+.mod-settings .vertical-tab-content > .setting-item:nth-child(2) > .setting-item-control .lucide-rotate-ccw {
+	display: none;
+}
+
+.mod-settings .vertical-tab-content > .setting-item:nth-child(2) > .setting-item-control > input[type="color"]::before {
+	visibility: visible;
+	content: "The accent color is overridden by the theme. Use the Style Settings Plugin to customize theme colors.";
+	color: var(--text-error);
+	font-family: var(--font-interface);
+	font-size: var(--font-ui-smaller);
+	line-height: 1.3;
+	position: relative;
+}

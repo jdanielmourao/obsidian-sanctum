@@ -115,7 +115,7 @@ body {
   --font-scale-9: 3.375rem;
   --font-scale-10: 3.75rem;
 }
-:root {
+body {
   --white:
     253,
     254,
@@ -1571,6 +1571,22 @@ body {
   --scrollbar-active-thumb-bg: rgba(var(--mono-rgb-100), 0.2);
   --scrollbar-bg: rgba(var(--mono-rgb-100), 0.05);
   --scrollbar-thumb-bg: rgba(var(--mono-rgb-100), 0.1);
+}
+.mod-settings .vertical-tab-content > .setting-item:nth-child(2) > .setting-item-control > input[type=color] {
+  visibility: hidden;
+  width: 300px;
+}
+.mod-settings .vertical-tab-content > .setting-item:nth-child(2) > .setting-item-control .lucide-rotate-ccw {
+  display: none;
+}
+.mod-settings .vertical-tab-content > .setting-item:nth-child(2) > .setting-item-control > input[type=color]::before {
+  visibility: visible;
+  content: "The accent color is overridden by the theme. Use the Style Settings Plugin to customize theme colors.";
+  color: var(--text-error);
+  font-family: var(--font-interface);
+  font-size: var(--font-ui-smaller);
+  line-height: 1.3;
+  position: relative;
 }
 body {
   --header-height: 40px;

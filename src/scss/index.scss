@@ -27,6 +27,7 @@
 @use 'obsidian/resize-handles';
 @use 'obsidian/ribbon';
 @use 'obsidian/scrollbars';
+@use 'obsidian/settings';
 @use 'obsidian/sidebars';
 @use 'obsidian/tabs';
 @use 'obsidian/tables';
@@ -56,7 +57,6 @@
 @use 'plugins-core/graph';
 @use 'plugins-core/prompt';
 
-@use 'advanced-tables-toolbar';
 @use 'plugins/calendar';
 
 
