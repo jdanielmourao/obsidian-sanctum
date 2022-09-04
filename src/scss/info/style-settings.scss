@@ -36,13 +36,78 @@ settings:
 			-
 				label: True Black
 				value: 'sanctum-black'
-	-
-				id: color-accent-rgb
-				title: Accent color
-				type: variable-themed-color
-				format: rgb-values
-				default-light: 'rgb(246, 141, 69)'
-				default-dark: 'rgb(102, 153, 97)'
+	-			
+		id: color-accent-rgb-l
+		title: Accent color light mode
+		type: variable-select
+		default: '246, 141, 69'
+		options:
+			-
+				label: 'Orange'
+				value: '246, 141, 69'
+			-
+				label: 'Red'
+				value: '243, 90, 55'
+			-
+				label: 'Pink'
+				value: '236, 90, 118'
+			-
+				label: 'Lavender'
+				value: '165, 119, 218'
+			-
+				label: 'Blue'
+				value: '83, 112, 159'
+			-
+				label: 'Cyan'
+				value: '99, 149, 156'
+			-
+				label: 'Viridian'
+				value: '92, 153, 124'
+			-
+				label: 'Green'
+				value: '102, 153, 97'
+			-
+				label: 'Pistachio'
+				value: '141, 147, 25'
+			-
+				label: 'Yellow'
+				value: '243, 189, 79'
+	-			
+		id: color-accent-rgb-d
+		title: Accent color dark mode
+		type: variable-select
+		default: '102, 153, 97'
+		options:
+			-
+				label: 'Orange'
+				value: '246, 141, 69'
+			-
+				label: 'Red'
+				value: '243, 90, 55'
+			-
+				label: 'Pink'
+				value: '236, 90, 118'
+			-
+				label: 'Lavender'
+				value: '165, 119, 218'
+			-
+				label: 'Blue'
+				value: '83, 112, 159'
+			-
+				label: 'Cyan'
+				value: '99, 149, 156'
+			-
+				label: 'Viridian'
+				value: '92, 153, 124'
+			-
+				label: 'Green'
+				value: '102, 153, 97'
+			-
+				label: 'Pistachio'
+				value: '141, 147, 25'
+			-
+				label: 'Yellow'
+				value: '243, 189, 79'
 	-
 		id: font-editor-theme
 		title: Editor font
@@ -890,13 +955,42 @@ settings:
 		type: heading
 		level: 1
 		collapsed: true
-	-
-				id: checkbox-color-rgb
-				title: Checkbox color
-				type: variable-color
-				opacity: false
-				format: rgb-values
-				default: 'rgb(102, 153, 97)'
+	-			
+			id: checkbox-color-rgb
+			title: Checkbox color
+			type: variable-select
+			default: '102, 153, 97'
+			options:
+				-
+					label: 'Orange'
+					value: '246, 141, 69'
+				-
+					label: 'Red'
+					value: '197, 65, 40'
+				-
+					label: 'Pink'
+					value: '236, 90, 118'
+				-
+					label: 'Lavender'
+					value: '165, 119, 218'
+				-
+					label: 'Blue'
+					value: '83, 112, 159'
+				-
+					label: 'Cyan'
+					value: '99, 149, 156'
+				-
+					label: 'Viridian'
+					value: '92, 153, 124'
+				-
+					label: 'Green'
+					value: '102, 153, 97'
+				-
+					label: 'Pistachio'
+					value: '141, 147, 25'
+				-
+					label: 'Yellow'
+					value: '243, 189, 79'
 	-
 				id: checkbox-radius
 				title: Checkbox shape

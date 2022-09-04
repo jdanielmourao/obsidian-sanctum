@@ -1,3 +1,8 @@
+body {
+	--color-accent-rgb-l: 246, 141, 69;
+	--color-accent-rgb-d: 102, 153, 97;
+}
+
 /*	Sanctum Light Themes (Default, Contrast & White)
 —————————————————————————————————————————————————————————*/
 
@@ -5,7 +10,7 @@
 .theme-light.sanctum-default-light,
 .theme-light.sanctum-contrast-light,
 .theme-light.sanctum-white {
-	--color-accent-rgb: 246, 141, 69;
+	--color-accent-rgb: var(--color-accent-rgb-l);
 
 
 	--background: rgb(var(--gray-10));
@@ -90,7 +95,7 @@
 .theme-dark.sanctum-default-dark,
 .theme-dark.sanctum-contrast-dark,
 .theme-dark.sanctum-black {
-	--color-accent-rgb: 102, 153, 97;
+	--color-accent-rgb: var(--color-accent-rgb-d);
 	
 	
 	--background: rgb(var(--gray-100));
@@ -231,7 +236,6 @@
 .theme-light,
 .theme-dark {
 
-	--color-accent-rgb: 63, 117, 143;
 	--color-red-rgb: 197, 65, 40;
 	--color-green-rgb: 102, 153, 97;
 	--color-yellow-rgb: 243, 189, 79;

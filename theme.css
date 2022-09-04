@@ -275,14 +275,21 @@ body {
   --lavender-100: hsl(266deg, 100%, 15%);
   --lavender: var(--lavender-50);
 }
+body {
+  --color-accent-rgb-l:
+    246,
+    141,
+    69;
+  --color-accent-rgb-d:
+    102,
+    153,
+    97;
+}
 .theme-light,
 .theme-light.sanctum-default-light,
 .theme-light.sanctum-contrast-light,
 .theme-light.sanctum-white {
-  --color-accent-rgb:
-    246,
-    141,
-    69;
+  --color-accent-rgb: var(--color-accent-rgb-l);
   --background: rgb(var(--gray-10));
   --background-hover: rgba(var(--gray-50), .12);
   --background-active: rgba(var(--gray-50), .32);
@@ -341,10 +348,7 @@ body {
 .theme-dark.sanctum-default-dark,
 .theme-dark.sanctum-contrast-dark,
 .theme-dark.sanctum-black {
-  --color-accent-rgb:
-    102,
-    153,
-    97;
+  --color-accent-rgb: var(--color-accent-rgb-d);
   --background: rgb(var(--gray-100));
   --background-hover: rgba(var(--gray-50), .16);
   --background-active: rgba(var(--gray-50), .40);
@@ -421,10 +425,6 @@ body {
 }
 .theme-light,
 .theme-dark {
-  --color-accent-rgb:
-    63,
-    117,
-    143;
   --color-red-rgb:
     197,
     65,
@@ -2208,7 +2208,7 @@ input[type=checkbox]:checked::after {
   top: -1px;
   left: -1px;
   background-color: var(--checkbox-marker-color);
-  -webkit-mask-position: 46.875% 53.125%;
+  -webkit-mask-position: 43.75% 53.125%;
   -webkit-mask-size: 59.375%;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(36, 20%, 95.1%)' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
 }
@@ -6158,13 +6158,78 @@ settings:
 			-
 				label: True Black
 				value: 'sanctum-black'
-	-
-				id: color-accent-rgb
-				title: Accent color
-				type: variable-themed-color
-				format: rgb-values
-				default-light: 'rgb(246, 141, 69)'
-				default-dark: 'rgb(102, 153, 97)'
+	-			
+		id: color-accent-rgb-l
+		title: Accent color light mode
+		type: variable-select
+		default: '246, 141, 69'
+		options:
+			-
+				label: 'Orange'
+				value: '246, 141, 69'
+			-
+				label: 'Red'
+				value: '243, 90, 55'
+			-
+				label: 'Pink'
+				value: '236, 90, 118'
+			-
+				label: 'Lavender'
+				value: '165, 119, 218'
+			-
+				label: 'Blue'
+				value: '83, 112, 159'
+			-
+				label: 'Cyan'
+				value: '99, 149, 156'
+			-
+				label: 'Viridian'
+				value: '92, 153, 124'
+			-
+				label: 'Green'
+				value: '102, 153, 97'
+			-
+				label: 'Pistachio'
+				value: '141, 147, 25'
+			-
+				label: 'Yellow'
+				value: '243, 189, 79'
+	-			
+		id: color-accent-rgb-d
+		title: Accent color dark mode
+		type: variable-select
+		default: '102, 153, 97'
+		options:
+			-
+				label: 'Orange'
+				value: '246, 141, 69'
+			-
+				label: 'Red'
+				value: '243, 90, 55'
+			-
+				label: 'Pink'
+				value: '236, 90, 118'
+			-
+				label: 'Lavender'
+				value: '165, 119, 218'
+			-
+				label: 'Blue'
+				value: '83, 112, 159'
+			-
+				label: 'Cyan'
+				value: '99, 149, 156'
+			-
+				label: 'Viridian'
+				value: '92, 153, 124'
+			-
+				label: 'Green'
+				value: '102, 153, 97'
+			-
+				label: 'Pistachio'
+				value: '141, 147, 25'
+			-
+				label: 'Yellow'
+				value: '243, 189, 79'
 	-
 		id: font-editor-theme
 		title: Editor font
@@ -7012,13 +7077,42 @@ settings:
 		type: heading
 		level: 1
 		collapsed: true
-	-
-				id: checkbox-color-rgb
-				title: Checkbox color
-				type: variable-color
-				opacity: false
-				format: rgb-values
-				default: 'rgb(102, 153, 97)'
+	-			
+			id: checkbox-color-rgb
+			title: Checkbox color
+			type: variable-select
+			default: '102, 153, 97'
+			options:
+				-
+					label: 'Orange'
+					value: '246, 141, 69'
+				-
+					label: 'Red'
+					value: '197, 65, 40'
+				-
+					label: 'Pink'
+					value: '236, 90, 118'
+				-
+					label: 'Lavender'
+					value: '165, 119, 218'
+				-
+					label: 'Blue'
+					value: '83, 112, 159'
+				-
+					label: 'Cyan'
+					value: '99, 149, 156'
+				-
+					label: 'Viridian'
+					value: '92, 153, 124'
+				-
+					label: 'Green'
+					value: '102, 153, 97'
+				-
+					label: 'Pistachio'
+					value: '141, 147, 25'
+				-
+					label: 'Yellow'
+					value: '243, 189, 79'
 	-
 				id: checkbox-radius
 				title: Checkbox shape
