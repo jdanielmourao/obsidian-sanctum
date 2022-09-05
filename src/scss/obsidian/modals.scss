@@ -46,26 +46,3 @@ body {
 }
 
 
-.view-content .style-settings-container .setting-item:not(.setting-item-heading) {
-	flex-direction: row;
-}
-
-
-.community-item.is-selected {
-	border-color: var(--interactive);
-	background-color: var(--background-primary);
-	color: var(--text-normal);
-}
-
-.community-item.is-selected:hover,
-.community-item:hover {
-	background-color: var(--background-modifier-hover);
-}
-
-.style-settings-container {
-	padding-left: 16px;
-}
-
-.themed-color-wrapper > div {
-	padding: 4px;
-}

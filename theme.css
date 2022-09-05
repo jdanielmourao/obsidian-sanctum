@@ -1505,24 +1505,6 @@ body {
     0px 4px 4.2px -2px hsl(var(--shadow-color)/0.36),
     0px 10.1px 10.6px -3px hsl(var(--shadow-color)/0.32);
 }
-.view-content .style-settings-container .setting-item:not(.setting-item-heading) {
-  flex-direction: row;
-}
-.community-item.is-selected {
-  border-color: var(--interactive);
-  background-color: var(--background-primary);
-  color: var(--text-normal);
-}
-.community-item.is-selected:hover,
-.community-item:hover {
-  background-color: var(--background-modifier-hover);
-}
-.style-settings-container {
-  padding-left: 16px;
-}
-.themed-color-wrapper > div {
-  padding: 4px;
-}
 .notice {
   color: var(--text-normal);
   padding: 0.875em 1em 0.875em 1em;
@@ -1611,6 +1593,37 @@ body {
   font-size: var(--font-ui-smaller);
   line-height: 1.3;
   position: relative;
+}
+.view-content .style-settings-container .setting-item:not(.setting-item-heading) {
+  flex-direction: row;
+}
+.community-item.is-selected {
+  border-color: var(--interactive);
+  background-color: var(--background-primary);
+  color: var(--text-normal);
+}
+.community-item.is-selected .community-item-author,
+.community-item.is-selected .community-item-downloads {
+  color: var(--text-muted);
+  opacity: 1;
+}
+.community-item.is-selected:hover,
+.community-item:hover {
+  background-color: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+.community-item.is-selected:hover .community-item-author,
+.community-item.is-selected:hover .community-item-downloads,
+.community-item:hover .community-item-author,
+.community-item:hover .community-item-downloads {
+  color: var(--text-muted);
+  opacity: 1;
+}
+.style-settings-container {
+  padding-left: 16px;
+}
+.themed-color-wrapper > div {
+  padding: 4px;
 }
 body {
   --header-height: 40px;
@@ -6144,6 +6157,70 @@ body {
 .stendig #calendar-container td {
   padding-left: 2px;
 }
+.kanban-plugin {
+  background-color: var(--background-primary);
+  --lane-width: 272px;
+}
+.kanban-plugin__lane-wrapper {
+  margin-bottom: 16px;
+  margin-right: 16px;
+}
+.kanban-plugin__lane {
+  border-radius: var(--radius-m);
+}
+.kanban-plugin__lane-header-wrapper {
+  padding: 8px;
+}
+.kanban-plugin__lane-header-wrapper .kanban-plugin__lane-grip {
+  margin-right: 4px;
+  margin-left: -4px;
+  padding: 4px;
+  border-radius: var(--radius-s);
+}
+.kanban-plugin__lane-header-wrapper .kanban-plugin__lane-grip:hover {
+  background-color: var(--background-modifier-hover);
+}
+.kanban-plugin__lane-header-wrapper .kanban-plugin__lane-title {
+  font-size: var(--font-ui-medium);
+  font-weight: var(--font-medium);
+}
+.kanban-plugin__lane-header-wrapper div.kanban-plugin__lane-title-count {
+  border-radius: var(--radius-s);
+  font-size: var(--font-ui-smaller);
+}
+.kanban-plugin__lane-header-wrapper button.kanban-plugin__lane-settings-button {
+  box-shadow: none;
+}
+.kanban-plugin__lane-header-wrapper button.kanban-plugin__lane-settings-button:hover {
+  background-color: var(--background-modifier-hover);
+}
+.kanban-plugin__item {
+  border-radius: var(--radius-m);
+}
+.kanban-plugin__item-title-wrapper {
+  padding: 8px;
+}
+.kanban-plugin__item button.kanban-plugin__item-postfix-button {
+  opacity: 1;
+  color: var(--text-faint);
+  visibility: visible;
+  box-shadow: none;
+}
+.kanban-plugin__item button.kanban-plugin__item-postfix-button:hover {
+  background-color: var(--background-modifier-hover);
+  border-radius: var(--radius-s);
+  color: var(--text-muted);
+}
+button.kanban-plugin__new-item-button {
+  padding: 8px 16px;
+  background-color: var(--layer-1);
+}
+button.kanban-plugin__new-item-button:hover {
+  background-color: var(--layer-hover-1);
+}
+.wrap-kanban-lanes .kanban-plugin__board > div {
+  flex-wrap: wrap;
+}
 /*!
 /* @settings
 
@@ -7497,6 +7574,15 @@ settings:
 				default-light: '#'
 				default-dark: '#'
 	-
+			id: kanban
+			title: Kanban
+			type: heading
+			level: 2
+			collapsed: true
+	-
+				id: wrap-kanban-lanes
+				title: Wrap kanban lanes
+				type: class-toggle
 */
 /* @plugins
 core:
@@ -7521,6 +7607,7 @@ community:
 - calendar
 - dataview
 - obsidian-style-settings
+- obsidian-kanban
 
 */
 

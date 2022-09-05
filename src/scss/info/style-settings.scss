@@ -1351,4 +1351,13 @@ settings:
 				default-light: '#'
 				default-dark: '#'
 	-
+			id: kanban
+			title: Kanban
+			type: heading
+			level: 2
+			collapsed: true
+	-
+				id: wrap-kanban-lanes
+				title: Wrap kanban lanes
+				type: class-toggle
 */
