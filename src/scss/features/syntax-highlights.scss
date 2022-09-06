@@ -1,13 +1,14 @@
 /*	Nord	(credit: @nord, adapted by @zwhitchcox & @gabrieluizramos)
 —————————————————————————————————————————————————————————*/
-
+.nord.theme-light p > code,
+.nord.theme-dark p > code,
 .nord.theme-light pre:not(pre.frontmatter),
 .nord.theme-dark pre:not(pre.frontmatter),
 .nord.theme-dark .HyperMD-codeblock,
 .nord.theme-light .HyperMD-codeblock {
 
 	--code-background: #2E3440;
-	--code-normal: #f8f8f2;
+	--code-normal: #E5E9F0;
 	--text-muted: #81A1C1;
 	--text-faint: #81A1C1;
 
@@ -106,6 +107,7 @@
 
 }
 
+.nord.theme-light p > code,
 .nord.theme-light pre:not(pre.frontmatter),
 .nord.theme-light .HyperMD-codeblock {
 	
@@ -118,6 +120,8 @@
 /* adapted by @jdanielmourao
 —————————————————————————————————————————————————————————*/
 
+.dracula.theme-light p > code,
+.dracula.theme-dark p > code,
 .dracula.theme-light pre:not(.frontmatter),
 .dracula.theme-dark pre:not(.frontmatter),
 .dracula.theme-light .HyperMD-codeblock,
@@ -230,7 +234,7 @@
 /*	One Dark & Light (credit: @hoonweiting)
 /* adapted by @jdanielmourao
 —————————————————————————————————————————————————————————*/
-
+.one-dark.theme-light p > code,
 .one-dark.theme-light pre:not(.frontmatter),
 .one-dark.theme-light .HyperMD-codeblock {
 	
@@ -421,6 +425,7 @@
 
 }
 
+.one-dark.theme-dark p > code,
 .one-dark.theme-dark pre:not(.frontmatter),
 .one-dark.theme-dark .HyperMD-codeblock {
 
@@ -615,7 +620,7 @@
 /*		& Light		(credit: @hectormatos2011)
 /* adapted by @jdanielmourao
 —————————————————————————————————————————————————————————*/
-
+.solarized.theme-light p > code,
 .solarized.theme-light pre:not(.frontmatter),
 .solarized.theme-light .HyperMD-codeblock {
 
@@ -712,6 +717,7 @@
 
 }
 
+.solarized.theme-dark p > code,
 .solarized.theme-dark pre:not(.frontmatter),
 .solarized.theme-dark .HyperMD-codeblock {
 	
@@ -846,7 +852,7 @@
 /*	& Dark			(credit: @azat-io)
 /* adapted by @jdanielmourao
 —————————————————————————————————————————————————————————*/
-
+.gruvbox.theme-light p > code,
 .gruvbox.theme-light pre:not(.frontmatter),
 .gruvbox.theme-light .HyperMD-codeblock {
 
@@ -956,6 +962,7 @@
 	}
 }
 
+.gruvbox.theme-dark p > code,
 .gruvbox.theme-dark pre:not(.frontmatter),
 .gruvbox.theme-dark .HyperMD-codeblock {
 	
@@ -1069,7 +1076,7 @@
 /* adapted by @jdanielmourao
 —————————————————————————————————————————————————————————*/
 
-
+.material.theme-dark p > code,
 .material.theme-dark pre:not(.frontmatter),
 .material.theme-dark .HyperMD-codeblock {
 
@@ -1256,6 +1263,7 @@
 
 }
 
+.material.theme-light p > code,
 .material.theme-light pre:not(.frontmatter),
 .material.theme-light .HyperMD-codeblock {
 
