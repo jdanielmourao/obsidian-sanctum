@@ -913,6 +913,9 @@ body {
   --hr-thickness: 1.5px;
 }
 body {
+  --file-line-width: 40rem;
+}
+body {
   --embed-background: inherit;
   --embed-border-left: var(--embed-border-width) solid var(--embed-border-color);
   --embed-border-right: none;
@@ -1545,6 +1548,10 @@ body {
 .is-hidden-frameless .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   height: calc(100% - var(--header-height));
 }
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle {
+  height: calc(100% - var(--header-height));
+}
 body {
   --ribbon-background: var(--background-secondary);
   --ribbon-background-collapsed: var(--background-primary);
@@ -1890,15 +1897,21 @@ body {
   position: sticky;
   margin-top: 24px;
 }
+.workspace-leaf-content[data-type=style-settings] .view-header,
 .workspace-leaf-content[data-type=graph] .view-header {
   height: unset;
 }
+.workspace-leaf-content[data-type=style-settings] .view-header .view-header-title,
 .workspace-leaf-content[data-type=graph] .view-header .view-header-title {
   visibility: hidden;
 }
+.workspace-leaf-content[data-type=style-settings] .view-header .view-actions,
 .workspace-leaf-content[data-type=graph] .view-header .view-actions {
   position: unset;
   margin-top: unset;
+}
+body.pane-relief-pane-numbering .workspace-split .workspace-leaf-content[data-type=style-settings] .view-header-icon {
+  display: none;
 }
 .sticky-view-actions .view-header {
   height: unset;
@@ -2584,6 +2597,10 @@ body {
   --toggle-thumb-radius: 20px;
   --toggle-thumb-height: 20px;
   --toggle-thumb-width: 20px;
+  --toggle-s-border-width: 2px;
+  --toggle-s-width: 32px;
+  --toggle-s-thumb-height: 14px;
+  --toggle-s-thumb-width: 14px;
 }
 .checkbox-container {
   --shadow-color: 0deg 0% 61%;
@@ -6222,12 +6239,12 @@ body {
   border-bottom: none;
 }
 .kanban-plugin__lane-items {
-  background-color: var(--layer-1);
+  background-color: var(--background-primary);
   margin: 0;
   padding: 4px 8px;
 }
 .kanban-plugin__item-button-wrapper {
-  background-color: var(--layer-1);
+  background-color: var(--background-primary);
   border-radius: 0 0 var(--radius-m) var(--radius-m);
   border: 1px solid var(--background-modifier-border);
 }
@@ -6248,8 +6265,12 @@ body {
   padding: 2px 4px;
   border: 1px solid var(--interactive);
 }
+.kanban-plugin__item-content-wrapper {
+  background: transparent;
+}
 .kanban-plugin__item-title-wrapper {
   padding: 8px;
+  background: transparent;
 }
 .kanban-plugin__item button.kanban-plugin__item-postfix-button {
   opacity: 1;
@@ -6264,7 +6285,7 @@ body {
 }
 button.kanban-plugin__new-item-button {
   padding: 8px 16px;
-  background-color: var(--layer-1);
+  background-color: transparent;
 }
 button.kanban-plugin__new-item-button:hover {
   background-color: var(--layer-hover-1);
@@ -6406,6 +6427,16 @@ settings:
 		title: Editor font
 		type: variable-text
 		default: '??'
+    - 
+        id: file-line-width
+        title: Readable line width
+        description: The maximum line width in rem (unit relative to Appearance -> Font Size)
+        type: variable-number-slider
+        default: 40
+        min: 30
+        max: 70
+        step: 1
+		format: 'rem'
 	-
 		id: active-line-highlighting
 		title: Active line highlighting
