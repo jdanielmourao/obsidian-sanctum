@@ -116,7 +116,7 @@ settings:
     - 
         id: file-line-width
         title: Readable line width
-        description: The maximum line width in rem
+        description: The maximum line width in rem (unit relative to Appearance -> Font Size)
         type: variable-number-slider
         default: 40
         min: 30
