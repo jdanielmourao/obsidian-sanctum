@@ -9,8 +9,24 @@
 	margin-right: 16px;
 }
 
+.theme-light .kanban-plugin__lane  {
+	--shadow-color: 60deg 5% 59%;
+}
+
+.theme-dark .kanban-plugin__lane  {
+	--shadow-color: 0deg 0% 1%;
+}
+
+.theme-light.sanctum-default-light .kanban-plugin__lane {
+	background-color: var(--layer-1);
+}
+
 .kanban-plugin__lane {
 	border-radius: var(--radius-m);
+	box-shadow: 0px 0.5px 0.5px hsl(var(--shadow-color) / 0.43),
+	0px 1.5px 1.6px -1px hsl(var(--shadow-color) / 0.4),
+	0px 4px 4.2px -2px hsl(var(--shadow-color) / 0.36),
+	0px 10.1px 10.6px -3px hsl(var(--shadow-color) / 0.32);
 }
 
 .kanban-plugin__lane-header-wrapper {
@@ -47,6 +63,19 @@
 
 .kanban-plugin__item {
 	border-radius: var(--radius-m);
+
+	a.tag:not(.kanban-plugin__item-tag) {
+		display: none;
+	}
+	.kanban-plugin__item-tag {
+		padding: 2px 4px;
+		border: 1px solid var(--interactive);
+
+		&:hover {
+			padding: 2px 4px;
+			border: 1px solid var(--interactive);
+		}
+	}
 }
 
 .kanban-plugin__item-title-wrapper {
@@ -78,4 +107,5 @@ button.kanban-plugin__new-item-button {
 
 .wrap-kanban-lanes .kanban-plugin__board > div {
 	flex-wrap: wrap;
+	overflow-y: scroll;
 }
