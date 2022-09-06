@@ -912,22 +912,6 @@ body {
   --hr-color: var(--background-modifier-border);
   --hr-thickness: 1.5px;
 }
-.view-header:not(.focus-within) {
-  height: 0px;
-  border-width: 0;
-}
-.view-header .view-actions {
-  position: sticky;
-  margin-top: 24px;
-}
-.sticky-view-actions .view-header {
-  height: unset;
-  border-width: 1px;
-}
-.sticky-view-actions .view-header .view-actions {
-  position: unset;
-  margin-top: unset;
-}
 body {
   --embed-background: inherit;
   --embed-border-left: var(--embed-border-width) solid var(--embed-border-color);
@@ -1228,7 +1212,7 @@ body {
   --list-bullet-border: none;
   --list-bullet-radius: 0;
   --list-bullet-size: 4px;
-  --list-bullet-transform: translateY(1px);
+  --list-bullet-transform: none;
 }
 body {
   --list-bullet-width-em-dash: 10px;
@@ -1625,6 +1609,12 @@ body {
 .themed-color-wrapper > div {
   padding: 4px;
 }
+.style-settings-heading.is-collapsed .style-settings-collapse-indicator > svg.right-triangle {
+  transform: scale(1.5);
+}
+.style-settings-collapse-indicator > svg.right-triangle {
+  transform: scale(1.5) scaleY(-1);
+}
 body {
   --header-height: 40px;
   --sidebar-markdown-font-size: var(--font-small);
@@ -1891,6 +1881,35 @@ body {
   --tag-padding-x: 0.65em;
   --tag-padding-y: 0.25em;
   --tag-radius: 2em;
+}
+.view-header:not(.focus-within) {
+  height: 0px;
+  border-width: 0;
+}
+.view-header .view-actions {
+  position: sticky;
+  margin-top: 24px;
+}
+.workspace-leaf-content[data-type=graph] .view-header,
+.workspace-leaf-content[data-type=kanban] .view-header {
+  height: unset;
+}
+.workspace-leaf-content[data-type=graph] .view-header .view-header-title,
+.workspace-leaf-content[data-type=kanban] .view-header .view-header-title {
+  visibility: hidden;
+}
+.workspace-leaf-content[data-type=graph] .view-header .view-actions,
+.workspace-leaf-content[data-type=kanban] .view-header .view-actions {
+  position: unset;
+  margin-top: unset;
+}
+.sticky-view-actions .view-header {
+  height: unset;
+  border-width: 1px;
+}
+.sticky-view-actions .view-header .view-actions {
+  position: unset;
+  margin-top: unset;
 }
 .tooltip {
   color: var(--background-primary);
@@ -6165,8 +6184,22 @@ body {
   margin-bottom: 16px;
   margin-right: 16px;
 }
+.theme-light .kanban-plugin__lane {
+  --shadow-color: 60deg 5% 59%;
+}
+.theme-dark .kanban-plugin__lane {
+  --shadow-color: 0deg 0% 1%;
+}
+.theme-light.sanctum-default-light .kanban-plugin__lane {
+  background-color: var(--layer-1);
+}
 .kanban-plugin__lane {
   border-radius: var(--radius-m);
+  box-shadow:
+    0px 0.5px 0.5px hsl(var(--shadow-color)/0.43),
+    0px 1.5px 1.6px -1px hsl(var(--shadow-color)/0.4),
+    0px 4px 4.2px -2px hsl(var(--shadow-color)/0.36),
+    0px 10.1px 10.6px -3px hsl(var(--shadow-color)/0.32);
 }
 .kanban-plugin__lane-header-wrapper {
   padding: 8px;
@@ -6179,6 +6212,7 @@ body {
 }
 .kanban-plugin__lane-header-wrapper .kanban-plugin__lane-grip:hover {
   background-color: var(--background-modifier-hover);
+  color: var(--text-muted);
 }
 .kanban-plugin__lane-header-wrapper .kanban-plugin__lane-title {
   font-size: var(--font-ui-medium);
@@ -6196,6 +6230,17 @@ body {
 }
 .kanban-plugin__item {
   border-radius: var(--radius-m);
+}
+.kanban-plugin__item a.tag:not(.kanban-plugin__item-tag) {
+  display: none;
+}
+.kanban-plugin__item .kanban-plugin__item-tag {
+  padding: 2px 4px;
+  border: 1px solid var(--interactive);
+}
+.kanban-plugin__item .kanban-plugin__item-tag:hover {
+  padding: 2px 4px;
+  border: 1px solid var(--interactive);
 }
 .kanban-plugin__item-title-wrapper {
   padding: 8px;
@@ -6217,9 +6262,11 @@ button.kanban-plugin__new-item-button {
 }
 button.kanban-plugin__new-item-button:hover {
   background-color: var(--layer-hover-1);
+  color: var(--text-muted);
 }
 .wrap-kanban-lanes .kanban-plugin__board > div {
   flex-wrap: wrap;
+  overflow-y: scroll;
 }
 /*!
 /* @settings
