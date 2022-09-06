@@ -1,3 +1,7 @@
+@use 'variables/colors';
+@use 'variables/theme';
+
+
 .markdown-rendered progress,
 .markdown-source-view.is-live-preview progress {
 	height: 4px;

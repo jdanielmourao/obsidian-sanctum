@@ -1,16 +1,3 @@
-body {
-
-	--font-editor-theme: ??;
-	--font-editor: var(--font-editor-theme), var(--font-text);
-
-	--font-text-theme: Inter,sans-serif;
-	--font-monospace-theme: Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
-	--font-interface-theme: Inter,sans-serif;
-	
-	--version: "You are currently using Sanctum for Obsidian v0.16 \a \a It is highly recommended to install the Style Settings and Contextual Typography plugins.\a If you run into any issues, try updating to the latest version of the theme. If the issue isn't resolved, you can file a report on github (link in the button above). \a \a Support my work:\a ko-fi.com/jdanielmourao \a paypal.me/jdanielmourao";
-	--version-empty-page: "Sanctum for Obsidian v0.16\A Designed with Intention 2021-2022 \A Font: IBM Plex Sans & Mono";
-}
-
 :root {
 
 /*	Leading (line-height)

@@ -1,3 +1,6 @@
+@use 'variables/colors';
+@use 'variables/theme';
+
 body {
 	--toggle-border-width: 2px;
 	--toggle-width: 48px;
