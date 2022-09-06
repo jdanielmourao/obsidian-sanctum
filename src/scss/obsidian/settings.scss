@@ -55,3 +55,11 @@
 .themed-color-wrapper > div {
 	padding: 4px;
 }
+
+.style-settings-heading.is-collapsed .style-settings-collapse-indicator > svg.right-triangle {
+	transform: scale(1.5);
+}
+
+.style-settings-collapse-indicator > svg.right-triangle {
+	transform: scale(1.5) scaleY(-1);
+}
