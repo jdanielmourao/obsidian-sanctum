@@ -1,3 +1,8 @@
+@use 'variables/colors';
+@use 'variables/theme';
+@use 'obsidian/typography';
+
+
 body {
 	--vault-name-font-size: var(--font-ui-medium);
 	--vault-name-font-weight: var(--font-medium);

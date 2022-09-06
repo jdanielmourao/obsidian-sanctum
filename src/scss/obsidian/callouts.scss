@@ -1,3 +1,6 @@
+@use 'variables/colors';
+@use 'variables/theme';
+
 body {
 	--callout-radius: var(--radius-s); // obsidian default setting
 	--callout-border-opacity: 30%;

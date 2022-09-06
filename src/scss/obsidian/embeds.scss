@@ -1,3 +1,6 @@
+@use 'variables/colors';
+@use 'variables/theme';
+
 body {
 	--embed-background: inherit;
 	--embed-border-left: var(--embed-border-width) solid var(--embed-border-color);

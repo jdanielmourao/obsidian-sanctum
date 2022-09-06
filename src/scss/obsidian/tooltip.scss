@@ -1,3 +1,6 @@
+@use 'variables/colors';
+@use 'variables/theme';
+
 .tooltip {
 	color: var(--background-primary);
 	background-color: var(--background-inverse);

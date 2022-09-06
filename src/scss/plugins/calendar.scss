@@ -1,3 +1,6 @@
+@use 'variables/colors';
+@use 'variables/theme';
+
 body {
 	--calendar-dot: var(--orange);
 	--calendar-dot-hover: var(--red);

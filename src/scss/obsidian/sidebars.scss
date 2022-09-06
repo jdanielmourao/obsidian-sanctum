@@ -1,3 +1,8 @@
+@use 'variables/colors';
+@use 'variables/theme';
+@use 'obsidian/typography';
+
+
 body {
 	--header-height: 40px;
 	--sidebar-markdown-font-size: var(--font-small);

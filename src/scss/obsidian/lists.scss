@@ -1,3 +1,6 @@
+@use 'variables/colors';
+@use 'variables/theme';
+
 body {
 	--list-indent: 1.5em;
 	--list-spacing: 0.075em;
