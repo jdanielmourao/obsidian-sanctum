@@ -2,8 +2,39 @@
 —————————————————————————————————————————————————————————*/
 
 
-li.is-checked:not(li[data-task='x']) input[type='checkbox'] ,
-.markdown-source-view input[type='checkbox']:not([data-task='x']):checked {
+li.is-checked:where(
+li[data-task='*'], li[data-task='a'],
+li[data-task='f'], li[data-task='S'],
+li[data-task='-'], li[data-task='>'],
+li[data-task='<'], li[data-task='l'],
+li[data-task='B'], li[data-task='X'],
+li[data-task='n'], li[data-task='p'],
+li[data-task='c'], li[data-task='w'],
+li[data-task='b'], li[data-task='I'],
+li[data-task='!'], li[data-task='?'],
+li[data-task='i'], li[data-task='/'],
+li[data-task='u'], li[data-task='d'],
+li[data-task='F'], li[data-task='r'],
+li[data-task='m'], li[data-task='M'],
+li[data-task='L'], li[data-task='t'],
+li[data-task='T'], li[data-task='P']
+) input[type='checkbox'],
+.markdown-source-view input[type='checkbox']:where(
+[data-task='*'], [data-task='a'],
+[data-task='f'], [data-task='S'],
+[data-task='-'], [data-task='>'],
+[data-task='<'], [data-task='l'],
+[data-task='B'], [data-task='X'],
+[data-task='n'], [data-task='p'],
+[data-task='c'], [data-task='w'],
+[data-task='b'], [data-task='I'],
+[data-task='!'], [data-task='?'],
+[data-task='i'], [data-task='/'],
+[data-task='u'], [data-task='d'],
+[data-task='F'], [data-task='r'],
+[data-task='m'], [data-task='M'],
+[data-task='L'], [data-task='t'],
+[data-task='T'], [data-task='P']):checked {
 	background-color: transparent;
 	border-width: 0;
 	pointer-events: none;
