@@ -53,8 +53,6 @@ body {
   --font-monospace-theme:
     Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
   --font-interface-theme: Inter,sans-serif;
-  --version: "You are currently using Sanctum for Obsidian v0.16 \a\aIt is highly recommended to install the Style Settings and Contextual Typography plugins.\aIf you run into any issues, try updating to the latest version of the theme. If the issue isn't resolved, you can file a report on github (link in the button above). \a\aSupport my work:\ako-fi.com/jdanielmourao \apaypal.me/jdanielmourao";
-  --version-empty-page: "Sanctum for Obsidian v0.16\a Designed with Intention 2021-2022 \a Font: IBM Plex Sans & Mono";
 }
 :root {
   --leading-0: 1em;
@@ -274,6 +272,38 @@ body {
   --lavender-90: hsl(273deg, 100%, 21%);
   --lavender-100: hsl(266deg, 100%, 15%);
   --lavender: var(--lavender-50);
+}
+.theme-light {
+  --shadow-color: 0deg 5% 59%;
+  --input-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.12),
+    0px 0.5px 0.4px hsl(var(--shadow-color) / 0.47),
+    0px 0.8px 0.7px -1px hsl(var(--shadow-color) / 0.4),
+    0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 0.32),
+    0px 4.5px 4px -3px hsl(var(--shadow-color) / 0.25),
+    0.1px 9.4px 8.4px -4.1px hsl(var(--shadow-color) / 0.18);
+  --input-shadow-hover:inset 0 0 0 1px rgba(0, 0, 0, 0.17),
+    0px 0.5px 0.5px hsl(var(--shadow-color) / 0.47),
+    0px 0.9px 0.8px -1px hsl(var(--shadow-color) / 0.4),
+    0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 0.33),
+    0px 4.5px 4.1px -3px hsl(var(--shadow-color) / 0.26),
+    0.1px 9.4px 8.5px -4px hsl(var(--shadow-color) / 0.19);
+}
+.theme-dark {
+  --shadow-color: 0deg 0% 1%;
+  --input-shadow:
+    inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
+    0px 0.5px 0.4px hsl(var(--shadow-color) / 0.47),
+    0px 0.8px 0.7px -1px hsl(var(--shadow-color) / 0.4),
+    0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 0.32),
+    0px 4.5px 4px -3px hsl(var(--shadow-color) / 0.25),
+    0.1px 9.4px 8.4px -4.1px hsl(var(--shadow-color) / 0.18);
+  --input-shadow-hover:inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
+    0px 0.5px 0.5px hsl(var(--shadow-color) / 0.47),
+    0px 0.9px 0.8px -1px hsl(var(--shadow-color) / 0.4),
+    0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 0.33),
+    0px 4.5px 4.1px -3px hsl(var(--shadow-color) / 0.26),
+    0.1px 9.4px 8.5px -4px hsl(var(--shadow-color) / 0.19);
 }
 body {
   --color-accent-rgb-l:
@@ -2190,38 +2220,6 @@ body {
   --input-height: 32px;
   --input-radius: 4px;
 }
-.theme-light {
-  --shadow-color: 0deg 5% 59%;
-  --input-shadow:
-    inset 0 0 0 1px rgba(0, 0, 0, 0.12),
-    0px 0.5px 0.4px hsl(var(--shadow-color) / 0.47),
-    0px 0.8px 0.7px -1px hsl(var(--shadow-color) / 0.4),
-    0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 0.32),
-    0px 4.5px 4px -3px hsl(var(--shadow-color) / 0.25),
-    0.1px 9.4px 8.4px -4.1px hsl(var(--shadow-color) / 0.18);
-  --input-shadow-hover:inset 0 0 0 1px rgba(0, 0, 0, 0.17),
-    0px 0.5px 0.5px hsl(var(--shadow-color) / 0.47),
-    0px 0.9px 0.8px -1px hsl(var(--shadow-color) / 0.4),
-    0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 0.33),
-    0px 4.5px 4.1px -3px hsl(var(--shadow-color) / 0.26),
-    0.1px 9.4px 8.5px -4px hsl(var(--shadow-color) / 0.19);
-}
-.theme-dark {
-  --shadow-color: 0deg 0% 1%;
-  --input-shadow:
-    inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
-    0px 0.5px 0.4px hsl(var(--shadow-color) / 0.47),
-    0px 0.8px 0.7px -1px hsl(var(--shadow-color) / 0.4),
-    0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 0.32),
-    0px 4.5px 4px -3px hsl(var(--shadow-color) / 0.25),
-    0.1px 9.4px 8.4px -4.1px hsl(var(--shadow-color) / 0.18);
-  --input-shadow-hover:inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
-    0px 0.5px 0.5px hsl(var(--shadow-color) / 0.47),
-    0px 0.9px 0.8px -1px hsl(var(--shadow-color) / 0.4),
-    0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 0.33),
-    0px 4.5px 4.1px -3px hsl(var(--shadow-color) / 0.26),
-    0.1px 9.4px 8.5px -4px hsl(var(--shadow-color) / 0.19);
-}
 button {
   padding: 0 16px;
   background-color: var(--layer-1);
@@ -3941,15 +3939,29 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .callout[data-callout=grid][data-callout-metadata="500"] .callout-content img {
   max-height: 500px;
 }
+.nord.theme-light p > code,
+.nord.theme-dark p > code,
 .nord.theme-light pre:not(pre.frontmatter),
 .nord.theme-dark pre:not(pre.frontmatter),
 .nord.theme-dark .HyperMD-codeblock,
 .nord.theme-light .HyperMD-codeblock {
   --code-background: #2E3440;
-  --code-normal: #f8f8f2;
+  --code-normal: #E5E9F0;
   --text-muted: #81A1C1;
   --text-faint: #81A1C1;
 }
+.nord.theme-light p > code .cm-comment,
+.nord.theme-light p > code .cm-meta,
+.nord.theme-light p > code .token.comment,
+.nord.theme-light p > code .token.prolog,
+.nord.theme-light p > code .token.doctype,
+.nord.theme-light p > code .token.cdata,
+.nord.theme-dark p > code .cm-comment,
+.nord.theme-dark p > code .cm-meta,
+.nord.theme-dark p > code .token.comment,
+.nord.theme-dark p > code .token.prolog,
+.nord.theme-dark p > code .token.doctype,
+.nord.theme-dark p > code .token.cdata,
 .nord.theme-light pre:not(pre.frontmatter) .cm-comment,
 .nord.theme-light pre:not(pre.frontmatter) .cm-meta,
 .nord.theme-light pre:not(pre.frontmatter) .token.comment,
@@ -3976,6 +3988,10 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .nord.theme-light .HyperMD-codeblock .token.cdata {
   color: #636f88;
 }
+.nord.theme-light p > code .cm-punctuation,
+.nord.theme-light p > code .token.punctuation,
+.nord.theme-dark p > code .cm-punctuation,
+.nord.theme-dark p > code .token.punctuation,
 .nord.theme-light pre:not(pre.frontmatter) .cm-punctuation,
 .nord.theme-light pre:not(pre.frontmatter) .token.punctuation,
 .nord.theme-dark pre:not(pre.frontmatter) .cm-punctuation,
@@ -3986,12 +4002,32 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .nord.theme-light .HyperMD-codeblock .token.punctuation {
   color: #81A1C1;
 }
+.nord.theme-light p > code .namespace,
+.nord.theme-dark p > code .namespace,
 .nord.theme-light pre:not(pre.frontmatter) .namespace,
 .nord.theme-dark pre:not(pre.frontmatter) .namespace,
 .nord.theme-dark .HyperMD-codeblock .namespace,
 .nord.theme-light .HyperMD-codeblock .namespace {
   opacity: var(--text-muted);
 }
+.nord.theme-light p > code .cm-bracket.cm-tag,
+.nord.theme-light p > code .cm-hr,
+.nord.theme-light p > code .cm-tag,
+.nord.theme-light p > code .cm-property,
+.nord.theme-light p > code .token.property,
+.nord.theme-light p > code .token.tag,
+.nord.theme-light p > code .token.constant,
+.nord.theme-light p > code .token.symbol,
+.nord.theme-light p > code .token.deleted,
+.nord.theme-dark p > code .cm-bracket.cm-tag,
+.nord.theme-dark p > code .cm-hr,
+.nord.theme-dark p > code .cm-tag,
+.nord.theme-dark p > code .cm-property,
+.nord.theme-dark p > code .token.property,
+.nord.theme-dark p > code .token.tag,
+.nord.theme-dark p > code .token.constant,
+.nord.theme-dark p > code .token.symbol,
+.nord.theme-dark p > code .token.deleted,
 .nord.theme-light pre:not(pre.frontmatter) .cm-bracket.cm-tag,
 .nord.theme-light pre:not(pre.frontmatter) .cm-hr,
 .nord.theme-light pre:not(pre.frontmatter) .cm-tag,
@@ -4030,6 +4066,10 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .nord.theme-light .HyperMD-codeblock .token.deleted {
   color: #81A1C1;
 }
+.nord.theme-light p > code .cm-number,
+.nord.theme-light p > code .token.number,
+.nord.theme-dark p > code .cm-number,
+.nord.theme-dark p > code .token.number,
 .nord.theme-light pre:not(pre.frontmatter) .cm-number,
 .nord.theme-light pre:not(pre.frontmatter) .token.number,
 .nord.theme-dark pre:not(pre.frontmatter) .cm-number,
@@ -4040,12 +4080,32 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .nord.theme-light .HyperMD-codeblock .token.number {
   color: #B48EAD;
 }
+.nord.theme-light p > code .token.boolean,
+.nord.theme-dark p > code .token.boolean,
 .nord.theme-light pre:not(pre.frontmatter) .token.boolean,
 .nord.theme-dark pre:not(pre.frontmatter) .token.boolean,
 .nord.theme-dark .HyperMD-codeblock .token.boolean,
 .nord.theme-light .HyperMD-codeblock .token.boolean {
   color: #81A1C1;
 }
+.nord.theme-light p > code .cm-builtin,
+.nord.theme-light p > code .cm-string-2,
+.nord.theme-light p > code .cm-qualifier,
+.nord.theme-light p > code .token.selector,
+.nord.theme-light p > code .token.attr-name,
+.nord.theme-light p > code .token.string,
+.nord.theme-light p > code .token.char,
+.nord.theme-light p > code .token.builtin,
+.nord.theme-light p > code .token.inserted,
+.nord.theme-dark p > code .cm-builtin,
+.nord.theme-dark p > code .cm-string-2,
+.nord.theme-dark p > code .cm-qualifier,
+.nord.theme-dark p > code .token.selector,
+.nord.theme-dark p > code .token.attr-name,
+.nord.theme-dark p > code .token.string,
+.nord.theme-dark p > code .token.char,
+.nord.theme-dark p > code .token.builtin,
+.nord.theme-dark p > code .token.inserted,
 .nord.theme-light pre:not(pre.frontmatter) .cm-builtin,
 .nord.theme-light pre:not(pre.frontmatter) .cm-string-2,
 .nord.theme-light pre:not(pre.frontmatter) .cm-qualifier,
@@ -4084,6 +4144,28 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .nord.theme-light .HyperMD-codeblock .token.inserted {
   color: #A3BE8C;
 }
+.nord.theme-light p > code .cm-variable,
+.nord.theme-light p > code .cm-variable-2,
+.nord.theme-light p > code .cm-variable-3,
+.nord.theme-light p > code .cm-operator,
+.nord.theme-light p > code .cm-link,
+.nord.theme-light p > code .token.operator,
+.nord.theme-light p > code .token.entity,
+.nord.theme-light p > code .token.url,
+.nord.theme-light p > code .language-css .token.string,
+.nord.theme-light p > code .style .token.string,
+.nord.theme-light p > code .token.variable,
+.nord.theme-dark p > code .cm-variable,
+.nord.theme-dark p > code .cm-variable-2,
+.nord.theme-dark p > code .cm-variable-3,
+.nord.theme-dark p > code .cm-operator,
+.nord.theme-dark p > code .cm-link,
+.nord.theme-dark p > code .token.operator,
+.nord.theme-dark p > code .token.entity,
+.nord.theme-dark p > code .token.url,
+.nord.theme-dark p > code .language-css .token.string,
+.nord.theme-dark p > code .style .token.string,
+.nord.theme-dark p > code .token.variable,
 .nord.theme-light pre:not(pre.frontmatter) .cm-variable,
 .nord.theme-light pre:not(pre.frontmatter) .cm-variable-2,
 .nord.theme-light pre:not(pre.frontmatter) .cm-variable-3,
@@ -4130,6 +4212,18 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .nord.theme-light .HyperMD-codeblock .token.variable {
   color: #81A1C1;
 }
+.nord.theme-light p > code .cm-string,
+.nord.theme-light p > code .cm-attribute,
+.nord.theme-light p > code .token.atrule,
+.nord.theme-light p > code .token.attr-value,
+.nord.theme-light p > code .token.function,
+.nord.theme-light p > code .token.class-name,
+.nord.theme-dark p > code .cm-string,
+.nord.theme-dark p > code .cm-attribute,
+.nord.theme-dark p > code .token.atrule,
+.nord.theme-dark p > code .token.attr-value,
+.nord.theme-dark p > code .token.function,
+.nord.theme-dark p > code .token.class-name,
 .nord.theme-light pre:not(pre.frontmatter) .cm-string,
 .nord.theme-light pre:not(pre.frontmatter) .cm-attribute,
 .nord.theme-light pre:not(pre.frontmatter) .token.atrule,
@@ -4156,6 +4250,10 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .nord.theme-light .HyperMD-codeblock .token.class-name {
   color: #88C0D0;
 }
+.nord.theme-light p > code .cm-keyword,
+.nord.theme-light p > code .token.keyword,
+.nord.theme-dark p > code .cm-keyword,
+.nord.theme-dark p > code .token.keyword,
 .nord.theme-light pre:not(pre.frontmatter) .cm-keyword,
 .nord.theme-light pre:not(pre.frontmatter) .token.keyword,
 .nord.theme-dark pre:not(pre.frontmatter) .cm-keyword,
@@ -4166,6 +4264,10 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .nord.theme-light .HyperMD-codeblock .token.keyword {
   color: #81A1C1;
 }
+.nord.theme-light p > code .token.regex,
+.nord.theme-light p > code .token.important,
+.nord.theme-dark p > code .token.regex,
+.nord.theme-dark p > code .token.important,
 .nord.theme-light pre:not(pre.frontmatter) .token.regex,
 .nord.theme-light pre:not(pre.frontmatter) .token.important,
 .nord.theme-dark pre:not(pre.frontmatter) .token.regex,
@@ -4176,6 +4278,10 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .nord.theme-light .HyperMD-codeblock .token.important {
   color: #EBCB8B;
 }
+.nord.theme-light p > code .token.important,
+.nord.theme-light p > code .token.bold,
+.nord.theme-dark p > code .token.important,
+.nord.theme-dark p > code .token.bold,
 .nord.theme-light pre:not(pre.frontmatter) .token.important,
 .nord.theme-light pre:not(pre.frontmatter) .token.bold,
 .nord.theme-dark pre:not(pre.frontmatter) .token.important,
@@ -4186,17 +4292,22 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .nord.theme-light .HyperMD-codeblock .token.bold {
   font-weight: bold;
 }
+.nord.theme-light p > code .token.italic,
+.nord.theme-dark p > code .token.italic,
 .nord.theme-light pre:not(pre.frontmatter) .token.italic,
 .nord.theme-dark pre:not(pre.frontmatter) .token.italic,
 .nord.theme-dark .HyperMD-codeblock .token.italic,
 .nord.theme-light .HyperMD-codeblock .token.italic {
   font-style: italic;
 }
+.nord.theme-light p > code,
 .nord.theme-light pre:not(pre.frontmatter),
 .nord.theme-light .HyperMD-codeblock {
   --code-background: #E5E9F0;
   --code-normal: #3B4252;
 }
+.dracula.theme-light p > code,
+.dracula.theme-dark p > code,
 .dracula.theme-light pre:not(.frontmatter),
 .dracula.theme-dark pre:not(.frontmatter),
 .dracula.theme-light .HyperMD-codeblock,
@@ -4206,6 +4317,22 @@ body:not(.no-sanctum-ions) svg.lucide-history {
   --text-muted: #f8f8f2;
   --text-faint: #6272a4;
 }
+.dracula.theme-light p > code .cm-string-2,
+.dracula.theme-light p > code .cm-atom,
+.dracula.theme-light p > code .cm-comment,
+.dracula.theme-light p > code .cm-meta,
+.dracula.theme-light p > code .token.comment,
+.dracula.theme-light p > code .token.prolog,
+.dracula.theme-light p > code .token.doctype,
+.dracula.theme-light p > code .token.cdata,
+.dracula.theme-dark p > code .cm-string-2,
+.dracula.theme-dark p > code .cm-atom,
+.dracula.theme-dark p > code .cm-comment,
+.dracula.theme-dark p > code .cm-meta,
+.dracula.theme-dark p > code .token.comment,
+.dracula.theme-dark p > code .token.prolog,
+.dracula.theme-dark p > code .token.doctype,
+.dracula.theme-dark p > code .token.cdata,
 .dracula.theme-light pre:not(.frontmatter) .cm-string-2,
 .dracula.theme-light pre:not(.frontmatter) .cm-atom,
 .dracula.theme-light pre:not(.frontmatter) .cm-comment,
@@ -4240,6 +4367,14 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .dracula.theme-dark .HyperMD-codeblock .token.cdata {
   color: #6272a4;
 }
+.dracula.theme-light p > code .cm-bracket.cm-tag,
+.dracula.theme-light p > code .cm-hr,
+.dracula.theme-light p > code .cm-punctuation,
+.dracula.theme-light p > code .token.punctuation,
+.dracula.theme-dark p > code .cm-bracket.cm-tag,
+.dracula.theme-dark p > code .cm-hr,
+.dracula.theme-dark p > code .cm-punctuation,
+.dracula.theme-dark p > code .token.punctuation,
 .dracula.theme-light pre:not(.frontmatter) .cm-bracket.cm-tag,
 .dracula.theme-light pre:not(.frontmatter) .cm-hr,
 .dracula.theme-light pre:not(.frontmatter) .cm-punctuation,
@@ -4258,6 +4393,10 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .dracula.theme-dark .HyperMD-codeblock .token.punctuation {
   color: #f8f8f2;
 }
+.dracula.theme-light p > code .cm-type,
+.dracula.theme-light p > code .namespace,
+.dracula.theme-dark p > code .cm-type,
+.dracula.theme-dark p > code .namespace,
 .dracula.theme-light pre:not(.frontmatter) .cm-type,
 .dracula.theme-light pre:not(.frontmatter) .namespace,
 .dracula.theme-dark pre:not(.frontmatter) .cm-type,
@@ -4268,6 +4407,24 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .dracula.theme-dark .HyperMD-codeblock .namespace {
   opacity: 0.7;
 }
+.dracula.theme-light p > code .cm-def,
+.dracula.theme-light p > code .cm-tag,
+.dracula.theme-light p > code .cm-property-access,
+.dracula.theme-light p > code .cm-property,
+.dracula.theme-light p > code .token.property,
+.dracula.theme-light p > code .token.tag,
+.dracula.theme-light p > code .token.constant,
+.dracula.theme-light p > code .token.symbol,
+.dracula.theme-light p > code .token.deleted,
+.dracula.theme-dark p > code .cm-def,
+.dracula.theme-dark p > code .cm-tag,
+.dracula.theme-dark p > code .cm-property-access,
+.dracula.theme-dark p > code .cm-property,
+.dracula.theme-dark p > code .token.property,
+.dracula.theme-dark p > code .token.tag,
+.dracula.theme-dark p > code .token.constant,
+.dracula.theme-dark p > code .token.symbol,
+.dracula.theme-dark p > code .token.deleted,
 .dracula.theme-light pre:not(.frontmatter) .cm-def,
 .dracula.theme-light pre:not(.frontmatter) .cm-tag,
 .dracula.theme-light pre:not(.frontmatter) .cm-property-access,
@@ -4306,6 +4463,14 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .dracula.theme-dark .HyperMD-codeblock .token.deleted {
   color: #ff79c6;
 }
+.dracula.theme-light p > code .cm-atom,
+.dracula.theme-light p > code .cm-number,
+.dracula.theme-light p > code .token.boolean,
+.dracula.theme-light p > code .token.number,
+.dracula.theme-dark p > code .cm-atom,
+.dracula.theme-dark p > code .cm-number,
+.dracula.theme-dark p > code .token.boolean,
+.dracula.theme-dark p > code .token.number,
 .dracula.theme-light pre:not(.frontmatter) .cm-atom,
 .dracula.theme-light pre:not(.frontmatter) .cm-number,
 .dracula.theme-light pre:not(.frontmatter) .token.boolean,
@@ -4324,6 +4489,24 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .dracula.theme-dark .HyperMD-codeblock .token.number {
   color: #bd93f9;
 }
+.dracula.theme-light p > code .cm-attribute,
+.dracula.theme-light p > code .cm-variable-2,
+.dracula.theme-light p > code .cm-variable-3,
+.dracula.theme-light p > code .token.selector,
+.dracula.theme-light p > code .token.attr-name,
+.dracula.theme-light p > code .token.string,
+.dracula.theme-light p > code .token.char,
+.dracula.theme-light p > code .token.builtin,
+.dracula.theme-light p > code .token.inserted,
+.dracula.theme-dark p > code .cm-attribute,
+.dracula.theme-dark p > code .cm-variable-2,
+.dracula.theme-dark p > code .cm-variable-3,
+.dracula.theme-dark p > code .token.selector,
+.dracula.theme-dark p > code .token.attr-name,
+.dracula.theme-dark p > code .token.string,
+.dracula.theme-dark p > code .token.char,
+.dracula.theme-dark p > code .token.builtin,
+.dracula.theme-dark p > code .token.inserted,
 .dracula.theme-light pre:not(.frontmatter) .cm-attribute,
 .dracula.theme-light pre:not(.frontmatter) .cm-variable-2,
 .dracula.theme-light pre:not(.frontmatter) .cm-variable-3,
@@ -4362,6 +4545,20 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .dracula.theme-dark .HyperMD-codeblock .token.inserted {
   color: #50fa7b;
 }
+.dracula.theme-light p > code .cm-operator,
+.dracula.theme-light p > code .token.operator,
+.dracula.theme-light p > code .token.entity,
+.dracula.theme-light p > code .token.url,
+.dracula.theme-light p > code .language-css .token.string,
+.dracula.theme-light p > code .style .token.string,
+.dracula.theme-light p > code .token.variable,
+.dracula.theme-dark p > code .cm-operator,
+.dracula.theme-dark p > code .token.operator,
+.dracula.theme-dark p > code .token.entity,
+.dracula.theme-dark p > code .token.url,
+.dracula.theme-dark p > code .language-css .token.string,
+.dracula.theme-dark p > code .style .token.string,
+.dracula.theme-dark p > code .token.variable,
 .dracula.theme-light pre:not(.frontmatter) .cm-operator,
 .dracula.theme-light pre:not(.frontmatter) .token.operator,
 .dracula.theme-light pre:not(.frontmatter) .token.entity,
@@ -4392,6 +4589,16 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .dracula.theme-dark .HyperMD-codeblock .token.variable {
   color: #f8f8f2;
 }
+.dracula.theme-light p > code .cm-string,
+.dracula.theme-light p > code .token.atrule,
+.dracula.theme-light p > code .token.attr-value,
+.dracula.theme-light p > code .token.function,
+.dracula.theme-light p > code .token.class-name,
+.dracula.theme-dark p > code .cm-string,
+.dracula.theme-dark p > code .token.atrule,
+.dracula.theme-dark p > code .token.attr-value,
+.dracula.theme-dark p > code .token.function,
+.dracula.theme-dark p > code .token.class-name,
 .dracula.theme-light pre:not(.frontmatter) .cm-string,
 .dracula.theme-light pre:not(.frontmatter) .token.atrule,
 .dracula.theme-light pre:not(.frontmatter) .token.attr-value,
@@ -4414,6 +4621,10 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .dracula.theme-dark .HyperMD-codeblock .token.class-name {
   color: #f1fa8c;
 }
+.dracula.theme-light p > code .cm-keyword,
+.dracula.theme-light p > code .token.keyword,
+.dracula.theme-dark p > code .cm-keyword,
+.dracula.theme-dark p > code .token.keyword,
 .dracula.theme-light pre:not(.frontmatter) .cm-keyword,
 .dracula.theme-light pre:not(.frontmatter) .token.keyword,
 .dracula.theme-dark pre:not(.frontmatter) .cm-keyword,
@@ -4424,6 +4635,12 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .dracula.theme-dark .HyperMD-codeblock .token.keyword {
   color: #8be9fd;
 }
+.dracula.theme-light p > code .cm-builtin,
+.dracula.theme-light p > code .token.regex,
+.dracula.theme-light p > code .token.important,
+.dracula.theme-dark p > code .cm-builtin,
+.dracula.theme-dark p > code .token.regex,
+.dracula.theme-dark p > code .token.important,
 .dracula.theme-light pre:not(.frontmatter) .cm-builtin,
 .dracula.theme-light pre:not(.frontmatter) .token.regex,
 .dracula.theme-light pre:not(.frontmatter) .token.important,
@@ -4438,6 +4655,10 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .dracula.theme-dark .HyperMD-codeblock .token.important {
   color: #ffb86c;
 }
+.dracula.theme-light p > code .token.important,
+.dracula.theme-light p > code .token.bold,
+.dracula.theme-dark p > code .token.important,
+.dracula.theme-dark p > code .token.bold,
 .dracula.theme-light pre:not(.frontmatter) .token.important,
 .dracula.theme-light pre:not(.frontmatter) .token.bold,
 .dracula.theme-dark pre:not(.frontmatter) .token.important,
@@ -4448,18 +4669,23 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .dracula.theme-dark .HyperMD-codeblock .token.bold {
   font-weight: bold;
 }
+.dracula.theme-light p > code .token.italic,
+.dracula.theme-dark p > code .token.italic,
 .dracula.theme-light pre:not(.frontmatter) .token.italic,
 .dracula.theme-dark pre:not(.frontmatter) .token.italic,
 .dracula.theme-light .HyperMD-codeblock .token.italic,
 .dracula.theme-dark .HyperMD-codeblock .token.italic {
   font-style: italic;
 }
+.dracula.theme-light p > code .token.entity,
+.dracula.theme-dark p > code .token.entity,
 .dracula.theme-light pre:not(.frontmatter) .token.entity,
 .dracula.theme-dark pre:not(.frontmatter) .token.entity,
 .dracula.theme-light .HyperMD-codeblock .token.entity,
 .dracula.theme-dark .HyperMD-codeblock .token.entity {
   cursor: help;
 }
+.one-dark.theme-light p > code,
 .one-dark.theme-light pre:not(.frontmatter),
 .one-dark.theme-light .HyperMD-codeblock {
   --code-background: hsl(230, 1%, 98%);
@@ -4467,6 +4693,12 @@ body:not(.no-sanctum-ions) svg.lucide-history {
   --text-muted:hsl(230, 8%, 24%);
   --text-faint:hsl(230, 4%, 64%);
 }
+.one-dark.theme-light p > code .cm-comment,
+.one-dark.theme-light p > code .cm-meta,
+.one-dark.theme-light p > code .cm-hr,
+.one-dark.theme-light p > code .token.comment,
+.one-dark.theme-light p > code .token.prolog,
+.one-dark.theme-light p > code .token.cdata,
 .one-dark.theme-light pre:not(.frontmatter) .cm-comment,
 .one-dark.theme-light pre:not(.frontmatter) .cm-meta,
 .one-dark.theme-light pre:not(.frontmatter) .cm-hr,
@@ -4481,6 +4713,12 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .one-dark.theme-light .HyperMD-codeblock .token.cdata {
   color: hsl(230deg, 4%, 64%);
 }
+.one-dark.theme-light p > code .cm-punctuation,
+.one-dark.theme-light p > code .cm-bracket.cm-tag,
+.one-dark.theme-light p > code .cm-type,
+.one-dark.theme-light p > code .token.doctype,
+.one-dark.theme-light p > code .token.punctuation,
+.one-dark.theme-light p > code .token.entity,
 .one-dark.theme-light pre:not(.frontmatter) .cm-punctuation,
 .one-dark.theme-light pre:not(.frontmatter) .cm-bracket.cm-tag,
 .one-dark.theme-light pre:not(.frontmatter) .cm-type,
@@ -4495,6 +4733,14 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .one-dark.theme-light .HyperMD-codeblock .token.entity {
   color: hsl(230deg, 8%, 24%);
 }
+.one-dark.theme-light p > code .cm-number,
+.one-dark.theme-light p > code .cm-attribute,
+.one-dark.theme-light p > code .token.attr-name,
+.one-dark.theme-light p > code .token.class-name,
+.one-dark.theme-light p > code .token.boolean,
+.one-dark.theme-light p > code .token.constant,
+.one-dark.theme-light p > code .token.number,
+.one-dark.theme-light p > code .token.atrule,
 .one-dark.theme-light pre:not(.frontmatter) .cm-number,
 .one-dark.theme-light pre:not(.frontmatter) .cm-attribute,
 .one-dark.theme-light pre:not(.frontmatter) .token.attr-name,
@@ -4513,6 +4759,9 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .one-dark.theme-light .HyperMD-codeblock .token.atrule {
   color: hsl(35deg, 99%, 36%);
 }
+.one-dark.theme-light p > code .cm-qualifier,
+.one-dark.theme-light p > code .cm-keyword,
+.one-dark.theme-light p > code .token.keyword,
 .one-dark.theme-light pre:not(.frontmatter) .cm-qualifier,
 .one-dark.theme-light pre:not(.frontmatter) .cm-keyword,
 .one-dark.theme-light pre:not(.frontmatter) .token.keyword,
@@ -4521,6 +4770,13 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .one-dark.theme-light .HyperMD-codeblock .token.keyword {
   color: hsl(301deg, 63%, 40%);
 }
+.one-dark.theme-light p > code .cm-tag,
+.one-dark.theme-light p > code .cm-property,
+.one-dark.theme-light p > code .token.property,
+.one-dark.theme-light p > code .token.tag,
+.one-dark.theme-light p > code .token.symbol,
+.one-dark.theme-light p > code .token.deleted,
+.one-dark.theme-light p > code .token.important,
 .one-dark.theme-light pre:not(.frontmatter) .cm-tag,
 .one-dark.theme-light pre:not(.frontmatter) .cm-property,
 .one-dark.theme-light pre:not(.frontmatter) .token.property,
@@ -4537,6 +4793,17 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .one-dark.theme-light .HyperMD-codeblock .token.important {
   color: hsl(5deg, 74%, 59%);
 }
+.one-dark.theme-light p > code .cm-builtin,
+.one-dark.theme-light p > code .cm-string,
+.one-dark.theme-light p > code .cm-string-2,
+.one-dark.theme-light p > code .token.selector,
+.one-dark.theme-light p > code .token.string,
+.one-dark.theme-light p > code .token.char,
+.one-dark.theme-light p > code .token.builtin,
+.one-dark.theme-light p > code .token.inserted,
+.one-dark.theme-light p > code .token.regex,
+.one-dark.theme-light p > code .token.attr-value,
+.one-dark.theme-light p > code .token.attr-value > .token.punctuation,
 .one-dark.theme-light pre:not(.frontmatter) .cm-builtin,
 .one-dark.theme-light pre:not(.frontmatter) .cm-string,
 .one-dark.theme-light pre:not(.frontmatter) .cm-string-2,
@@ -4561,6 +4828,13 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .one-dark.theme-light .HyperMD-codeblock .token.attr-value > .token.punctuation {
   color: hsl(119deg, 34%, 47%);
 }
+.one-dark.theme-light p > code .cm-operator,
+.one-dark.theme-light p > code .cm-variable,
+.one-dark.theme-light p > code .cm-variable-2,
+.one-dark.theme-light p > code .cm-variable-3,
+.one-dark.theme-light p > code .token.variable,
+.one-dark.theme-light p > code .token.operator,
+.one-dark.theme-light p > code .token.function,
 .one-dark.theme-light pre:not(.frontmatter) .cm-operator,
 .one-dark.theme-light pre:not(.frontmatter) .cm-variable,
 .one-dark.theme-light pre:not(.frontmatter) .cm-variable-2,
@@ -4577,58 +4851,76 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .one-dark.theme-light .HyperMD-codeblock .token.function {
   color: hsl(221deg, 87%, 60%);
 }
+.one-dark.theme-light p > code .cm-link,
+.one-dark.theme-light p > code .token.url,
 .one-dark.theme-light pre:not(.frontmatter) .cm-link,
 .one-dark.theme-light pre:not(.frontmatter) .token.url,
 .one-dark.theme-light .HyperMD-codeblock .cm-link,
 .one-dark.theme-light .HyperMD-codeblock .token.url {
   color: hsl(198deg, 99%, 37%);
 }
+.one-dark.theme-light p > code .token.attr-value > .token.punctuation.attr-equals,
+.one-dark.theme-light p > code .token.special-attr > .token.attr-value > .token.value.css,
 .one-dark.theme-light pre:not(.frontmatter) .token.attr-value > .token.punctuation.attr-equals,
 .one-dark.theme-light pre:not(.frontmatter) .token.special-attr > .token.attr-value > .token.value.css,
 .one-dark.theme-light .HyperMD-codeblock .token.attr-value > .token.punctuation.attr-equals,
 .one-dark.theme-light .HyperMD-codeblock .token.special-attr > .token.attr-value > .token.value.css {
   color: hsl(230deg, 8%, 24%);
 }
+.one-dark.theme-light p > code .language-css .token.selector,
 .one-dark.theme-light pre:not(.frontmatter) .language-css .token.selector,
 .one-dark.theme-light .HyperMD-codeblock .language-css .token.selector {
   color: hsl(5deg, 74%, 59%);
 }
+.one-dark.theme-light p > code .language-css .token.property,
 .one-dark.theme-light pre:not(.frontmatter) .language-css .token.property,
 .one-dark.theme-light .HyperMD-codeblock .language-css .token.property {
   color: hsl(230deg, 8%, 24%);
 }
+.one-dark.theme-light p > code .language-css .token.function,
+.one-dark.theme-light p > code .language-css .token.url > .token.function,
 .one-dark.theme-light pre:not(.frontmatter) .language-css .token.function,
 .one-dark.theme-light pre:not(.frontmatter) .language-css .token.url > .token.function,
 .one-dark.theme-light .HyperMD-codeblock .language-css .token.function,
 .one-dark.theme-light .HyperMD-codeblock .language-css .token.url > .token.function {
   color: hsl(198deg, 99%, 37%);
 }
+.one-dark.theme-light p > code .language-css .token.url > .token.string.url,
 .one-dark.theme-light pre:not(.frontmatter) .language-css .token.url > .token.string.url,
 .one-dark.theme-light .HyperMD-codeblock .language-css .token.url > .token.string.url {
   color: hsl(119deg, 34%, 47%);
 }
+.one-dark.theme-light p > code .language-css .token.important,
+.one-dark.theme-light p > code .language-css .token.atrule .token.rule,
 .one-dark.theme-light pre:not(.frontmatter) .language-css .token.important,
 .one-dark.theme-light pre:not(.frontmatter) .language-css .token.atrule .token.rule,
 .one-dark.theme-light .HyperMD-codeblock .language-css .token.important,
 .one-dark.theme-light .HyperMD-codeblock .language-css .token.atrule .token.rule {
   color: hsl(301deg, 63%, 40%);
 }
+.one-dark.theme-light p > code .language-javascript .token.operator,
 .one-dark.theme-light pre:not(.frontmatter) .language-javascript .token.operator,
 .one-dark.theme-light .HyperMD-codeblock .language-javascript .token.operator {
   color: hsl(301deg, 63%, 40%);
 }
+.one-dark.theme-light p > code .language-javascript .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation,
 .one-dark.theme-light pre:not(.frontmatter) .language-javascript .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation,
 .one-dark.theme-light .HyperMD-codeblock .language-javascript .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation {
   color: hsl(344deg, 84%, 43%);
 }
+.one-dark.theme-light p > code .language-json .token.operator,
 .one-dark.theme-light pre:not(.frontmatter) .language-json .token.operator,
 .one-dark.theme-light .HyperMD-codeblock .language-json .token.operator {
   color: hsl(230deg, 8%, 24%);
 }
+.one-dark.theme-light p > code .language-json .token.null.keyword,
 .one-dark.theme-light pre:not(.frontmatter) .language-json .token.null.keyword,
 .one-dark.theme-light .HyperMD-codeblock .language-json .token.null.keyword {
   color: hsl(35deg, 99%, 36%);
 }
+.one-dark.theme-light p > code .language-markdown .token.url,
+.one-dark.theme-light p > code .language-markdown .token.url > .token.operator,
+.one-dark.theme-light p > code .language-markdown .token.url-reference.url > .token.string,
 .one-dark.theme-light pre:not(.frontmatter) .language-markdown .token.url,
 .one-dark.theme-light pre:not(.frontmatter) .language-markdown .token.url > .token.operator,
 .one-dark.theme-light pre:not(.frontmatter) .language-markdown .token.url-reference.url > .token.string,
@@ -4637,16 +4929,21 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .one-dark.theme-light .HyperMD-codeblock .language-markdown .token.url-reference.url > .token.string {
   color: hsl(230deg, 8%, 24%);
 }
+.one-dark.theme-light p > code .language-markdown .token.url > .token.content,
 .one-dark.theme-light pre:not(.frontmatter) .language-markdown .token.url > .token.content,
 .one-dark.theme-light .HyperMD-codeblock .language-markdown .token.url > .token.content {
   color: hsl(221deg, 87%, 60%);
 }
+.one-dark.theme-light p > code .language-markdown .token.url > .token.url,
+.one-dark.theme-light p > code .language-markdown .token.url-reference.url,
 .one-dark.theme-light pre:not(.frontmatter) .language-markdown .token.url > .token.url,
 .one-dark.theme-light pre:not(.frontmatter) .language-markdown .token.url-reference.url,
 .one-dark.theme-light .HyperMD-codeblock .language-markdown .token.url > .token.url,
 .one-dark.theme-light .HyperMD-codeblock .language-markdown .token.url-reference.url {
   color: hsl(198deg, 99%, 37%);
 }
+.one-dark.theme-light p > code .language-markdown .token.blockquote.punctuation,
+.one-dark.theme-light p > code .language-markdown .token.hr.punctuation,
 .one-dark.theme-light pre:not(.frontmatter) .language-markdown .token.blockquote.punctuation,
 .one-dark.theme-light pre:not(.frontmatter) .language-markdown .token.hr.punctuation,
 .one-dark.theme-light .HyperMD-codeblock .language-markdown .token.blockquote.punctuation,
@@ -4654,18 +4951,25 @@ body:not(.no-sanctum-ions) svg.lucide-history {
   color: hsl(230deg, 4%, 64%);
   font-style: italic;
 }
+.one-dark.theme-light p > code .language-markdown .token.code-snippet,
 .one-dark.theme-light pre:not(.frontmatter) .language-markdown .token.code-snippet,
 .one-dark.theme-light .HyperMD-codeblock .language-markdown .token.code-snippet {
   color: hsl(119deg, 34%, 47%);
 }
+.one-dark.theme-light p > code .language-markdown .token.bold .token.content,
 .one-dark.theme-light pre:not(.frontmatter) .language-markdown .token.bold .token.content,
 .one-dark.theme-light .HyperMD-codeblock .language-markdown .token.bold .token.content {
   color: hsl(35deg, 99%, 36%);
 }
+.one-dark.theme-light p > code .language-markdown .token.italic .token.content,
 .one-dark.theme-light pre:not(.frontmatter) .language-markdown .token.italic .token.content,
 .one-dark.theme-light .HyperMD-codeblock .language-markdown .token.italic .token.content {
   color: hsl(301deg, 63%, 40%);
 }
+.one-dark.theme-light p > code .language-markdown .token.strike .token.content,
+.one-dark.theme-light p > code .language-markdown .token.strike .token.punctuation,
+.one-dark.theme-light p > code .language-markdown .token.list.punctuation,
+.one-dark.theme-light p > code .language-markdown .token.title.important > .token.punctuation,
 .one-dark.theme-light pre:not(.frontmatter) .language-markdown .token.strike .token.content,
 .one-dark.theme-light pre:not(.frontmatter) .language-markdown .token.strike .token.punctuation,
 .one-dark.theme-light pre:not(.frontmatter) .language-markdown .token.list.punctuation,
@@ -4676,24 +4980,30 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .one-dark.theme-light .HyperMD-codeblock .language-markdown .token.title.important > .token.punctuation {
   color: hsl(5deg, 74%, 59%);
 }
+.one-dark.theme-light p > code .token.bold,
 .one-dark.theme-light pre:not(.frontmatter) .token.bold,
 .one-dark.theme-light .HyperMD-codeblock .token.bold {
   font-weight: bold;
 }
+.one-dark.theme-light p > code .token.comment,
+.one-dark.theme-light p > code .token.italic,
 .one-dark.theme-light pre:not(.frontmatter) .token.comment,
 .one-dark.theme-light pre:not(.frontmatter) .token.italic,
 .one-dark.theme-light .HyperMD-codeblock .token.comment,
 .one-dark.theme-light .HyperMD-codeblock .token.italic {
   font-style: italic;
 }
+.one-dark.theme-light p > code .token.entity,
 .one-dark.theme-light pre:not(.frontmatter) .token.entity,
 .one-dark.theme-light .HyperMD-codeblock .token.entity {
   cursor: help;
 }
+.one-dark.theme-light p > code .token.namespace,
 .one-dark.theme-light pre:not(.frontmatter) .token.namespace,
 .one-dark.theme-light .HyperMD-codeblock .token.namespace {
   opacity: 0.8;
 }
+.one-dark.theme-dark p > code,
 .one-dark.theme-dark pre:not(.frontmatter),
 .one-dark.theme-dark .HyperMD-codeblock {
   --code-background: hsl(220, 13%, 18%);
@@ -4701,6 +5011,12 @@ body:not(.no-sanctum-ions) svg.lucide-history {
   --text-muted:hsl(220, 14%, 71%);
   --text-faint:hsl(220, 10%, 40%);
 }
+.one-dark.theme-dark p > code .cm-hr,
+.one-dark.theme-dark p > code .cm-comment,
+.one-dark.theme-dark p > code .cm-meta,
+.one-dark.theme-dark p > code .token.comment,
+.one-dark.theme-dark p > code .token.prolog,
+.one-dark.theme-dark p > code .token.cdata,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-hr,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-comment,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-meta,
@@ -4715,6 +5031,12 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .one-dark.theme-dark .HyperMD-codeblock .token.cdata {
   color: hsl(220deg, 10%, 40%);
 }
+.one-dark.theme-dark p > code .cm-bracket.cm-tag,
+.one-dark.theme-dark p > code .cm-punctuation,
+.one-dark.theme-dark p > code .cm-type,
+.one-dark.theme-dark p > code .token.doctype,
+.one-dark.theme-dark p > code .token.punctuation,
+.one-dark.theme-dark p > code .token.entity,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-bracket.cm-tag,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-punctuation,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-type,
@@ -4729,6 +5051,14 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .one-dark.theme-dark .HyperMD-codeblock .token.entity {
   color: hsl(220deg, 14%, 71%);
 }
+.one-dark.theme-dark p > code .cm-number,
+.one-dark.theme-dark p > code .cm-attribute,
+.one-dark.theme-dark p > code .token.attr-name,
+.one-dark.theme-dark p > code .token.class-name,
+.one-dark.theme-dark p > code .token.boolean,
+.one-dark.theme-dark p > code .token.constant,
+.one-dark.theme-dark p > code .token.number,
+.one-dark.theme-dark p > code .token.atrule,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-number,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-attribute,
 .one-dark.theme-dark pre:not(.frontmatter) .token.attr-name,
@@ -4747,12 +5077,22 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .one-dark.theme-dark .HyperMD-codeblock .token.atrule {
   color: hsl(29deg, 54%, 61%);
 }
+.one-dark.theme-dark p > code .cm-keyword,
+.one-dark.theme-dark p > code .token.keyword,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-keyword,
 .one-dark.theme-dark pre:not(.frontmatter) .token.keyword,
 .one-dark.theme-dark .HyperMD-codeblock .cm-keyword,
 .one-dark.theme-dark .HyperMD-codeblock .token.keyword {
   color: hsl(286deg, 60%, 67%);
 }
+.one-dark.theme-dark p > code .cm-qualifier,
+.one-dark.theme-dark p > code .cm-tag,
+.one-dark.theme-dark p > code .cm-property,
+.one-dark.theme-dark p > code .token.property,
+.one-dark.theme-dark p > code .token.tag,
+.one-dark.theme-dark p > code .token.symbol,
+.one-dark.theme-dark p > code .token.deleted,
+.one-dark.theme-dark p > code .token.important,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-qualifier,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-tag,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-property,
@@ -4771,6 +5111,17 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .one-dark.theme-dark .HyperMD-codeblock .token.important {
   color: hsl(355deg, 65%, 65%);
 }
+.one-dark.theme-dark p > code .cm-string,
+.one-dark.theme-dark p > code .cm-string-2,
+.one-dark.theme-dark p > code .cm-builtin,
+.one-dark.theme-dark p > code .token.selector,
+.one-dark.theme-dark p > code .token.string,
+.one-dark.theme-dark p > code .token.char,
+.one-dark.theme-dark p > code .token.builtin,
+.one-dark.theme-dark p > code .token.inserted,
+.one-dark.theme-dark p > code .token.regex,
+.one-dark.theme-dark p > code .token.attr-value,
+.one-dark.theme-dark p > code .token.attr-value > .token.punctuation,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-string,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-string-2,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-builtin,
@@ -4795,6 +5146,13 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .one-dark.theme-dark .HyperMD-codeblock .token.attr-value > .token.punctuation {
   color: hsl(95deg, 38%, 62%);
 }
+.one-dark.theme-dark p > code .cm-variable,
+.one-dark.theme-dark p > code .cm-variable-2,
+.one-dark.theme-dark p > code .cm-variable-3,
+.one-dark.theme-dark p > code .cm-operator,
+.one-dark.theme-dark p > code .token.variable,
+.one-dark.theme-dark p > code .token.operator,
+.one-dark.theme-dark p > code .token.function,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-variable,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-variable-2,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-variable-3,
@@ -4811,58 +5169,76 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .one-dark.theme-dark .HyperMD-codeblock .token.function {
   color: hsl(207deg, 82%, 66%);
 }
+.one-dark.theme-dark p > code .cm-link,
+.one-dark.theme-dark p > code .token.url,
 .one-dark.theme-dark pre:not(.frontmatter) .cm-link,
 .one-dark.theme-dark pre:not(.frontmatter) .token.url,
 .one-dark.theme-dark .HyperMD-codeblock .cm-link,
 .one-dark.theme-dark .HyperMD-codeblock .token.url {
   color: hsl(187deg, 47%, 55%);
 }
+.one-dark.theme-dark p > code .token.attr-value > .token.punctuation.attr-equals,
+.one-dark.theme-dark p > code .token.special-attr > .token.attr-value > .token.value.css,
 .one-dark.theme-dark pre:not(.frontmatter) .token.attr-value > .token.punctuation.attr-equals,
 .one-dark.theme-dark pre:not(.frontmatter) .token.special-attr > .token.attr-value > .token.value.css,
 .one-dark.theme-dark .HyperMD-codeblock .token.attr-value > .token.punctuation.attr-equals,
 .one-dark.theme-dark .HyperMD-codeblock .token.special-attr > .token.attr-value > .token.value.css {
   color: hsl(220deg, 14%, 71%);
 }
+.one-dark.theme-dark p > code .language-css .token.selector,
 .one-dark.theme-dark pre:not(.frontmatter) .language-css .token.selector,
 .one-dark.theme-dark .HyperMD-codeblock .language-css .token.selector {
   color: hsl(355deg, 65%, 65%);
 }
+.one-dark.theme-dark p > code .language-css .token.property,
 .one-dark.theme-dark pre:not(.frontmatter) .language-css .token.property,
 .one-dark.theme-dark .HyperMD-codeblock .language-css .token.property {
   color: hsl(220deg, 14%, 71%);
 }
+.one-dark.theme-dark p > code .language-css .token.function,
+.one-dark.theme-dark p > code .language-css .token.url > .token.function,
 .one-dark.theme-dark pre:not(.frontmatter) .language-css .token.function,
 .one-dark.theme-dark pre:not(.frontmatter) .language-css .token.url > .token.function,
 .one-dark.theme-dark .HyperMD-codeblock .language-css .token.function,
 .one-dark.theme-dark .HyperMD-codeblock .language-css .token.url > .token.function {
   color: hsl(187deg, 47%, 55%);
 }
+.one-dark.theme-dark p > code .language-css .token.url > .token.string.url,
 .one-dark.theme-dark pre:not(.frontmatter) .language-css .token.url > .token.string.url,
 .one-dark.theme-dark .HyperMD-codeblock .language-css .token.url > .token.string.url {
   color: hsl(95deg, 38%, 62%);
 }
+.one-dark.theme-dark p > code .language-css .token.important,
+.one-dark.theme-dark p > code .language-css .token.atrule .token.rule,
 .one-dark.theme-dark pre:not(.frontmatter) .language-css .token.important,
 .one-dark.theme-dark pre:not(.frontmatter) .language-css .token.atrule .token.rule,
 .one-dark.theme-dark .HyperMD-codeblock .language-css .token.important,
 .one-dark.theme-dark .HyperMD-codeblock .language-css .token.atrule .token.rule {
   color: hsl(286deg, 60%, 67%);
 }
+.one-dark.theme-dark p > code .language-javascript .token.operator,
 .one-dark.theme-dark pre:not(.frontmatter) .language-javascript .token.operator,
 .one-dark.theme-dark .HyperMD-codeblock .language-javascript .token.operator {
   color: hsl(286deg, 60%, 67%);
 }
+.one-dark.theme-dark p > code .language-javascript .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation,
 .one-dark.theme-dark pre:not(.frontmatter) .language-javascript .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation,
 .one-dark.theme-dark .HyperMD-codeblock .language-javascript .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation {
   color: hsl(5deg, 48%, 51%);
 }
+.one-dark.theme-dark p > code .language-json .token.operator,
 .one-dark.theme-dark pre:not(.frontmatter) .language-json .token.operator,
 .one-dark.theme-dark .HyperMD-codeblock .language-json .token.operator {
   color: hsl(220deg, 14%, 71%);
 }
+.one-dark.theme-dark p > code .language-json .token.null.keyword,
 .one-dark.theme-dark pre:not(.frontmatter) .language-json .token.null.keyword,
 .one-dark.theme-dark .HyperMD-codeblock .language-json .token.null.keyword {
   color: hsl(29deg, 54%, 61%);
 }
+.one-dark.theme-dark p > code .language-markdown .token.url,
+.one-dark.theme-dark p > code .language-markdown .token.url > .token.operator,
+.one-dark.theme-dark p > code .language-markdown .token.url-reference.url > .token.string,
 .one-dark.theme-dark pre:not(.frontmatter) .language-markdown .token.url,
 .one-dark.theme-dark pre:not(.frontmatter) .language-markdown .token.url > .token.operator,
 .one-dark.theme-dark pre:not(.frontmatter) .language-markdown .token.url-reference.url > .token.string,
@@ -4871,16 +5247,21 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .one-dark.theme-dark .HyperMD-codeblock .language-markdown .token.url-reference.url > .token.string {
   color: hsl(220deg, 14%, 71%);
 }
+.one-dark.theme-dark p > code .language-markdown .token.url > .token.content,
 .one-dark.theme-dark pre:not(.frontmatter) .language-markdown .token.url > .token.content,
 .one-dark.theme-dark .HyperMD-codeblock .language-markdown .token.url > .token.content {
   color: hsl(207deg, 82%, 66%);
 }
+.one-dark.theme-dark p > code .language-markdown .token.url > .token.url,
+.one-dark.theme-dark p > code .language-markdown .token.url-reference.url,
 .one-dark.theme-dark pre:not(.frontmatter) .language-markdown .token.url > .token.url,
 .one-dark.theme-dark pre:not(.frontmatter) .language-markdown .token.url-reference.url,
 .one-dark.theme-dark .HyperMD-codeblock .language-markdown .token.url > .token.url,
 .one-dark.theme-dark .HyperMD-codeblock .language-markdown .token.url-reference.url {
   color: hsl(187deg, 47%, 55%);
 }
+.one-dark.theme-dark p > code .language-markdown .token.blockquote.punctuation,
+.one-dark.theme-dark p > code .language-markdown .token.hr.punctuation,
 .one-dark.theme-dark pre:not(.frontmatter) .language-markdown .token.blockquote.punctuation,
 .one-dark.theme-dark pre:not(.frontmatter) .language-markdown .token.hr.punctuation,
 .one-dark.theme-dark .HyperMD-codeblock .language-markdown .token.blockquote.punctuation,
@@ -4888,18 +5269,25 @@ body:not(.no-sanctum-ions) svg.lucide-history {
   color: hsl(220deg, 10%, 40%);
   font-style: italic;
 }
+.one-dark.theme-dark p > code .language-markdown .token.code-snippet,
 .one-dark.theme-dark pre:not(.frontmatter) .language-markdown .token.code-snippet,
 .one-dark.theme-dark .HyperMD-codeblock .language-markdown .token.code-snippet {
   color: hsl(95deg, 38%, 62%);
 }
+.one-dark.theme-dark p > code .language-markdown .token.bold .token.content,
 .one-dark.theme-dark pre:not(.frontmatter) .language-markdown .token.bold .token.content,
 .one-dark.theme-dark .HyperMD-codeblock .language-markdown .token.bold .token.content {
   color: hsl(29deg, 54%, 61%);
 }
+.one-dark.theme-dark p > code .language-markdown .token.italic .token.content,
 .one-dark.theme-dark pre:not(.frontmatter) .language-markdown .token.italic .token.content,
 .one-dark.theme-dark .HyperMD-codeblock .language-markdown .token.italic .token.content {
   color: hsl(286deg, 60%, 67%);
 }
+.one-dark.theme-dark p > code .language-markdown .token.strike .token.content,
+.one-dark.theme-dark p > code .language-markdown .token.strike .token.punctuation,
+.one-dark.theme-dark p > code .language-markdown .token.list.punctuation,
+.one-dark.theme-dark p > code .language-markdown .token.title.important > .token.punctuation,
 .one-dark.theme-dark pre:not(.frontmatter) .language-markdown .token.strike .token.content,
 .one-dark.theme-dark pre:not(.frontmatter) .language-markdown .token.strike .token.punctuation,
 .one-dark.theme-dark pre:not(.frontmatter) .language-markdown .token.list.punctuation,
@@ -4910,24 +5298,30 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .one-dark.theme-dark .HyperMD-codeblock .language-markdown .token.title.important > .token.punctuation {
   color: hsl(355deg, 65%, 65%);
 }
+.one-dark.theme-dark p > code .token.bold,
 .one-dark.theme-dark pre:not(.frontmatter) .token.bold,
 .one-dark.theme-dark .HyperMD-codeblock .token.bold {
   font-weight: bold;
 }
+.one-dark.theme-dark p > code .token.comment,
+.one-dark.theme-dark p > code .token.italic,
 .one-dark.theme-dark pre:not(.frontmatter) .token.comment,
 .one-dark.theme-dark pre:not(.frontmatter) .token.italic,
 .one-dark.theme-dark .HyperMD-codeblock .token.comment,
 .one-dark.theme-dark .HyperMD-codeblock .token.italic {
   font-style: italic;
 }
+.one-dark.theme-dark p > code .token.entity,
 .one-dark.theme-dark pre:not(.frontmatter) .token.entity,
 .one-dark.theme-dark .HyperMD-codeblock .token.entity {
   cursor: help;
 }
+.one-dark.theme-dark p > code .token.namespace,
 .one-dark.theme-dark pre:not(.frontmatter) .token.namespace,
 .one-dark.theme-dark .HyperMD-codeblock .token.namespace {
   opacity: 0.8;
 }
+.solarized.theme-light p > code,
 .solarized.theme-light pre:not(.frontmatter),
 .solarized.theme-light .HyperMD-codeblock {
   --code-background: #eee8d5;
@@ -4935,6 +5329,14 @@ body:not(.no-sanctum-ions) svg.lucide-history {
   --text-muted: #586e75;
   --text-faint: #93a1a1;
 }
+.solarized.theme-light p > code .cm-hr,
+.solarized.theme-light p > code .cm-comment,
+.solarized.theme-light p > code .cm-meta,
+.solarized.theme-light p > code .cm-type,
+.solarized.theme-light p > code .token.comment,
+.solarized.theme-light p > code .token.prolog,
+.solarized.theme-light p > code .token.doctype,
+.solarized.theme-light p > code .token.cdata,
 .solarized.theme-light pre:not(.frontmatter) .cm-hr,
 .solarized.theme-light pre:not(.frontmatter) .cm-comment,
 .solarized.theme-light pre:not(.frontmatter) .cm-meta,
@@ -4953,6 +5355,10 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .solarized.theme-light .HyperMD-codeblock .token.cdata {
   color: #93a1a1;
 }
+.solarized.theme-light p > code .cm-operator,
+.solarized.theme-light p > code .cm-punctuation,
+.solarized.theme-light p > code .cm-bracket.cm-tag,
+.solarized.theme-light p > code .token.punctuation,
 .solarized.theme-light pre:not(.frontmatter) .cm-operator,
 .solarized.theme-light pre:not(.frontmatter) .cm-punctuation,
 .solarized.theme-light pre:not(.frontmatter) .cm-bracket.cm-tag,
@@ -4963,10 +5369,21 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .solarized.theme-light .HyperMD-codeblock .token.punctuation {
   color: #586e75;
 }
+.solarized.theme-light p > code .token.namespace,
 .solarized.theme-light pre:not(.frontmatter) .token.namespace,
 .solarized.theme-light .HyperMD-codeblock .token.namespace {
   opacity: 0.7;
 }
+.solarized.theme-light p > code .cm-number,
+.solarized.theme-light p > code .cm-tag,
+.solarized.theme-light p > code .cm-property,
+.solarized.theme-light p > code .token.property,
+.solarized.theme-light p > code .token.tag,
+.solarized.theme-light p > code .token.boolean,
+.solarized.theme-light p > code .token.number,
+.solarized.theme-light p > code .token.constant,
+.solarized.theme-light p > code .token.symbol,
+.solarized.theme-light p > code .token.deleted,
 .solarized.theme-light pre:not(.frontmatter) .cm-number,
 .solarized.theme-light pre:not(.frontmatter) .cm-tag,
 .solarized.theme-light pre:not(.frontmatter) .cm-property,
@@ -4989,6 +5406,17 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .solarized.theme-light .HyperMD-codeblock .token.deleted {
   color: #268bd2;
 }
+.solarized.theme-light p > code .cm-string-2,
+.solarized.theme-light p > code .cm-link,
+.solarized.theme-light p > code .cm-builtin,
+.solarized.theme-light p > code .cm-attribute,
+.solarized.theme-light p > code .token.selector,
+.solarized.theme-light p > code .token.attr-name,
+.solarized.theme-light p > code .token.string,
+.solarized.theme-light p > code .token.char,
+.solarized.theme-light p > code .token.builtin,
+.solarized.theme-light p > code .token.url,
+.solarized.theme-light p > code .token.inserted,
 .solarized.theme-light pre:not(.frontmatter) .cm-string-2,
 .solarized.theme-light pre:not(.frontmatter) .cm-link,
 .solarized.theme-light pre:not(.frontmatter) .cm-builtin,
@@ -5013,11 +5441,17 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .solarized.theme-light .HyperMD-codeblock .token.inserted {
   color: #2aa198;
 }
+.solarized.theme-light p > code .token.entity,
 .solarized.theme-light pre:not(.frontmatter) .token.entity,
 .solarized.theme-light .HyperMD-codeblock .token.entity {
   color: #657b83;
   background: #eee8d5;
 }
+.solarized.theme-light p > code .cm-string,
+.solarized.theme-light p > code .cm-keyword,
+.solarized.theme-light p > code .token.atrule,
+.solarized.theme-light p > code .token.attr-value,
+.solarized.theme-light p > code .token.keyword,
 .solarized.theme-light pre:not(.frontmatter) .cm-string,
 .solarized.theme-light pre:not(.frontmatter) .cm-keyword,
 .solarized.theme-light pre:not(.frontmatter) .token.atrule,
@@ -5030,6 +5464,9 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .solarized.theme-light .HyperMD-codeblock .token.keyword {
   color: #859900;
 }
+.solarized.theme-light p > code .cm-qualifier,
+.solarized.theme-light p > code .token.function,
+.solarized.theme-light p > code .token.class-name,
 .solarized.theme-light pre:not(.frontmatter) .cm-qualifier,
 .solarized.theme-light pre:not(.frontmatter) .token.function,
 .solarized.theme-light pre:not(.frontmatter) .token.class-name,
@@ -5038,6 +5475,12 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .solarized.theme-light .HyperMD-codeblock .token.class-name {
   color: #b58900;
 }
+.solarized.theme-light p > code .cm-variable,
+.solarized.theme-light p > code .cm-variable-2,
+.solarized.theme-light p > code .cm-variable-3,
+.solarized.theme-light p > code .token.regex,
+.solarized.theme-light p > code .token.important,
+.solarized.theme-light p > code .token.variable,
 .solarized.theme-light pre:not(.frontmatter) .cm-variable,
 .solarized.theme-light pre:not(.frontmatter) .cm-variable-2,
 .solarized.theme-light pre:not(.frontmatter) .cm-variable-3,
@@ -5052,16 +5495,20 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .solarized.theme-light .HyperMD-codeblock .token.variable {
   color: #cb4b16;
 }
+.solarized.theme-light p > code .token.important,
+.solarized.theme-light p > code .token.bold,
 .solarized.theme-light pre:not(.frontmatter) .token.important,
 .solarized.theme-light pre:not(.frontmatter) .token.bold,
 .solarized.theme-light .HyperMD-codeblock .token.important,
 .solarized.theme-light .HyperMD-codeblock .token.bold {
   font-weight: bold;
 }
+.solarized.theme-light p > code .token.italic,
 .solarized.theme-light pre:not(.frontmatter) .token.italic,
 .solarized.theme-light .HyperMD-codeblock .token.italic {
   font-style: italic;
 }
+.solarized.theme-dark p > code,
 .solarized.theme-dark pre:not(.frontmatter),
 .solarized.theme-dark .HyperMD-codeblock {
   --code-background: #002b36;
@@ -5069,6 +5516,14 @@ body:not(.no-sanctum-ions) svg.lucide-history {
   --text-muted:#93a1a1;
   --text-faint:#586e75;
 }
+.solarized.theme-dark p > code .cm-hr,
+.solarized.theme-dark p > code .cm-comment,
+.solarized.theme-dark p > code .cm-meta,
+.solarized.theme-dark p > code .cm-type,
+.solarized.theme-dark p > code .token.comment,
+.solarized.theme-dark p > code .token.prolog,
+.solarized.theme-dark p > code .token.doctype,
+.solarized.theme-dark p > code .token.cdata,
 .solarized.theme-dark pre:not(.frontmatter) .cm-hr,
 .solarized.theme-dark pre:not(.frontmatter) .cm-comment,
 .solarized.theme-dark pre:not(.frontmatter) .cm-meta,
@@ -5087,6 +5542,10 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .solarized.theme-dark .HyperMD-codeblock .token.cdata {
   color: #586e75;
 }
+.solarized.theme-dark p > code .cm-operator,
+.solarized.theme-dark p > code .cm-punctuation,
+.solarized.theme-dark p > code .cm-bracket.cm-tag,
+.solarized.theme-dark p > code .token.punctuation,
 .solarized.theme-dark pre:not(.frontmatter) .cm-operator,
 .solarized.theme-dark pre:not(.frontmatter) .cm-punctuation,
 .solarized.theme-dark pre:not(.frontmatter) .cm-bracket.cm-tag,
@@ -5097,10 +5556,17 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .solarized.theme-dark .HyperMD-codeblock .token.punctuation {
   color: #93a1a1;
 }
+.solarized.theme-dark p > code .namespace,
 .solarized.theme-dark pre:not(.frontmatter) .namespace,
 .solarized.theme-dark .HyperMD-codeblock .namespace {
   opacity: 0.7;
 }
+.solarized.theme-dark p > code .cm-keyword,
+.solarized.theme-dark p > code .cm-tag,
+.solarized.theme-dark p > code .cm-property,
+.solarized.theme-dark p > code .token.property,
+.solarized.theme-dark p > code .token.keyword,
+.solarized.theme-dark p > code .token.tag,
 .solarized.theme-dark pre:not(.frontmatter) .cm-keyword,
 .solarized.theme-dark pre:not(.frontmatter) .cm-tag,
 .solarized.theme-dark pre:not(.frontmatter) .cm-property,
@@ -5115,29 +5581,46 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .solarized.theme-dark .HyperMD-codeblock .token.tag {
   color: #268bd2;
 }
+.solarized.theme-dark p > code .token.class-name,
 .solarized.theme-dark pre:not(.frontmatter) .token.class-name,
 .solarized.theme-dark .HyperMD-codeblock .token.class-name {
   color: #FFFFB6;
   text-decoration: underline;
 }
+.solarized.theme-dark p > code .token.boolean,
+.solarized.theme-dark p > code .token.constant,
 .solarized.theme-dark pre:not(.frontmatter) .token.boolean,
 .solarized.theme-dark pre:not(.frontmatter) .token.constant,
 .solarized.theme-dark .HyperMD-codeblock .token.boolean,
 .solarized.theme-dark .HyperMD-codeblock .token.constant {
   color: #b58900;
 }
+.solarized.theme-dark p > code .token.symbol,
+.solarized.theme-dark p > code .token.deleted,
 .solarized.theme-dark pre:not(.frontmatter) .token.symbol,
 .solarized.theme-dark pre:not(.frontmatter) .token.deleted,
 .solarized.theme-dark .HyperMD-codeblock .token.symbol,
 .solarized.theme-dark .HyperMD-codeblock .token.deleted {
   color: #dc322f;
 }
+.solarized.theme-dark p > code .cm-number,
+.solarized.theme-dark p > code .token.number,
 .solarized.theme-dark pre:not(.frontmatter) .cm-number,
 .solarized.theme-dark pre:not(.frontmatter) .token.number,
 .solarized.theme-dark .HyperMD-codeblock .cm-number,
 .solarized.theme-dark .HyperMD-codeblock .token.number {
   color: #859900;
 }
+.solarized.theme-dark p > code .cm-string-2,
+.solarized.theme-dark p > code .cm-link,
+.solarized.theme-dark p > code .cm-builtin,
+.solarized.theme-dark p > code .cm-attribute,
+.solarized.theme-dark p > code .token.selector,
+.solarized.theme-dark p > code .token.attr-name,
+.solarized.theme-dark p > code .token.string,
+.solarized.theme-dark p > code .token.char,
+.solarized.theme-dark p > code .token.builtin,
+.solarized.theme-dark p > code .token.inserted,
 .solarized.theme-dark pre:not(.frontmatter) .cm-string-2,
 .solarized.theme-dark pre:not(.frontmatter) .cm-link,
 .solarized.theme-dark pre:not(.frontmatter) .cm-builtin,
@@ -5160,6 +5643,10 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .solarized.theme-dark .HyperMD-codeblock .token.inserted {
   color: #859900;
 }
+.solarized.theme-dark p > code .cm-variable,
+.solarized.theme-dark p > code .cm-variable-2,
+.solarized.theme-dark p > code .cm-variable-3,
+.solarized.theme-dark p > code .token.variable,
 .solarized.theme-dark pre:not(.frontmatter) .cm-variable,
 .solarized.theme-dark pre:not(.frontmatter) .cm-variable-2,
 .solarized.theme-dark pre:not(.frontmatter) .cm-variable-3,
@@ -5170,51 +5657,67 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .solarized.theme-dark .HyperMD-codeblock .token.variable {
   color: #268bd2;
 }
+.solarized.theme-dark p > code .cm-operator,
+.solarized.theme-dark p > code .token.operator,
 .solarized.theme-dark pre:not(.frontmatter) .cm-operator,
 .solarized.theme-dark pre:not(.frontmatter) .token.operator,
 .solarized.theme-dark .HyperMD-codeblock .cm-operator,
 .solarized.theme-dark .HyperMD-codeblock .token.operator {
   color: #EDEDED;
 }
+.solarized.theme-dark p > code .cm-qualifier,
+.solarized.theme-dark p > code .token.function,
 .solarized.theme-dark pre:not(.frontmatter) .cm-qualifier,
 .solarized.theme-dark pre:not(.frontmatter) .token.function,
 .solarized.theme-dark .HyperMD-codeblock .cm-qualifier,
 .solarized.theme-dark .HyperMD-codeblock .token.function {
   color: #268bd2;
 }
+.solarized.theme-dark p > code .token.regex,
 .solarized.theme-dark pre:not(.frontmatter) .token.regex,
 .solarized.theme-dark .HyperMD-codeblock .token.regex {
   color: #E9C062;
 }
+.solarized.theme-dark p > code .token.important,
 .solarized.theme-dark pre:not(.frontmatter) .token.important,
 .solarized.theme-dark .HyperMD-codeblock .token.important {
   color: #fd971f;
 }
+.solarized.theme-dark p > code .token.entity,
 .solarized.theme-dark pre:not(.frontmatter) .token.entity,
 .solarized.theme-dark .HyperMD-codeblock .token.entity {
   color: #FFFFB6;
   cursor: help;
 }
+.solarized.theme-dark p > code .token.url,
 .solarized.theme-dark pre:not(.frontmatter) .token.url,
 .solarized.theme-dark .HyperMD-codeblock .token.url {
   color: #96CBFE;
 }
+.solarized.theme-dark p > code .language-css .token.string,
+.solarized.theme-dark p > code .style .token.string,
 .solarized.theme-dark pre:not(.frontmatter) .language-css .token.string,
 .solarized.theme-dark pre:not(.frontmatter) .style .token.string,
 .solarized.theme-dark .HyperMD-codeblock .language-css .token.string,
 .solarized.theme-dark .HyperMD-codeblock .style .token.string {
   color: #87C38A;
 }
+.solarized.theme-dark p > code .token.important,
+.solarized.theme-dark p > code .token.bold,
 .solarized.theme-dark pre:not(.frontmatter) .token.important,
 .solarized.theme-dark pre:not(.frontmatter) .token.bold,
 .solarized.theme-dark .HyperMD-codeblock .token.important,
 .solarized.theme-dark .HyperMD-codeblock .token.bold {
   font-weight: bold;
 }
+.solarized.theme-dark p > code .token.italic,
 .solarized.theme-dark pre:not(.frontmatter) .token.italic,
 .solarized.theme-dark .HyperMD-codeblock .token.italic {
   font-style: italic;
 }
+.solarized.theme-dark p > code .cm-string,
+.solarized.theme-dark p > code .token.atrule,
+.solarized.theme-dark p > code .token.attr-value,
 .solarized.theme-dark pre:not(.frontmatter) .cm-string,
 .solarized.theme-dark pre:not(.frontmatter) .token.atrule,
 .solarized.theme-dark pre:not(.frontmatter) .token.attr-value,
@@ -5223,6 +5726,7 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .solarized.theme-dark .HyperMD-codeblock .token.attr-value {
   color: #F9EE98;
 }
+.gruvbox.theme-light p > code,
 .gruvbox.theme-light pre:not(.frontmatter),
 .gruvbox.theme-light .HyperMD-codeblock {
   --code-background: #fbf1c7;
@@ -5230,6 +5734,12 @@ body:not(.no-sanctum-ions) svg.lucide-history {
   --text-muted: #7c6f64;
   --text-faint: #7c6f64;
 }
+.gruvbox.theme-light p > code .cm-hr,
+.gruvbox.theme-light p > code .cm-comment,
+.gruvbox.theme-light p > code .cm-meta,
+.gruvbox.theme-light p > code .token.comment,
+.gruvbox.theme-light p > code .token.prolog,
+.gruvbox.theme-light p > code .token.cdata,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-hr,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-comment,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-meta,
@@ -5244,6 +5754,13 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .gruvbox.theme-light .HyperMD-codeblock .token.cdata {
   color: #7c6f64;
 }
+.gruvbox.theme-light p > code .cm-keyword,
+.gruvbox.theme-light p > code .token.delimiter,
+.gruvbox.theme-light p > code .token.boolean,
+.gruvbox.theme-light p > code .token.keyword,
+.gruvbox.theme-light p > code .token.selector,
+.gruvbox.theme-light p > code .token.important,
+.gruvbox.theme-light p > code .token.atrule,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-keyword,
 .gruvbox.theme-light pre:not(.frontmatter) .token.delimiter,
 .gruvbox.theme-light pre:not(.frontmatter) .token.boolean,
@@ -5260,6 +5777,13 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .gruvbox.theme-light .HyperMD-codeblock .token.atrule {
   color: #9d0006;
 }
+.gruvbox.theme-light p > code .cm-attribute,
+.gruvbox.theme-light p > code .cm-operator,
+.gruvbox.theme-light p > code .cm-punctuation,
+.gruvbox.theme-light p > code .cm-bracket.cm-tag,
+.gruvbox.theme-light p > code .token.operator,
+.gruvbox.theme-light p > code .token.punctuation,
+.gruvbox.theme-light p > code .token.attr-name,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-attribute,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-operator,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-punctuation,
@@ -5276,6 +5800,13 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .gruvbox.theme-light .HyperMD-codeblock .token.attr-name {
   color: #7c6f64;
 }
+.gruvbox.theme-light p > code .cm-builtin,
+.gruvbox.theme-light p > code .cm-type,
+.gruvbox.theme-light p > code .cm-tag,
+.gruvbox.theme-light p > code .token.tag,
+.gruvbox.theme-light p > code .token.tag .punctuation,
+.gruvbox.theme-light p > code .token.doctype,
+.gruvbox.theme-light p > code .token.builtin,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-builtin,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-type,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-tag,
@@ -5292,6 +5823,10 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .gruvbox.theme-light .HyperMD-codeblock .token.builtin {
   color: #b57614;
 }
+.gruvbox.theme-light p > code .cm-number,
+.gruvbox.theme-light p > code .token.entity,
+.gruvbox.theme-light p > code .token.number,
+.gruvbox.theme-light p > code .token.symbol,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-number,
 .gruvbox.theme-light pre:not(.frontmatter) .token.entity,
 .gruvbox.theme-light pre:not(.frontmatter) .token.number,
@@ -5302,6 +5837,13 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .gruvbox.theme-light .HyperMD-codeblock .token.symbol {
   color: #8f3f71;
 }
+.gruvbox.theme-light p > code .cm-variable,
+.gruvbox.theme-light p > code .cm-variable-2,
+.gruvbox.theme-light p > code .cm-variable-3,
+.gruvbox.theme-light p > code .cm-property,
+.gruvbox.theme-light p > code .token.property,
+.gruvbox.theme-light p > code .token.constant,
+.gruvbox.theme-light p > code .token.variable,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-variable,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-variable-2,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-variable-3,
@@ -5318,6 +5860,9 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .gruvbox.theme-light .HyperMD-codeblock .token.variable {
   color: #9d0006;
 }
+.gruvbox.theme-light p > code .cm-string-2,
+.gruvbox.theme-light p > code .token.string,
+.gruvbox.theme-light p > code .token.char,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-string-2,
 .gruvbox.theme-light pre:not(.frontmatter) .token.string,
 .gruvbox.theme-light pre:not(.frontmatter) .token.char,
@@ -5326,6 +5871,9 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .gruvbox.theme-light .HyperMD-codeblock .token.char {
   color: #797403;
 }
+.gruvbox.theme-light p > code .cm-string,
+.gruvbox.theme-light p > code .token.attr-value,
+.gruvbox.theme-light p > code .token.attr-value .punctuation,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-string,
 .gruvbox.theme-light pre:not(.frontmatter) .token.attr-value,
 .gruvbox.theme-light pre:not(.frontmatter) .token.attr-value .punctuation,
@@ -5334,6 +5882,8 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .gruvbox.theme-light .HyperMD-codeblock .token.attr-value .punctuation {
   color: #7c6f64;
 }
+.gruvbox.theme-light p > code .cm-link,
+.gruvbox.theme-light p > code .token.url,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-link,
 .gruvbox.theme-light pre:not(.frontmatter) .token.url,
 .gruvbox.theme-light .HyperMD-codeblock .cm-link,
@@ -5341,32 +5891,40 @@ body:not(.no-sanctum-ions) svg.lucide-history {
   color: #797403;
   text-decoration: underline;
 }
+.gruvbox.theme-light p > code .cm-qualifier,
+.gruvbox.theme-light p > code .token.function,
 .gruvbox.theme-light pre:not(.frontmatter) .cm-qualifier,
 .gruvbox.theme-light pre:not(.frontmatter) .token.function,
 .gruvbox.theme-light .HyperMD-codeblock .cm-qualifier,
 .gruvbox.theme-light .HyperMD-codeblock .token.function {
   color: #b57614;
 }
+.gruvbox.theme-light p > code .token.regex,
 .gruvbox.theme-light pre:not(.frontmatter) .token.regex,
 .gruvbox.theme-light .HyperMD-codeblock .token.regex {
   background: #797403;
 }
+.gruvbox.theme-light p > code .token.bold,
 .gruvbox.theme-light pre:not(.frontmatter) .token.bold,
 .gruvbox.theme-light .HyperMD-codeblock .token.bold {
   font-weight: bold;
 }
+.gruvbox.theme-light p > code .token.italic,
 .gruvbox.theme-light pre:not(.frontmatter) .token.italic,
 .gruvbox.theme-light .HyperMD-codeblock .token.italic {
   font-style: italic;
 }
+.gruvbox.theme-light p > code .token.inserted,
 .gruvbox.theme-light pre:not(.frontmatter) .token.inserted,
 .gruvbox.theme-light .HyperMD-codeblock .token.inserted {
   background: #7c6f64;
 }
+.gruvbox.theme-light p > code .token.deleted,
 .gruvbox.theme-light pre:not(.frontmatter) .token.deleted,
 .gruvbox.theme-light .HyperMD-codeblock .token.deleted {
   background: #9d0006;
 }
+.gruvbox.theme-dark p > code,
 .gruvbox.theme-dark pre:not(.frontmatter),
 .gruvbox.theme-dark .HyperMD-codeblock {
   --code-background: #282828;
@@ -5374,6 +5932,12 @@ body:not(.no-sanctum-ions) svg.lucide-history {
   --text-muted: #a89984;
   --text-faint: #a89984;
 }
+.gruvbox.theme-dark p > code .cm-hr,
+.gruvbox.theme-dark p > code .cm-comment,
+.gruvbox.theme-dark p > code .cm-meta,
+.gruvbox.theme-dark p > code .token.comment,
+.gruvbox.theme-dark p > code .token.prolog,
+.gruvbox.theme-dark p > code .token.cdata,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-hr,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-comment,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-meta,
@@ -5388,6 +5952,13 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .gruvbox.theme-dark .HyperMD-codeblock .token.cdata {
   color: #a89984;
 }
+.gruvbox.theme-dark p > code .cm-keyword,
+.gruvbox.theme-dark p > code .token.delimiter,
+.gruvbox.theme-dark p > code .token.boolean,
+.gruvbox.theme-dark p > code .token.keyword,
+.gruvbox.theme-dark p > code .token.selector,
+.gruvbox.theme-dark p > code .token.important,
+.gruvbox.theme-dark p > code .token.atrule,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-keyword,
 .gruvbox.theme-dark pre:not(.frontmatter) .token.delimiter,
 .gruvbox.theme-dark pre:not(.frontmatter) .token.boolean,
@@ -5404,6 +5975,13 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .gruvbox.theme-dark .HyperMD-codeblock .token.atrule {
   color: #fb4934;
 }
+.gruvbox.theme-dark p > code .cm-attribute,
+.gruvbox.theme-dark p > code .cm-operator,
+.gruvbox.theme-dark p > code .cm-punctuation,
+.gruvbox.theme-dark p > code .cm-bracket.cm-tag,
+.gruvbox.theme-dark p > code .token.operator,
+.gruvbox.theme-dark p > code .token.punctuation,
+.gruvbox.theme-dark p > code .token.attr-name,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-attribute,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-operator,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-punctuation,
@@ -5420,6 +5998,13 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .gruvbox.theme-dark .HyperMD-codeblock .token.attr-name {
   color: #a89984;
 }
+.gruvbox.theme-dark p > code .cm-builtin,
+.gruvbox.theme-dark p > code .cm-type,
+.gruvbox.theme-dark p > code .cm-tag,
+.gruvbox.theme-dark p > code .token.tag,
+.gruvbox.theme-dark p > code .token.tag .punctuation,
+.gruvbox.theme-dark p > code .token.doctype,
+.gruvbox.theme-dark p > code .token.builtin,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-builtin,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-type,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-tag,
@@ -5436,6 +6021,10 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .gruvbox.theme-dark .HyperMD-codeblock .token.builtin {
   color: #fabd2f;
 }
+.gruvbox.theme-dark p > code .cm-number,
+.gruvbox.theme-dark p > code .token.entity,
+.gruvbox.theme-dark p > code .token.number,
+.gruvbox.theme-dark p > code .token.symbol,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-number,
 .gruvbox.theme-dark pre:not(.frontmatter) .token.entity,
 .gruvbox.theme-dark pre:not(.frontmatter) .token.number,
@@ -5446,6 +6035,13 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .gruvbox.theme-dark .HyperMD-codeblock .token.symbol {
   color: #d3869b;
 }
+.gruvbox.theme-dark p > code .cm-variable,
+.gruvbox.theme-dark p > code .cm-variable-2,
+.gruvbox.theme-dark p > code .cm-variable-3,
+.gruvbox.theme-dark p > code .cm-property,
+.gruvbox.theme-dark p > code .token.property,
+.gruvbox.theme-dark p > code .token.constant,
+.gruvbox.theme-dark p > code .token.variable,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-variable,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-variable-2,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-variable-3,
@@ -5462,6 +6058,9 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .gruvbox.theme-dark .HyperMD-codeblock .token.variable {
   color: #fb4934;
 }
+.gruvbox.theme-dark p > code .cm-string-2,
+.gruvbox.theme-dark p > code .token.string,
+.gruvbox.theme-dark p > code .token.char,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-string-2,
 .gruvbox.theme-dark pre:not(.frontmatter) .token.string,
 .gruvbox.theme-dark pre:not(.frontmatter) .token.char,
@@ -5470,6 +6069,9 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .gruvbox.theme-dark .HyperMD-codeblock .token.char {
   color: #b8bb26;
 }
+.gruvbox.theme-dark p > code .cm-string,
+.gruvbox.theme-dark p > code .token.attr-value,
+.gruvbox.theme-dark p > code .token.attr-value .punctuation,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-string,
 .gruvbox.theme-dark pre:not(.frontmatter) .token.attr-value,
 .gruvbox.theme-dark pre:not(.frontmatter) .token.attr-value .punctuation,
@@ -5478,6 +6080,8 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .gruvbox.theme-dark .HyperMD-codeblock .token.attr-value .punctuation {
   color: #a89984;
 }
+.gruvbox.theme-dark p > code .cm-link,
+.gruvbox.theme-dark p > code .token.url,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-link,
 .gruvbox.theme-dark pre:not(.frontmatter) .token.url,
 .gruvbox.theme-dark .HyperMD-codeblock .cm-link,
@@ -5485,32 +6089,40 @@ body:not(.no-sanctum-ions) svg.lucide-history {
   color: #b8bb26;
   text-decoration: underline;
 }
+.gruvbox.theme-dark p > code .cm-qualifier,
+.gruvbox.theme-dark p > code .token.function,
 .gruvbox.theme-dark pre:not(.frontmatter) .cm-qualifier,
 .gruvbox.theme-dark pre:not(.frontmatter) .token.function,
 .gruvbox.theme-dark .HyperMD-codeblock .cm-qualifier,
 .gruvbox.theme-dark .HyperMD-codeblock .token.function {
   color: #fabd2f;
 }
+.gruvbox.theme-dark p > code .token.regex,
 .gruvbox.theme-dark pre:not(.frontmatter) .token.regex,
 .gruvbox.theme-dark .HyperMD-codeblock .token.regex {
   background: #b8bb26;
 }
+.gruvbox.theme-dark p > code .token.bold,
 .gruvbox.theme-dark pre:not(.frontmatter) .token.bold,
 .gruvbox.theme-dark .HyperMD-codeblock .token.bold {
   font-weight: bold;
 }
+.gruvbox.theme-dark p > code .token.italic,
 .gruvbox.theme-dark pre:not(.frontmatter) .token.italic,
 .gruvbox.theme-dark .HyperMD-codeblock .token.italic {
   font-style: italic;
 }
+.gruvbox.theme-dark p > code .token.inserted,
 .gruvbox.theme-dark pre:not(.frontmatter) .token.inserted,
 .gruvbox.theme-dark .HyperMD-codeblock .token.inserted {
   background: #a89984;
 }
+.gruvbox.theme-dark p > code .token.deleted,
 .gruvbox.theme-dark pre:not(.frontmatter) .token.deleted,
 .gruvbox.theme-dark .HyperMD-codeblock .token.deleted {
   background: #fb4934;
 }
+.material.theme-dark p > code,
 .material.theme-dark pre:not(.frontmatter),
 .material.theme-dark .HyperMD-codeblock {
   --code-background: #2f2f2f;
@@ -5518,6 +6130,9 @@ body:not(.no-sanctum-ions) svg.lucide-history {
   --text-muted:#616161;
   --text-faint:#616161;
 }
+.material.theme-dark p > code .language-css > code,
+.material.theme-dark p > code .language-sass > code,
+.material.theme-dark p > code .language-scss > code,
 .material.theme-dark pre:not(.frontmatter) .language-css > code,
 .material.theme-dark pre:not(.frontmatter) .language-sass > code,
 .material.theme-dark pre:not(.frontmatter) .language-scss > code,
@@ -5526,56 +6141,74 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .material.theme-dark .HyperMD-codeblock .language-scss > code {
   color: #fd9170;
 }
+.material.theme-dark p > code [class*=language-] .namespace,
 .material.theme-dark pre:not(.frontmatter) [class*=language-] .namespace,
 .material.theme-dark .HyperMD-codeblock [class*=language-] .namespace {
   opacity: 0.7;
 }
+.material.theme-dark p > code .token.atrule,
 .material.theme-dark pre:not(.frontmatter) .token.atrule,
 .material.theme-dark .HyperMD-codeblock .token.atrule {
   color: #c792ea;
 }
+.material.theme-dark p > code .token.attr-name,
 .material.theme-dark pre:not(.frontmatter) .token.attr-name,
 .material.theme-dark .HyperMD-codeblock .token.attr-name {
   color: #ffcb6b;
 }
+.material.theme-dark p > code .cm-string,
+.material.theme-dark p > code .token.attr-value,
 .material.theme-dark pre:not(.frontmatter) .cm-string,
 .material.theme-dark pre:not(.frontmatter) .token.attr-value,
 .material.theme-dark .HyperMD-codeblock .cm-string,
 .material.theme-dark .HyperMD-codeblock .token.attr-value {
   color: #a5e844;
 }
+.material.theme-dark p > code .cm-attribute,
+.material.theme-dark p > code .token.attribute,
 .material.theme-dark pre:not(.frontmatter) .cm-attribute,
 .material.theme-dark pre:not(.frontmatter) .token.attribute,
 .material.theme-dark .HyperMD-codeblock .cm-attribute,
 .material.theme-dark .HyperMD-codeblock .token.attribute {
   color: #a5e844;
 }
+.material.theme-dark p > code .token.boolean,
 .material.theme-dark pre:not(.frontmatter) .token.boolean,
 .material.theme-dark .HyperMD-codeblock .token.boolean {
   color: #c792ea;
 }
+.material.theme-dark p > code .cm-builtin,
+.material.theme-dark p > code .token.builtin,
 .material.theme-dark pre:not(.frontmatter) .cm-builtin,
 .material.theme-dark pre:not(.frontmatter) .token.builtin,
 .material.theme-dark .HyperMD-codeblock .cm-builtin,
 .material.theme-dark .HyperMD-codeblock .token.builtin {
   color: #ffcb6b;
 }
+.material.theme-dark p > code .token.cdata,
 .material.theme-dark pre:not(.frontmatter) .token.cdata,
 .material.theme-dark .HyperMD-codeblock .token.cdata {
   color: #80cbc4;
 }
+.material.theme-dark p > code .token.char,
 .material.theme-dark pre:not(.frontmatter) .token.char,
 .material.theme-dark .HyperMD-codeblock .token.char {
   color: #80cbc4;
 }
+.material.theme-dark p > code .token.class,
 .material.theme-dark pre:not(.frontmatter) .token.class,
 .material.theme-dark .HyperMD-codeblock .token.class {
   color: #ffcb6b;
 }
+.material.theme-dark p > code .token.class-name,
 .material.theme-dark pre:not(.frontmatter) .token.class-name,
 .material.theme-dark .HyperMD-codeblock .token.class-name {
   color: #f2ff00;
 }
+.material.theme-dark p > code .cm-comment,
+.material.theme-dark p > code .cm-meta,
+.material.theme-dark p > code .cm-hr,
+.material.theme-dark p > code .token.comment,
 .material.theme-dark pre:not(.frontmatter) .cm-comment,
 .material.theme-dark pre:not(.frontmatter) .cm-meta,
 .material.theme-dark pre:not(.frontmatter) .cm-hr,
@@ -5586,84 +6219,109 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .material.theme-dark .HyperMD-codeblock .token.comment {
   color: #616161;
 }
+.material.theme-dark p > code .token.constant,
 .material.theme-dark pre:not(.frontmatter) .token.constant,
 .material.theme-dark .HyperMD-codeblock .token.constant {
   color: #c792ea;
 }
+.material.theme-dark p > code .token.deleted,
 .material.theme-dark pre:not(.frontmatter) .token.deleted,
 .material.theme-dark .HyperMD-codeblock .token.deleted {
   color: #ff6666;
 }
+.material.theme-dark p > code .cm-type,
+.material.theme-dark p > code .token.doctype,
 .material.theme-dark pre:not(.frontmatter) .cm-type,
 .material.theme-dark pre:not(.frontmatter) .token.doctype,
 .material.theme-dark .HyperMD-codeblock .cm-type,
 .material.theme-dark .HyperMD-codeblock .token.doctype {
   color: #616161;
 }
+.material.theme-dark p > code .token.entity,
 .material.theme-dark pre:not(.frontmatter) .token.entity,
 .material.theme-dark .HyperMD-codeblock .token.entity {
   color: #ff6666;
 }
+.material.theme-dark p > code .cm-qualifier,
+.material.theme-dark p > code .token.function,
 .material.theme-dark pre:not(.frontmatter) .cm-qualifier,
 .material.theme-dark pre:not(.frontmatter) .token.function,
 .material.theme-dark .HyperMD-codeblock .cm-qualifier,
 .material.theme-dark .HyperMD-codeblock .token.function {
   color: #c792ea;
 }
+.material.theme-dark p > code .token.hexcode,
 .material.theme-dark pre:not(.frontmatter) .token.hexcode,
 .material.theme-dark .HyperMD-codeblock .token.hexcode {
   color: #f2ff00;
 }
+.material.theme-dark p > code .token.id,
 .material.theme-dark pre:not(.frontmatter) .token.id,
 .material.theme-dark .HyperMD-codeblock .token.id {
   color: #c792ea;
   font-weight: bold;
 }
+.material.theme-dark p > code .token.important,
 .material.theme-dark pre:not(.frontmatter) .token.important,
 .material.theme-dark .HyperMD-codeblock .token.important {
   color: #c792ea;
   font-weight: bold;
 }
+.material.theme-dark p > code .token.inserted,
 .material.theme-dark pre:not(.frontmatter) .token.inserted,
 .material.theme-dark .HyperMD-codeblock .token.inserted {
   color: #80cbc4;
 }
+.material.theme-dark p > code .cm-keyword,
+.material.theme-dark p > code .token.keyword,
 .material.theme-dark pre:not(.frontmatter) .cm-keyword,
 .material.theme-dark pre:not(.frontmatter) .token.keyword,
 .material.theme-dark .HyperMD-codeblock .cm-keyword,
 .material.theme-dark .HyperMD-codeblock .token.keyword {
   color: #c792ea;
 }
+.material.theme-dark p > code .cm-number,
+.material.theme-dark p > code .token.number,
 .material.theme-dark pre:not(.frontmatter) .cm-number,
 .material.theme-dark pre:not(.frontmatter) .token.number,
 .material.theme-dark .HyperMD-codeblock .cm-number,
 .material.theme-dark .HyperMD-codeblock .token.number {
   color: #fd9170;
 }
+.material.theme-dark p > code .cm-operator,
+.material.theme-dark p > code .token.operator,
 .material.theme-dark pre:not(.frontmatter) .cm-operator,
 .material.theme-dark pre:not(.frontmatter) .token.operator,
 .material.theme-dark .HyperMD-codeblock .cm-operator,
 .material.theme-dark .HyperMD-codeblock .token.operator {
   color: #89ddff;
 }
+.material.theme-dark p > code .token.prolog,
 .material.theme-dark pre:not(.frontmatter) .token.prolog,
 .material.theme-dark .HyperMD-codeblock .token.prolog {
   color: #616161;
 }
+.material.theme-dark p > code .cm-property,
+.material.theme-dark p > code .token.property,
 .material.theme-dark pre:not(.frontmatter) .cm-property,
 .material.theme-dark pre:not(.frontmatter) .token.property,
 .material.theme-dark .HyperMD-codeblock .cm-property,
 .material.theme-dark .HyperMD-codeblock .token.property {
   color: #80cbc4;
 }
+.material.theme-dark p > code .token.pseudo-class,
 .material.theme-dark pre:not(.frontmatter) .token.pseudo-class,
 .material.theme-dark .HyperMD-codeblock .token.pseudo-class {
   color: #a5e844;
 }
+.material.theme-dark p > code .token.pseudo-element,
 .material.theme-dark pre:not(.frontmatter) .token.pseudo-element,
 .material.theme-dark .HyperMD-codeblock .token.pseudo-element {
   color: #a5e844;
 }
+.material.theme-dark p > code .cm-punctuation,
+.material.theme-dark p > code .cm-bracket.cm-tag,
+.material.theme-dark p > code .token.punctuation,
 .material.theme-dark pre:not(.frontmatter) .cm-punctuation,
 .material.theme-dark pre:not(.frontmatter) .cm-bracket.cm-tag,
 .material.theme-dark pre:not(.frontmatter) .token.punctuation,
@@ -5672,40 +6330,54 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .material.theme-dark .HyperMD-codeblock .token.punctuation {
   color: #89ddff;
 }
+.material.theme-dark p > code .token.regex,
 .material.theme-dark pre:not(.frontmatter) .token.regex,
 .material.theme-dark .HyperMD-codeblock .token.regex {
   color: #f2ff00;
 }
+.material.theme-dark p > code .token.selector,
 .material.theme-dark pre:not(.frontmatter) .token.selector,
 .material.theme-dark .HyperMD-codeblock .token.selector {
   color: #ff6666;
 }
+.material.theme-dark p > code .cm-string-2,
+.material.theme-dark p > code .token.string,
 .material.theme-dark pre:not(.frontmatter) .cm-string-2,
 .material.theme-dark pre:not(.frontmatter) .token.string,
 .material.theme-dark .HyperMD-codeblock .cm-string-2,
 .material.theme-dark .HyperMD-codeblock .token.string {
   color: #a5e844;
 }
+.material.theme-dark p > code .token.symbol,
 .material.theme-dark pre:not(.frontmatter) .token.symbol,
 .material.theme-dark .HyperMD-codeblock .token.symbol {
   color: #c792ea;
 }
+.material.theme-dark p > code .cm-tag,
+.material.theme-dark p > code .token.tag,
 .material.theme-dark pre:not(.frontmatter) .cm-tag,
 .material.theme-dark pre:not(.frontmatter) .token.tag,
 .material.theme-dark .HyperMD-codeblock .cm-tag,
 .material.theme-dark .HyperMD-codeblock .token.tag {
   color: #ff6666;
 }
+.material.theme-dark p > code .token.unit,
 .material.theme-dark pre:not(.frontmatter) .token.unit,
 .material.theme-dark .HyperMD-codeblock .token.unit {
   color: #fd9170;
 }
+.material.theme-dark p > code .cm-link,
+.material.theme-dark p > code .token.url,
 .material.theme-dark pre:not(.frontmatter) .cm-link,
 .material.theme-dark pre:not(.frontmatter) .token.url,
 .material.theme-dark .HyperMD-codeblock .cm-link,
 .material.theme-dark .HyperMD-codeblock .token.url {
   color: #ff6666;
 }
+.material.theme-dark p > code .cm-variable,
+.material.theme-dark p > code .cm-variable-2,
+.material.theme-dark p > code .cm-variable-3,
+.material.theme-dark p > code .token.variable,
 .material.theme-dark pre:not(.frontmatter) .cm-variable,
 .material.theme-dark pre:not(.frontmatter) .cm-variable-2,
 .material.theme-dark pre:not(.frontmatter) .cm-variable-3,
@@ -5716,6 +6388,7 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .material.theme-dark .HyperMD-codeblock .token.variable {
   color: #ff6666;
 }
+.material.theme-light p > code,
 .material.theme-light pre:not(.frontmatter),
 .material.theme-light .HyperMD-codeblock {
   --code-background: #fafafa;
@@ -5723,6 +6396,9 @@ body:not(.no-sanctum-ions) svg.lucide-history {
   --text-muted: #aabfc9;
   --text-faint: #aabfc9;
 }
+.material.theme-light p > code .language-css > code,
+.material.theme-light p > code .language-sass > code,
+.material.theme-light p > code .language-scss > code,
 .material.theme-light pre:not(.frontmatter) .language-css > code,
 .material.theme-light pre:not(.frontmatter) .language-sass > code,
 .material.theme-light pre:not(.frontmatter) .language-scss > code,
@@ -5731,56 +6407,74 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .material.theme-light .HyperMD-codeblock .language-scss > code {
   color: #f76d47;
 }
+.material.theme-light p > code [class*=language-] .namespace,
 .material.theme-light pre:not(.frontmatter) [class*=language-] .namespace,
 .material.theme-light .HyperMD-codeblock [class*=language-] .namespace {
   opacity: 0.7;
 }
+.material.theme-light p > code .token.atrule,
 .material.theme-light pre:not(.frontmatter) .token.atrule,
 .material.theme-light .HyperMD-codeblock .token.atrule {
   color: #7c4dff;
 }
+.material.theme-light p > code .token.attr-name,
 .material.theme-light pre:not(.frontmatter) .token.attr-name,
 .material.theme-light .HyperMD-codeblock .token.attr-name {
   color: #39adb5;
 }
+.material.theme-light p > code .cm-string,
+.material.theme-light p > code .token.attr-value,
 .material.theme-light pre:not(.frontmatter) .cm-string,
 .material.theme-light pre:not(.frontmatter) .token.attr-value,
 .material.theme-light .HyperMD-codeblock .cm-string,
 .material.theme-light .HyperMD-codeblock .token.attr-value {
   color: #f6a434;
 }
+.material.theme-light p > code .cm-attribute,
+.material.theme-light p > code .token.attribute,
 .material.theme-light pre:not(.frontmatter) .cm-attribute,
 .material.theme-light pre:not(.frontmatter) .token.attribute,
 .material.theme-light .HyperMD-codeblock .cm-attribute,
 .material.theme-light .HyperMD-codeblock .token.attribute {
   color: #f6a434;
 }
+.material.theme-light p > code .token.boolean,
 .material.theme-light pre:not(.frontmatter) .token.boolean,
 .material.theme-light .HyperMD-codeblock .token.boolean {
   color: #7c4dff;
 }
+.material.theme-light p > code .cm-builtin,
+.material.theme-light p > code .token.builtin,
 .material.theme-light pre:not(.frontmatter) .cm-builtin,
 .material.theme-light pre:not(.frontmatter) .token.builtin,
 .material.theme-light .HyperMD-codeblock .cm-builtin,
 .material.theme-light .HyperMD-codeblock .token.builtin {
   color: #39adb5;
 }
+.material.theme-light p > code .token.cdata,
 .material.theme-light pre:not(.frontmatter) .token.cdata,
 .material.theme-light .HyperMD-codeblock .token.cdata {
   color: #39adb5;
 }
+.material.theme-light p > code .token.char,
 .material.theme-light pre:not(.frontmatter) .token.char,
 .material.theme-light .HyperMD-codeblock .token.char {
   color: #39adb5;
 }
+.material.theme-light p > code .token.class,
 .material.theme-light pre:not(.frontmatter) .token.class,
 .material.theme-light .HyperMD-codeblock .token.class {
   color: #39adb5;
 }
+.material.theme-light p > code .token.class-name,
 .material.theme-light pre:not(.frontmatter) .token.class-name,
 .material.theme-light .HyperMD-codeblock .token.class-name {
   color: #6182b8;
 }
+.material.theme-light p > code .cm-comment,
+.material.theme-light p > code .cm-meta,
+.material.theme-light p > code .cm-hr,
+.material.theme-light p > code .token.comment,
 .material.theme-light pre:not(.frontmatter) .cm-comment,
 .material.theme-light pre:not(.frontmatter) .cm-meta,
 .material.theme-light pre:not(.frontmatter) .cm-hr,
@@ -5791,84 +6485,109 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .material.theme-light .HyperMD-codeblock .token.comment {
   color: #aabfc9;
 }
+.material.theme-light p > code .token.constant,
 .material.theme-light pre:not(.frontmatter) .token.constant,
 .material.theme-light .HyperMD-codeblock .token.constant {
   color: #7c4dff;
 }
+.material.theme-light p > code .token.deleted,
 .material.theme-light pre:not(.frontmatter) .token.deleted,
 .material.theme-light .HyperMD-codeblock .token.deleted {
   color: #e53935;
 }
+.material.theme-light p > code .cm-type,
+.material.theme-light p > code .token.doctype,
 .material.theme-light pre:not(.frontmatter) .cm-type,
 .material.theme-light pre:not(.frontmatter) .token.doctype,
 .material.theme-light .HyperMD-codeblock .cm-type,
 .material.theme-light .HyperMD-codeblock .token.doctype {
   color: #aabfc9;
 }
+.material.theme-light p > code .token.entity,
 .material.theme-light pre:not(.frontmatter) .token.entity,
 .material.theme-light .HyperMD-codeblock .token.entity {
   color: #e53935;
 }
+.material.theme-light p > code .cm-qualifier,
+.material.theme-light p > code .token.function,
 .material.theme-light pre:not(.frontmatter) .cm-qualifier,
 .material.theme-light pre:not(.frontmatter) .token.function,
 .material.theme-light .HyperMD-codeblock .cm-qualifier,
 .material.theme-light .HyperMD-codeblock .token.function {
   color: #7c4dff;
 }
+.material.theme-light p > code .token.hexcode,
 .material.theme-light pre:not(.frontmatter) .token.hexcode,
 .material.theme-light .HyperMD-codeblock .token.hexcode {
   color: #f76d47;
 }
+.material.theme-light p > code .token.id,
 .material.theme-light pre:not(.frontmatter) .token.id,
 .material.theme-light .HyperMD-codeblock .token.id {
   color: #7c4dff;
   font-weight: bold;
 }
+.material.theme-light p > code .token.important,
 .material.theme-light pre:not(.frontmatter) .token.important,
 .material.theme-light .HyperMD-codeblock .token.important {
   color: #7c4dff;
   font-weight: bold;
 }
+.material.theme-light p > code .token.inserted,
 .material.theme-light pre:not(.frontmatter) .token.inserted,
 .material.theme-light .HyperMD-codeblock .token.inserted {
   color: #39adb5;
 }
+.material.theme-light p > code .cm-keyword,
+.material.theme-light p > code .token.keyword,
 .material.theme-light pre:not(.frontmatter) .cm-keyword,
 .material.theme-light pre:not(.frontmatter) .token.keyword,
 .material.theme-light .HyperMD-codeblock .cm-keyword,
 .material.theme-light .HyperMD-codeblock .token.keyword {
   color: #7c4dff;
 }
+.material.theme-light p > code .cm-number,
+.material.theme-light p > code .token.number,
 .material.theme-light pre:not(.frontmatter) .cm-number,
 .material.theme-light pre:not(.frontmatter) .token.number,
 .material.theme-light .HyperMD-codeblock .cm-number,
 .material.theme-light .HyperMD-codeblock .token.number {
   color: #f76d47;
 }
+.material.theme-light p > code .cm-operator,
+.material.theme-light p > code .token.operator,
 .material.theme-light pre:not(.frontmatter) .cm-operator,
 .material.theme-light pre:not(.frontmatter) .token.operator,
 .material.theme-light .HyperMD-codeblock .cm-operator,
 .material.theme-light .HyperMD-codeblock .token.operator {
   color: #39adb5;
 }
+.material.theme-light p > code .token.prolog,
 .material.theme-light pre:not(.frontmatter) .token.prolog,
 .material.theme-light .HyperMD-codeblock .token.prolog {
   color: #aabfc9;
 }
+.material.theme-light p > code .cm-property,
+.material.theme-light p > code .token.property,
 .material.theme-light pre:not(.frontmatter) .cm-property,
 .material.theme-light pre:not(.frontmatter) .token.property,
 .material.theme-light .HyperMD-codeblock .cm-property,
 .material.theme-light .HyperMD-codeblock .token.property {
   color: #39adb5;
 }
+.material.theme-light p > code .token.pseudo-class,
 .material.theme-light pre:not(.frontmatter) .token.pseudo-class,
 .material.theme-light .HyperMD-codeblock .token.pseudo-class {
   color: #f6a434;
 }
+.material.theme-light p > code .token.pseudo-element,
 .material.theme-light pre:not(.frontmatter) .token.pseudo-element,
 .material.theme-light .HyperMD-codeblock .token.pseudo-element {
   color: #f6a434;
 }
+.material.theme-light p > code .cm-punctuation,
+.material.theme-light p > code .cm-bracket.cm-tag,
+.material.theme-light p > code .token.punctuation,
 .material.theme-light pre:not(.frontmatter) .cm-punctuation,
 .material.theme-light pre:not(.frontmatter) .cm-bracket.cm-tag,
 .material.theme-light pre:not(.frontmatter) .token.punctuation,
@@ -5877,40 +6596,54 @@ body:not(.no-sanctum-ions) svg.lucide-history {
 .material.theme-light .HyperMD-codeblock .token.punctuation {
   color: #39adb5;
 }
+.material.theme-light p > code .token.regex,
 .material.theme-light pre:not(.frontmatter) .token.regex,
 .material.theme-light .HyperMD-codeblock .token.regex {
   color: #6182b8;
 }
+.material.theme-light p > code .token.selector,
 .material.theme-light pre:not(.frontmatter) .token.selector,
 .material.theme-light .HyperMD-codeblock .token.selector {
   color: #e53935;
 }
+.material.theme-light p > code .cm-string-2,
+.material.theme-light p > code .token.string,
 .material.theme-light pre:not(.frontmatter) .cm-string-2,
 .material.theme-light pre:not(.frontmatter) .token.string,
 .material.theme-light .HyperMD-codeblock .cm-string-2,
 .material.theme-light .HyperMD-codeblock .token.string {
   color: #f6a434;
 }
+.material.theme-light p > code .token.symbol,
 .material.theme-light pre:not(.frontmatter) .token.symbol,
 .material.theme-light .HyperMD-codeblock .token.symbol {
   color: #7c4dff;
 }
+.material.theme-light p > code .cm-tag,
+.material.theme-light p > code .token.tag,
 .material.theme-light pre:not(.frontmatter) .cm-tag,
 .material.theme-light pre:not(.frontmatter) .token.tag,
 .material.theme-light .HyperMD-codeblock .cm-tag,
 .material.theme-light .HyperMD-codeblock .token.tag {
   color: #e53935;
 }
+.material.theme-light p > code .token.unit,
 .material.theme-light pre:not(.frontmatter) .token.unit,
 .material.theme-light .HyperMD-codeblock .token.unit {
   color: #f76d47;
 }
+.material.theme-light p > code .cm-link,
+.material.theme-light p > code .token.url,
 .material.theme-light pre:not(.frontmatter) .cm-link,
 .material.theme-light pre:not(.frontmatter) .token.url,
 .material.theme-light .HyperMD-codeblock .cm-link,
 .material.theme-light .HyperMD-codeblock .token.url {
   color: #e53935;
 }
+.material.theme-light p > code .cm-variable,
+.material.theme-light p > code .cm-variable-2,
+.material.theme-light p > code .cm-variable-3,
+.material.theme-light p > code .token.variable,
 .material.theme-light pre:not(.frontmatter) .cm-variable,
 .material.theme-light pre:not(.frontmatter) .cm-variable-2,
 .material.theme-light pre:not(.frontmatter) .cm-variable-3,
@@ -6579,7 +7312,7 @@ settings:
 				format: '%'
 	-
 		id: code-blocks
-		title: Code Blocks
+		title: Code
 		type: heading
 		level: 1
 		collapsed: true
