@@ -57,13 +57,13 @@
 }
 
 .kanban-plugin__lane-items {
-	background-color: var(--layer-1);
+	background-color: var(--background-primary);
 	margin: 0;
 	padding: 4px 8px;
 }
 
 .kanban-plugin__item-button-wrapper {
-	background-color: var(--layer-1);
+	background-color: var(--background-primary);
 	border-radius: 0 0 var(--radius-m) var(--radius-m);
 	border: 1px solid var(--background-modifier-border);
 }
@@ -89,8 +89,13 @@
 	}
 }
 
+.kanban-plugin__item-content-wrapper {
+	background: transparent;
+}
+
 .kanban-plugin__item-title-wrapper {
 	padding: 8px;
+	background: transparent;
 }
 
 .kanban-plugin__item button.kanban-plugin__item-postfix-button {
@@ -108,7 +113,7 @@
 
 button.kanban-plugin__new-item-button {
 	padding: 8px 16px;
-	background-color: var(--layer-1);
+	background-color: transparent;
 
 	&:hover {
 		background-color: var(--layer-hover-1);
