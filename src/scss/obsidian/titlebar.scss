@@ -8,7 +8,7 @@
 	margin-top: 24px;
 }
 
-
+.workspace-leaf-content[data-type='style-settings'] .view-header,
 .workspace-leaf-content[data-type='graph'] .view-header {
 	height: unset;
 
@@ -21,7 +21,9 @@
 	}
 }
 
-
+body.pane-relief-pane-numbering .workspace-split .workspace-leaf-content[data-type='style-settings'] .view-header-icon {
+	display: none;
+}
 
 .sticky-view-actions .view-header {
 	height: unset;

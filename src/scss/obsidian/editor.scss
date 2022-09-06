@@ -68,3 +68,10 @@ body {
 	--hr-color: var(--background-modifier-border);
 	--hr-thickness: 1.5px;
 }
+
+
+/*	Readable line length
+—————————————————————————————————————————————————————————*/
+body {
+	--file-line-width: 40rem;
+}

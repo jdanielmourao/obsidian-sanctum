@@ -113,6 +113,16 @@ settings:
 		title: Editor font
 		type: variable-text
 		default: '??'
+    - 
+        id: file-line-width
+        title: Readable line width
+        description: The maximum line width in rem
+        type: variable-number-slider
+        default: 40
+        min: 30
+        max: 70
+        step: 1
+		format: 'rem'
 	-
 		id: active-line-highlighting
 		title: Active line highlighting
