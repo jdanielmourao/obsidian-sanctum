@@ -1890,16 +1890,13 @@ body {
   position: sticky;
   margin-top: 24px;
 }
-.workspace-leaf-content[data-type=graph] .view-header,
-.workspace-leaf-content[data-type=kanban] .view-header {
+.workspace-leaf-content[data-type=graph] .view-header {
   height: unset;
 }
-.workspace-leaf-content[data-type=graph] .view-header .view-header-title,
-.workspace-leaf-content[data-type=kanban] .view-header .view-header-title {
+.workspace-leaf-content[data-type=graph] .view-header .view-header-title {
   visibility: hidden;
 }
-.workspace-leaf-content[data-type=graph] .view-header .view-actions,
-.workspace-leaf-content[data-type=kanban] .view-header .view-actions {
+.workspace-leaf-content[data-type=graph] .view-header .view-actions {
   position: unset;
   margin-top: unset;
 }
@@ -6177,32 +6174,21 @@ body {
   padding-left: 2px;
 }
 .kanban-plugin {
-  background-color: var(--background-primary);
+  background-color: var(--background-secondary);
   --lane-width: 272px;
 }
 .kanban-plugin__lane-wrapper {
   margin-bottom: 16px;
   margin-right: 16px;
 }
-.theme-light .kanban-plugin__lane {
-  --shadow-color: 60deg 5% 59%;
-}
-.theme-dark .kanban-plugin__lane {
-  --shadow-color: 0deg 0% 1%;
-}
-.theme-light.sanctum-default-light .kanban-plugin__lane {
-  background-color: var(--layer-1);
-}
 .kanban-plugin__lane {
   border-radius: var(--radius-m);
-  box-shadow:
-    0px 0.5px 0.5px hsl(var(--shadow-color)/0.43),
-    0px 1.5px 1.6px -1px hsl(var(--shadow-color)/0.4),
-    0px 4px 4.2px -2px hsl(var(--shadow-color)/0.36),
-    0px 10.1px 10.6px -3px hsl(var(--shadow-color)/0.32);
+  background-color: transparent;
+  border: none;
 }
 .kanban-plugin__lane-header-wrapper {
-  padding: 8px;
+  padding: 0 8px;
+  border-bottom: none;
 }
 .kanban-plugin__lane-header-wrapper .kanban-plugin__lane-grip {
   margin-right: 4px;
@@ -6224,12 +6210,32 @@ body {
 }
 .kanban-plugin__lane-header-wrapper button.kanban-plugin__lane-settings-button {
   box-shadow: none;
+  color: var(--text-faint);
 }
 .kanban-plugin__lane-header-wrapper button.kanban-plugin__lane-settings-button:hover {
   background-color: var(--background-modifier-hover);
+  color: var(--text-muted);
+}
+.kanban-plugin__scroll-container.kanban-plugin__vertical {
+  border-radius: var(--radius-m) var(--radius-m) 0 0;
+  border: 1px solid var(--background-modifier-border);
+  border-bottom: none;
+}
+.kanban-plugin__lane-items {
+  background-color: var(--layer-1);
+  margin: 0;
+  padding: 4px 8px;
+}
+.kanban-plugin__item-button-wrapper {
+  background-color: var(--layer-1);
+  border-radius: 0 0 var(--radius-m) var(--radius-m);
+  border: 1px solid var(--background-modifier-border);
 }
 .kanban-plugin__item {
   border-radius: var(--radius-m);
+}
+.kanban-plugin__item:hover .kanban-plugin__item-title-wrapper {
+  background-color: var(--layer-hover-1);
 }
 .kanban-plugin__item a.tag:not(.kanban-plugin__item-tag) {
   display: none;
@@ -6267,6 +6273,23 @@ button.kanban-plugin__new-item-button:hover {
 .wrap-kanban-lanes .kanban-plugin__board > div {
   flex-wrap: wrap;
   overflow-y: scroll;
+}
+body:is(.is-focused, :not(.is-focused)) .workspace-leaf-content[data-type=kanban] .view-header {
+  height: unset;
+  background-color: var(--background-secondary);
+}
+body:is(.is-focused, :not(.is-focused)) .workspace-leaf-content[data-type=kanban] .view-header .view-header-title {
+  visibility: hidden;
+}
+body:is(.is-focused, :not(.is-focused)) .workspace-leaf-content[data-type=kanban] .view-header .view-header-title-container::after {
+  background: none;
+}
+body:is(.is-focused, :not(.is-focused)) .workspace-leaf-content[data-type=kanban] .view-header .view-actions {
+  position: unset;
+  margin-top: unset;
+}
+.workspace-tab-header.is-active[data-type=kanban] {
+  --tab-background-active: var(--background-secondary);
 }
 /*!
 /* @settings
