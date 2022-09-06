@@ -24,6 +24,7 @@
 
 		&:hover {
 			background-color: var(--background-modifier-hover);
+			color: var(--text-muted);
 		}
 	}
 	.kanban-plugin__lane-title {
@@ -71,6 +72,7 @@ button.kanban-plugin__new-item-button {
 
 	&:hover {
 		background-color: var(--layer-hover-1);
+		color: var(--text-muted);
 	}
 }
 

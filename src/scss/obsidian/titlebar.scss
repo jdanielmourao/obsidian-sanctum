@@ -1,0 +1,35 @@
+.view-header:not(.focus-within) {
+	height: 0px;
+	border-width: 0;
+}
+
+.view-header .view-actions {
+	position: sticky;
+	margin-top: 24px;
+}
+
+
+.workspace-leaf-content[data-type='graph'] .view-header,
+.workspace-leaf-content[data-type='kanban'] .view-header {
+	height: unset;
+
+	.view-header-title {
+		visibility: hidden;
+	}
+	.view-actions {
+		position: unset;
+		margin-top: unset;
+	}
+}
+
+
+
+.sticky-view-actions .view-header {
+	height: unset;
+	border-width: 1px;
+}
+
+.sticky-view-actions .view-header .view-actions {
+	position: unset;
+	margin-top: unset;
+}
