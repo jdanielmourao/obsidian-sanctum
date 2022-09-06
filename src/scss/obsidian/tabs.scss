@@ -57,3 +57,8 @@ body {
 .mod-stacked .workspace-tab-header {
 	border-right: var(--divider-width) solid var(--divider-color);
 }
+
+
+body.is-focused .workspace-tab-header:not(.mod-active) .workspace-tab-header-inner-close-button {
+	color: var(--tab-text-color-focused);
+}

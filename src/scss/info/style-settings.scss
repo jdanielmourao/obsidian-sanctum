@@ -1370,4 +1370,14 @@ settings:
 				id: wrap-kanban-lanes
 				title: Wrap kanban lanes
 				type: class-toggle
+	-
+		id: advanced
+		title: Advanced Settings
+		type: heading
+		level: 1
+		collapsed: false
+	-
+			id: no-sanctum-icons
+			title: Disable custom icons
+			type: class-toggle
 */
