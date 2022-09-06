@@ -9,14 +9,6 @@
 	margin-right: 16px;
 }
 
-.theme-light .kanban-plugin__lane  {
-	--shadow-color: 60deg 5% 59%;
-}
-
-.theme-dark .kanban-plugin__lane  {
-	--shadow-color: 0deg 0% 1%;
-}
-
 .theme-light.sanctum-default-light .kanban-plugin__lane {
 	background-color: var(--layer-1);
 }
