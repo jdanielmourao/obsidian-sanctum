@@ -1726,6 +1726,9 @@ body {
 .mod-stacked .workspace-tab-header {
   border-right: var(--divider-width) solid var(--divider-color);
 }
+body.is-focused .workspace-tab-header:not(.mod-active) .workspace-tab-header-inner-close-button {
+  color: var(--tab-text-color-focused);
+}
 body {
   --table-header-background: transparent;
   --table-header-size: var(--font-smaller);
@@ -1910,6 +1913,7 @@ body {
   position: unset;
   margin-top: unset;
 }
+body.pane-relief-pane-numbering .workspace-split .workspace-leaf .view-header-icon,
 body.pane-relief-pane-numbering .workspace-split .workspace-leaf-content[data-type=style-settings] .view-header-icon {
   display: none;
 }
@@ -7684,6 +7688,16 @@ settings:
 				id: wrap-kanban-lanes
 				title: Wrap kanban lanes
 				type: class-toggle
+	-
+		id: advanced
+		title: Advanced Settings
+		type: heading
+		level: 1
+		collapsed: false
+	-
+			id: no-sanctum-icons
+			title: Disable custom icons
+			type: class-toggle
 */
 /* @plugins
 core:
