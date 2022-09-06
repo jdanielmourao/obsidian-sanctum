@@ -10,3 +10,8 @@ body {
 .is-hidden-frameless .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
 	height: calc(100% - var(--header-height));
 }
+
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle {
+	height: calc(100% - var(--header-height));
+}
