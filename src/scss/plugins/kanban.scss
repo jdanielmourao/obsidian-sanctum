@@ -1,5 +1,5 @@
 .kanban-plugin {
-	background-color: var(--background-primary);
+	background-color: var(--background-secondary);
 
 	--lane-width: 272px;
 }
@@ -9,20 +9,15 @@
 	margin-right: 16px;
 }
 
-.theme-light.sanctum-default-light .kanban-plugin__lane {
-	background-color: var(--layer-1);
-}
-
 .kanban-plugin__lane {
 	border-radius: var(--radius-m);
-	box-shadow: 0px 0.5px 0.5px hsl(var(--shadow-color) / 0.43),
-	0px 1.5px 1.6px -1px hsl(var(--shadow-color) / 0.4),
-	0px 4px 4.2px -2px hsl(var(--shadow-color) / 0.36),
-	0px 10.1px 10.6px -3px hsl(var(--shadow-color) / 0.32);
+	background-color: transparent;
+	border: none;
 }
 
 .kanban-plugin__lane-header-wrapper {
-	padding: 8px;
+	padding: 0 8px;
+	border-bottom: none;
 
 	.kanban-plugin__lane-grip {
 		margin-right: 4px;
@@ -53,8 +48,30 @@
 	}
 }
 
+.kanban-plugin__scroll-container.kanban-plugin__vertical {
+	border-radius: var(--radius-m) var(--radius-m) 0 0;
+	border: 1px solid var(--background-modifier-border);
+	border-bottom: none;
+}
+
+.kanban-plugin__lane-items {
+	background-color: var(--layer-1);
+	margin: 0;
+	padding: 4px 8px;
+}
+
+.kanban-plugin__item-button-wrapper {
+	background-color: var(--layer-1);
+	border-radius: 0 0 var(--radius-m) var(--radius-m);
+	border: 1px solid var(--background-modifier-border);
+}
+
 .kanban-plugin__item {
 	border-radius: var(--radius-m);
+
+	&:hover .kanban-plugin__item-title-wrapper {
+		background-color: var(--layer-hover-1);
+	}
 
 	a.tag:not(.kanban-plugin__item-tag) {
 		display: none;
@@ -100,4 +117,28 @@ button.kanban-plugin__new-item-button {
 .wrap-kanban-lanes .kanban-plugin__board > div {
 	flex-wrap: wrap;
 	overflow-y: scroll;
+}
+
+/*	Fix for title bar and tab header
+—————————————————————————————————————————————————————————*/
+
+body:is(.is-focused, :not(.is-focused)) .workspace-leaf-content[data-type='kanban'] .view-header {
+	height: unset;
+	background-color: var(--background-secondary);
+
+	.view-header-title {
+		visibility: hidden;
+
+		&-container::after {
+			background: none;
+		}
+	}
+	.view-actions {
+		position: unset;
+		margin-top: unset;
+	}
+}
+
+.workspace-tab-header.is-active[data-type='kanban'] {
+	--tab-background-active: var(--background-secondary);
 }
