@@ -56,13 +56,14 @@
 	border-bottom: none;
 	border-top: 1px solid var(--background-modifier-border);
 	margin-bottom: 0;
-	height: 40px;
-	padding: 0;
+	min-height: 40px;
+	padding: 8px 0;
 }
 
 .style-settings-container {
 	margin-bottom: 24px;
 	padding-left: 16px;
+	padding-top: 8px;
 }
 
 .themed-color-wrapper > div {

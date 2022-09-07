@@ -21,8 +21,12 @@
 	}
 }
 
+body {
+	--code-normal-inline: var(--pink);
+}
+
 .markdown-rendered code:not(pre code) { // inline code
-	--code-normal: var(--pink);
+	color: var(--code-normal-inline);
 }
 
 /*	Copy Button (in code blocks)
