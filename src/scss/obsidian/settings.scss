@@ -52,7 +52,16 @@
 	}
 }
 
+.style-settings-heading {
+	border-bottom: none;
+	border-top: 1px solid var(--background-modifier-border);
+	margin-bottom: 0;
+	height: 40px;
+	padding: 0;
+}
+
 .style-settings-container {
+	margin-bottom: 24px;
 	padding-left: 16px;
 }
 
