@@ -2382,7 +2382,7 @@ input[type=email],
 input[type=password],
 input[type=number] {
   background: var(--background-modifier-form-field);
-  padding: 0px 16px;
+  padding: 0px 28px;
   border-radius: var(--input-radius);
   height: var(--input-height);
   border-bottom: 1px solid var(--border-strong-1);
