@@ -2,7 +2,7 @@
 // @use 'variables/theme';
 
 .kanban-plugin {
-	background-color: var(--background-secondary);
+	background-color: var(--background-primary);
 
 	--lane-width: 272px;
 }
@@ -60,13 +60,13 @@
 }
 
 .kanban-plugin__lane-items {
-	background-color: var(--background-primary);
+	background-color: var(--background-secondary);
 	margin: 0;
 	padding: 4px 8px;
 }
 
 .kanban-plugin__item-button-wrapper {
-	background-color: var(--background-primary);
+	background-color: var(--background-secondary);
 	border-radius: 0 0 var(--radius-m) var(--radius-m);
 	border: 1px solid var(--background-modifier-border);
 }
@@ -134,7 +134,7 @@ button.kanban-plugin__new-item-button {
 
 body:is(.is-focused, :not(.is-focused)) .workspace-leaf-content[data-type='kanban'] .view-header {
 	height: unset;
-	background-color: var(--background-secondary);
+	background-color: var(--background-primary);
 
 	.view-header-title {
 		visibility: hidden;
@@ -150,5 +150,5 @@ body:is(.is-focused, :not(.is-focused)) .workspace-leaf-content[data-type='kanba
 }
 
 .workspace-tab-header.is-active[data-type='kanban'] {
-	--tab-background-active: var(--background-secondary);
+	--tab-background-active: var(--background-primary);
 }
