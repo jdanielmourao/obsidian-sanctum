@@ -9,7 +9,6 @@ input[type='password'],
 input[type='number'] {
 
 	background: var(--background-modifier-form-field);
-	padding: 0px 16px;
 	border-radius: var(--input-radius);
 	height: var(--input-height);
 	border-bottom: 1px solid var(--border-strong-1);
@@ -42,4 +41,8 @@ input[type='number'] {
 
 input.prompt-input { // ! move this to prompt module
 	padding: 24px;
+}
+
+div.search-input-container:before {
+	background-color: var(--text-faint);
 }
