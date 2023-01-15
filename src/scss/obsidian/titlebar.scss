@@ -1,6 +1,8 @@
-.view-header:not(.focus-within) {
-	height: 0px;
-	border-width: 0;
+.view-header .clickable-icon {
+	&[aria-label='Navigate back'],
+	&[aria-label='Navigate forward'] {
+		box-shadow: none;
+	}
 }
 
 .view-header .view-actions {
