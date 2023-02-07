@@ -818,8 +818,11 @@ body {
 .theme-light .markdown-rendered pre code {
   background-color: transparent;
 }
+body {
+  --code-normal-inline: var(--pink);
+}
 .markdown-rendered code:not(pre code) {
-  --code-normal: var(--pink);
+  color: var(--code-normal-inline);
 }
 @keyframes outdent {
   from {
@@ -1640,8 +1643,17 @@ body {
   color: var(--text-muted);
   opacity: 1;
 }
+.style-settings-heading {
+  border-bottom: none;
+  border-top: 1px solid var(--background-modifier-border);
+  margin-bottom: 0;
+  min-height: 40px;
+  padding: 8px 0;
+}
 .style-settings-container {
+  margin-bottom: 24px;
   padding-left: 16px;
+  padding-top: 8px;
 }
 .themed-color-wrapper > div {
   padding: 4px;
@@ -1922,9 +1934,9 @@ body {
   --tag-padding-y: 0.25em;
   --tag-radius: 2em;
 }
-.view-header:not(.focus-within) {
-  height: 0px;
-  border-width: 0;
+.view-header .clickable-icon[aria-label="Navigate back"],
+.view-header .clickable-icon[aria-label="Navigate forward"] {
+  box-shadow: none;
 }
 .view-header .view-actions {
   position: sticky;
@@ -2382,7 +2394,6 @@ input[type=email],
 input[type=password],
 input[type=number] {
   background: var(--background-modifier-form-field);
-  padding: 0px 16px;
   border-radius: var(--input-radius);
   height: var(--input-height);
   border-bottom: 1px solid var(--border-strong-1);
@@ -2435,6 +2446,9 @@ input[type=number]:focus:placeholder-shown {
 }
 input.prompt-input {
   padding: 24px;
+}
+div.search-input-container:before {
+  background-color: var(--text-faint);
 }
 .markdown-rendered progress,
 .markdown-source-view.is-live-preview progress {
@@ -6928,7 +6942,7 @@ body {
   padding-left: 2px;
 }
 .kanban-plugin {
-  background-color: var(--background-secondary);
+  background-color: var(--background-primary);
   --lane-width: 272px;
 }
 .kanban-plugin__lane-wrapper {
@@ -6976,12 +6990,12 @@ body {
   border-bottom: none;
 }
 .kanban-plugin__lane-items {
-  background-color: var(--background-primary);
+  background-color: var(--background-secondary);
   margin: 0;
   padding: 4px 8px;
 }
 .kanban-plugin__item-button-wrapper {
-  background-color: var(--background-primary);
+  background-color: var(--background-secondary);
   border-radius: 0 0 var(--radius-m) var(--radius-m);
   border: 1px solid var(--background-modifier-border);
 }
@@ -7034,7 +7048,7 @@ button.kanban-plugin__new-item-button:hover {
 }
 body:is(.is-focused, :not(.is-focused)) .workspace-leaf-content[data-type=kanban] .view-header {
   height: unset;
-  background-color: var(--background-secondary);
+  background-color: var(--background-primary);
 }
 body:is(.is-focused, :not(.is-focused)) .workspace-leaf-content[data-type=kanban] .view-header .view-header-title {
   visibility: hidden;
@@ -7047,7 +7061,7 @@ body:is(.is-focused, :not(.is-focused)) .workspace-leaf-content[data-type=kanban
   margin-top: unset;
 }
 .workspace-tab-header.is-active[data-type=kanban] {
-  --tab-background-active: var(--background-secondary);
+  --tab-background-active: var(--background-primary);
 }
 /*!
 /* @settings
@@ -7332,6 +7346,22 @@ settings:
 				description: Adds a subtle border around code blocks
 				type: class-toggle
 	-
+				id: code-background
+				title: Code background color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: code-normal-inline
+				title: Inline Code text color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
 				id: syntax-highlighting
 				title: Syntax Highlighting color scheme
 				description: This will only affect code block text colors.
@@ -7360,6 +7390,93 @@ settings:
 					-
 						label: 'Material'
 						value: 'material'
+	-
+			id: custom-syntax-colors
+			title: Custom syntax highlighting
+			description: Note that because Obsidian uses 2 different processes for code syntax in Reading and Editing view, syntax highlighting is bound to not be a 100% match between views.
+			type: heading
+			level: 2
+			collapsed: true
+	-
+				id: code-normal
+				title: Code normal text color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: code-comment
+				title: Code comment text color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: code-punctuation
+				title: Code punctuation text color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: code-tag
+				title: Code tag text color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: code-value
+				title: Code value text color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: code-string
+				title: Code string text color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: code-property
+				title: Code text color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: code-function
+				title: Code function text color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: code-keyword
+				title: Code keyword text color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
+	-
+				id: code-important
+				title: Code important text color
+				type: variable-themed-color
+				format: rgb
+				opacity: true
+				default-light: '#'
+				default-dark: '#'
 	-
 		id: embeds
 		title: Embeds / Transclusions
