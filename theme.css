@@ -1048,7 +1048,7 @@ body:not(.nav-folder-indicators) .nav-folder-title {
   right: 4px;
 }
 .markdown-rendered li:not(.task-list-item) .list-collapse-indicator {
-  margin-left: -40px;
+  margin-left: -80px;
 }
 .markdown-rendered li.task-list-item .list-collapse-indicator {
   margin-left: -42px;
