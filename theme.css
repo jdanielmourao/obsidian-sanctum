@@ -2697,16 +2697,19 @@ body {
 .callout[data-callout~=aside]:hover {
   border-radius: var(--callout-radius);
 }
-.callout[data-callout~=aside] .callout-title {
+.callout[data-callout~=aside] > .callout-title {
   display: none;
 }
-.callout[data-callout~=aside] .callout-content {
+.callout[data-callout~=aside] > .callout-content {
   padding: 0;
 }
-.callout[data-callout~=aside] .callout-content > p {
+.callout[data-callout~=aside] > .callout-content > p {
   margin-top: 0;
   margin-block-start: 4px;
   margin-block-end: 8px;
+}
+.callout[data-callout~=aside] .callout-content {
+  padding: 0 0 0 12px;
 }
 .callout[data-callout-metadata~=right] {
   float: right;
