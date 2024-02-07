@@ -21,6 +21,7 @@ body {
 
 	& .callout-icon {
 		align-self: baseline;
+		-webkit-mask-repeat: no-repeat;
 
 		& svg {
 			height: var(--icon-s);
