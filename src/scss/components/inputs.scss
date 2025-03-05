@@ -2,47 +2,51 @@
 // @use 'variables/theme';
 
 textarea,
-input[type='text'],
-input[type='search'],
-input[type='email'],
-input[type='password'],
-input[type='number'] {
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  background: var(--background-modifier-form-field);
+  border-radius: var(--input-radius);
+  height: var(--input-height);
+  border-bottom: 1px solid var(--border-strong-1);
+  border-bottom-color: var(--border-strong-1);
+  transition: all var(--duration-moderate-2) var(--motion-expressive-entrance);
 
-	background: var(--background-modifier-form-field);
-	border-radius: var(--input-radius);
-	height: var(--input-height);
-	border-bottom: 1px solid var(--border-strong-1);
-	border-bottom-color: var(--border-strong-1);
-	transition: all var(--duration-moderate-2) var(--motion-expressive-entrance);
+  &:hover:not(:focus, :focus-visible) {
+    border-bottom-color: var(--background-modifier-border-focus);
+    background-color: var(--field-hover-1);
 
-	&:hover:not(:focus):not(:focus-visible) {
-		border-bottom-color: var(--background-modifier-border-focus);
-		background-color: var(--field-hover-1);
+    &::placeholder {
+      color: var(--text-muted);
+    }
+  }
 
-		&::placeholder {
-			color: var(--text-muted);
-		}
-	}
-	&:focus-visible {
-		box-shadow: none;
-	}
-	&:focus {
-		box-shadow: none;
-		border-color: var(--background-modifier-border);
-		border-bottom-color: var(--background-modifier-border-focus);
+  &:focus-visible {
+    box-shadow: none;
+  }
 
-		&:placeholder-shown { //when starting to type, this will disappear
-			box-shadow: 0 0 0 0px var(--background-primary),
-						0 0 0 2px var(--background-modifier-border-focus);
-			border: none;
-		}
-	}
+  &:focus {
+    box-shadow: none;
+    border-color: var(--background-modifier-border);
+    border-bottom-color: var(--background-modifier-border-focus);
+
+    &:placeholder-shown {
+      // when starting to type, this will disappear
+      box-shadow:
+        0 0 0 0 var(--background-primary),
+        0 0 0 2px var(--background-modifier-border-focus);
+      border: none;
+    }
+  }
 }
 
-input.prompt-input { // ! move this to prompt module
-	padding: 24px;
+input.prompt-input {
+  // ! move this to prompt module
+  padding: 24px;
 }
 
-div.search-input-container:before {
-	background-color: var(--text-faint);
+div.search-input-container::before {
+  background-color: var(--text-faint);
 }

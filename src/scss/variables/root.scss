@@ -1,88 +1,82 @@
 :root {
+  /*	Leading (line-height)
+————————————————————————————————————————————————————————— */
+  --leading-0: 1em;
+  --leading-1: 1.125em;
+  --leading-2: 1.25em;
+  --leading-3: 1.375em;
+  --leading-4: 1.5em;
+  --leading-5: 1.625em;
+  --leading-6: 1.75em;
+  --leading-7: 1.875em;
+  --leading-8: 2.25em;
+  --leading-9: 2.5em;
+  --leading-10: 2.75em;
 
-/*	Leading (line-height)
-—————————————————————————————————————————————————————————*/
-	--leading-0:	1em;
-	--leading-1:	1.125em;
-	--leading-2:	1.25em;
-	--leading-3:	1.375em;
-	--leading-4:	1.5em;
-	--leading-5:	1.625em;
-	--leading-6:	1.75em;
-	--leading-7:	1.875em;
-	--leading-8:	2.25em;
-	--leading-9:	2.5em;
-	--leading-10:	2.75em;
+  /*	Tracking (letter-spacing)
+————————————————————————————————————————————————————————— */
+  --tracking-0: 0px;
+  --tracking-1: 0.16px;
+  --tracking-2: 0.32px;
+  --tracking-3: 0.64px;
+  --tracking-4: 0.96px;
 
-/*	Tracking (letter-spacing)
-—————————————————————————————————————————————————————————*/
-	--tracking-0:	0px;
-	--tracking-1:	.16px;
-	--tracking-2:	.32px;
-	--tracking-3:	.64px;
-	--tracking-4:	.96px;
+  /*	Layout Sizing
+————————————————————————————————————————————————————————— */
+  --size-0: 0px;
+  --size-1: 2px;
+  --size-2: 4px;
+  --size-3: 8px;
+  --size-4: 12px;
+  --size-5: 16px;
+  --size-6: 24px;
+  --size-7: 32px;
+  --size-8: 40px;
+  --size-9: 48px;
+  --size-10: 64px;
+  --size-11: 80px;
+  --size-12: 96px;
+  --size-13: 160px;
 
-/*	Layout Sizing
-—————————————————————————————————————————————————————————*/
-	--size-0:	0px;
-	--size-1:	2px;
-	--size-2:	4px;
-	--size-3:	8px;
-	--size-4:	12px;
-	--size-5:	16px;
-	--size-6:	24px;
-	--size-7:	32px;
-	--size-8:	40px;
-	--size-9:	48px;
-	--size-10:	64px;
-	--size-11:	80px;
-	--size-12:	96px;
-	--size-13:	160px;
+  /*	Elevation
+————————————————————————————————————————————————————————— */
+  --elevation-1: 0 2px 6px 0 rgba(0, 0, 0, 20%);
+  --elevation-2: 0 2px 6px 0 rgba(0, 0, 0, 30%);
 
-/*	Elevation
-—————————————————————————————————————————————————————————*/
---elevation-1:  0 2px 6px 0 rgba(0,0,0,.2);
---elevation-2: 0 2px 6px 0 rgba(0,0,0,.3);
+  /*	Animations/Transitions
+————————————————————————————————————————————————————————— */
+  --motion-entrance-productive: cubic-bezier(0, 0, 0.38, 0.9);
+  --motion-entrance-expressive: cubic-bezier(0, 0, 0.3, 1);
+  --motion-standard-productive: cubic-bezier(0.2, 0, 0.38, 0.9);
+  --motion-standard-expressive: cubic-bezier(0.4, 0.14, 0.3, 1);
+  --motion-exit-productive: cubic-bezier(0.2, 0, 1, 0.9);
+  --motion-exit-expressive: cubic-bezier(0.4, 0.14, 1, 1);
 
+  /*	Duration
+————————————————————————————————————————————————————————— */
+  --duration-fast-1: 70ms;
+  --duration-fast-2: 110ms;
+  --duration-moderate-1: 150ms;
+  --duration-moderate-2: 240ms;
+  --duration-slow-1: 400ms;
+  --duration-slow-2: 700ms;
 
+  /*	Typographic Modular Scale
+————————————————————————————————————————————————————————— */
+  --font-scale-000: 0.75rem; // 12px
+  --font-scale-00: 0.875rem; // 14px
+  --font-scale-0: 1rem; // 16px
+  --font-scale-1: 1.125rem; // 18px
+  --font-scale-2: 1.25rem; // 20px
+  --font-scale-3: 1.5rem; // 24px
+  --font-scale-4: 1.75rem; // 28px
+  --font-scale-5: 2rem; // 32px
+  --font-scale-6: 2.25rem; // 36px
+  --font-scale-7: 2.625rem; // 42px
+  --font-scale-8: 3rem; // 48px
+  --font-scale-9: 3.375rem; // 54px
+  --font-scale-10: 3.75rem; // 60px
 
-
-
-/*	Animations/Transitions
-—————————————————————————————————————————————————————————*/
---motion-entrance-productive:	cubic-bezier(0, 0, 0.38, 0.9);
---motion-entrance-expressive:	cubic-bezier(0, 0, 0.3, 1);
---motion-standard-productive:	cubic-bezier(0.2, 0, 0.38, 0.9);
---motion-standard-expressive:	cubic-bezier(0.4, 0.14, 0.3, 1);
---motion-exit-productive:		cubic-bezier(0.2, 0, 1, 0.9);
---motion-exit-expressive:		cubic-bezier(0.4, 0.14, 1, 1);
-
-/*	Duration
-—————————————————————————————————————————————————————————*/
---duration-fast-1:		70ms;
---duration-fast-2:		110ms;
---duration-moderate-1:	150ms;
---duration-moderate-2:	240ms;
---duration-slow-1:		400ms;
---duration-slow-2:		700ms;
-
-/*	Typographic Modular Scale
-—————————————————————————————————————————————————————————*/
---font-scale-000: .75rem;	// 12px
---font-scale-00: .875rem;	// 14px
---font-scale-0:     1rem;	// 16px
---font-scale-1: 1.125rem;	// 18px
---font-scale-2:  1.25rem;	// 20px
---font-scale-3:   1.5rem;	// 24px
---font-scale-4:  1.75rem;	// 28px
---font-scale-5:     2rem;	// 32px
---font-scale-6:  2.25rem;	// 36px
---font-scale-7: 2.625rem;	// 42px
---font-scale-8:     3rem;	// 48px
---font-scale-9: 3.375rem;	// 54px
---font-scale-10: 3.75rem;	// 60px
-
-
-/*	End of ROOT
-—————————————————————————————————————————————————————————*/
+  /*	End of ROOT
+————————————————————————————————————————————————————————— */
 }

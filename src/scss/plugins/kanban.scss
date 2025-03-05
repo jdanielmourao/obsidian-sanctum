@@ -2,153 +2,180 @@
 // @use 'variables/theme';
 
 .kanban-plugin {
-	background-color: var(--background-primary);
+  background-color: var(--background-primary);
 
-	--lane-width: 272px;
+  --lane-width: 272px;
 }
 
 .kanban-plugin__lane-wrapper {
-	margin-bottom: 16px;
-	margin-right: 16px;
+  margin-bottom: 16px;
+  margin-right: 16px;
 }
 
 .kanban-plugin__lane {
-	border-radius: var(--radius-m);
-	background-color: transparent;
-	border: none;
+  border-radius: var(--radius-m);
+  background-color: transparent;
+  border: none;
+
+  .kanban-plugin__item-input-wrapper {
+    border: none;
+  }
+
+  .kanban-plugin__item-input {
+    border-radius: var(--radius-m);
+    padding: 4px 8px;
+    height: 100%;
+  }
+}
+
+.kanban-plugin__lane-action-add {
+  color: var(--normal-text);
 }
 
 .kanban-plugin__lane-header-wrapper {
-	padding: 0 8px;
-	border-bottom: none;
+  padding: 0 8px;
+  border-bottom: none;
 
-	.kanban-plugin__lane-grip {
-		margin-right: 4px;
-		margin-left: -4px;
-		padding: 4px;
-		border-radius: var(--radius-s);
+  .kanban-plugin__lane-grip {
+    margin-right: 4px;
+    margin-left: -4px;
+    padding: 4px;
+    border-radius: var(--radius-s);
 
-		&:hover {
-			background-color: var(--background-modifier-hover);
-			color: var(--text-muted);
-		}
-	}
-	.kanban-plugin__lane-title {
-		font-size: var(--font-ui-medium);
-		font-weight: var(--font-medium);
-	}
-	div.kanban-plugin__lane-title-count {
-		border-radius: var(--radius-s);
-		font-size: var(--font-ui-smaller);
-	}
+    &:hover {
+      background-color: var(--background-modifier-hover);
+      color: var(--text-muted);
+    }
+  }
 
-	button.kanban-plugin__lane-settings-button {
-		box-shadow: none;
-		color: var(--text-faint);
-		
-		&:hover {
-			background-color: var(--background-modifier-hover);
-			color: var(--text-muted);
-		}
-	}
+  .kanban-plugin__lane-title {
+    font-size: var(--font-ui-medium);
+    font-weight: var(--font-medium);
+  }
+
+  div.kanban-plugin__lane-title-count {
+    border-radius: var(--radius-s);
+    font-size: var(--font-ui-smaller);
+  }
+
+  button.kanban-plugin__lane-settings-button {
+    box-shadow: none;
+    color: var(--text-faint);
+
+    &:hover {
+      background-color: var(--background-modifier-hover);
+      color: var(--text-muted);
+    }
+  }
 }
 
 .kanban-plugin__scroll-container.kanban-plugin__vertical {
-	border-radius: var(--radius-m) var(--radius-m) 0 0;
-	border: 1px solid var(--background-modifier-border);
-	border-bottom: none;
+  border-radius: var(--radius-m) var(--radius-m) 0 0;
+  border: 1px solid var(--background-modifier-border);
+  border-bottom: none;
 }
 
 .kanban-plugin__lane-items {
-	background-color: var(--background-secondary);
-	margin: 0;
-	padding: 4px 8px;
+  background-color: var(--background-secondary);
+  margin: 0;
+  padding: 4px 8px;
 }
 
 .kanban-plugin__item-button-wrapper {
-	background-color: var(--background-secondary);
-	border-radius: 0 0 var(--radius-m) var(--radius-m);
-	border: 1px solid var(--background-modifier-border);
+  background-color: var(--background-secondary);
+  border-radius: 0 0 var(--radius-m) var(--radius-m);
+  border: 1px solid var(--background-modifier-border);
+}
+
+// Should be identical to above 'kanban-plugin__item-button-wrapper'
+.kanban-plugin__item-form {
+  background-color: var(--background-secondary);
+  border-radius: 0 0 var(--radius-m) var(--radius-m);
+  border: 1px solid var(--background-modifier-border);
 }
 
 .kanban-plugin__item {
-	border-radius: var(--radius-m);
+  border-radius: var(--radius-m);
 
-	&:hover .kanban-plugin__item-title-wrapper {
-		background-color: var(--layer-hover-1);
-	}
+  &:hover .kanban-plugin__item-title-wrapper {
+    background-color: var(--layer-hover-1);
+  }
 
-	a.tag:not(.kanban-plugin__item-tag) {
-		display: none;
-	}
-	.kanban-plugin__item-tag {
-		padding: 2px 4px;
-		border: 1px solid var(--interactive);
+  a.tag:not(.kanban-plugin__item-tag) {
+    display: none;
+  }
 
-		&:hover {
-			padding: 2px 4px;
-			border: 1px solid var(--interactive);
-		}
-	}
+  .kanban-plugin__item-tag {
+    padding: 2px 4px;
+    border: 1px solid var(--interactive);
+
+    &:hover {
+      padding: 2px 4px;
+      border: 1px solid var(--interactive);
+    }
+  }
 }
 
 .kanban-plugin__item-content-wrapper {
-	background: transparent;
+  background: transparent;
 }
 
 .kanban-plugin__item-title-wrapper {
-	padding: 8px;
-	background: transparent;
+  padding: 8px;
+  background: transparent;
 }
 
 .kanban-plugin__item button.kanban-plugin__item-postfix-button {
-	opacity: 1;
-	color: var(--text-faint);
-	visibility: visible;
-	box-shadow: none;
+  opacity: 1;
+  color: var(--text-faint);
+  visibility: visible;
+  box-shadow: none;
 
-	&:hover {
-		background-color: var(--background-modifier-hover);
-		border-radius: var(--radius-s);
-		color: var(--text-muted);
-	}
+  &:hover {
+    background-color: var(--background-modifier-hover);
+    border-radius: var(--radius-s);
+    color: var(--text-muted);
+  }
 }
 
 button.kanban-plugin__new-item-button {
-	padding: 8px 16px;
-	background-color: transparent;
+  padding: 8px 16px;
+  background-color: transparent;
 
-	&:hover {
-		background-color: var(--layer-hover-1);
-		color: var(--text-muted);
-	}
+  &:hover {
+    background-color: var(--layer-hover-1);
+    color: var(--text-muted);
+  }
 }
 
 .wrap-kanban-lanes .kanban-plugin__board > div {
-	flex-wrap: wrap;
-	overflow-y: scroll;
+  flex-wrap: wrap;
+  overflow-y: scroll;
 }
 
 /*	Fix for title bar and tab header
-—————————————————————————————————————————————————————————*/
+————————————————————————————————————————————————————————— */
 
-body:is(.is-focused, :not(.is-focused)) .workspace-leaf-content[data-type='kanban'] .view-header {
-	height: unset;
-	background-color: var(--background-primary);
+body:is(.is-focused, :not(.is-focused))
+  .workspace-leaf-content[data-type="kanban"]
+  .view-header {
+  height: unset;
+  background-color: var(--background-primary);
 
-	.view-header-title {
-		visibility: hidden;
+  .view-header-title {
+    visibility: hidden;
 
-		&-container::after {
-			background: none;
-		}
-	}
-	.view-actions {
-		position: unset;
-		margin-top: unset;
-	}
+    &-container::after {
+      background: none;
+    }
+  }
+
+  .view-s {
+    position: unset;
+    margin-top: unset;
+  }
 }
 
-.workspace-tab-header.is-active[data-type='kanban'] {
-	--tab-background-active: var(--background-primary);
+.workspace-tab-header.is-active[data-type="kanban"] {
+  --tab-background-active: var(--background-primary);
 }

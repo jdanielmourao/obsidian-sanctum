@@ -1,112 +1,119 @@
 // @use 'variables/root';
 
-.theme-dark .markdown-rendered img:not(:hover),
-.theme-dark .workspace-leaf-content img:not(:hover) {
-	opacity: 70%;
-	transition: opacity	var(--duration-slow-2) var(--motion-entrance-expressive);
-}
+body.desaturate-images .image-embed {
+  opacity: 0.7;
+  transition: opacity var(--duration-slow-2) var(--motion-entrance-expressive);
 
-.theme-dark .markdown-rendered img:hover,
-.theme-dark .workspace-leaf-content img:hover {
-	transition: opacity	var(--duration-slow-2) var(--motion-entrance-expressive);
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .markdown-rendered img,
 .workspace-leaf-content img {
+  /* Dimensions */
+  --xs: 30%;
+  --s: 50%;
+  --m: 80%;
+  --l: 100%;
+  --xl: 120%;
+  --xxl: 150%;
+  --width: 100%;
 
-	/* Dimensions */
-	--xs: 30%;
-	--s: 50%;
-	--m: 80%;
-	--l: 100%;
-	--xl: 120%;
-	--xxl: 150%;
-	--width: 100%;
+  /* offset */
+  --move: 0%;
 
-	/* offset */
-	--move: 0%;
-	
+  &[alt~="-xs"] {
+    --width: var(--xs);
 
-	&[alt~='-xs'] {
-		--width: var(--xs);
-		width: var(--width);
-	}
-	&[alt~='-s'] {
-		--width: var(--s);
-		width: var(--width);
-	}
-	&[alt~='-m'] {
-		--width: var(--m);
-		width: var(--width);
-	}
-	&[alt~='-l'] {
-		--width: var(--l);
-		width: var(--width);
-	}
-	&[alt~='-xl'] {
-		--width: var(--xl);
-		min-width: var(--width);
-	}
-	&[alt~='-xxl'] {
-		--width: var(--xxl);
-		min-width: var(--width);
-	}
-	&[alt~='+'] {
-		--move: -10%;
-	}
-	&[alt~='++'] {
-		--move: -20%;
-	}
-	&[alt~='+++'] {
-		--move: -30%;
-	}
-	&[alt~='++++'] {
-		--move: -40%;
-	}
-	&[alt~='+++++'] {
-		--move: -50%;
-	}
-	&[alt~='-'] {
-		--move: 10%;
-	}
-	&[alt~='--'] {
-		--move: 20%;
-	}
-	&[alt~='---'] {
-		--move: 30%;
-	}
-	&[alt~='----'] {
-		--move: 40%;
-	}
-	&[alt~='-----'] {
-		--move: 50%;
-	}
+    width: var(--width);
+  }
 
-	&[alt*="left"] {
-		float: left;
-		clear: left;
-		margin-right: 1rem;
-		margin-left: calc(-50% + var(--move));
-		margin-bottom: 4px;
-		margin-top: 16px;
-	}
-	
-	
-	&[alt*="right"] {
-		float:right;
-		clear:right;
-		margin-left: 1rem;
-		margin-right: calc(-50% + var(--move));
-		margin-bottom: 4px;
-		margin-top: 16px;
-	}
-	
-	&[alt*="center"],
-	&[alt*="centre"] {
-		display:block;
-		margin-right: auto;
-		margin-left: auto;
-		margin-bottom: 4px;
-		margin-top: 16px;
-	}
+  &[alt~="-s"] {
+    --width: var(--s);
+
+    width: var(--width);
+  }
+
+  &[alt~="-m"] {
+    --width: var(--m);
+
+    width: var(--width);
+  }
+
+  &[alt~="-l"] {
+    --width: var(--l);
+
+    width: var(--width);
+  }
+
+  &[alt~="-xl"] {
+    --width: var(--xl);
+
+    min-width: var(--width);
+  }
+
+  &[alt~="-xxl"] {
+    --width: var(--xxl);
+
+    min-width: var(--width);
+  }
+
+  &[alt~="+"] {
+    --move: -10%;
+  }
+
+  &[alt~="++"] {
+    --move: -20%;
+  }
+
+  &[alt~="+++"] {
+    --move: -30%;
+  }
+
+  &[alt~="++++"] {
+    --move: -40%;
+  }
+
+  &[alt~="+++++"] {
+    --move: -50%;
+  }
+
+  &[alt~="-"] {
+    --move: 10%;
+  }
+
+  &[alt~="--"] {
+    --move: 20%;
+  }
+
+  &[alt~="---"] {
+    --move: 30%;
+  }
+
+  &[alt~="----"] {
+    --move: 40%;
+  }
+
+  &[alt~="-----"] {
+    --move: 50%;
+  }
+
+  &[alt*="left"] {
+    float: left;
+    clear: left;
+    margin: 16px 1rem 4px calc(-50% + var(--move));
+  }
+
+  &[alt*="right"] {
+    float: right;
+    clear: right;
+    margin: 16px calc(-50% + var(--move)) 4px 1rem;
+  }
+
+  &[alt*="center"],
+  &[alt*="centre"] {
+    display: block;
+    margin: 16px auto 4px;
+  }
 }

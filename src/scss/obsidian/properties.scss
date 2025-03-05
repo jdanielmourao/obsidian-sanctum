@@ -1,0 +1,29 @@
+.metadata-properties {
+  gap: 0;
+}
+
+.metadata-property {
+  padding-block: 4px;
+  border-radius: 0;
+
+  &:hover,
+  &:focus-within {
+    background-color: var(--background-modifier-hover);
+  }
+
+  .metadata-property-key .metadata-property-key-input {
+    background-color: transparent;
+  }
+
+  .metadata-property-value:hover {
+    background-color: var(--field-hover-1);
+  }
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--background-modifier-border);
+  }
+}

@@ -1,25 +1,47 @@
 {
-  "name": "obsidian-sanctum",
-  "version": "1.0.0",
+  "name": "obsidian-sanctum-reborn",
+  "version": "1.5.1",
+  "repository": {
+    "url": "https://github.com/antoKeinanen/obsidian-sanctum-reborn"
+  },
   "description": "A minimalist theme for creating a serene space of retreat, for thought and uninterrupted work.",
   "main": "index.js",
   "scripts": {
-    "dev": "node ./esbuild.config.mjs",
-    "build": "node ./esbuild.config.mjs production",
-    "version": "node version-bump.mjs && git add manifest.json versions.json"
+    "dev": "webpack --watch --mode development --config webpack.dev.js",
+    "build": "prettier --check . && stylelint --allow-empty-input \"**/*.{css,scss}\" && webpack --mode production --config webpack.prod.js",
+    "version": "node version-bump.mjs && git add manifest.json versions.json",
+    "lint": "stylelint --allow-empty-input \"**/*.{css,scss}\" --fix",
+    "format": "prettier . --write",
+    "prepare": "husky",
+    "pre-commit": "lint-staged"
   },
   "keywords": [
     "obsidianmd"
   ],
   "author": "jdanielmourao",
+  "contributors": [
+    {
+      "name": "antoKeinanen",
+      "url": "https://github.com/antoKeinanen"
+    }
+  ],
   "license": "MIT",
-  "dependencies": {
-    "dotenv": "^16.0.1",
-    "esbuild": "^0.15.1",
-    "esbuild-plugin-copy-file": "^0.0.2",
-    "esbuild-sass-plugin": "^2.3.2"
-  },
   "devDependencies": {
-    "esbuild-plugin-time": "^1.0.0"
-  }
+    "css-loader": "^7.1.1",
+    "dotenv": "^16.0.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "mini-css-extract-plugin": "^2.8.1",
+    "prettier": "^3.2.5",
+    "sass": "^1.75.0",
+    "sass-loader": "^14.2.0",
+    "stylelint": "^16.3.1",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-fix-style-only-entries": "^0.6.1",
+    "webpack-merge": "^5.10.0"
+  },
+  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
 }

@@ -2,33 +2,36 @@
 // @use 'variables/theme';
 
 body {
-	--input-height: 32px;
-	--input-radius: 4px;
+  --input-height: 32px;
+  --input-radius: 4px;
 }
 
 button {
-	padding: 0 16px;
-	background-color: var(--layer-1);
-	box-shadow: var(--input-shadow);
+  padding: 0 16px;
+  background-color: var(--layer-1);
+  box-shadow: var(--input-shadow);
 
-	&:hover {
-		background-color: var(--layer-hover-1);
-		box-shadow: var(--input-shadow-hover);
-	}
+  &:hover {
+    background-color: var(--layer-hover-1);
+    box-shadow: var(--input-shadow-hover);
+  }
 
-	&:focus-visible {
-		box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
-	}
+  &:focus-visible {
+    box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
+  }
 
-	&.mod-cta{
-		background-color: rgba(var(--color-accent-rgb), 1);
+  &.mod-cta {
+    background-color: rgb(var(--color-accent-rgb) 1);
+    color: rgb(var(--text-muted) 1);
 
-		&:hover {
-			filter: brightness(.95);
-		}
-		&:focus-visible {
-			box-shadow: 0 0 0 2px var(--focus-inset),
-						0 0 0 4px var(--background-modifier-border-focus);
-		}
-	}
+    &:hover {
+      filter: brightness(0.95);
+    }
+
+    &:focus-visible {
+      box-shadow:
+        0 0 0 2px var(--focus-inset),
+        0 0 0 4px var(--background-modifier-border-focus);
+    }
+  }
 }

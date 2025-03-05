@@ -1,10 +1,10 @@
 body {
-	--graph-controls-width: 240px;
-	--graph-text: var(--text-normal);
-	--graph-line: var(--border-subtle-1, var(--background-modifier-border-focus));
-	--graph-node: var(--text-muted);
-	--graph-node-unresolved: var(--text-faint);
-	--graph-node-focused: rgb(var(--color-accent-rgb));
-	--graph-node-tag: var(--red);
-	--graph-node-attachment: var(--yellow);
+  --graph-controls-width: 240px;
+  --graph-text: var(--text-normal);
+  --graph-line: var(--border-subtle-1, var(--background-modifier-border-focus));
+  --graph-node: var(--text-muted);
+  --graph-node-unresolved: var(--text-faint);
+  --graph-node-focused: rgb(var(--color-accent-rgb));
+  --graph-node-tag: var(--red);
+  --graph-node-attachment: var(--yellow);
 }

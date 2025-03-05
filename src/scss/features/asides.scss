@@ -2,123 +2,130 @@
 // @use 'variables/theme';
 
 body {
-	--aside-background: transparent;
-	--aside-background-hover: var(--background-modifier-hover);
-	--aside-text-color: var(--text-muted);
-	--aside-border-color: var(--background-modifier-border);
+  --aside-background: transparent;
+  --aside-background-hover: var(--background-modifier-hover);
+  --aside-text-color: var(--text-muted);
+  --aside-border-color: var(--background-modifier-border);
 }
 
-.callout[data-callout~=aside] {
-	--callout-color: 0, 0, 0;
-	--callout-icon: none;
-	--move: 0;
+.callout[data-callout~="aside"] {
+  --callout-color: 0, 0, 0;
+  --callout-icon: none;
+  --move: 0;
 
-	background-color: var(--aside-background);
-	position: relative;
-	float: right;
-	clear: both;
-	margin: 0;
-	padding: 0;
-	max-width: 50%;
-	padding-top: 4px;
-	margin-left: 1em;
-	padding-left: 1em;
-	padding-right: 1em;
-	margin-bottom: 4px;
-	margin-top: 4px;
-	font-size: 80%;
-	line-height: 1.6;
-	color: var(--aside-text-color);
-	border-radius: 0;
+  background-color: var(--aside-background);
+  position: relative;
+  float: right;
+  clear: both;
+  margin: 0;
+  padding: 0;
+  max-width: 50%;
+  padding-top: 4px;
+  margin-left: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  font-size: 80%;
+  line-height: 1.6;
+  color: var(--aside-text-color);
+  border-radius: 0;
 
+  &[data-callout-metadata~="+"] {
+    --move: calc(40% - 1em);
+  }
 
-	&[data-callout-metadata~='+'] {
-		--move: calc(40% - 1em);
-	}
-	&[data-callout-metadata~='++'] {
-		--move: calc(30% - 1em);
-	}
-	&[data-callout-metadata~='+++'] {
-		--move: calc(20% - 1em);
-	}
-	&[data-callout-metadata~='++++'] {
-		--move: calc(10% - 1em);
-	}
-	&[data-callout-metadata~='+++++'] {
-		--move: -1em;
-	}
+  &[data-callout-metadata~="++"] {
+    --move: calc(30% - 1em);
+  }
 
+  &[data-callout-metadata~="+++"] {
+    --move: calc(20% - 1em);
+  }
 
-	&:hover {
-		border-radius: var(--callout-radius);
-	}
+  &[data-callout-metadata~="++++"] {
+    --move: calc(10% - 1em);
+  }
 
-	.callout-title {
-		display: none;
-	}
-	.callout-content { 
-		padding: 0 ;
+  &[data-callout-metadata~="+++++"] {
+    --move: -1em;
+  }
 
-		& > p {
-			margin-top: 0;
-			margin-block-start: 4px;
-			margin-block-end: 8px;
-		}
-	}
+  &:hover {
+    border-radius: var(--callout-radius);
+  }
+
+  & > .callout-title {
+    display: none;
+  }
+
+  .callout-content {
+    padding: 0 0 0 12px;
+  }
+
+  & > .callout-content {
+    padding: 0;
+
+    & > p {
+      margin-top: 0;
+      margin-block: 4px 8px;
+    }
+  }
 }
 
-.callout[data-callout-metadata~=right] {
-	float: right;
-	clear: right;
-	margin-right: calc(-50% + var(--move));
-	margin-left: 1em;
+.callout[data-callout-metadata~="right"] {
+  float: right;
+  clear: right;
+  margin-right: calc(-50% + var(--move));
+  margin-left: 1em;
 
-	.aside-border & {
-		border-left: 1px solid var(--aside-border-color);
-	}
+  .aside-border & {
+    border-left: 1px solid var(--aside-border-color);
+  }
 }
 
-.callout[data-callout-metadata~=left] {
-	float: left;
-	clear: left;
-	margin-right: 1em;
-	margin-left: calc(-50% + var(--move));
-	border-left: none;
+.callout[data-callout-metadata~="left"] {
+  float: left;
+  clear: left;
+  margin-right: 1em;
+  margin-left: calc(-50% + var(--move));
+  border-left: none;
 
-	.aside-border & {
-		border-right: 1px solid var(--aside-border-color);
-	}
+  .aside-border & {
+    border-right: 1px solid var(--aside-border-color);
+  }
 }
-
 
 /*	Aside counter
-—————————————————————————————————————————————————————————*/
+————————————————————————————————————————————————————————— */
 
 .markdown-rendered {
-	counter-reset: sidenote-counter;
+  counter-reset: sidenote-counter;
 }
-.el-div[data-callout~=aside] {
-	counter-increment: sidenote-counter;
 
-	&:hover > .callout[data-callout~=aside]{
-		background-color: var(--aside-background-hover);
-	}
+.el-div[data-callout~="aside"] {
+  counter-increment: sidenote-counter;
+
+  &:hover > .callout[data-callout~="aside"] {
+    background-color: var(--aside-background-hover);
+  }
 }
+
 /* Counter before the sidenote in the margin. */
-.aside-counter .callout[data-callout~=aside] .callout-content::before {
-	content: counter(sidenote-counter)".";
-	position: relative;
-	float: left;
-	padding-right: 4px;
-	vertical-align: baseline;
-	font-size: 100%;
-	font-weight: bold;
-}
-/* Counter in the main body. */
-.aside-counter .el-div[data-callout~=aside]::after {
-	content: counter(sidenote-counter);
-	vertical-align: super;
-	font-size: 80%;
-	font-weight: bold;
+.aside-counter .callout[data-callout~="aside"] .callout-content::before {
+  content: counter(sidenote-counter) ".";
+  position: relative;
+  float: left;
+  padding-right: 4px;
+  vertical-align: baseline;
+  font-size: 100%;
+  font-weight: bold;
 }
 
+/* Counter in the main body. */
+.aside-counter .el-div[data-callout~="aside"]::after {
+  content: counter(sidenote-counter);
+  vertical-align: super;
+  font-size: 80%;
+  font-weight: bold;
+}

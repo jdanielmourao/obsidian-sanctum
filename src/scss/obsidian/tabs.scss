@@ -1,68 +1,70 @@
 // @use 'variables/colors';
 // @use 'variables/theme';
 
-
 body {
-	--tab-background-active: var(--background-primary);
-	--tab-text-color: var(--text-faint); //tabs in background (when in other app)
-	--tab-text-color-focused: var(--text-faint); //secondary tabs
-	--tab-text-color-focused-active: var(--text-normal);
-	--tab-font-size: var(--font-ui-small);
-	--tab-font-weight: inherit;
-	--tab-container-background: var(--background-secondary);
-	--tab-divider-color: var(--background-modifier-border);
-	--tab-outline-color: var(--divider-color);
-	--tab-outline-width: 1px;
-	--tab-curve: 0px;
-	--tab-radius: var(--radius-s);
-	--tab-radius-active: 6px 6px 0 0;
-
-
-	--titlebar-background: var(--background-secondary);
-	--titlebar-background-focused: var(--background-secondary-alt);
-	--titlebar-border-width: 0px;
-	--titlebar-border-color: var(--background-modifier-border);
-	--titlebar-text-color: var(--text-muted);
-	--titlebar-text-color-focused: var(--text-normal); // active tab color
-	--titlebar-text-color-highlighted: var(--text-accent-hover);
-	--titlebar-text-weight: var(--font-bold);
+  --tab-background-active: var(--background-primary);
+  --tab-text-color: var(--text-faint); // tabs in background (when in other app)
+  --tab-text-color-focused: var(--text-faint); // secondary tabs
+  --tab-text-color-focused-active: var(--text-normal);
+  --tab-font-size: var(--font-ui-small);
+  --tab-font-weight: inherit;
+  --tab-container-background: var(--background-secondary);
+  --tab-divider-color: var(--background-modifier-border);
+  --tab-outline-color: var(--divider-color);
+  --tab-outline-width: 1px;
+  --tab-curve: 0px;
+  --tab-radius: var(--radius-s);
+  --tab-radius-active: 6px 6px 0 0;
+  --titlebar-background: var(--background-secondary);
+  --titlebar-background-focused: var(--background-secondary-alt);
+  --titlebar-border-width: 0px;
+  --titlebar-border-color: var(--background-modifier-border);
+  --titlebar-text-color: var(--text-muted);
+  --titlebar-text-color-focused: var(--text-normal); // active tab color
+  --titlebar-text-color-highlighted: var(--text-accent-hover);
+  --titlebar-text-weight: var(--font-bold);
 }
 
 .workspace-tabs .view-header {
-	margin: 0;
-	padding: 0 16px;
+  margin: 0;
+  padding: 0 16px;
 }
 
 .workspace-tab-header.is-active .workspace-tab-header-inner-close-button:hover {
-	--tab-text-color-focused: var(--text-muted);
+  --tab-text-color-focused: var(--text-muted);
 }
 
 .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title {
-	color: var(--text-muted);
+  color: var(--text-muted);
 }
 
-.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
-	box-shadow: 
-	-0.5px 0 0.4px hsl(var(--shadow-color) / 0.47),
-	-0.8px 0 0.7px -1px hsl(var(--shadow-color) / 0.4),
-	-1.9px 0px 1.7px -2px hsl(var(--shadow-color) / 0.32),
-	-4.5px 0px 4px -3px hsl(var(--shadow-color) / 0.25),
-	-9.4px 0 8.4px -4.1px hsl(var(--shadow-color) / 0.18);
+.workspace
+  .mod-root
+  .workspace-tabs.mod-stacked
+  .workspace-tab-container
+  .workspace-tab-header {
+  box-shadow:
+    -0.5px 0 0.4px hsl(var(--shadow-color) / 47%),
+    -0.8px 0 0.7px -1px hsl(var(--shadow-color) / 40%),
+    -1.9px 0 1.7px -2px hsl(var(--shadow-color) / 32%),
+    -4.5px 0 4px -3px hsl(var(--shadow-color) / 25%),
+    -9.4px 0 8.4px -4.1px hsl(var(--shadow-color) / 18%);
 
-	.theme-light & {
-		--shadow-color: 60deg 5% 59%;
-	}
-	
-	.theme-dark & {
-		--shadow-color: 0deg 0% 1%;
-	}
+  .theme-light & {
+    --shadow-color: 60deg 5% 59%;
+  }
+
+  .theme-dark & {
+    --shadow-color: 0deg 0% 1%;
+  }
 }
 
 .mod-stacked .workspace-tab-header {
-	border-right: var(--divider-width) solid var(--divider-color);
+  border-right: var(--divider-width) solid var(--divider-color);
 }
 
-
-body.is-focused .workspace-tab-header:not(.mod-active) .workspace-tab-header-inner-close-button {
-	color: var(--tab-text-color-focused);
+body.is-focused
+  .workspace-tab-header:not(.mod-active)
+  .workspace-tab-header-inner-close-button {
+  color: var(--tab-text-color-focused);
 }

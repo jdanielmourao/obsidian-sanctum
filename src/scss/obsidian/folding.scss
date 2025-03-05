@@ -1,37 +1,50 @@
 /*	Folding Icons Preview
-—————————————————————————————————————————————————————————*/
+————————————————————————————————————————————————————————— */
 
 // ^ Note to self
 // ! Only makes sense to align in Editing View, since they align with the gutters
 // ! In Preview,most are aligned by default, and lists are slightly to the right
 // ! since they get a slight indent
 
-
-
 /*	Folding Icons Editing View
-—————————————————————————————————————————————————————————*/
+————————————————————————————————————————————————————————— */
 
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
-	right: -4px;
+  right: -4px;
 }
 
-.markdown-source-view.mod-cm6 .cm-line:not(.cm-active):not(.HyperMD-task-line):not(.HyperMD-header):not(.HyperMD-list-line-1) .cm-fold-indicator .collapse-indicator {
-	padding-right: 14px;
+.markdown-source-view.mod-cm6
+  .cm-line:not(
+    .cm-active,
+    .HyperMD-task-line,
+    .HyperMD-header,
+    .HyperMD-list-line-1
+  )
+  .cm-fold-indicator
+  .collapse-indicator {
+  padding-right: 14px;
 }
 
-
-.markdown-source-view.mod-cm6 .cm-line.cm-active:not(.HyperMD-list-line) .cm-fold-indicator .collapse-indicator {
-	right: 0px;
+.markdown-source-view.mod-cm6
+  .cm-line.cm-active:not(.HyperMD-list-line)
+  .cm-fold-indicator
+  .collapse-indicator {
+  right: 0;
 }
 
-.markdown-source-view.mod-cm6 .cm-line.cm-active.HyperMD-list-line-1 .cm-fold-indicator .collapse-indicator {
-	right: 2px;
+.markdown-source-view.mod-cm6
+  .cm-line.cm-active.HyperMD-list-line-1
+  .cm-fold-indicator
+  .collapse-indicator {
+  right: 2px;
 }
-
 
 /* 1st line of lists */
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-list-line-1:not(.cm-active):not(.HyperMD-task-line) .cm-fold-indicator .collapse-indicator {
-	right: -8px;
+.markdown-source-view.mod-cm6
+  .cm-line.HyperMD-list-line-1:not(.cm-active, .HyperMD-task-line)
+  .cm-fold-indicator
+  .collapse-indicator {
+  right: -8px;
 }
 
 // /* lists */
@@ -40,28 +53,33 @@
 // }
 
 /* task lists */
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-task-line:not(.HyperMD-list-line-1):not(.cm-active) .cm-fold-indicator .collapse-indicator {
-	right: 0px;
+.markdown-source-view.mod-cm6
+  .cm-line.HyperMD-task-line:not(.HyperMD-list-line-1, .cm-active)
+  .cm-fold-indicator
+  .collapse-indicator {
+  right: 0;
 }
 
-/* 1st line of task list*/
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-task-line.HyperMD-list-line-1 .cm-fold-indicator .collapse-indicator {
-	right: 4px;
+/* 1st line of task list */
+.markdown-source-view.mod-cm6
+  .cm-line.HyperMD-task-line.HyperMD-list-line-1
+  .cm-fold-indicator
+  .collapse-indicator {
+  right: 4px;
 }
 
 .markdown-rendered li:not(.task-list-item) .list-collapse-indicator {
-	margin-left: -40px;
+  margin-left: -40px;
 }
 
-
 .markdown-rendered li.task-list-item .list-collapse-indicator {
-	margin-left: -42px;
+  margin-left: -42px;
 }
 
 .collapse-icon svg.svg-icon {
-	transform: scale(1.4) scaleY(-1);
+  transform: scale(1.4) scaleY(-1);
 }
 
 .is-collapsed .collapse-icon svg.svg-icon {
-	transform: scale(1.4);
+  transform: scale(1.4);
 }

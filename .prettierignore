@@ -1,0 +1,8 @@
+node_modules
+.husky
+dist
+.prettierignore
+.stylelintignore
+.eslintignore
+pnpm-lock.yaml
+theme.css

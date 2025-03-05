@@ -1,68 +1,71 @@
 // @use 'variables/colors';
 // @use 'variables/theme';
 
-
 .markdown-rendered progress,
 .markdown-source-view.is-live-preview progress {
-	height: 4px;
-	width: 240px;
-	border-radius: 0;
-	vertical-align: 0;
-	overflow: visible; // ! this is required for the labels to be seen
+  height: 4px;
+  width: 240px;
+  border-radius: 0;
+  vertical-align: 0;
+  overflow: visible; // ! this is required for the labels to be seen
 }
 
 .markdown-rendered progress[value],
 .markdown-source-view.is-live-preview progress[value] {
-	position: relative;
+  position: relative;
 
-	&::-webkit-progress-bar {
-		background-color: var(--background-active);
-		box-shadow: none;
-		border-radius: 6px;
-	}
-	&::-webkit-progress-value {
-		background-color: var(--interactive-accent);
-	}
+  &::-webkit-progress-bar {
+    background-color: var(--background-active);
+    box-shadow: none;
+    border-radius: 6px;
+  }
 
-	&:before {
-		font-size: 60%;
-		line-height: 1.3;
-		content: attr(value) "/" attr(max);
-		color: var(--text-muted);
-		float: right;
-	}
+  &::-webkit-progress-value {
+    background-color: var(--interactive-accent);
+  }
 
-	&[max='100']:before {
-		content: attr(value)"%";
-	}
+  &::before {
+    font-size: 60%;
+    line-height: 1.3;
+    content: attr(value) "/" attr(max);
+    color: var(--text-muted);
+    float: right;
+  }
 
-	&[aria-description]:after {
-		content: attr(aria-description);
-		position: absolute;
-		font-size: 60%;
-		line-height: 1.3;
-		top: 0;
-		color: var(--text-muted);
-	}
+  &[max="100"]::before {
+    content: attr(value) "%";
+  }
+
+  &[aria-description]::after {
+    content: attr(aria-description);
+    position: absolute;
+    font-size: 60%;
+    line-height: 1.3;
+    top: 0;
+    color: var(--text-muted);
+  }
 }
 
-
-
-
-
-
-.markdown-source-view.is-live-preview progress[value^="1"]::-webkit-progress-value,
-.markdown-source-view.is-live-preview progress[value^="2"]::-webkit-progress-value,
-.markdown-source-view.is-live-preview progress[value^="3"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview
+  progress[value^="1"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview
+  progress[value^="2"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview
+  progress[value^="3"]::-webkit-progress-value,
 .markdown-preview-view progress[value^="1"]::-webkit-progress-value,
 .markdown-preview-view progress[value^="2"]::-webkit-progress-value,
 .markdown-preview-view progress[value^="3"]::-webkit-progress-value {
   background-color: var(--red);
 }
-.markdown-source-view.is-live-preview progress[value^="4"]::-webkit-progress-value,
-.markdown-source-view.is-live-preview progress[value^="5"]::-webkit-progress-value,
-.markdown-source-view.is-live-preview progress[value^="6"]::-webkit-progress-value,
-.markdown-source-view.is-live-preview progress[value^="7"]::-webkit-progress-value,
+
+.markdown-source-view.is-live-preview
+  progress[value^="4"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview
+  progress[value^="5"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview
+  progress[value^="6"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview
+  progress[value^="7"]::-webkit-progress-value,
 .markdown-preview-view progress[value^="4"]::-webkit-progress-value,
 .markdown-preview-view progress[value^="5"]::-webkit-progress-value,
 .markdown-preview-view progress[value^="6"]::-webkit-progress-value,
@@ -70,44 +73,43 @@
   background-color: var(--orange);
 }
 
-.markdown-source-view.is-live-preview progress[value^="8"]::-webkit-progress-value,
-.markdown-source-view.is-live-preview progress[value^="9"]::-webkit-progress-value,
-.markdown-source-view.is-live-preview progress[value^="100"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview
+  progress[value^="8"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview
+  progress[value^="9"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview
+  progress[value^="100"]::-webkit-progress-value,
 .markdown-preview-view progress[value^="8"]::-webkit-progress-value,
 .markdown-preview-view progress[value^="9"]::-webkit-progress-value,
 .markdown-preview-view progress[value^="100"]::-webkit-progress-value {
   background-color: var(--green);
 }
 
-
-
-
-
-.markdown-source-view.is-live-preview progress:not([value]), //Indeterminate (no value) progress
+.markdown-source-view.is-live-preview progress:not([value]), // Indeterminate (no value) progress
 .markdown-preview-view progress:not([value]) {
-	background-color: var(--background-active);
-	border-radius: 3px;
+  background-color: var(--background-active);
+  border-radius: 3px;
 
-	&:indeterminate {
-		animation: clr-progress-looper 2s infinite linear;
-	}
-	
-	@keyframes clr-progress-looper {
-		0% {
-			padding-left: 0;
-		}
-		50% {
-			padding-left: 7.5em;
-		}
-		100% {
-			padding-left: calc(240px - 32px);
-		}
-	}
-	
-	&:indeterminate::-webkit-progress-bar {
-		background-color: var(--cyan);
-		width: 32px;
-	}
+  &:indeterminate {
+    animation: clr-progress-looper 2s infinite linear;
+  }
+
+  @keyframes clr-progress-looper {
+    0% {
+      padding-left: 0;
+    }
+
+    50% {
+      padding-left: 7.5em;
+    }
+
+    100% {
+      padding-left: calc(240px - 32px);
+    }
+  }
+
+  &:indeterminate::-webkit-progress-bar {
+    background-color: var(--cyan);
+    width: 32px;
+  }
 }
-
-

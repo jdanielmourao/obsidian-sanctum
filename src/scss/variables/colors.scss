@@ -2,179 +2,164 @@
 /*	Every shade is planned according to specific contrast ratios, and
 /*	based on Le Corbusier's Architectural Polychromy. Every color-50,
 /*	for example, when greyscaled, should look the same.
-—————————————————————————————————————————————————————————*/
+————————————————————————————————————————————————————————— */
 
 body {
-	--white:	253, 254, 254;
-	--gray-10:	244, 244, 240;
-	--gray-20:	226, 224, 220;
-	--gray-30:	199, 197, 194;
-	--gray-40:	169, 168, 165;
-	--gray-50:	142, 140, 139;
-	--gray-60:	112, 110, 109;
-	--gray-70:	84, 81, 81;
-	--gray-80:	58, 56, 56;
-	--gray-90:	38, 38, 37;
-	--gray-100: 22, 22, 22;
-	--black:	0, 0, 0;
-
-	--cyan-10: hsl(90, 15.4%, 94.9%);
-	--cyan-20: hsl(98.2, 15.9%, 86.5%);
-	--cyan-30: hsl(155, 18.7%, 74.9%);
-	--cyan-40: hsl(182.2, 26.2%, 59.6%);
-	--cyan-50: hsl(187.4, 22.4%, 50%);
-	--cyan-60: hsl(199.5, 38.8%, 40.4%);
-	--cyan-70: hsl(202.8, 57.6%, 29.6%);
-	--cyan-80: hsl(200.9, 100%, 18%);
-	--cyan-90: hsl(206.1, 100%, 13.5%);
-	--cyan-100:hsl(214.8, 100%, 9.8%);
-	--cyan: var(--cyan-50);
-
-	--red-10: hsl(12.6, 100%, 96.3%);
-	--red-20: hsl(12.9, 100%, 90%);
-	--red-30: hsl(12, 100%, 81.4%);
-	--red-40: hsl(11.7, 94.7%, 70.4%);
-	--red-50: hsl(11.2, 88.7%, 58.4%);
-	--red-60: hsl(9.6, 66.2%, 46.5%);
-	--red-70: hsl(358, 63.4%, 37.5%);
-	--red-80: hsl(342.1, 82.5%, 24.7%);
-	--red-90: hsl(346.4, 100%, 16.5%);
-	--red-100:hsl(357.8, 100%, 10.6%);
-	--red: var(--red-60);
-
-	--orange-10: hsl(28.7, 85.2%, 94.7%);
-	--orange-20: hsl(27.8, 79.4%, 86.7%);
-	--orange-30: hsl(30.2, 98.6%, 72%);
-	--orange-40: hsl(24.4, 90.8%, 61.8%);
-	--orange-50: hsl(18.3, 75%, 54.5%);
-	--orange-60: hsl(12.8, 60.5%, 45.7%);
-	--orange-70: hsl(358, 63.4%, 37.5%);
-	--orange-80: hsl(342.1, 82.5%, 24.7%);
-	--orange-90: hsl(346.4, 100%, 16.5%);
-	--orange-100:hsl(357.8, 100%, 10.6%);
-	--orange: var(--orange-40);
-
-	--yellow-10: hsl(44.3, 95.5%, 91.4%);
-	--yellow-20: hsl(41.1, 88.1%, 80.2%);
-	--yellow-30: hsl(40.2, 87.2%, 63.1%);
-	--yellow-40: hsl(41.6, 70.4%, 49%);
-	--yellow-50: hsl(42.7, 100%, 36.1%);
-	--yellow-60: hsl(39.5, 100%, 29.8%);
-	--yellow-70: hsl(35, 100%, 23.5%);
-	--yellow-80: hsl(28.4, 100%, 18.2%);
-	--yellow-90: hsl(19.4, 100%, 13.9%);
-	--yellow-100:hsl(3.5, 100%, 10.2%);
-	--yellow: var(--yellow-30);
-
-	--green-10: hsl(77.6, 48.6%, 93.1%);
-	--green-20: hsl(76.6, 48.5%, 81%);
-	--green-30: hsl(83.5, 44%, 67.1%);
-	--green-40: hsl(96.9, 31.8%, 56.9%);
-	--green-50: hsl(114.6, 22.4%, 49%);
-	--green-60: hsl(139, 32.3%, 36.5%);
-	--green-70: hsl(144.9, 52.8%, 24.1%);
-	--green-80: hsl(148.2, 100%, 12.9%);
-	--green-90: hsl(134.7, 100%, 8.8%);
-	--green-100:hsl(120, 100%, 5.3%);
-	--green: var(--green-50);
-
-	--viridian-10: hsl(96, 18.5%, 94.7%);
-	--viridian-20: hsl(100, 21.1%, 86.1%);
-	--viridian-30: hsl(111.8, 17.5%, 75.3%);
-	--viridian-40: hsl(144.3, 19%, 61.8%);
-	--viridian-50: hsl(151.5, 24.9%, 48%);
-	--viridian-60: hsl(161, 34.8%, 35.5%);
-	--viridian-70: hsl(165.7, 52.1%, 23.7%);
-	--viridian-80: hsl(168, 100%, 12.7%);
-	--viridian-90: hsl(163.6, 100%, 8.6%);
-	--viridian-100:hsl(156.9, 100%, 5.1%);
-	--viridian: var(--viridian-50);
-
-	--blue-10: hsl(195, 16.7%, 95.3%);
-	--blue-20: hsl(190.9, 16.4%, 86.9%);
-	--blue-30: hsl(190.4, 18.7%, 75.9%);
-	--blue-40: hsl(203.1, 36.3%, 64.9%);
-	--blue-50: hsl(208.1, 34.2%, 55.9%);
-	--blue-60: hsl(217.1, 31.4%, 47.5%);
-	--blue-70: hsl(215.9, 45.1%, 35.7%);
-	--blue-80: hsl(216.3, 59.4%, 25.1%);
-	--blue-90: hsl(215, 83.7%, 16.9%);
-	--blue-100:hsl(221, 100%, 11.8%);
-	--blue: var(--blue-60);
-
-	--pink-10: hsl(352.5, 100%, 96.9%);
-	--pink-20: hsl(355.6, 100%, 92%);
-	--pink-30: hsl(352.8, 94.9%, 84.5%);
-	--pink-40: hsl(351.4, 86.2%, 74.5%);
-	--pink-50: hsl(348.5, 79.3%, 63.9%);
-	--pink-60: hsl(343.4, 62.8%, 49.6%);
-	--pink-70: hsl(339.4, 71.6%, 35.9%);
-	--pink-80: hsl(342.1, 82.5%, 24.7%);
-	--pink-90: hsl(346.4, 100%, 16.5%);
-	--pink-100:hsl(357.8, 100%, 10.6%);
-	--pink: var(--pink-50);
-
-	--pistachio-10: hsl(69.2, 37.1%, 93.1%);
-	--pistachio-20: hsl(67.1, 37.8%, 82.4%);
-	--pistachio-30: hsl(64.8, 36.9%, 67.1%);
-	--pistachio-40: hsl(63.5, 42.6%, 47.8%);
-	--pistachio-50: hsl(63, 70.9%, 33.7%);
-	--pistachio-60: hsl(62.1, 100%, 22.7%);
-	--pistachio-70: hsl(61.4, 100%, 16.7%);
-	--pistachio-80: hsl(60, 100%, 11.6%);
-	--pistachio-90: hsl(58.5, 100%, 7.8%);
-	--pistachio-100:hsl(52.8, 100%, 4.9%);
-	--pistachio: var(--pistachio-50);
-
-	--lavender-10: hsl(264deg, 63%, 97%);
-	--lavender-20: hsl(264deg, 64%, 91%);
-	--lavender-30: hsl(264deg, 61%, 84%);
-	--lavender-40: hsl(266deg, 58%, 75%);
-	--lavender-50: hsl(268deg, 57%, 66%);
-	--lavender-60: hsl(270deg, 55%, 56%);
-	--lavender-70: hsl(271deg, 57%, 43%);
-	--lavender-80: hsl(275deg, 89%, 29%);
-	--lavender-90: hsl(273deg, 100%, 21%);
-	--lavender-100: hsl(266deg, 100%, 15%);
-	--lavender: var(--lavender-50);
+  --white: 253, 254, 254;
+  --gray-10: 244, 244, 240;
+  --gray-20: 226, 224, 220;
+  --gray-30: 199, 197, 194;
+  --gray-40: 169, 168, 165;
+  --gray-50: 142, 140, 139;
+  --gray-60: 112, 110, 109;
+  --gray-70: 84, 81, 81;
+  --gray-80: 58, 56, 56;
+  --gray-90: 38, 38, 37;
+  --gray-100: 22, 22, 22;
+  --black: 0, 0, 0;
+  --cyan-10: hsl(90deg, 15.4%, 94.9%);
+  --cyan-20: hsl(98.2deg, 15.9%, 86.5%);
+  --cyan-30: hsl(155deg, 18.7%, 74.9%);
+  --cyan-40: hsl(182.2deg, 26.2%, 59.6%);
+  --cyan-50: hsl(187.4deg, 22.4%, 50%);
+  --cyan-60: hsl(199.5deg, 38.8%, 40.4%);
+  --cyan-70: hsl(202.8deg, 57.6%, 29.6%);
+  --cyan-80: hsl(200.9deg, 100%, 18%);
+  --cyan-90: hsl(206.1deg, 100%, 13.5%);
+  --cyan-100: hsl(214.8deg, 100%, 9.8%);
+  --cyan: var(--cyan-50);
+  --red-10: hsl(12.6deg, 100%, 96.3%);
+  --red-20: hsl(12.9deg, 100%, 90%);
+  --red-30: hsl(12deg, 100%, 81.4%);
+  --red-40: hsl(11.7deg, 94.7%, 70.4%);
+  --red-50: hsl(11.2deg, 88.7%, 58.4%);
+  --red-60: hsl(9.6deg, 66.2%, 46.5%);
+  --red-70: hsl(358deg, 63.4%, 37.5%);
+  --red-80: hsl(342.1deg, 82.5%, 24.7%);
+  --red-90: hsl(346.4deg, 100%, 16.5%);
+  --red-100: hsl(357.8deg, 100%, 10.6%);
+  --red: var(--red-60);
+  --orange-10: hsl(28.7deg, 85.2%, 94.7%);
+  --orange-20: hsl(27.8deg, 79.4%, 86.7%);
+  --orange-30: hsl(30.2deg, 98.6%, 72%);
+  --orange-40: hsl(24.4deg, 90.8%, 61.8%);
+  --orange-50: hsl(18.3deg, 75%, 54.5%);
+  --orange-60: hsl(12.8deg, 60.5%, 45.7%);
+  --orange-70: hsl(358deg, 63.4%, 37.5%);
+  --orange-80: hsl(342.1deg, 82.5%, 24.7%);
+  --orange-90: hsl(346.4deg, 100%, 16.5%);
+  --orange-100: hsl(357.8deg, 100%, 10.6%);
+  --orange: var(--orange-40);
+  --yellow-10: hsl(44.3deg, 95.5%, 91.4%);
+  --yellow-20: hsl(41.1deg, 88.1%, 80.2%);
+  --yellow-30: hsl(40.2deg, 87.2%, 63.1%);
+  --yellow-40: hsl(41.6deg, 70.4%, 49%);
+  --yellow-50: hsl(42.7deg, 100%, 36.1%);
+  --yellow-60: hsl(39.5deg, 100%, 29.8%);
+  --yellow-70: hsl(35deg, 100%, 23.5%);
+  --yellow-80: hsl(28.4deg, 100%, 18.2%);
+  --yellow-90: hsl(19.4deg, 100%, 13.9%);
+  --yellow-100: hsl(3.5deg, 100%, 10.2%);
+  --yellow: var(--yellow-30);
+  --green-10: hsl(77.6deg, 48.6%, 93.1%);
+  --green-20: hsl(76.6deg, 48.5%, 81%);
+  --green-30: hsl(83.5deg, 44%, 67.1%);
+  --green-40: hsl(96.9deg, 31.8%, 56.9%);
+  --green-50: hsl(114.6deg, 22.4%, 49%);
+  --green-60: hsl(139deg, 32.3%, 36.5%);
+  --green-70: hsl(144.9deg, 52.8%, 24.1%);
+  --green-80: hsl(148.2deg, 100%, 12.9%);
+  --green-90: hsl(134.7deg, 100%, 8.8%);
+  --green-100: hsl(120deg, 100%, 5.3%);
+  --green: var(--green-50);
+  --viridian-10: hsl(96deg, 18.5%, 94.7%);
+  --viridian-20: hsl(100deg, 21.1%, 86.1%);
+  --viridian-30: hsl(111.8deg, 17.5%, 75.3%);
+  --viridian-40: hsl(144.3deg, 19%, 61.8%);
+  --viridian-50: hsl(151.5deg, 24.9%, 48%);
+  --viridian-60: hsl(161deg, 34.8%, 35.5%);
+  --viridian-70: hsl(165.7deg, 52.1%, 23.7%);
+  --viridian-80: hsl(168deg, 100%, 12.7%);
+  --viridian-90: hsl(163.6deg, 100%, 8.6%);
+  --viridian-100: hsl(156.9deg, 100%, 5.1%);
+  --viridian: var(--viridian-50);
+  --blue-10: hsl(195deg, 16.7%, 95.3%);
+  --blue-20: hsl(190.9deg, 16.4%, 86.9%);
+  --blue-30: hsl(190.4deg, 18.7%, 75.9%);
+  --blue-40: hsl(203.1deg, 36.3%, 64.9%);
+  --blue-50: hsl(208.1deg, 34.2%, 55.9%);
+  --blue-60: hsl(217.1deg, 31.4%, 47.5%);
+  --blue-70: hsl(215.9deg, 45.1%, 35.7%);
+  --blue-80: hsl(216.3deg, 59.4%, 25.1%);
+  --blue-90: hsl(215deg, 83.7%, 16.9%);
+  --blue-100: hsl(221deg, 100%, 11.8%);
+  --blue: var(--blue-60);
+  --pink-10: hsl(352.5deg, 100%, 96.9%);
+  --pink-20: hsl(355.6deg, 100%, 92%);
+  --pink-30: hsl(352.8deg, 94.9%, 84.5%);
+  --pink-40: hsl(351.4deg, 86.2%, 74.5%);
+  --pink-50: hsl(348.5deg, 79.3%, 63.9%);
+  --pink-60: hsl(343.4deg, 62.8%, 49.6%);
+  --pink-70: hsl(339.4deg, 71.6%, 35.9%);
+  --pink-80: hsl(342.1deg, 82.5%, 24.7%);
+  --pink-90: hsl(346.4deg, 100%, 16.5%);
+  --pink-100: hsl(357.8deg, 100%, 10.6%);
+  --pink: var(--pink-50);
+  --pistachio-10: hsl(69.2deg, 37.1%, 93.1%);
+  --pistachio-20: hsl(67.1deg, 37.8%, 82.4%);
+  --pistachio-30: hsl(64.8deg, 36.9%, 67.1%);
+  --pistachio-40: hsl(63.5deg, 42.6%, 47.8%);
+  --pistachio-50: hsl(63deg, 70.9%, 33.7%);
+  --pistachio-60: hsl(62.1deg, 100%, 22.7%);
+  --pistachio-70: hsl(61.4deg, 100%, 16.7%);
+  --pistachio-80: hsl(60deg, 100%, 11.6%);
+  --pistachio-90: hsl(58.5deg, 100%, 7.8%);
+  --pistachio-100: hsl(52.8deg, 100%, 4.9%);
+  --pistachio: var(--pistachio-50);
+  --lavender-10: hsl(264deg, 63%, 97%);
+  --lavender-20: hsl(264deg, 64%, 91%);
+  --lavender-30: hsl(264deg, 61%, 84%);
+  --lavender-40: hsl(266deg, 58%, 75%);
+  --lavender-50: hsl(268deg, 57%, 66%);
+  --lavender-60: hsl(270deg, 55%, 56%);
+  --lavender-70: hsl(271deg, 57%, 43%);
+  --lavender-80: hsl(275deg, 89%, 29%);
+  --lavender-90: hsl(273deg, 100%, 21%);
+  --lavender-100: hsl(266deg, 100%, 15%);
+  --lavender: var(--lavender-50);
 }
 
 .theme-light {
-	--shadow-color: 0deg 5% 59%;
-
-	--input-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12),
-						  0px 0.5px 0.4px hsl(var(--shadow-color) / 0.47),
-						  0px 0.8px 0.7px -1px hsl(var(--shadow-color) / 0.4),
-						  0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 0.32),
-						  0px 4.5px 4px -3px hsl(var(--shadow-color) / 0.25),
-						  0.1px 9.4px 8.4px -4.1px hsl(var(--shadow-color) / 0.18);
-
-	--input-shadow-hover:inset 0 0 0 1px rgba(0, 0, 0, 0.17),
-							   0px 0.5px 0.5px hsl(var(--shadow-color) / 0.47),
-							   0px 0.9px 0.8px -1px hsl(var(--shadow-color) / 0.4),
-							   0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 0.33),
-							   0px 4.5px 4.1px -3px hsl(var(--shadow-color) / 0.26),
-							   0.1px 9.4px 8.5px -4px hsl(var(--shadow-color) / 0.19);
+  --shadow-color: 0deg 5% 59%;
+  --input-shadow: inset 0 0 0 1px rgba(0, 0, 0, 12%),
+    0px 0.5px 0.4px hsl(var(--shadow-color) / 47%),
+    0px 0.8px 0.7px -1px hsl(var(--shadow-color) / 40%),
+    0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 32%),
+    0px 4.5px 4px -3px hsl(var(--shadow-color) / 25%),
+    0.1px 9.4px 8.4px -4.1px hsl(var(--shadow-color) / 18%);
+  --input-shadow-hover: inset 0 0 0 1px rgba(0, 0, 0, 17%),
+    0px 0.5px 0.5px hsl(var(--shadow-color) / 47%),
+    0px 0.9px 0.8px -1px hsl(var(--shadow-color) / 40%),
+    0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 33%),
+    0px 4.5px 4.1px -3px hsl(var(--shadow-color) / 26%),
+    0.1px 9.4px 8.5px -4px hsl(var(--shadow-color) / 19%);
 }
 
 .theme-dark {
-	--shadow-color: 0deg 0% 1%;
-
-	--input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
-						  0px 0.5px 0.4px hsl(var(--shadow-color) / 0.47),
-						  0px 0.8px 0.7px -1px hsl(var(--shadow-color) / 0.4),
-						  0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 0.32),
-						  0px 4.5px 4px -3px hsl(var(--shadow-color) / 0.25),
-						  0.1px 9.4px 8.4px -4.1px hsl(var(--shadow-color) / 0.18);
-
-	--input-shadow-hover:inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
-							   0px 0.5px 0.5px hsl(var(--shadow-color) / 0.47),
-							   0px 0.9px 0.8px -1px hsl(var(--shadow-color) / 0.4),
-							   0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 0.33),
-							   0px 4.5px 4.1px -3px hsl(var(--shadow-color) / 0.26),
-							   0.1px 9.4px 8.5px -4px hsl(var(--shadow-color) / 0.19);
+  --shadow-color: 0deg 0% 1%;
+  --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 9%),
+    0px 0.5px 0.4px hsl(var(--shadow-color) / 47%),
+    0px 0.8px 0.7px -1px hsl(var(--shadow-color) / 40%),
+    0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 32%),
+    0px 4.5px 4px -3px hsl(var(--shadow-color) / 25%),
+    0.1px 9.4px 8.4px -4.1px hsl(var(--shadow-color) / 18%);
+  --input-shadow-hover: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 9%),
+    0px 0.5px 0.5px hsl(var(--shadow-color) / 47%),
+    0px 0.9px 0.8px -1px hsl(var(--shadow-color) / 40%),
+    0px 1.9px 1.7px -2px hsl(var(--shadow-color) / 33%),
+    0px 4.5px 4.1px -3px hsl(var(--shadow-color) / 26%),
+    0.1px 9.4px 8.5px -4px hsl(var(--shadow-color) / 19%);
 }
-//
 
 /*
 

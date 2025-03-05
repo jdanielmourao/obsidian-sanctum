@@ -2,55 +2,57 @@
 // @use 'variables/theme';
 
 body {
-	--checkbox-color-rgb: 102, 153, 97;
-	--checkbox-radius: 16px;
-	--checkbox-checked-color-hover: rgba(var(--checkbox-color-rgb), .9);
-
-	--checkbox-size: 16px;
-	--checkbox-color: rgb(var(--checkbox-color-rgb));
-	--checkbox-color-hover: rgba(var(--checkbox-color-rgb), .5);
-	--checkbox-border-color: var(--text-faint);
-	--checkbox-border-color-hover: rgb(var(--checkbox-color-rgb));
-	--checkbox-marker-color: var(--background-primary);
+  --checkbox-color-rgb: 102, 153, 97;
+  --checkbox-radius: 16px;
+  --checkbox-checked-color-hover: rgba(var(--checkbox-color-rgb), 0.9);
+  --checkbox-size: 16px;
+  --checkbox-color: rgb(var(--checkbox-color-rgb));
+  --checkbox-color-hover: rgb(var(--checkbox-color-rgb) 0.5);
+  --checkbox-border-color: var(--text-faint);
+  --checkbox-border-color-hover: rgb(var(--checkbox-color-rgb));
+  --checkbox-marker-color: var(--background-primary);
 }
 
-input[type='checkbox'] {
-	border-radius: var(--checkbox-radius);
-	border: 1.5px solid var(--checkbox-border-color);
-	width: var(--checkbox-size);
-	height: var(--checkbox-size);
-	transition: box-shadow var(--duration-moderate-2) var(--motion-entrance-expressive);
+input[type="checkbox"] {
+  border-radius: var(--checkbox-radius);
+  border: 1.5px solid var(--checkbox-border-color);
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  transition: box-shadow var(--duration-moderate-2)
+    var(--motion-entrance-expressive);
 
-	&:hover {
-		box-shadow: 0 0 0 3px rgba(var(--checkbox-color-rgb), .2);
-	}
+  &:hover {
+    box-shadow: 0 0 0 3px rgb(var(--checkbox-color-rgb) 0.2);
+  }
 
-	&:checked {
-		border-color: transparent;
-		background-color: var(--checkbox-color);
-		// background-position: 53.125% 62.5%; 
-		// background-size: 68,75%; 
-	
-		&:hover {
-			background-color: var(--checkbox-checked-color-hover);
-		}
+  &:checked {
+    border-color: transparent;
+    background-color: var(--checkbox-color);
 
-		&::after {
-			top: -1px;
-			left: -1px;
-			background-color: var(--checkbox-marker-color);
-			-webkit-mask-position: 43.75% 53.125%;	// ~7.5px 8.5px (full or half pxs are better than smaller units
-			-webkit-mask-size: 59.375%;	//~9.5px otherwise they move positions depending on viewport size
-			-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(36, 20%, 95.1%)' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
-		}
-	}
-	&:focus-visible {
-		box-shadow: 
-		0 0 0 1px var(--background-primary),
-		0 0 0 3px var(--background-modifier-border-focus);
-	  }
+    // background-position: 53.125% 62.5%;
+    // background-size: 68,75%;
+
+    &:hover {
+      background-color: var(--checkbox-checked-color-hover);
+    }
+
+    &::after {
+      top: -1px;
+      left: -1px;
+      background-color: var(--checkbox-marker-color);
+      mask-position: 43.75% 53.125%; // ~7.5px 8.5px (full or half pxs are better than smaller units
+      mask-size: 59.375%; // ~9.5px otherwise they move positions depending on viewport size
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='hsl(36, 20%, 95.1%)' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
+    }
+  }
+
+  &:focus-visible {
+    box-shadow:
+      0 0 0 1px var(--background-primary),
+      0 0 0 3px var(--background-modifier-border-focus);
+  }
 }
 
-.markdown-preview-view input[type=checkbox] {
-	top: 2px; //aligns vertically with text
+.markdown-preview-view input[type="checkbox"] {
+  top: 2px; // aligns vertically with text
 }
