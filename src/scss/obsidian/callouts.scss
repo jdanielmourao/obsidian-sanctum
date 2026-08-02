@@ -15,8 +15,8 @@ body {
 }
 
 .callout {
-	border: var(--callout-border-width) solid rgba(var(--callout-color), var(--callout-border-opacity));
-	background-color: rgba(var(--callout-color), .2);
+	border: var(--callout-border-width) solid color-mix(in srgb, var(--callout-color) calc(var(--callout-border-opacity) * 100%), transparent);
+	background-color: color-mix(in srgb, var(--callout-color) 20%, transparent);
 	padding: 16px 12px 16px 12px;
 
 	& .callout-icon {
@@ -36,7 +36,7 @@ body {
 —————————————————————————————————————————————————————————*/
 .callout[data-callout='annotation'], // ^ custom
 .callout[data-callout='note'] {
-	--callout-color: 104, 145, 181;
+	--callout-color: rgb(104, 145, 181);
 	& .callout-icon {
 		background-color: currentColor;
 		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M28.828 3.172a4.094 4.094 0 0 0-5.656 0L4.05 22.292A6.954 6.954 0 0 0 2 27.242V30h2.756a6.952 6.952 0 0 0 4.95-2.05L28.828 8.829a3.999 3.999 0 0 0 0-5.657ZM10.91 18.26l2.829 2.829-2.122 2.121-2.828-2.828Zm-2.619 8.276A4.966 4.966 0 0 1 4.756 28H4v-.759a4.967 4.967 0 0 1 1.464-3.535l1.91-1.91 2.829 2.828ZM27.415 7.414l-12.261 12.26-2.829-2.828 12.262-12.26a2.047 2.047 0 0 1 2.828 0 2 2 0 0 1 0 2.828Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
@@ -46,7 +46,7 @@ body {
 .callout[data-callout='abstract'],
 .callout[data-callout='summary'],
 .callout[data-callout='tldr'] {
-	--callout-color: 104, 145, 181;
+	--callout-color: rgb(104, 145, 181);
 	& .callout-icon {
 		background-color: currentColor;
 		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M14 23h8v2h-8zm-4 0h2v2h-2zm4-5h8v2h-8zm-4 0h2v2h-2zm4-5h8v2h-8zm-4 0h2v2h-2z'/%3E%3Cpath d='M25 5h-3V4a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v1H7a2 2 0 0 0-2 2v21a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2ZM12 4h8v4h-8Zm13 24H7V7h3v3h12V7h3Z'/%3E%3Cpath fill='none' d='M0 0h32v32H0z' data-name='&lt;Transparent Rectangle&gt;'/%3E%3C/svg%3E");
@@ -55,7 +55,7 @@ body {
 
 .callout[data-callout='info'],
 .callout[data-callout='todo'] {
-	--callout-color: 99, 149, 156;
+	--callout-color: rgb(99, 149, 156);
 }
 
 .callout[data-callout='info'] .callout-icon {
@@ -70,7 +70,7 @@ body {
 .callout[data-callout='tip'],
 .callout[data-callout='hint'],
 .callout[data-callout='important'] {
-	--callout-color: 92, 153, 124;
+	--callout-color: rgb(92, 153, 124);
 }
 
 .callout:where([data-callout='tip'], [data-callout='hint'], [data-callout='idea']) .callout-icon {
@@ -90,7 +90,7 @@ body {
 .callout[data-callout='success'],
 .callout[data-callout='check'],
 .callout[data-callout='done'] {
-	--callout-color: 102, 153, 97;
+	--callout-color: rgb(102, 153, 97);
 }
 
 .callout:where([data-callout='success'], [data-callout='check'], [data-callout='done']) .callout-icon {
@@ -113,7 +113,7 @@ body {
 .callout[data-callout='question'],
 .callout[data-callout='help'],
 .callout[data-callout='faq'] {
-	--callout-color: 141, 147, 25;
+	--callout-color: rgb(141, 147, 25);
 
 	& .callout-icon {
 		background-color: currentColor;
@@ -130,7 +130,7 @@ body {
 .callout[data-callout='warning'],
 .callout[data-callout='caution'],
 .callout[data-callout='attention'] {
-	--callout-color: 184, 131, 0;
+	--callout-color: rgb(184, 131, 0);
 }
 
 .callout:where([data-callout='warning'], [data-callout='caution'], [data-callout='attention']) {
@@ -161,7 +161,7 @@ body {
 .callout[data-callout='failure'],
 .callout[data-callout='fail'],
 .callout[data-callout='missing'] {
-	--callout-color: 226, 105, 52;
+	--callout-color: rgb(226, 105, 52);
 
 	& .callout-icon {	
 		background-color: currentColor;
@@ -178,7 +178,7 @@ body {
 .callout[data-callout='negative'], // ^ custom
 .callout[data-callout='danger'],
 .callout[data-callout='error'] {
-	--callout-color: 243, 90, 55;
+	--callout-color: rgb(243, 90, 55);
 }
 
 .callout:where([data-callout='danger'], [data-callout='error']) .callout-icon {
@@ -204,7 +204,7 @@ body {
 
 .callout[data-callout='debug'],
 .callout[data-callout='bug'] {
-	--callout-color: 236, 90, 118;
+	--callout-color: rgb(236, 90, 118);
 
 	& .callout-icon {
 		background-color: currentColor;
@@ -215,7 +215,7 @@ body {
 .callout[data-callout='event'], // ^ custom
 .callout[data-callout='reference'], // ^ custom
 .callout[data-callout='example'] {
-	--callout-color: 165, 119, 218;
+	--callout-color: rgb(165, 119, 218);
 }
 
 .callout[data-callout='example'] .callout-icon {
